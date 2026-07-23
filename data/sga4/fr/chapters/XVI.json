@@ -1,0 +1,1657 @@
+{
+ "chapter_id": "XVI",
+ "title": "THÉORÈME DE CHANGEMENT DE BASE PAR UN MORPHISME LISSE, ET APPLICATIONS",
+ "number": "XVI",
+ "pages": [
+  {
+   "id": "XVI",
+   "title": "THÉORÈME DE CHANGEMENT DE BASE PAR UN MORPHISME LISSE, ET APPLICATIONS",
+   "blocks": [
+    {
+     "id": "XVI",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XVI\">EXPOSÉ XVI<br>THÉORÈME DE CHANGEMENT DE BASE PAR UN MORPHISME LISSE, ET APPLICATIONS<span class=\"author\">par M. Artin</span></h1>"
+    },
+    {
+     "id": "XVI.sommaire",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XVI.sommaire\">Sommaire</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1. Le théorème de changement de base par un morphisme lisse.<br>\n2. Le théorème de spécialisation des groupes de cohomologie.<br>\n3. Le théorème de pureté cohomologique relatif.<br>\n4. Le théorème de comparaison de la cohomologie pour les préschémas algébriques sur \\(\\mathbb{C}\\).<br>\n5. Le théorème de finitude pour les préschémas algébriques en caractéristique zéro.<br></p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XVI-1",
+   "title": "1. Le théorème de changement de base par un morphisme lisse.",
+   "blocks": [
+    {
+     "id": "XVI.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XVI.1\">1. Le théorème de changement de base par un morphisme lisse.</h2>"
+    },
+    {
+     "id": "XVI.1.1",
+     "type": "theorem",
+     "label": "1.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(\\mathbb{L} \\subset \\mathbb{P}\\), \\(n \\in \\mathbb{N}\\), et</p>\n  <p>\\[(*)\\qquad \\xymatrix{ X \\ar[d]_{f} &amp; X' \\ar[l]_{g'} \\ar[d]^{f'} \\\\ Y &amp; Y' \\ar[l]_{g} }\\]</p>\n  <p>un diagramme cartésien, avec \\(f\\) quasi-compact et quasi-séparé, et \\(g\\) universellement localement \\(0\\)-acyclique (resp. univ. loc. \\(1\\)-asphérique pour \\(\\mathbb{L}\\), resp. univ. loc. \\(n\\)-acyclique pour \\(\\mathbb{L}\\)) (XV 1.11). Alors pour chaque faisceau \\(F\\) d'ensembles (resp. de ind-\\(\\mathbb{L}\\)-groupes, resp. abélien de \\(\\mathbb{L}\\)-torsion) sur \\(X\\), le morphisme de changement de base (XII 4.1.2)</p>\n  <p>\\[\\varphi^q : g^*(R^q f_*)F \\longrightarrow (R^q f'_*)g'^* F\\]</p>\n  <p>est bijectif pour \\(q = 0\\) (resp. \\(q \\leqslant 1\\), resp. \\(q \\leqslant n\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, en appliquant XV 2.1, on trouve le</p>"
+    },
+    {
+     "id": "XVI.1.2",
+     "type": "corollary",
+     "label": "1.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>(Théorème de changement de base par un morphisme lisse). Supposons que le morphisme \\(g\\) de (*) soit lisse, que \\(f\\) soit quasi-compact et quasi-séparé, et que \\(\\mathbb{L} \\subset \\mathbb{P}\\) soit l'ensemble complémentaire à l'ensemble des caractéristiques résiduelles de \\(Y\\). Alors pour chaque faisceau \\(F\\) d'ensembles (resp. de ind-\\(\\mathbb{L}\\)-groupes, resp. abélien de \\(\\mathbb{L}\\)-torsion) sur \\(X\\), le morphisme de changement de base \\(\\varphi^q\\) ci-dessus est bijectif pour \\(q = 0\\) (resp. pour \\(q = 0,1\\), resp. pour chaque \\(q\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 1.1. Traitons d'abord le cas où \\(f : X \\to Y\\) est quasi-projectif : ce n'est qu'une conjonction du théorème de changement de base pour un morphisme propre XII 5.1 et de la définition XV 1.9. En effet, on a un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ X \\ar[rr]^{i} \\ar[dr]_{f} &amp; &amp; \\overline{X} \\ar[dl]^{\\overline{f}} \\\\ &amp; Y &amp; }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\overline{f}\\) est projectif, donc propre, et où \\(i\\) est une immersion ouverte. Or on sait XII 5.1 que le théorème de changement de base est vrai pour \\(\\overline{f}\\) quel que soit \\(g : Y' \\to Y\\). Puisque \\(g \\times_Y \\overline{Y} : Y' \\times_Y \\overline{Y} \\to \\overline{Y}\\) est encore universellement \\(0\\)-acyclique (resp. ...), on se ramène immédiatement par (XII 4.4 (ii)) à démontrer le théorème pour le morphisme \\(i\\), c'est-à-dire, on est ramené au cas où \\(f\\) est une immersion ouverte. Alors le théorème est conséquence de la définition XV 1.10 (ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Traitons maintenant le cas général. L'assertion est locale sur \\(Y\\), et on peut donc supposer \\(Y\\) affine.</p>"
+    },
+    {
+     "id": "XVI.1.3",
+     "type": "lemma",
+     "label": "1.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>On peut de plus supposer \\(X\\) affine.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Procédant comme dans XII 6.1, on est réduit, pour prouver 1.1 pour un \\(f\\) donné, à le prouver dans la situation déduite de la situation donnée par des changements de base \\(\\widetilde{Y} \\to Y\\), \\(\\widetilde{Y}' \\to Y'\\), pour un morphisme local \\(\\widetilde{g} : \\widetilde{Y}' \\to \\widetilde{Y}\\) de localisés stricts de \\(Y',Y\\) induit par \\(g\\), et à prouver que les homomorphismes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(*)\\qquad H^q(\\widetilde{X},F) \\longrightarrow H^q(\\widetilde{X}',F') \\qquad (\\text{où } F' = g'^*(F))\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont bijectifs pour \\(q \\leqslant n\\), où \\(\\widetilde{X} = X \\times_Y \\widetilde{Y}\\), \\(\\widetilde{X}' = X' \\times_{Y'} \\widetilde{Y}'\\). Cela nous ramène donc au cas où \\(Y,Y',g\\) sont strictement locaux, et à prouver dans ce cas la bijectivité des applications précédentes, admettant que 1.1 est prouvé pour \\(f\\) affine. Or soit \\((X_i)\\) un recouvrement fini de \\(X\\) par des ouverts affines \\(X_i\\), et soit \\(Z\\) le schéma somme des \\(X_i\\), qui est donc affine et muni d'un morphisme surjectif \\(h : Z \\to X\\), d'où un morphisme \\(h' : Z' \\to X'\\). Notons que \\(h\\) est séparé, et qu'il est affine lorsque \\(f\\) est séparé. Ceci dit, appliquant le lemme de descente XII 6.8, on voit que pour prouver la bijectivité des applications (*) pour \\(q \\leqslant n\\) et pour tout \\(F\\), il suffit de prouver la bijectivité des applications correspondantes \\(H^q(Z,h^*(F)) \\to H^q(Z',h'^*(F'))\\), à condition que les homomorphismes de changement de base, pour \\(Z \\to X\\) et le changement de base \\(X' \\to X\\), soient des isomorphismes en dimension \\(\\leqslant n\\). Or si \\(f\\) est séparé, donc \\(h\\) est affine, il en est ainsi par hypothèse, ce qui prouve 1.1 lorsque \\(f\\) est supposé séparé. Dans le cas général, on peut alors appliquer le résultat précédent à \\(h\\) qui est toujours séparé, et conclut encore que 1.1 est vrai pour \\(f\\), ce qui prouve 1.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarque. On pourrait aussi invoquer la suite spectrale de Leray pour le recouvrement ouvert \\((X_i)\\) de \\(X\\), et ses variantes non commutatives, mais cette méthode, qui n'est pas essentiellement différente du recours à XII 6.8, a le désavantage de nous obliger à distinguer à nouveau les trois cas habituels, travail qui a déjà été fait dans loc.cit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour achever la démonstration du théorème dans le cas général, il suffit de ramener la démonstration au cas où \\(f : X \\to Y\\) est affine et de type fini, donc quasi-projectif. D'après 1.3, on peut supposer \\(X\\) affine. Soit alors \\(X = \\varprojlim X_\\alpha\\), où \\(f_\\alpha : X_\\alpha \\to Y\\) sont des schémas affines et de type fini sur \\(Y\\). On termine avec la technique de passage à la limite habituelle (VII 5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compléments 1.4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Nous laissons au lecteur le soin de constater que la même démonstration donne encore une conclusion lorsqu'on suppose que \\(g\\) est universellement localement \\((-1)\\)-acyclique (XV 1.14) : dans ce cas, l'homomorphisme de changement de base</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\varphi^0 : g^*(f_*(F)) \\longrightarrow f'_*(g'^*(F))\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est injectif pour tout faisceau d'ensembles \\(F\\) sur \\(X\\). D'autre part, supposons à nouveau \\(n \\geqslant 0\\), on peut compléter 1.1 par l'énoncé d'injectivité suivant, contenu également dans la démonstration qui précède : si \\(g\\) est universellement localement \\(0\\)-acyclique, alors pour tout faisceau en groupes \\(F\\) sur \\(X\\), l'homomorphisme de changement de base \\(\\varphi^1\\) de 1.1 est un monomorphisme ; si \\(g\\) est universellement localement \\(n\\)-acyclique pour \\(\\mathbb{L}\\), alors l'homomorphisme \\(\\varphi^{n+1}\\) de 1.1 est un monomorphisme pour tout faisceau abélien de \\(\\mathbb{L}\\)-torsion \\(F\\) sur \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Il est sans doute possible de donner également une conclusion d'injectivité analogue à partir de l'hypothèse de \\(1\\)-asphéricité locale pour \\(\\mathbb{L}\\) de \\(g\\), en introduisant les invariants de \\(2\\)-cohomologie non commutative de la thèse de GIRAUD, comparer XII 5.11 <sup class=\"footnote-ref\"><a id=\"XVI-fn1ref\" href=\"#XVI-fn1\">(∗)</a></sup>; la même question se pose également pour (1.6) et (2.3) ci-dessous.</p>"
+    },
+    {
+     "id": "XVI.1.5",
+     "type": "corollary",
+     "label": "1.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(K/k\\) une extension de corps, et soit \\(\\mathbb{L} = \\mathbb{P} - \\{p\\}\\), où \\(p = \\operatorname{car} k\\). Alors \\(\\operatorname{Spec}(K) \\to \\operatorname{Spec}(k)\\) est universellement localement acyclique pour \\(\\mathbb{L}\\) et universellement localement \\(1\\)-asphérique pour \\(\\mathbb{L}\\) ; si \\(k\\) et \\(K\\) sont séparablement clos, alors le morphisme précédent est également universellement acyclique pour \\(\\mathbb{L}\\) et universellement \\(1\\)-asphérique pour \\(\\mathbb{L}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons tout de suite la conséquence suivante de (1.5) :</p>"
+    },
+    {
+     "id": "XVI.1.6",
+     "type": "corollary",
+     "label": "1.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\"><p>Soient \\(K/k\\) une extension de corps séparablement clos, \\(X\\) un schéma, \\(F\\) un faisceau d'ensembles (resp. de ind-\\(\\mathbb{L}\\)-groupes, resp. de groupes abéliens de \\(\\mathbb{L}\\)-torsion) sur \\(X\\), où \\(\\mathbb{L} = \\mathbb{P} - \\{p\\}\\), \\(p = \\operatorname{car} k\\). Alors l'application</p>\n  <p>\\[H^q(X,F) \\longrightarrow H^q(X_K,F_K)\\]</p>\n  <p>est bijective pour \\(q = 0\\) (resp. pour \\(q \\leqslant 1\\), resp. pour tout \\(q\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte en effet aussitôt du fait que \\(\\operatorname{Spec}(K) \\to \\operatorname{Spec}(k)\\) est universellement acyclique pour \\(\\mathbb{L}\\) et universellement \\(1\\)-asphérique pour \\(\\mathbb{L}\\), et des définitions.— Notons qu'on peut interpréter aussi l'homomorphisme précédent sur les \\(H^q\\) comme s'identifiant, par VIII 2.4 à l'homomorphisme de changement de base</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[g^*(R^q f_*(F)) \\longrightarrow R^q f'_*(g'^*(F)) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(f : X \\to \\operatorname{Spec}(k)\\), \\(f' : X_K \\to \\operatorname{Spec}(K)\\), \\(g = \\operatorname{Spec}(K) \\to \\operatorname{Spec}(k)\\) et \\(g' : X_K \\to X\\) sont les morphismes évidents. Donc lorsque \\(X\\) est quasi-compact et quasi-séparé, la bijectivité de ces homomorphismes peut aussi être considérée, grâce à 1.1, comme conséquence du fait que \\(\\operatorname{Spec}(K) \\to \\operatorname{Spec}(k)\\) est universellement localement acyclique pour \\(\\mathbb{L}\\) et universellement localement \\(1\\)-asphérique pour \\(\\mathbb{L}\\). Ce dernier fait implique donc déjà 1.6 pour \\(X\\) quasi-compact et quasi-séparé, ce qui suffit manifestement à entraîner que \\(\\operatorname{Spec}(K) \\to \\operatorname{Spec}(k)\\) est universellement acyclique pour \\(\\mathbb{L}\\) et universellement \\(1\\)-asphérique pour \\(\\mathbb{L}\\) (XV 1.7, 1.6 (i)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci montre donc que pour prouver 1.5, il suffit de prouver la première assertion de 1.5. Quitte à passer à la clôture parfaite de \\(k\\), ce qui est licite par VIII 1.1, on peut alors supposer \\(k\\) parfait. Toute extension \\(K\\) de \\(k\\) est limite inductive de ses sous-algèbres \\(A\\) de type fini sur \\(k\\), et \\(k\\) étant parfait, quitte à localiser un tel \\(A\\), on peut le supposer lisse, de sorte que \\(K\\) apparaît comme limite inductive filtrante de sous-algèbres lisses. Ces dernières étant universellement localement acycliques pour \\(\\mathbb{L}\\) et universellement localement \\(1\\)-asphériques pour \\(\\mathbb{L}\\) en vertu de XV 2.1, on conclut grâce à XV 1.13 (ii), c.q.f.d.</p>"
+    },
+    {
+     "id": "XVI.1.7",
+     "type": "remark",
+     "label": "1.7",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XVI.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.7</span></div>\n  <div class=\"thm-body\"><p>On comparera le théorème d'invariance 1.5 à XII 5.4, où on n'a pas eu à supposer le faisceau de torsion envisagé premier aux caractéristiques résiduelles, mais où en revanche on doit supposer \\(X\\) propre sur \\(k\\). Déjà dans le cas de \\(H^1(X,\\mathbb{Z}/p\\mathbb{Z})\\), où \\(X\\) est une courbe algébrique affine (par exemple la droite affine) sur un corps algébriquement clos \\(k\\) de car. \\(p &gt; 0\\), l'analogue des énoncés précédents devient faux, à cause des phénomènes de \"ramification immodérée\" à l'infini, impliquant que dans un tel cas la classification des revêtements étales principaux de groupe \\(\\mathbb{Z}/p\\mathbb{Z}\\) est essentiellement \"continue\".</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XVI-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) C'est ce qui est effectivement établi dans le livre de J. GIRAUD. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XVI-2",
+   "title": "2. Théorème de spécialisation des groupes de cohomologie.",
+   "blocks": [
+    {
+     "id": "XVI.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XVI.2\">2. Théorème de spécialisation des groupes de cohomologie.</h2>"
+    },
+    {
+     "id": "XVI.2.1",
+     "type": "theorem",
+     "label": "2.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(\\mathbb{L} \\subset \\mathbb{P}\\), \\(n \\in \\mathbb{N}\\), et soit \\(f : X \\to Y\\) un morphisme de présentation finie propre <sup class=\"footnote-ref\"><a id=\"XVI-fn2ref\" href=\"#XVI-fn2\">(∗)</a></sup> et localement \\(0\\)-acyclique (resp. loc. \\(1\\)-asphérique pour \\(\\mathbb{L}\\), resp. loc. \\(n\\)-acyclique pour \\(\\mathbb{L}\\)). Soit \\(F\\) un faisceau d'ensembles (resp. de ind-\\(\\mathbb{L}\\)-groupes, resp. abélien de \\(\\mathbb{L}\\)-torsion) constructible et localement constant sur \\(X\\). Alors les \\(R^q f_* F\\) sont constructibles et localement constants pour \\(q = 0\\) (resp. pour \\(q = 0,1\\), resp. pour \\(q \\leqslant n\\)) et pour tout point géométrique \\(\\bar{y}\\) de \\(Y\\), on a</p>\n  <p>\\[(R^q f_* F)_{\\bar{y}} \\simeq H^q(X_{\\bar{y}},F_{\\bar{y}}) \\;,\\]</p>\n  <p>pour ces mêmes valeurs de \\(q\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarque. Notons que la dernière assertion n'est que le théorème de changement de base pour un morphisme propre XII 5.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de XV 2.1, on a immédiatement le corollaire suivant :</p>"
+    },
+    {
+     "id": "XVI.2.2",
+     "type": "corollary",
+     "label": "2.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>(Théorème de spécialisation pour les groupes de cohomologie). Soit \\(f : X \\to Y\\) un morphisme propre et lisse, et \\(\\mathbb{L} \\subset \\mathbb{P}\\) l'ensemble complémentaire à l'ensemble des caractéristiques résiduelles de \\(Y\\). Soit \\(F\\) un faisceau d'ensembles (resp. de ind-\\(\\mathbb{L}\\)-groupes, resp. abélien de \\(\\mathbb{L}\\)-torsion) constructible sur \\(X\\). Alors les \\(R^q f_*(F)\\) sont constructibles et localement constants pour \\(q = 0\\) (resp. pour \\(q = 0,1\\), resp. pour tout \\(q\\)), et pour tout point géométrique \\(\\bar{y}\\) de \\(Y\\), on a</p>\n  <p>\\[R^q f_*(F)_{\\bar{y}} \\simeq H^q(X_{\\bar{y}}, F_{\\bar{y}})\\]</p>\n  <p>pour ces mêmes valeurs de \\(q\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarque. Prenant \\(n = 1\\), et traduisant en termes de groupes fondamentaux, on retrouve (SGA1 X 3.8) comparant les groupes fondamentaux des fibres d'un morphisme propre et lisse.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 2.1. Puisqu'on sait déjà que les \\(R^q f_*(F)\\) sont constructibles XIV 1.1, il suffit grâce à IX 2.11 de prouver que pour tout morphisme de spécialisation \\(\\bar{y}_1 \\to \\bar{y}_0\\) de points géométriques de \\(Y\\), le morphisme de spécialisation correspondant (VIII 7.7)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(*)\\qquad R^q f_*(F)_{\\bar{y}_0} \\longrightarrow R^q f_*(F)_{\\bar{y}_1}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est bijectif pour les valeurs de \\(q\\) envisagées. On a à ce sujet le résultat un peu plus général suivant (où il est inutile de supposer \\(f\\) de présentation finie et \\(F\\) constructible) :</p>"
+    },
+    {
+     "id": "XVI.2.3",
+     "type": "corollary",
+     "label": "2.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Soient \\(\\mathbb{L} \\subset \\mathbb{P}\\), \\(n \\in \\mathbb{N}\\), \\(f : X \\to Y\\) un morphisme propre et localement \\(0\\)-acyclique (resp. localement \\(1\\)-asphérique pour \\(\\mathbb{L}\\), resp. localement \\(n\\)-acyclique pour \\(\\mathbb{L}\\)), \\(F\\) un faisceau d'ensembles (resp. de ind-\\(\\mathbb{L}\\)-groupes, resp. abélien de \\(\\mathbb{L}\\)-torsion) sur \\(X\\), qui est localement constant. Alors pour tout morphisme de spécialisation \\(\\bar{y}_1 \\to \\bar{y}_0\\) de points géométriques de \\(Y\\), l'homomorphisme de spécialisation correspondant \\((*)\\) ci-dessus est bijectif pour \\(q = 0\\) (resp. pour \\(q = 0,1\\), resp. pour \\(q \\leqslant n\\)). De plus, dans le cas \\(n = 0\\) i.e. \\(g\\) localement \\(0\\)-acyclique, pour tout faisceau de groupes localement constant \\(F\\) sur \\(X\\), l'homomorphisme \\(R^1 f_*(F)_{\\bar{y}_0} \\to R^1 f_*(F)_{\\bar{y}_1}\\) est injectif ; si \\(n\\) est quelconque, pour tout faisceau abélien de \\(\\mathbb{L}\\)-torsion \\(F\\) localement constant sur \\(X\\), l'homomorphisme de spécialisation \\((*)\\) est injectif pour \\(q = n+1\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il existe un schéma strictement local intègre \\(Y'\\), et un morphisme \\(g : Y' \\to Y\\) appliquant le point fermé \\(y'_0\\) en \\(y_0\\), le point générique en \\(y'_1\\) : il suffit par exemple de prendre d'abord le localisé strict de \\(Y\\) relativement à \\(\\bar{y}_0\\), puis son sous-schéma fermé intègre défini par un point au-dessus de \\(y_1\\). De plus, quitte à remplacer \\(Y'\\) par son normalisé dans une clôture algébrique de son corps des fonctions, on peut supposer \\(Y\\) normal et \\(k(y'_1)\\) algébriquement clos, de sorte que \\(y'_0\\) et \\(y'_1\\) sont des points géométriques de \\(Y'\\). Utilisant le théorème de changement de base (XII 5.1) pour \\((f,F,g)\\), on est ramené, pour prouver 2.3, à le faire en remplaçant \\(Y, \\bar{y}_0, \\bar{y}_1\\) par \\(Y', y'_0, y'_1\\), ce qui nous ramène à prouver 2.3 dans le cas où \\(Y\\) est normal et strictement local, et où \\(\\bar{y}_0\\) et \\(\\bar{y}_1\\) sont respectivement son point fermé \\(y_0\\) et son point générique \\(y_1\\). D'ailleurs, utilisant XII 4, on voit que l'homomorphisme de spécialisation \\((*)\\) s'identifie alors à l'homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[H^q(X,F) \\longrightarrow H^q(X_1,g_1^*(F)) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(X_1 = X_{y_1}\\) et où \\(g : y_1 \\to Y\\) et \\(g_1 : X_1 \\to X\\) sont les morphismes canoniques. Notre assertion provient alors du lemme suivant (où on ne suppose plus \\(f\\) propre) :</p>"
+    },
+    {
+     "id": "XVI.2.4",
+     "type": "lemma",
+     "label": "2.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>Avec les notations préliminaires de 2.3, abandonnons l'hypothèse de propreté sur \\(f\\), supposons en revanche \\(Y\\) normal intègre, de point générique \\(y_1\\) tel que \\(k(y_1)\\) soit séparablement clos, et soient \\(X_1 = X_{y_1}\\), \\(g_1 : X_1 \\to X\\) le morphisme canonique. Alors l'homomorphisme</p>\n  <p>\\[(**)\\qquad H^q(X,F) \\longrightarrow H^q(X_1,g_1^*(F))\\]</p>\n  <p>est bijectif pour \\(q = 0\\) (resp. bijectif pour \\(q = 0,1\\), resp. bijectif pour \\(q = n\\), injectif pour \\(q = n+1\\)). De plus, dans le cas \\(n = 0\\) i.e. \\(g\\) localement acyclique, pour tout faisceau en groupes \\(F\\) sur \\(X\\), l'homomorphisme (**) est injectif pour \\(q = 1\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un argument immédiat (XV 1.6 (i) \\(\\Longrightarrow\\) (ii)) montre qu'il suffit de prouver la relation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[F \\xrightarrow{\\ \\sim\\ } g_{1*}g_1^*(F) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et pour \\(n \\geqslant 1\\), les relations supplémentaires</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[R^q g_{1*} g_1^*(F) = 0 \\qquad \\text{pour } 1 \\leqslant q \\leqslant n \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces relations étant locales sur \\(X\\) pour la topologie étale, et \\(F\\) étant localement constant pour la topologie étale, on peut supposer \\(F\\) constant, donc de la forme \\(G_X\\), où \\(G\\) est un ensemble (resp. un ind-\\(\\mathbb{L}\\)-groupe, resp. un groupe abélien de \\(\\mathbb{L}\\)-torsion). Notons d'autre part que l'hypothèse que \\(Y\\) est normal implique \\(g_*(G_{y_1}) \\xleftarrow{\\ \\sim\\ } G_Y\\) (IX 2.14.1), et l'hypothèse que \\(k(y_1)\\) est séparablement clos implique que les \\(R^q g_*(G_{y_1})\\) sont nuls pour \\(q \\geqslant 1\\). D'autre part, l'hypothèse que \\(g\\) est localement \\(0\\)-acyclique (resp. ...) implique que la formation des \\(R^q g_*(G_y)\\) commute au changement de base \\(f : X \\to Y\\) pour \\(q \\leqslant n\\), compte tenu du fait que l'on peut supposer \\(Y\\) affine, et qu'alors \\(y_1\\) apparaît comme limite projective de ses voisinages ouverts affines, qui sont quasi-compacts dans \\(Y\\), de sorte qu'on peut appliquer la définition XV 1.11 et la théorie du passage à la limite VII 5. On en conclut qu'on a bien</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[G_X \\xrightarrow{\\ \\sim\\ } g_{1*}(G_{X_1}) \\;, \\qquad R^q g_{1*}(G_{X_1}) = 0 \\text{ pour } 1 \\leqslant q \\leqslant n \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui achève la démonstration de 2.4 et par suite de 2.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarque. La démonstration qui précède, via 2.4, plus simple que notre démonstration initiale, est due à M. Lubkin.</p>"
+    },
+    {
+     "id": "XVI.2.5",
+     "type": "corollary",
+     "label": "2.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de 2.1, supposons \\(Y\\) connexe, et soit \\(q \\leqslant n\\). Alors les \\(H^q(X_{\\bar{y}}, F)\\), pour les points géométriques \\(y\\) de \\(Y\\), sont tous isomorphes entre eux.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XVI-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) Pour une hypothèse moins restrictive que celle de propreté permettant d'obtenir les mêmes conclusions, cf. SGA 5 II 3 et SGA 1 XIII. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XVI-3",
+   "title": "3. Le théorème de pureté cohomologique relatif.",
+   "blocks": [
+    {
+     "id": "XVI.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XVI.3\">3. Le théorème de pureté cohomologique relatif.</h2>"
+    },
+    {
+     "id": "XVI.3.1",
+     "type": "definition",
+     "label": "3.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"XVI.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(S\\) un schéma. On appelle \\(S\\)-couple lisse \\((Y,X)\\) une \\(S\\)-immersion fermée \\(i : Y \\to X\\) de \\(S\\)-préschémas lisses, c'est-à-dire, un diagramme commutatif de préschémas</p>\n  <p>\\[\\xymatrix{ Y \\ar[rr]^{i} \\ar[dr]_{h} &amp; &amp; X \\ar[dl]^{f} \\\\ &amp; S &amp; }\\]</p>\n  <p>tel que \\(f\\) et \\(h\\) soient lisses et que \\(i\\) soit une immersion fermée. On notera \\(U = X - Y\\), \\(j : U \\to X\\) l'immersion ouverte, et \\(g : U \\to S\\) le morphisme structural. On appelle codimension de \\((Y,X)\\) en un point \\(y \\in Y\\) la codimension en \\(y\\) de la fibre \\(Y_s\\) dans \\(X_s\\), où \\(s = h(y)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La codimension est donc une fonction localement constante sur \\(Y\\). Nous indiquerons par la phrase \"\\((Y,X)\\) est de codimension \\(c\\)\" que cette fonction est même constante, à valeur \\(c\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\((Y,X)\\) un \\(S\\)-couple lisse et \\(y \\in Y\\). Rappelons (SGA II 4.10) qu'il existe des entiers \\(m\\) et \\(n\\), un voisinage \\(X'\\) de \\(y\\) dans \\(X\\), et un morphisme étale</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\phi : X' \\longrightarrow \\mathbb{E}^n_S = \\operatorname{Spec} \\mathcal{O}_S[t_1, \\ldots, t_n]\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tels que \\(Y' = Y \\cap X'\\) soit l'image inverse du sous-schéma fermé \\(\\mathbb{E}^m_S\\) défini par les équations</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[t_{m+1} = \\ldots = t_n = 0 \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut exprimer ce résultat en disant que localement pour la topologie étale, chaque \\(S\\)-couple lisse \\((Y,X)\\) est isomorphe au couple standard \\((\\mathbb{E}^m_S, \\mathbb{E}^n_S)\\) pour \\(m\\) et \\(n\\) convenables, où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\mathbb{E}^r_S = \\operatorname{Spec} \\mathcal{O}_S[t_1, \\ldots, t_r] \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le présent numéro, on se propose de calculer les faisceaux de cohomologie locale \\(\\underline{H}^q_Y(X,F) = (R^q i^!)F\\) (V 4 et VIII 6.6) pour un \\(S\\)-couple lisse \\((Y,X)\\), à valeurs dans un faisceau abélien de torsion localement constant \\(F\\) premier aux caractéristiques résiduelles. Nous commençons par des considérations préliminaires :</p>"
+    },
+    {
+     "id": "XVI.3.2",
+     "type": "proposition",
+     "label": "3.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XVI.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>Soit</p>\n  <p>\\[\\xymatrix{ U \\ar[rr]^{j} \\ar[dr]_{g} &amp; &amp; X \\ar[dl]^{f} \\\\ &amp; S &amp; }\\]</p>\n  <p>un diagramme commutatif, où \\(f\\) est lisse, et \\(j\\) est une immersion ouverte telle que la fibre \\(U_s\\) soit dense dans \\(X_s\\) pour chaque \\(s \\in S\\). Soit \\(F\\) un faisceau d'ensembles sur \\(S\\). Alors le morphisme canonique</p>\n  <p>\\[f^*F \\longrightarrow j_* g^* F = j_* j^* f^* F\\]</p>\n  <p>est bijectif.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. On se réduit facilement au cas où \\(U\\) est rétrocompact dans \\(X\\). Soit \\(\\bar{s}\\) un point géométrique de \\(S\\), \\(\\bar{x}\\) un point géométrique de \\(X\\) au-dessus de \\(S\\), \\(\\widetilde{f} : \\widetilde{X} \\to \\widetilde{S}\\) le morphisme des localisés stricts de \\(S\\), \\(X\\) en des points géométriques correspondants, et \\(\\widetilde{U} = U \\times_X \\widetilde{X}\\). On a, avec les notations évidentes,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(f^*F)_{\\bar{x}} = H^0(\\widetilde{X},\\widetilde{f}^*\\widetilde{F}) \\simeq H^0(\\widetilde{S},\\widetilde{F}) \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par suite il suffit de démontrer que \\(\\widetilde{g} : \\widetilde{U} \\to \\widetilde{S}\\) est \\(0\\)-acyclique, ce qui impliquera</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(j_* g^* F)_{\\bar{x}} \\simeq H^0(\\widetilde{U},\\widetilde{g}^*\\widetilde{F}) \\simeq H^0(\\widetilde{S},\\widetilde{F}) \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(\\widetilde{g}\\) est limite de morphismes lisses, il est localement \\(0\\)-acyclique (XV 2.1, 1.11), et par XV 1.12 il suffit de démontrer que les fibres géométriques de \\(\\widetilde{U}/\\widetilde{S}\\) sont \\(0\\)-acycliques, c'est-à-dire connexes et non-vides. Soit \\(\\bar{s}'\\) un point géométrique de \\(\\widetilde{S}\\). Alors la fibre \\(\\widetilde{X}_{\\bar{s}'}\\) est régulière, connexe et non vide, et il résulte de l'hypothèse que \\(\\widetilde{U}_{\\bar{s}'}\\) est un ouvert dense de \\(\\widetilde{X}_{\\bar{s}'}\\), donc connexe et non-vide, d'où le résultat.</p>"
+    },
+    {
+     "id": "XVI.3.2.1",
+     "type": "corollary",
+     "label": "3.2.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.3.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.2.1</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de 3.2, le foncteur \\(X' \\mapsto X'|U\\) de la catégorie des revêtements étales de \\(X\\) dans la catégorie des revêtements étales de \\(U\\) est pleinement fidèle. En particulier, pour tout groupe fini \\(G\\), l'application de restriction</p>\n  <p>\\[H^1(X,G) \\longrightarrow H^1(U,G)\\]</p>\n  <p>est injective.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte de 3.2, via un argument standard que nous allons, pour la commodité des références, expliciter en un</p>"
+    },
+    {
+     "id": "XVI.3.2.2",
+     "type": "lemma",
+     "label": "3.2.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.3.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.2.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\to Y\\) un morphisme de schémas, et soit \\(f^* : \\operatorname{Et}(Y) \\to \\operatorname{Et}(X)\\) le foncteur image inverse \\(Y' \\mapsto Y' \\times_Y X\\) de la catégorie \\(\\operatorname{Et}(Y)\\) des revêtements étales de \\(Y\\) dans \\(\\operatorname{Et}(X)\\). Conditions équivalentes :</p>\n  <p>(i) \\(f^*\\) est fidèle (resp. pleinement fidèle).</p>\n  <p>(ii) Pour tout revêtement étale \\(Y'\\) de \\(Y\\), désignant par \\(f' : X' \\to Y'\\) le morphisme déduit de \\(f\\) par changement de base \\(Y' \\to Y\\), l'application \\(U \\mapsto f'^{-1}(U)\\) de l'ensemble des parties à la fois ouvertes et fermées des \\(Y'\\) dans l'ensemble des parties à la fois ouvertes et fermées de \\(X'\\) est injective (resp. bijective).</p>\n  <p>(ii bis) Avec les notations de (ii), pour tout faisceau d'ensembles constant \\(C\\) sur \\(Y'\\), l'application canonique</p>\n  <p>\\[H^0(Y',C) \\longrightarrow H^0(X',f'^*C)\\]</p>\n  <p>est injective (resp. bijective).</p>\n  <p>(iii) Avec les notations de (ii), l'application canonique</p>\n  <p>\\[\\Gamma(Y'/Y) \\longrightarrow \\Gamma(X'/X)\\]</p>\n  <p>est injective (resp. bijective).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est laissée au lecteur (cf. SGA 2, IX 3.1 et 3.2).</p>"
+    },
+    {
+     "id": "XVI.3.2.3",
+     "type": "remark",
+     "label": "3.2.3",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XVI.3.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">3.2.3</span></div>\n  <div class=\"thm-body\"><p>On peut considérablement généraliser 3.2, tant en termes de faisceaux d'ensembles, en affaiblissant les hypothèses sur \\(f\\), qu'en termes de faisceaux de groupes avec des conclusions sur les \\(R^q g_*(f^*F)\\) (cf. SGA 2 XIV et SGA 1 XIII). Remarque analogue pour 3.4 à 3.6.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\"Rappelons\" aussi le théorème de pureté de Zariski-Nagata sous sa forme relative :</p>"
+    },
+    {
+     "id": "XVI.3.3",
+     "type": "theorem",
+     "label": "3.3",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>(Théorème de pureté relatif). Soit</p>\n  <p>\\[\\xymatrix{ U \\ar[rr]^{j} \\ar[dr]_{g} &amp; &amp; X \\ar[dl]^{f} \\\\ &amp; S &amp; }\\]</p>\n  <p>un diagramme commutatif où \\(f\\) est lisse, et où \\(j\\) est une immersion ouverte telle que pour tout \\(s \\in S\\), \\(X_s - U_s\\) soit partout de codimension \\(\\geqslant 2\\) dans \\(X_s\\). Alors le foncteur \\(X' \\mapsto X'|U\\) de la catégorie des revêtements étales de \\(X\\) dans la catégorie des revêtements étales de \\(U\\) est une équivalence de catégories.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Que le foncteur soit pleinement fidèle a été vu (3.2.1). Le fait qu'il soit ess. surjectif va se déduire du théorème classique. On se donne un revêtement étale \\(U'\\) de \\(U\\), il faut montrer qu'il se prolonge en un revêtement étale \\(X'\\) de \\(X\\). Réduction immédiate facile au cas où \\(U\\) est rétrocompact dans \\(X\\), puis au cas où \\(S\\) est affine et de type fini sur \\(\\operatorname{Spec} \\mathbb{Z}\\), \\(X\\) un schéma connexe, et \\(f\\) de type fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On procède par récurrence sur \\(n = \\dim S\\), l'assertion étant conséquence du théorème classique (SGA 2 X 3.4) dans le cas \\(n = 0\\). Ayant l'unicité, on peut appliquer la technique de descente de SGA IX 4.7 au normalisé \\(\\overline{S} \\to S\\) pour se réduire au cas \\(S\\) (et donc \\(X\\)) normal (\\(\\overline{S} \\to S\\) étant fini (EGA IV 7.8.3 (iii) (vi))). De plus, quitte à agrandir \\(U\\), on peut supposer \\(U\\) maximal parmi les ouverts au-dessus desquels \\(U'\\) peut se prolonger, et il faut prouver alors \\(U = X\\). Sinon, soient \\(x\\) un point maximal de \\(X-U\\), et \\(s = f(x)\\). Tout revient à prouver qu'on peut prolonger \\(U'\\) au-dessus d'un voisinage de \\(x\\). Nous pouvons supposer que \\(\\dim \\mathcal{O}_{S,s} = n \\geqslant 1\\) et que le théorème est déjà démontré pour la dimension \\(&lt; n\\). Posons \\(B = \\mathcal{O}_{X,x}\\), et soit \\(B'\\) le normalisé de \\(B\\) dans l'anneau des fonctions rationnelles sur le revêtement \\(U'\\) de \\(U\\) ; donc \\(B'\\) est une \\(B\\)-algèbre finie (loc.cit.). Il suffit évidemment de démontrer que \\(B'\\) est une \\(B\\)-algèbre étale.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(A = \\mathcal{O}_{S,s}\\), \\(0 \\neq t \\in \\mathfrak{m}_A\\), \\(A_0 = A/tA\\), \\(B_0 = B/tB\\). Par hypothèse de récurrence, la restriction du revêtement à \\(U_0 = U \\otimes_A A_0\\) s'étend en un revêtement étale de \\(\\operatorname{Spec} B_0\\), appelons-le \\(\\operatorname{Spec} B_0^*\\). Quitte à remplacer \\(X\\) par un revêtement étale convenable d'un voisinage de \\(x\\) (ce qui est loisible) on peut supposer \\(\\operatorname{Spec} B_0^*\\) complètement décomposé sur \\(\\operatorname{Spec} B_0\\). On est ainsi ramené au cas où la \\(B_0\\)-algèbre \\(B_0'\\) est complètement décomposée en dehors du point fermé de \\(\\operatorname{Spec} B_0\\). Alors les hypothèses de XV 3.3 sont satisfaites, d'où le résultat.</p>"
+    },
+    {
+     "id": "XVI.3.4",
+     "type": "corollary",
+     "label": "3.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Mêmes hypothèses que dans 3.3. Alors on a</p>\n  <p>\\[(R^1 j_*)g^* F = 0\\]</p>\n  <p>pour chaque faisceau \\(F\\) de groupes ind-finis sur \\(S\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Réduction comme d'habitude au cas \\(S\\) noethérien, \\(f\\) de type fini, et \\(F\\) constructible. Soit \\(0 \\to F \\to G\\) une injection de faisceaux de groupes ind-finis sur \\(S\\), et \\(C = G/F\\). Il résulte de 3.2 que le foncteur \\(j_* g^*\\) est exact, donc que \\(j_* g^* G \\to j_* g^* C\\) est surjectif, donc (XII 3.1) que \\((R^1 j_*)g^* F \\to (R^1 j_*)g^* G\\) est injectif. On peut donc remplacer \\(F\\) par \\(G\\), et on se ramène ainsi par IX 2.14 et VIII 5.5 au cas où \\(F = G\\) est constant, à valeur un groupe fini ordinaire \\(G\\). Soit \\(\\bar{x}\\) un point géométrique de \\(X\\), \\(\\widetilde{X}\\) le localisé strict de \\(X\\) en \\(\\bar{x}\\), et \\(\\widetilde{U} = \\widetilde{X} \\times_X U\\). Alors il résulte de 3.3 que l'on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(R^1 j_* g^* F)_{\\bar{x}} = H^1(\\widetilde{U}, G_{\\widetilde{U}}) \\simeq H^1(\\widetilde{X}, G_{\\widetilde{X}}) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et ce dernier est nul, d'où le résultat.</p>"
+    },
+    {
+     "id": "XVI.3.5",
+     "type": "lemma",
+     "label": "3.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>(Lemme d'Abhyankar relatif). Soit \\((Y,X)\\) un \\(S\\)-couple lisse de codimension 1, tel que \\(Y\\) soit défini par une équation \\(t = 0\\) dans \\(X\\). Soient \\(U = X-Y\\) et \\(V/U\\) un revêtement principal galoisien d'ordre \\(n\\) premier aux caractéristiques résiduelles de \\(Y\\). Posons \\(X' = \\operatorname{Spec} \\mathcal{O}_X[z]/(z^n-t)\\), \\(U' = U \\times_X X'\\), \\(V' = V \\times_X X'\\). Alors le revêtement \\(V'\\) s'étend uniquement à un revêtement étale de \\(X'\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Réduction immédiate au cas \\(S,X,Y\\) affines et de type fini sur \\(\\operatorname{Spec} \\mathbb{Z}\\). L'unicité est un cas particulier de 3.2.1. Nous allons déduire l'existence de XV 1.12 : soient \\(\\bar{s}\\) un point géométrique de \\(S\\) et \\(\\bar{x}\\) un point géométrique de \\(Y\\) au-dessus de \\(\\bar{s}\\). Soient \\(\\widetilde{f} : \\widetilde{X} \\to \\widetilde{S}\\) le morphisme des localisés stricts correspondants induit par \\(f\\), \\(\\widetilde{U} = U \\times_X \\widetilde{X}\\), etc ... Par descente, compte tenu de l'unicité, il suffit évidemment de démontrer que \\(\\widetilde{V}'\\) s'étend en un revêtement étale de \\(\\widetilde{X}'\\), c'est-à-dire (puisque \\(\\widetilde{X}'\\) n'admet pas de revêtement non-trivial) que \\(\\widetilde{V}'\\) est un revêtement trivial de \\(\\widetilde{U}'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\widehat{U} = \\varprojlim_m \\widehat{U}_m = \\operatorname{Spec} \\mathcal{O}_{\\widetilde{U}}[t^{1/m}]\\), où \\(m\\) parcourt l'ensemble des entiers \\(m\\) premiers à la caractéristique résiduelle de \\(\\widetilde{X}\\). Alors \\(\\widehat{U}/\\widetilde{U}\\) est un \"revêtement galoisien infini\" de groupe abélien \\(G = \\varprojlim_m \\mathbb{Z}/m\\mathbb{Z}\\), et on voit immédiatement qu'il suffit de démontrer que \\(\\widehat{U}\\) est \\(1\\)-asphérique pour l'ensemble \\(\\mathbb{L} \\subset \\mathbb{P}\\) complémentaire à la caractéristique résiduelle de \\(\\widetilde{X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons le morphisme \\(\\widehat{f} : \\widehat{U} \\to \\widetilde{S}\\). Il est limite de morphismes lisses, donc localement \\(1\\)-asphérique pour \\(\\mathbb{L}\\) (XV 2.1, 1.11 (ii)). D'après XV 1.12, il suffit de démontrer que les fibres géométriques de \\(\\widehat{U}/\\widetilde{S}\\) sont \\(1\\)-asphérique pour \\(\\mathbb{L}\\). Soit \\(\\bar{s}\\) un point géométrique de \\(\\widetilde{S}\\). La fibre géométrique \\(\\widehat{U}_{\\bar{s}}\\) est limite des fibres \\((\\widehat{U}_m)_{\\bar{s}}\\). Par suite il suffit de démontrer que chaque revêtement principal galoisien d'un \\((\\widehat{U}_m)_{\\bar{s}}\\), d'ordre premier aux car. rés., induit un revêtement trivial de \\(\\widehat{U}_{\\bar{s}}\\). En remplaçant \\(\\widetilde{X}\\) par \\(\\widetilde{X}_m = \\operatorname{Spec} \\mathcal{O}_{\\widetilde{X}}[t^{1/m}]\\) (qui est encore lisse au-dessus de \\(\\widetilde{S}\\)), on se réduit au cas \\(m = 1\\), c'est-à-dire, \\(\\widehat{U}_m = \\widetilde{U}\\). Soit \\(V\\) un tel revêtement de \\(\\widetilde{U}_{\\bar{s}}\\). Or \\(\\widetilde{X}_{\\bar{s}} = Z\\) est un schéma strictement local régulier, et \\(W = \\widetilde{U}_{\\bar{s}}\\) est l'ouvert complémentaire à un sous-ensemble régulier de codimension 1. On peut donc appliquer le lemme d'Abhyankar sous sa forme usuelle (SGA1 X 3.6) pour conclure que \\(V\\) induit un revêtement \\(V_m\\) sur \\(W_m\\) qui s'étend en un revêtement étale de \\(Z_m\\), pour \\(m\\) convenable. Mais \\(Z\\) donc \\(Z_m\\) étant strictement local, il s'ensuit que ce revêtement est trivial, donc \\(V_m\\) est un revêtement trivial de \\(W_m\\), c.q.f.d.</p>"
+    },
+    {
+     "id": "XVI.3.5.1",
+     "type": "remark",
+     "label": "3.5.1",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XVI.3.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.5.1</span></div>\n  <div class=\"thm-body\"><p>Lorsqu'on ne suppose pas l'ordre \\(n\\) de \\(G\\) premier aux caractéristiques résiduelles de \\(X\\), on peut encore prouver ceci : soit \\(m\\) le plus grand entier premier aux caractéristiques résiduelles de \\(Y\\) qui divise l'ordre de \\(G\\), et supposons que pour chaque point \\(s \\in S\\), le revêtement \\(V_s\\) de \\(U_s = X_s - Y_s\\) ait, en les points maximaux de \\(Y_s\\), des groupes d'inertie d'ordres premiers aux caractéristiques résiduelles de \\(Y\\). Alors la conclusion de 3.5 reste valable en prenant \\(X' = \\operatorname{Spec} \\mathcal{O}_X[z]/(z^m-t)\\). On peut aussi prendre pour \\(m\\), plus généralement, un multiple commun quelconque des ordres des groupes d'inertie qu'on vient d'envisager, supposés premiers aux caractéristiques résiduelles correspondantes.</p></div>\n</div>"
+    },
+    {
+     "id": "XVI.3.6",
+     "type": "corollary",
+     "label": "3.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>(Pureté cohomologique en dimension 1). Soit \\((Y,X)\\) un \\(S\\)-couple lisse de codimension 1, et soit \\(F\\) un faisceau de groupes constructible et localement constant sur \\(X\\), d'ordres premiers aux caractéristiques résiduelles de \\(X\\). Alors avec les notations de 3.1, \\((R^1 j_*)j^* F\\) est localement isomorphe comme faisceau d'ensembles pointés à \\(i_*(F_Y/\\operatorname{int}(F_Y))\\), où \\(F_Y = F|Y\\) et où \\(F_Y/\\operatorname{int}(F_Y)\\) désigne le quotient de \\(F_Y\\) par les opérations de \\(F_Y\\) sur lui-même par automorphismes intérieurs.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarque. L'isomorphisme du corollaire 3.6 n'est pas canonique.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. On se ramène immédiatement au cas \\(X\\) noethérien et connexe. Puisque l'assertion est locale sur \\(X\\) pour la topologie étale, nous pouvons supposer que \\(F\\) est un faisceau constant, à valeur un groupe fini ordinaire \\(G\\) d'ordre \\(m\\) premier aux caractéristiques résiduelles de \\(X\\), et de plus que \\(\\mu_{mX} \\simeq (\\mathbb{Z}/m\\mathbb{Z})_X\\). Soit \\(U = X - Y\\) et \\(U' = \\operatorname{Spec} \\mathcal{O}_U[t^{1/m}]\\), qui est un revêtement principal galoisien \"essentiel\" de \\(U\\) de groupe \\(\\mathbb{Z}/m\\mathbb{Z}\\) puisque \\(\\mu_{mX} \\simeq (\\mathbb{Z}/m\\mathbb{Z})_X\\). Les revêtements principaux de groupe \\(G\\) de \\(U\\) qui sont trivialisés sur \\(U'\\) sont classifiés localement sur \\(Y\\) par \\(H = \\operatorname{Hom}(\\mathbb{Z}/m\\mathbb{Z}, G) \\bmod \\operatorname{int}(G)\\), qui est un ensemble pointé isomorphe à l'ensemble sous-jacent de \\(G/\\operatorname{int}(G)\\). On obtient ainsi un morphisme du faisceau constant \\(H_Y\\) sur \\(Y\\) dans \\((R^1 j_*)G_U\\), et il suffit de démontrer qu'il est bijectif, ce qui résulte immédiatement de 3.5.</p>"
+    },
+    {
+     "id": "XVI.3.7",
+     "type": "theorem",
+     "label": "3.7",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>(Pureté cohomologique). Soit \\((Y,X)\\) un \\(S\\)-couple lisse de codimension \\(c &gt; 0\\). Soit \\(F\\) un faisceau abélien sur \\(X\\) localement isomorphe (pour la topologie étale) à un faisceau de la forme \\(f^*(G)\\), où \\(G\\) est un faisceau de torsion sur \\(S\\), premier aux caractéristiques résiduelles (par exemple \\(F\\) un faisceau localement constant de groupes finis d'ordres premiers aux caractéristiques résiduelles de \\(X\\)). Alors, avec les notations de 3.1, on a</p>\n  <p>\\[\\underline{H}^q_Y(X,F) = (R^q i^!)F = 0 \\qquad \\text{si } q \\neq 2c \\;,\\]</p>\n  <p>i.e.</p>\n  <p>\\[\\begin{cases} F \\xrightarrow{\\ \\sim\\ } j_* j^* F &amp; \\text{et} \\\\ (R^q j_*)j^* F = 0 &amp; \\text{si } q \\neq 0 \\;,\\ 2c-1 \\;, \\end{cases}\\]</p>\n  <p>et</p>\n  <p>\\[\\underline{H}^{2c}_Y(X,F) = i^*\\big[(R^{2c-1} j_*)j^* F\\big]\\]</p>\n  <p>est un faisceau localement isomorphe à \\(i^*(F)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. L'assertion est locale sur \\(X\\) pour la topologie étale ; on peut donc <sup class=\"footnote-ref\"><a id=\"XVI-fn3ref\" href=\"#XVI-fn3\">(∗)</a></sup> supposer \\(F\\) constant, donc si on veut \\(F \\simeq f^*(\\mathbb{Z}/n\\mathbb{Z})_S\\) pour le faisceau constant \\((\\mathbb{Z}/n\\mathbb{Z})_S\\) sur \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Traitons d'abord le cas \\(c = 1\\). (L'assertion pour \\((R^1 j_*)j^* F\\), dans le cas \\(F\\) localement constant tout au moins, résulterait immédiatement de 3.6, mais nous allons le déduire de nouveau.) Rappelons que \\((Y,X)\\) est localement isomorphe au couple \\((\\mathbb{E}^{n-1}_S, \\mathbb{E}^n_S)\\), et si l'on remplace \\(S\\) par \\(\\mathbb{E}^{n-1}_S\\), on se ramène au cas où \\(X = \\mathbb{E}^1_S = \\operatorname{Spec} \\mathcal{O}_S[t]\\) et où \\(Y\\) est la section \\(t = 0\\) de \\(X/S\\). La situation est localement isomorphe à l'inclusion de la section à l'infini dans l'espace projectif \\(\\mathbb{P}^1_S\\). On peut donc prendre \\(X = \\mathbb{P}^1_S\\), \\(Y\\) la section à l'infini, et \\(U = \\mathbb{E}^1_S = X - Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Examinons la suite spectrale de Leray</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(R^p f_*)(R^q j_*)(\\mathbb{Z}/n) \\Longrightarrow (R^{p+q})(\\mathbb{Z}/n) \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or l'aboutissement est nul pour \\(p+q &gt; 0\\), d'après XV 2.2. De plus, les \\(R^q j_*\\) sont concentrés sur \\(Y\\) si \\(q &gt; 0\\), qui s'envoie isomorphiquement sur \\(S\\) par \\(f\\), et d'autre part \\(j_*(F|U) \\xleftarrow{\\ \\sim\\ } F\\) en vertu de 3.2. Il s'ensuit que \\((R^p f_*)(R^q j_*) = 0\\) si \\(p\\) et \\(q &gt; 0\\), et que \\(f_*(R^q j_*)\\) détermine le faisceau \\((R^q j_*)\\) si \\(q &gt; 0\\), enfin \\(R^p f_* j_*(F|U) = R^p f_*(F)\\). La suite spectrale se réduit donc à des isomorphismes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[f_*(R^q j_*)(F|U) \\xrightarrow{\\ \\sim\\ } (R^{q+1} f_*)(F) \\qquad \\text{si } q &gt; 0 \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais \\((R^q f_*)(F)\\) se calcule fibre par fibre (XII 5.2), donc est nul si \\(q \\neq 0,2\\), et est un faisceau localement isomorphe à \\(G\\) si \\(q = 2\\), comme il résulte aisément de XII 5.2 et IX 4.7. Donc \\((R^q j_*)(F|U) = 0\\) si \\(q \\neq 1\\), et est un faisceau localement isomorphe à \\(i^*(F)\\) si \\(q = 1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le cas \\(c &gt; 1\\) se traite maintenant facilement par récurrence : soit \\((Y,X)\\) un \\(S\\)-couple lisse de codimension \\(c &gt; 1\\). Il est clair que, localement sur \\(X\\), on peut trouver un sous-schéma \\(Z\\) de \\(X\\) de codimension 1 qui contient \\(Y\\) et qui est lisse au-dessus de \\(S\\), de sorte qu'on ait un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ Y \\ar[rr]^{u} \\ar[dr]_{i} &amp; &amp; Z \\ar[dl]^{v} \\\\ &amp; X &amp; } \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où chaque couple est un \\(S\\)-couple lisse (on devrait appeler \\((Y,Z,X)\\) un \\(S\\)-triple lisse), où la codimension de \\((Z,X)\\) est 1, et celle de \\((Y,Z)\\) est \\(c-1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or on a la suite spectrale de foncteurs composés</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(R^p u^!)(R^q v^!)F \\Longrightarrow (R^{p+q} i^!)F \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par hypothèse de récurrence, \\((R^q v^!)F = 0\\) si \\(q \\neq 2\\) et est localement isomorphe à \\(v^*(F)\\) si \\(q = 2\\), d'où encore par hypothèse de récurrence, appliquée à \\((R^q v^!)F\\), que \\((R^p u^!)(R^q v^!)F\\) est nul si \\((p,q) \\neq (2c-2,2)\\) et est localement isomorphe à \\(u^* v^*(F)\\) si \\((p,q) = (2c-2,2)\\), d'où immédiatement le résultat pour \\((R^{p+q} i^!)F\\), c.q.f.d.</p>"
+    },
+    {
+     "id": "XVI.3.8",
+     "type": "corollary",
+     "label": "3.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p>Soient \\((Y,X)\\) un \\(S\\)-couple lisse de codimension \\(c\\), \\(n\\) un entier naturel premier aux caractéristiques résiduelles de \\(X\\), et posons</p>\n  <p>\\[T_{Y/X} = \\underline{H}^{2c}_Y(\\mathbb{Z}/n\\mathbb{Z}) \\;,\\]</p>\n  <p>qui est un faisceau sur \\(Y\\) localement isomorphe (pour la topologie étale) au faisceau \\((\\mathbb{Z}/n\\mathbb{Z})_Y\\) en vertu de (3.7). Soit \\(F\\) un faisceau abélien sur \\(X\\), annulé par \\(n\\), satisfaisant à la condition énoncée dans 3.7. Alors on a (pour mémoire) \\(\\underline{H}^i_Y(F) = 0\\) pour \\(i \\neq 2c\\), et de plus on a un isomorphisme canonique :</p>\n  <p>\\[\\underline{H}^{2c}_Y(F) \\simeq i^*(F) \\otimes T_{Y/X} \\;.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. On définit aisément un homomorphisme canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\varphi : i^*(F) \\otimes T_{Y/X} \\longrightarrow \\underline{H}^{2c}_Y(F)\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i.e. un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[i^*(F) \\longrightarrow \\underline{\\operatorname{Hom}}(\\underline{H}^{2c}_Y(\\mathbb{Z}/n\\mathbb{Z}), \\underline{H}^{2c}_Y(F)) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en utilisant l'homomorphisme canonique \\(F \\to \\operatorname{Hom}(\\mathbb{Z}/n\\mathbb{Z}, F)\\). Il reste à prouver que \\(\\varphi\\) est un isomorphisme, ce qu'on vérifie aisément en suivant la démonstration donnée de 3.7.</p>"
+    },
+    {
+     "id": "XVI.3.8.1",
+     "type": "corollary",
+     "label": "3.8.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.3.8.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.8.1</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de 3.8, la formation des \\(\\underline{H}^i_Y(F)\\) commute à tout changement de base \\(S' \\to S\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C'est clair.</p>"
+    },
+    {
+     "id": "XVI.3.9",
+     "type": "corollary",
+     "label": "3.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XVI.3.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.9</span></div>\n  <div class=\"thm-body\"><p>(Théorème de pureté cohomologique absolue). Soient \\(X\\) un schéma régulier, \\(Y\\) un sous-préschéma fermé régulier de codimension \\(c\\) en chaque point. Supposons de plus que \\(X\\) soit localement de type fini sur un corps parfait \\(k\\). Alors, si \\(n\\) est premier aux caractéristiques résiduelles de \\(X\\), on a</p>\n  <p>\\[\\underline{H}^i_Y(\\mathbb{Z}/n\\mathbb{Z}) = 0 \\qquad \\text{si } i \\neq 2c \\;,\\]</p>\n  <p>et \\(\\underline{H}^{2c}_Y(\\mathbb{Z}/n\\mathbb{Z})\\) est un faisceau sur \\(Y\\) localement isomorphe (pour la topologie étale) au faisceau constant \\(\\mathbb{Z}/n\\mathbb{Z}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C'est un cas particulier de 3.7, compte tenu que l'hypothèse implique que \\(X\\) et \\(Y\\) sont lisses sur \\(k\\).</p>"
+    },
+    {
+     "id": "XVI.3.10",
+     "type": "remark",
+     "label": "3.10",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XVI.3.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">3.10</span></div>\n  <div class=\"thm-body\"><p>a) On peut dans 3.8 expliciter la structure du faisceau \\(T_{Y/X}\\), on trouve qu'il est canoniquement isomorphe au faisceau \\((\\mu_n)_Y^{\\otimes c}\\), où \\(\\mu_n\\) désigne le faisceau des racines \\(n\\)-èmes de l'unité (localement isomorphe au faisceau constant \\(\\mathbb{Z}/n\\mathbb{Z}\\)). L'isomorphisme en question est étudié sous le nom de classe fondamentale locale de \\(Y\\) dans \\(X\\), dans la situation un peu plus générale des intersections complètes relatives, dans Exp. XVIII consacré à la dualité.</p>\n  <p>b) Il est très plausible que les conclusions de 3.9 et de 3.10 a) restent valables sans postuler l'existence d'un corps de base \\(k\\), tout au moins lorsque \\(X\\) est un préschéma \"excellent\". C'est ce qui sera établi en tous cas dans Exp. XIX lorsque \\(X\\) est de caractéristique nulle, en utilisant la résolution des singularités de Hironaka. Comme nous verrons dans SGA 5 on a besoin du \"théorème de pureté absolu\" (ainsi que de la résolution des singularités) notamment pour pouvoir établir la \"formule de dualité locale\", (qui elle-même est un des ingrédients majeurs de la formule de LEFSCHETZ-VERDIER).</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XVI-fn3",
+     "number": "(∗)",
+     "html": "<p>(∗) Du moins si \\(F\\) était supposé localement constant. Le lecteur se convaincra que la démonstration qui suit s'applique aussi, essentiellement au cas général. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XVI-4",
+   "title": "4. Théorème de comparaison de la cohomologie pour les préschémas algébriques sur \\(\\mathbb{C}\\).",
+   "blocks": [
+    {
+     "id": "XVI.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XVI.4\">4. Théorème de comparaison de la cohomologie pour les préschémas algébriques sur \\(\\mathbb{C}\\).</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\) un schéma algébrique sur \\(\\operatorname{Spec} \\mathbb{C}\\). Nous allons comparer les sites étale et classique sur \\(X\\), et nous reprenons les notations de XI 4. Le théorème de comparaison, qui est la forme générale de XI 4.4, est le suivant :</p>"
+    },
+    {
+     "id": "XVI.4.1",
+     "type": "theorem",
+     "label": "4.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\to S\\) un morphisme de type fini de schémas localement de type fini sur \\(\\operatorname{Spec} \\mathbb{C}\\), de sorte qu'on a un diagramme commutatif de morphismes de sites</p>\n  <p>\\[\\xymatrix{ X_{\\text{ét}} \\ar[d]_{f_{\\text{ét}}} &amp; X_{\\text{cl}} \\ar[l]_{\\varepsilon} \\ar[d]^{f_{\\text{cl}}} \\\\ S_{\\text{ét}} &amp; S_{\\text{cl}} \\ar[l]_{\\varepsilon} }\\]</p>\n  <p>Soit \\(F\\) un faisceau d'ensembles (resp. de groupes ind-finis, resp. abélien de torsion) et supposons qu'on soit dans l'un des cas suivants :</p>\n  <p>(i) \\(f\\) propre,</p>\n  <p>(ii) \\(F\\) constructible.</p>\n  <p>Alors les morphismes de changement de base XII 4.1.2 <sup class=\"footnote-ref\"><a id=\"XVI-fn4ref\" href=\"#XVI-fn4\">(∗)</a></sup></p>\n  <p>\\[\\varphi : \\varepsilon^*(R^q f_{\\text{ét}*})F \\longrightarrow (R^q f_{\\text{cl}*})\\varepsilon^* F\\]</p>\n  <p>sont bijectifs pour \\(q = 0\\) (resp. pour \\(q = 0,1\\), resp. pour \\(q \\geqslant 0\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons que le théorème de Grauert-Remmert (XI 4.3 (iii)) que nous avions utilisé dans la démonstration de XI 4.4, est un cas particulier de 4.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la démonstration, nous traitons d'abord le cas \\(f\\) propre. Dans ce cas, le résultat sera conséquence de GAGA et du théorème de changement de base pour un morphisme propre, par un raisonnement élémentaire qui aurait pu figurer dans Exp. XIV. Pour traiter le cas général, nous utiliserons de plus la résolution des singularités [1] et 3.7.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut évidemment supposer \\(Y\\), donc aussi \\(X\\), de type fini sur \\(\\mathbb{C}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cas \\(f\\) propre. Nous rappelons les faits élémentaires suivants :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(a) L'espace topologique \\(X_{\\text{cl}}\\) est localement compact.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(b) Si \\(f : X \\to S\\) est propre, alors \\(f_{\\text{cl}} : X_{\\text{cl}} \\to S_{\\text{cl}}\\) est une application propre d'espaces topologiques.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, (a) est trivial puisque localement \\(X_{\\text{cl}}\\) est un fermé dans un \\(\\mathbb{C}^n\\). Pour (b) on se ramène par le lemme de Chow au cas où \\(f\\) est projectif, ce cas étant trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau d'ensembles (resp. ...) sur \\(X_{\\text{ét}}\\). Pour les deux morphismes \\(f_{\\text{ét}}\\) et \\(f_{\\text{cl}}\\), la formation des \\(R^q\\) commute à la formation des fibres (XII 5.2 et [2] 4.11.1). Il suffit donc de vérifier le théorème fibre par fibre, en les points fermés de \\(S_{\\text{ét}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le lemme suivant, nous ne supposons pas que \\(g\\) soit propre :</p>"
+    },
+    {
+     "id": "XVI.4.2",
+     "type": "lemma",
+     "label": "4.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Soit</p>\n  <p>\\[\\xymatrix{ X \\ar[dr]_{g} &amp; &amp; \\overline{X} \\ar[ll]_{h} \\ar[dl]^{\\overline{g}} \\\\ &amp; S &amp; }\\]</p>\n  <p>un diagramme commutatif avec \\(h\\) propre, et soit \\(U\\) un ouvert de \\(X\\) tel que \\(h\\) induise un isomorphisme de l'ouvert \\(\\overline{U} = U \\times_X \\overline{X}\\) de \\(\\overline{X}\\) sur \\(U\\). Soient \\(j : U \\to X\\) et \\(\\overline{j} : \\overline{U} \\to \\overline{X}\\) les inclusions, \\(F\\) un faisceau d'ensembles (resp. ...) sur \\(U\\), et \\(\\overline{F}\\) le faisceau induit sur \\(\\overline{U}\\). Si le théorème 4.1 est vrai pour \\((\\overline{g}, \\overline{j}_! \\overline{F})\\) il l'est également pour \\((g, j_! F)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Le théorème est vrai pour \\((h, \\overline{j}_! \\overline{F})\\) parce qu'on est ramené à le vérifier fibre par fibre, et on a alors les deux cas suivants : ou bien la restriction du faisceau à la fibre est nulle, ou bien le morphisme \\(h\\) est un isomorphisme. Dans ces deux cas, le résultat est trivial. On trouve que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\varepsilon^* j_! F \\simeq \\varepsilon^* h_{\\text{ét}*}(\\overline{j}_! \\overline{F}) \\simeq h_{\\text{cl}*} \\varepsilon^*(\\overline{j}_! \\overline{F})\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(R^q h_{\\text{ét}*})\\overline{j}_! \\overline{F} = (R^q h_{\\text{cl}*})\\varepsilon^*(\\overline{j}_! \\overline{F}) = 0 \\qquad \\text{si } q &gt; 0\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour les valeurs de \\(q\\) envisagées, donc que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(R^q g_{\\text{ét}*})j_! F \\simeq (R^q \\overline{g}_{\\text{ét}*})\\overline{j}_! \\overline{F}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(R^q g_{\\text{cl}*})j_! F \\simeq (R^q \\overline{g}_{\\text{cl}*})\\overline{j}_! \\overline{F} \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où 4.2.</p>"
+    },
+    {
+     "id": "XVI.4.3",
+     "type": "lemma",
+     "label": "4.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>Pour vérifier 4.1 pour toutes les données \\((f,F)\\) avec \\(f\\) propre, il suffit de le faire dans le cas où on suppose que de plus \\(f\\) est de dimension relative \\(\\leqslant 1\\) et \\(S = \\operatorname{Spec} \\mathbb{C}\\) est un point.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Récurrence sur la dimension relative. Supposons le résultat connu en dimension relative \\(&lt; n\\), et que \\(n &gt; 1\\). Comme nous l'avons remarqué, nous pouvons faire la vérification fibre par fibre, c'est-à-dire, nous pouvons supposer que \\(S = \\operatorname{Spec} \\mathbb{C}\\) est un point, et donc \\(X\\) de dimension \\(\\leqslant n\\). De plus, nous pouvons supposer \\(X\\) réduit. Soient \\(\\varphi\\) une fonction rationnelle sur \\(X\\) qui n'est constante sur aucun composant irréductible de \\(X\\), \\(U\\) un ouvert dense de \\(X\\) sur lequel \\(\\varphi\\) est défini, et \\(\\overline{X} \\subset X \\times \\mathbb{P}^1\\) l'adhérence du graphe du morphisme \\(\\varphi : U \\to \\mathbb{E}^1\\). On a un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ &amp; \\overline{X} \\ar[dl]_{h} \\ar[dd]|{\\overline{g}} \\ar[dr]^{a} &amp; \\\\ X \\ar[dr]_{g} &amp; &amp; \\mathbb{P}^1 \\ar[dl]^{b} \\\\ &amp; Y = \\operatorname{Spec} \\mathbb{C} &amp; }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où les dimensions relatives de \\(a\\) et \\(b\\) sont \\(&lt; n\\). Par l'hypothèse de récurrence, le théorème est vrai pour \\((a,.)\\) et \\((b,.)\\), d'où on conclut qu'il l'est également pour \\((\\overline{g},.)\\). En effet, c'est trivial pour \\(q = 0\\) ; si \\(F\\) est abélien de torsion sur \\(\\overline{X}\\), cela résulte du morphisme de suites spectrales de Leray</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ \\varepsilon^*(R^p b_{\\text{ét}*})(R^q a_{\\text{ét}*})F \\ar@{=&gt;}[r] \\ar[d] &amp; \\varepsilon^*(R^{p+q} \\overline{g}_{\\text{ét}*})F \\ar[d] \\\\ (R^p b_{\\text{cl}*})(R^q a_{\\text{cl}*})\\varepsilon^* F \\ar@{=&gt;}[r] &amp; (R^{p+q} \\overline{g}_{\\text{cl}*})\\varepsilon^* F }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>si enfin \\(F\\) est un faisceau de groupes ind-finis sur \\(\\overline{X}\\), notons que puisque \\(\\varepsilon^*(R^1 \\overline{g}_{\\text{cl}*})\\) est un foncteur effaçable, il suffit de démontrer (compte tenu du résultat pour \\(q = 0\\)), que \\((R^1 \\overline{g}_{\\text{cl}*})\\varepsilon^*\\) est également effaçable (cf. XII 8.2), ce qui résulte de la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to (R^1 b_{\\text{cl}*})a_{\\text{cl}*} \\varepsilon^* F \\to (R^1 \\overline{g}_{\\text{cl}*})\\varepsilon^* F \\to b_{\\text{cl}*}(R^1 a_{\\text{cl}*})\\varepsilon^* F \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et du fait que \\((R^1 b_{\\text{cl}*})\\varepsilon^*\\) et \\((R^1 a_{\\text{cl}*})\\varepsilon^*\\) sont effaçables grâce à l'hypothèse de récurrence.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit maintenant \\(F\\) un faisceau d'ensembles sur \\(X\\). On a \\(F \\hookrightarrow h_{\\text{ét}*}h^* F = G\\). Par la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(4.3.1)\\qquad F \\to G \\rightrightarrows G \\amalg_F G \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on se ramène (pour \\(q = 0\\)) à démontrer 4.1 pour \\(G\\), donc pour un faisceau de la forme \\(h_{\\text{ét}*}\\overline{F}\\). Mais pour un tel faisceau, le résultat sera conséquence du théorème pour \\((\\overline{g},.)\\) et pour \\((h,.)\\), et \\(h\\) est de dimension relative \\(&lt; n\\), comme on voit immédiatement.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau abélien de torsion sur \\(X\\). On a la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[(*)\\qquad 0 \\to j_! j^* F \\to F \\to i_* i^* F \\to 0 \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(U\\) est dense dans \\(X\\), on a \\(\\dim Y \\leqslant n\\), donc 4.1 est vrai pour \\((g|Y, i^* F)\\), donc pour \\((g, i_* i^* F)\\). Il suffit donc, grâce au lemme des cinq, de vérifier 4.1 pour \\((f,j_! j^* F)\\), ce qui résulte du théorème pour \\(\\overline{g}\\) (4.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau de groupes ind-finis sur \\(X\\). Il suffit de démontrer que le foncteur \\((R^1 g_{\\text{cl}*})\\varepsilon^*\\) est effaçable pour le faisceau \\(F\\), ce qui résulte de (*) et de l'effaçabilité pour \\(j_! j^* F\\) et pour \\(i_* i^* F\\), i.e. du théorème pour \\((g,j_! j^* F)\\) (4.2) et pour \\((g,i_* i^* F)\\) (hypothèse de récurrence), c.q.f.d.</p>"
+    },
+    {
+     "id": "XVI.4.4",
+     "type": "lemma",
+     "label": "4.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Pour démontrer (4.1) dans le cas où \\(f\\) est propre, il suffit de démontrer ceci : soit \\(X\\) une courbe complète régulière sur \\(\\operatorname{Spec} \\mathbb{C}\\), et \\(F\\) un faisceau constant et constructible d'ensembles (resp. ...) sur \\(X\\). Alors les morphismes</p>\n  <p>\\[H^q(X_{\\text{ét}},F) \\longrightarrow H^q(X_{\\text{cl}},F)\\]</p>\n  <p>sont bijectifs pour les valeurs de \\(q\\) envisagées.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Puisqu'il suffit de vérifier le théorème fibre par fibre, on est ramené par 4.3 au cas \\(X\\) propre et de dimension \\(\\leqslant 1\\). Le cas de dimension 0 est d'ailleurs trivial, et il résulte de cela que le théorème est vrai pour un morphisme fini. Puisque \\(f\\) est propre, la cohomologie de \\(X_{\\text{ét}}\\) et de \\(X_{\\text{cl}}\\) commute aux limites inductives (VII 3.3 et [2], 4.12.1) et on est donc ramené au cas \\(F\\) constructible (IX 2.9 (iii)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On applique IX 2.14. Pour un faisceau d'ensembles, la suite exacte 4.3.1 et IX 2.14 montrent qu'on peut prendre \\(F = \\pi_* C\\), où \\(\\pi : X' \\to X\\) est fini, \\(X'\\) est normal, donc régulier, et \\(C\\) est un faisceau constant sur \\(X'\\). Pour un faisceau abélien de torsion, on prend une résolution de \\(F\\) par des produits finis de faisceaux de la forme \\(\\pi_* C\\) et on applique la suite spectrale d'une résolution, et on se réduit encore au cas \\(F = \\pi_* C\\). Pour un faisceau de groupes ind-finis, on rappelle qu'il suffit de démontrer l'effaçabilité de \\((R^1 g_{\\text{cl}*})\\varepsilon^*\\) pour le faisceau \\(F\\), donc pour un faisceau \\(G\\) dans lequel on peut plonger \\(F\\), donc on est encore réduit au cas \\(F = \\pi_* C\\). Or il est évident par (VIII 5.5 et 5.8) qu'on peut maintenant remplacer \\(X\\) par \\(X'\\), d'où le lemme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour traiter ce dernier cas, il suffit évidemment (tenant compte de la dimension cohomologique (IX 7.7 et [2] 4.14.1)) de démontrer que pour une courbe complète et régulière on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(q = 0) : \\(X\\) connexe et non-vide \\(\\Longleftrightarrow X_{\\text{cl}}\\) connexe et non-vide.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(q = 1) : Le morphisme de changement de base induit une équivalence de la catégorie des revêtements étales de \\(X\\) et de la catégorie des revêtements étales analytiques finis de \\(X_{\\text{cl}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(q = 2) : On a un isomorphisme \\(\\varepsilon : H^2(X_{\\text{ét}},\\mu_n) \\xrightarrow{\\ \\sim\\ } H^2(X_{\\text{cl}},\\mu_n)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or les deux premières assertions résultent immédiatement de GAGA. Pour la dernière, notons qu'on a \\(H^2(X_{\\text{ét}},\\mathbb{G}_m) = 0\\) (IX 4.5) et de même, notant \\(\\mathcal{O}^*\\) le faisceau des fonctions holomorphes inversibles de \\(X_{\\text{cl}}\\), \\(H^2(X_{\\text{cl}},\\mathcal{O}^*) = 0\\) (cela résulte de la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to \\mathbb{Z} \\to \\mathcal{O} \\xrightarrow{\\ \\exp\\ } \\mathcal{O}^* \\to 0\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et du fait que \\(H^2(X_{\\text{cl}},\\mathcal{O}) = H^2(X_{\\text{ét}},\\mathcal{O}_X) = 0\\) par GAGA). Par suite la suite exacte de Kummer IX 3.2 (resp. la suite exacte sur \\(X_{\\text{cl}}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to \\mu_n \\to \\mathcal{O}^* \\xrightarrow{\\ n\\ } \\mathcal{O}^* \\to 0 \\;)\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[H^1(X_{\\text{ét}},\\mathbb{G}_m)/n \\xrightarrow{\\ \\sim\\ } H^2(X_{\\text{ét}},\\mu_n)\\]\n\\[(\\text{resp. } H^1(X_{\\text{cl}},\\mathcal{O}^*)/n \\xrightarrow{\\ \\sim\\ } H^2(X_{\\text{cl}},\\mu_n) \\;) \\;.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après GAGA, le morphisme canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[H^1(X_{\\text{ét}},\\mathbb{G}_m) = \\operatorname{Pic} X \\longrightarrow \\operatorname{Pic} X_{\\text{cl}} = H^1(X_{\\text{cl}},\\mathcal{O}^*)\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est bijectif, d'où le résultat, ce qui prouve 4.1 dans le cas où \\(f\\) est propre.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cas \\(F\\) constructible. La démonstration se fait par récurrence sur \\(\\dim X\\). Supposons le résultat connu si la dimension est \\(&lt; n\\), et prouvons-le quand la dimension de \\(X\\) est \\(\\leqslant n\\).</p>"
+    },
+    {
+     "id": "XVI.4.5",
+     "type": "lemma",
+     "label": "4.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>On peut supposer \\(f : X \\to S\\) une immersion ouverte dense et \\(F\\) constant.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Comme dans la démonstration de 1.3, on peut en effet supposer \\(X\\) et \\(S\\) affines, donc \\(f\\) quasi-projectif. Alors on applique le raisonnement de 4.4 pour se ramener au cas \\(F = \\pi_* C\\), \\(\\pi : X' \\to X\\) fini, et \\(C\\) constant, d'où en remplaçant \\(X\\) par \\(X'\\), au cas \\(F\\) constant. On peut remplacer \\(X\\) par \\(X_{\\text{red}}\\). Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ X \\ar[rr]^{h} \\ar[dr]_{f} &amp; &amp; \\overline{X} \\ar[dl]^{\\overline{f}} \\\\ &amp; S &amp; }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>un diagramme commutatif tel que \\(\\overline{X}\\) soit réduit, que \\(\\overline{f}\\) soit projectif, et que \\(h\\) soit une immersion ouverte dense. Il suffit de vérifier le théorème pour les deux morphismes \\(h\\), \\(\\overline{f}\\) (cf. dém. de 4.3), donc pour \\(h\\) puisque \\(\\overline{f}\\) est propre, donc pour une immersion ouverte dense.</p>"
+    },
+    {
+     "id": "XVI.4.6",
+     "type": "lemma",
+     "label": "4.6",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XVI.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\"><p>On peut de plus supposer \\(S\\) régulier.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Soit \\(S' \\xrightarrow{\\ h\\ } S\\) une \"résolution des singularités de \\(S\\)\", i.e., un morphisme surjectif, propre et birationnel, tel que \\(S'\\) soit régulier, et soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ X' \\ar[r]^{f'} \\ar[d]_{h'} &amp; S' \\ar[d]^{h} \\\\ X \\ar[r]_{f} &amp; S }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le diagramme cartésien déduit de \\(h\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau d'ensembles constant sur \\(X\\). On a \\(F \\hookrightarrow G = h'_* h'^* F\\) et on en déduit qu'il suffit (pour \\(q = 0\\)) de vérifier 4.1 pour \\(G\\) (cf. 4.3.1), c'est-à-dire, pour un faisceau de la forme \\(h'_* F'\\), où \\(F'\\) est constant sur \\(X'\\). Or on a un diagramme commutatif (où on supprime le symbole \"et\")</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ \\varepsilon^* f_*(h'_* F') = \\varepsilon^* h_* f'_* F' \\ar[r]^-{a} \\ar[d]_{d} &amp; h_{\\text{cl}*} \\varepsilon^* f'_* F' \\ar[d]^{b} \\\\ f_{\\text{cl}*} \\varepsilon^*(h'_* F') \\ar[r]_-{c} &amp; f_{\\text{cl}*} h'_{\\text{cl}*} \\varepsilon^* F' = h_{\\text{cl}*} f'_{\\text{cl}*} \\varepsilon^* F' }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et \\(a\\), \\(c\\) sont bijectifs d'après le résultat pour un morphisme propre. Pour démontrer que \\(d\\) est bijectif, il suffit de démontrer que \\(b\\) l'est, donc que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\varepsilon^* f'_* F' \\xrightarrow{\\ \\sim\\ } f'_{\\text{cl}*} \\varepsilon^* F'\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc on est ramené au cas \\(S = S'\\), donc \\(S\\) régulier.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(Remarque : Nous avons utilisé sans le mentionner explicitement le théorème de finitude pour un morphisme propre XIV 1.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau abélien constant de torsion sur \\(X\\). Il suffit de traiter le cas \\(F = (\\mathbb{Z}/n)_X\\). Or le morphisme \\(h'\\) induit un isomorphisme au-dessus d'un ouvert dense \\(j : U \\to X\\) de \\(X\\) ; soient \\(j' : U' \\to X'\\) l'ouvert \\(h'^{-1}(U) \\xrightarrow{\\ \\sim\\ } U\\), et \\(Y = X-U\\). On a \\(\\dim Y &lt; n\\) parce que \\(U\\) est dense, donc le théorème est vrai pour \\((f,(\\mathbb{Z}/n)_Y)\\). Par la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to j_!(\\mathbb{Z}/n)_U \\to (\\mathbb{Z}/n)_X \\to (\\mathbb{Z}/n)_Y \\to 0\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et le lemme des cinq, on se ramène à démontrer le théorème pour le faisceau \\(j_!(\\mathbb{Z}/n)_U\\) et le morphisme \\(f\\), donc par 4.2 à démontrer le théorème pour \\((hf', j'_!(\\mathbb{Z}/n)_{U'})\\). Or on a une suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to j'_!(\\mathbb{Z}/n)_{U'} \\to (\\mathbb{Z}/n)_{X'} \\to (\\mathbb{Z}/n)_{Y'} \\to 0 \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et le théorème est vrai pour \\((hf', (\\mathbb{Z}/n)_{Y'})\\) par l'hypothèse de récurrence. Il suffit donc de démontrer le théorème pour \\((hf', (\\mathbb{Z}/n)_{X'})\\). Mais par le cas propre, le théorème est vrai pour \\((h,.)\\), et il s'ensuit, par la suite spectrale de Leray pour le couple de morphismes \\(h\\), \\(f'\\), qu'il suffit de le démontrer pour \\((f', \\mathbb{Z}/n)\\), d'où le lemme dans ce cas.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons enfin que \\(F\\) soit un faisceau de groupes finis constant. Rappelons qu'il suffit de démontrer que le foncteur \\((R^1 f_{\\text{cl}*})\\varepsilon^*(.)\\) est effaçable pour \\(F\\), donc pour un \\(G\\) dans lequel on peut plonger \\(F\\), donc pour \\(G = h'_* h'^* F\\), c'est-à-dire pour un faisceau de la forme \\(h'_* F'\\) où \\(F'\\) est constant sur \\(X'\\). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\varepsilon^*(h'_* F') \\xrightarrow{\\ \\sim\\ } h'_{\\text{cl}*}(\\varepsilon^* F')\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to (R^1 f_{\\text{cl}*})h'_{\\text{cl}*} \\varepsilon^*(.) \\to (R^1 f_{\\text{cl}}h'_{\\text{cl}*})\\varepsilon^*(.) = (R^1 h_{\\text{cl}}f'_{\\text{cl}*})\\varepsilon^*(.) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc il suffit de démontrer l'effaçabilité de ce dernier foncteur pour un faisceau constant. Mais on a la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0 \\to (R^1 h_{\\text{cl}*})f'_{\\text{cl}*} \\varepsilon^*(.) \\to (R^1 h_{\\text{cl}}f'_{\\text{cl}*})\\varepsilon^*(.) \\to h_{\\text{cl}*}(R^1 f'_{\\text{cl}*})\\varepsilon^*(.) \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et le premier membre est effaçable, disons effacé par la résolution de Godement (XII 3.3), parce que \\(h\\) est propre. Il suffit donc de démontrer que le membre de droite est effacé par la résolution de Godement, donc que \\((R^1 f'_{\\text{cl}*})\\varepsilon^*(.)\\) l'est, donc que le théorème est vrai pour \\((f', F')\\) où \\(F'\\) est constant, d'où le lemme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Fin de la démonstration. Nous supposons maintenant que \\(F\\) est un faisceau constant et que \\(f : X \\to S\\) est une immersion ouverte dense, avec \\(S\\) régulier. Le cas ensembliste résulte maintenant immédiatement de 3.2 et du lemme trivial analogue pour la topologie classique — en effet, on en déduit que \\(\\varepsilon^* f_* F\\) et \\(f_{\\text{cl}*} \\varepsilon^* F\\) sont constants de même valeur, donc isomorphes par \\(\\varphi\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(q &gt; 0\\), on va d'abord se réduire au cas où de plus \\(X = S-Y\\) avec \\(Y\\) régulier, i.e. au cas où \\((Y,S)\\) est un \\(\\operatorname{Spec} \\mathbb{C}\\)-couple lisse. En effet, écrivons \\(X = S-C_1\\), où \\(C_1\\) est muni de la structure induite réduite, et définissons récursivement</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[Y_\\nu = \\text{l'ouvert dense des points réguliers de } C_\\nu \\;,\\]\n\\[C_{\\nu+1} = C_\\nu - Y_\\nu \\;, \\text{ avec structure induite réduite.}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a \\(\\dim C_{\\nu+1} &lt; \\dim C_\\nu\\) parce que \\(Y_\\nu\\) est dense dans \\(C_\\nu\\), d'où une suite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[X = X_1 \\subset X_2 = S-C_2 \\subset X_3 = S-C_3 \\subset \\ldots \\subset X_r = S \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où les inclusions \\(i_\\nu : X_\\nu \\to X_{\\nu+1}\\) sont des immersions ouvertes et où l'on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[X_\\nu = X_{\\nu+1} - Y_\\nu \\;, \\quad Y_\\nu \\text{ fermé dans } X_{\\nu+1} \\;, \\text{ et régulier.}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or l'image directe \\(i_{\\nu*} F\\) d'un faisceau constant sur \\(X\\) est constante (3.2), et les \\(R^q i_{\\nu*} F\\) sont constructibles et concentrés sur les variétés de \\(Y\\) de dimension \\(\\leqslant n-1\\) (3.4, 3.6, 3.7) pour les valeurs de \\(q\\) envisagées. Donc par l'hypothèse de récurrence et la suite spectrale de Leray (resp. la suite exacte XII 3.2), on se réduit au cas de \\(i_\\nu\\), d'où la réduction annoncée.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais pour un couple lisse \\((Y,S)\\) on a calculé explicitement la valeur des \\((R^q f_*)F\\) pour la topologie étale (3.4, 3.6, 3.7), et un calcul analogue et facile, que nous laissons au lecteur, donne les résultats analogues pour la topologie classique. On en déduit le théorème pour \\(f\\) par une comparaison directe.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XVI-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) En fait, nous utilisons l'homomorphisme de changement de base sous des conditions plus générales que celles envisagées dans Exp. XII, où nous nous étions limités à un carré cartésien de morphismes de préschémas. Le lecteur se convaincra aisément que la définition s'étend verbatim à un carré essentiellement commutatif de morphismes de sites. Pour plus de développements à ce sujet, voir exposé suivant. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XVI-5",
+   "title": "5. Le théorème de finitude pour les préschémas algébriques en caractéristique zéro.",
+   "blocks": [
+    {
+     "id": "XVI.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XVI.5\">5. Le théorème de finitude pour les préschémas algébriques en caractéristique zéro.</h2>"
+    },
+    {
+     "id": "XVI.5.1",
+     "type": "theorem",
+     "label": "5.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(k\\) un corps de caractéristique zéro, et \\(f : X \\to S\\) un morphisme de type fini de schémas localement de type fini sur \\(k\\). Soit \\(F\\) un faisceau constructible d'ensembles (resp. de groupes finis, resp. abélien de torsion) sur \\(X\\). Alors les \\(R^q f_* F\\) sont également constructibles pour \\(q = 0\\) (resp. pour \\(q = 0,1\\), resp. pour tout \\(q\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On met l'hypothèse que \\(k\\) soit de caractéristique 0 parce qu'on va se servir du théorème de résolution des singularités [1]. La démonstration vaut également pour la caractéristique \\(p &gt; 0\\) si l'on admet la résolution des singularités, pourvu que \\(F\\) soit d'ordres premiers à \\(p\\). On peut donc déduire un résultat en caractéristique \\(\\neq 0\\) pour \\(\\dim X \\leqslant 2\\), en appliquant les résultats d'Abhyankar [3]. Un autre ingrédient de la démonstration, en plus du sempiternel th. de changement de base pour un morphisme propre, est le \"théorème de pureté cohomologique absolu\" 3.9.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons que le théorème est déjà démontré pour un morphisme propre et pour \\(S\\) arbitraire (XIV 1.1). D'ailleurs on obtiendra dans Exposé XIX (encore en car. 0) le théorème de finitude sous les hypothèses beaucoup plus faibles que \\(S\\) soit un schéma excellent et que \\(f\\) soit de type fini, en prouvant pour de tels schémas le théorème de pureté absolu sous la forme signalée dans 3.10.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas de caractéristique \\(\\neq 0\\) et d'un schéma de dimension \\(\\geqslant 3\\), on n'a pour l'instant que la conséquence facile suivante de XI 3.3 :</p>"
+    },
+    {
+     "id": "XVI.5.2",
+     "type": "theorem",
+     "label": "5.2",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XVI.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) un schéma algébrique lisse sur \\(\\operatorname{Spec} k\\), \\(k\\) un corps séparablement clos, et soit \\(F\\) un faisceau de groupes abéliens finis (resp. de groupes finis) qui est localement constant, et d'ordres premiers à la caractéristique de \\(k\\). Alors \\(H^q(X,F)\\) est un groupe fini (resp. un ensemble pointé fini) pour tout \\(q\\) (resp. pour \\(q = 0,1\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 5.2. On peut supposer \\(k\\) algébriquement clos (VIII 1.1). Récurrence sur \\(n = \\dim X\\). D'après XI 3.3 il existe un hyper-recouvrement de \\(X\\) par des ouverts qui sont des \"bons voisinages\". On se réduit immédiatement, par la suite spectrale d'un hyper-recouvrement, au cas où \\(X\\) est un bon voisinage, donc admet une fibration élémentaire (XI 3.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ X \\ar[rr]^{j} \\ar[dr]_{f} &amp; &amp; \\overline{X} \\ar[dl]^{\\overline{f}} \\\\ &amp; S &amp; }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après (3.2, 3.6, 3.7), le faisceau \\(j_* F\\) est localement constant sur \\(\\overline{X}\\), \\((R^1 j_*)F\\) est localement constant sur \\(Y = \\overline{X}-X\\), et \\((R^q j_*)F = 0\\) si \\(q &gt; 0\\). Par suite il résulte de 2.1 que \\((R^p \\overline{f}_*)(R^q j_*)F\\) est un faisceau localement constant sur \\(S\\) pour les valeurs de \\(q\\) envisagées, et le résultat résulte de l'hypothèse de récurrence et de la suite spectrale de Leray (resp. de la suite exacte XII 3.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 5.1. La démonstration de 5.1 est très voisine de celle de 4.1 pour le cas \\(F\\) constructible. Nous nous bornerons à indiquer les grandes lignes : Récurrence sur \\(\\dim X = n\\). On se réduit d'abord au cas \\(X\\) et \\(S\\) affines, donc \\(f\\) quasi-projectif, en appliquant la méthode de la démonstration de 1.3. Ensuite on applique IX 2.15 et (VIII 5.5 et 5.8) pour se ramener au cas \\(F\\) constant. On a un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ X \\ar[rr]^{h} \\ar[dr]_{f} &amp; &amp; \\overline{X} \\ar[dl]^{\\overline{f}} \\\\ &amp; S &amp; } \\;,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(h\\) est une immersion ouverte dense et où \\(\\overline{X}\\) est propre, donc le théorème est vrai pour \\(\\overline{X}\\) (XIV 1.1). Il suffit ainsi de démontrer le théorème pour \\((h,F)\\), c'est-à-dire pour une immersion ouverte dense et un faisceau constant. Soit \\(h : S' \\to S\\) une résolution des singularités de \\(S\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\\xymatrix{ X \\ar[d]_{f} &amp; X' \\ar[l]_{h'} \\ar[d]^{f'} \\\\ S &amp; S' \\ar[l]_{h} }\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le diagramme cartésien déduit de \\(h\\). On se ramène à démontrer le théorème pour \\(f'\\), donc au cas où de plus \\(S = S'\\) est régulier. Par la méthode de récurrence employée dans la fin de la démonstration de 4.1, on se réduit au cas où \\(Y = S-X\\) est non-singulier, i.e. où \\((Y,S)\\) est un couple lisse, et on termine en appliquant (3.2, 3.4, 3.6, 3.7).</p>"
+    },
+    {
+     "id": "XVI.5.3",
+     "type": "remark",
+     "label": "5.3",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XVI.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\"><p>La démonstration de 5.1 qu'on vient d'esquisser est également valable lorsqu'on se donne un anneau noethérien \\(A\\) à gauche, annulé par un entier \\(n &gt; 0\\) (qu'il faut supposer premier à la caractéristique si celle-ci n'est pas supposée nulle, cf. remarques suivant 5.1), et qu'on considère des faisceaux de \\(A\\)-modules à gauche constructibles.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XVI-references",
+   "title": "Références",
+   "blocks": [
+    {
+     "id": "XVI.references",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XVI.references\">Références</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] HIRONAKA, H. <em>Resolution of singularities of an algebraic variety over a field of characteristic zero</em>, Annals of Math., vol. 79 (1964), p. 109.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] GODEMENT, R. <em>Théorie des Faisceaux</em>, Paris, 1958.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] ABHYANKAR, S. <em>Local uniformization on algebraic surfaces over ground fields of characteristic \\(p \\neq 0\\)</em>, Ann. of Math., vol. 63 (1956), p. 491.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] SERRE, J.-P. <em>Géométrie Algébrique et Géométrie Analytique</em>, Annales Inst. Fourier 1956, p. 1-42 (Cité GAGA).</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par M. Artin"
+}

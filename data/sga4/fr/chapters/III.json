@@ -1,0 +1,804 @@
+{
+ "chapter_id": "III",
+ "title": "FONCTORIALITÉ DES CATÉGORIES DE FAISCEAUX",
+ "number": "III",
+ "pages": [
+  {
+   "id": "III",
+   "title": "FONCTORIALITÉ DES CATÉGORIES DE FAISCEAUX",
+   "blocks": [
+    {
+     "id": "III",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"III\">EXPOSÉ III<br>FONCTORIALITÉ DES CATÉGORIES DE FAISCEAUX<span class=\"author\">par J.L. Verdier</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans I 5, on a étudié le comportement des catégories de préfaisceaux par rapport\naux foncteurs entre les catégories d'arguments. Dans cet exposé, on étend cette étude au\ncas des sites et des catégories de faisceaux (n° 1 et 2). Après avoir introduit la topologie\ninduite (n° 3), on aborde au n° 4 le lemme de comparaison qui jouera un rôle important\ndans Exp. IV. Au numéro 5, on étudie, pour le lecteur patient, certains diagrammes\ncommutatifs liés aux catégories localisées (du type \\(C/X\\)). Dans le théorème 5.1 on fait\ndes hypothèses de petitesse sur les catégories envisagées. Ces hypothèses ne sont pas, en\ngénéral, satisfaites par les sites rencontrés dans la pratique (\\(\\mathcal{U}\\)-sites). Ceci oblige à\nquelques contorsions (4.2, 4.3, 4.4).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-1",
+   "title": "1. Foncteurs continus",
+   "blocks": [
+    {
+     "id": "III.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.1\">1. Foncteurs continus</h2>"
+    },
+    {
+     "id": "III.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) et \\(C'\\) deux \\(\\mathcal{U}\\)-sites et \\(u : C \\to C'\\) un foncteur\nentre les catégories sous-jacentes. On dit que \\(u\\) est <em>continu</em> si pour tout faisceau d'ensembles\n\\(F\\) sur \\(C'\\), le préfaisceau \\(X \\mapsto F \\circ u(X)\\) sur \\(C\\) est un faisceau.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette notion de continuité dépend a priori de l'univers \\(\\mathcal{U}\\) pour lequel les deux sites\nsont des \\(\\mathcal{U}\\)-sites. La proposition 1.5 montre qu'elle n'en dépend pas.</p>"
+    },
+    {
+     "id": "III.1.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.1.1\">1.1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(i : \\widetilde{C} \\to \\widehat{C}\\) (resp. \\(i' : \\widetilde{C}' \\to \\widehat{C}'\\)) le foncteur\nd'inclusion canonique des faisceaux dans les préfaisceaux. D'après la définition 1.1, le foncteur \\(u\\) est\ncontinu si et seulement s'il existe un foncteur \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\) tel que l'on ait l'égalité \\(i u_s = u^* i'\\)\n(avec \\(u^* F = F \\circ u\\) (I 5.0)).</p>"
+    },
+    {
+     "id": "III.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un petit site, \\(C'\\) un \\(\\mathcal{U}\\)-site et \\(u : C \\to C'\\)\nun foncteur entre les catégories sous-jacentes. Les propriétés suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>Le foncteur \\(u\\) est continu.</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>Pour tout objet \\(X\\) de \\(C\\) et tout crible \\(R \\hookrightarrow X\\) couvrant \\(X\\), le morphisme\n\\(u_! R \\to u(X)\\) est bicouvrant dans \\(\\widehat{C}'\\) (II 5.2 et I 5.1).<sup class=\"footnote-ref\"><a id=\"III-fn1ref\" href=\"#III-fn1\">(∗)</a></sup></p></li>\n  <li><span class=\"item-label\">iii)</span> <p>Pour toute famille bicouvrante \\(H_i \\to K\\), \\(i \\in I\\), de \\(\\widehat{C}\\), la famille des\n\\(u_! H_i \\to u_! K\\), \\(i \\in I\\), est bicouvrante dans \\(\\widehat{C}'\\).</p></li>\n  <li><span class=\"item-label\">iv)</span> <p>Il existe un foncteur \\(u^s : \\widetilde{C} \\to \\widetilde{C}'\\), commutant aux limites inductives\net « prolongeant \\(u\\) », i.e. tel que le diagramme de foncteurs canoniques\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nsoit commutatif à isomorphisme près.</p></li>\n  </ol>\n  <p>De plus, lorsque \\(C\\) n'est plus nécessairement un petit site, mais un \\(\\mathcal{U}\\)-site, on a\ntoujours i) \\(\\Longleftrightarrow\\) iv) et le foncteur \\(u^s\\) de iv) est nécessairement un adjoint à gauche du\nfoncteur \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\), et est par suite déterminé à isomorphisme unique près.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve :</strong> La démonstration de i) \\(\\Longleftrightarrow\\) iv) lorsque \\(C\\) est un \\(\\mathcal{U}\\)-site\nsera faite en 4.2. Supposons \\(C\\) petit. Il est clair que iii) \\(\\Longrightarrow\\) ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) iii) : Soit \\(H_i \\to K\\), \\(i \\in I\\), une famille bicouvrante de \\(\\widehat{C}\\). Pour\ntout faisceau \\(F\\) sur \\(C'\\), le préfaisceau \\(u^* F\\) (I 5.0) est un faisceau sur \\(C\\).\nDonc (II 5.3) l'application canonique\n\\[\n\\mathrm{Hom}(K, u^* F) \\longrightarrow \\prod_i \\mathrm{Hom}(H_i, u^* F) ,\n\\]\nest bijective. Par adjonction (I 5.1), on en déduit que l'application\ncanonique\n\\[\n\\mathrm{Hom}(u_! K, F) \\longrightarrow \\prod_i \\mathrm{Hom}(u_! H_i, F)\n\\]\nest bijective. Par suite (II 5.3) la famille \\(u_! H_i \\to u_! K\\), \\(i \\in I\\), est\nbicouvrante.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ii) \\(\\Longrightarrow\\) i) : Soient \\(X\\) un objet de \\(C\\), \\(R \\hookrightarrow X\\) un crible couvrant, \\(F\\) un\nfaisceau sur \\(C'\\). D'après (II 5.3), l'application\n\\[\n\\mathrm{Hom}(u_! X, F) \\longrightarrow \\mathrm{Hom}(u_! R, F)\n\\]\nest bijective. Par adjonction (I 5.1), on en déduit que l'application\n\\[\n\\mathrm{Hom}(X, u^* F) \\longrightarrow \\mathrm{Hom}(R, u^* F)\n\\]\nest bijective. Par suite \\(u^* F\\) est un faisceau.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) iv) : Utilisons les notations habituelle \\(a\\) et \\(i\\) (resp. \\(a'\\) et \\(i'\\))\npour les foncteurs « faisceau associé » et « inclusion dans les préfaisceaux ».\nPour tout faisceau \\(G\\) sur \\(C\\), posons \\(u^s G = a' u_! i G\\). Pour tout faisceau \\(F\\)\nsur \\(C'\\), on a la suite d'isomorphismes naturels :\n\\[\n\\mathrm{Hom}(G, u_s F) \\simeq \\mathrm{Hom}(iG, i u_s F) \\simeq \\mathrm{Hom}(iG, u^* i'F) \\simeq \\mathrm{Hom}(u_! iG, i'F) \\simeq \\mathrm{Hom}(a' u_! iG, F) .\n\\]\n(Le premier isomorphisme provient de ce que \\(i\\) est pleinement fidèle ;\nle deuxième isomorphisme provient de la définition de \\(u_s\\) ; les troisième\net quatrième isomorphisme s'obtiennent par adjonction). Par suite \\(u^s\\)\nest adjoint à gauche à \\(u_s\\). En particulier \\(u^s\\) commute aux limites induc-\ntives. Pour tout préfaisceau \\(K\\) sur \\(C\\) et tout faisceau \\(F\\) sur \\(C'\\), on a\nla suite d'isomorphismes naturels :\n\\[\n\\mathrm{Hom}(u^s a K, F) \\simeq \\mathrm{Hom}(a K, u_s F) \\simeq \\mathrm{Hom}(K, i u_s F) \\simeq \\mathrm{Hom}(K, u^* i'F) \\simeq \\mathrm{Hom}(u_! K, i'F) \\simeq \\mathrm{Hom}(a' u_! K, F)\n\\]\n(le troisième isomorphisme provient de la définition de \\(u_s\\) ; les autres s'obtien-\nnent par adjonction) ; d'où un isomorphisme fonctoriel \\(u^s a K \\simeq a' u_! K\\).\nEn particulier, en utilisant cet isomorphisme lorsque \\(K\\) est représentable,\non obtient, compte tenu de I 5.4 3), un diagramme commutatif à isomor-\nphisme près :\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>iv) \\(\\Longrightarrow\\) ii) : Soit \\(h : C \\to \\widehat{C}\\) (resp. \\(h' : C' \\to \\widehat{C}'\\)) le foncteur qui\nassocie à un objet le préfaisceau qu'il représente. Considérons le\ndiagramme :\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{h} &amp; C' \\ar[d]^-{h'} \\\\\n\\widehat{C} \\ar[r]^-{u_!} \\ar[d]_-{a} &amp; \\widehat{C}' \\ar[d]^-{a'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' .\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le carré du haut est commutatif (I 5.4 3)) et on a \\(a h = \\varepsilon_C\\), \\(a' h' = \\varepsilon_{C'}\\).\nPour tout objet \\(K\\) de \\(\\widehat{C}\\), on a un isomorphisme canonique (I 3.4) :\n\\[\n\\varinjlim_{(h(X) \\to K)\\, \\in\\, \\mathrm{ob}(C/K)} h(X) \\xrightarrow{\\ \\sim\\ } K .\n\\]\nComme les foncteurs \\(u_!\\), \\(u^s\\), \\(a\\) et \\(a'\\) commutent aux limites inductives,\non en déduit des isomorphismes :\n\\[\n\\varinjlim_{(h(X) \\to K)\\, \\in\\, \\mathrm{ob}(C/K)} u^s a h(X) \\xrightarrow{\\ \\sim\\ } u^s a K ,\n\\]\n\\[\n\\varinjlim_{(h(X) \\to K)\\, \\in\\, \\mathrm{ob}(C/K)} a' u_! h(X) \\xrightarrow{\\ \\sim\\ } a' u_! K .\n\\]\nOn a \\(u_! h = h' u\\) et, par hypothèse, on a un isomorphisme \\(a' h' u \\simeq u^s a h\\), d'où\nun isomorphisme :\n\\[\nu^s a K \\simeq a' u_! K ,\n\\]\ndont on vérifie immédiatement qu'il est fonctoriel en \\(K\\). Le diagramme\n\\[\n\\xymatrix{\n\\widehat{C} \\ar[r]^-{u_!} \\ar[d]_-{a} &amp; \\widehat{C}' \\ar[d]^-{a'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' ,\n}\n\\]\nest donc commutatif à isomorphisme près. Comme \\(a i\\) est isomorphe au foncteur\nidentique, on a un isomorphisme \\(u^s \\simeq a' u_! i\\), d'où l'unicité de \\(u^s\\). Soit\n\\(v : H \\to K\\) un morphisme bicouvrant de \\(\\widehat{C}\\). Alors \\(a(v)\\) est un isomorphisme\n(II 5.3) et par suite \\(a' u_!(v)\\) (isomorphe à \\(u^s a(v)\\)) est un isomorphisme.\nDonc \\(u_!(v)\\) est transformé par \\(a'\\) en un isomorphisme, et par suite \\(u_!(v)\\)\nest bicouvrant (II 5.3), d'où ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'assertion supplémentaire, dans le cas \\(C\\) petit, a été prouvée en\ncours de démonstration, cqfd.</p>"
+    },
+    {
+     "id": "III.1.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.2.1\">1.2.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur \\(u^s : \\widetilde{C} \\to \\widetilde{C}'\\) de 1.2 iv) pourra s'interpréter\nsouvent comme un foncteur « image réciproque » par un « morphisme de topos »\n\\(\\widetilde{C}' \\to \\widetilde{C}\\), cf. IV 4.9. Ses propriétés sont résumées dans la proposition\nsuivante :</p>"
+    },
+    {
+     "id": "III.1.3",
+     "type": "proposition",
+     "label": "1.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(u : C \\to C'\\) un foncteur continu entre un petit\nsite \\(C\\) et un \\(\\mathcal{U}\\)-site \\(C'\\).</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>Le foncteur \\(u^s\\) est adjoint à gauche au foncteur \\(u_s\\).</p></li>\n  <li><span class=\"item-label\">2)</span> <p>On a un isomorphisme canonique \\(u^s \\simeq a' u_! i\\).</p></li>\n  <li><span class=\"item-label\">3)</span> <p>On a un isomorphisme canonique \\(u^s a \\simeq a' u_!\\).</p></li>\n  <li><span class=\"item-label\">4)</span> <p>Le foncteur \\(u^s\\) commute aux limites inductives.</p></li>\n  <li><span class=\"item-label\">5)</span> <p>Lorsque le foncteur \\(u_!\\) est exact à gauche (cf. I 5.4 4)), le foncteur\n\\(u^s\\) l'est aussi. Plus généralement le foncteur \\(u^s\\) commute aux types de\nlimites projectives finies auxquels le foncteur \\(u_!\\) commute.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve :</strong> Les assertions 1), 2), 3), 4) ont été prouvées en cours de\ndémonstration de 1.2. L'assertion 5) résulte de l'isomorphisme 2), compte\ntenu de ce que \\(i\\) commute aux limites projectives et de ce que \\(a'\\) commute\naux limites projectives finies (II 4.1).</p>"
+    },
+    {
+     "id": "III.1.4",
+     "type": "remarque",
+     "label": "1.4",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\">\n  <p>En combinant I 5.4 3) et 1.3 3) on obtient un diagramme :\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{h} &amp; C' \\ar[d]^-{h'} \\\\\n\\widehat{C} \\ar[r]^-{u_!} \\ar[d]_-{a} &amp; \\widehat{C}' \\ar[d]^-{a'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' ,\n}\n\\]\noù le carré du haut est commutatif et le carré du bas commutatif à\nisomorphisme près. Mais les foncteurs \\(a\\), \\(a'\\), \\(u_!\\), \\(u^s\\) ne sont définis qu'à\nisomorphisme près. Le lecteur pourra vérifier qu'on peut choisir les\nfoncteurs \\(a\\), \\(a'\\) et \\(u^s\\) de façon que :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>Les foncteurs composés \\(a h\\) et \\(a' h'\\) soient injectifs sur les\nensembles d'objets ;</p></li>\n  <li><span class=\"item-label\">2)</span> <p>le diagramme\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{a h} &amp; C' \\ar[d]^-{a' h'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nsoit commutatif.</p></li>\n  </ol>\n  <p>Plus précisément, on peut choisir les foncteurs \\(a\\) et \\(a'\\) de façon\nà remplir la condition 1). Les foncteurs \\(a\\) et \\(a'\\) étant choisis, on peut\nchoisir le foncteur \\(u^s\\) de façon à remplir la condition 2).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.5",
+     "type": "proposition",
+     "label": "1.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(\\mathcal{U} \\subset \\mathcal{V}\\) deux univers, \\(C\\) et \\(C'\\) deux \\(\\mathcal{U}\\)-sites,\n\\(u : C \\to C'\\) un foncteur entre les catégories sous-jacentes. Alors \\(u\\) est continu rela-\ntivement à \\(\\mathcal{U}\\) si et seulement s'il est continu relativement à \\(\\mathcal{V}\\). De plus,\nlorsque \\(u\\) est continu, désignons par \\(u^s_{\\mathcal{U}}\\) (resp. \\(u^s_{\\mathcal{V}}\\)) le foncteur entre\ncatégories de \\(\\mathcal{U}\\)-faisceaux (resp. \\(\\mathcal{V}\\)-faisceaux) introduit en 1.2 iv). Alors\nle diagramme\n\\[\n(1.5.1) \\qquad\n\\xymatrix{\n\\widetilde{C}_{\\mathcal{U}} \\ar[r]^-{u^s_{\\mathcal{U}}} \\ar[d] &amp; \\widetilde{C}'_{\\mathcal{U}} \\ar[d] \\\\\n\\widetilde{C}_{\\mathcal{V}} \\ar[r]_-{u^s_{\\mathcal{V}}} &amp; \\widetilde{C}'_{\\mathcal{V}} ,\n}\n\\]\noù les foncteurs verticaux sont les foncteurs d'inclusion canoniques,\nest commutatif à isomorphisme canonique près.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> Nous ne ferons la démonstration que dans le cas où \\(C\\) est \\(\\mathcal{U}\\)-petit.\nLe cas général sera démontré en 4.3. Il est clair que si le foncteur \\(u^*\\)\ntransforme tout \\(\\mathcal{V}\\)-faisceau sur \\(C'\\) en \\(\\mathcal{V}\\)-faisceau sur \\(C\\), il transforme tout\n\\(\\mathcal{U}\\)-faisceau sur \\(C'\\) en \\(\\mathcal{U}\\)-faisceau sur \\(C\\). Supposons que \\(u^*\\) transforme tout\n\\(\\mathcal{U}\\)-faisceau sur \\(C'\\) en \\(\\mathcal{U}\\)-faisceau sur \\(C\\). Notons \\(\\widehat{C}_{\\mathcal{U}} \\hookrightarrow \\widehat{C}_{\\mathcal{V}}\\) (resp. \\(\\widehat{C}'_{\\mathcal{U}} \\hookrightarrow \\widehat{C}'_{\\mathcal{V}}\\))\nles catégories de \\(\\mathcal{U}\\)-préfaisceaux et \\(\\mathcal{V}\\)-préfaisceaux, \\(u_{\\mathcal{U}!}\\) et \\(u_{\\mathcal{V}!}\\) les\nfoncteurs « image réciproque » pour les \\(\\mathcal{U}\\)-préfaisceaux et les \\(\\mathcal{V}\\)-préfaisceaux\nrespectivement. On a un diagramme commutatif (cf. la construction explicite\nde \\(u_!\\) dans I 5.1) :\n\\[\n(*) \\qquad\n\\xymatrix{\n\\widehat{C}_{\\mathcal{U}} \\ar[r]^-{u_{\\mathcal{U}!}} \\ar[d] &amp; \\widehat{C}'_{\\mathcal{U}} \\ar[d] \\\\\n\\widehat{C}_{\\mathcal{V}} \\ar[r]_-{u_{\\mathcal{V}!}} &amp; \\widehat{C}'_{\\mathcal{V}} .\n}\n\\]\nLes foncteurs d'inclusion des \\(\\mathcal{U}\\)-préfaisceaux dans les \\(\\mathcal{V}\\)-préfaisceaux\nsont pleinement fidèles et commutent aux limites projectives. Il résulte\nalors de (II 5.1 i)) qu'un morphisme bicouvrant de \\(\\mathcal{U}\\)-préfaisceaux est\nun morphisme bicouvrant de \\(\\mathcal{V}\\)-préfaisceaux. Soit alors \\(R \\hookrightarrow X\\) un crible\ncouvrant un objet \\(X\\) de \\(C\\). D'après 1.2 ii), le morphisme \\(u_{\\mathcal{U}!} R \\to u_{\\mathcal{U}!} X\\)\nest bicouvrant. Utilisant la commutativité de (*) et ce qui précède,\non en déduit que le morphisme \\(u_{\\mathcal{V}!} R \\to u_{\\mathcal{V}!} X\\) est bicouvrant. Par suite\n(1.2), le foncteur \\(u^*\\) transforme les \\(\\mathcal{V}\\)-faisceaux sur \\(C'\\) en \\(\\mathcal{V}\\)-faisceaux\nsur \\(C\\). La commutativité de 1.5.1 résulte alors de la commutativité de (*),\nde II 3.6 et de 1.3 2).</p>"
+    },
+    {
+     "id": "III.1.6",
+     "type": "proposition",
+     "label": "1.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) et \\(C'\\) deux \\(\\mathcal{U}\\)-sites, \\(u : C \\to C'\\) un foncteur\nentre les catégories sous-jacentes. Considérons les conditions :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>\\(u\\) est continu (cf. 1.1 et 1.2).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>Pour toute famille couvrante \\((X_i \\to X)\\), \\(i \\in I\\), de \\(C\\), la famille\n\\((u X_i \\to u X)\\), \\(i \\in I\\), de \\(C'\\), est couvrante.</p></li>\n  </ol>\n  <p>On a l'implication i) \\(\\Longrightarrow\\) ii).</p>\n  <p>Supposons que la topologie de \\(C\\) puisse être définie par une prétopologie\n\\(T\\) (II 1.3) et que le foncteur \\(u\\) commute aux produits fibrés.<sup class=\"footnote-ref\"><a id=\"III-fn2ref\" href=\"#III-fn2\">(∗)</a></sup> Alors les\nconditions i) et ii) sont équivalentes et sont équivalentes à la con-\ndition suivante :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">iii)</span> <p>Le foncteur \\(u\\) transforme les familles couvrantes de \\(T\\) en familles\ncouvrantes de \\(C'\\).</p></li>\n  </ol>\n  <p>En particulier, supposons que dans \\(C\\) les produits fibrés soient\nreprésentables et que le foncteur \\(u\\) commute aux produits fibrés. Alors\nles conditions i) et ii) sont équivalentes.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> Montrons que i) \\(\\Longrightarrow\\) ii). Soit \\(X_i \\to X\\), \\(i \\in I\\), une famille couvrante\nde \\(C\\). Pour tout faisceau \\(F\\) sur \\(C'\\), \\(u^* F\\) est un faisceau. Par suite, l'ap-\nplication\n\\[\n\\mathrm{Hom}(X, u^* F) \\longrightarrow \\prod_i \\mathrm{Hom}(X_i, u^* F)\n\\]\nest injective (II 5.1). D'où une application injective\n\\[\n\\mathrm{Hom}(u_! X, F) \\longrightarrow \\prod_i \\mathrm{Hom}(u_! X_i, F) .\n\\]\nDonc la famille \\(u_! X_i \\to u_! X\\), \\(i \\in I\\), est couvrante dans \\(C'\\) (II 5.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Toute famille couvrante de la prétopologie \\(T\\) est une famille\ncouvrante de \\(C\\), d'où ii) \\(\\Longrightarrow\\) iii). Montrons que iii) \\(\\Longrightarrow\\) i). Soit \\(X\\) un\nobjet de \\(C\\) et \\(X_i \\to X\\), \\(i \\in I\\), une famille couvrante de \\(\\mathrm{Cov}(X)\\) (II 1.3).\nLes morphismes \\(X_i \\to X\\) sont quarrables et le foncteur \\(u\\) commute aux\nproduits fibrés. Par suite, les produits fibrés \\(u(X_i) \\times_{u(X)} u(X_j)\\) sont\nreprésentables et canoniquement isomorphes à \\(u(X_i \\times_X X_j)\\). Soit \\(F\\) un\nfaisceau sur \\(C'\\). Alors le diagramme d'ensembles :\n\\[\nF(u(X)) \\longrightarrow \\prod_i F(u(X_i)) \\rightrightarrows \\prod_{i,j} F(u(X_i \\times_X X_j))\n\\]\nest exact (II 2.1, I 3.5 et I 2.12). Par suite le diagramme\nd'ensembles\n\\[\nu^* F(X) \\longrightarrow \\prod_i u^* F(X_i) \\rightrightarrows \\prod_{i,j} u^* F(X_i \\times_X X_j)\n\\]\nest exact. Donc \\(u^* F\\) est un faisceau (II 2.4), d'où i). La dernière asser-\ntion de 1.6 résulte de ce qui précède et du fait que, lorsque les produits\nfibrés sont représentables dans \\(C\\), toutes les familles couvrantes de \\(C\\)<sup class=\"footnote-ref\"><a id=\"III-fn3ref\" href=\"#III-fn3\">(1)</a></sup>\ndéfinissent sur \\(C\\) une prétopologie dont la topologie associée est la\ntopologie de \\(C\\).</p>"
+    },
+    {
+     "id": "III.1.7",
+     "type": "proposition",
+     "label": "1.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.7</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un petit site, \\(C'\\) un \\(\\mathcal{U}\\)-site et \\(u : C \\to C'\\)\nun foncteur continu. Soit \\(\\gamma\\) une structure algébrique définie par limites\nprojectives finies, telle que dans la catégorie des \\(\\gamma\\)-objets de \\(\\mathcal{U}\\text{-Ens}\\)\nles \\(\\mathcal{U}\\)-limites inductives soient représentables.<sup class=\"footnote-ref\"><a id=\"III-fn4ref\" href=\"#III-fn4\">(2)</a></sup> On utilise les\nnotations de la proposition II 6.4. Le foncteur \\(u_s\\) commute aux limites\nprojectives et par suite définit un foncteur \\(u_s^\\gamma : \\widetilde{C}'_\\gamma \\to \\widetilde{C}_\\gamma\\). Le\nfoncteur \\(u_s^\\gamma\\) admet un adjoint à gauche \\(u^s_\\gamma\\) qui possède les propriétés\nsuivantes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>On a un isomorphisme canonique \\(u^s_\\gamma \\xrightarrow{\\ \\sim\\ } a'_\\gamma u_{\\gamma !} i_\\gamma\\), et \\(u^s_\\gamma\\) commute\naux limites projectives finies auxquelles \\(u_{\\gamma !}\\) commute.</p></li>\n  <li><span class=\"item-label\">2)</span> <p>On a un isomorphisme canonique \\(u^s_\\gamma a_\\gamma \\xrightarrow{\\ \\sim\\ } a'_\\gamma u_{\\gamma !}\\).</p></li>\n  <li><span class=\"item-label\">3)</span> <p>Le foncteur \\(u^s_\\gamma\\) commute aux limites inductives.</p></li>\n  <li><span class=\"item-label\">4)</span> <p>Si \\(u^s\\) est exact à gauche, le diagramme (notation de II 6.3.0)\n\\[\n\\xymatrix{\n\\widetilde{C}_\\gamma \\ar[r]^-{u^s_\\gamma} \\ar[d]_-{\\mathrm{esj}^\\sim} &amp; \\widetilde{C}'_\\gamma \\ar[d]^-{\\mathrm{esj}'^\\sim} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nest commutatif à isomorphisme près et le foncteur \\(u^s_\\gamma\\) est exact.</p></li>\n  <li><span class=\"item-label\">5)</span> <p>Supposons que le foncteur \\(\\mathrm{esj}^\\sim\\) (resp. \\(\\mathrm{esj}'^\\sim\\)) possède un adjoint à\ngauche \\(\\mathrm{Lib}^\\sim\\) (resp. \\(\\mathrm{Lib}'^\\sim\\)) (II 6.5). On a un isomorphisme canonique :\n\\[\nu^s_\\gamma \\mathrm{Lib}^\\sim \\xrightarrow{\\ \\sim\\ } \\mathrm{Lib}'^\\sim u^s .\n\\]</p></li>\n  </ol>\n  <p>De plus, lorsque \\(C\\) n'est pas nécessairement un petit site mais\nun \\(\\mathcal{U}\\)-site, le foncteur \\(u_s^\\gamma\\) admet un adjoint à gauche \\(u^s_\\gamma\\). Enfin si \\(\\mathcal{V}\\) est\nun univers contenant \\(\\mathcal{U}\\) et si \\(u^s_{\\gamma, \\mathcal{U}}\\) (resp. \\(u^s_{\\gamma, \\mathcal{V}}\\)) désigne l'adjoint à\ngauche de \\(u_s\\) relativement à l'univers \\(\\mathcal{U}\\) (resp. \\(\\mathcal{V}\\)), le diagramme suivant,\nanalogue au diagramme 1.5.1 :\n\\[\n(1.7.1) \\qquad\n\\xymatrix{\n\\widetilde{C}_{\\gamma, \\mathcal{U}} \\ar[r]^-{u^s_{\\gamma, \\mathcal{U}}} \\ar[d] &amp; \\widetilde{C}'_{\\gamma, \\mathcal{U}} \\ar[d] \\\\\n\\widetilde{C}_{\\gamma, \\mathcal{V}} \\ar[r]_-{u^s_{\\gamma, \\mathcal{V}}} &amp; \\widetilde{C}'_{\\gamma, \\mathcal{V}}\n}\n\\]\nest commutatif à isomorphisme canonique près.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> La démonstration, dans le cas où \\(C\\) est un petit site, est laissée\nau lecteur. Elle sera complétée en 4.3 dans le cas où \\(C\\) est un \\(\\mathcal{U}\\)-site.</p>"
+    },
+    {
+     "id": "III.1.8",
+     "type": "notation",
+     "label": "1.8",
+     "title": "Notation",
+     "html": "<div class=\"thm thm-remark notation\" id=\"III.1.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Notation</span> <span class=\"thm-num\">1.8</span></div>\n  <div class=\"thm-body\">\n  <p>Nous emploierons dorénavant la notation \\(u_s\\) pour désigner\nle foncteur \\(u_s^\\gamma\\). Cette notation ne risque pas d'apporter de confusion,\ncar le foncteur \\(u_s\\) (défini sur les faisceaux d'ensembles) commute aux\nlimites projectives finies.</p>\n  <p>De même, lorsque \\(u^s\\) est exact à gauche, nous emploierons la\nnotation \\(u^s\\) pour désigner le foncteur \\(u^s_\\gamma\\). Cet abus de notation est jus-\ntifié par 1.7 4).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.9.1",
+     "type": "exemple",
+     "label": "1.9.1",
+     "title": "Exemple",
+     "html": "<div class=\"thm thm-remark exemple\" id=\"III.1.9.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">1.9.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(X\\) un petit espace topologique. Désignons par \\(\\mathrm{Ouv}(X)\\)\nla catégorie des ouverts de \\(X\\) (les objets de \\(\\mathrm{Ouv}(X)\\) sont les sous-ensembles\nouverts de \\(X\\), les morphismes de \\(\\mathrm{Ouv}(X)\\) sont les inclusions) munie de la\ntopologie canonique. Une famille \\((U_i \\subset U)\\), \\(i \\in I\\), est couvrante si et seu-\nlement si les ouverts \\(U_i\\) recouvrent \\(U\\) (II 2.6). Les faisceaux d'ensem-\nbles sur \\(\\mathrm{Ouv}(X)\\) sont donc les faisceaux d'ensembles au sens de [TF].\nSoit \\(f : X \\to Y\\) une application continue. On en déduit un foncteur\n\\(f^{-1} : \\mathrm{Ouv}(Y) \\to \\mathrm{Ouv}(X)\\) : pour tout ouvert \\(U\\) de \\(Y\\), \\(f^{-1}(U)\\) est l'image\nréciproque de \\(U\\) par l'application \\(f\\). Le foncteur \\(f^{-1}\\) est un foncteur\ncontinu (1.6). Le foncteur \\(f^{-1}_s : \\mathrm{Ouv}(X)^{\\sim} \\to \\mathrm{Ouv}(Y)^{\\sim}\\) est le foncteur\nimage directe pour les faisceaux, au sens de [TF]. Le foncteur\n\\((f^{-1})^s : \\mathrm{Ouv}(Y)^{\\sim} \\to \\mathrm{Ouv}(X)^{\\sim}\\) est le foncteur image réciproque pour les\nfaisceaux au sens de [TF]. Le foncteur \\((f^{-1})^s\\) commute aux limites\nprojectives finies, grâce à 1.3 5).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.9.2",
+     "type": "exemple",
+     "label": "1.9.2",
+     "title": "Exemple",
+     "html": "<div class=\"thm thm-remark exemple\" id=\"III.1.9.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">1.9.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(X\\) un espace topologique et \\(Y \\hookrightarrow X\\) un ouvert de \\(X\\).\nTout ouvert de \\(Y\\) est un ouvert de \\(X\\), d'où un foncteur \\(\\varphi : \\mathrm{Ouv}(Y) \\to \\mathrm{Ouv}(X)\\).\nLe foncteur \\(\\varphi\\) est continu (1.6). Le foncteur \\(\\varphi_s : \\mathrm{Ouv}(X)^{\\sim} \\to \\mathrm{Ouv}(Y)^{\\sim}\\) est\nle foncteur « restriction à \\(Y\\) ». Le foncteur \\(\\varphi^s_{\\mathrm{ab}} : \\mathrm{Ouv}(Y)^{\\sim} \\to \\mathrm{Ouv}(X)^{\\sim}\\)\n(II 6.3.3, I 1.7) est le foncteur « prolongement par zéro en dehors de \\(Y\\) » introduit\ndans [TF]. Le foncteur \\(\\varphi^s : \\mathrm{Ouv}(Y)^{\\sim} \\to \\mathrm{Ouv}(X)^{\\sim}\\) (1.3) est analogue au\nfoncteur « prolongement par zéro » ; pour tout faisceau \\(H\\) sur \\(Y\\) et tout\npoint \\(y \\in Y\\), la fibre en \\(y\\) de \\(\\varphi^s H\\) est canoniquement isomorphe à la fibre\nen \\(y\\) de \\(H\\) ; pour tout point \\(x \\in X\\), \\(x \\notin Y\\), la fibre en \\(x\\) de \\(\\varphi^s H\\) est vide.\nLe foncteur \\(\\varphi^s\\) est appelé le foncteur « prolongement par le vide en\ndehors de \\(Y\\) ». Le foncteur \\(\\varphi^s\\) commute aux produits fibrés et aux produits\nfinis sur un ensemble d'indices non vide, mais il ne transforme pas\nl'objet final de \\(\\mathrm{Ouv}(Y)^{\\sim}\\) en l'objet final de \\(\\mathrm{Ouv}(X)^{\\sim}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.9.3",
+     "type": "exemple",
+     "label": "1.9.3",
+     "title": "Exemple",
+     "html": "<div class=\"thm thm-remark exemple\" id=\"III.1.9.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">1.9.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) et \\(C'\\) deux petits sites, \\(u : C \\to C'\\) un foncteur\nentre les catégories sous-jacentes qui transforme toute famille couvrante\nde \\(C\\) en famille couvrante de \\(C'\\). Le foncteur \\(u\\) n'est pas continu en général\n(cf. cependant 1.6). Voici un contre-exemple. Soit \\(S\\) un ensemble de\ncardinal infini de l'univers \\(\\mathcal{U}\\), et \\(C\\) la sous-catégorie pleine de la catégorie\ndes ensembles, dont les objets sont les sous-ensembles finis, non-vides,\nde \\(S\\). On munit \\(C\\) de la topologie canonique. On remarquera que les familles\ncouvrantes de \\(C\\) sont les familles surjectives d'applications et que les\nfamilles couvrantes ne sont pas vides. On remarquera de plus qu'il n'y a,\nà isomorphisme près, que deux faisceaux constants sur \\(C\\) : le faisceau\nde valeur l'ensemble vide et le faisceau de valeur l'ensemble à un élément.\nPosons \\(C = C'\\) et soit \\(u : C \\to C'\\) un foncteur constant. Le foncteur \\(u\\)\ntransforme les familles couvrantes de \\(C\\) en familles couvrantes de \\(C'\\). Le\nfoncteur \\(u\\) n'est pas continu. En effet, comme les préfaisceaux représen-\ntables de \\(C'\\) sont des faisceaux, pour tout objet \\(X\\) de \\(C'\\), il existe un\nfaisceau \\(F\\) sur \\(C'\\) tel que le cardinal de l'ensemble \\(F(X)\\) soit \\(\\geq 2\\), et\npar suite le préfaisceau \\(u^* F\\) n'est pas un faisceau.</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "III-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) « Couvrant » au lieu de « bicouvrant » ne suffisait pas nécessairement, cf. exemple 1.9.3 ci-dessous. </p>"
+    },
+    {
+     "id": "III-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) En fait, il suffit que \\(u\\) commute aux produits fibrés intervenant dans les changements de base pour des morphismes provenant de famille couvrantes pour \\(T\\). </p>"
+    },
+    {
+     "id": "III-fn3",
+     "number": "(1)",
+     "html": "<p>(1) indexées par les ensembles appartenant à un univers convenable. </p>"
+    },
+    {
+     "id": "III-fn4",
+     "number": "(2)",
+     "html": "<p>(2) On peut montrer en fait que cette condition est toujours satisfaite. </p>"
+    }
+   ]
+  },
+  {
+   "id": "III-2",
+   "title": "2. Foncteurs cocontinus",
+   "blocks": [
+    {
+     "id": "III.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.2\">2. Foncteurs cocontinus</h2>"
+    },
+    {
+     "id": "III.2.1",
+     "type": "definition",
+     "label": "2.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) et \\(C'\\) deux \\(\\mathcal{U}\\)-sites et \\(u : C \\to C'\\) un foncteur\nentre les catégories sous-jacentes. On dit que \\(u\\) est <em>cocontinu</em> s'il\npossède la propriété suivante :</p>\n  <p>(COC) Pour tout objet \\(Y\\) de \\(C\\) et pour tout crible couvrant \\(R \\hookrightarrow u(Y)\\),\nle crible de \\(Y\\) engendré par les flèches \\(Z \\to Y\\) telles que \\(u(Z) \\to u(Y)\\)\nse factorise par \\(R\\), couvre \\(Y\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.2",
+     "type": "proposition",
+     "label": "2.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un petit site, \\(C'\\) un \\(\\mathcal{U}\\)-site et \\(u : C \\to C'\\)\nun foncteur entre les catégories sous-jacentes. Notons \\(\\widehat{u}_* : \\widehat{C} \\to \\widehat{C}'\\)\nle foncteur adjoint à droite au foncteur \\(F \\mapsto F \\circ u = \\widehat{u}^* F\\) (I 5.1). Le\nfoncteur \\(u\\) est cocontinu si et seulement si pour tout faisceau \\(G\\) sur\n\\(C\\), \\(\\widehat{u}_* G\\) est un faisceau sur \\(C'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> La condition est suffisante. Supposons que pour tout faisceau\n\\(G\\) sur \\(C\\), le préfaisceau \\(\\widehat{u}_* G\\) soit un faisceau. Soient \\(Y\\) un objet de \\(C\\)\net \\(R \\hookrightarrow u(Y)\\) un crible couvrant. On a un isomorphisme\n\\(\\mathrm{Hom}(u(Y), \\widehat{u}_* G) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(R, \\widehat{u}_* G)\\), d'où par adjonction (I 5.1) un iso-\nmorphisme \\(\\mathrm{Hom}(\\widehat{u}^* \\circ u(Y), G) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(\\widehat{u}^* R, G)\\). On en déduit (II 5.3) que le\nmorphisme \\(\\widehat{u}^* R \\to \\widehat{u}^* u(Y)\\) est bicouvrant. Mais le foncteur \\(\\widehat{u}^*\\) commute aux\nlimites projectives et par suite le morphisme \\(\\widehat{u}^* R \\to \\widehat{u}^* u(Y)\\) est un\nmonomorphisme. C'est donc un monomorphisme couvrant. D'autre part on\na un morphisme canonique \\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y)\\) déduit du morphisme d'adjonction\n\\(\\mathrm{id}_C \\to \\widehat{u}^* u\\), (I 5.4 3)). Faisons alors le changement de base \\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y)\\).\nOn obtient un crible couvrant \\(Y\\) :\n\\[\n\\widehat{u}^* R \\times_{\\widehat{u}^* u(Y)} Y \\longrightarrow Y ,\n\\]\net lorsqu'on cherche les flèches \\(Z \\to Y\\) qui se factorisent par ce crible,\non obtient le crible décrit par la propriété (COC).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La condition est nécessaire : Soient \\(S\\) un objet de \\(C'\\) et\n\\(R \\hookrightarrow S\\) un crible couvrant \\(S\\). On doit démontrer que pour tout faisceau\n\\(G\\) sur \\(C\\) on a un isomorphisme\n\\[\n\\mathrm{Hom}(S, \\widehat{u}_* G) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(R, \\widehat{u}_* G) .\n\\]\nUtilisant alors la proposition II 5.3 et les isomorphismes\nd'adjonction, on voit qu'il suffit de démontrer que le monomorphisme\n\\(\\widehat{u}^* R \\to \\widehat{u}^* S\\) est couvrant. Pour cela, il suffit de démontrer (II 5.1)\nque pour tout changement de base \\(Y \\to \\widehat{u}^* S\\) le crible \\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} Y\\) est\ncouvrant, (\\(Y\\) objet de \\(C\\)). Mais, d'après les propriétés des foncteurs\nadjoints et I 5.4 3), le morphisme \\(Y \\to \\widehat{u}^* S\\) se factorise par\n\\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y) \\to \\widehat{u}^* S\\), et par suite le crible \\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} Y \\to Y\\) est le\ntransformé par le changement de base \\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y)\\) du monomorphisme\n\\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} \\widehat{u}^* u(Y) \\xrightarrow{\\ q\\ } \\widehat{u}^* u(Y)\\). Or le foncteur \\(\\widehat{u}^*\\) commute aux limites\nprojectives, et par suite le monomorphisme \\(q\\) est le transformé par \\(\\widehat{u}^*\\)\ndu crible \\(R \\times_S u(Y) \\hookrightarrow u(Y)\\), qui est couvrant. L'hypothèse (COC) nous\npermet alors de dire que le crible \\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} Y \\to Y\\) est couvrant, cqfd.</p>"
+    },
+    {
+     "id": "III.2.3",
+     "type": "proposition",
+     "label": "2.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) et \\(C'\\) deux \\(\\mathcal{U}\\)-sites et \\(u : C \\to C'\\) un foncteur\ncocontinu. Notons \\(u^* : \\widetilde{C}' \\to \\widetilde{C}\\) le foncteur \\(u^* = a \\widehat{u}^* i'\\), où \\(a\\) désigne\nle foncteur « faisceau associé » pour \\(C\\), \\(\\widehat{u}^*\\) le foncteur \\(F \\mapsto F \\circ u\\), \\(i'\\) le\nfoncteur d'inclusion \\(\\widetilde{C}' \\to \\widehat{C}'\\).</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>Le foncteur \\(u^*\\) commute aux limites inductives et est exact.</p></li>\n  <li><span class=\"item-label\">2)</span> <p>On a un isomorphisme canonique \\(u^* a' \\simeq a \\widehat{u}^*\\), où \\(a'\\) désigne le\nfoncteur « faisceau associé » pour \\(\\widehat{C}'\\).</p></li>\n  <li><span class=\"item-label\">3)</span> <p>Le foncteur \\(u^*\\) admet un adjoint à droite \\(u_* : \\widetilde{C} \\to \\widetilde{C}'\\). Lorsque \\(C\\)\nest petit, le diagramme\n\\[\n(2.3.1) \\qquad\n\\xymatrix{\n\\widetilde{C} \\ar[r]^-{u_*} \\ar@{^{(}-&gt;}[d]_-{i} &amp; \\widetilde{C}' \\ar@{^{(}-&gt;}[d]^-{i'} \\\\\n\\widehat{C} \\ar[r]_-{\\widehat{u}_*} &amp; \\widehat{C}'\n}\n\\]\noù le foncteur du bas est adjoint à droite au foncteur \\(\\widehat{u}^*\\) (I 5.1), est\ncommutatif à isomorphisme canonique près.</p></li>\n  <li><span class=\"item-label\">4)</span> <p>Soit \\(\\mathcal{V} \\supset \\mathcal{U}\\) un univers. Notons \\(u_{*\\mathcal{U}} : \\widetilde{C}_{\\mathcal{U}} \\to \\widetilde{C}'_{\\mathcal{U}}\\)\n(resp. \\(u_{*\\mathcal{V}} : \\widetilde{C}_{\\mathcal{V}} \\to \\widetilde{C}'_{\\mathcal{V}}\\)) le foncteur adjoint à droite relatif à l'univers \\(\\mathcal{U}\\) (resp. \\(\\mathcal{V}\\)) dont l'exis-\ntence est affirmé dans 3). Le diagramme\n\\[\n(2.3.2) \\qquad\n\\xymatrix{\n\\widetilde{C}_{\\mathcal{U}} \\ar[r]^-{u_{*\\mathcal{U}}} \\ar[d] &amp; \\widetilde{C}'_{\\mathcal{U}} \\ar[d] \\\\\n\\widetilde{C}_{\\mathcal{V}} \\ar[r]_-{u_{*\\mathcal{V}}} &amp; \\widetilde{C}'_{\\mathcal{V}}\n}\n\\]\nest commutatif à isomorphisme près.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> Les assertions 1) et 2) résultent immédiatement de II 3.4. L'assertion\n3), lorsque \\(C\\) est petit, résulte de 2.2. Lorsque \\(C\\) est un \\(\\mathcal{U}\\)-site, elle\nsera démontrée en 4.4. L'assertion 4), lorsque \\(C\\) est petit, résulte de\nl'assertion de commutativité analogue lorsque les topologies sur \\(C\\) et \\(C'\\)\nsont chaotiques et de I 3.5. Lorsque les topologies sur \\(C\\) et \\(C'\\) sont\nchaotiques, la commutativité de (2.3.2) se voit immédiatement sur la\ndescription explicite de \\(u_*\\) (I 5.1).</p>"
+    },
+    {
+     "id": "III.2.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.2.4\">2.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous ne développerons pas ici les considérations relatives aux\n\\(\\gamma\\)-objets des catégories de faisceaux. Il nous suffira de remarquer que\nles foncteurs \\(u^*\\) et \\(u_*\\) introduits dans ce numéro commutent toujours\naux limites projectives finies (contrairement à ce qui se passait dans\nle numéro précédent pour le foncteur \\(u^s\\)). Par suite ils se prolongent\nnaturellement en des foncteurs définis sur les \\(\\gamma\\)-objets, qui sont adjoints\nl'un de l'autre et qui commutent aux foncteurs « faisceau d'ensemble\nsous-jacent ». Nous ferons les abus de notations signalés en 1.8, con-\nsistant à noter par \\(u^*\\) et \\(u_*\\) les prolongements aux \\(\\gamma\\)-objets.</p>"
+    },
+    {
+     "id": "III.2.5",
+     "type": "proposition",
+     "label": "2.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) et \\(C'\\) deux \\(\\mathcal{U}\\)-sites et \\(C \\overset{v}{\\underset{u}{\\rightleftarrows}} C'\\) un couple\nde foncteurs, où \\(v\\) est adjoint à gauche de \\(u\\). Les propriétés suivantes\nsont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>Le foncteur \\(u\\) est continu.</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>Le foncteur \\(v\\) est cocontinu.</p></li>\n  </ol>\n  <p>De plus, sous ces conditions équivalentes, on a des isomorphismes canoniques\n\\(v_* \\simeq u_s\\), \\(v^* \\simeq u^s\\). En particulier, le foncteur \\(u^s\\) commute aux limites\nprojectives finies.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> La propriété pour un foncteur d'être continu ou cocontinu ne\ndépend pas de l'univers \\(\\mathcal{U}\\) pour lequel \\(C\\) et \\(C'\\) sont des \\(\\mathcal{U}\\)-sites (c'est\nimmédiatement dans le cas d'un foncteur cocontinu, et cela résulte de 1.5\ndans le cas d'un foncteur continu). On peut donc, quitte à augmenter\nl'univers, supposer que \\(C\\) et \\(C'\\) sont petits. La proposition résulte alors\nde 2.2 et I 5.6.</p>"
+    },
+    {
+     "id": "III.2.6",
+     "type": "proposition",
+     "label": "2.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(u : C \\to C'\\) un foncteur continu et cocontinu entre\ndeux \\(\\mathcal{U}\\)-sites. Alors le foncteur \\(u^* : \\widetilde{C}' \\to \\widetilde{C}\\) (2.3) commute aux \\(\\mathcal{U}\\)-limites\ninductives et projectives. Notons \\(u_! : \\widetilde{C} \\to \\widetilde{C}'\\) et \\(u_* : \\widetilde{C} \\to \\widetilde{C}'\\)\nles foncteurs adjoints à \\(u^*\\) à gauche et à droite respectivement. Le\nfoncteur \\(u_!\\) est pleinement fidèle si et seulement si le foncteur \\(u_*\\) est\npleinement fidèle. Lorsque \\(u\\) est pleinement fidèle, \\(u_!\\) est pleinement\nfidèle et la réciproque est vraie lorsque les topologies de \\(C\\) et \\(C'\\) sont\nmoins fines que la topologie canonique.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur \\(u^*\\) admet un adjoint à droite \\(u_*\\) (2.3) et un adjoint\nà gauche \\(u_!\\) (1.2). Le foncteur \\(u^*\\) commute donc aux limites inductives\net projectives (I 2.11). Le fait que le foncteur \\(u_!\\) soit pleinement\nfidèle si et seulement si le foncteur \\(u_*\\) est pleinement fidèle est une\npropriété générale des foncteurs adjoints (I 5.7.1). Lorsque \\(u\\) est\npleinement fidèle, le foncteur \\(\\widehat{u}_* : \\widehat{C}_{\\mathcal{V}} \\to \\widehat{C}'_{\\mathcal{V}}\\) relatif aux \\(\\mathcal{V}\\)-préfaisceaux,\npour un univers \\(\\mathcal{V}\\) assez grand, est pleinement fidèle (I 5.7). Par suite\nle foncteur \\(u_* : \\widetilde{C} \\to \\widetilde{C}'\\) est pleinement fidèle en vertu de la commu-\ntativité de (2.3.1) et (2.3.2), donc \\(u_!\\) est pleinement fidèle d'après\nce qui précède. La réciproque se déduit de l'existence du diagramme\ncommutatif 1.2 iv), compte tenu du fait que les foncteurs \\(\\varepsilon_C\\) et \\(\\varepsilon_{C'}\\) sont\npleinement fidèles lorsque les topologies sont moins fines que la topo-\nlogie canonique, cqfd.</p>"
+    },
+    {
+     "id": "III.2.7",
+     "type": "exemple",
+     "label": "2.7",
+     "title": "Exemple",
+     "html": "<div class=\"thm thm-remark exemple\" id=\"III.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\">\n  <p>Avec les notations de 1.9.2, le foncteur\n\\[\n\\varphi : \\mathrm{Ouv}(Y) \\longrightarrow \\mathrm{Ouv}(X)\n\\]\nest continu (1.9.2) et cocontinu (2.2). De plus, soient \\(i : Y \\to X\\)\nl'injection canonique et \\(i^{-1} : \\mathrm{Ouv}(X) \\to \\mathrm{Ouv}(Y)\\) le foncteur qu'elle\npermet de définir (1.9.1). Le foncteur \\(i^{-1}\\) est adjoint à droite au foncteur \\(\\varphi\\).\nOn a donc une suite de trois foncteurs adjoints :\n\\[\n\\begin{array}{ccc}\n\\varphi^s &amp; , &amp; \\varphi_s \\\\\n &amp; &amp; \\| \\\\\n &amp; &amp; \\varphi^* \\ , \\ \\varphi_*\n\\end{array}\n\\]\net des isomorphismes canoniques \\(\\varphi^* \\simeq (i^{-1})^s\\), \\(\\varphi_* \\simeq i^{-1}_s\\).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-3",
+   "title": "3. Topologie induite",
+   "blocks": [
+    {
+     "id": "III.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.3\">3. Topologie induite</h2>"
+    },
+    {
+     "id": "III.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.3.1\">3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C'\\) un site, \\(C\\) une catégorie et \\(u : C \\to C'\\) un foncteur.\nPour tout univers \\(\\mathcal{U}\\) tel que \\(C'\\) soit un \\(\\mathcal{U}\\)-site et \\(C\\) une \\(\\mathcal{U}\\)-petite caté-\ngorie, désignons par \\(\\mathscr{C}_{\\mathcal{U}}\\) la plus fine parmi les topologies \\(T\\) sur \\(C\\) qui\nrendent \\(u\\) continu (1.1). (Une telle topologie existe grâce à II 2.2).\nLa topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) ne dépend pas de l'univers \\(\\mathcal{U}\\). En effet, si \\(\\mathcal{V} \\supset \\mathcal{U}\\) est\nun univers on a \\(\\mathscr{C}_{\\mathcal{U}} = \\mathscr{C}_{\\mathcal{V}}\\) (1.1 et 1.5). La topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) est appelée\n<em>la topologie induite sur \\(C\\) par la topologie de \\(C'\\) au moyen du foncteur</em> \\(u\\)<sup class=\"footnote-ref\"><a id=\"III-fn5ref\" href=\"#III-fn5\">(1)</a></sup>.</p>"
+    },
+    {
+     "id": "III.3.2",
+     "type": "proposition",
+     "label": "3.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une petite catégorie, \\(C'\\) un \\(\\mathcal{U}\\)-site, \\(u : C \\to C'\\)\nun foncteur, \\(\\mathscr{C}\\) la topologie sur \\(C\\) induite par \\(u\\). Soient \\(X\\) un objet de\n\\(C\\) et \\(R \\hookrightarrow X\\) un crible de \\(X\\). Les propriétés suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>Le crible \\(R \\hookrightarrow X\\) est couvrant pour \\(\\mathscr{C}\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>Pour tout changement de base \\(Y \\to X\\), où \\(Y\\) est un objet de \\(C\\), le\nmorphisme \\(u_!(R \\times_X Y) \\to u(Y)\\) est bicouvrant dans \\(\\widehat{C}'\\) (II 5.2).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> i) \\(\\Longrightarrow\\) ii) résulte de l'axiome (T1) des topologies et de 1.2.\nii) \\(\\Longrightarrow\\) i) : Pour tout faisceau \\(F\\) sur \\(C'\\), l'application\n\\[\n\\mathrm{Hom}(Y, u^* F) \\longrightarrow \\mathrm{Hom}(R \\times_X Y, u^* F)\n\\]\nest isomorphe, par adjonction (I 5.1), à l'application\n\\[\n\\mathrm{Hom}(u(Y), F) \\longrightarrow \\mathrm{Hom}(u_!(R \\times_X Y), F)\n\\]\nqui est bijective (II 5.3). Par suite (II 2.2) le crible \\(R \\hookrightarrow X\\) est\ncouvrant pour \\(\\mathscr{C}\\).</p>"
+    },
+    {
+     "id": "III.3.3",
+     "type": "corollaire",
+     "label": "3.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C'\\) un site, \\(C\\) une catégorie, \\(u : C \\to C'\\) un foncteur,\n\\(\\mathscr{C}\\) la topologie sur \\(C\\) induite par la topologie de \\(C'\\). Soit \\((X_i \\to X)\\) \\(i \\in I\\)\nune famille de morphismes quarrables de \\(C\\) et supposons que \\(u\\) commute aux pro-\nduits fibrés.<sup class=\"footnote-ref\"><a id=\"III-fn6ref\" href=\"#III-fn6\">(∗)</a></sup> Les propriétés suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>La famille \\(X_i \\to X\\), \\(i \\in I\\), est couvrante pour \\(\\mathscr{C}\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>La famille \\((u(X_i) \\to u(X))\\), \\(i \\in I\\), est couvrante.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> i) \\(\\Longrightarrow\\) ii) résulte de 1.6. ii) \\(\\Longrightarrow\\) i) : Soit \\(\\mathcal{U}\\) un univers tel que \\(C\\)\nsoit \\(\\mathcal{U}\\)-petite et \\(C'\\) un \\(\\mathcal{U}\\)-site. Soit \\(R \\hookrightarrow X\\) le crible engendré par les\n\\(X_i \\to X\\). Le préfaisceau \\(R\\) est le conoyau du couple de flèches (I 2.12 et I 3.5)\n\\[\n\\coprod_{i,j} X_i \\times_X X_j \\rightrightarrows \\coprod_i X_i\n\\]\n(la somme directe est prise ici dans \\(\\widehat{C}\\)). Comme le foncteur \\(u_!\\) commute\naux limites inductives (I 5.4), le préfaisceau \\(u_! R\\) est le conoyau du\ncouple de flèches\n\\[\n\\coprod_{i,j} u(X_i \\times_X X_j) \\rightrightarrows \\coprod_i u(X_i) .\n\\]\nComme le foncteur \\(u\\) commute aux produits fibrés, le préfaisceau \\(u_! R\\) est\nle conoyau du couple de flèches\n\\[\n\\coprod_{i,j} u(X_i) \\times_{u(X)} u(X_j) \\rightrightarrows \\coprod_i u(X_i) ,\n\\]\net par suite \\(u_! R \\to u(X)\\) est un crible de \\(u(X)\\) engendré par les\n\\(u(X_i) \\to u(X)\\), \\(i \\in I\\). Utilisant encore une fois le fait que \\(u\\) commute aux\nproduits fibrés, on montre que pour tout changement de base \\(Y \\to X\\), où\n\\(Y\\) est un objet de \\(C\\), \\(u_!(R \\times_X Y) \\to u(Y)\\) est un crible de \\(u(Y)\\) engendré\npar les \\(u(X_i) \\times_{u(X)} u(Y) \\to u(Y)\\), \\(i \\in I\\). Comme la famille \\(u(X_i) \\to u(X)\\),\n\\(i \\in I\\), est couvrante, la famille \\(u(X_i) \\times_{u(X)} u(Y) \\to u(Y)\\), \\(i \\in I\\), est\ncouvrante. Donc \\(u_!(R \\times_X Y) \\to u(Y)\\) est un crible couvrant et par suite\n(3.2) \\(R \\hookrightarrow X\\) est couvrant pour \\(\\mathscr{C}\\), cqfd.</p>"
+    },
+    {
+     "id": "III.3.4",
+     "type": "corollaire",
+     "label": "3.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C'\\) un \\(\\mathcal{U}\\)-site, \\(C\\) une sous-catégorie pleine de \\(C'\\),\n\\(u : C \\to C'\\) le foncteur d'inclusion. On suppose que les produits fibrés\nsont représentables dans \\(C\\) et que \\(u\\) commute aux produits fibrés. Les\nconditions suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>a) Pour tout objet \\(X\\) de \\(C\\), toute famille couvrante \\((Y_j \\to X)\\), \\(j \\in J\\),\nde \\(C'\\) est majorée par une famille couvrante \\(X_i \\to X\\), \\(i \\in I\\), où les \\(X_i\\)\nsont des objets de \\(C\\).</p>\n  <p>b) Il existe un petit ensemble \\(G\\) d'objets de \\(C\\), tel que tout objet\nde \\(C\\) soit but d'une famille couvrante dans \\(C'\\) de morphismes dont les\nsources sont dans \\(G\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>La topologie induite par la topologie de \\(C'\\) est une \\(\\mathcal{U}\\)-topologie (II 3.0.2)\net le foncteur \\(u\\) est continu et cocontinu pour cette topologie.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> Résulte immédiatement de 3.3 et 2.1.</p>"
+    },
+    {
+     "id": "III.3.5",
+     "type": "proposition",
+     "label": "3.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site et \\(\\varepsilon_C : C \\to \\widetilde{C}\\) le foncteur canonique\n(II 4.4.0). Munissons \\(\\widetilde{C}\\) de la topologie canonique. Alors la topologie du site\n\\(C\\) est la topologie induite par la topologie de \\(\\widetilde{C}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> Les familles couvrantes de \\(\\widetilde{C}\\) pour la topologie canonique sont les familles\népimorphiques effectives universelles (II 2.5), i.e. (II 4.3) les familles épimor-\nphiques. Soit \\(T\\) la topologie du site \\(C\\) et \\(\\mathscr{C}_{\\mathcal{U}}\\) la topologie la plus fine des topo-\nlogies \\(T'\\) sur \\(C\\) telles que pour tout faisceau \\(F\\) sur \\(\\widetilde{C}\\), \\(F \\circ \\varepsilon_C\\) soit un faisceau\npour \\(T'\\). Il suffit de montrer que \\(T = \\mathscr{C}_{\\mathcal{U}}\\), car alors \\(\\mathscr{C}_{\\mathcal{U}}\\) est une \\(\\mathcal{U}\\)-topologie et\npar suite \\(\\mathscr{C}_{\\mathcal{U}}\\) est la topologie induite.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A) <em>La topologie \\(T\\) est plus fine que \\(\\mathscr{C}_{\\mathcal{U}}\\)</em> : Soit \\((X_i \\to X)\\), \\(i \\in I\\), une famille\ncouvrante de \\(\\mathscr{C}_{\\mathcal{U}}\\). Alors pour tout faisceau \\(F\\) sur \\(\\widetilde{C}\\), \\(F(\\varepsilon_C(X)) \\to \\prod_i F(\\varepsilon_C(X_i))\\)\nest injective et par suite (II 5.2) \\((\\varepsilon_C X_i \\to \\varepsilon_C X)\\), \\(i \\in I\\), est couvrante pour la\ntopologie canonique de \\(\\widetilde{C}\\), donc (II 5.2) \\((X_i \\to X)\\), \\(i \\in I\\), est couvrante pour \\(T\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>B) <em>La topologie \\(T\\) est moins fine que \\(\\mathscr{C}_{\\mathcal{U}}\\)</em> : Il suffit de montrer que \\(\\varepsilon_C : C \\to \\widetilde{C}\\)\nest continu (1.1). Or on démontrera en IV n° 1 que tout faisceau sur \\(\\widetilde{C}\\) est repré-\nsentable et par suite, pour tout faisceau \\(F\\) sur \\(\\widetilde{C}\\), \\(F \\circ \\varepsilon_C\\) est un faisceau sur\n\\(C\\). (On n'utilisera pas 3.5 jusqu'à IV 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons deux résultats qui seront utilisés en VI 7.</p>"
+    },
+    {
+     "id": "III.3.6",
+     "type": "proposition",
+     "label": "3.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\((C_i)_{i \\in I}\\) une famille de sites, \\(C\\) une catégorie et pour\ntout \\(i \\in I\\), \\(u_i : C_i \\to C\\) un foncteur, \\(\\mathcal{U}\\) un univers tel que les catégories \\(C_i\\) et\n\\(C\\) soient \\(\\mathcal{U}\\)-petites. Il existe une topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) sur \\(C\\) qui est la moins fine des to-\npologies pour lesquelles les \\(u_i\\) soient continus. La topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) ne dépend pas de\nl'univers \\(\\mathcal{U}\\) pour lequel les catégories considérées sont petites.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La dernière assertion de 3.6 résulte de 1.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(T\\) une topologie sur \\(C\\). Alors les foncteurs \\(u_i\\) sont continus si et\nseulement si pour tout \\(i \\in I\\) et pour tout crible couvrant \\(R \\hookrightarrow X\\) d'un objet \\(X\\) de\n\\(C_i\\), le morphisme\n\\[\nu_{i!}(R) \\longrightarrow u_i(X)\n\\]\nde \\(\\widehat{C}\\) est bicouvrant (1.2 (ii)). Donc 3.6 est une conséquence du</p>"
+    },
+    {
+     "id": "III.3.6.1",
+     "type": "lemme",
+     "label": "3.6.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.3.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.6.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une petite catégorie, \\((u_i : F_i \\to G_i)_{i \\in I}\\) une famille de\nflèches de \\(\\widehat{C}\\). Alors il existe sur \\(C\\) une topologie la moins fine parmi celles qui\nrendent les morphismes \\(u_i\\) <em>couvrants</em> (resp. <em>bicouvrants</em>) (II 5.2).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dire que \\(u : F \\to G\\) est couvrant pour une topologie donnée \\(T\\) signifie que\npour toute flèche \\(X \\to G\\), avec \\(X \\in \\mathrm{Ob}\\, C\\), la flèche \\(F \\times_G X \\to X\\) correspondante\nest couvrante, ou encore que la famille des flèches \\(X' \\to X\\) de \\(C\\) qui se factori-\nsent par la flèche précédente est couvrante. Le fait qu'il existe une topologie la\nmoins fine parmi celles pour lesquelles les \\(u_i : F_i \\to G_i\\) sont couvrants résulte\ndonc de I 1.1.6, d'où l'assertion non respée de 3.6.1. L'assertion respée s'en dé-\nduit, en se rappelant qu'un morphisme \\(u : F \\to G\\) est bicouvrant si et seulement\nsi les morphismes \\(u : F \\to G\\) et \\(\\mathrm{diag}_u : F \\to F \\times_G F\\) sont couvrants.</p>"
+    },
+    {
+     "id": "III.3.7",
+     "type": "proposition",
+     "label": "3.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\((C_i)_{i \\in I}\\) une famille de sites, \\(C\\) une catégorie, pour tout\n\\(i \\in I\\), \\(u_i : C_i \\to C\\) un foncteur, et \\(\\mathcal{U}\\) un univers tel que les catégories \\(C_i\\) et\n\\(C\\) soient \\(\\mathcal{U}\\)-petites. Il existe une topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) qui est la plus fine pour laquelle\nles \\(u_i\\) sont cocontinus. La topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) ne dépend pas de l'univers \\(\\mathcal{U}\\) pour lequel\nles catégories considérées sont petites.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathcal{U}\\) un univers pour lequel les catégories considérées sont petites. Les\nfoncteurs \\(u_i\\) sont cocontinus pour une topologie \\(\\mathscr{C}\\) de \\(C\\) si et seulement si pour\ntout \\(i \\in I\\) et tout faisceau \\(F\\) sur \\(C_i\\) le préfaisceau \\(\\widehat{u}_{i*} F\\) est un faisceau pour\n\\(\\mathscr{C}\\) (2.2). Il en résulte que la topologie \\(\\mathscr{C}_{\\mathcal{U}}\\) est la topologie la plus fine pour\nlaquelle les préfaisceaux \\(\\widehat{u}_{i*} F\\), \\(i \\in I\\), \\(F \\in \\mathrm{ob}\\, C_i\\), sont des faisceaux (II 2.2).\nLa dernière assertion résulte de 2.2.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "III-fn5",
+     "number": "(1)",
+     "html": "<p>(1) Lorsqu'aucune confusion n'en résulte cette topologie est appelée la topologie induite sur \\(C\\) par la topologie de \\(C'\\). </p>"
+    },
+    {
+     "id": "III-fn6",
+     "number": "(∗)",
+     "html": "<p>(∗) En fait, il suffit que \\(u\\) commute aux produits fibrés de la forme \\(X_i \\times_X X'\\). </p>"
+    }
+   ]
+  },
+  {
+   "id": "III-4",
+   "title": "4. Lemme de comparaison",
+   "blocks": [
+    {
+     "id": "III.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.4\">4. Lemme de comparaison</h2>"
+    },
+    {
+     "id": "III.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"III.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.1</span> (lemme de comparaison)</div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une petite catégorie, \\(C'\\)\nun site dont la catégorie sous-jacente est une \\(\\mathcal{U}\\)-catégorie et \\(u : C \\to C'\\)\nun foncteur pleinement fidèle. Munissons \\(C\\) de la topologie induite par \\(u\\)\n(3.1). Considérons les propriétés :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>Tout objet de \\(C'\\) peut être recouvert par des objets provenant de \\(C\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>Le foncteur \\(F \\mapsto F \\circ u\\) induit une équivalence de catégories de la\ncatégorie des faisceaux sur \\(C'\\) dans la catégorie des faisceaux sur \\(C\\).</p></li>\n  </ol>\n  <p>On a toujours i) \\(\\Longrightarrow\\) ii). Lorsque \\(C'\\) est un \\(\\mathcal{U}\\)-site et lorsque\nla topologie de \\(C'\\) est moins fine que la topologie canonique, on a\nii) \\(\\Longrightarrow\\) i).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.1.1\">4.1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons d'abord i) \\(\\Longrightarrow\\) ii). La démonstration se fait en deux pas.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Premier pas.</em> Pour tout préfaisceau \\(H\\) de \\(\\widehat{C}'\\) le morphisme d'adjonction\n\\(\\varphi : u_! u^* H \\to H\\) (I 5.1) est bicouvrant (II 5.3) et le foncteur \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\)\n(1.1.1) est pleinement fidèle.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C/H\\) la petite catégorie dont les objets sont les objets\n\\(Y\\) de \\(C\\) muni d'un morphisme \\(u(Y) \\to H\\), et dont les morphismes sont les\ndiagrammes commutatifs :\n\\[\n\\xymatrix{\nu(Y) \\ar[rr]^-{u(m)} \\ar[dr] &amp; &amp; u(Y') \\ar[dl] \\\\\n &amp; H &amp;\n}\n\\]\nOn a \\(u^* H = \\varinjlim_{Y \\in \\mathrm{ob}\\, C/H} Y\\) (I 3.4) et par suite (I 5.4)\n\\(u_! u^* H = \\varinjlim_{Y \\in \\mathrm{ob}\\, C/H} u(Y)\\). Le morphisme d'adjonction est le morphisme\névident qui résulte de la description de \\(u_! u^* H\\) comme limite inductive.\nLe morphisme \\(\\varphi\\) possède la\npropriété suivante : (∗) Pour tout objet \\(Y\\) de \\(C\\), tout morphisme \\(m : u(Y) \\to H\\)\nse factorise de manière unique en le morphisme canonique \\(\\alpha(m) : u(Y) \\to u_! u^* H\\)\net le morphisme \\(\\varphi\\). Il résulte immédiatement de i) que le morphisme \\(\\varphi\\)\nest couvrant (II 5.1), montrons qu'il est bicouvrant. Soient\n\\(p, q : Z \\rightrightarrows u_! u^* H\\) deux morphismes d'un objet \\(Z\\) de \\(\\widehat{C}'\\), tels que\n\\(\\varphi p = \\varphi q\\). Pour tout objet \\(Y\\) de \\(C\\) et tout morphisme \\(n : u(Y) \\to Z\\), on\na \\(\\varphi p n = \\varphi q n\\). La propriété (∗) entraîne alors que \\(p n = q n\\), et comme les\n\\(u(Y)\\) recouvrent \\(Z\\), le noyau de \\((p, q)\\) est un crible couvrant \\(Z\\). Le mor-\nphisme \\(\\varphi\\) est donc bicouvrant (II 5.3). Pour tout faisceau \\(H\\) sur \\(C'\\),\n\\(u^* H\\) est un faisceau sur \\(C\\) noté \\(u_s H\\) (1.1.1). On a de plus \\(u^s u_s H = a' u_! u_s H\\)\n(1.3), et le morphisme d'adjonction \\(u^s u_s H \\to H\\) s'obtient en appliquant le\nfoncteur « faisceau associé » au morphisme \\(\\varphi : u_! u^* H \\to H\\). Par suite\n(II 5.3) le morphisme d'adjonction \\(u^s u_s H \\to H\\) est un isomorphisme.\nDonc \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\) est pleinement fidèle.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Deuxième pas.</em> Le foncteur \\(u\\) est cocontinu et le foncteur \\(u^s : \\widetilde{C} \\to \\widetilde{C}'\\)\n(1.2) est pleinement fidèle. Par suite \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\) est une équivalence.\nSoient \\(Y\\) un objet de \\(C\\) et \\(i : R \\hookrightarrow u(Y)\\) un crible couvrant. Comme le\nfoncteur \\(u^*\\) commute aux limites projectives (I 5.5) le morphisme\n\\(u^*(i) : u^*(R) \\hookrightarrow u^* u(Y)\\) est un monomorphisme. Comme \\(u\\) est pleinement fidèle,\non a \\(u^* u(Y) \\simeq Y\\), d'où un crible de \\(Y\\), \\(u^*(i) : u^*(R) \\to Y\\). Pour montrer\nque \\(u\\) est cocontinu, il suffit de montrer que \\(u^*(i) : u^*(R) \\to Y\\) est\nun crible couvrant pour la topologie induite sur \\(C\\) (2.1). Pour cela,\nil suffit de montrer (3.2) que pour tout changement de base \\(m : X \\to Y\\),\nle morphisme \\(u_!(u^*(R) \\times_Y X) \\to u(X)\\) est bicouvrant. Mais comme \\(u^*\\) commute\naux limites projectives, on a \\(u^*(R) \\times_Y X = u^*(R \\times_{u(Y)} u(X))\\) et \\(R \\times_{u(Y)} u(X)\\)\nest un crible couvrant \\(u(X)\\). Il suffit donc de montrer que pour tout objet \\(Y\\)\nde \\(C\\) et tout crible couvrant \\(i : R \\hookrightarrow u(Y)\\), le morphisme de \\(\\widehat{C}'\\),\n\\(u_! u^*(R) \\xrightarrow{\\ u_! u^*(i)\\ } u(Y)\\), est bicouvrant. Or ce morphisme se factorise\nen le morphisme d'adjonction \\(u_! u^*(R) \\to R\\), qui est bicouvrant (premier\npas), et le monomorphisme \\(R \\hookrightarrow u(Y)\\) qui est couvrant. Il est donc\nbicouvrant (II 5.3). Ceci montre que \\(u\\) est cocontinu. Comme \\(u\\) est continu\net pleinement fidèle, il résulte de 2.6 (utilisé dans le cas où \\(C\\) est petit)\nque \\(u^s\\) (noté \\(u_!\\) dans 2.6) est pleinement fidèle. Comme \\(u^s\\) et \\(u_s\\) sont\nadjoints l'un de l'autre et qu'ils sont pleinement fidèles, ce sont des\nfoncteurs quasi-inverses et par suite \\(u_s\\) est une équivalence.</p>"
+    },
+    {
+     "id": "III.4.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.1.2\">4.1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons maintenant que ii) \\(\\Longrightarrow\\) i). Les objets \\(Y\\) de \\(C\\) forment\nune famille génératrice de \\(\\widetilde{C}\\) (II 4.10) et par suite, pour tout objet\n\\(X\\) de \\(C'\\), il existe une famille épimorphique (dans \\(\\widetilde{C}\\)) \\(v_i : Y_i \\to u_s X\\),\n\\(i \\in I\\). On a \\(u_s u(Y_i) = Y_i\\) et, le foncteur \\(u_s\\) étant une équivalence de\ncatégories, on a \\(v_i = u_s(w_i)\\), où les \\(w_i : u(Y_i) \\to X\\) forment une\nfamille épimorphique de \\(\\widetilde{C}'\\). Il résulte alors de II 5.1 que la famille\n\\(w_i : u(Y_i) \\to X\\), \\(i \\in I\\), est couvrante.</p>"
+    },
+    {
+     "id": "III.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.2\">4.2. Fin de la démonstration de 1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(G\\) une sous-catégorie pleine de \\(C\\) dont les objets forment\nune petite famille topologiquement génératrice de \\(C\\) (II 3.0.1). Munissons\n\\(G\\) de la topologie induite par le foncteur d'inclusion \\(i : G \\to C\\) (3.1).\nLe foncteur \\((u \\circ i)_s = i_s \\circ u_s\\) (1.1.1) admet un adjoint à gauche d'après la\npremière partie de la démonstration de 1.2. Comme \\(i_s\\) est une équivalence\nde catégories (4.1), le foncteur \\(u_s\\) admet un adjoint à gauche \\(u^s\\) et on\na un isomorphisme fonctoriel \\(u^s \\simeq (u \\circ i)^s \\circ i_s\\). Montrons que le diagramme\n\\[\n(4.2.1) \\qquad\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nest commutatif à isomorphisme près. Pour tout faisceau \\(H\\) sur \\(C'\\), on a\n\\(\\mathrm{Hom}_{\\widetilde{C}'}(\\varepsilon_{C'} u X, H) \\simeq u_s H(X)\\), pour tout \\(X \\in \\mathrm{ob}\\, C\\). On a de plus\n\\(\\mathrm{Hom}_{\\widetilde{C}'}(u^s \\varepsilon_C X, H) \\simeq \\mathrm{Hom}_{\\widetilde{C}}(\\varepsilon_C X, u_s H)\\) par adjonction, puis\n\\(\\mathrm{Hom}_{\\widetilde{C}}(\\varepsilon_C X, u_s H) \\simeq u_s H(X)\\) par définition de \\(\\varepsilon_C\\). D'où un isomorphisme\n\\(\\varepsilon_{C'} u X \\simeq u^s \\varepsilon_C X\\) pour tout \\(X \\in \\mathrm{ob}\\, C\\). Ceci démontre i) \\(\\Longrightarrow\\) iv). Montrons\nque iv) \\(\\Longrightarrow\\) i). On a un diagramme commutatif\n\\[\n(4.2.2) \\qquad\n\\xymatrix{\nG \\ar[r]^-{i} \\ar[d]_-{\\varepsilon_G} &amp; C \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{G} \\ar[r]_-{i^s} &amp; \\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' ,\n}\n\\]\net par suite, d'après la première partie de la démonstration, le foncteur\n\\(i \\circ u : G \\to C'\\) est continu. On en déduit aussitôt par 4.1 et 1.1 que\n\\(u\\) est continu, d'où iv) \\(\\Longrightarrow\\) i). On obtient de plus l'unicité de \\(u^s\\) ;\nconnaissant, par la première partie de la démonstration, l'unicité lorsque\n\\(C\\) est petit.</p>"
+    },
+    {
+     "id": "III.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.3\">4.3. Fin de la démonstration de 1.5 et de 1.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(u : C \\to C'\\) un foncteur entre deux \\(\\mathcal{U}\\)-sites et \\(G\\) une\nsous-catégorie pleine de \\(C\\) dont l'ensemble des objets est une petite\nfamille topologiquement génératrice de \\(C\\) (II 3.0.1). Munissons \\(G\\) de\nla topologie induite par le foncteur d'inclusion \\(i : G \\to C\\). Il résulte\nimmédiatement de 4.1 et de 1.1 que \\(u\\) est continu si et seulement si\n\\(u \\circ i\\) est continu. De cette remarque et de la première partie de la\ndémonstration de 1.5 résulte le cas général. Cette remarque permet\naussi de ramener la démonstration de 1.7 au cas où la catégorie \\(C\\) est petite.</p>"
+    },
+    {
+     "id": "III.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.4\">4.4. Fin de la démonstration de 2.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(u : C \\to C'\\) un foncteur entre deux \\(\\mathcal{U}\\)-sites, \\(G\\) une sous-\ncatégorie pleine de \\(C\\) dont l'ensemble des objets est une petite famille\ntopologiquement génératrice de \\(C\\) (II 3.0.1), munie de la topologie induite\npar le foncteur d'inclusion \\(i : G \\to C\\). Il résulte de la démonstration\nde 4.1 (4.1.1 deuxième pas) que \\(i\\) est cocontinu. Par suite, lorsque \\(u\\)\nest cocontinu, le foncteur \\(u \\circ i : G \\to C'\\) est cocontinu. De plus,\n\\(i^* : \\widetilde{C} \\to \\widetilde{G}\\) est une équivalence de catégories (4.1). Donc le foncteur\n\\(u^* : \\widetilde{C}' \\to \\widetilde{C}\\) admet un adjoint à droite. Ceci démontre 3). Pour démontrer\n4), il suffit de remarquer que \\((u \\circ i)_* \\simeq u_* \\circ i_*\\) et que \\(i_*\\) est une équi-\nvalence (4.1). La commutativité de (2.3.2) résulte alors de la commutati-\nvité de ces diagrammes lorsque \\(C\\) est petit.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-5",
+   "title": "5. Localisation",
+   "blocks": [
+    {
+     "id": "III.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.5\">5. Localisation</h2>"
+    },
+    {
+     "id": "III.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.5.1\">5.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient maintenant \\(C\\) un \\(\\mathcal{U}\\)-site et \\(X\\) un objet de \\(\\widehat{C}\\). Sauf mention\nexpresse du contraire la catégorie \\(C/X\\) sera munie de la topologie \\(\\mathscr{C}\\)\ninduite par le foncteur \\(j_X : C/X \\to C\\) (3.1). La notation \\(C/X\\) désignera\nla catégorie \\(C/X\\) munie de la topologie \\(\\mathscr{C}\\). La proposition I 5.11 nous\nmontre que le foncteur \\(j_{X!}\\) commute aux produits fibrés et par suite trans-\nforme tout monomorphisme en monomorphisme. En particulier, pour tout\nobjet \\((Y \\to X)\\) de \\(C/X\\), le foncteur \\(j_{X!}\\) établit une correspondance biuni-\nvoque entre les cribles, dans la catégorie \\(C/X\\), de l'objet \\((Y \\to X)\\)\net les cribles, dans \\(C\\), de l'objet \\(Y\\).</p>"
+    },
+    {
+     "id": "III.5.2",
+     "type": "proposition",
+     "label": "5.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site, \\(X\\) un objet de \\(\\widehat{C}\\) et \\(j_X : C/X \\to C\\)\nle foncteur continu correspondant.</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>Un crible \\(R\\) d'un objet \\((Z \\to X)\\) est couvrant dans \\(C/X\\) si\net seulement si le crible \\(j_{X!}(R) \\hookrightarrow Z\\) est couvrant dans \\(C\\).</p></li>\n  <li><span class=\"item-label\">2)</span> <p>Le foncteur \\(j_X : C/X \\to C\\) est cocontinu et continu.</p></li>\n  <li><span class=\"item-label\">3)</span> <p>Soit \\(m : Y \\to X\\) un morphisme de \\(\\widehat{C}\\). On a alors le diagramme\ncommutatif :\n\\[\n\\xymatrix{\nC/Y \\ar[rr]^-{j_m} \\ar[dr]_-{j_Y} &amp; &amp; C/X \\ar[dl]^-{j_X} \\\\\n &amp; C &amp;\n}\n\\]\nLa topologie induite par le foncteur \\(j_Y\\) sur \\(C/Y\\) est égale à la\ntopologie induite par \\(j_m\\) sur \\(C/Y\\).</p></li>\n  <li><span class=\"item-label\">4)</span> <p>La topologie induite par \\(j_X : C/X \\to C\\) est une \\(\\mathcal{U}\\)-topologie\n(II 3.0.2).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> 1) Si le crible \\(R\\) de \\((Z \\to X)\\) est couvrant, le crible \\(j_{X!}(R) \\hookrightarrow Z\\)\nest couvrant (1.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Réciproquement, si le crible \\(j_{X!}(R) \\to Z\\) est couvrant dans \\(C\\),\non voit qu'il en est de même pour tout crible obtenu en faisant un\nchangement de base dans \\(C/X\\). Le crible \\(R\\) est donc couvrant (3.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Se déduit immédiatement de 1) en appliquant 2.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) Se déduit immédiatement de la description des cribles\ncouvrants donnée par 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>4) Soit \\((G)_i\\), \\(i \\in I\\), une petite famille topologiquement généra-\ntrice de \\(C\\). On vérifie immédiatement que la petite famille\n\\((u : G_i \\to X)\\), \\(u \\in \\coprod_{i \\in I} \\mathrm{Hom}_{\\widehat{C}}(G_i, X)\\), est topologiquement génératrice dans \\(C/X\\).</p>"
+    },
+    {
+     "id": "III.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.5.3\">Terminologie et notations 5.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après la proposition précédente le foncteur\n\\(j_X\\) est à la fois un foncteur continu et cocontinu. Il définit donc une\nsuite de trois foncteurs adjoints (4.3.2) entre les catégories de faisceaux\nd'ensembles (1.3 et 2.3) :\n\\[\n\\begin{aligned}\nj_X^s \\ &amp;: \\ (C/X)^{\\sim} \\to \\widetilde{C} \\\\\nj_X^* = j_{X,s} \\ &amp;: \\ \\widetilde{C} \\to (C/X)^{\\sim} \\\\\nj_{X*} \\ &amp;: \\ (C/X)^{\\sim} \\to \\widetilde{C} .\n\\end{aligned}\n\\]\nDans la situation particulière de la proposition 5.2 nous\nemploierons la terminologie et les notations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">1)</span> <p>Le foncteur \\(j_{X*}\\) sera appelé le <em>foncteur image directe</em>.</p></li>\n<li><span class=\"item-label\">2)</span> <p>Le foncteur \\(j_{X,s} = j_X^*\\) sera noté \\(j_X^*\\) et sera appelé le <em>foncteur restric-\ntion à \\(C/X\\)</em>.</p></li>\n<li><span class=\"item-label\">3)</span> <p>Le foncteur \\(j_X^s\\) sur les faisceaux d'ensembles sera appelé le <em>« foncteur\nprolongement par le vide à la catégorie \\(C\\) »</em> et sera noté \\(j_{X!}\\) (cf. 1.9.2).</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc une suite de trois foncteurs adjoints entre\n\\((C/X)^{\\sim}\\) et \\(\\widetilde{C}\\) :\n\\[\nj_{X!} \\ , \\ j_X^* \\ , \\ j_{X*} .\n\\]</p>"
+    },
+    {
+     "id": "III.5.4",
+     "type": "proposition",
+     "label": "5.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\">\n  <p>Le foncteur \\(j_{X!} : (C/X)^{\\sim} \\to \\widetilde{C}\\) se factorise par la\ncatégorie \\(\\widetilde{C}/aX\\) (\\(a\\) est le foncteur faisceau associé) :\n\\[\n(C/X)^{\\sim} \\xrightarrow{\\ e_X^{\\sim}\\ } \\widetilde{C}/aX \\to \\widetilde{C} .\n\\]\nLe foncteur :\n\\[\ne_X^{\\sim} \\ : \\ (C/X)^{\\sim} \\longrightarrow \\widetilde{C}/aX\n\\]\nest une équivalence de catégories. Le foncteur restriction à \\(C/X\\), com-\nposé avec l'équivalence \\(e_X^{\\sim}\\), est isomorphe au foncteur « changement de\nbase par \\(aX \\to e\\) » (\\(e\\) l'objet final de \\(\\widetilde{C}\\)) : \\(F \\mapsto (F \\times aX \\xrightarrow{\\ \\mathrm{pr}_2\\ } aX)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> L'image par \\(j_{X!}\\) de l'objet final de \\((C/X)^{\\sim}\\) est l'objet \\(aX\\) ; d'où\nla factorisation. Pour montrer que le foncteur \\(e_X^{\\sim}\\) est une équivalence,\nnous nous bornerons à quelques indications. D'après I 5.11, un pré-\nfaisceau sur \\(C/X\\) est défini par un préfaisceau \\(F\\) sur \\(C\\) muni d'un morphisme\n\\(F \\to X\\). On démontre alors que les deux propriétés suivantes sont équi-\nvalentes :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">i)</span> <p>Le préfaisceau sur \\(C/X\\) défini par \\(F \\to X\\) est un faisceau.</p></li>\n<li><span class=\"item-label\">ii)</span> <p>Le diagramme suivant est cartésien (on dénote par \\(i\\) et \\(a\\) les foncteurs\ninjection dans les préfaisceaux, et faisceau associé) :\n\\[\n\\xymatrix{\nF \\ar[r] \\ar[d] &amp; i a F \\ar[d] \\\\\nX \\ar[r] &amp; i a X ,\n}\n\\]</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On en déduit alors immédiatement que \\(e_X^{\\sim}\\) est une équivalence.\nLa dernière assertion est triviale.</p>"
+    },
+    {
+     "id": "III.5.5",
+     "type": "proposition",
+     "label": "5.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\">\n  <p>1) Soient \\(C\\) un \\(\\mathcal{U}\\)-site, \\(X\\) un objet de \\(\\widehat{C}\\). Le diagramme\nci-dessous de catégories et foncteurs est commutatif à isomorphismes\ncanoniques près :\n\\[\n\\xymatrix@C=2.6em{\nC/X \\ar[r]^-{h_X} \\ar@{=}[d] &amp; (C/X)^{\\wedge} \\ar[r]^-{a_X} \\ar[d]^-{e_X^{\\wedge}} &amp; (C/X)^{\\sim} \\ar[r]^-{i_X} \\ar[d]^-{e_X^{\\sim}} &amp; (C/X)^{\\wedge} \\ar[d]^-{e^{\\wedge}/X} &amp; \\\\\nC/X \\ar[r]_-{h/X} &amp; \\widehat{C}/X \\ar[r]_-{a/X} &amp; \\widetilde{C}/aX \\ar[r]_-{i/aX} &amp; \\widehat{C}/iaX \\ar[r]_-{\\pi} &amp; \\widehat{C}/X .\n}\n\\]\nLes notations \\(a_X\\) et \\(i_X\\) désignent les foncteurs « faisceau\nassocié » et injection dans les préfaisceaux pour le site \\(C/X\\). La nota-\ntion \\(a/X\\) désigne le prolongement naturel du foncteur \\(a\\) (faisceau asso-\ncié pour le site \\(C\\)) à la catégorie des flèches de but \\(X\\), de même pour\nla notation \\(i/aX\\). Enfin la notation \\(\\pi\\) désigne le foncteur changement\nde base par la flèche canonique \\(X \\to iaX\\).</p>\n  <p>2) Soit de plus \\(m : Y \\to X\\) un morphisme de \\(\\widehat{C}\\). Le\ndiagramme ci-après est commutatif à isomorphisme canonique près :\n\\[\n\\xymatrix@C=3em{\n\\widetilde{C}/aX/aY \\ar@{=}[dd] &amp; &amp; (C/X)^{\\sim}/a_X Y \\ar[ll]_-{f} \\ar[dr]^-{g} &amp; \\\\\n &amp; &amp; &amp; (C/X/Y)^{\\sim} \\ar[dl]^-{e_m^{\\sim}} \\\\\n\\widetilde{C}/aY &amp; &amp; (C/Y)^{\\sim} \\ar[ll]^-{e_Y^{\\sim}} &amp;\n}\n\\]</p>\n  <p>La flèche \\(f\\) est le prolongement naturel de l'équivalence\n\\(e^{\\sim}/X\\) à la catégorie des flèches de but \\(a_X Y\\), et est par suite une équi-\nvalence de catégories. La flèche \\(g\\) n'est autre que l'équivalence de 5.4\nappliquée à la situation \\((C/X)/[m]\\).</p>\n  <p>3) Désignons par \\(j_{aX!} : \\widetilde{C}/aX \\to \\widetilde{C}\\) le foncteur\n« oublions \\(aX\\) », et par \\(j_{aX}^* : \\widetilde{C} \\to \\widetilde{C}/aX\\) le foncteur « produit par \\(aX\\) ».\nLes diagrammes ci-après sont commutatifs à isomorphisme canonique près :\n\\[\n\\xymatrix{\n(C/X)^{\\sim} \\ar[r]^-{j_{X!}} \\ar[d] &amp; \\widetilde{C} \\ar@{=}[d] \\\\\n\\widetilde{C}/aX \\ar[r]_-{j_{aX!}} &amp; \\widetilde{C}\n}\n\\qquad\n\\xymatrix{\n\\widetilde{C} \\ar[r]^-{j_X^*} \\ar@{=}[d] &amp; (C/X)^{\\sim} \\ar[d]^-{e^{\\sim}/X} \\\\\n\\widetilde{C} \\ar[r]_-{j_{aX}^*} &amp; \\widetilde{C}/aX\n}\n\\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Preuve.</strong> La preuve de ces assertions est immédiate à partir de la définition\ndes équivalences \\(e_X^{\\sim}\\) (5.4) et \\(e_X^{\\wedge}\\) (I 5.11).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-bibliographie",
+   "title": "Bibliographie",
+   "blocks": [
+    {
+     "id": "III.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.bibliographie\">Bibliographie</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[TF] R. Godement, <em>théorie des faisceaux</em>, Hermann, 1958. Act. Scient. Ind\nn° 1252, (Paris).</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par J.L. Verdier"
+}

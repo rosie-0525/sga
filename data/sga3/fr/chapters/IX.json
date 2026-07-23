@@ -1,0 +1,1372 @@
+{
+ "chapter_id": "IX",
+ "title": "GROUPES DE TYPE MULTIPLICATIF : HOMOMORPHISMES DANS UN SCHÉMA EN GROUPES",
+ "number": "IX",
+ "pages": [
+  {
+   "id": "IX",
+   "title": "GROUPES DE TYPE MULTIPLICATIF : HOMOMORPHISMES DANS UN SCHÉMA EN GROUPES",
+   "blocks": [
+    {
+     "id": "IX",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"IX\">EXPOSÉ IX<br>GROUPES DE TYPE MULTIPLICATIF : HOMOMORPHISMES DANS UN SCHÉMA EN GROUPES<span class=\"author\">par A. Grothendieck</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "IX-1",
+   "title": "1. Définitions",
+   "blocks": [
+    {
+     "id": "IX.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.1\">1. Définitions</h2>"
+    },
+    {
+     "id": "IX.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IX.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-préschéma en groupes. On dit que G est un groupe <em>de type multiplicatif</em> si G est localement diagonalisable au sens de la topologie fidèlement plate quasi-compacte (cf. <a class=\"ref\" href=\"#IV.6.3\">IV 6.3</a>), i.e. si pour tout \\(s \\in S\\), il existe un voisinage ouvert U de \\(s\\) et un morphisme fidèlement plat et quasi-compact \\(S' \\to U\\) tel que \\(G' = G \\times_S S'\\) soit un S′-groupe diagonalisable (<a class=\"ref\" href=\"#I.4.4\">I 4.4</a> et <a class=\"ref\" href=\"#VIII.1.1\">VIII 1.1</a>).</p>\n  <p>— On dit que G est de type multiplicatif <em>quasi-isotrivial</em> s'il est même localement diagonalisable au sens de la topologie étale (<a class=\"ref\" href=\"#IV.6.3\">IV 6.3</a>), i.e. si dans la définition précédente, on peut même prendre \\(S' \\to U\\) <em>étale</em> surjectif, ou encore (ce qui revient au même, comme on voit en prenant le schéma somme des S′ attachés aux divers \\(s \\in S\\)) s'il existe \\(S' \\to S\\) étale et surjectif tel que \\(G' = G \\times_S S'\\) soit un S′-groupe localement diagonalisable.</p>\n  <p>— Si on peut même choisir \\(S' \\to S\\) étale surjectif et fini, on dit que G est de type multiplicatif <em>isotrivial</em>.</p>\n  <p>— Enfin on dit que G est un groupe de type multiplicatif <em>localement trivial</em> (resp. <em>localement isotrivial</em>) si tout \\(s \\in S\\) admet un voisinage ouvert U tel que \\(G \\times_S U\\) soit un U-groupe diagonalisable (resp. un groupe de type multiplicatif isotrivial, i.e. il existe \\(S' \\to U\\) morphisme étale surjectif fini tel que \\(G \\times_S S'\\) soit un S′-groupe diagonalisable).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.1.2",
+     "type": "commentaires",
+     "label": "1.2",
+     "title": "Commentaires",
+     "html": "<div class=\"thm thm-remark commentaires\" id=\"IX.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Commentaires</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\">\n  <p>On notera que les cinq notions précédentes se déduisent toutes de la notion de <em>groupe diagonalisable</em> par le processus de localisation, au sens de cinq « topologies » différentes associées à (Sch). On convient de façon générale que lorsque le mot « localement » n'est pas explicité par la désignation de la topologie envisagée, il s'agit de la topologie de Zariski, ce qui est conforme à la terminologie reçue. Dans la terminologie introduite ici, « de type multiplicatif localement trivial » équivaut à « localement diagonalisable » de <a class=\"ref\" href=\"#VIII.1.1\">VIII 1.1</a>, de même « trivial » se traduit par « diagonalisable ». Entre les cinq notions introduites, on a le diagramme d'implications suivant, qui résulte des relations correspondantes entre les topologies en jeu :</p>\n  \\[\n  \\xymatrix{\n  &amp; \\text{type multiplicatif général} &amp; \\\\\n  &amp; \\text{quasi-isotrivial} \\ar@{=&gt;}[u] &amp; \\\\\n  &amp; \\text{localement isotrivial} \\ar@{=&gt;}[u] &amp; \\\\\n  \\text{isotrivial} \\ar@{=&gt;}[ur] &amp; &amp; \\text{localement trivial} \\ar@{=&gt;}[ul] \\\\\n  &amp; \\text{trivial} \\ar@{=&gt;}[ul] \\ar@{=&gt;}[ur] &amp;\n  }\n  \\]\n  <p>Du point de vue pratique, signalons tout de suite que tous les groupes de type multiplicatif que nous rencontrerons seront quasi-isotriviaux ; ainsi, nous verrons dans l'exposé suivant (<a class=\"ref\" href=\"#X.4.5\">X 4.5</a>) que lorsque G est <em>de type fini</em> sur S, alors G est automatiquement quasi-isotrivial, mais nous donnerons des exemples où il n'est pas localement isotrivial. Nous y verrons de même que G peut être localement trivial, sans être isotrivial ni a fortiori trivial (ce qui implique facilement que les inclusions du diagramme précédent sont strictes).</p>\n  <p>Par contre, nous y verrons également (<a class=\"ref\" href=\"#X.5.16\">X 5.16</a>) lorsque S est localement noethérien et <em>normal</em> (plus généralement géométriquement unibranche), alors tout groupe de type multiplicatif de type fini sur S est nécessairement isotrivial, et de plus trivial dès qu'il est localement trivial (ou seulement trivial sur un ouvert dense). Ceci explique que la plupart des groupes de type multiplicatif qu'on rencontrera en pratique seront sans doute isotriviaux, d'autant plus que nous verrons par la suite que les <em>tores maximaux</em> des schémas en groupes semi-simples sont automatiquement isotriviaux.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.1.3",
+     "type": "definition",
+     "label": "1.3",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IX.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S, G comme dans <a class=\"ref\" href=\"#IX.1.1\">1.1</a>. On dit que G est un <em>tore</em> s'il est localement isomorphe, au sens de la topologie fidèlement plate quasi-compacte, à un groupe de la forme \\(\\mathbb{G}_m^r\\) (où r est un entier \\(\\geqslant 0\\)).</p>\n  <p>Avec les notations de <a class=\"ref\" href=\"#IX.1.1\">1.1</a>, cela signifie donc qu'on peut choisir S′ tel que G′ soit isomorphe à un groupe de la forme \\((\\mathbb{G}_{m,S'})^r\\). On notera que l'entier r dépend de \\(s \\in S\\), c'est la <em>dimension de la fibre</em> \\(G_s = G \\otimes_S \\kappa(s)\\). C'est une fonction localement constante de s, comme on constate aussitôt. Il y a lieu de généraliser cette remarque :</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.1.4",
+     "type": "definition",
+     "label": "1.4",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IX.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soit G un schéma en groupes diagonalisable sur un corps k, donc G est isomorphe à un groupe \\(\\mathbf{D}_k(M)\\), où M est un groupe commutatif ordinaire, défini à isomorphisme près par cette condition, de façon précise \\(M \\simeq \\mathrm{Hom}_{k\\text{-gr.}}(G, \\mathbb{G}_{m,k})\\) (<a class=\"ref\" href=\"#VIII.1.3\">VIII 1.3</a>). La classe à isomorphisme près de M s'appelle le <em>type</em> du groupe diagonalisable G ; il est évidemment invariant par extension du corps de base.</p>\n  <p>Si maintenant G est un schéma en groupes de type multiplicatif sur un préschéma S quelconque, alors pour tout \\(s \\in S\\), il existe une extension k de \\(\\kappa(s)\\) telle que \\(G \\times_S \\mathrm{Spec}(k)\\) soit un k-groupe diagonalisable<sup class=\"footnote-ref\"><a id=\"IX-fn1ref\" href=\"#IX-fn1\">1</a></sup>, son type est alors indépendant de l'extension choisie d'après la remarque précédente, et sera appelé le <em>type de G en s</em>, ou type de \\(G_s\\). En particulier, si G lui-même est diagonalisable, donc isomorphe à un groupe de la forme \\(\\mathbf{D}_S(M)\\), alors pour tout \\(s \\in S\\), le type de G en s est égal à la classe du groupe M.</p>\n  <p>De façon générale, si G est un groupe de type multiplicatif sur S, M un groupe commutatif ordinaire, on dira que G est <em>de type</em> M s'il est de type M en tout point \\(s \\in S\\), en d'autres termes si G est localement isomorphe à \\(\\mathbf{D}_S(M)\\) au sens de la topologie fidèlement plate et quasi-compacte.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.1.4.1",
+     "type": "remarque",
+     "label": "1.4.1",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.1.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.4.1</span></div>\n  <div class=\"thm-body\">\n  <p><sup class=\"footnote-ref\"><a id=\"IX-fn2ref\" href=\"#IX-fn2\">2</a></sup> a) On voit immédiatement que pour un groupe de type multiplicatif donné G sur S, la fonction \\(s \\mapsto\\) type de \\(G_s\\) est localement constante sur S : en effet, avec les notations de <a class=\"ref\" href=\"#IX.1.1\">1.1</a>, si G′ est de type M, alors G est de type M sur le voisinage U de s. Il s'ensuit que l'on a une <em>partition canonique</em> de S en somme de préschémas \\(S_i\\), telle que pour tout i, \\(G_{S_i}\\) soit de type \\(M_i\\), où les \\(M_i\\) sont des groupes commutatifs deux à deux non isomorphes.</p>\n  <p>b) En particulier, si S est connexe, alors le type des fibres de G est constant i.e. il existe un groupe commutatif M tel que G soit de type M. Enfin, si G est un tore, le type de G en s est caractérisé par l'entier \\(\\dim G_s\\) (en effet, \\(G_s\\) est de type \\(\\mathbb{Z}^n\\), où \\(n = \\dim G_s\\)).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.1.5",
+     "type": "remarque",
+     "label": "1.5",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\">\n  <p>a) Il est trivial sur les définitions <a class=\"ref\" href=\"#IX.1.1\">1.1</a> et <a class=\"ref\" href=\"#IX.1.3\">1.3</a> que celles-ci sont « compatibles avec l'extension de la base ». Ainsi, si G est un préschéma en groupes sur S, et \\(S' \\to S\\) un morphisme de changement de base, alors si G est de type multiplicatif (resp. de type multiplicatif isotrivial, etc.), il en est de même de G′.</p>\n  <p>b) Lorsque de plus \\(S' \\to S\\) est fidèlement plat et quasi-compact, alors si G′ est de type multiplicatif, resp. un tore, il en est de même de G. Si de plus \\(S' \\to S\\) est étale (resp. fini étale), et G′ quasi-isotrivial (resp. isotrivial), il en est de même de G.</p>\n  <p>c) Enfin, revenant à un morphisme de changement de base quelconque \\(f : S' \\to S\\), si \\(s' \\in S'\\) et \\(s = f(s')\\), alors le type de G′ en \\(s'\\) est égal à celui de G en s, puisque \\(G'_{s'} = G_s \\otimes_{\\kappa(s)} \\kappa(s')\\).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn1",
+     "number": "1",
+     "html": "N.D.E. : En effet, il existe par hypothèse un voisinage ouvert U de s et un morphisme fidèlement plat et quasi-compact \\(S' \\to U\\) tel que \\(G_{S'}\\) soit diagonalisable ; alors pour tout \\(s' \\in S'\\) au-dessus de s, \\(\\kappa(s')\\) est une extension de \\(\\kappa(s)\\) et \\(G_{s'} = G \\times_S \\mathrm{Spec}(\\kappa(s'))\\) est diagonalisable."
+    },
+    {
+     "id": "IX-fn2",
+     "number": "2",
+     "html": "N.D.E. : On a mis le numéro 1.4.1 aux remarques qui suivent, pour des références ultérieures."
+    }
+   ]
+  },
+  {
+   "id": "IX-2",
+   "title": "2. Extension de certaines propriétés des groupes diagonalisables aux groupes de type multiplicatif",
+   "blocks": [
+    {
+     "id": "IX.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.2\">2. Extension de certaines propriétés des groupes diagonalisables aux groupes de type multiplicatif</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les extensions dont il s'agit sont des conséquences essentiellement triviales des résultats de l'exposé précédent, compte tenu des définitions <a class=\"ref\" href=\"#IX.1.1\">1.1</a> et de la nature « locale » (au sens de la topologie fidèlement plate et quasi-compacte) des résultats dont il s'agit.</p>"
+    },
+    {
+     "id": "IX.2.0",
+     "type": "definition",
+     "label": "2.0",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IX.2.0\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.0</span></div>\n  <div class=\"thm-body\"><p><sup class=\"footnote-ref\"><a id=\"IX-fn3ref\" href=\"#IX-fn3\">3</a></sup> On note \\(\\mathscr{M}\\) l'ensemble des morphismes fidèlement plats et quasi-compacts.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.2.1",
+     "type": "proposition",
+     "label": "2.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soit G un groupe de type multiplicatif sur un préschéma S. On a ce qui suit :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>G est fidèlement plat sur S, et affine sur S (a fortiori quasi-compact sur S).</p></li>\n  <li><span class=\"item-label\">b)</span> <p>G de type fini sur \\(S \\Leftrightarrow\\) G de présentation finie sur \\(S \\Leftrightarrow\\) pour tout \\(s \\in S\\), le type de G en s est donné par un groupe commutatif de type fini.</p></li>\n  <li><span class=\"item-label\">c)</span> <p>G fini sur \\(S \\Leftrightarrow\\) pour tout \\(s \\in S\\), le type de G en s est donné par un groupe commutatif fini \\(\\Leftrightarrow\\) (si S quasi-compact) G est de type fini sur S et est annulé par un entier \\(n &gt; 0\\).</p></li>\n  <li><span class=\"item-label\">c′)</span> <p>G entier sur \\(S \\Leftrightarrow\\) pour tout \\(s \\in S\\), le type de G en s est donné par un groupe commutatif de torsion.</p></li>\n  <li><span class=\"item-label\">d)</span> <p>G est le groupe unité \\(\\Leftrightarrow\\) pour tout \\(s \\in S\\), le type de G en s est donné par le groupe commutatif nul.</p></li>\n  <li><span class=\"item-label\">e)</span> <p>G est lisse sur \\(S \\Leftrightarrow\\) pour tout \\(s \\in S\\), le type de G en s est donné par un groupe commutatif de type fini dont le sous-groupe de torsion est d'ordre premier à la caractéristique de \\(\\kappa(s)\\).</p></li>\n  </ol>\n  <p>Ces énoncés résultent de <a class=\"ref\" href=\"#VIII.2.1\">VIII 2.1</a>, compte tenu que les propriétés dont il s'agit se descendent par morphismes fidèlement plats et quasi-compacts (cf. SGA 1, VIII ou EGA <span style=\"white-space:nowrap\">IV<sub>2</sub></span>, §2).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisant <a class=\"ref\" href=\"#VIII.3.5\">VIII 3.5</a>, on obtient de même :</p>"
+    },
+    {
+     "id": "IX.2.2",
+     "type": "proposition",
+     "label": "2.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Soit G un groupe de type multiplicatif et de type fini sur S, alors pour tout entier \\(n \\neq 0\\), le noyau \\({}_n G\\) de \\(n \\cdot \\mathrm{id}_G\\) est un groupe de type multiplicatif fini sur S.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.2.3",
+     "type": "proposition",
+     "label": "2.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soit G un groupe de type multiplicatif sur le préschéma S, opérant librement à droite sur le S-préschéma X affine sur S. Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>La relation d'équivalence définie par G dans X est \\(\\mathscr{M}\\)-effective (<a class=\"ref\" href=\"#IV.3.4\">IV 3.4</a>), de plus \\(Y = X/G\\) est affine sur S.</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Si de plus X est de présentation finie (resp. de type fini) sur S, il en est de même de Y.</p></li>\n  </ol>\n  <p>La première assertion résulte de <a class=\"ref\" href=\"#VIII.5.1\">VIII 5.1</a>, traitant le cas où G est diagonalisable, et de <a class=\"ref\" href=\"#IV.3.5.2\">IV 3.5.2</a>, qui permet de s'y ramener, compte tenu que les morphismes fidèlement plats et quasi-compacts \\(S' \\to S\\) sont des morphismes de descente <em>effective</em> pour la catégorie fibrée des schémas affines sur d'autres, i.e. pour tout Y′ affine sur S′, muni d'une donnée de descente relativement à \\(S' \\to S\\), cette donnée de descente est effective, i.e. Y′ provient d'un Y affine sur S, cf. SGA 1, VIII 2.1.</p>\n  <p>Pour la deuxième assertion on est ramené également au cas diagonalisable <a class=\"ref\" href=\"#VIII.5.8\">VIII 5.8</a>, car les conditions de finitude envisagées se descendent par morphismes fidèlement plats et quasi-compacts (SGA 1, VIII 3.3 et 3.6<sup class=\"footnote-ref\"><a id=\"IX-fn4ref\" href=\"#IX-fn4\">4</a></sup>).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Procédant comme dans VIII, corollaires 5.5 à 5.7, on tire de <a class=\"ref\" href=\"#IX.2.3\">2.3</a> :</p>"
+    },
+    {
+     "id": "IX.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\">\n  <p>Sous les conditions de <a class=\"ref\" href=\"#IX.2.3\">2.3</a>, le morphisme graphe\n  \\[\n  X \\underset{S}{\\times} G \\longrightarrow X \\underset{S}{\\times} X\n  \\]\n  est une immersion fermée. Pour toute section \\(\\sigma\\) de X sur S, le morphisme correspondant \\(G \\to X\\), \\(g \\mapsto \\sigma \\cdot g\\) est une immersion fermée.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier :</p>"
+    },
+    {
+     "id": "IX.2.5",
+     "type": "corollaire",
+     "label": "2.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : G \\to H\\) un monomorphisme de S-préschémas en groupes, avec G de type multiplicatif et H affine sur S. Alors u est une immersion fermée, \\(H/G = Y\\) existe et est affine sur S, enfin H est un fibré principal homogène sur Y de groupe \\(G_Y\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.2.6",
+     "type": "remarque",
+     "label": "2.6",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : G \\to H\\) un monomorphisme de S-préschémas en groupes, G étant de type multiplicatif et de type fini sur S, H étant de présentation finie sur S et séparé sur S. Alors on peut montrer que u est une immersion fermée, en utilisant <a class=\"ref\" href=\"#VIII.7.12\">VIII 7.12</a> (voir remarque <a class=\"ref\" href=\"#VIII.7.13\">VIII 7.13</a> b)).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.2.7",
+     "type": "proposition",
+     "label": "2.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(u : G \\to H\\) un homomorphisme de S-groupes de type multiplicatif, avec H de type fini sur S. Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(G' = \\mathrm{Ker}\\, u\\) est un S-groupe de type multiplicatif, la relation d'équivalence définie par G′ dans G est \\(\\mathscr{M}\\)-effective, donc (<a class=\"ref\" href=\"#IV.3.4\">IV 3.4</a>) u se factorise en\n  \\[\n  G \\longrightarrow G/G' = I \\longrightarrow H,\n  \\]\n  où \\(I \\to H\\) est un monomorphisme<sup class=\"footnote-ref\"><a id=\"IX-fn5ref\" href=\"#IX-fn5\">5</a></sup> de S-groupes ; I est de type multiplicatif, la relation d'équivalence dans H définie par I est \\(\\mathscr{M}\\)-effective, par suite \\(H' = H/I\\) existe, et de plus H′ est de type multiplicatif.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>H′ et I sont de type fini, et il en est de même de G′ si G l'est.</p></li>\n  </ol>\n  <p><em>Démonstration.</em> Procédant comme pour <a class=\"ref\" href=\"#IX.2.3\">2.3</a> on est ramené au cas où G et H sont diagonalisables, et alors <a class=\"ref\" href=\"#IX.2.7\">2.7</a> se réduit à <a class=\"ref\" href=\"#VIII.3.4\">VIII 3.4</a>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons les corollaires suivants :</p>"
+    },
+    {
+     "id": "IX.2.8",
+     "type": "corollaire",
+     "label": "2.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.2.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.8</span></div>\n  <div class=\"thm-body\">\n  <p>a) Soit S un préschéma. Alors la catégorie des S-groupes de type multiplicatif et de type fini est une catégorie abélienne.</p>\n  <p>b) Soit \\(u : G \\to H\\) un homomorphisme dans cette catégorie, pour que ce soit un monomorphisme (resp. un épimorphisme, resp. un isomorphisme) dans cette catégorie, il faut et il suffit que u soit un monomorphisme de préschémas (resp. que u soit fidèlement plat, resp. que u soit un isomorphisme de préschémas).</p>\n  <p>Il suffit de noter que le produit de deux S-groupes de type multiplicatif est encore de type multiplicatif (ce qui est immédiat), évidemment de type fini sur S si les deux facteurs le sont. Le reste de <a class=\"ref\" href=\"#IX.2.8\">2.8</a> résulte immédiatement de <a class=\"ref\" href=\"#IX.2.7\">2.7</a>, le détail est laissé au lecteur.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.2.9",
+     "type": "corollaire",
+     "label": "2.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.2.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(u : G \\to H\\) un homomorphisme de S-groupes de type multiplicatif et de type fini. Soit U l'ensemble des points \\(s \\in S\\) tels que \\(u_s : G_s \\to H_s\\) soit un monomorphisme (resp. fidèlement plat, resp. un isomorphisme). Alors U est à la fois ouvert et fermé, et l'homomorphisme induit \\(u_U : G_U \\to H_U\\) est un monomorphisme (resp. fidèlement plat, resp. un isomorphisme).</p>\n  <p>Soit P (resp. Q) le noyau (resp. conoyau) de u. Grâce à <a class=\"ref\" href=\"#IX.2.7\">2.7</a>, Q existe et P et Q sont de type multiplicatif, de plus la formation de P et de Q commute à tout changement de base \\(S' \\to S\\), en particulier à la formation des fibres. D'autre part, u est un monomorphisme (resp. fidèlement plat, resp. un isomorphisme) si et seulement si \\(P = 0\\) (resp. \\(Q = 0\\), resp. \\(P = Q = 0\\)). On est donc ramené, grâce à ces remarques, à vérifier ceci : si R est un S-groupe de type multiplicatif, alors l'ensemble U des \\(s \\in S\\) tels que \\(R_s = 0\\) est ouvert et fermé, et \\(R_U = 0\\). Or ceci est contenu dans la remarque <a class=\"ref\" href=\"#IX.1.4.1\">1.4.1</a> a).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.2.10",
+     "type": "corollaire",
+     "label": "2.10",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.2.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.10</span></div>\n  <div class=\"thm-body\">\n  <p>Soient G un S-groupe de type multiplicatif et de type fini, H et H′ deux sous-groupes de type multiplicatif.</p>\n  <p>a) \\(H'' = H \\cap H'\\) est un sous-groupe de type multiplicatif de G.</p>\n  <p>b) Soit U l'ensemble des \\(s \\in S\\) tels que \\(H_s \\subseteq H'_s\\) (resp. \\(H_s = H'_s\\)). Alors U est ouvert et fermé, et \\(H_U \\subseteq H'_U\\) (resp. \\(H_U = H'_U\\)).</p>\n  <p>Bien entendu, le signe intersection dans \\(H \\cap H'\\) désigne l'intersection au sens fonctoriel, i.e. \\(H \\times_G H'\\), qui est évidemment un sous-S-groupe de G ; de même le signe d'inclusion (resp. d'égalité) désigne la relation d'ordre (resp. l'égalité) entre sous-foncteurs de H (et pas l'inclusion (resp. l'égalité) pour les ensembles sous-jacents).</p>\n  <p>Appliquant d'abord <a class=\"ref\" href=\"#IX.2.7\">2.7</a> au morphisme d'inclusion \\(H \\to G\\), on trouve que H est de type fini ; de même H′ est de type fini. Il résulte alors de <a class=\"ref\" href=\"#IX.2.8\">2.8</a> que \\(H \\cap H'\\) est de type multiplicatif et de type fini (on notera que le foncteur canonique de la catégorie envisagée dans <a class=\"ref\" href=\"#IX.2.8\">2.8</a> dans la catégorie \\((\\mathrm{Sch})_{/S}\\) commute aux limites projectives finies). La formation de \\(H \\cap H'\\) commute à l'extension de la base, en particulier à la formation des fibres. D'autre part, \\(H \\subseteq H'\\) (resp. \\(H = H'\\)) équivaut à \\(H'' = H\\) (resp. \\(H'' = H\\) et \\(H'' = H'\\)). Considérons alors les homomorphismes canoniques \\(H'' \\to H\\) et \\(H'' \\to H'\\), alors U est l'ensemble des \\(s \\in S\\) tels que l'homomorphisme induit \\(H''_s \\to H_s\\) soit un isomorphisme (resp. tels que \\(H''_s \\to H_s\\) et \\(H''_s \\to H'_s\\) soient des isomorphismes). En vertu de <a class=\"ref\" href=\"#IX.2.9\">2.9</a>, il s'ensuit que U est ouvert et fermé, et que \\(H''_U \\to H_U\\) (resp. \\(H''_U \\to H_U\\) et \\(H''_U \\to H'_U\\)) sont des isomorphismes. D'où la conclusion voulue.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.2.11",
+     "type": "proposition",
+     "label": "2.11",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.2.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.11</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-groupe de type multiplicatif et de type fini sur S, H un sous-groupe de type multiplicatif de G, et \\(K = G/H\\) (qui est un groupe de type multiplicatif quotient de G).</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>Supposons G trivial i.e. diagonalisable. Alors il existe une partition de S en parties \\(S_i\\) ouvertes et fermées, telles que pour tout i, \\(H_{S_i}\\) et \\(K_{S_i}\\) soient diagonalisables. En particulier, si S est connexe, H et K sont diagonalisables.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Même énoncé que dans (i), en remplaçant « diagonalisable » par « isotrivial », pourvu que S soit connexe, ou localement connexe, ou quasi-compact.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>Supposons G localement trivial (resp. localement isotrivial, resp. quasi-isotrivial), alors il en est de même de K et de H.</p></li>\n  </ol>\n  <p><em>Démonstration.</em> (i) Par hypothèse on a \\(G = \\mathbf{D}_S(M)\\), où M est un groupe commutatif de type fini. Pour tout groupe quotient \\(M_i\\) de M, soit \\(H_i = \\mathbf{D}_S(M_i)\\) le sous-groupe diagonalisable correspondant de G (<a class=\"ref\" href=\"#VIII.3.1\">VIII 3.1</a>). Soit \\(S_i\\) l'ensemble des \\(s \\in S\\) tels que \\(H_s = (H_i)_s\\) ; en vertu de <a class=\"ref\" href=\"#IX.2.10\">2.10</a>, \\(S_i\\) est ouvert et fermé, et on a \\(H_{S_i} = (H_i)_{S_i}\\), donc \\(H_{S_i}\\) est diagonalisable, donc aussi \\(K_{S_i}\\) (<a class=\"ref\" href=\"#VIII.3.1\">VIII 3.1</a>). Évidemment les \\(S_i\\) sont deux à deux disjoints, je dis qu'ils recouvrent S. Cela résulte du fait que pour tout s, \\(H_s\\) est diagonalisable, comme sous-groupe du groupe diagonalisable \\(G_s\\) (cf. <a class=\"ref\" href=\"#IX.8.1\">8.1</a> plus loin<sup class=\"footnote-ref\"><a id=\"IX-fn6ref\" href=\"#IX-fn6\">6</a></sup>), donc \\(H_s\\) est de la forme \\(\\mathbf{D}_{\\kappa(s)}(M_i)\\), d'après <a class=\"ref\" href=\"#VIII.1.5\">VIII 1.5</a> et <a class=\"ref\" href=\"#VIII.3.2\">3.2 b)</a>. Se limitant à la famille des \\(S_i\\) non vides, la conclusion (i) apparaît.</p>\n  <p>(ii) Par hypothèse, il existe \\(S' \\to S\\) étale fini surjectif, tel que \\(G_{S'}\\) soit diagonalisable. Donc tout point de S′ a un voisinage U′, à la fois ouvert et fermé, tel que \\(H_{U'}\\) et \\(K_{U'}\\) soient diagonalisables. Alors l'image U de U′ dans S est à la fois ouverte et fermée, et \\(S' \\to S\\) induit encore un morphisme étale fini surjectif \\(U' \\to U\\), donc on voit que tout point s de S a un voisinage U ouvert et fermé tel que \\(H_U\\) et \\(K_U\\) soient isotriviaux. La conclusion (ii) en résulte aussitôt.</p>\n  <p>(iii) Résulte aussitôt de (i) et (ii) et des définitions. Noter d'ailleurs que le cas « quasi-isotrivial » résultera aussi du fait plus général que « type fini \\(\\Rightarrow\\) quasi-isotrivial », annoncé dans <a class=\"ref\" href=\"#IX.1.2\">1.2</a> (cf. <a class=\"ref\" href=\"#X.4.5\">X 4.5</a>).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn3",
+     "number": "3",
+     "html": "N.D.E. : On a ajouté cette définition, qui apparaît dans les propositions 2.3 et 2.7."
+    },
+    {
+     "id": "IX-fn4",
+     "number": "4",
+     "html": "N.D.E. : cf. aussi V, 9.1 ou EGA <span style=\"white-space:nowrap\">IV<sub>2</sub></span>, 2.7.1."
+    },
+    {
+     "id": "IX-fn5",
+     "number": "5",
+     "html": "N.D.E. : et même une immersion fermée."
+    },
+    {
+     "id": "IX-fn6",
+     "number": "6",
+     "html": "N.D.E. : On a corrigé la référence erronée à IV 4.7.5. Noter que le n° 8 du présent exposé est indépendant des n<sup>os</sup> 3 à 7."
+    }
+   ]
+  },
+  {
+   "id": "IX-3",
+   "title": "3. Propriétés infinitésimales : théorèmes de relèvement et de conjugaison",
+   "blocks": [
+    {
+     "id": "IX.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.3\">3. Propriétés infinitésimales : théorèmes de relèvement et de conjugaison</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les propriétés infinitésimales fondamentales des groupes de type multiplicatif découlent du théorème suivant :</p>"
+    },
+    {
+     "id": "IX.3.1",
+     "type": "theoreme",
+     "label": "3.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un schéma affine, H un S-groupe de type multiplicatif, \\(\\mathscr{F}\\) un faisceau quasi-cohérent sur S, sur lequel H opère (<a class=\"ref\" href=\"#I.4.7\">I 4.7</a>). Alors on a\n  \\[\n  \\mathrm{H}^i(H, \\mathscr{F}) = 0 \\qquad \\text{pour} \\quad i &gt; 0,\n  \\]\n  où \\(\\mathrm{H}^i\\) est la cohomologie de Hochschild étudiée dans Exp. I, §5.</p>\n  <p>En effet, d'après <em>loc. cit.</em>, 5.3, la cohomologie de Hochschild s'explicite, en termes des anneaux affines A de S et B de G, et du module M sur A définissant \\(\\mathscr{F}\\), comme cohomologie d'un complexe de A-modules \\(\\mathrm{C}^{\\bullet}(H,M)\\), dont la formation commute à tout changement de base \\(A \\to A'\\). Par suite, pour un changement de base \\(A \\to A'\\) avec A′ plat sur A, on aura\n  \\[\n  \\mathrm{H}^i(H', \\mathscr{F}') = \\mathrm{H}^i(H,\\mathscr{F}) \\otimes_A A',\n  \\]\n  et par suite, si on suppose même A′ fidèlement plat sur A, pour prouver que \\(\\mathrm{H}^i(H,\\mathscr{F})\\) est nul, il suffit de prouver qu'il en est ainsi de \\(\\mathrm{H}^i(H',\\mathscr{F}')\\). Cette remarque nous ramène à vérifier <a class=\"ref\" href=\"#IX.3.1\">3.1</a> dans le cas où G est diagonalisable ; dans ce cas cela a été prouvé dans <a class=\"ref\" href=\"#I.5.3.3\">I 5.3.3</a>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisant les résultats de l'Exposé III, nous allons tirer de <a class=\"ref\" href=\"#IX.3.1\">3.1</a> diverses conséquences de nature géométrique :</p>"
+    },
+    {
+     "id": "IX.3.2",
+     "type": "theoreme",
+     "label": "3.2",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un schéma affine, \\(S_0\\) un sous-schéma affine défini par un idéal \\(\\mathscr{J}\\), H un groupe de type multiplicatif sur S, G un préschéma en groupes quelconque sur S, \\(u, v : H \\to G\\) deux homomorphismes de groupes, \\(u_0, v_0 : H_0 \\to G_0\\) les homomorphismes déduits de u, v par le changement de base \\(S_0 \\to S\\). Si \\(\\mathscr{J}^2 = 0\\) et \\(u_0 = v_0\\), alors il existe un \\(g \\in G(S)\\) tel que \\(v = \\mathrm{int}(g) \\circ u\\) et \\(g_0 = e\\).</p>\n  <p>Cela résulte de <a class=\"ref\" href=\"#III.2.1\">III 2.1 (ii)</a>, et de <a class=\"ref\" href=\"#IX.3.1\">3.1</a> (nullité de \\(\\mathrm{H}^1\\)).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.3.3",
+     "type": "corollaire",
+     "label": "3.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\">\n  <p>Sous les conditions préliminaires de <a class=\"ref\" href=\"#IX.3.2\">3.2</a> supposons de plus G lisse sur S, mais en revanche supposons seulement \\(\\mathscr{J}\\) nilpotent (pas nécessairement de carré nul). S'il existe \\(g_0 \\in G_0(S_0)\\) tel que \\(v_0 = \\mathrm{int}(g_0) \\circ u_0\\), alors \\(g_0\\) se relève en un \\(g \\in G(S)\\) tel que \\(v = \\mathrm{int}(g) \\circ u\\).</p>\n  <p>Par récurrence sur l'entier n tel que \\(\\mathscr{J}^n = 0\\), on est ramené au cas où \\(\\mathscr{J}\\) est de carré nul. De plus, G étant lisse sur S, on peut relever \\(g_0\\) en un élément \\(g'\\) de G(S). Quitte à remplacer v par \\(v' = \\mathrm{int}(g') \\circ u\\), on est alors ramené à la situation <a class=\"ref\" href=\"#IX.3.2\">3.2</a>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.3.4",
+     "type": "corollaire",
+     "label": "3.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\">\n  <p>Sous les conditions préliminaires de <a class=\"ref\" href=\"#IX.3.2\">3.2</a>, avec \\(\\mathscr{J}\\) nilpotent, supposons de plus u central (par exemple G commutatif). Alors \\(u_0 = v_0\\) implique \\(u = v\\).</p>\n  <p>En effet, la réduction au cas \\(\\mathscr{J}\\) de carré nul est encore immédiate, et alors il suffit d'appliquer <a class=\"ref\" href=\"#IX.3.2\">3.2</a>. En particulier :</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.3.5",
+     "type": "corollaire",
+     "label": "3.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Soient S, \\(S_0\\), H, G comme dans <a class=\"ref\" href=\"#IX.3.2\">3.2</a>, avec \\(\\mathscr{J}\\) nilpotent. Soit \\(u : H \\to G\\) un homomorphisme de S-groupes, tel que \\(u_0 : H_0 \\to G_0\\) soit l'homomorphisme unité, alors u est l'homomorphisme unité.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.3.6",
+     "type": "theoreme",
+     "label": "3.6",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un schéma affine, \\(S_0\\) un sous-schéma défini par un idéal \\(\\mathscr{J}\\) nilpotent, H un groupe de type multiplicatif sur S, G un préschéma en groupes lisse sur S, \\(u_0 : H_0 \\to G_0\\) un homomorphisme des \\(S_0\\)-groupes déduits par le changement de base \\(S_0 \\to S\\).</p>\n  <p>Alors il existe un homomorphisme \\(u : H \\to G\\) de S-groupes qui relève \\(u_0\\) (et par <a class=\"ref\" href=\"#IX.3.3\">3.3</a> deux tels relèvements u, u′ sont conjugués par un élément de G(S) se réduisant suivant l'élément unité de \\(G(S_0)\\)).</p>\n  <p>Cela résulte de <a class=\"ref\" href=\"#III.2.1\">III 2.1</a> et 2.3, et de <a class=\"ref\" href=\"#IX.3.1\">3.1</a> (nullité de \\(\\mathrm{H}^2\\) pour l'existence du relèvement de \\(u_0\\), nullité du \\(\\mathrm{H}^1\\) pour l'unicité à conjugaison près).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut prouver de même les variantes suivantes de <a class=\"ref\" href=\"#IX.3.2\">3.2</a> à <a class=\"ref\" href=\"#IX.3.6\">3.6</a> (qui en fait entraînent les énoncés précédents, en les appliquant aux sous-groupes graphes des homomorphismes envisagés dans 3.2 à 3.6) :</p>"
+    },
+    {
+     "id": "IX.3.2bis",
+     "type": "theoreme",
+     "label": "3.2 bis",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.3.2bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.2 bis</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma affine, \\(S_0\\) un sous-schéma défini par un idéal \\(\\mathscr{J}\\), G un S-préschéma en groupes, H, H′ des sous-préschémas en groupes, de type multiplicatif, \\(G_0, H_0, H'_0\\) les groupes sur \\(S_0\\) déduits par le changement de base \\(S_0 \\to S\\). Si \\(\\mathscr{J}^2 = 0\\) et \\(H_0 = H'_0\\), alors il existe \\(g \\in G(S)\\) tel que \\(H' = \\mathrm{int}(g)(H)\\) et \\(g_0 = e\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.3.3bis",
+     "type": "corollaire",
+     "label": "3.3 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.3.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.3 bis</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions préliminaires de <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a>, supposons de plus G lisse sur S, et \\(\\mathscr{J}\\) nilpotent (pas nécessairement de carré nul). Soit \\(g_0 \\in G_0(S_0)\\) tel que \\(H'_0 = \\mathrm{int}(g_0)(H_0)\\), alors \\(g_0\\) se relève en \\(g \\in G(S)\\) tel que \\(H' = \\mathrm{int}(g)(H)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.3.4bis",
+     "type": "corollaire",
+     "label": "3.4 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.3.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.4 bis</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions préliminaires de <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a>, supposons \\(\\mathscr{J}\\) nilpotent, H central (par exemple G commutatif). Alors \\(H_0 = H'_0\\) implique \\(H = H'\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.3.6bis",
+     "type": "theoreme",
+     "label": "3.6 bis",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.3.6bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.6 bis</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un schéma affine, \\(S_0\\) un sous-schéma défini par un idéal \\(\\mathscr{J}\\) nilpotent, G un S-préschéma en groupes lisse, \\(H_0\\) un sous-préschéma en groupes de \\(G_0 = G \\times_S S_0\\), de type multiplicatif. Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(a)</span> <p>Il existe un sous-préschéma en groupes H de G, plat sur S, tel que \\(H \\times_S S_0 = H_0\\).</p></li>\n  <li><span class=\"item-label\">(b)</span> <p>Un tel H est nécessairement de type multiplicatif.</p></li>\n  <li><span class=\"item-label\">(c)</span> <p>Enfin, d'après <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a>, deux tels relèvements H, H′ de \\(H_0\\) sont conjugués par un élément \\(g \\in G(S)\\) se réduisant suivant l'élément unité de \\(G(S_0)\\).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Montrons comment on peut prouver <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a> (dont <a class=\"ref\" href=\"#IX.3.3bis\">3.3 bis</a> et <a class=\"ref\" href=\"#IX.3.4bis\">3.4 bis</a> sont une conséquence immédiate) et l'assertion (a) de <a class=\"ref\" href=\"#IX.3.6bis\">3.6 bis</a>. Cette dernière résulte de <a class=\"ref\" href=\"#IX.3.1\">3.1</a> (nullité du \\(\\mathrm{H}^2\\)) et de III 4.37 (ii). De même <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a> résulte de <a class=\"ref\" href=\"#IX.3.1\">3.1</a> (nullité du \\(\\mathrm{H}^1\\)) et de III 4.37 (i), du moins lorsque G et H sont lisses sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais en utilisant les résultats de l'exposé suivant, on peut déduire très simplement <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a> et <a class=\"ref\" href=\"#IX.3.6bis\">3.6 bis</a>, sous la forme générale énoncée ici, de <a class=\"ref\" href=\"#IX.3.2\">3.2</a> resp. <a class=\"ref\" href=\"#IX.3.6\">3.6</a>. Pour 3.2 bis, il suffit en effet de noter qu'en vertu de <a class=\"ref\" href=\"#X.2.1\">X 2.1</a>, H et H′ sont isomorphes, ce qui nous ramène à 3.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour 3.6 bis, on note que \\(H_0\\) est nécessairement de type fini sur \\(S_0\\) : <sup class=\"footnote-ref\"><a id=\"IX-fn7ref\" href=\"#IX-fn7\">7</a></sup> en effet, comme sous-préschéma de \\(G_0\\), qui est lisse sur \\(S_0\\), \\(H_0\\) est localement de type fini sur \\(S_0\\) ; or, d'après <a class=\"ref\" href=\"#IX.2.1\">2.1 a)</a>, \\(H_0\\) est affine sur \\(S_0\\), donc est de type fini sur \\(S_0\\). Alors, d'après <a class=\"ref\" href=\"#X.4.5\">X 4.5</a>, \\(H_0\\) est quasi-isotrivial, donc provient, d'après <a class=\"ref\" href=\"#X.2.1\">X 2.1</a>, d'un groupe de type multiplicatif H sur S.<sup class=\"footnote-ref\"><a id=\"IX-fn8ref\" href=\"#IX-fn8\">8</a></sup> Alors, d'après <a class=\"ref\" href=\"#IX.3.6\">3.6</a>, il existe un homomorphisme de S-groupes \\(u : H \\to G\\) qui relève l'immersion \\(H_0 \\hookrightarrow G_0\\) ; comme H et \\(H_0\\) (resp. G et \\(G_0\\)) ont même espace topologique sous-jacent, et comme, pour tout \\(h \\in H\\), le morphisme \\(\\mathscr{O}_{G,u(h)} \\to \\mathscr{O}_{H,h}\\) est surjectif (car il l'est après réduction modulo \\(\\mathscr{J}\\), qui est nilpotent), u est également une immersion (cf. EGA I, 4.2.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, pour <em>tout</em> relèvement H de \\(H_0\\) en un sous-groupe plat de G, H est nécessairement de type multiplicatif d'après X 2.3<sup class=\"footnote-ref\"><a id=\"IX-fn9ref\" href=\"#IX-fn9\">9</a></sup>, ce qui prouve aussi l'assertion (b) de 3.6 bis. (Le lecteur vérifiera que les résultats 3.2 bis à 3.6 bis ne sont pas utilisés dans l'Exposé X, donc qu'il n'y a pas de cercle vicieux !).</p>"
+    },
+    {
+     "id": "IX.3.8",
+     "type": "proposition",
+     "label": "3.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\">\n  <p><sup class=\"footnote-ref\"><a id=\"IX-fn10ref\" href=\"#IX-fn10\">10</a></sup> Soient S un préschéma, \\(S_0\\) un sous-préschéma fermé défini par un idéal \\(\\mathscr{J}\\) localement nilpotent, G un S-groupe de type multiplicatif, X un S-préschéma localement de présentation finie. On suppose que G opère sur X, de telle façon que \\(G_0 = G \\times_S S_0\\) opère trivialement sur \\(X_0 = X \\times_S S_0\\). Sous ces conditions, G opère trivialement sur X.</p>\n  <p>La démonstration est celle de III 2.4 b) ; on peut aussi se ramener à <em>loc. cit.</em> en notant que <a class=\"ref\" href=\"#IX.3.8\">3.8</a> se ramène aussitôt au cas où G est diagonalisable, ce qui est le cas envisagé dans <em>loc. cit.</em></p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.3.9",
+     "type": "corollaire",
+     "label": "3.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.3.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.9</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S, \\(S_0\\) comme ci-dessus, et \\(u : G \\to H\\) un homomorphisme de S-groupes, avec G de type multiplicatif et H localement de présentation finie sur S. On suppose que l'homomorphisme \\(u_0 : G_0 \\to H_0\\) déduit par changement de base \\(S_0 \\to S\\) est central. Alors u est central.</p>\n  <p>En effet, il suffit d'appliquer <a class=\"ref\" href=\"#IX.3.8\">3.8</a> en faisant \\(X = H\\), et faisant opérer G sur H par \\((g,h) \\mapsto \\mathrm{int}(u(g)) \\cdot h = u(g)\\, h\\, u(g)^{-1}\\).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn7",
+     "number": "7",
+     "html": "N.D.E. : L'original indiquait : « par 2.1 b), car ses fibres le sont ». Les éditeurs n'ont pas compris cet argument, et lui ont substitué celui qui suit."
+    },
+    {
+     "id": "IX-fn8",
+     "number": "8",
+     "html": "N.D.E. : On a détaillé la phrase qui suit."
+    },
+    {
+     "id": "IX-fn9",
+     "number": "9",
+     "html": "N.D.E. : On notera que X 2.3 dépend de façon essentielle du théorème 3.6 du présent exposé."
+    },
+    {
+     "id": "IX-fn10",
+     "number": "10",
+     "html": "N.D.E. : On a conservé la numérotation de l'original : il n'y a pas de n° 3.7."
+    }
+   ]
+  },
+  {
+   "id": "IX-4",
+   "title": "4. Le théorème de densité",
+   "blocks": [
+    {
+     "id": "IX.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.4\">4. Le théorème de densité</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce théorème (cf. <a class=\"ref\" href=\"#IX.4.7\">4.7</a> ci-dessous)<sup class=\"footnote-ref\"><a id=\"IX-fn-s1ref\" href=\"#IX-fn-s1\">*</a></sup>, joint au théorème<sup class=\"footnote-ref\"><a id=\"IX-fn11ref\" href=\"#IX-fn11\">11</a></sup> du N°7, sera l'outil essentiel dans le présent exposé et les deux suivants, pour passer des propriétés infinitésimales des groupes de type multiplicatif, qu'on vient de développer, aux propriétés « finies ».</p>"
+    },
+    {
+     "id": "IX.4.1",
+     "type": "definition",
+     "label": "4.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IX.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soit X un préschéma. On dit qu'une famille \\((Z_i)_{i \\in I}\\) de sous-préschémas de X est <em>schématiquement dense</em> si pour tout ouvert U de X, et tout sous-préschéma fermé U′ de U qui majore les \\(Z_i \\cap U\\), on a \\(U' = U\\).</p>\n  <p>On dit qu'un sous-préschéma Z de X est schématiquement dense dans X, s'il en est ainsi de la famille réduite à Z.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit immédiatement (cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.10.1) que la définition équivaut à dire que pour tout ouvert U de X, toute section \\(f\\) de \\(\\mathscr{O}_U\\) qui est nulle sur les \\(Z_i \\cap U\\), est nulle, ce qui signifie aussi que l'intersection des noyaux des homomorphismes canoniques \\(u_i : \\mathscr{O}_X \\to (v_i)_*(\\mathscr{O}_{Z_i})\\) est nulle, où \\(v_i : Z_i \\to X\\) est l'immersion canonique.<sup class=\"footnote-ref\"><a id=\"IX-fn12ref\" href=\"#IX-fn12\">12</a></sup></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque X est au-dessus d'un préschéma S, ceci équivaut encore à dire que pour tout ouvert U de X et tout couple \\((u,v)\\) de morphismes de U dans un S-préschéma Y séparé sur S, qui coïncident sur les \\(Z_i \\cap U\\), on a \\(u = v\\). (En effet, la relation \\(u = v\\) équivaut à la relation \\(U' = U\\), où U′ est l'image inverse de la diagonale de \\(Y \\times_S Y\\) par le S-morphisme \\(X \\to Y \\times_S Y\\) défini par \\((u,v)\\) ; cette diagonale est un sous-préschéma fermé de \\(Y \\times_S Y\\) donc U′ est un sous-préschéma fermé de U, majorant les \\(Z_i \\cap U\\) d'après l'hypothèse sur \\((u,v)\\), donc si la famille \\((Z_i)\\) est schématiquement dense, on aura \\(U' = U\\) d'où \\(u = v\\) ; on voit l'implication inverse en prenant simplement \\(Y = \\mathrm{Spec}\\, \\mathscr{O}_S[T]\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avec la terminologie introduite dans EGA I, fin du N°9.5, dire que le sous-préschéma Z de X est schématiquement dense, signifie aussi que X est identique au sous-préschéma adhérence de Z dans X.</p>"
+    },
+    {
+     "id": "IX.4.2",
+     "type": "lemme",
+     "label": "4.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient X un S-préschéma plat, \\((Z_i)_{i \\in I}\\) une famille de sous-préschémas de X, plats sur S. Soit \\(S_0\\) sous-préschéma de S, défini par un idéal \\(\\mathscr{J}\\) nilpotent ; on suppose les modules \\(\\mathscr{J}^n/\\mathscr{J}^{n+1}\\) localement libres sur \\(S_0\\).</p>\n  <p>Soient \\(X_0, Z_{i,0}\\) déduits de \\(X, Z_i\\) par le changement de base \\(S_0 \\to S\\). Alors, si la famille \\((Z_{i,0})_{i \\in I}\\) est schématiquement dense dans \\(X_0\\), la famille \\((Z_i)_{i \\in I}\\) l'est dans X.</p>\n  <p>Supposons \\(\\mathscr{J}^{n+1} = 0\\) (où \\(n \\geqslant 0\\)), raisonnons par récurrence sur n, l'assertion étant triviale pour \\(n = 0\\). Définissant les \\(S_m, X_m, Z_{i,m}\\) par réduction modulo \\(\\mathscr{J}^{m+1}\\) comme à l'accoutumée, l'hypothèse de récurrence implique déjà que \\((Z_{i,n-1})_{i \\in I}\\) est schématiquement dense dans \\(X_{n-1}\\). Quitte à remplacer X par un ouvert induit, nous sommes ramenés à prouver que toute section \\(f\\) de \\(\\mathscr{O}_X\\) qui s'annule sur les \\(Z_i\\) est nulle.</p>\n  <p>Or la section \\(f_{n-1}\\) de \\(\\mathscr{O}_{X_{n-1}} = \\mathscr{O}_X/\\mathscr{J}^n\\mathscr{O}_X\\) définie par \\(f\\) s'annule sur les \\(Z_{i,n-1}\\), donc est nulle, donc \\(f\\) est une section de \\(\\mathscr{J}^n \\mathscr{O}_X\\). Comme X est plat sur S, on a\n  \\[\n  \\mathscr{J}^n \\mathscr{O}_X \\xleftarrow{\\ \\sim\\ } E \\otimes_{\\mathscr{O}_{S_0}} \\mathscr{O}_{X_0}, \\qquad \\text{où } E = \\mathscr{J}^n = \\mathscr{J}^n/\\mathscr{J}^{n+1}.\n  \\]\n  De même, comme chaque \\(Z_i\\) est plat sur S, la restriction \\(f_i\\) de \\(f\\) à \\(Z_i\\) peut être regardée comme une section de :\n  \\[\n  \\mathscr{J}^n \\mathscr{O}_{Z_i} \\xleftarrow{\\ \\sim\\ } E \\otimes_{\\mathscr{O}_{S_0}} \\mathscr{O}_{Z_{i,0}}.\n  \\]\n  Par hypothèse, les \\(f_i\\) sont nuls. Or, E est localement libre par hypothèse, donc il en est de même de \\(F = E \\otimes_{\\mathscr{O}_{S_0}} \\mathscr{O}_{X_0}\\). Donc \\(f\\) est une section du module localement libre F sur \\(X_0\\), telle que pour tout i sa restriction à \\(Z_{i,0}\\) soit nulle. Comme \\((Z_{i,0})_{i \\in I}\\) est schématiquement dense dans \\(X_0\\), il s'ensuit aussitôt que \\(f\\) est nulle. C.Q.F.D.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.3",
+     "type": "corollaire",
+     "label": "4.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient X un S-préschéma localement noethérien et plat sur S, \\((Z_i)_{i \\in I}\\) une famille de sous-préschémas de X plats sur S. On suppose que pour tout \\(s \\in S\\), la famille \\((Z_{i,s})_{i \\in I}\\) des fibres en s est schématiquement dense dans \\(X_s\\). Alors la famille \\((Z_i)_{i \\in I}\\) est schématiquement dense dans X.</p>\n  <p>Quitte à remplacer X par un ouvert induit, on est ramené à prouver que toute section \\(f\\) de \\(\\mathscr{O}_X\\) dont la restriction aux \\(Z_i\\) est nulle, est nulle.<sup class=\"footnote-ref\"><a id=\"IX-fn13ref\" href=\"#IX-fn13\">13</a></sup> Pour ceci, il suffit de prouver que pour tout \\(x \\in X\\), l'image de \\(f\\) dans \\(\\mathscr{O}_{X,x}\\) est nulle. Notons \\(\\mathfrak{m}_x\\) l'idéal maximal de \\(\\mathscr{O}_{X,x}\\), et \\(\\mathfrak{m}_s\\) celui de \\(\\mathscr{O}_{S,s}\\), où s est l'image de x dans S. Comme \\(\\mathscr{O}_{X,x}\\) est noethérien, on a \\(\\bigcap_{n \\in \\mathbb{N}} \\mathfrak{m}_x^n = 0\\) d'où, a fortiori, \\(\\bigcap_{n \\in \\mathbb{N}} \\mathscr{O}_{X,x}\\mathfrak{m}_s^n = 0\\).</p>\n  <p>Donc, il suffit de montrer que, pour tout entier n, la section induite par \\(f\\) sur \\(X \\times_S \\mathrm{Spec}(\\mathscr{O}_{S,s}/\\mathfrak{m}_s^{n+1})\\) est nulle. Par hypothèse, la famille des fibres \\(Z_{i,s} = Z_i \\otimes_{\\mathscr{O}_{S,s}} \\kappa(s)\\) est schématiquement dense dans la fibre \\(X_s = X \\otimes_{\\mathscr{O}_{S,s}} \\kappa(s)\\). Cela nous ramène donc au cas où S est le spectre d'un anneau local dont l'idéal maximal J est nilpotent, \\(S_0 = \\mathrm{Spec}\\,\\kappa(s)\\), et les hypothèses de <a class=\"ref\" href=\"#IX.4.2\">4.2</a> sont vérifiées, d'où la conclusion.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.4",
+     "type": "lemme",
+     "label": "4.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma localement noethérien, X un S-préschéma localement noethérien et plat sur S, \\((Z_i)_{i \\in I}\\) une famille de sous-préschémas de X plats sur S. On suppose que pour tout \\(s \\in S\\), la famille \\((Z_{i,s})_{i \\in I}\\) des fibres en s est schématiquement dense dans \\(X_s\\).</p>\n  <p>Alors, pour tout changement de base \\(S' \\to S\\) (S′ pas nécessairement localement noethérien), la famille \\((Z'_{i})_{i \\in I}\\) est schématiquement dense dans X′ (c.-à-d., la famille \\((Z_i)_{i \\in I}\\) est <em>universellement</em> schématiquement dense dans X relativement à S, cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, Déf. 11.10.8).</p>\n  <p><em>Démonstration.</em><sup class=\"footnote-ref\"><a id=\"IX-fn14ref\" href=\"#IX-fn14\">14</a></sup> Soit \\(f'\\) une section de \\(\\mathscr{O}_{X'}\\) sur un ouvert U′ de X′, qui s'annule sur les \\(Z'_i\\) ; il faut montrer que \\(f'\\) est nulle. Soit \\(s' \\in S'\\), il suffit de prouver que \\(f'\\) est nulle en tous les points de U′ au-dessus de \\(s'\\). Soit s l'image de \\(s'\\) dans S ; quitte à remplacer S, S′ par les spectres des anneaux locaux en s, \\(s'\\), on peut supposer S, S′ locaux, et que s, \\(s'\\) en sont les points fermés. On peut de plus supposer X affine, donc\n  \\[\n  S = \\mathrm{Spec}(A), \\qquad S' = \\mathrm{Spec}(A'), \\qquad X = \\mathrm{Spec}(B), \\qquad X' = \\mathrm{Spec}(B'), \\qquad B' = B \\otimes_A A'\n  \\]\n  où A, A′ sont locaux, \\(A \\to A'\\) est un homomorphisme <em>local</em>, et A, B sont noethériens. On peut aussi supposer U′ affine, de la forme \\(X'_{g'}\\), avec \\(g' \\in B'\\). Pour toute sous-A-algèbre \\(A''\\) de A′, on considère \\(S'' = \\mathrm{Spec}(A'')\\) et \\(X'', Z^{i\\prime\\prime}_n\\) déduits de X, \\(Z^i\\) par le changement de base \\(S'' \\to S\\), d'où le diagramme :</p>\n  \\[\n  \\xymatrix{\n  Z^i \\ar[d] &amp; Z_n^{i\\prime\\prime} \\ar[l] \\ar[d] &amp; Z_n^{i\\prime} \\ar[l] \\ar[d] \\\\\n  X \\ar[d] &amp; X'' \\ar[l] \\ar[d] &amp; X' \\ar[l] \\ar[d] \\\\\n  S &amp; S'' \\ar[l] &amp; S' \\ar[l]\n  }\n  \\]\n  <p>Nous nous limiterons par la suite aux A″ qui sont localisées de sous-A-algèbres de type fini \\(A''_1\\) de A′ en \\(\\mathfrak{m}' \\cap A''_1\\) (où \\(\\mathfrak{m}'\\) est l'idéal maximal de A′), de sorte que les homomorphismes \\(A \\to A'' \\to A'\\) sont locaux. Notons que ces A″ forment une famille filtrante croissante de sous-algèbres dont la réunion est A′, donc leur limite inductive est également A′. On a donc de même \\(B' = \\varinjlim_{A''} B \\otimes_A A''\\). Donc, il existe un A″ et un élément \\(g'' \\in B'' = B \\otimes_A A''\\), dont l'image dans B′ est \\(g'\\).<sup class=\"footnote-ref\"><a id=\"IX-fn15ref\" href=\"#IX-fn15\">15</a></sup></p>\n  <p>D'après le lemme <a class=\"ref\" href=\"#IX.4.5\">4.5</a> ci-dessous, la propriété que la famille des fibres \\((Z_{i,s})_{i \\in I}\\) soit schématiquement dense dans \\(X_s\\) est préservée par tout changement de base \\(S'' \\to S\\) ; par conséquent, comme chaque S″ est localement noethérien, si on remplace S par un S″ approprié, et X, \\(Z_i\\) par \\(X'', Z''_i\\), les hypothèses de 4.4 seront préservées.</p>\n  <p>Donc, quitte à remplacer S par S″ (et X, \\(Z_i\\) par \\(X'', Z''_i\\)) on peut supposer que \\(g'\\) provient de \\(g \\in B\\). Quitte à remplacer X par l'ouvert \\(X_g = U\\), on peut donc supposer que \\(U' = X'\\). On voit de même qu'on peut supposer que \\(f'\\) provient d'une section \\(f\\) de \\(\\mathscr{O}_X\\) sur X.</p>\n  <p>Soit \\(Y = V(f)\\) le sous-schéma de X défini par \\(f\\), et \\(Y_i = Z_i \\times_X Y\\) son intersection avec \\(Z_i\\), qui est un sous-schéma fermé de \\(Z_i\\), égal à \\(V(f_i)\\), où \\(f_i\\) est la section de \\(\\mathscr{O}_{Z_i}\\) induite par \\(f\\). Dénotant par \\(Y', Y'_i\\) les S′-schémas déduits des précédents par changement de base, on aura encore\n  \\[\n  Y' = V(f'), \\qquad Y'_i = Z'_i \\times_{X'} Y' = V(f'_i),\n  \\]\n  et on a les relations analogues pour \\(Y'', Y''_i\\). L'hypothèse que \\(f'\\) s'annule sur les \\(Z'_i\\) s'exprime par les relations \\(Y'_i = Z'_i\\) pour tout i.<sup class=\"footnote-ref\"><a id=\"IX-fn16ref\" href=\"#IX-fn16\">16</a></sup></p>\n  <p>Soit \\(\\mathfrak{m}\\) l'idéal maximal de A. Pour tout entier \\(n \\geqslant 0\\), introduisons le sous-schéma \\(S_n = \\mathrm{Spec}(A/\\mathfrak{m}^{n+1})\\) de S, et les schémas \\(X_n, Y_n, Z_{i,n}, Y_{i,n}\\) déduits de \\(X, Y, Z_i, Y_i\\) par le changement de base \\(S_n \\to S\\). De façon générale, pour tout S-préschéma P, on posera \\(P_n = P \\times_S S_n\\). Pour tout n, et \\(i \\in I\\), considérons le foncteur\n  \\[\n  \\mathrm{F}^i_n = \\prod_{Z^i_n/S_n} Y^i_n/Z^i_n \\ : \\ (\\mathrm{Sch})^{\\circ}_{/S_n} \\longrightarrow (\\mathrm{Ens})\n  \\]\n  </p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>défini par (cf. <a class=\"ref\" href=\"#VIII.6.4\">VIII, 6.4</a>) : pour tout P sur \\(S_n\\),\n\\[\n\\mathrm{F}^i_n(P) = \\Gamma\\big((Y^i_n)_P/(Z^i_n)_P\\big) =\n\\begin{cases}\n\\varnothing &amp; \\text{si } (Y^i_n)_P \\neq (Z^i_n)_P; \\\\\n\\{\\mathrm{id}\\} &amp; \\text{si } (Y^i_n)_P = (Z^i_n)_P.\n\\end{cases}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(S_n\\) est local artinien, et \\(Z^i_n\\) plat donc essentiellement libre sur \\(S_n\\), alors, d'après <a class=\"ref\" href=\"#VIII.6.4\">VIII, 6.4</a>, chaque \\(\\mathrm{F}^i_n\\) est représentable par un sous-préschéma fermé \\(\\mathrm{T}^i_n\\) de \\(S_n\\).<sup class=\"footnote-ref\"><a id=\"IX-fn17ref\" href=\"#IX-fn17\">17</a></sup> Le complété \\(\\widehat{A}\\) de l'anneau local A est noethérien car A l'est, et c'est la limite projective des \\(A_n\\). Notons \\(\\mathrm{K}^i_n\\) l'idéal de \\(A_n = A/\\mathfrak{m}^{n+1}\\) définissant \\(\\mathrm{T}^i_n\\) et \\(\\mathrm{K}^i\\) la limite projective des \\(\\mathrm{K}^i_n\\) ; c'est un idéal de \\(\\widehat{A}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour i fixé, \\(m \\geqslant n\\) et tout \\(S_n\\)-préschéma P, on a\n\\[\n(Y^i_n)_P = Y^i \\times_S S_n \\times_{S_n} P = Y^i \\times_S P = (Y^i_m)_P,\n\\]\net de même \\((Z^i_n)_P = (Z^i_m)_P\\) ; il en résulte que \\(\\mathrm{F}^i_n\\) est la restriction \\(\\mathrm{F}^i_m \\times_{S_m} S_n\\) de \\(\\mathrm{F}^i_m\\) à \\((\\mathrm{Sch})_{/S_n}\\), d'où \\(\\mathrm{T}^i_n = \\mathrm{T}^i_m \\times_{S_m} S_n\\). On a donc un diagramme commutatif à lignes exactes :\n\\[\n\\xymatrix{\n0 \\ar[r] &amp; \\mathrm{K}^i_m \\ar[r] \\ar@{-&gt;&gt;}[d] &amp; A_m \\ar[r] \\ar@{-&gt;&gt;}[d] &amp; \\mathscr{O}(\\mathrm{T}^i_m) \\ar[r] \\ar@{-&gt;&gt;}[d] &amp; 0 \\\\\n0 \\ar[r] &amp; \\mathrm{K}^i_n \\ar[r] &amp; A_n \\ar[r] &amp; \\mathscr{O}(\\mathrm{T}^i_n) \\ar[r] &amp; 0\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où toutes les flèches verticales sont <em>surjectives</em>. Ceci a les conséquences suivantes : d'une part, le système projectif \\((\\mathscr{O}(\\mathrm{T}^i_n))_{n \\in \\mathbb{N}}\\) vérifie la condition de Mittag-Leffler, et donc la limite projective des \\(\\mathscr{O}(\\mathrm{T}^i_n)\\) s'identifie à l'anneau topologique quotient \\(\\widehat{A}/\\mathrm{K}^i\\) (cf. EGA <span style=\"white-space:nowrap\">0<sub>III</sub></span>, §13.2). D'autre part, l'application \\(\\mathrm{K}^i \\to \\mathrm{K}^i_n\\) est surjective (cf. [BEns], III, §7.4, Prop. 5), d'où il résulte que \\(\\mathrm{K}^i_n \\simeq (\\mathrm{K}^i + \\mathfrak{m}^{n+1}\\widehat{A})/\\mathfrak{m}^{n+1}\\widehat{A}\\) et \\(\\mathscr{O}(\\mathrm{T}^i_n) \\simeq (\\widehat{A}/\\mathrm{K})\\otimes_A (A/\\mathfrak{m}^{n+1})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En d'autres termes, \\((\\mathrm{T}^i_n)_n\\) est un système inductif de schémas affines artiniens, et la limite inductive \\(\\mathrm{T}^i = \\varinjlim_n \\mathrm{T}^i_n\\) est un sous-schéma formel fermé du schéma formel \\(\\widehat{S} = \\mathrm{Spf}(\\widehat{A})\\) (cf. EGA I, §10), dont la réduction modulo \\(\\mathfrak{m}^{n+1}\\) est \\(\\mathrm{T}^i_n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit T le sous-schéma formel fermé de \\(\\widehat{S}\\) intersection des \\(\\mathrm{T}^i\\), c.-à-d., défini par \\(\\mathrm{K} = \\sum_i \\mathrm{K}^i\\). Comme \\(\\widehat{A}\\) est noethérien, il existe une partie finie J de I, telle que l'on ait \\(\\mathrm{K} = \\sum_{i \\in J} \\mathrm{K}^i\\) (i.e. \\(\\mathrm{T} = \\bigcap_{i \\in J} \\mathrm{T}^i\\)). Notons alors que pour tout n, on a \\(\\mathrm{K}_n = \\sum_{i \\in J} \\mathrm{K}^i_n\\), où \\(\\mathrm{K}_n\\) désigne l'image de K dans \\(A_n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons que \\(f^i\\) désigne l'image de \\(f \\in B = \\mathscr{O}(X)\\) dans \\(\\mathscr{O}(Z^i)\\), et \\(f^{i\\prime}\\) son image dans \\(\\mathscr{O}(Z^{i\\prime}_n) = \\mathscr{O}(Z^i)\\otimes_A A'\\) ; l'hypothèse \\(Y^{i\\prime} = Z^{i\\prime}\\) équivaut à la nullité de \\(f^{i\\prime}\\). Comme \\(\\mathscr{O}(Z^i)\\otimes_A A'\\) est la limite inductive des sous-algèbres \\(\\mathscr{O}(Z^i)\\otimes_A A''\\) (où A″ satisfait aux conditions explicitées plus haut), il existe donc un A″ tel que \\(Y^{i\\prime\\prime} = Z^{i\\prime\\prime}\\). A priori, A″ dépend de i, mais on peut trouver un A″ qui marche pour tous les \\(i \\in J\\), puisque J est fini. Posons \\(S'' = \\mathrm{Spec}(A'')\\) et \\(S''_{(n)} = S'' \\times_S S_n\\).<sup class=\"footnote-ref\"><a id=\"IX-fn18ref\" href=\"#IX-fn18\">18</a></sup></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(Y^{i\\prime\\prime} \\times_{S''} S''_{(n)} = (Y^i_n)_{S''_{(n)}}\\) égale \\(Z^{i\\prime\\prime} \\times_{S''} S''_{(n)} = (Z^i_n)_{S''_{(n)}}\\) pour tout \\(i \\in J\\), il résulte de la définition des \\(\\mathrm{T}^i_n\\) que \\(S''_{(n)} \\to S_n\\) se factorise par \\(\\mathrm{T}^i_n\\) pour tout \\(i \\in J\\), donc aussi par \\(\\mathrm{T}_n = \\bigcap_{i \\in J} \\mathrm{T}^i_n\\), donc aussi par \\(\\mathrm{T}^i_n\\) pour <em>tout</em> \\(i \\in I\\). Notant \\(f''\\) l'image de \\(f\\) dans \\(B'' = B \\otimes_A A''\\), et \\(f''_{(n)}\\) son image dans \\(B''_{(n)} = B''/\\mathfrak{m}^{n+1}B''\\), cela signifie que pour tout n, \\(f''_{(n)}\\) s'annule sur les \\(Z^i \\times_S S''_{(n)}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme les morphismes \\(A \\to A'' \\to A'\\) sont locaux, l'image \\(s''\\) de \\(s'\\) dans S″ est le point fermé de S″, correspondant à l'idéal maximal \\(\\mathfrak{m}''\\) de B″, et l'image de \\(s''\\) dans S est s. Fixons n et notons maintenant \\(S''_n\\) le n-ième voisinage infinitésimal de \\(s''\\) dans S″, c.-à-d., \\(\\mathrm{Spec}(A''/\\mathfrak{m}''^{n+1})\\). Posons \\(B''_n = B''/\\mathfrak{m}''^{n+1}B''\\) et \\(Z^{i\\prime\\prime}_n = Z^i \\times_S S''_n = \\mathrm{Spec}(B''_n)\\). Alors, l'image \\(f''_n\\) de \\(f''_{(n)}\\) dans \\(B''_n\\) s'annule sur \\(Z^{i\\prime\\prime}_n\\), pour tout i. Or, d'après le lemme 4.5 ci-dessous, la famille des fibres\n\\[\nZ^{i\\prime\\prime}_0 = Z^{i\\prime\\prime}_n \\times_{S''_n} \\kappa(s'') = Z^i_s \\times_{\\kappa(s)} \\kappa(s'')\n\\]\nest schématiquement dense dans la fibre \\(X''_0 = X''_n \\times_{S''_n} \\kappa(s'') = X_s \\times_{\\kappa(s)} \\kappa(s'')\\). Donc \\(S''_n, X''_n, (Z^{i\\prime\\prime}_n)_{i \\in I}\\), et \\(S''_0 = \\mathrm{Spec}\\,\\kappa(s'')\\) vérifient les hypothèses du lemme 4.2 ; il s'ensuit donc que \\(f''_n = 0\\), i.e. \\(f'' \\in \\mathfrak{m}''^{n+1}B''\\), ceci pour tout n.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme B est noethérien et \\(B'' = B \\otimes_A A''\\) est un localisé d'une B-algèbre de type fini, B″ est noethérien, donc ses anneaux locaux sont séparés pour leur topologie habituelle. Il s'ensuit que \\(f''\\) est nul en les points \\(x''\\) de X″ tels que \\(\\mathfrak{m}''B''\\) soit contenu dans l'idéal maximal de \\(\\mathscr{O}_{X'',x''}\\), i.e. en les points de X″ au-dessus de \\(s''\\). A fortiori, \\(f'\\) est nul en les points \\(x'\\) de X′ au-dessus de \\(s'\\). C.Q.F.D.</p>"
+    },
+    {
+     "id": "IX.4.5.0",
+     "type": "lemme",
+     "label": "4.5.0",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.4.5.0\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.5.0</span></div>\n  <div class=\"thm-body\">\n  <p><sup class=\"footnote-ref\"><a id=\"IX-fn19ref\" href=\"#IX-fn19\">19</a></sup> Soient X un S-préschéma, \\((Z_i)_{i \\in I}\\) une famille de sous-préschémas de X, et \\(S' \\to S\\) un morphisme fidèlement plat. Si la famille \\((Z'_i)_{i \\in I}\\) est schématiquement dense dans X′, alors \\((Z_i)_{i \\in I}\\) est schématiquement dense dans X.</p>\n  <p>Ceci résulte de EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.10.5 (i) et 11.9.10 (i). Reste à reporter la démonstration du</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.5",
+     "type": "lemme",
+     "label": "4.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\">\n  <p>Soit X un préschéma localement noethérien<sup class=\"footnote-ref\"><a id=\"IX-fn20ref\" href=\"#IX-fn20\">20</a></sup> sur un corps k, \\((Z_i)_{i \\in I}\\) une famille de sous-préschémas de X, k′ une extension de k, X′ et \\(Z'_i\\) les préschémas déduits de X et \\(Z_i\\) par le changement de base \\(k'/k\\). Pour que \\((Z_i)_{i \\in I}\\) soit schématiquement dense dans X, il faut et il suffit que \\((Z'_i)_{i \\in I}\\) le soit dans X′.</p>\n  <p>Le « il suffit » découle de <a class=\"ref\" href=\"#IX.4.5.0\">4.5.0</a>, prouvons le « il faut ».<sup class=\"footnote-ref\"><a id=\"IX-fn21ref\" href=\"#IX-fn21\">21</a></sup> D'abord, on peut supposer \\(X = \\mathrm{Spec}(B)\\) affine. Pour tout i, soit \\((Z^{ij})_{j \\in \\mathrm{J}_i}\\) un recouvrement de \\(Z_i\\) par des ouverts affines ; remplaçant \\((Z_i)_{i \\in I}\\) par la famille \\((Z^{ij})_{(i,j) \\in J}\\), où \\(J = \\coprod_{i \\in I} J_i\\), on peut aussi supposer les \\(Z_i\\) affines.</p>\n  <p>Soient \\(g \\in B' = B \\otimes_k k'\\) et \\(t' \\in B'_g\\) une section \\(\\mathscr{O}_{X'}\\) sur l'ouvert affine \\(U' = X'_g\\), nulle sur les \\(Z'_i \\cap U'\\), i.e. dont l'image dans chaque \\((\\mathscr{O}(Z^i)\\otimes_k k')_g\\) est nulle. Il existe une sous-k-algèbre de type fini A de k′ telle que \\(g \\in B_A = B \\otimes_k A\\) et \\(t' \\in (B_A)_g\\). L'application \\(\\mathscr{O}(Z^i)\\otimes_k A \\to \\mathscr{O}(Z^i)\\otimes_k k'\\) étant injective, il en est de même de l'application\n  \\[\n  (\\mathscr{O}(Z^i)\\otimes_k A)_g \\longrightarrow (\\mathscr{O}(Z^i)\\otimes_k k')_g\\,;\n  \\]\n  compte tenu de l'hypothèse, ceci implique que l'image de \\(t'\\) dans chaque \\((\\mathscr{O}(Z^i)\\otimes_k A)_g\\) est nulle. Ceci nous ramène à montrer que la famille \\((Z^i_A)_{i \\in I}\\) est schématiquement dense dans \\(X_A\\),<sup class=\"footnote-ref\"><a id=\"IX-fn22ref\" href=\"#IX-fn22\">22</a></sup> ce qui résulte de EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.9.10 b).</p>\n  <p>Notons en passant le résultat suivant, qui servira dans un exposé ultérieur :<sup class=\"footnote-ref\"><a id=\"IX-fn23ref\" href=\"#IX-fn23\">23</a></sup></p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.6",
+     "type": "corollaire",
+     "label": "4.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient X un S-préschéma plat, U une partie ouverte de X. On suppose que pour tout \\(s \\in S\\), \\(U_s\\) est schématiquement dense dans \\(X_s\\), et que X est localement noethérien, ou localement de présentation finie sur S. Alors U est schématiquement dense dans X.</p>\n  <p>Supposons pour simplifier U rétrocompact dans X (cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.10.10 et 11.9.17 pour le cas général). Le cas X localement noethérien n'est mis que pour mémoire, il est contenu dans <a class=\"ref\" href=\"#IX.4.3\">4.3</a>.</p>\n  <p>Dans le deuxième cas envisagé, on peut évidemment supposer S et X affines, alors X et U sont de présentation finie sur \\(S = \\mathrm{Spec}(A)\\). L'anneau A est limite inductive de ses sous-\\(\\mathbb{Z}\\)-algèbres \\(A_i\\) de type fini. Le « procédé breveté » déjà utilisé (cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2 et 8.10.5 (iii)) montre qu'il existe un i, un schéma affine \\(X_i\\) sur \\(S_i = \\mathrm{Spec}(A_i)\\) et un ouvert \\(U_i\\) dans \\(X_i\\), dont X, U se déduisent par changement de base \\(S \\to S_i\\). Soit \\(E_i\\) la partie de \\(S_i\\) formée des \\(s \\in S_i\\) tels que \\((U_i)_s\\) soit schématiquement dense dans \\((X_i)_s\\).</p>\n  <p>D'après EGA <span style=\"white-space:nowrap\">IV<sub>2</sub></span>, 5.9.9 et 5.10.2, \\(E_i\\) est l'ensemble des \\(s \\in S_i\\) tels que \\((U_i)_s\\) contienne l'ensemble \\(\\mathrm{Ass}\\, \\mathscr{O}_{(X_i)_s}\\) des points « associés » au faisceau structural de \\((X_i)_s\\), et d'après EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.9.17.i cette condition est de nature constructible, i.e. \\(E_i\\) est une partie constructible de \\(S_i\\).<sup class=\"footnote-ref\"><a id=\"IX-fn24ref\" href=\"#IX-fn24\">24</a></sup></p>\n  <p>D'après <a class=\"ref\" href=\"#IX.4.5\">4.5</a>, l'image inverse de \\(E_i\\) par \\(S_j \\to S_i\\) (resp. par \\(S \\to S_i\\)) est \\(E_j\\) (resp. l'ensemble E des \\(s \\in S\\) tels que \\(U_s\\) soit schématiquement dense dans \\(X_s\\)). De plus, par hypothèse, \\(E = S\\), qui est aussi l'image inverse par chaque \\(S \\to S_i\\) de \\(S_i\\). D'après EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.3.11, ceci entraîne qu'il existe un \\(j \\geqslant i\\) tel que \\(E_j = S_j\\), i.e. tel que pour tout \\(s \\in S_j\\), \\((U_j)_s\\) soit schématiquement dense dans \\((X_j)_s\\).</p>\n  <p>Alors, en vertu de <a class=\"ref\" href=\"#IX.4.4\">4.4</a> appliqué à \\((S_j, X_j, U_j)\\) et au changement de base \\(S \\to S_j\\), il s'ensuit que U est schématiquement dense dans X. On notera d'ailleurs qu'on n'utilise ici 4.4 que dans le cas d'une famille dont l'ensemble d'indices est fini (en fait, réduit à un élément), auquel cas la démonstration de 4.4 se simplifie beaucoup, comme le lecteur constatera par lui-même.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.7",
+     "type": "theoreme",
+     "label": "4.7",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un groupe de type multiplicatif et de type fini <em>sur</em> S. Pour tout entier \\(n &gt; 0\\), soit \\({}_n G\\) le noyau de \\(n \\cdot \\mathrm{id}_G\\). Alors la famille des sous-préschémas \\(({}_n G)_{n &gt; 0}\\) de G est schématiquement dense (déf. <a class=\"ref\" href=\"#IX.4.1\">4.1</a>).</p>\n  <p>Nous distinguons deux cas.</p>\n  <p>a) <em>Cas S localement noethérien.</em> Alors par <a class=\"ref\" href=\"#IX.4.3\">4.3</a> on est ramené au cas où S est le spectre d'un corps k. D'après <a class=\"ref\" href=\"#IX.4.5.0\">4.5.0</a>, on peut supposer k algébriquement clos et G diagonalisable, i.e. de la forme \\(\\mathbf{D}_k(M)\\), où M est un groupe commutatif de type fini. Alors M est de la forme \\(\\Gamma \\times \\mathbb{Z}^r\\), avec \\(\\Gamma\\) fini, donc G est de la forme \\(G_1 \\times G_2\\), avec \\(G_1 = \\mathbf{D}(\\Gamma)\\) et \\(G_2 = \\mathbb{G}_m^r\\), et pour n grand multiplicativement (à savoir n multiple de l'ordre de \\(\\Gamma\\)) on aura \\({}_n G = G_1 \\times {}_n G_2\\) puisqu'on aura \\({}_n G_1 = G_1\\).</p>\n  <p>Appliquant encore <a class=\"ref\" href=\"#IX.4.3\">4.3</a> à la projection \\(G \\to G_1\\), on est ramené au cas de \\(G_2\\), i.e. au cas où \\(G = \\mathbb{G}_m^r\\). Comme alors G est réduit, il revient au même de dire que \\(({}_n G)_{n&gt;0}\\) est schématiquement dense dans G, ou que la réunion des \\({}_n G\\) est dense dans G pour la topologie habituelle. Comme \\({}_n G = ({}_n \\mathbb{G}_m)^r\\), on est ramené au cas de \\(G = \\mathbb{G}_m\\), donc G irréductible de dimension 1. Alors cela résulte du fait que l'ensemble réunion des \\({}_n G\\) (égal à l'ensemble des racines de l'unité dans k) est infini.</p>\n  <p>b) <em>Cas général.</em> Pour tout point s de S, il existe un voisinage ouvert U de s et un morphisme fidèlement plat quasi-compact \\(S' \\to U\\) tel que \\(G' = G_{S'}\\) soit diagonalisable, i.e. de la forme \\(\\mathbf{D}_{S'}(M)\\). D'après 4.5.0 à nouveau, on peut se ramener au cas de G′, donc on peut supposer G diagonalisable, donc il provient du groupe absolu \\(H = \\mathbf{D}_{\\mathbb{Z}}(M)\\) sur \\(\\mathrm{Spec}(\\mathbb{Z})\\) par changement de base \\(S \\to \\mathrm{Spec}(\\mathbb{Z})\\). D'après la preuve de a), pour tout \\(s \\in \\mathrm{Spec}(\\mathbb{Z})\\), la famille \\(({}_n H_s)_{n&gt;0}\\) est schématiquement dense dans \\(H\\) ; il suffit maintenant d'appliquer <a class=\"ref\" href=\"#IX.4.4\">4.4</a>.<sup class=\"footnote-ref\"><a id=\"IX-fn25ref\" href=\"#IX-fn25\">25</a></sup></p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.8",
+     "type": "corollaire",
+     "label": "4.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\">\n  <p>a) Soient \\(u, v : H \\to G\\) deux homomorphismes de S-préschémas en groupes, avec H de type multiplicatif et<sup class=\"footnote-ref\"><a id=\"IX-fn26ref\" href=\"#IX-fn26\">26</a></sup> de type fini, et supposons que pour tout entier \\(n &gt; 0\\), les restrictions de u et v à \\({}_n H\\) soient identiques. Alors \\(u = v\\).</p>\n  <p>b) Soient \\(H_1, H_2\\) deux groupes de type multiplicatif et de type fini d'un préschéma en groupes G, et supposons que pour tout entier \\(n &gt; 0\\), on ait \\({}_n H_1 = {}_n H_2\\), alors \\(H_1 = H_2\\).</p>\n  <p>La première assertion résulte de la seconde, par considération des sous-groupes \\(H_1\\) et \\(H_2\\) de \\(H \\times G\\), graphes de u et v. Pour prouver b), soit \\(H = H_1 \\cap H_2\\), c'est un sous-préschéma en groupes de \\(H_i\\) \\((i=1,2)\\), il faut montrer qu'il est identique à \\(H_i\\), or l'hypothèse signifie qu'il majore les \\({}_n H_i\\). On est donc ramené à prouver le</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.9",
+     "type": "corollaire",
+     "label": "4.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.4.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.9</span></div>\n  <div class=\"thm-body\">\n  <p>Soient G un S-groupe de type multiplicatif et de type fini, et H sous-préschéma en groupes qui majore les \\({}_n G\\), \\(n &gt; 0\\). Alors \\(H = G\\).</p>\n  <p>En vertu de <a class=\"ref\" href=\"#IX.4.7\">4.7</a> on est ramené à prouver que le sous-préschéma H est fermé, ou encore qu'il est égal ensemblistement à G. Cela nous ramène au cas où S est le spectre d'un corps, mais alors tout sous-préschéma en groupes de G est fermé (<a class=\"ref\" href=\"#VIB.1.4.2\">VI<sub>B</sub> 1.4.2</a>), d'où la conclusion.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.4.10",
+     "type": "remarque",
+     "label": "4.10",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">4.10</span></div>\n  <div class=\"thm-body\">\n  <p>Sous les conditions de <a class=\"ref\" href=\"#IX.4.7\">4.7</a>, soit m un entier \\(&gt; 0\\) qui a les propriétés suivantes : pour tout \\(s \\in S\\), m n'est pas une puissance de la caractéristique de \\(\\kappa(s)\\), et si \\(G_s\\) est de type M, les diviseurs premiers de la torsion de M divisent m. (N.B. cette deuxième condition est toujours vérifiée si G est un tore). Alors la démonstration donnée montre que dans l'énoncé de 4.7 et les corollaires 4.8 et 4.9, on peut se borner à considérer les sous-groupes de la forme \\({}_{(m^r)}G\\), avec \\(r &gt; 0\\).</p>\n  <p>D'ailleurs, on voit aussitôt que lorsque G est <em>lisse</em> sur S, alors pour tout point \\(s \\in S\\), il existe un voisinage ouvert U de s et un entier \\(m &gt; 0\\), premier à toutes les caractéristiques résiduelles de U, et qui satisfait les conditions précédentes pour \\(G_U\\). (Prendre par exemple pour m l'ordre de la torsion du type de G en s, cf. 1.4.1 a) et 2.1 e).) Sous ces conditions, on trouve des \\({}_{(m^r)}G\\) qui sont finis et étales sur S, et dont la famille est schématiquement dense, à condition de se restreindre au-dessus de U. Cette remarque permet dans certains cas (notamment ceux faisant intervenir les théorèmes 3.2 et 3.2 bis, cf. XI 6, mais non ceux faisant intervenir les théorèmes 3.6 et 3.6 bis) de se passer du théorème 3.1, faisant intervenir la cohomologie de Hochschild.</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn-s1",
+     "number": "*",
+     "html": "N.D.E. : Tous les résultats de 4.1 à 4.6 sont contenus dans EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.10, auquel nous renvoyons le lecteur pour un exposé en forme de la notion de densité schématique."
+    },
+    {
+     "id": "IX-fn11",
+     "number": "11",
+     "html": "N.D.E. : théorème « d'algébricité » 7.1."
+    },
+    {
+     "id": "IX-fn12",
+     "number": "12",
+     "html": "N.D.E. : Tous les résultats de densité schématique énoncés dans EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, § 11.10 découlent des résultats sur les « familles séparantes d'homomorphismes » démontrés dans <em>loc. cit.</em>, § 11.9, auxquels nous ferons référence dans certaines N.D.E. qui suivent."
+    },
+    {
+     "id": "IX-fn13",
+     "number": "13",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn14",
+     "number": "14",
+     "html": "N.D.E. : Pour une autre démonstration, utilisant une réduction au cas où S′ est localement noethérien (et 4.3 et 4.5 comme ici), voir EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.9.16 et 11.9.12 (N.B. dans la dernière ligne de la preuve de 11.9.16, remplacer 11.9.5 par 11.9.12)."
+    },
+    {
+     "id": "IX-fn15",
+     "number": "15",
+     "html": "N.D.E. : On a ajouté la phrase suivante, et détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn16",
+     "number": "16",
+     "html": "N.D.E. : l'original ajoutait : « du moins en tout point x′ de X′ au-dessus de s′ », mais cette restriction semble inutile."
+    },
+    {
+     "id": "IX-fn17",
+     "number": "17",
+     "html": "N.D.E. : On a détaillé et corrigé l'original, pour faire voir que la limite projective des anneaux \\(\\mathscr{O}(\\mathrm{T}^i_n)\\) définit un sous-schéma formel fermé du schéma formel \\(\\mathrm{Spf}(\\widehat{A})\\)."
+    },
+    {
+     "id": "IX-fn18",
+     "number": "18",
+     "html": "N.D.E. : On a détaillé et corrigé l'original, en faisant la distinction entre \\(S''_{(n)}\\) et le sous-schéma \\(S''_n = S''_{(n)}(s'')\\) introduit plus bas."
+    },
+    {
+     "id": "IX-fn19",
+     "number": "19",
+     "html": "N.D.E. : On a inséré ici ce lemme, utilisé dans la démonstration de 4.5 et 4.7."
+    },
+    {
+     "id": "IX-fn20",
+     "number": "20",
+     "html": "N.D.E. : Cette hypothèse est en fait superflue, cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.10.6 et 11.9.13."
+    },
+    {
+     "id": "IX-fn21",
+     "number": "21",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn22",
+     "number": "22",
+     "html": "N.D.E. : L'original continuait par : « Utilisant 4.3 pour les \\(X_{A'}\\), où A′ est un quotient de A par une puissance d'un idéal maximal, et le Nullstellensatz de Hilbert, on est ramené au cas où k′ est une extension finie de k ». On pourrait détailler cette réduction, et poursuivre dans cette voie, car le cas d'une extension finie \\(k'/k\\) est un peu plus simple que le cas plus général traité dans EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.9.10 b)."
+    },
+    {
+     "id": "IX-fn23",
+     "number": "23",
+     "html": "N.D.E. : Préciser ceci…"
+    },
+    {
+     "id": "IX-fn24",
+     "number": "24",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn25",
+     "number": "25",
+     "html": "N.D.E. : On aura besoin en X 4.3 de ce résultat pour S non localement noethérien (à savoir, \\(S = \\mathrm{Spec}(\\widehat{A} \\otimes_A \\widehat{A})\\), où \\(\\widehat{A}\\) est le complété de l'anneau local noethérien A)."
+    },
+    {
+     "id": "IX-fn26",
+     "number": "26",
+     "html": "N.D.E. : On a remplacé « diagonalisable » par « de type multiplicatif »."
+    }
+   ]
+  },
+  {
+   "id": "IX-5",
+   "title": "5. Homomorphismes centraux des groupes de type multiplicatif",
+   "blocks": [
+    {
+     "id": "IX.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.5\">5. Homomorphismes centraux des groupes de type multiplicatif</h2>"
+    },
+    {
+     "id": "IX.5.0",
+     "type": "lemme",
+     "label": "5.0",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.5.0\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.0</span></div>\n  <div class=\"thm-body\">\n  <p><sup class=\"footnote-ref\"><a id=\"IX-fn27ref\" href=\"#IX-fn27\">27</a></sup> Soient \\((A, \\mathfrak{m})\\) un anneau local noethérien, \\(S = \\mathrm{Spec}(A)\\), et H un schéma fini sur S, donc \\(H = \\mathrm{Spec}(B)\\), où B est fini sur A. Soit K un sous-schéma de H, tel que par réduction modulo \\(\\mathfrak{m}^{n+1}\\) on ait \\(K_n = H_n\\) pour tout n. Alors \\(K = H\\).</p>\n  <p>Soit s le point fermé de S. Notons d'abord que K est un sous-schéma <em>fermé</em> de H. En effet, c'est a priori un sous-schéma fermé d'un ouvert U de H. Mais K, donc U, contient la fibre \\(K_s = H_s\\) ; comme le morphisme \\(H \\to S\\) est fini, donc fermé, il s'ensuit que le complémentaire de U est vide, i.e. \\(U = H\\). Donc K est défini par un idéal I de B. L'hypothèse entraîne que I est contenu dans \\(\\mathfrak{m}^n B\\) pour tout n ; comme B est un A-module fini, il est séparé pour la topologie \\(\\mathfrak{m}\\)-adique, d'où \\(I = 0\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.5.1",
+     "type": "theoreme",
+     "label": "5.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(u, v : H \\to G\\) deux homomorphismes de S-préschémas en groupes, avec H de type multiplicatif et de type fini, et S localement noethérien ou G de présentation finie sur S. Soit \\(s \\in S\\) tel que \\(u_s = v_s\\), et supposons \\(u_s\\) central. Alors il existe un voisinage ouvert U de s tel que \\(u_U = v_U\\).</p>\n  <p>Distinguons les deux cas :</p>\n  <p>a) S localement noethérien.<sup class=\"footnote-ref\"><a id=\"IX-fn28ref\" href=\"#IX-fn28\">28</a></sup> Soit \\(K = \\mathrm{Ker}(u,v)\\) l'image inverse de la diagonale de \\(G \\times_S G\\) par le morphisme \\((u,v)\\) ; c'est un sous-préschéma en groupes de H. Nous voulons trouver U tel que \\(K_U = H_U\\). Notons que, comme S est localement noethérien et H de type fini sur S, alors H est localement noethérien, donc l'immersion \\(K \\hookrightarrow H\\) est de type fini (cf. EGA I, 6.3.5). Donc K est de type fini sur S, donc de présentation finie sur S, puisque S est localement noethérien. Par conséquent, d'après EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2.4, pour montrer qu'il existe un voisinage ouvert U de s tel que \\(K_U = H_U\\), il suffit de montrer que \\(K_{S'} = H_{S'}\\), où S′ est le spectre de \\(A = \\mathscr{O}_{S,s}\\). On peut donc supposer S local de point fermé s. Quitte à remplacer l'anneau local noethérien A par son complété \\(\\widehat{A}\\), ce qui introduit un changement de base \\(\\widehat{S} \\to S\\) fidèlement plat et quasi-compact, on peut même supposer<sup class=\"footnote-ref\"><a id=\"IX-fn29ref\" href=\"#IX-fn29\">29</a></sup> si l'on veut A complet.</p>\n  <p>En vertu de <a class=\"ref\" href=\"#IX.3.4\">3.4</a> on a \\(u_n = v_n\\) pour tout n, où comme d'habitude l'indice n indique la réduction modulo \\(\\mathfrak{m}^{n+1}\\) (\\(\\mathfrak{m}\\) étant l'idéal maximal de A). Pour tout entier \\(m &gt; 0\\), dénotant par \\({}_m u, {}_m v\\) les homomorphismes \\({}_m H \\to G\\) induits par u, v, on a donc aussi \\(({}_m u)_n = ({}_m v)_n\\). Ceci étant vrai pour tout n, et \\({}_m H\\) étant <em>fini</em> sur S en vertu de <a class=\"ref\" href=\"#IX.2.2\">2.2</a>, il s'ensuit que \\({}_m u = {}_m v\\), d'après <a class=\"ref\" href=\"#IX.5.0\">5.0</a>. Ceci étant vrai pour tout m, on a donc \\(u = v\\) en vertu de <a class=\"ref\" href=\"#IX.4.7\">4.7</a>.</p>\n  <p>b) G de présentation finie.<sup class=\"footnote-ref\"><a id=\"IX-fn30ref\" href=\"#IX-fn30\">30</a></sup> Comme H est aussi de présentation finie sur S, d'après EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2, nous pouvons encore supposer S local de point fermé s et prouver qu'alors \\(u = v\\). Si \\(f : S' \\to S\\) est un morphisme fidèlement plat quasi-compact et si l'on note \\(f_H\\) le morphisme H′ → H et \\(u', v' : H' \\to G'\\) les homomorphismes déduits de u, v, alors l'égalité \\(u' = v'\\) entraîne \\(u' \\circ f_H = v' \\circ f_H\\), d'où \\(u = v\\), puisque \\(f_H\\) est un épimorphisme. Donc, quitte à faire une extension fidèlement plate et quasi-compacte de la base, on peut supposer de plus H diagonalisable, donc de la forme \\(\\mathbf{D}_S(M)\\), avec M un groupe commutatif de type fini.</p>\n  <p>Introduisons comme dans la démonstration de <a class=\"ref\" href=\"#IX.4.6\">4.6</a> la famille filtrante croissante des sous-\\(\\mathbb{Z}\\)-algèbres de type fini \\(A_i\\) de \\(A = \\mathscr{O}_{S,s}\\), et \\(S_i = \\mathrm{Spec}(A_i)\\). Notons que \\(H = \\mathbf{D}_S(M)\\) provient, pour tout i, du groupe diagonalisable \\(H_i = \\mathbf{D}_{S_i}(M)\\). Comme G est de présentation finie sur S, alors, d'après EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2 (voir aussi <span style=\"white-space:nowrap\">VI<sub>B</sub></span>, 10.2 et 10.3), il existe un indice i, un préschéma en groupes \\(G_i\\) de présentation finie sur \\(S_i\\), et des morphismes de \\(S_i\\)-groupes \\(u_i, v_i : H_i \\to G_i\\) dont u, v proviennent par changement de base. Soit \\(s_i\\) l'image de s dans \\(S_i\\) et soit \\(\\rho_i : H_i \\times_{S_i} G_i \\to G_i\\) le morphisme de \\(S_i\\)-préschémas défini par \\(\\rho_i(h,g) = u_i(h)\\, g\\, u_i(h)^{-1}\\). Alors, comme \\(u_s\\) est central, \\(\\rho_s = \\rho_i \\times_{\\kappa(s_i)} \\kappa(s)\\) égale la deuxième projection, il en est donc de même pour \\(\\rho_i\\) (puisque \\(\\kappa(s_i) \\to \\kappa(s)\\) est fidèlement plat et quasi-compact), i.e. \\((u_i)_{s_i}\\) est central. De même, comme \\(u_s = v_s\\), on a \\((u_i)_{s_i} = (v_i)_{s_i}\\). On peut alors appliquer a) à la situation sur \\(S_i\\), d'où aussitôt la conclusion annoncée.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.5.2",
+     "type": "corollaire",
+     "label": "5.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : H \\to G\\) un homomorphisme de S-préschémas en groupes, avec H de type multiplicatif et de type fini, et S localement noethérien ou G de présentation finie sur S. Soit \\(s \\in S\\) et supposons que \\(u_s\\) soit l'homomorphisme unité. Alors il existe un voisinage ouvert U de s tel que \\(u_U\\) soit l'homomorphisme unité.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.5.3",
+     "type": "corollaire",
+     "label": "5.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\"><p>Soient u, H, G, comme dans <a class=\"ref\" href=\"#IX.5.2\">5.2</a>, supposons de plus G séparé sur S. Soit U l'ensemble des \\(s \\in S\\) tels que \\(u_s\\) soit l'homomorphisme unité. Alors U est une partie ouverte et fermée de S, et \\(u_U : H_U \\to G_U\\) est l'homomorphisme unité.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à prouver seulement que U est fermé. Or soit \\(K = \\mathrm{Ker}(u)\\), comme G est séparé sur S, K est un sous-préschéma fermé de H, et U est l'ensemble des \\(s \\in S\\) tels que \\(K_s = H_s\\). On voit alors facilement que U est fermé, par exemple comme application de <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a> (H étant essentiellement libre sur S d'après <a class=\"ref\" href=\"#VIII.6.3\">VIII 6.3</a>), ou en notant qu'on peut supposer S réduit et U dense dans S, donc schématiquement dense dans S, ce qui implique \\(H_U\\) schématiquement dense dans H puisque H est plat sur S<sup class=\"footnote-ref\"><a id=\"IX-fn31ref\" href=\"#IX-fn31\">31</a></sup>, et comme u et l'homomorphisme unité coïncident sur \\(H_U\\), ils coïncident sur H.</p>"
+    },
+    {
+     "id": "IX.5.4",
+     "type": "corollaire",
+     "label": "5.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, H et G deux S-groupes, avec H de type multiplicatif et de type fini et G séparé et de présentation finie sur S, \\(\\pi : S' \\to S\\) un<sup class=\"footnote-ref\"><a id=\"IX-fn32ref\" href=\"#IX-fn32\">32</a></sup> épimorphisme effectif universel (par exemple, un morphisme fidèlement plat et quasi-compact, ou un morphisme admettant une section, cf. <a class=\"ref\" href=\"#IV.1.12\">IV 1.12</a>) à fibres géométriquement connexes.<sup class=\"footnote-ref\"><a id=\"IX-fn33ref\" href=\"#IX-fn33\">33</a></sup></p>\n  <p>Soit \\(u' : H' \\to G'\\) un homomorphisme central des S′-groupes déduits de H, G par le changement de base \\(S' \\to S\\). Alors, il existe un unique homomorphisme \\(u : H \\to G\\) de S-groupes tel que \\(u \\times_S S' = u'\\). Lorsque S′/S admet une section g, alors u est le morphisme déduit de \\(u'\\) par le changement de base \\(g : S \\to S'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(\\pi\\) est un épimorphisme effectif universel, il en est de même de \\(H' \\to H\\), d'où l'unicité de u, cf. le début de la preuve de <a class=\"ref\" href=\"#IX.5.1\">5.1 b)</a>. Si \\(\\pi\\) admet une section g, alors \\(u' = \\pi^*(u)\\) entraîne \\(u = g^*\\pi^*(u) = g^*(u')\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour l'existence de u, on est ramené, d'après <a class=\"ref\" href=\"#IV.2.3\">IV 2.3</a>, à montrer que les deux homomorphismes \\(u''_1, u''_2 : H'' \\to G''\\) de S″-groupes déduits de \\(u'\\) par les deux changements de base \\(\\mathrm{pr}_1, \\mathrm{pr}_2 : S'' = S' \\times_S S' \\to S'\\), sont identiques. Or ils coïncident sur la diagonale de S″, de façon précise les images inverses de \\(u''_1\\) et \\(u''_2\\) par le morphisme diagonal \\(S' \\to S''\\) sont identiques (car égales à \\(u'\\)).<sup class=\"footnote-ref\"><a id=\"IX-fn34ref\" href=\"#IX-fn34\">34</a></sup> Comme \\(u''_1\\) et \\(u''_2\\) sont centraux, on peut appliquer <a class=\"ref\" href=\"#IX.5.3\">5.3</a> au morphisme \\(u''_1(u''_2)^{-1}\\). Il existe donc une partie ouverte et fermée U de S″, contenant la diagonale de S″, telle que \\(u''_1\\) et \\(u''_2\\) coïncident au-dessus de U.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or les fibres de S′/S étant géométriquement connexes, il en est de même de celles de S″/S, qui sont donc a fortiori connexes, d'où résulte que U (contenant les diagonales des dites fibres) contient les dites fibres, donc est égal à S″, ce qui achève la démonstration.</p>"
+    },
+    {
+     "id": "IX.5.5",
+     "type": "corollaire",
+     "label": "5.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, K un S-préschéma en groupes localement de type fini<sup class=\"footnote-ref\"><a id=\"IX-fn35ref\" href=\"#IX-fn35\">35</a></sup> et à fibres connexes, H un sous-groupe de type multiplicatif et de type fini, invariant dans K. Alors H est un sous-groupe central de K.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><sup class=\"footnote-ref\"><a id=\"IX-fn36ref\" href=\"#IX-fn36\">36</a></sup> Notons d'abord que \\(\\pi : K \\to S\\) est à fibres géométriquement connexes, puisque pour un schéma en groupes localement de type fini sur un corps, connexe implique géométriquement connexe (cf. <a class=\"ref\" href=\"#VIA.2.4\">VI<sub>A</sub> 2.4</a>). On peut alors appliquer <a class=\"ref\" href=\"#IX.5.4\">5.4</a> en faisant \\(G = H\\) et \\(S' = K\\), à l'homomorphisme de K-groupes \\(u' : H_K \\to H_K\\) défini ensemblistement par \\((h,k) \\mapsto (khk^{-1}, k)\\), qui est central puisque H est commutatif. L'image inverse de \\(u'\\) par la section unité \\(\\varepsilon : S \\to K\\) est l'homomorphisme identique de K, donc par <a class=\"ref\" href=\"#IX.5.4\">5.4</a> il en est de même de \\(H_K \\to H_K\\), donc H est central dans K.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Énonçons les variantes des résultats précédents pour des sous-groupes centraux de type multiplicatif. On obtient, en procédant comme pour les résultats précédents (et utilisant <a class=\"ref\" href=\"#IX.3.2bis\">3.2 bis</a>) :</p>"
+    },
+    {
+     "id": "IX.5.1bis",
+     "type": "theoreme",
+     "label": "5.1 bis",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.5.1bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.1 bis</span></div>\n  <div class=\"thm-body\"><p>Soient G un S-préschéma en groupes, \\(H_1\\) et \\(H_2\\) deux sous-préschémas en groupes de type multiplicatif et de type fini, avec \\((H_1)_s\\) central. On suppose S localement noethérien ou G de présentation finie sur S. Alors pour tout \\(s \\in S\\) tel que \\((H_1)_s = (H_2)_s\\), il existe un voisinage ouvert U de s tel que \\(H_1|_U = H_2|_U\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.5.3bis",
+     "type": "corollaire",
+     "label": "5.3 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.5.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.3 bis</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions précédentes, supposons de plus G séparé sur S. Soit U l'ensemble des \\(s \\in S\\) tels que \\((H_1)_s = (H_2)_s\\). Alors U est une partie de S ouverte et fermée, et \\(H_1|_U = H_2|_U\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.5.4bis",
+     "type": "corollaire",
+     "label": "5.4 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.5.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.4 bis</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un préschéma en groupes séparé et de présentation finie sur S, \\(S' \\to S\\) un morphisme couvrant pour la topologie fidèlement plate quasi-compacte, et à fibres géométriquement connexes, H′ un sous-groupe de type multiplicatif et de type fini de \\(G' = G \\times_S S'\\).</p>\n  <p>Alors il existe un unique sous-groupe H de G tel que \\(H' = H \\times_S S'\\), et H est de type multiplicatif et de type fini sur S, d'après <a class=\"ref\" href=\"#IX.1.1\">1.1</a> et <a class=\"ref\" href=\"#IX.2.1\">2.1 b)</a>. Si \\(S' \\to S\\) admet une section g, alors H est l'image inverse du sous-groupe H′ de G′ par \\(g : S \\to S'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.5.6",
+     "type": "theoreme",
+     "label": "5.6",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, \\(u : H \\to G\\) un homomorphisme de S-préschémas en groupes, avec H de type multiplicatif et de type fini, G de présentation finie sur S.</p>\n  <p>a) Supposons G à fibres connexes, et soit \\(s \\in S\\) tel que \\(u_s : H_s \\to G_s\\) soit un homomorphisme central. Alors il existe un voisinage ouvert U de s tel que l'homomorphisme \\(H|_U \\to G|_U\\) induit par u soit central.</p>\n  <p>b) Supposons que pour tout \\(s \\in S\\), \\(u_s : H_s \\to G_s\\) soit central. Alors u est central.<sup class=\"footnote-ref\"><a id=\"IX-fn37ref\" href=\"#IX-fn37\">37</a></sup></p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons (a). En procédant exactement comme dans la preuve de <a class=\"ref\" href=\"#IX.5.1\">5.1 (b)</a>, on peut supposer S local de point fermé s, puis \\(H = \\mathbf{D}_S(M)\\) diagonalisable, puis qu'il existe une sous-\\(\\mathbb{Z}\\)-algèbre de type fini \\(A_i\\) de \\(A = \\mathscr{O}_{S,s}\\) et un morphisme \\(u_i : \\mathbf{D}_{S_i}(M) \\to G_i\\) tel que \\(u_{s_i}\\) soit central (où \\(s_i\\) est l'image de s dans \\(S_i\\)) et dont u provienne par changement de base. Ceci nous ramène au cas où S est local noethérien, de point fermé s, et on doit alors prouver que u est central.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit K le sous-préschéma \\(\\mathrm{Ker}(v,w)\\), où \\(v, w : H \\times_S G \\rightrightarrows G\\) sont définis par\n\\[\nv(h,g) = g, \\qquad w(h,g) = \\mathrm{int}(u(h)) \\cdot g = u(h)\\, g\\, u(h)^{-1}.\n\\]\nAlors K est un sous-G-groupe du G-groupe \\(H_G = H \\times_S G\\), on veut montrer qu'il est égal à \\(H_G\\) lui-même. En vertu de <a class=\"ref\" href=\"#IX.4.9\">4.9</a> on est ramené à prouver qu'il majore les \\({}_m(H_G) = ({}_m H) \\times_S G\\) pour tout entier \\(m &gt; 0\\), ce qui nous ramène au cas où \\(H = {}_m H\\) donc H fini sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit e l'élément unité de la fibre \\(G_s\\), alors \\(S' = \\mathrm{Spec}(\\mathscr{O}_{G,e})\\) est un schéma local noethérien (G étant de présentation finie sur S noethérien) ; posons \\(S'_n = S' \\times_S S_n\\), où \\(S_n = \\mathrm{Spec}(A/\\mathfrak{m}^{n+1})\\). Alors \\(K_{S'} = K \\times_G S'\\) est un sous-préschéma de \\(H_{S'} = H \\times_S S'\\) et, d'après <a class=\"ref\" href=\"#IX.3.9\">3.9</a>, on a \\(K_{S'_n} = H_{S'_n}\\) pour tout n.<sup class=\"footnote-ref\"><a id=\"IX-fn38ref\" href=\"#IX-fn38\">38</a></sup> Comme \\(H_{S'}\\) est fini sur S′, on conclut de <a class=\"ref\" href=\"#IX.5.0\">5.0</a> (appliqué à l'anneau local noethérien B) que \\(K_{S'} = H_{S'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part, comme \\(H \\times_S G\\) est noethérien (étant de présentation finie sur S noethérien), l'immersion \\(K \\hookrightarrow H \\times_S G\\) est de type fini (cf. EGA I, 6.3.5), de sorte que K est de type fini, donc de présentation finie sur G. Alors l'égalité \\(K_{S'} = H_G \\times_G S'\\) entraîne, d'après EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2.4, qu'il existe un voisinage ouvert W de e dans G tel que \\(K \\times_G W = H_G \\times_G W = H \\times_S W\\). Donc K majore le voisinage ouvert \\(V = H \\times_S W\\) de la section unité de \\(G_H\\) sur H.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(t \\in H\\), la fibre \\(G_t\\) (étant un \\(\\kappa(t)\\)-groupe algébrique) est de Cohen-Macaulay (<a class=\"ref\" href=\"#VIA.1.1.1\">VI<sub>A</sub>, 1.1.1</a>) donc sans composantes immergées, comme elle est de plus connexe, donc irréductible (<a class=\"ref\" href=\"#VIA.2.4\">VI<sub>A</sub>, 2.4</a>), elle a pour unique point associé son point générique. Donc, d'après EGA <span style=\"white-space:nowrap\">IV<sub>2</sub></span>, 3.1.8, l'ouvert \\(V_t\\) est schématiquement dense dans \\(G_t\\). En vertu de <a class=\"ref\" href=\"#IX.4.3\">4.3</a>, V est donc schématiquement dense dans \\(G_H\\). De plus, comme K est un sous-H-groupe de \\(G_H\\), il induit sur chaque fibre \\(G_h\\) un sous-groupe \\(K_h\\), et comme ce dernier majore un voisinage ouvert de l'élément neutre et que \\(G_h\\) est connexe, il s'ensuit que \\(K_h = G_h\\) d'où \\(K = G_H\\) ensemblistement. Ainsi, K est un sous-préschéma <em>fermé</em> de \\(G_H\\) qui majore le sous-préschéma schématiquement dense V, donc \\(K = G_H\\), ce qui prouve a).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, b) est une conséquence directe de <a class=\"ref\" href=\"#IX.3.9\">3.9</a>, compte tenu que pour vérifier qu'un sous-préschéma K de \\(P = G \\times_S H\\) est identique à P, il suffit de vérifier que pour tout changement de base \\(S' \\to S\\), où S′ est un quotient artinien d'un anneau local de S, on a \\(K' = P'\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn27",
+     "number": "27",
+     "html": "N.D.E. : On a explicité ce lemme, utilisé à plusieurs reprises dans la suite (de façon implicite dans l'original)."
+    },
+    {
+     "id": "IX-fn28",
+     "number": "28",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn29",
+     "number": "29",
+     "html": "N.D.E. : Car \\(K = H\\) si \\(K_{\\widehat{S}} = H_{\\widehat{S}}\\), cf. SGA 1, VIII 5.4 ; mais la suite n'utilise pas l'hypothèse « A complet »."
+    },
+    {
+     "id": "IX-fn30",
+     "number": "30",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn31",
+     "number": "31",
+     "html": "N.D.E. : et de présentation finie sur S, cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 11.10.5 (ii) et 11.9.10 (ii)."
+    },
+    {
+     "id": "IX-fn32",
+     "number": "32",
+     "html": "N.D.E. : On a remplacé « morphisme couvrant pour la topologie fidèlement plate et quasi-compacte » par « épimorphisme effectif universel », afin de pouvoir appliquer ceci au morphisme K → S de 5.5, et l'on a modifié en conséquence le début de la démonstration."
+    },
+    {
+     "id": "IX-fn33",
+     "number": "33",
+     "html": "N.D.E. : Ceci est le cas, par exemple, si \\(S = \\mathrm{Spec}\\,k\\) et \\(S' = \\mathrm{Spec}\\,k'\\), où k est un corps et k′ une extension radicielle de k, cf. X, Prop. 1.4."
+    },
+    {
+     "id": "IX-fn34",
+     "number": "34",
+     "html": "N.D.E. : On a ajouté la phrase qui suit."
+    },
+    {
+     "id": "IX-fn35",
+     "number": "35",
+     "html": "N.D.E. : On a ajouté l'hypothèse « localement de type fini » pour être en accord avec la référence VI<sub>A</sub>, 2.4. En fait, on peut montrer que sur un corps, tout schéma en groupes connexe est géométriquement connexe."
+    },
+    {
+     "id": "IX-fn36",
+     "number": "36",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit."
+    },
+    {
+     "id": "IX-fn37",
+     "number": "37",
+     "html": "N.D.E. : On a détaillé l'original dans la preuve de a)."
+    },
+    {
+     "id": "IX-fn38",
+     "number": "38",
+     "html": "N.D.E. : On a détaillé et corrigé l'original, en remplaçant « section unité de \\((\\mathrm{G}_H)_n\\) sur \\(\\mathrm{H}_n\\) » par \\(\\mathrm{H}_{S'_n}\\)."
+    }
+   ]
+  },
+  {
+   "id": "IX-6",
+   "title": "6. Monomorphismes des groupes de type multiplicatif, et factorisation canonique d'un homomorphisme d'un tel groupe",
+   "blocks": [
+    {
+     "id": "IX.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.6\">6. Monomorphismes des groupes de type multiplicatif, et factorisation canonique d'un homomorphisme d'un tel groupe</h2>"
+    },
+    {
+     "id": "IX.6.1",
+     "type": "lemme",
+     "label": "6.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma quasi-compact, G un S-préschéma en groupes commutatif, de présentation finie et quasi-fini sur S. Alors il existe un entier \\(n &gt; 0\\) tel que \\(n \\cdot \\mathrm{id}_G = 0\\), i.e. \\(G = {}_n G\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si S est le spectre d'un corps k, alors G est fini sur k, et d'après <a class=\"ref\" href=\"#VIIA.8.5\">VII<sub>A</sub> 8.5</a>, il suffit de prendre \\(n = \\deg(G/k)\\). Supposons maintenant \\(S = \\mathrm{Spec}(A)\\) local artinien, soient k le corps résiduel de A, \\(G_0 = G \\otimes_A k\\), et \\(n_0 = \\deg(G_0/k)\\). Distinguons deux cas.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) k est de caractéristique nulle. Alors \\(G_0\\) est séparable sur k, donc G est non ramifié sur S. Alors la section unité de G est une immersion ouverte, donc \\({}_n G = \\mathrm{Ker}(n \\cdot \\mathrm{id}_G)\\) est un sous-schéma ouvert de G, donc pour qu'il soit égal à G, il suffit qu'il le soit ensemblistement, on peut donc alors prendre \\(n = n_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) k est de caractéristique \\(p &gt; 0\\). Notons \\(\\mathfrak{m}\\) l'idéal maximal de A et \\(S_r = \\mathrm{Spec}(A/\\mathfrak{m}^{r+1})\\) pour tout r. Soit m un entier tel que \\(\\mathfrak{m}^{m+1} = 0\\), je dis qu'on peut prendre \\(n = p^m n_0\\). En effet, procédant par récurrence sur m, et posant \\(n' = p^{m-1} n_0\\), on peut supposer que \\(n' \\cdot \\mathrm{id}_G\\) induit dans \\(G_{m-1} = G \\times_S S_{m-1}\\) l'endomorphisme nul.<sup class=\"footnote-ref\"><a id=\"IX-fn39ref\" href=\"#IX-fn39\">39</a></sup> Notons E l'ensemble des endomorphismes u de G qui ont cette propriété et K le noyau du morphisme de foncteurs en groupes \\(G \\to \\prod_{S_{m-1}/S} G\\) (cf. <a class=\"ref\" href=\"#III.0.1.2\">III 0.1.2</a>). Alors E s'identifie à \\(\\mathrm{Hom}_{S\\text{-gr.}}(G,K)\\) ; en particulier la loi de groupe abélien sur E est induite par celle de K. Or, d'après <a class=\"ref\" href=\"#III.0.9\">III 0.9</a>, K est le S-foncteur en groupes qui à tout \\(g : T \\to S\\) associe le k-espace vectoriel\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_{T_0}}\\big(g_0^*(\\Omega^1_{G_0/S_0}), \\mathfrak{m}^m \\mathscr{O}_T\\big)\\,;\n\\]\non a donc \\(p u = 0\\) pour tout \\(u \\in E\\). Donc on a \\(p n' \\cdot \\mathrm{id}_G = 0\\), i.e. \\(p^m n_0 \\cdot \\mathrm{id}_G = 0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant S noethérien (on s'y ramène dans <a class=\"ref\" href=\"#IX.6.1\">6.1</a> par la réduction habituelle au cas noethérien<sup class=\"footnote-ref\"><a id=\"IX-fn40ref\" href=\"#IX-fn40\">40</a></sup>). Il suffit alors de conjuguer ce qui précède et le</p>"
+    },
+    {
+     "id": "IX.6.2",
+     "type": "lemme",
+     "label": "6.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient X un préschéma quasi-fini au-dessus de S noethérien, et considérons une famille filtrante croissante de sous-préschémas \\((X^i)_{i \\in I}\\), ayant la propriété suivante :</p>\n  <p style=\"margin-left:2em;\">pour tout \\(s \\in S\\) et \\(n \\geqslant 0\\), posant \\(S_{s,n} = \\mathrm{Spec}(\\mathscr{O}_{S,s}/\\mathfrak{m}^{n+1})\\), il existe un \\(i \\in I\\) tel que \\(X^i \\times_S S_{s,n} = X \\times_S S_{s,n}\\).</p>\n  <p>Sous ces conditions, il existe un \\(i \\in I\\), tel que \\(X^i = X\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme S est noethérien, il existe un ouvert U <em>maximal</em> tel que l'on ait \\(X|_U = X^i|_U\\) pour i grand, on va montrer que \\(U = S\\). En d'autres termes, on va montrer que si \\(U \\neq S\\), on peut trouver un U′ strictement plus grand que U, et un i tel que \\(X|_{U'} = X^i|_{U'}\\). Localisant en un point maximal s de \\(S - U\\), on est ramené au cas où S est local de point fermé s, et \\(U = S - \\{s\\}\\). (En effet, si l'on note \\(S' = \\mathrm{Spec}(\\mathscr{O}_{S,s})\\) et s'il existe un i tel que \\(X \\times_S S' = X^i \\times_S S'\\) alors,<sup class=\"footnote-ref\"><a id=\"IX-fn41ref\" href=\"#IX-fn41\">41</a></sup> il existe un voisinage ouvert V de s tel que \\(X|_V = X^i|_V\\), donc en prenant i assez grand pour que \\(X^i|_U = X|_U\\), on aura \\(X|_W = X^i|_W\\), où \\(W = U \\cup V\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Alors, pour i grand, comme \\(X|_U = X^i|_U\\) on voit que \\(X^i\\) est un sous-préschéma fermé de X défini par un idéal \\(\\mathscr{I}^{(i)}\\) de support contenu dans \\(X_s = X_0 = X \\times_S S_0\\) (où \\(S_n = \\mathrm{Spec}(A/\\mathfrak{m}^{n+1})\\), \\(S = \\mathrm{Spec}(A)\\)). Comme \\(X_0\\) est quasi-fini sur \\(S_0\\), \\(X_0\\) est une partie fermée finie de X noethérien, donc \\(\\mathscr{I}^{(i)}\\) est un module de <em>longueur finie</em>. Il s'ensuit qu'il existe un entier \\(n \\geqslant 0\\) tel que \\(\\mathscr{I}^{(i)} \\cap \\mathfrak{m}^{n+1}\\mathscr{O}_X = 0\\). D'autre part, en vertu de l'hypothèse dans <a class=\"ref\" href=\"#IX.6.2\">6.2</a>, on peut supposer (à condition d'augmenter i) que l'image de \\(\\mathscr{I}^{(i)}\\) dans \\(\\mathscr{O}_{X_n} = \\mathscr{O}_X/\\mathfrak{m}^{n+1}\\mathscr{O}_X\\) est nulle. Cela implique \\(\\mathscr{I}^{(i)} = 0\\) donc \\(X^i = X\\). C.Q.F.D.</p>"
+    },
+    {
+     "id": "IX.6.3",
+     "type": "lemme",
+     "label": "6.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, K un préschéma en groupes sur S, localement de présentation finie, \\(s \\in S\\) tel que \\(K_s\\) soit quasi-fini (resp. non ramifié) sur \\(\\kappa(s)\\) en l'élément unité. Alors il existe un voisinage ouvert U de s tel que \\(K|_U\\) soit localement quasi-fini (resp. non ramifié) sur U.<sup class=\"footnote-ref\"><a id=\"IX-fn-s2ref\" href=\"#IX-fn-s2\">*</a></sup></p>\n  <p>Soit en effet V l'ensemble des points x de K tels que, notant t l'image de x dans S, la fibre \\(K_t\\) soit quasi-finie (resp. non ramifiée) sur \\(\\kappa(t)\\) en x, i.e. tel que x soit isolé dans \\(K_t\\) (resp. et son anneau local dans \\(K_t\\) une extension séparable de \\(\\kappa(t)\\)). On sait que V est ouvert puisque K est localement de présentation finie sur S,<sup class=\"footnote-ref\"><a id=\"IX-fn42ref\" href=\"#IX-fn42\">42</a></sup> donc si \\(\\varepsilon\\) désigne la section unité de K, \\(\\varepsilon^{-1}(V)\\) est ouvert. Par hypothèse il contient s, donc c'est un voisinage ouvert U de s. Ce dernier fait l'affaire, en d'autres termes \\(t \\in U\\) implique que \\(K_t\\) est localement quasi-fini (resp. non ramifié) sur \\(\\kappa(t)\\) : en effet, comme \\(K_t\\) est un groupe localement de type fini sur \\(\\kappa(t)\\), cela résulte du fait qu'il est quasi-fini (resp. non ramifié) sur \\(\\kappa(t)\\) au point \\(\\varepsilon(t)\\), cf. <a class=\"ref\" href=\"#VIB.1.3\">VI<sub>B</sub> 1.3</a>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Combinant <a class=\"ref\" href=\"#IX.6.1\">6.1</a> et <a class=\"ref\" href=\"#IX.6.3\">6.3</a>, on trouve le</p>"
+    },
+    {
+     "id": "IX.6.4",
+     "type": "theoreme",
+     "label": "6.4",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.4</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, H un S-groupe de type multiplicatif et de type fini, K un sous-préschéma en groupes fermé, de présentation finie sur S. Soit \\(s \\in S\\) tel que \\(K_s\\) soit fini.</p>\n  <p>Alors il existe un voisinage ouvert U de s tel que \\(K|_U\\) soit contenu dans \\({}_n H|_U\\) pour un certain n, et a fortiori (\\({}_n H\\) étant fini sur S) tel que \\(K|_U\\) soit fini sur U.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisant le lemme de Nakayama, on en déduit :</p>"
+    },
+    {
+     "id": "IX.6.5",
+     "type": "corollaire",
+     "label": "6.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.6.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.5</span></div>\n  <div class=\"thm-body\"><p>Avec les notations précédentes, supposons que \\(K_s\\) soit le groupe unité. Alors il existe un voisinage ouvert U de s tel que \\(K|_U\\) soit le groupe unité.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.6.6",
+     "type": "corollaire",
+     "label": "6.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.6</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : H \\to G\\) un homomorphisme de S-préschémas en groupes, avec H de type multiplicatif et de type fini, et G séparé sur S. On suppose de plus S localement noethérien, ou G localement de présentation finie<sup class=\"footnote-ref\"><a id=\"IX-fn43ref\" href=\"#IX-fn43\">43</a></sup> sur S.</p>\n  <p>Soit \\(s \\in S\\) tel que \\(u_s : H_s \\to G_s\\) soit un monomorphisme, alors il existe un voisinage ouvert U de s tel que u induise un monomorphisme \\(H|_U \\to G|_U\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit en effet \\(K = \\mathrm{Ker}(u)\\), l'hypothèse sur \\(u_s\\) signifie que \\(K_s\\) est le groupe unité, la conclusion que \\(K|_U\\) est le groupe unité, pour U convenable. Or G étant séparé sur S, K est un sous-groupe fermé de H, et dans le cas où on ne suppose pas S localement noethérien mais en revanche G localement de présentation finie sur S, K est localement de présentation finie sur S<sup class=\"footnote-ref\"><a id=\"IX-fn43ref\" href=\"#IX-fn43\">43</a></sup>, donc de présentation finie sur S puisqu'il est séparé sur S (H l'étant) et quasi-compact sur S (étant fermé dans H qui est quasi-compact sur S). On peut donc appliquer <a class=\"ref\" href=\"#IX.6.5\">6.5</a>, d'où <a class=\"ref\" href=\"#IX.6.6\">6.6</a>.</p>"
+    },
+    {
+     "id": "IX.6.6.1",
+     "type": "remarque",
+     "label": "6.6.1",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.6.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">6.6.1</span></div>\n  <div class=\"thm-body\"><p><sup class=\"footnote-ref\"><a id=\"IX-fn44ref\" href=\"#IX-fn44\">44</a></sup> Sous les hypothèses de <a class=\"ref\" href=\"#IX.6.6\">6.6</a>, on notera que lorsque de plus G est affine sur S (resp. de présentation finie sur S), \\(H|_U \\to G|_U\\) est même une <em>immersion fermée</em>, comme on l'a signalé dans <a class=\"ref\" href=\"#IX.2.5\">2.5</a> (resp. <a class=\"ref\" href=\"#IX.2.6\">2.6</a>).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.6.7",
+     "type": "corollaire",
+     "label": "6.7",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.6.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : H \\to G\\) un homomorphisme de S-préschémas en groupes, avec H de type multiplicatif et de type fini ; on suppose S localement noethérien ou G localement de présentation finie sur S.</p>\n  <p>Si tous les homomorphismes induits sur les fibres \\(u_s : H_s \\to G_s\\) sont des monomorphismes, alors u est un monomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le raisonnement est le même que dans <a class=\"ref\" href=\"#IX.6.6\">6.6</a>, l'hypothèse que G soit séparé sur S étant ici inutile pour assurer que K est fermé dans H, puisque l'hypothèse que les \\(u_s\\) sont des monomorphismes implique que K est réduit ensemblistement à la section unité de G.</p>"
+    },
+    {
+     "id": "IX.6.8",
+     "type": "theoreme",
+     "label": "6.8",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.8</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(u : H \\to G\\) un homomorphisme de S-préschémas en groupes, avec H de type multiplicatif et de type fini, et G séparé sur S. On suppose de plus S localement noethérien ou G de présentation finie sur S.</p>\n  <p>Alors \\(K = \\mathrm{Ker}(u)\\) est un sous-groupe de type multiplicatif et de type fini de H, et u se factorise en\n  \\[\n  H \\xrightarrow{\\ u'\\ } H/K \\xrightarrow{\\ u''\\ } G,\n  \\]\n  où H/K est de type multiplicatif et de type fini, \\(u'\\) est l'homomorphisme canonique et est fidèlement plat (et affine), et \\(u''\\) est un monomorphisme.</p>\n  <p>(N.B. Comme remarqué en <a class=\"ref\" href=\"#IX.6.6.1\">6.6.1</a>, \\(u''\\) est une immersion fermée si G est affine sur S ou de présentation finie sur S). Il suffit de prouver que K est de type multiplicatif, le reste de la proposition résultant alors de <a class=\"ref\" href=\"#IX.2.7\">2.7</a> et <a class=\"ref\" href=\"#IV.5.2.6\">IV 5.2.6</a>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons d'abord G de présentation finie sur S. Cette hypothèse étant stable par changement de base, on est ramené pour prouver que K est de type multiplicatif, au cas où H est diagonalisable, i.e. \\(H = \\mathbf{D}_S(M)\\), où M est un groupe commutatif de type fini. Soit \\(s \\in S\\), alors \\(K_s\\) est un sous-groupe fermé de \\(H_s = \\mathbf{D}_{\\kappa(s)}(M)\\), donc en vertu de <a class=\"ref\" href=\"#IX.8.1\">8.1</a><sup class=\"footnote-ref\"><a id=\"IX-fn45ref\" href=\"#IX-fn45\">45</a></sup> est de la forme \\(\\mathbf{D}_{\\kappa(s)}(N)\\), où N est un groupe quotient de M. Posons \\(K' = \\mathbf{D}_S(N)\\), alors K′ est un sous-groupe de type multiplicatif de H, soit \\(v' : K' \\to G\\) induit par u.<sup class=\"footnote-ref\"><a id=\"IX-fn46ref\" href=\"#IX-fn46\">46</a></sup> Alors \\(v'_s\\) est l'homomorphisme unité par construction, donc en vertu de <a class=\"ref\" href=\"#IX.5.2\">5.2</a> il existe un voisinage ouvert U de s tel que \\(v'|_U : K'|_U \\to G|_U\\) soit l'homomorphisme unité. Donc quitte à remplacer S par U, on peut supposer que \\(v'\\) est l'homomorphisme unité, donc que u se factorise en\n\\[\nH \\xrightarrow{\\ u'\\ } H/K' \\xrightarrow{\\ u''\\ } G.\n\\]\nOr, puisque \\(u''_s\\) est déduit de \\(u_s\\) en factorisant à travers \\(H_s \\to H_s/\\mathrm{Ker}(u_s)\\), alors \\(u''_s\\) est un monomorphisme (<a class=\"ref\" href=\"#IV.5.2.6\">IV 5.2.6</a>), donc en vertu de <a class=\"ref\" href=\"#IX.6.6\">6.6</a> il existe un voisinage ouvert U de s tel que \\(u''|_U : (H/K')|_U \\to G|_U\\) soit un monomorphisme. Donc quitte à restreindre S, on voit que \\(u''\\) est un monomorphisme, donc \\(\\mathrm{Ker}(u) = \\mathrm{Ker}(u') = K'\\), ce qui prouve que \\(\\mathrm{Ker}\\, u\\) est de type multiplicatif.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La même démonstration est valable si, au lieu de supposer G de présentation finie sur S, on suppose S localement noethérien, du moins dans le cas où H est diagonalisable. Dans le cas où on ne fait pas cette hypothèse sur H, il faut montrer que l'on peut trouver un changement de base couvrant \\(S' \\to S\\), avec S′ localement noethérien, qui trivialise H. C'est ce qu'on verra en effet dans l'exposé suivant (<a class=\"ref\" href=\"#X.4.6\">X 4.6</a>).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn39",
+     "number": "39",
+     "html": "N.D.E. : On a détaillé l'original dans ce qui suit, en précisant les résultats de l'Exp. III qu'on utilise."
+    },
+    {
+     "id": "IX-fn40",
+     "number": "40",
+     "html": "N.D.E. : Comme S est quasi-compact, il est recouvert par un nombre fini d'ouverts affines, donc on est ramené au cas où \\(S = \\mathrm{Spec}(A)\\). Alors, comme G est de présentation finie sur S, on peut appliquer EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2."
+    },
+    {
+     "id": "IX-fn41",
+     "number": "41",
+     "html": "N.D.E. : On a corrigé plus haut \\(X - \\{s\\}\\) en \\(S - \\{s\\}\\). D'autre part, on rappelle qu'un morphisme quasi-fini est aussi supposé de type fini, cf. EGA II, 6.2.3 (et EGA <span style=\"white-space:nowrap\">III<sub>2</sub></span>, Err<sub>III</sub> 20 pour la définition de « localement quasi-fini »). Donc ici (S étant noethérien), X est de présentation finie sur S, chaque immersion \\(X^i \\hookrightarrow X\\) est de type fini (d'après EGA I, 6.3.5), donc \\(X^i\\) est de présentation finie sur S, et l'on peut appliquer EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 8.8.2."
+    },
+    {
+     "id": "IX-fn-s2",
+     "number": "*",
+     "html": "N.D.E. : cf. VI<sub>B</sub> 2.5 (ii) pour un énoncé plus général."
+    },
+    {
+     "id": "IX-fn42",
+     "number": "42",
+     "html": "N.D.E. : cf. EGA <span style=\"white-space:nowrap\">IV<sub>3</sub></span>, 13.1.4, et EGA <span style=\"white-space:nowrap\">IV<sub>4</sub></span>, 17.4.1. Par ailleurs, on a noté t (au lieu de s) l'image de x."
+    },
+    {
+     "id": "IX-fn43",
+     "number": "43",
+     "html": "N.D.E. : Il suffit en fait de supposer G <em>localement de type fini</em> sur S ; d'après EGA <span style=\"white-space:nowrap\">IV<sub>4</sub></span>, 1.4.3 (v), ceci entraîne (H → S étant de présentation finie) que H → G est localement de présentation finie, donc aussi K → S qui s'en déduit par changement de base."
+    },
+    {
+     "id": "IX-fn44",
+     "number": "44",
+     "html": "N.D.E. : On a ajouté la numérotation 6.6.1, pour des références ultérieures."
+    },
+    {
+     "id": "IX-fn45",
+     "number": "45",
+     "html": "N.D.E. : On a corrigé la référence erronée à IV 4.7.5. Noter que le n° 8 du présent exposé est indépendant des n<sup>os</sup> 2 à 7."
+    },
+    {
+     "id": "IX-fn46",
+     "number": "46",
+     "html": "N.D.E. : On a corrigé « induit par G » en « induit par u »."
+    }
+   ]
+  },
+  {
+   "id": "IX-7",
+   "title": "7. Algébricité des homomorphismes formels dans un groupe affine",
+   "blocks": [
+    {
+     "id": "IX.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.7\">7. Algébricité des homomorphismes formels dans un groupe affine</h2>"
+    },
+    {
+     "id": "IX.7.1",
+     "type": "theoreme",
+     "label": "7.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.7.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">7.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient A un anneau noethérien, muni d'un idéal I tel que A soit séparé et complet pour la topologie I-adique, \\(S = \\mathrm{Spec}(A)\\), \\(S_n = \\mathrm{Spec}(A/I^{n+1})\\), H, G des S-préschémas en groupes, avec H de type multiplicatif isotrivial, et G affine.</p>\n  <p>Alors l'application canonique\n  \\[\n  \\theta : \\mathrm{Hom}_{S\\text{-gr.}}(H,G) \\longrightarrow \\varprojlim_n \\mathrm{Hom}_{S_n\\text{-gr.}}(H_n,G_n) \\qquad (\\mathrm{x})\n  \\]\n  est bijective (où \\(H_n, G_n\\) sont les \\(S_n\\)-groupes déduits de H, G par le changement de base \\(S_n \\to S\\)).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons d'abord H diagonalisable, donc de la forme\n\\[\nH = \\mathrm{Spec}\\big(A^{(M)}\\big),\n\\]\noù \\(B = A^{(M)}\\) est l'algèbre du groupe commutatif M à coefficients dans A. On a aussi \\(G = \\mathrm{Spec}(C)\\), où C est une A-algèbre munie d'une application diagonale (satisfaisant aux axiomes connus). Alors les homomorphismes de S-groupes \\(H \\to G\\) correspondent bijectivement aux homomorphismes de A-algèbres \\(\\varphi : C \\to B\\) compatibles avec les applications diagonales, i.e. tels que, pour tout \\(f \\in C\\),\n\\[\n\\Delta_H(\\varphi(f)) = (\\varphi \\otimes \\varphi)(\\Delta_G(f))\n\\]\noù \\(\\Delta_H\\) et \\(\\Delta_G\\) sont les applications diagonales. On a une description analogue pour les homomorphismes de \\(S_n\\)-groupes \\(H_n \\to G_n\\), définis par certains homomorphismes de \\(A_n\\)-algèbres \\(\\varphi_n : C_n \\to B_n\\) (où on pose \\(A_n = A/I^{n+1}\\), \\(B_n = B \\otimes_A A_n\\), \\(C_n = C \\otimes_A A_n\\)). Posons\n\\[\n\\widehat{B} = \\varprojlim_n B_n \\qquad \\text{et} \\qquad \\widehat{C} = \\varprojlim_n C_n\\,,\n\\]\nalors \\(\\widehat{B} = \\varprojlim_n A_n^{(M)}\\) s'identifie à un sous-module du produit \\(A^M\\) (à savoir celui formé des familles \\((a_m)_{m \\in M}\\) d'éléments de A qui tendent vers 0 (pour la topologie I-adique) suivant le filtre des complémentaires des parties finies de M). Ceci implique déjà que l'homomorphisme canonique \\(B \\to \\widehat{B}\\) est injectif,<sup class=\"footnote-ref\"><a id=\"IX-fn47ref\" href=\"#IX-fn47\">47</a></sup> puisque le système projectif \\(\\theta(\\varphi) = (\\varphi_n)_{n \\geqslant 0}\\) définit un homomorphisme \\(\\widehat{\\varphi} : \\widehat{C} \\to \\widehat{B}\\) tel que le diagramme ci-dessous soit commutatif :\n\\[\n\\xymatrix{\nC \\ar[r]^{\\varphi} \\ar[d] &amp; B \\ar[d] \\\\\n\\widehat{C} \\ar[r]^{\\widehat{\\varphi}} &amp; \\widehat{B}\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons que \\(\\theta\\) est surjectif : prenons un système projectif \\((\\varphi_n)_{n \\geqslant 0}\\) et prouvons qu'il provient par réduction d'un \\(\\varphi\\) du premier membre. A priori, \\((\\varphi_n)\\) définit un homomorphisme sur les algèbres complétées\n\\[\n\\widehat{\\varphi} : \\widehat{C} \\longrightarrow \\widehat{B},\n\\]\net tout revient à voir que son composé \\(\\Phi : C \\to \\widehat{C} \\xrightarrow{\\widehat{\\varphi}} \\widehat{B}\\) avec l'homomorphisme canonique \\(C \\to \\widehat{C}\\) applique C dans B. En effet, s'il en est ainsi, on trouve un homomorphisme de A-algèbres \\(\\varphi : C \\to B\\), se réduisant suivant les \\(\\varphi_n\\), d'où on conclut aussitôt qu'il est compatible avec les applications diagonales (puisque les \\(\\varphi_n\\) le sont, et que \\(B \\otimes_A B \\to \\widehat{B \\otimes_A B}\\) est injectif, comme on voit comme ci-dessus en remplaçant M par \\(M \\times M\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons que l'homomorphisme diagonal \\(\\Delta_H\\) de H définit en passant aux complétés un homomorphisme\n\\[\n\\widehat{\\Delta}_H : \\widehat{B} \\longrightarrow \\widehat{B \\otimes_A B},\n\\]\net on a un diagramme commutatif (déduit par passage à la limite projective des diagrammes analogues définis par les \\(\\varphi_n\\)) :\n\\[\n\\xymatrix{\nC \\ar[r]^{\\Phi} \\ar[d]_{\\Delta_G} &amp; \\widehat{B} \\ar[d]^{\\widehat{\\Delta}_H} \\\\\nC \\otimes_A C \\ar[r]^{\\Psi} &amp; \\widehat{B \\otimes_A B}\n}\n\\]\noù \\(\\Psi\\) est le composé\n\\[\nC \\otimes_A C \\xrightarrow{\\ \\Phi \\otimes \\Phi\\ } \\widehat{B} \\otimes_A \\widehat{B} \\longrightarrow \\widehat{B \\otimes_A B}\n\\]\n(la dernière flèche est l'homomorphisme canonique évident). Il s'ensuit que pour tout \\(f \\in C\\), \\(\\Phi(f)\\) est un élément de \\(\\widehat{B}\\) dont l'image par \\(\\widehat{\\Delta}_H\\) est un élément « décomposable » de \\(\\widehat{B \\otimes_A B}\\), i.e. est dans l'image de \\(\\widehat{B} \\otimes_A \\widehat{B}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons \\((e_m)_{m \\in M}\\) la base canonique de \\(A^{(M)}\\) et \\((e_{m,m'})\\) celle de \\(A^{(M \\times M)} = A^{(M)} \\otimes_A A^{(M)}\\). Comme \\(\\Delta_H(e_m) = e_m \\otimes e_m = e_{m,m}\\) pour tout m, il suffit maintenant d'appliquer le</p>"
+    },
+    {
+     "id": "IX.7.2",
+     "type": "lemme",
+     "label": "7.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"IX.7.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">7.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient A un anneau noethérien, M un ensemble, \\((a_{m,m'})\\) une famille d'éléments de A indexée par \\(M \\times M\\), telle que</p>\n  <p>(i) \\(a_{m,m'} = 0\\) si \\(m \\neq m'\\) (i.e. le support de la famille est contenu dans la diagonale de \\(M \\times M\\)),</p>\n  <p>(ii) On a\n  \\[\n  a_{m,m'} = \\sum_i b^i_m c^i_{m'}\n  \\]\n  où les \\(b^i, c^i\\) sont des éléments de \\(A^M\\) en nombre fini (i.e. \\((a_{m,m'})\\) appartient à l'image de l'homomorphisme canonique \\(A^M \\otimes_A A^M \\to A^{M \\times M}\\)).</p>\n  <p>Sous ces conditions, le support de la famille \\((a_{m,m'})\\) est fini.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu de (i), la famille \\((a_{m,m'})\\) est déterminée par la connaissance des \\(a_m = a_{m,m}\\). Posons pour tout \\(x = (x_m)_{m \\in M} \\in A^{(M)}\\) :\n\\[\n(u \\cdot x)_m = \\sum_{m'} a_{m,m'} x_{m'},\n\\]\ni.e. interprétons \\((a_{m,m'})\\) comme la matrice d'un homomorphisme \\(u : A^{(M)} \\to A^M\\). Alors en vertu de (i) on a simplement\n\\[\n(u \\cdot x)_m = a_m x_m.\n\\]\nD'autre part, en vertu de (ii) on a\n\\[\nu \\cdot x \\in \\sum_i A \\cdot b^i,\n\\]\ndonc \\(u(A^{(M)})\\) reste dans un A-module de type fini. Par suite, désignant par \\((e^m)_{m \\in M}\\) la base canonique de \\(A^{(M)} \\subset A^M\\), les \\(a_m e^m\\) restent dans un A-module de type fini. Comme A est noethérien, le module qu'ils engendrent est lui-même de type fini, ce qui implique (puisque les \\(e^m\\) sont linéairement indépendants) que tous les \\(a_m\\) sauf un nombre fini sont nuls. Cela prouve <a class=\"ref\" href=\"#IX.7.2\">7.2</a> et par suite <a class=\"ref\" href=\"#IX.7.1\">7.1</a> dans le cas où H est diagonalisable.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons maintenant le cas général de <a class=\"ref\" href=\"#IX.7.1\">7.1</a>, où on suppose seulement H isotrivial, i.e. qu'il existe un morphisme fini étale surjectif \\(S' \\to S\\) tel que \\(H' = H \\times_S S'\\) soit diagonalisable. Nous utiliserons seulement le fait que \\(S' \\to S\\) est fini et couvrant (pour la topologie fidèlement plate et quasi compacte, ou simplement pour la topologie canonique de (Sch)) – ainsi l'hypothèse « étale » pourrait être remplacée par « plat ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(S'' = S' \\times_S S'\\), introduisons de même \\(S'_n\\) et \\(S''_n = S'' \\times_S S_n = S'_n \\times_{S_n} S'_n\\), et \\(H', G', H'', G'', H'_n, G'_n, H''_n, G''_n\\) déduits de H et G par les changements de base qu'on devine. Noter que H′ et H″ sont maintenant diagonalisables. Noter aussi que S′ donc S″ est affine, et que si \\(S' = \\mathrm{Spec}(A')\\), \\(S'' = \\mathrm{Spec}(A'')\\), alors A′ et A″ sont séparés et complets pour la topologie définie par \\(IA'\\) resp. par \\(IA''\\) (puisque A′ et A″ sont finis sur A). Comme \\(S' \\to S\\) et \\(S'_n \\to S_n\\) sont couvrants, on obtient un diagramme commutatif d'applications d'ensembles dont les deux lignes sont exactes :\n\\[\n\\xymatrix{\n\\mathrm{Hom}_{S\\text{-gr.}}(H,G) \\ar[d]_{u} \\ar[r] &amp; \\mathrm{Hom}_{S'\\text{-gr.}}(H',G') \\ar[d]_{u'} \\ar@&lt;0.6ex&gt;[r] \\ar@&lt;-0.6ex&gt;[r] &amp; \\mathrm{Hom}_{S''\\text{-gr.}}(H'',G'') \\ar[d]^{u''} \\\\\n\\varprojlim_n \\mathrm{Hom}_{S_n\\text{-gr.}}(H_n,G_n) \\ar[r] &amp; \\varprojlim_n \\mathrm{Hom}_{S'_n\\text{-gr.}}(H'_n,G'_n) \\ar@&lt;0.6ex&gt;[r] \\ar@&lt;-0.6ex&gt;[r] &amp; \\varprojlim_n \\mathrm{Hom}_{S''_n\\text{-gr.}}(H''_n,G''_n)\n}\n\\]\n(N.B. la deuxième ligne est exacte comme limite projective de diagrammes exacts, relatifs aux divers \\(S'_n \\to S_n\\)). D'après ce qu'on a déjà prouvé (cas diagonalisable), \\(u'\\) et \\(u''\\) sont bijectifs. Il en est donc de même de u, ce qui achève la démonstration de <a class=\"ref\" href=\"#IX.7.1\">7.1</a>.</p>"
+    },
+    {
+     "id": "IX.7.3",
+     "type": "corollaire",
+     "label": "7.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.7.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">7.3</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#IX.7.1\">7.1</a>, supposons de plus G lisse sur S, et soit \\(u_0 : H_0 \\to G_0\\) un homomorphisme de \\(S_0\\)-groupes. Alors il existe un homomorphisme de S-groupes \\(u : H \\to G\\) qui relève \\(u_0\\). Deux tels relèvements \\(u, u'\\) sont conjugués par un élément g de \\(G(S)\\) se réduisant suivant l'élément unité de \\(G_0(S_0)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Résulte de la conjonction de <a class=\"ref\" href=\"#IX.3.6\">3.6</a> et de <a class=\"ref\" href=\"#IX.7.1\">7.1</a>. Pour construire un u, on construit de proche en proche des \\(u_n\\), ce qui est possible par <a class=\"ref\" href=\"#IX.3.6\">3.6</a>, et en vertu de <a class=\"ref\" href=\"#IX.7.1\">7.1</a> le système \\((u_n)\\) provient d'un u. Étant donné deux relèvements u et \\(u'\\), pour construire g tel que \\(u' = \\mathrm{int}(g)u\\), \\(g_0 = 1\\), on construit de proche en proche des \\(g_n\\), tels que \\(g_0 = 1\\), \\(g_n\\) se déduit de \\(g_{n+1}\\) par réduction, \\(u'_n = \\mathrm{int}(g_n)u_n\\) ; cela est possible grâce à <a class=\"ref\" href=\"#IX.3.6\">3.6</a>. Comme A est séparé et complet, les \\(g_n\\) proviennent d'un \\(g \\in G(S)\\) et pour prouver que \\(u' = \\mathrm{int}(g)u\\), il suffit d'utiliser l'injectivité dans l'assertion <a class=\"ref\" href=\"#IX.7.1\">7.1</a>.</p>"
+    },
+    {
+     "id": "IX.7.4",
+     "type": "remarque",
+     "label": "7.4",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.7.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">7.4</span></div>\n  <div class=\"thm-body\">\n  <p>On comparera <a class=\"ref\" href=\"#IX.7.1\">7.1</a> avec EGA III 5.4.1, qui implique que l'énoncé <a class=\"ref\" href=\"#IX.7.1\">7.1</a> est valable si, au lieu de supposer H de type multiplicatif et G affine, on suppose H propre sur S, et G séparé et localement de type fini sur S. Le fait d'avoir un énoncé comme <a class=\"ref\" href=\"#IX.7.1\">7.1</a> sans hypothèse de propreté est assez exceptionnel, et doit ici être interprété comme un des aspects de la grande « rigidité » de la structure d'un groupe de type multiplicatif. L'énoncé analogue avec \\(G = H = \\mathbb{G}_a\\) (groupe additif) est faux en général, comme on voit en prenant A de caractéristique \\(p &gt; 0\\), et définissant les \\(u_n\\) par réduction mod \\(I^{n+1}\\) à partir d'une série formelle additive\n  \\[\n  u(\\mathrm{T}) = \\sum_{n \\geqslant 0} a_n \\mathrm{T}^{p^n},\n  \\]\n  où les \\(a_n\\) sont des éléments de A qui tendent vers 0 pour la topologie I-adique, mais non pour la topologie discrète. L'énoncé <a class=\"ref\" href=\"#IX.7.1\">7.1</a> devient faux également si on y supprime l'hypothèse G affine, même pour \\(H = \\mathbb{G}_m\\) (groupe multiplicatif) ; on en voit un exemple (avec A anneau de valuation discrète complet) en partant d'une courbe elliptique sur le corps des fractions K de A, qui se réduit (dans la théorie de réduction de Néron-Kodaira, disons) suivant le groupe \\(\\mathbb{G}_m\\) sur le corps résiduel k :<sup class=\"footnote-ref\"><a id=\"IX-fn48ref\" href=\"#IX-fn48\">48</a></sup> on aura donc un schéma en groupes commutatif lisse G sur S, dont la fibre spéciale est \\(\\mathbb{G}_{m,k}\\) (ce qui permet grâce à <a class=\"ref\" href=\"#IX.3.6\">3.6</a> de définir un système projectif d'isomorphismes \\(u_n : H_n \\xrightarrow{\\ \\sim\\ } G_n\\), où \\(H = \\mathbb{G}_{m,A}\\)), mais dont la fibre générique est une variété abélienne, de sorte qu'il n'existe d'autre homomorphisme de S-groupes \\(H \\to G\\) que 0.</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn47",
+     "number": "47",
+     "html": "N.D.E. : On a détaillé ce qui suit."
+    },
+    {
+     "id": "IX-fn48",
+     "number": "48",
+     "html": "N.D.E. : On pourrait expliciter un tel exemple…"
+    }
+   ]
+  },
+  {
+   "id": "IX-8",
+   "title": "8. Sous-groupes, groupes quotients et extensions de groupes de type multiplicatif sur un corps*",
+   "blocks": [
+    {
+     "id": "IX.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.8\">8. Sous-groupes, groupes quotients et extensions de groupes de type multiplicatif sur un corps<sup class=\"footnote-ref\"><a id=\"IX-fn-s3ref\" href=\"#IX-fn-s3\">*</a></sup></h2>"
+    },
+    {
+     "id": "IX.8.0",
+     "type": "scholie",
+     "label": "8.0",
+     "title": "Scholie",
+     "html": "<div class=\"thm thm-remark scholie\" id=\"IX.8.0\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Scholie</span> <span class=\"thm-num\">8.0</span></div>\n  <div class=\"thm-body\"><p><sup class=\"footnote-ref\"><a id=\"IX-fn49ref\" href=\"#IX-fn49\">49</a></sup> Soient k un corps, H un k-schéma en groupes affine. On note \\(k[H]\\) son algèbre affine et \\(\\mathrm{X}(H) = \\mathrm{Hom}_{k\\text{-gr.}}(H, \\mathbb{G}_{m,k})\\) le groupe des caractères de H. D'après le lemme d'indépendance des caractères, \\(\\mathrm{X}(H)\\) est une partie libre de \\(k[H]\\). Il en résulte que H est diagonalisable si et seulement si \\(\\mathrm{X}(H)\\) engendre \\(k[H]\\) comme k-espace vectoriel.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.8.1",
+     "type": "proposition",
+     "label": "8.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.8.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">8.1</span></div>\n  <div class=\"thm-body\"><p>Soit G un schéma en groupes diagonalisable (resp. de type multiplicatif) sur un corps k<sup class=\"footnote-ref\"><a id=\"IX-fn50ref\" href=\"#IX-fn50\">50</a></sup>. Alors pour tout sous-schéma en groupes H de G, H et G/H sont diagonalisables (resp. de type multiplicatif).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La définition <a class=\"ref\" href=\"#IX.1.1\">1.1</a> nous ramène aussitôt au cas non respé. Un passage à la limite facile, utilisant <a class=\"ref\" href=\"#VIB.11.13\">VI<sub>B</sub> 11.13</a> et <a class=\"ref\" href=\"#VIII.3.1\">VIII 3.1</a>, nous ramène au cas où G est de type fini sur k<sup class=\"footnote-ref\"><a id=\"IX-fn51ref\" href=\"#IX-fn51\">51</a></sup>. En vertu de <a class=\"ref\" href=\"#VIB.11.16\">VI<sub>B</sub> 11.16</a>,<sup class=\"footnote-ref\"><a id=\"IX-fn52ref\" href=\"#IX-fn52\">52</a></sup> on peut trouver une famille finie d'éléments non nuls\n\\[\nf_i = \\sum_m a_{im}\\, m, \\qquad a_{im} \\in k \\qquad (8.1.1)\n\\]\nde l'anneau affine \\(k^{(M)}\\) de \\(G = \\mathbf{D}_k(M)\\), telle que les points de H (à valeurs dans une k-algèbre arbitraire \\(k'\\)) sont les points \\(g \\in G(k')\\) tels que l'on ait\n\\[\n\\tau_g f_i = \\lambda_i(g)\\, f_i, \\qquad \\text{avec } \\lambda_i(g) \\in k' \\qquad (8.1.2)\n\\]\noù \\(\\tau_g\\) désigne la translation par g. Or on a\n\\[\n\\tau_g f_i = \\sum_m a_{im}\\, \\chi_m(g)\\, m \\qquad (8.1.3)\n\\]\n\\(\\chi_m : G \\to \\mathbb{G}_{m,k}\\) étant le caractère associé à m, de sorte que (8.1.2) équivaut à la relation\n\\[\n\\chi_m(g) = \\chi_{m'}(g) \\qquad \\text{si } m, m' \\in \\mathrm{Z}_i, \\qquad (8.1.4)\n\\]\n\\(\\mathrm{Z}_i\\) désignant l'ensemble des \\(m \\in M\\) tels que \\(a_{im} \\neq 0\\). Cette relation peut aussi s'écrire \\(\\chi_{m'-m}(g) = 1\\) si \\(m, m' \\in \\mathrm{Z}_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignant par N le sous-groupe de M engendré par tous les \\(m' - m\\) (i variable, et \\(m, m' \\in \\mathrm{Z}_i\\)), on déduit de la définition de \\(\\mathbf{D}_k(M)\\) (\\(\\simeq\\) G) que H s'identifie à \\(\\mathbf{D}_k(M/N)\\). Il résulte alors de <a class=\"ref\" href=\"#VIII.3.1\">VIII 3.1</a> que G/H s'identifie à \\(\\mathbf{D}_k(N)\\). C.Q.F.D.</p>"
+    },
+    {
+     "id": "IX.8.2",
+     "type": "proposition",
+     "label": "8.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.8.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">8.2</span></div>\n  <div class=\"thm-body\">\n  <p><sup class=\"footnote-ref\"><a id=\"IX-fn53ref\" href=\"#IX-fn53\">53</a></sup> Soient k un corps, H, K des k-schémas en groupes de type multiplicatif et de type fini, et G un k-schéma en groupes tel que l'on ait une suite exacte\n  \\[\n  1 \\longrightarrow H \\longrightarrow G \\longrightarrow K \\longrightarrow 1\n  \\]\n  (ce qui entraîne que G est de type fini sur k).</p>\n  <p>(i) Si on suppose G commutatif ou K connexe, alors G est de type multiplicatif.</p>\n  <p>(ii) Si K et H sont diagonalisables, K étant un tore, alors G est diagonalisable.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la démonstration de (i), le lecteur se reportera à <a class=\"ref\" href=\"#XVII.7.1.1\">XVII 7.1.1</a>, dont 8.2 (i) est un cas particulier ; le cas d'un corps est traité dans la partie (i) de la démonstration de <a class=\"ref\" href=\"#XVII.7.1.1\">XVII 7.1.1</a> (n'utilisant pas les résultats des exposés suivants).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) Supposons maintenant K et H diagonalisables :\n\\[\nK \\simeq \\mathbf{D}_k(M) \\qquad \\text{et} \\qquad H \\simeq \\mathbf{D}_k(N),\n\\]\net supposons G de type multiplicatif (ce qui est le cas d'après (i) si K est un tore). Alors, d'après <a class=\"ref\" href=\"#X.1.4\">X 1.4</a>, G est isotrivial sur k, i.e. il existe une extension finie séparable \\(k'/k\\) telle que \\(G' = G \\times_k k'\\) soit diagonalisable, donc \\(G' = \\mathbf{D}_{k'}(E)\\), pour un groupe commutatif E, et l'on a une suite exacte\n\\[\n0 \\longrightarrow \\mathbf{D}_{k'}(N) \\longrightarrow \\mathbf{D}_{k'}(E) \\longrightarrow \\mathbf{D}_{k'}(M) \\longrightarrow 0. \\qquad (1)\n\\]\nDonc, d'après <a class=\"ref\" href=\"#VIII.3.1\">VIII, 3.1 et 3.2</a>, M est un sous-groupe de E et l'on a une suite exacte\n\\[\n0 \\longrightarrow M \\longrightarrow E \\longrightarrow N \\longrightarrow 0. \\qquad (2)\n\\]\nPour une extension \\(E_0\\) de N par M donnée, considérons le k-groupe diagonalisable \\(G_0 = \\mathbf{D}_k(E_0)\\) ; alors le k-foncteur en groupes A des automorphismes de l'extension\n\\[\n1 \\longrightarrow H \\longrightarrow G_0 \\longrightarrow K \\longrightarrow 1 \\qquad (3)\n\\]\ni.e. le sous-foncteur en groupes de \\(\\underline{\\mathrm{Aut}}_{k\\text{-gr.}}(G_0)\\) dont les points sur un k-préschéma T sont les \\(\\phi \\in \\underline{\\mathrm{Aut}}_{T\\text{-gr.}}(G_{0,T})\\) induisant l'identité sur \\(H_T\\) et sur \\(K_T\\), s'identifie à \\(\\mathrm{Hom}_{k\\text{-gr.}}(K,H)\\), qui est, d'après <a class=\"ref\" href=\"#VIII.1.5\">VIII 1.5</a>, le k-groupe constant de valeur \\(\\mathrm{L} = \\mathrm{Hom}_{\\mathrm{gr.}}(N,M)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit donc que la classification des extensions G de K par H, qui sur une clôture séparable \\(k_s\\) de k deviennent isomorphes à l'extension (3), est la même que celle des k-torseurs pour la topologie étale sous le groupe constant \\(\\mathrm{L}_k\\). Notant \\(\\Gamma = \\mathrm{Gal}(k_s/k)\\), ceux-ci sont classifiés par le groupe de cohomologie galoisienne (L étant un \\(\\Gamma\\)-module trivial) :\n\\[\n\\mathrm{H}^1_{\\text{ét}}(k, \\mathrm{L}_k) = \\mathrm{H}^1(\\Gamma, \\mathrm{L}) = \\mathrm{Hom}_{\\mathrm{gr.\\,top.}}(\\Gamma, \\mathrm{L}).\n\\]\nSi de plus K est un tore, M est sans torsion, donc L aussi, d'où \\(\\mathrm{Hom}_{\\mathrm{gr.\\,top.}}(\\Gamma, \\mathrm{L}) = 0\\) ; il en résulte que toute extension de K par H est déjà diagonalisable.</p>"
+    },
+    {
+     "id": "IX.8.3",
+     "type": "remarque",
+     "label": "8.3",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"IX.8.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">8.3</span></div>\n  <div class=\"thm-body\">\n  <p>Comme on l'a déjà signalé dans la démonstration de <a class=\"ref\" href=\"#IX.8.2\">8.2</a>, la première assertion est énoncée et prouvée sur une base quelconque dans <a class=\"ref\" href=\"#XVII.7.1.1\">XVII 7.1.1</a>. D'autre part, la deuxième assertion se généralise, avec essentiellement la même démonstration, au cas d'un schéma de base intègre normal (ou plus généralement, géométriquement unibranche), en utilisant <a class=\"ref\" href=\"#X.5.13\">X 5.13</a> plus bas.</p>\n  <p>Enfin, on peut aussi considérer <a class=\"ref\" href=\"#IX.8.1\">8.1</a> comme un corollaire du résultat (nettement moins trivial) <a class=\"ref\" href=\"#IX.6.8\">6.8</a>, également valable sur un schéma de base arbitraire.<sup class=\"footnote-ref\"><a id=\"IX-fn54ref\" href=\"#IX-fn54\">54</a></sup></p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn-s3",
+     "number": "*",
+     "html": "N.D.E. : Rajouté en Juillet 1969. Ce numéro-remords est indépendant des n<sup>os</sup> 3 à 7."
+    },
+    {
+     "id": "IX-fn49",
+     "number": "49",
+     "html": "N.D.E. : On a ajouté ce scholie."
+    },
+    {
+     "id": "IX-fn50",
+     "number": "50",
+     "html": "N.D.E. : On a ajouté : « sur un corps k », implicite dans l'original ; d'autre part, on a remplacé « groupe algébrique » par « schéma en groupes », puisque G n'est pas supposé de type fini."
+    },
+    {
+     "id": "IX-fn51",
+     "number": "51",
+     "html": "N.D.E. : Détailler ce « passage à la limite » : ceci utilise 8.0 et aussi l'égalité \\(G/H = \\varprojlim_i G_i/H_i\\), cf. VI<sub>B</sub>, preuve de 11.17. Pour voir que \\(H = \\varprojlim_i (H \\cap G_i)\\), utilise-t-on le fait que H est <em>fermé</em> dans G ? En utilisant ceci, on peut donner une démonstration directe…"
+    },
+    {
+     "id": "IX-fn52",
+     "number": "52",
+     "html": "N.D.E. : Il faudrait sans doute récrire VI<sub>B</sub> 11.16 sous la forme usuelle, plus agréable. En particulier, il suffit ci-dessous d'un seul \\(f_i\\)…"
+    },
+    {
+     "id": "IX-fn53",
+     "number": "53",
+     "html": "N.D.E. : On a détaillé l'énoncé, ainsi que sa démonstration."
+    },
+    {
+     "id": "IX-fn54",
+     "number": "54",
+     "html": "N.D.E. : Noter toutefois que la démonstration de 6.8 utilise 8.1 !"
+    }
+   ]
+  },
+  {
+   "id": "IX-bibliographie",
+   "title": "Bibliographie55",
+   "blocks": [
+    {
+     "id": "IX.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.bibliographie\">Bibliographie<sup class=\"footnote-ref\"><a id=\"IX-fn55ref\" href=\"#IX-fn55\">55</a></sup></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[BEns] N. Bourbaki, <em>Théorie des ensembles</em>, Chap. I-IV, Hermann, 1970.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn55",
+     "number": "55",
+     "html": "N.D.E. : références additionnelles citées dans cet Exposé."
+    }
+   ]
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. Grothendieck"
+}

@@ -1,0 +1,1314 @@
+{
+ "chapter_id": "II",
+ "title": "TOPOLOGIES ET FAISCEAUX",
+ "number": "II",
+ "pages": [
+  {
+   "id": "II",
+   "title": "TOPOLOGIES ET FAISCEAUX",
+   "blocks": [
+    {
+     "id": "II",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"II\">EXPOSÉ II<br>TOPOLOGIES ET FAISCEAUX<span class=\"author\">par J.L. Verdier</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Après la définition des topologies et prétopologies (n° 1) et des faisceaux\nd'ensembles (n° 2), on aborde dans le n° 3 le théorème central de cet exposé (3.4) :\nl'existence du faisceau associé à un préfaisceau. Afin de couvrir tous les cas rencontrés\ndans la pratique, l'existence de ce foncteur est démontrée pour les préfaisceaux sur un\n\\(\\mathcal{U}\\)-site (3.0.2). Les n° 4 et n° 5 tirent les conséquences de ce théorème sur le\ncomportement des limites inductives et projectives dans les catégories de faisceaux. Au\nn° 6 on définit et étudie les faisceaux à valeurs dans des catégories quelconques, pour\nporter tout de suite l'attention sur les faisceaux d'anneaux, de groupes, de modules\netc... .</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-1",
+   "title": "1. Topologies, familles couvrantes, prétopologies",
+   "blocks": [
+    {
+     "id": "II.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.1\">1. Topologies, familles couvrantes, prétopologies</h2>"
+    },
+    {
+     "id": "II.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\">\n  <p>Une <em>topologie</em> sur une catégorie \\(C\\) est la donnée, pour tout objet \\(X\\) de \\(C\\),\nd'un ensemble \\(J(X)\\) de cribles de \\(X\\), cette donnée étant soumise aux axiomes suivants :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(T 1)</span> <p>(Stabilité par changement de base). Pour tout objet \\(X\\) de \\(C\\), tout crible\n\\(R \\in J(X)\\), tout morphisme \\(f : Y \\to X\\) (\\(Y \\in \\mathrm{ob}\\,(C)\\)), le crible \\(R \\times_X Y\\) de \\(Y\\)\nappartient à \\(J(Y)\\).</p></li>\n  <li><span class=\"item-label\">(T 2)</span> <p>(Caractère local). Si \\(R\\) et \\(R'\\) sont deux cribles de \\(X\\), si \\(R \\in J(X)\\), et\nsi pour tout \\(Y \\in \\mathrm{ob}\\,(C)\\) et tout morphisme \\(Y \\to R\\) le crible \\(R' \\times_X Y\\) appartient à\n\\(J(Y)\\), alors \\(R'\\) appartient à \\(J(X)\\).</p></li>\n  <li><span class=\"item-label\">(T 3)</span> <p>Pour tout objet \\(X\\) de \\(C\\), \\(X\\) appartient à \\(J(X)\\).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.1.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.1\">1.1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les cribles appartenant à \\(J(X)\\) seront appelés les <em>cribles couvrant \\(X\\)</em>, ou\nencore les <em>raffinements de \\(X\\)</em>. Des axiomes (T1), (T2), (T3), on déduit immédiatement que\nl'ensemble des cribles couvrant \\(X\\) est stable par intersections finies, et que tout crible\ncontenant un crible couvrant est un crible couvrant. L'ensemble \\(J(X)\\), ordonné par\ninclusion, est donc cofiltrant (I 8).</p>"
+    },
+    {
+     "id": "II.1.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.2\">1.1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C\\) une catégorie, \\(T\\) et \\(T'\\) deux topologies sur \\(C\\). La topologie \\(T\\) est dite\n<em>plus fine que la topologie \\(T'\\)</em> si pour tout objet \\(X\\) de \\(C\\), tout raffinement de \\(X\\) pour la\ntopologie \\(T'\\) est un raffinement de \\(X\\) pour la topologie \\(T\\). On définit, de cette façon, une\nstructure d'ordre sur l'ensemble des topologies.</p>"
+    },
+    {
+     "id": "II.1.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.3\">1.1.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\((T_i)_{i \\in I}\\) une famille de topologies sur \\(C\\). Les ensembles, pour tout objet \\(X\\)\nde \\(C\\), des cribles de \\(X\\) qui sont couvrants pour toutes les topologies \\(T_i\\), vérifient les\naxiomes (T 1), (T 2) et (T 3) et définissent donc une topologie : la <em>topologie intersection</em>\ndes \\(T_i\\), i.e. la borne inférieure des \\(T_i\\). C'est la plus fine des topologies qui soit moins\nfine que toutes les topologies \\(T_i\\). La famille \\((T_i)_{i \\in I}\\) admet par suite une <em>borne\nsupérieure</em> : la topologie intersection des topologies plus fines que chacune des \\(T_i\\).</p>"
+    },
+    {
+     "id": "II.1.1.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.4\">1.1.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier la donnée \\(J(X) = \\) l'ensemble de tous les cribles de \\(X\\), est une\ntopologie plus fine que toute topologie sur \\(C\\), que nous appellerons <em>topologie discrète</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il existe une topologie moins fine que toute topologie sur \\(C\\) ; la topologie pour\nlaquelle \\(J(X) = \\{X\\}\\) pour tout \\(X\\) de \\(C\\). Cette topologie est appelée la <em>topologie grossière</em>\nou <em>chaotique</em>.</p>"
+    },
+    {
+     "id": "II.1.1.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.5\">1.1.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Une catégorie \\(C\\) munie d'une topologie est appelée un <em>site</em>. La catégorie \\(C\\) est\nappelée la <em>catégorie sous-jacente au site</em>.</p>"
+    },
+    {
+     "id": "II.1.2",
+     "type": "definition",
+     "label": "1.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) un site, \\(X\\) un objet de \\(C\\). Une famille de morphismes\n\\((f_\\alpha : X_\\alpha \\to X)\\), \\(\\alpha \\in A\\), est dite <em>couvrante</em> si le crible engendré par la famille \\(f_\\alpha\\)\n(I 4.3.3) est un crible couvrant \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.1.1.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.6\">1.1.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) une catégorie. Donnons-nous pour chaque objet \\(X\\) de \\(C\\), un ensemble de\nfamilles de morphismes de but \\(X\\). Il existe alors une topologie \\(T\\) qui est la moins fine des\ntopologies pour lesquelles les familles données soient couvrantes, à savoir l'intersection\n(1.1.3) de toutes les topologies en question. On appelle cette topologie la <em>topologie\nengendrée par les ensembles de familles de morphismes donnés</em>. Il est malaisé de décrire,\nen général, tous les cribles couvrants de cette topologie. Cependant la situation est plus\nagréable dans le cas suivant :</p>"
+    },
+    {
+     "id": "II.1.3",
+     "type": "definition",
+     "label": "1.3",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(C\\) une catégorie. Une <em>prétopologie</em> sur \\(C\\) est la donnée, pour chaque\nobjet \\(X\\) de \\(C\\), d'un ensemble \\(\\mathrm{Cov}(X)\\) de familles de morphismes de but \\(X\\), cette donnée\nétant soumise aux axiomes suivants :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(PT 0)</span> <p>Pour tout objet \\(X\\) de \\(C\\), les morphismes des familles de morphismes de\n\\(\\mathrm{Cov}(X)\\) sont quarrables. (Rappelons qu'un morphisme \\(Y \\to X\\) est dit <em>quarrable</em> si pour\ntout morphisme \\(Z \\to X\\) le produit fibré \\(Z \\times_X Y\\) est représentable).</p></li>\n  <li><span class=\"item-label\">(PT 1)</span> <p>Pour tout objet \\(X\\) de \\(C\\), toute famille \\((X_\\alpha \\to X)_{\\alpha \\in A}\\) appartenant\nà \\(\\mathrm{Cov}(X)\\), et tout morphisme \\(Y \\to X\\) (\\(Y \\in \\mathrm{ob}\\,(C)\\)), la famille :\n\\((X_\\alpha \\times_X Y \\to Y)_{\\alpha \\in A}\\) appartient à \\(\\mathrm{Cov}(Y)\\). (Stabilité par changement de base).</p></li>\n  <li><span class=\"item-label\">(PT 2)</span> <p>Si \\((X_\\alpha \\to X)_{\\alpha \\in A}\\) appartient à \\(\\mathrm{Cov}(X)\\) et si pour chaque\n\\(\\alpha \\in A\\), \\((X_{\\beta_\\alpha} \\to X_\\alpha)_{\\beta_\\alpha \\in B_\\alpha}\\) appartient à \\(\\mathrm{Cov}(X_\\alpha)\\), alors la famille\n\\((X_\\gamma \\to X)_{\\gamma \\in \\coprod_{\\alpha \\in A} B_\\alpha}\\) (où pour tout \\(\\gamma = (\\alpha, \\beta_\\alpha)\\), \\(\\alpha \\in A\\), \\(\\beta_\\alpha \\in B_\\alpha\\), le\nmorphisme \\(X_\\gamma \\to X\\) est le morphisme composé : \\(X_\\gamma = X_{\\beta_\\alpha} \\to X_\\alpha \\to X\\)) appartient\nà \\(\\mathrm{Cov}(X)\\). (Stabilité par composition).</p></li>\n  <li><span class=\"item-label\">(PT 3)</span> <p>La famille : \\(X \\xrightarrow{\\ \\mathrm{id}_X\\ } X\\) appartient à \\(\\mathrm{Cov}(X)\\).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.1.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.3.1\">1.3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La définition de 1.1.6 nous permet de considérer, pour une <em>prétopologie</em> donnée sur\n\\(C\\), la <em>topologie</em> sur \\(C\\) engendrée par cette prétopologie. Notons que si \\(C\\) est une catégorie\noù les produits fibrés sont représentables, alors toute topologie \\(T\\) de \\(C\\) peut être définie\npar une prétopologie, savoir celle pour laquelle \\(\\mathrm{Cov}(X)\\) est formé de <em>toutes</em> les familles\ncouvrant \\(X\\) pour la topologie \\(T\\).</p>"
+    },
+    {
+     "id": "II.1.4",
+     "type": "proposition",
+     "label": "1.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) une catégorie, \\(E\\) une prétopologie sur \\(C\\), \\(T\\)\nla topologie définie par la prétopologie \\(E\\) (1.1.6), \\(X\\) un objet de \\(C\\). Désignons par \\(J_E(X)\\)\nl'ensemble des cribles de \\(X\\) engendrés par les familles de la prétopologie, et par \\(J_T(X)\\)\nl'ensemble des raffinements de \\(X\\) pour la topologie \\(T\\). Alors \\(J_E(X)\\) est cofinal dans \\(J_T(X)\\).\nEn d'autres termes, pour qu'un crible \\(R\\) de \\(X\\) appartienne à \\(J_T(X)\\), il faut et il suffit qu'il\nexiste un crible \\(R' \\in J_E(X)\\) tel que \\(R' \\subset R\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Soit, pour tout objet \\(X\\) de \\(C\\), \\(J'(X)\\) l'ensemble des cribles de \\(X\\) qui\ncontiennent un crible de \\(J_E(X)\\). On a évidemment \\(J'(X) \\subset J_T(X)\\). Pour montrer que\n\\(J'(X) = J_T(X)\\), il suffit de montrer que la donnée des \\(J'(X)\\) définit une topologie sur \\(C\\). Or\nles \\(J'(X)\\) vérifient évidemment les axiomes (T 1) et (T 3). Il reste donc à vérifier (T 2). Pour\ncela il suffit de démontrer que si \\(R'\\) est un sous-crible de \\(R \\in J_E(X)\\) tel que pour tout\n\\(Y \\to R\\), le crible \\(R' \\times_X Y\\) de \\(Y\\) appartienne à \\(J'(X)\\), le crible \\(R'\\) appartient à \\(J'(X)\\). Or le\ncrible \\(R\\) est engendré par une famille \\((X_\\alpha \\to X)\\) appartenant à \\(\\mathrm{Cov}(X)\\), et pour tout \\(\\alpha\\) le\ncrible \\(R' \\times_X X_\\alpha\\) contient un crible engendré par une famille \\((X_{\\beta_\\alpha} \\to X_\\alpha)\\) appartenant\nà \\(\\mathrm{Cov}(X_\\alpha)\\). On en déduit que le crible \\(R'\\) contient un crible engendré par la famille\n\\((X_{\\beta_\\alpha} \\to X)\\). Donc, d'après l'axiome (PT 2), \\(R'\\) contient un crible de \\(J_E(X)\\) et par suite\nappartient à \\(J'(X)\\), cqfd.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-2",
+   "title": "2. Faisceaux d'ensembles",
+   "blocks": [
+    {
+     "id": "II.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.2\">2. Faisceaux d'ensembles</h2>"
+    },
+    {
+     "id": "II.2.1",
+     "type": "definition",
+     "label": "2.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(C\\) un site dont la catégorie sous-jacente est une\n\\(\\mathcal{U}\\)-catégorie. Un préfaisceau \\(F\\) à valeurs dans \\(\\mathcal{U}\\text{-Ens}\\) est dit <em>séparé</em> (resp. est un\n<em>faisceau</em>) si pour tout crible \\(R\\) couvrant \\(X\\), objet de \\(C\\), l'application :\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R,F)\n\\]\nest une injection (resp. une bijection). La sous-catégorie pleine de \\(\\widehat{C}\\) dont les objets\nsont les faisceaux est appelée la <em>catégorie des faisceaux d'ensembles sur \\(C\\)</em>, et est notée le\nplus souvent \\(\\widetilde{C}\\) <sup class=\"footnote-ref\"><a id=\"II-fn1ref\" href=\"#II-fn1\">(1)</a></sup>. Lorsqu'aucune ambiguïté n'en résultera, nous dirons\nsimplement <em>catégorie des faisceaux sur \\(C\\)</em> ; en revanche nous préciserons quelquefois en\ndisant catégorie des faisceaux à valeur dans \\(\\mathcal{U}\\text{-Ens}\\) ou encore catégorie des\n\\(\\mathcal{U}\\)-faisceaux.</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.2",
+     "type": "proposition",
+     "label": "2.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie, \\(\\mathscr{F} = (F_i)_{i \\in I}\\) une famille\nde \\(\\mathcal{U}\\)-préfaisceaux sur \\(C\\). Désignons, pour chaque objet \\(X\\) de \\(C\\), par \\(J_{\\mathscr{F}}(X)\\) l'ensemble des\ncribles \\(R \\hookrightarrow X\\) de \\(C\\) tels que pour tout morphisme \\(Y \\to X\\) de \\(C\\) de but \\(X\\), le crible\n\\(R \\times_X Y\\) possède la propriété suivante : l'application\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(Y,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R \\times_X Y, F_i)\n\\]\nest bijective (resp. injective) pour tout \\(i \\in I\\). Alors les ensembles \\(J_{\\mathscr{F}}(X)\\) définissent une\ntopologie sur \\(C\\), qui est la plus fine des topologies pour laquelle chacun des \\(F_i\\) soit un\nfaisceau (resp. un préfaisceau séparé).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Les \\(J_{\\mathscr{F}}(X)\\) vérifient évidemment des axiomes (T 1) et (T 3). Il reste à\nmontrer qu'ils vérifient (T 2). Pour cela il suffit de montrer que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) Si \\(R' \\hookrightarrow R \\hookrightarrow X\\) sont deux cribles de \\(X\\), tels que \\(R \\in J_{\\mathscr{F}}(X)\\) et tels que pour\ntout \\(Y \\to R\\) (où \\(Y\\) est un objet de \\(C\\)) le crible \\(R' \\times_X Y\\) appartienne à \\(J_{\\mathscr{F}}(Y)\\), alors le\ncrible \\(R'\\) appartient à \\(J_{\\mathscr{F}}(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Si \\(R' \\hookrightarrow R \\hookrightarrow X\\) sont deux cribles de \\(X\\) tels que \\(R' \\in J_{\\mathscr{F}}(X)\\), alors le crible \\(R\\)\nappartient à \\(J_{\\mathscr{F}}(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons que, dans le cas 2), pour tout \\(Y \\to R\\) (où \\(Y\\) est un objet de \\(C\\)) le crible\n\\(R' \\times_X Y\\) appartient à \\(J_{\\mathscr{F}}(Y)\\). Or, dans les cas 1) et 2), \\(R\\) est limite inductive des \\(Y\\), objets\nde \\(C\\), au-dessus de \\(R\\) (I 3.4). Les limites inductives dans \\(\\widehat{C}\\) sont universelles (I 3.3). Par\nsuite dans les cas 1) et 2), \\(R'\\) est limite inductive des \\(R' \\times_X Y\\). Or, dans les cas 1) et (2),\n\\(R' \\times_X Y\\) appartient à \\(J_{\\mathscr{F}}(Y)\\). On en déduit, en passant à la limite inductive sur les objets \\(Y\\)\nde \\(C\\) au-dessus de \\(R\\), que l'application\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(R,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R',F_i)\n\\]\nest une bijection (resp. une injection) pour tout \\(i \\in I\\). Par suite les applications\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F_i) \\to \\mathrm{Hom}_{\\widehat{C}}(R',F_i) \\quad\\text{et}\\quad \\mathrm{Hom}_{\\widehat{C}}(X,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R,F_i)\n\\]\nsont, dans les cas 1) et 2), des bijections (resp. des injections). De plus, les hypothèses 1)\net 2) sont visiblement stables par changement de base quelconque \\(Y \\to X\\) (\\(Y\\) objet de \\(C\\)). On\nen déduit alors que pour tout objet \\(Y\\) de \\(C\\) au-dessus de \\(X\\) et tout \\(i \\in I\\), les applications\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(Y,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R \\times_X Y, F_i)\n\\]\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(Y,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R' \\times_X Y, F_i)\n\\]\nsont dans les deux cas des bijections (resp. des injections) ; ce qui montre que \\(R'\\) et \\(R\\)\nappartiennent à \\(J_{\\mathscr{F}}(X)\\), cqfd.</p>"
+    },
+    {
+     "id": "II.2.3",
+     "type": "corollaire",
+     "label": "2.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie, et pour tout \\(X\\) de \\(C\\) un ensemble\n\\(K(X)\\) de cribles de \\(X\\). On suppose que les \\(K(X)\\) vérifient l'axiome (T 1) de (1.1). Pour qu'un\npréfaisceau \\(F\\) soit un faisceau (resp. un préfaisceau séparé) pour la topologie engendrée\n(1.1.6) par les \\(K(X)\\), il faut et il suffit que pour tout objet \\(X\\) de \\(C\\) et tout crible \\(R \\in K(X)\\),\nl'application\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R,F)\n\\]\nsoit une bijection (resp. une injection).</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>En particulier, soit \\(C\\) une \\(\\mathcal{U}\\)-catégorie munie d'une\nprétopologie. Pour qu'un préfaisceau \\(F\\) soit un faisceau (resp. un préfaisceau séparé), il\nfaut et il suffit que pour tout objet \\(X\\) de \\(C\\) et pour toute famille \\((X_\\alpha \\to X)\\) appartenant à\n\\(\\mathrm{Cov}(X)\\), le diagramme d'ensembles\n\\[\nF(X) \\longrightarrow \\prod_{\\alpha \\in A} F(X_\\alpha) \\rightrightarrows \\prod_{(\\alpha,\\beta) \\in A \\times A} F(X_\\alpha \\times_X X_\\beta)\n\\]\nsoit exact (resp. l'application\n\\[\nF(X) \\longrightarrow \\prod_{\\alpha \\in A} F(X_\\alpha)\n\\]\nsoit injective).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. On applique 2.3, puis (I 3.5) et (I 2.12).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On retrouve avec le corollaire 2.4 la définition donnée dans [1].</p>"
+    },
+    {
+     "id": "II.2.5",
+     "type": "definition",
+     "label": "2.5",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(C\\) une \\(\\mathcal{U}\\)-catégorie. On appelle <em>topologie canonique</em>\nde \\(C\\) la topologie la plus fine pour laquelle les foncteurs représentables soient des faisceaux\n(2.2). Un crible couvrant \\(X\\) pour la topologie canonique sera appelé <em>crible épimorphique\nstrict universel</em>. Une famille couvrante pour la topologie canonique sera appelée <em>famille\népimorphique stricte universelle</em>. Lorsque de plus les morphismes de la famille couvrante\nsont quarrables, la famille sera dite <em>épimorphique effective universelle</em> [2].</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.5.1",
+     "type": "remarque",
+     "label": "2.5.1",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.2.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">2.5.1</span></div>\n  <div class=\"thm-body\"><p>Pour presque tous les sites qu'on a eu à utiliser jusqu'à\nprésent, la topologie est <em>moins fine</em> que la topologie canonique, en d'autres termes, les\nfoncteurs représentables sur \\(C\\) sont des faisceaux, i.e. les familles couvrantes de \\(C\\) sont\népimorphiques strictes universelles. La seule exception à cette règle est le site \\(\\widehat{C}\\) étudié au\nn° 5 (dont la topologie est <em>plus fine</em>, et le plus souvent strictement plus fine, que la\ntopologie canonique).</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.6",
+     "type": "proposition",
+     "label": "2.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>Pour qu'un crible \\(R \\hookrightarrow X\\) soit épimorphique strict\nuniversel, il faut et il suffit que pour tout objet \\(Y \\to X\\) de \\(C\\) au-dessus de \\(X\\), et pour tout\nobjet \\(Z\\) de \\(C\\), l'application :\n\\[\n\\mathrm{Hom}_C(Y,Z) \\longrightarrow \\varprojlim_{\\widehat{C}/(Y \\times_X R)} \\mathrm{Hom}_C(\\,\\cdot\\,, Z)\n\\]\nsoit une bijection.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Immédiat en appliquant 2.2 puis (I 5.3).</p>"
+    },
+    {
+     "id": "II.2.7",
+     "type": "remarque",
+     "label": "2.7",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\">\n  <p>1) La proposition 2.6 donne une caractérisation des cribles épimorphiques\nstricts universels d'une catégorie \\(C\\), indépendante de l'univers dans lequel les préfaisceaux\nprennent leurs valeurs, à la seule condition que les ensembles de morphismes \\(\\mathrm{Hom}(X,Y)\\) de\n\\(C\\) appartiennent à cet univers. Elle permet ainsi de définir la topologie canonique pour\ntoute catégorie \\(C\\), sans qu'il soit pour cela nécessaire de préciser les univers.</p>\n  <p>2) Soient \\(C\\) un site dont la catégorie sous-jacente soit une \\(\\mathcal{U}\\)-catégorie, \\(F\\) un\n\\(\\mathcal{U}\\)-préfaisceau et \\(\\mathcal{V}\\) un univers contenant \\(\\mathcal{U}\\). La catégorie sous-jacente à \\(C\\) est une\n\\(\\mathcal{V}\\)-catégorie, et \\(F\\) peut être considéré comme un \\(\\mathcal{V}\\)-préfaisceau. Le \\(\\mathcal{U}\\)-préfaisceau \\(F\\) est un\nfaisceau (resp. un préfaisceau séparé) si et seulement si le \\(\\mathcal{V}\\)-préfaisceau \\(F\\) est un faisceau\n(resp. un préfaisceau séparé). En d'autres termes, la condition pour un préfaisceau \\(F\\) d'être\nun faisceau (resp. un préfaisceau séparé) ne dépend pas (au sens qu'on vient de préciser) de\nl'univers dans lequel le préfaisceau \\(F\\) prend ses valeurs. En particulier soient \\(C\\) un site et \\(F\\)\nun \\(\\mathcal{U}\\)-préfaisceau ; on dit que \\(F\\) est un faisceau (resp. un préfaisceau séparé) s'il existe un\nunivers \\(\\mathcal{V}\\) contenant \\(\\mathcal{U}\\) tel que la catégorie \\(C\\) soit une \\(\\mathcal{V}\\)-catégorie et tel que \\(F\\) soit un\n\\(\\mathcal{V}\\)-faisceau (resp. un \\(\\mathcal{V}\\)-préfaisceau séparé). Cette propriété ne dépend pas de l'univers \\(\\mathcal{V}\\).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn1",
+     "number": "(1)",
+     "html": "<p>(1) ou \\(C^{\\sim}\\), suivant l'humeur de la machine à écrire. </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-3",
+   "title": "3. Faisceau associé à un préfaisceau",
+   "blocks": [
+    {
+     "id": "II.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.3\">3. Faisceau associé à un préfaisceau</h2>"
+    },
+    {
+     "id": "II.3.0.1",
+     "type": "definition",
+     "label": "3.0.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.0.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.0.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(C\\) un site. On appelle <em>famille topologiquement\ngénératrice</em> (ou lorsqu'aucune confusion n'en résulte, <em>famille génératrice</em>) de \\(C\\), un\nensemble \\(G\\) d'objets de \\(C\\) tel que tout objet de \\(C\\) soit but d'une famille couvrante de\nmorphismes de \\(C\\) (1.2) dont les sources sont des éléments de \\(G\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.0.2",
+     "type": "definition",
+     "label": "3.0.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.0.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.0.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathcal{U}\\) un univers. On appelle <em>\\(\\mathcal{U}\\)-site</em> un site \\(C\\) dont\nla catégorie sous-jacente est une \\(\\mathcal{U}\\)-catégorie (I 1.1), qui possède une petite famille\ntopologiquement génératrice. Soit \\(C\\) une \\(\\mathcal{U}\\)-catégorie ; on appelle <em>\\(\\mathcal{U}\\)-topologie</em> sur \\(C\\) une\ntopologie sur \\(C\\) faisant de \\(C\\) un \\(\\mathcal{U}\\)-site. On dit qu'un site \\(C\\) est <em>\\(\\mathcal{U}\\)-petit</em>, ou par abus de\nlangage, <em>petit</em>, si la catégorie sous-jacente à \\(C\\) est petite (I 1.0).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.0.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.3.0.3\">3.0.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte immédiatement des définitions que toute topologie plus fine qu'une\n\\(\\mathcal{U}\\)-topologie est une \\(\\mathcal{U}\\)-topologie, et qu'un petit site est un \\(\\mathcal{U}\\)-site.</p>"
+    },
+    {
+     "id": "II.3.0.4",
+     "type": "proposition",
+     "label": "3.0.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.0.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.0.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site, \\(G\\) une petite famille topologiquement génératrice\nde \\(C\\). Pour tout \\(X \\in \\mathrm{ob}\\, C\\), désignons par \\(J_G(X)\\) l'ensemble des cribles couvrant \\(X\\) engendrés\npar une famille de morphismes \\((Y_\\alpha \\xrightarrow{\\ u_\\alpha\\ } X)\\), \\(\\alpha \\in A\\), où \\(Y_\\alpha \\in G\\).</p>\n  <p>1) L'ensemble \\(J_G(X)\\) est petit.</p>\n  <p>2) L'ensemble \\(J_G(X)\\) est cofinal dans l'ensemble \\(J(X)\\) de tous les cribles couvrant \\(X\\),\nordonné par inclusion.</p>\n  <p>3) Pour tout \\(R \\in J_G(X)\\), il existe une petite famille épimorphique (I 10.2)\n\\((u_\\alpha : Y \\to R)\\), \\(\\alpha \\in A\\), avec \\(Y \\in G\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. 1) Posons \\(A(X) = \\coprod_{Y \\in G} \\mathrm{Hom}(Y,X)\\). L'ensemble \\(A(X)\\) est petit (I 0) et\n\\(\\mathrm{card}(J_G(X)) \\leq 2^{\\mathrm{card}(A(X))}\\). Par suite \\(J_G(X)\\) est petit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Soit \\(R \\in J(X)\\). Posons \\(A(R) = \\coprod_{Y \\in G} \\mathrm{Hom}(Y,R)\\) et soit \\(R'\\) le crible de \\(X\\)\nengendré par la famille \\((Y \\xrightarrow{\\ u\\ } R \\hookrightarrow X)\\), \\(u \\in A(R)\\). On a \\(R' \\subset R\\) et il suffit de\nmontrer que \\(R'\\) est couvrant. D'après l'axiome (T2) de 1.1, il suffit de montrer que pour\ntout morphisme \\(Z \\to R\\), \\(Z \\in \\mathrm{ob}\\, C\\), le crible \\(R' \\times_X Z\\) de \\(Z\\) est couvrant. Or le crible\n\\(R' \\times_X Z\\) contient le crible engendré par la famille de tous les morphismes \\(Y \\to Z\\) avec\n\\(Y \\in G\\), famille qui est, par hypothèse, couvrante. Le crible \\(R' \\times_X Z\\) de \\(Z\\) est donc couvrant\n(axiome T2 de 1.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) Soit \\(R \\in J_G(X)\\). La famille \\((Y \\xrightarrow{\\ u\\ } R)\\), \\(u \\in A(R) = \\coprod_{Y \\in G} \\mathrm{Hom}(Y,R)\\) est, par\nhypothèse, épimorphique. Or, pour tout \\(Y \\in \\mathrm{ob}\\, C\\), \\(\\mathrm{Hom}(Y,R)\\) est contenu dans \\(\\mathrm{Hom}(Y,X)\\)\nqui est petit. Par suite \\(A(R)\\) est petit.</p>"
+    },
+    {
+     "id": "II.3.0.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.3.0.5\">3.0.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site, \\(\\mathcal{V}\\) un univers tel que \\(C \\in \\mathcal{V}\\) et \\(\\mathcal{U} \\subset \\mathcal{V}\\), \\(G\\) une \\(\\mathcal{U}\\)-petite\nfamille topologiquement génératrice de \\(C\\). La catégorie \\(\\widehat{C}\\) des préfaisceaux de\n\\(\\mathcal{U}\\)-ensembles sur \\(C\\) est une \\(\\mathcal{V}\\)-catégorie (I 1.1.1). Soit \\(X\\) un objet de \\(C\\). L'ensemble \\(J(X)\\) des\ncribles couvrant \\(X\\) est \\(\\mathcal{V}\\)-petit et, ordonné par inclusion, il est cofiltrant (1.1.1). Pour tout\n\\(\\mathcal{U}\\)-préfaisceau \\(F\\), la limite inductive \\(\\varinjlim_{J(X)} \\mathrm{Hom}_{\\widehat{C}}(R,F)\\) est donc représentable par un\nélément de \\(\\mathcal{V}\\) (I 2.4.1). De plus, il résulte de (3.0.4 3)) que, pour tout \\(R \\in J_G(X)\\),\n\\(\\mathrm{Hom}_{\\widehat{C}}(R,F)\\) est \\(\\mathcal{U}\\)-petit, et comme \\(J_G(X)\\) est un \\(\\mathcal{U}\\)-petit ensemble cofinal dans \\(J(X)\\)\n(loc. cit.), il résulte de (I 2.4.2) que \\(\\varinjlim \\mathrm{Hom}_{\\widehat{C}}(R,F)\\) est \\(\\mathcal{U}\\)-petit. Choisissons alors, pour\ntout \\(F\\) et pour tout \\(X\\), un élément de \\(\\mathcal{U}\\) qui représente cette limite inductive et posons\n\\[\nLF(X) = \\varinjlim_{J(X)} \\mathrm{Hom}_{\\widehat{C}}(\\,\\cdot\\,, F) .\n\\]\nSoit \\(g : Y \\to X\\) un morphisme de \\(C\\). Le foncteur changement de base\n\\(g^* : J(X) \\to J(Y)\\) définit une application :\n\\[\nLF(g) : LF(X) \\longrightarrow LF(Y)\n\\]\nqui fait de \\(X \\mapsto LF(X)\\) un préfaisceau sur \\(C\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le morphisme \\(\\mathrm{id}_X : X \\to X\\) étant un élément de \\(J(X)\\) on a, pour tout objet \\(X\\) de \\(C\\),\nune application :\n\\[\n\\ell(F)(X) : F(X) \\longrightarrow LF(X),\n\\]\ndéfinissant visiblement un morphisme de foncteurs :\n\\[\n\\ell(F) : F \\longrightarrow LF .\n\\]\nIl est clair de plus que \\(F \\mapsto LF\\) est un foncteur en \\(F\\) et que les morphismes \\(\\ell(F)\\)\ndéfinissent un morphisme\n\\[\n\\ell : \\mathrm{Id} \\longrightarrow L .\n\\]\nEnfin soit \\(R \\hookrightarrow X\\) un raffinement de \\(X\\). La définition de \\(LF(X)\\) et (I 1.4) nous\nfournissent une application :\n\\[\nZ_R : \\mathrm{Hom}_{\\widehat{C}}(R,F) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(X,LF) ,\n\\]\net pour tout morphisme de \\(C\\), \\(Y \\xrightarrow{\\ g\\ } X\\), la définition du foncteur \\(LF\\) nous montre que le\ndiagramme ci-après, est commutatif :\n\\[\n(*) \\qquad\n\\xymatrix{\nZ_R : \\mathrm{Hom}_{\\widehat{C}}(R,F) \\ar[r] \\ar[d] &amp; \\mathrm{Hom}_{\\widehat{C}}(X,LF) \\ar[d] \\\\\nZ_{R \\times_X Y} : \\mathrm{Hom}_{\\widehat{C}}(R \\times_X Y, F) \\ar[r] &amp; \\mathrm{Hom}_{\\widehat{C}}(Y,LF)\n}\n\\]\n(les flèches verticales sont les flèches évidentes).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Copions alors [2].</p>"
+    },
+    {
+     "id": "II.3.1",
+     "type": "lemme",
+     "label": "3.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"II.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\">\n  <p>1) Pour tout raffinement \\(i_R : R \\hookrightarrow X\\) et tout \\(u : R \\to F\\), le diagramme :\n\\[\n(**) \\qquad\n\\xymatrix{\nF \\ar[r]^-{\\ell(F)} &amp; LF \\\\\nR \\ar[u]^-{u} \\ar[r]_-{i_R} &amp; X \\ar[u]_-{Z_R(u)}\n}\n\\]\nest commutatif.</p>\n  <p>2) Pour tout morphisme \\(v : X \\to LF\\), il existe un raffinement \\(R\\) de \\(X\\) et un\nmorphisme \\(u : R \\to F\\) tel que \\(Z_R(u) = v\\).</p>\n  <p>3) Soient \\(Y\\) un objet de \\(C\\) et \\(u, v : Y \\rightrightarrows F\\) deux morphismes tels que\n\\(\\ell(F) \\circ u = \\ell(F) \\circ v\\). Alors le noyau du couple \\((u,v)\\) est un raffinement de \\(Y\\).</p>\n  <p>4) Soient \\(R\\) et \\(R'\\) deux raffinements de \\(X\\), \\(u : R \\to F\\) et \\(u' : R' \\to F\\) deux\nmorphismes. Pour que \\(Z_R(u) = Z_{R'}(u')\\), il faut et il suffit que \\(u\\) et \\(u'\\) coïncident sur un\nraffinement \\(R'' \\to R \\times_X R'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. La seule assertion non triviale est l'assertion 1). Il faut montrer que\n\\(Z_R(u) \\circ i_R = \\ell(F) \\circ u\\). Pour cela il suffit de montrer (I 3.4) que les composés de ces\nmorphismes avec tout morphisme \\(Y \\xrightarrow{\\ g\\ } R\\) (\\(Y\\) objet de \\(C\\)) sont égaux. Or, considérons\n\\(f = i_R \\circ g\\) et le produit fibré \\(R \\times_X Y\\) :\n\\[\n\\xymatrix{\nF \\ar[r]^-{\\ell(F)} &amp; LF \\\\\nR \\ar[u]^-{u} \\ar[r]^-{T_R} &amp; X \\ar[u]_-{Z_R(u)} \\\\\nR \\times_X Y \\ar[u]^-{g'} \\ar[r]_-{i'}^-{\\sim} &amp; Y \\ar[u]_-{f}\n}\n\\]\nDans ce diagramme ci-dessus, \\(i'\\) est un monomorphisme qui admet une section. Par suite\n(1.3.3) \\(i'\\) est un isomorphisme. Or par définition du morphisme \\(\\ell(F)\\), le morphisme\n\\(Z_{R \\times_X Y}(u \\circ g')\\) est égal à \\(\\ell(F) \\circ u \\circ g\\). D'autre part la commutativité du diagramme\n(*) nous fournit l'égalité \\(Z_{R \\times_X Y}(u \\circ g') = Z_R(u) \\circ f\\), et par suite on a bien l'égalité\n\\(\\ell(F) \\circ u \\circ g = Z_R(u) \\circ i_R \\circ g\\).</p>"
+    },
+    {
+     "id": "II.3.2",
+     "type": "proposition",
+     "label": "3.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>1) Le foncteur \\(L\\) est exact à gauche (I 2.3.2).</p>\n  <p>2) Pour tout préfaisceau \\(F\\), \\(LF\\) est un préfaisceau séparé.</p>\n  <p>3) Le préfaisceau \\(F\\) est séparé si et seulement si le morphisme \\(\\ell(F) : F \\to LF\\) est\nun monomorphisme. Le préfaisceau \\(LF\\) est alors un faisceau.</p>\n  <p>4) Les propriétés suivantes sont équivalentes :</p>\n  <p>i) \\(\\ell(F) : F \\to LF\\) est un isomorphisme.</p>\n  <p>ii) \\(F\\) est un faisceau.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) Il suffit de montrer (I 3.1) que pour tout objet \\(X\\) de \\(C\\), le foncteur \\(F \\mapsto LF(X)\\)\ncommute aux limites projectives finies. Or par définition de la limite projective, le foncteur\n\\[\nF \\mapsto \\mathrm{Hom}_{\\widehat{C}}(R,F) \\qquad R \\hookrightarrow X \\in \\mathrm{ob}(J(X))\n\\]\ncommute aux limites projectives, et la limite inductive \\(\\varinjlim_{J(X)}\\) commute aux limites\nprojectives finies car \\(J(X)\\) est un ensemble cofiltrant (I 2.7).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Soient \\(X\\) un objet de \\(C\\) et \\(f, g : X \\rightrightarrows LF\\) deux morphismes qui coïncident sur un\nraffinement \\(R \\hookrightarrow X\\) de \\(X\\). En vertu de 3.1 2), il existe un crible couvrant \\(R' \\hookrightarrow X\\), qu'on\npeut toujours supposer contenu dans \\(R\\), et deux morphismes \\(u, v : R' \\rightrightarrows F\\) tels que\n\\(Z_{R'}(u) = f\\) et \\(Z_{R'}(v) = g\\). En vertu de 3.1 1) on a alors \\(\\ell(F) \\circ u = \\ell(F) \\circ v\\). Par suite\n(3.1 4)) \\(u\\) et \\(v\\) coïncident sur un raffinement \\(R'' \\hookrightarrow R'\\). Soit \\(w\\) la restriction de \\(u\\) à \\(R''\\). On a\n\\(Z_{R''}(w) = Z_{R'}(u) = Z_{R'}(v)\\) et par suite \\(f = g\\). Le préfaisceau \\(LF\\) est donc séparé.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) Si \\(F\\) est séparé, le morphisme \\(\\ell(F)\\) est un monomorphisme car une limite\ninductive filtrante de monomorphismes est un monomorphisme. Si \\(\\ell(F)\\) est un\nmonomorphisme, le préfaisceau \\(F\\) est un sous-préfaisceau d'un préfaisceau séparé, donc il\nest séparé. Montrons que \\(LF\\) est alors un faisceau. Soient \\(i : R \\hookrightarrow X\\) un crible couvrant un\nobjet \\(X\\) de \\(C\\), et \\(u : R \\to LF\\) un morphisme. Il nous suffit de montrer que \\(u\\) se factorise par\n\\(X\\). Posons \\(R' = F \\times_{LF} R\\) et \\(v = Z_{R'}(\\mathrm{pr}_1)\\) :\n\\[\n\\xymatrix{\nF \\ar[r]^-{\\ell(F)} &amp; LF &amp; \\\\\nR' \\ar[u]^-{\\mathrm{pr}_1} \\ar[r]^-{\\mathrm{pr}_2} &amp; R \\ar[u]^-{u} \\ar[r]^-{i} &amp; X \\ar[ul]_-{v} \\\\\nR'' \\ar[u]^-{p_1} \\ar[r]^-{p_2} &amp; Y \\ar[u]^-{m} &amp;\n}\n\\]\nPour montrer que \\(u = v \\circ i\\), il suffit de montrer (I 3.4) que pour tout morphisme\n\\(m : Y \\to R\\) (\\(Y\\) objet de \\(C\\)), \\(v \\circ i \\circ m = u \\circ m\\). Posons \\(R'' = Y \\times_R R'\\) et soient \\(p_1\\) et \\(p_2\\) les\nprojections. La projection \\(R'' \\xrightarrow{\\ p_2\\ } Y\\) est un monomorphisme et fait de \\(R''\\) un crible\ncouvrant \\(Y\\) (3.1.2)). On a \\(v \\circ i \\circ \\mathrm{pr}_2 = \\ell(F) \\circ \\mathrm{pr}_1\\) (3.1 1)), et par suite\n\\(v \\circ i \\circ \\mathrm{pr}_2 = u \\circ \\mathrm{pr}_2\\). On en déduit \\(v \\circ i \\circ \\mathrm{pr}_2 \\circ p_1 = u \\circ \\mathrm{pr}_2 \\circ p_1\\) i.e.\n\\(v \\circ i \\circ m \\circ p_2 = u \\circ m \\circ p_2\\). Comme le préfaisceau \\(LF\\) est séparé, on a \\(v \\circ i \\circ m = u \\circ m\\),\ncqfd.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>4) Clair.</p>"
+    },
+    {
+     "id": "II.3.3",
+     "type": "remarque",
+     "label": "3.3",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(J'(X)\\) un sous-ensemble cofinal de \\(J(X)\\). On a\n\\[\nLF(X) = \\varinjlim_{J'(X)} \\mathrm{Hom}_{\\widehat{C}}(\\,\\cdot\\,, F) .\n\\]\nEn particulier, si la topologie de \\(C\\) est définie par une prétopologie \\(X \\mapsto \\mathrm{Cov}(X)\\) (1.1.3), le\nfoncteur \\(L\\) peut se décrire à l'aide des familles couvrantes de \\(\\mathrm{Cov}(X)\\) (I 2.12 et I 3.5). En\nexplicitant les formules on retrouve la construction de [1].</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.4",
+     "type": "theoreme",
+     "label": "3.4",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Soit \\(C\\) un \\(\\mathcal{U}\\)-site. Le foncteur d'inclusion \\(i : \\widetilde{C} \\hookrightarrow \\widehat{C}\\)\ndes faisceaux dans les préfaisceaux admet un adjoint à gauche \\(a\\), exact à gauche\n(I 2.3.2) :\n\\[\n\\xymatrix{\n\\widetilde{C} \\ar@{^{(}-&gt;}@&lt;-0.7ex&gt;[r]_-{i} &amp; \\widehat{C} \\ar@&lt;-0.7ex&gt;[l]_-{a}\n}\n\\]\nLe foncteur \\(i \\circ a\\) est canoniquement isomorphe au foncteur \\(L \\circ L\\) (cf. 3.0.5). Pour tout\npréfaisceau \\(F\\) le morphisme d'adjonction \\(F \\to i \\circ a(F)\\) se déduit par l'isomorphisme\nprécédent du morphisme \\(\\ell(LF) \\circ \\ell(F) : F \\longrightarrow L \\circ L(F)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.5",
+     "type": "definition",
+     "label": "3.5",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Le faisceau \\(aF\\) est appelé le <em>faisceau associé au préfaisceau\n\\(F\\)</em>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le théorème 3.4 résulte immédiatement de la proposition 3.2.</p>"
+    },
+    {
+     "id": "II.3.6",
+     "type": "proposition",
+     "label": "3.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site et \\(\\mathcal{V} \\supset \\mathcal{U}\\) un univers. Notons\n\\(\\widehat{C}_{\\mathcal{U}}\\) et \\(\\widetilde{C}_{\\mathcal{U}}\\) (resp. \\(\\widehat{C}_{\\mathcal{V}}\\) et \\(\\widetilde{C}_{\\mathcal{V}}\\)) les catégories de \\(\\mathcal{U}\\)-préfaisceaux et de\n\\(\\mathcal{U}\\)-faisceaux (resp. de \\(\\mathcal{V}\\)-préfaisceaux et de \\(\\mathcal{V}\\)-faisceaux) et \\(a_{\\mathcal{U}} : \\widehat{C}_{\\mathcal{U}} \\to \\widetilde{C}_{\\mathcal{U}}\\)\n(resp. \\(a_{\\mathcal{V}} : \\widehat{C}_{\\mathcal{V}} \\to \\widetilde{C}_{\\mathcal{V}}\\)) les foncteurs « faisceaux associés » correspondants. Le\ndiagramme\n\\[\n\\xymatrix{\n\\widehat{C}_{\\mathcal{U}} \\ar[r]^-{a_{\\mathcal{U}}} \\ar@{^{(}-&gt;}[d] &amp; \\widetilde{C}_{\\mathcal{U}} \\ar@{^{(}-&gt;}[d] \\\\\n\\widehat{C}_{\\mathcal{V}} \\ar[r]^-{a_{\\mathcal{V}}} &amp; \\widetilde{C}_{\\mathcal{V}}\n}\n\\]\noù les foncteurs verticaux sont les inclusions canoniques, est commutatif à isomorphisme\ncanonique près.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Résulte de la construction des foncteurs \\(a_{\\mathcal{U}}\\) et \\(a_{\\mathcal{V}}\\) (3.4 et 3.0.5).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-4",
+   "title": "4. Propriétés d'exactitude de la catégorie des faisceaux",
+   "blocks": [
+    {
+     "id": "II.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.4\">4. Propriétés d'exactitude de la catégorie des faisceaux</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les propriétés d'exactitude de la catégorie des faisceaux se déduisent des propriétés\nd'exactitude de la catégorie des préfaisceaux via le théorème 3.4. Le présent numéro\nexplicite cette philosophie sur des énoncés-types parmi les plus utiles.</p>"
+    },
+    {
+     "id": "II.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site, \\(\\widetilde{C}\\) la catégorie des faisceaux, \\(a : \\widehat{C} \\to \\widetilde{C}\\) le\nfoncteur faisceau associé, \\(i : \\widetilde{C} \\to \\widehat{C}\\) le foncteur d'inclusion.</p>\n  <p>1) Le foncteur \\(a\\) commute aux limites inductives et est exact.</p>\n  <p>2) Les \\(\\mathcal{U}\\)-limites inductives dans \\(\\widetilde{C}\\) sont représentables. Pour toute petite\ncatégorie \\(I\\) et pour tout foncteur \\(E : I \\to \\widetilde{C}\\), le morphisme canonique\n\\[\n\\varinjlim_I E \\longrightarrow a(\\varinjlim_I i \\circ E)\n\\]\nest un isomorphisme.</p>\n  <p>3) Les \\(\\mathcal{U}\\)-limites projectives dans \\(\\widetilde{C}\\) sont représentables. Pour tout objet \\(X\\) de \\(C\\),\nle foncteur sur \\(\\widetilde{C}\\) : \\(F \\mapsto F(X)\\) commute aux limites projectives, i.e. le foncteur\nd'inclusion \\(i : \\widetilde{C} \\to \\widehat{C}\\) commute aux limites projectives.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Ces propriétés résultent essentiellement du théorème 3.4 et de (I 2.11).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ainsi, dans la catégorie des faisceaux, les produits indexés par un élément de \\(\\mathcal{U}\\),\nproduits fibrés, sommes indexées par un élément de \\(\\mathcal{U}\\), sommes amalgamées, noyaux,\nconoyaux, images, coimages sont représentables.</p>"
+    },
+    {
+     "id": "II.4.1.1",
+     "type": "corollaire",
+     "label": "4.1.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.1.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site et \\(F\\) un faisceau d'ensembles sur \\(C\\).\nL'homomorphisme canonique\n\\[\n\\varinjlim_{C/F} aX \\longrightarrow F\n\\]\nest un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Résulte de (I 3.4) et du fait que \\(a\\) commute aux limites inductives.</p>"
+    },
+    {
+     "id": "II.4.2",
+     "type": "proposition",
+     "label": "4.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Tout morphisme de \\(\\widetilde{C}\\), qui est à la fois un épimorphisme et\nun monomorphisme, est un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Soit \\(u : G \\to H\\) un morphisme de \\(\\widetilde{C}\\) qui est un épimorphisme et un\nmonomorphisme. Remarquons tout d'abord que le morphisme \\(u\\) est un monomorphisme de\npréfaisceaux (4.1 1)). Construisons la somme amalgamée \\(H \\coprod_G H = K\\) et les deux\nmorphismes canoniques \\(i_1, i_2 : H \\rightrightarrows K\\) dans la catégorie des préfaisceaux. Comme \\(u\\) est un\nmonomorphisme de préfaisceaux, on vérifie immédiatement que le diagramme ci-après est\ncartésien et cocartésien (I 10.1) :\n\\[\n\\xymatrix{\nG \\ar[r]^-{u} \\ar[d]_-{u} &amp; H \\ar[d]^-{i_2} \\\\\nH \\ar[r]_-{i_1} &amp; K\n}\n\\]\nEn appliquant le foncteur « faisceau associé », on obtient donc un diagramme cartésien et\ncocartésien de la catégorie des faisceaux (4.1 1)) :\n\\[\n(*) \\qquad\n\\xymatrix{\nG \\ar[r]^-{u} \\ar[d]_-{u} &amp; H \\ar[d]^-{a i_2} \\\\\nH \\ar[r]_-{a i_1} &amp; aK\n}\n\\]\nComme \\(u\\) est un épimorphisme de faisceaux, le morphisme \\(a i_1\\) est un isomorphisme et\ncomme le diagramme (*) est cartésien, le morphisme \\(u\\) est un isomorphisme.</p>"
+    },
+    {
+     "id": "II.4.3",
+     "type": "proposition",
+     "label": "4.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\">\n  <p>1) Les limites inductives dans \\(\\widetilde{C}\\) qui sont représentables, sont universelles\n(I 2.5).</p>\n  <p>2) Toute famille épimorphique (I 10.2) de morphismes est épimorphique effective\nuniverselle (2.6).</p>\n  <p>3) Toute relation d'équivalence est effective universelle (I 10.6).</p>\n  <p>4) Les \\(\\mathcal{U}\\)-limites inductives filtrantes commutent aux limites projectives finies\n(I 2.6).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Les assertions 1) à 4) sont vraies dans la catégorie des ensembles donc dans\nla catégorie des préfaisceaux (I 3.1). Les assertions 1) et 4) résultent alors immédiatement\ndes assertions correspondantes pour les préfaisceaux et de 4.1. Démontrons 3). Soit\n\\(p_1, p_2 : R \\rightrightarrows X\\) une relation d'équivalence de \\(\\widetilde{C}\\). Le diagramme \\(R \\rightrightarrows X\\) est alors une\nrelation d'équivalence de préfaisceaux (4.1 1)). Il existe donc un morphisme de préfaisceaux\n\\(u : X \\to Y\\) tel que le diagramme\n\\[\n\\xymatrix{\nR \\ar[r]^-{p_2} \\ar[d]_-{p_1} &amp; X \\ar[d]^-{u} \\\\\nX \\ar[r]_-{u} &amp; Y\n}\n\\]\nsoit cartésien et cocartésien dans la catégorie des préfaisceaux. En appliquant le foncteur\n« faisceau associé », on obtient un diagramme cartésien et cocartésien dans la catégorie des\nfaisceaux (4.1 1)). Par suite \\(R \\rightrightarrows X\\) est une relation d'équivalence effective. Comme toute\nrelation d'équivalence est effective d'après ce qui précède, toute relation d'équivalence est\neffective universelle. Démontrons 2). Soit \\((u_i : X_i \\to X)\\), \\(i \\in I\\), une famille épimorphique de\n\\(\\widetilde{C}\\). D'après (II 2.6) et (I 2.12), il suffit de démontrer les assertions suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Pour tout morphisme de faisceaux \\(v : Y \\to X\\), la famille de morphismes\n\\(\\mathrm{pr}_{2,i} : X_i \\times_X Y \\to Y\\), \\(i \\in I\\), est une famille épimorphique de \\(\\widetilde{C}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Pour tout faisceau \\(Z\\) le diagramme d'ensembles :\n\\[\n\\mathrm{Hom}(X,Z) \\longrightarrow \\prod_{i \\in I} \\mathrm{Hom}(X_i,Z) \\rightrightarrows \\coprod_{(i,k) \\in I \\times I} \\mathrm{Hom}(X_i \\times_X X_k, Z)\n\\]\nest exact.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(X'\\) la réunion des images des morphismes \\(u_i\\) au sens des préfaisceaux et\n\\(j : X' \\hookrightarrow X\\) l'injection canonique. Pour tout \\(i \\in I\\), le morphisme \\(u_i : X_i \\to X\\) se factorise en\nun morphisme \\(u'_i : X_i \\to X'\\) et le morphisme \\(j\\), et la famille \\(u'_i : X_i \\to X'\\), \\(i \\in I\\), est une\nfamille épimorphique de \\(\\widehat{C}\\). Comme \\(j\\) est un monomorphisme, le morphisme \\(aj : aX' \\to X\\) est\nun monomorphisme de faisceaux (4.1). Comme pour tout \\(i \\in I\\), on a \\(u_i = aj \\circ au'_i\\), \\(aj\\) est un\népimorphisme de faisceaux. Par suite \\(aj\\) est un isomorphisme (4.2). Soit \\(v : Y \\to X\\) un\nmorphisme de faisceaux. On en déduit par changement de base un morphisme\n\\(j_v : X' \\times_X Y \\to Y\\) et des morphismes \\(u'_{i,v} : X_i \\times_X Y \\to X' \\times_X Y\\). Comme \\(a\\) commute aux\nproduits fibrés, \\(aj_v\\) est un isomorphisme. Comme les familles épimorphiques de \\(\\widehat{C}\\)\nconservent ce caractère par changement de base, la famille \\(u'_{i,v}\\), \\(i \\in I\\), est épimorphique\ndans \\(\\widehat{C}\\). Comme \\(a\\) commute aux limites inductives, la famille\n\\(au'_{i,v} : X_i \\times_X Y \\longrightarrow a(X' \\times_X Y)\\), \\(i \\in I\\), est épimorphique dans \\(\\widetilde{C}\\) d'où a).\nDémontrons b). Soit \\(Z\\) un faisceau. Comme \\(aj\\) est un isomorphisme, l'application\n\\[\n\\mathrm{Hom}(X,Z) \\longrightarrow \\mathrm{Hom}(X',Z)\n\\]\nest une bijection. Comme les \\(u'_i\\), \\(i \\in I\\), forment une famille épimorphique de \\(\\widehat{C}\\), le\ndiagramme d'ensemble :\n\\[\n\\mathrm{Hom}(X',Z) \\longrightarrow \\prod_{i \\in I} \\mathrm{Hom}(X_i,Z) \\rightrightarrows \\coprod_{(i,k) \\in I \\times I} \\mathrm{Hom}(X_i \\times_X X_k, Z)\n\\]\nest exact. Enfin comme \\(X'\\) est un sous-préfaisceau de \\(X\\), le préfaisceau \\(X_i \\times_{X'} X_k\\),\n\\((i,k) \\in I \\times I\\), est canoniquement isomorphe à \\(X_i \\times_X X_k\\), d'où b).</p>"
+    },
+    {
+     "id": "II.4.3.1",
+     "type": "remarque",
+     "label": "4.3.1",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.4.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">4.3.1</span></div>\n  <div class=\"thm-body\">\n  <p>1) La proposition 4.3 2) nous fournit formellement une seconde\ndémonstration de 4.2 : Il est clair que, dans toute catégorie, un morphisme qui est à la fois\nun épimorphisme effectif universel et un monomorphisme est en fait un isomorphisme.</p>\n  <p>2) On déduit des propositions précédentes que tout morphisme dans la catégorie des\nfaisceaux se factorise de manière unique en un épimorphisme effectif et un monomorphisme\neffectif. Cette propriété généralise de façon naturelle, pour les catégories non additives,\nl'axiome (AB2) des catégories abéliennes (\\(\\mathrm{coim} \\xrightarrow{\\ \\sim\\ } \\mathrm{im}\\)) [Tohoku].</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.4.4.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.4.0\">4.4.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) un \\(\\mathcal{U}\\)-site. Le foncteur \\(h : C \\to \\widehat{C}\\) (I 1.3.1), composé avec le foncteur\nfaisceau associé, fournit un foncteur\n\\[\n\\varepsilon_C : C \\longrightarrow \\widetilde{C} ,\n\\]\nappelé <em>foncteur canonique</em> de \\(C\\) dans \\(\\widetilde{C}\\), qui sera constamment utilisé par la suite. Le\nfoncteur \\(\\varepsilon_C\\) commute aux limites projectives finies. Lorsque la topologie de \\(C\\) est moins fine\nque la topologie canonique, \\(\\varepsilon_C\\) est pleinement fidèle, et commute aux limites projectives ; il\nest alors, d'ailleurs, défini lorsque \\(C\\) ne possède pas nécessairement de petite famille\ntopologiquement génératrice. Nous n'étudierons pas en détail le comportement de \\(\\varepsilon_C\\) par\nrapport aux limites inductives (cf. [SGA 3 IV]). Nous aurons cependant besoin des\npropositions ci-après.</p>"
+    },
+    {
+     "id": "II.4.4",
+     "type": "theoreme",
+     "label": "4.4",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site et \\((u_i : X_i \\to X)\\), \\(i \\in I\\), une famille de\nmorphismes de \\(C\\) de but \\(X\\). Les conditions suivantes sont équivalentes\n<sup class=\"footnote-ref\"><a id=\"II-fn2ref\" href=\"#II-fn2\">(∗)</a></sup> :</p>\n  <p>i) La famille \\((\\varepsilon_C u_i : \\varepsilon_C X_i \\longrightarrow \\varepsilon_C X)\\), \\(i \\in I\\), est une famille épimorphique de\n\\(\\widetilde{C}\\) (I 10.2).</p>\n  <p>ii) La famille \\((u_i : X_i \\to X)\\), \\(i \\in I\\), est une famille couvrante de \\(C\\) (1.2).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. ii) \\(\\Longrightarrow\\) i). Soient \\(R \\hookrightarrow X\\) le crible engendré par les \\(u_i\\), \\(i \\in I\\) (I 4.3.3), et\n\\(u'_i : X_i \\to R\\) les morphismes induits par les \\(u_i\\). La famille des \\(u'_i\\), \\(i \\in I\\), est une famille\népimorphique de \\(\\widehat{C}\\), et \\(R\\) est un crible couvrant \\(X\\). Par suite, pour tout faisceau \\(F\\),\nl'application\n\\[\n\\mathrm{Hom}(X,F) \\longrightarrow \\mathrm{Hom}(R,F)\n\\]\nest bijective et l'application\n\\[\n\\mathrm{Hom}(R,F) \\longrightarrow \\prod_i \\mathrm{Hom}(X_i,F)\n\\]\nest injective. Donc l'application\n\\[\n\\mathrm{Hom}(X,F) \\longrightarrow \\prod_i \\mathrm{Hom}(X_i,F)\n\\]\nest injective et par suite l'application\n\\[\n\\mathrm{Hom}(aX,F) \\longrightarrow \\prod_i \\mathrm{Hom}(aX_i,F)\n\\]\nest injective, d'où i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). Avec les notations introduites précédemment, soit \\(J_R : R \\hookrightarrow X\\) l'injection\ncanonique dans \\(X\\) du crible engendré par les \\(u_i\\), \\(i \\in I\\). Il résulte de i) que le morphisme de\nfaisceaux \\(aJ_R : aR \\to aX\\) est à la fois un épimorphisme de faisceaux et un monomorphisme\nde faisceaux. C'est donc un isomorphisme de faisceaux (4.2). On a, avec les notations du\nn° 3, un diagramme commutatif :\n\\[\n\\xymatrix{\nX \\ar[r]^-{\\ell(X)} &amp; LX \\ar[r]^-{\\ell(LX)} &amp; aX \\\\\nR \\ar[u]^-{J_R} \\ar[r]_-{\\ell(R)} &amp; LR \\ar[u]^-{LJ_R} \\ar[r]_-{\\ell(LR)} &amp; aR \\ar[u]_-{aJ_R}^-{\\wr}\n}\n\\]\nTout d'abord, d'après 3.1 2), il existe un crible couvrant \\(J_{S_1} : S_1 \\hookrightarrow X\\) et un morphisme\n\\(u_1 : S_1 \\to LR\\) tel que\n\\[\n(4.6.1) \\qquad \\ell(LX) \\circ \\ell(X) \\circ J_{S_1} = aJ_R \\circ \\ell(LR) \\circ u_1 = \\ell(LX) \\circ LJ_R \\circ u_1 .\n\\]\nPosons \\(m = \\ell(X) \\circ J_{S_1}\\) et \\(n = LJ_R \\circ u_1\\). Les morphismes \\(m\\) et \\(n\\) sont des morphismes de \\(S_1\\)\ndans \\(LX\\). Soit \\(S_2 \\hookrightarrow S_1\\) le noyau du couple de flèches \\((m,n)\\). Pour tout objet \\(Y\\) de \\(C\\) et tout\nmorphisme \\(\\alpha : Y \\to S_1\\), on a, en vertu de (4.6.1), \\(\\ell(LX) \\circ m \\circ \\alpha = \\ell(LX) \\circ n \\circ \\alpha\\). Il résulte\nalors de (3.1.3)) que le noyau \\(S_2 \\times_{S_1} Y\\) du couple de flèches \\((m \\circ \\alpha, n \\circ \\alpha)\\) est un crible\ncouvrant \\(Y\\). Par suite, d'après l'axiome (T2) des topologies, \\(J_{S_2} : S_2 \\hookrightarrow X\\) est un crible\ncouvrant \\(X\\). On a donc un morphisme \\(u_2 : S_2 \\to LR\\) et un diagramme commutatif :\n\\[\n(4.6.2) \\qquad\n\\xymatrix{\nS_2 \\ar[rr]^-{J_{S_2}} \\ar[dd]_-{u_2} &amp; &amp; X \\ar[dd]^-{\\ell(X)} \\\\\n&amp; R \\ar[ur]_-{J_R} \\ar[dl]^-{\\ell(R)} &amp; \\\\\nLR \\ar[rr]_-{LJ_R} &amp; &amp; LX\n}\n\\]\nSoient \\(Y\\) un objet de \\(C\\) et \\(\\beta : Y \\to S_2\\) un morphisme. D'après 3.1 1), il existe un crible\ncouvrant \\(J_{Q_1} : Q_1 \\hookrightarrow Y\\) et un morphisme \\(v_1 : Q_1 \\to LR\\) tels que\n\\(u_2 \\circ \\beta \\circ J_{Q_1} = \\ell(R) \\circ v_1\\). Posons \\(f = J_{S_2} \\circ \\beta \\circ J_{Q_1}\\), \\(g = J_R \\circ v_1\\). Soient \\(Q_2\\) le noyau du\ncouple \\((f,g) : Q_1 \\rightrightarrows X\\) et \\(J_{Q_2} : Q_2 \\hookrightarrow Y\\), l'injection canonique. Pour tout objet \\(Z\\) de \\(C\\) et tout\nmorphisme \\(\\gamma : Z \\to Q_1\\), on a, en vertu de la commutativité de (4.6.2) :\n\\[\n\\ell(X) \\circ f \\circ \\gamma = \\ell(X) \\circ J_{S_2} \\circ \\beta \\circ J_{Q_1} \\circ \\gamma = LJ_R \\circ u_2 \\circ \\beta \\circ J_{Q_1} \\circ \\gamma =\n\\]\n\\[\n= LJ_R \\circ \\ell(R) \\circ v_1 \\circ \\gamma = \\ell(X) \\circ J_R \\circ v_1 \\circ \\gamma = \\ell(X) \\circ g \\circ \\gamma .\n\\]\nIl résulte alors de 3.1.2) que le noyau \\(Q_2 \\times_{Q_1} Z\\) du couple \\((f \\circ \\gamma, g \\circ \\gamma)\\) est un crible\ncouvrant \\(Z\\). D'après l'axiome (T 2) des topologies, \\(J_{Q_2} : Q_2 \\hookrightarrow Y\\) est un crible couvrant \\(Y\\).\nPour tout morphisme \\(\\beta : Y \\to S\\), il existe donc un crible couvrant \\(J_{Q_2} : Q_2 \\hookrightarrow Y\\) et un\nmorphisme \\(v_2 : Q_2 \\to R\\) tels que le diagramme ci-après soit commutatif :\n\\[\n\\xymatrix{\nY \\ar[r]^-{\\beta} &amp; S_2 \\ar[r]^-{J_{S_2}} &amp; X \\\\\nQ_2 \\ar[u]^-{J_{Q_2}} \\ar[rr]_-{v_2} &amp; &amp; R \\ar[u]_-{J_R}\n}\n\\]\nNotons alors \\(S_2 \\cap R\\) le produit fibré de \\(S_2\\) et de \\(R\\) au-dessus de \\(X\\). Le crible (de \\(Y\\)) :\n\\((S_2 \\cap R) \\times_{S_2} Y\\) contient le crible \\(Q_2\\) et par suite \\((S_2 \\cap R) \\times_{S_2} Y\\) est un crible couvrant \\(Y\\). Il\nrésulte alors de l'axiome (T 2) des topologies que \\(S_2 \\cap R\\) est un crible couvrant \\(X\\) et par suite\nle crible \\(R\\) qui contient \\(S_2 \\cap R\\) est un crible couvrant \\(X\\), cqfd.</p>"
+    },
+    {
+     "id": "II.4.4.4",
+     "type": "corollaire",
+     "label": "4.4.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.4.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(T\\) la topologie du \\(\\mathcal{U}\\)-site \\(C\\), \\(T'\\) (resp. \\(T''\\)) la\ntopologie la plus fine sur \\(C\\) parmi celles pour lesquelles les objets de \\(\\widetilde{C}\\) sont des faisceaux\n(resp. des préfaisceaux) (2.2). Alors \\(T = T' = T''\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on a trivialement \\(T \\leq T' \\leq T''\\), et 4.4 et 2.2 impliquent que \\(T'' \\leq T\\), cqfd.</p>"
+    },
+    {
+     "id": "II.4.5",
+     "type": "definition",
+     "label": "4.5",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>Un <em>objet initial</em> d'une catégorie \\(A\\) est un objet \\(\\varnothing_A\\) qui\nreprésente la limite inductive vide i.e. tel que pour tout \\(X \\in \\mathrm{ob}\\, A\\), il existe une flèche et une\nseule \\(\\varnothing_A \\to X\\). On dit qu'un objet \\(\\varnothing_A\\) est <em>initial strict</em> s'il est initial et si tout\nmorphisme de but \\(\\varnothing_A\\) est un isomorphisme. Soit \\((S_i)\\), \\(i \\in I\\), une famille d'objets d'une\ncatégorie \\(A\\). Supposons que la somme \\(s = \\coprod_{i \\in I} S_i\\) soit représentable. On dit que la\nsomme \\(S\\) est <em>disjointe</em> si les morphismes structuraux \\(S_i \\to S\\) sont quarrables, s'ils sont des\nmonomorphismes et si pour tout couple \\(i,j\\), \\(i \\neq j\\) le produit \\(S_i \\times_S S_j\\) est un objet initial\nde \\(A\\). On dit que la somme \\(S\\) est <em>disjointe universelle</em> si elle est disjointe et si elle reste\nsomme disjointe après tout changement de base \\(T \\to S\\) ; il en résulte que pour tout couple\n\\(i,j\\), \\(i \\neq j\\), les objets \\(S_i \\times_S S_j\\) sont des objets initiaux stricts de \\(A\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.5.1",
+     "type": "exemple",
+     "label": "4.5.1",
+     "title": "Exemple",
+     "html": "<div class=\"thm thm-remark exemple\" id=\"II.4.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">4.5.1</span></div>\n  <div class=\"thm-body\"><p>Dans la catégorie des ensembles, les sommes directes sont\ndisjointes et universelles. Il en est donc de même dans toute catégorie de préfaisceaux\nd'ensembles (I 3.1) et par suite dans toute catégorie de faisceaux d'ensembles sur un\n\\(\\mathcal{U}\\)-site (4.1) ; en particulier, l'objet initial de \\(\\widetilde{C}\\) est strict.</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.6",
+     "type": "proposition",
+     "label": "4.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie et \\((s_i : X_i \\to X)\\), \\(i \\in I\\), une famille de\nmorphismes de \\(C\\). Pour toute \\(\\mathcal{U}\\)-topologie \\(\\mathscr{C}\\) sur \\(C\\) (3.0.2), on désigne par \\(\\widetilde{C}_{\\mathscr{C}}\\) la catégorie\nde faisceaux correspondante et par \\(\\varepsilon_{\\mathscr{C}} : C \\to \\widetilde{C}_{\\mathscr{C}}\\) le foncteur correspondant.</p>\n  <p>1) Soit \\(\\mathscr{C}\\) une \\(\\mathcal{U}\\)-topologie telle que\n\\[\n\\coprod_{i \\in I} \\varepsilon_{\\mathscr{C}}(X_i) \\xrightarrow{\\ (\\varepsilon_{\\mathscr{C}}(s_i))\\ } \\varepsilon_{\\mathscr{C}}(X)\n\\]\nsoit un isomorphisme. Alors pour toute topologie \\(\\mathscr{C}'\\) plus fine que \\(\\mathscr{C}\\), le morphisme :\n\\[\n\\coprod_{i \\in I} \\varepsilon_{\\mathscr{C}'}(X_i) \\xrightarrow{\\ (\\varepsilon_{\\mathscr{C}'}(s_i))\\ } \\varepsilon_{\\mathscr{C}'}(X)\n\\]\nest un isomorphisme.</p>\n  <p>2) Soit \\(\\mathscr{C}\\) une \\(\\mathcal{U}\\)-topologie sur \\(C\\). Les propriétés suivantes (i) et (ii) sont\néquivalentes :</p>\n  <p>i) a) La famille \\((s_i : X_i \\to X)\\), \\(i \\in I\\), est couvrante pour \\(\\mathscr{C}\\).</p>\n  <p style=\"margin-left:1.5em;\">b) Pour tout \\(i \\in I\\), le morphisme diagonal de préfaisceaux\n\\(\\Delta_i : X_i \\hookrightarrow X_i \\times_X X_i\\) est transformé par le foncteur « faisceau associé » (pour \\(\\mathscr{C}\\)) en un\nisomorphisme (ce qui est le cas si les \\(s_i\\) sont des monomorphismes).</p>\n  <p style=\"margin-left:1.5em;\">c) Pour tout couple \\((i,j)\\), \\(i \\neq j\\), d'éléments de \\(I\\), le préfaisceau\n\\(X_i \\times_X X_j\\) est transformé par le foncteur « faisceau associé » (pour \\(\\mathscr{C}\\)) en l'objet initial de \\(\\widetilde{C}_{\\mathscr{C}}\\).</p>\n  <p>ii) \\(\\varepsilon_{\\mathscr{C}}(X)\\) est somme de \\(\\varepsilon_{\\mathscr{C}}(X_i)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) Un faisceau \\(F\\) pour \\(\\mathscr{C}'\\) est un faisceau pour \\(\\mathscr{C}\\). Par suite, pour tout faisceau \\(F\\)\npour \\(\\mathscr{C}'\\), le morphisme\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F) \\longrightarrow \\prod_{i \\in I} \\mathrm{Hom}_{\\widehat{C}}(X_i,F)\n\\]\nest un isomorphisme, ce qui entraîne l'assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Par définition, on a la propriété ii) si et seulement si le morphisme de préfaisceaux\n\\[\n\\Phi = (h(s_i), i \\in I) : \\coprod_i h(X_i) \\longrightarrow h(X)\n\\]\nest transformé par le foncteur « faisceau associé » en un isomorphisme i.e. (4.2) si et\nseulement si \\(a(\\Phi)\\) est un épimorphisme et monomorphisme de faisceaux. D'après (4.4), le\nmorphisme \\(a(\\Phi)\\) est un épimorphisme si et seulement si on a la propriété a). Le morphisme\ndiagonal\n\\[\n\\Delta : \\coprod_i h(X_i) \\longrightarrow \\Bigl(\\coprod_i h(X_i)\\Bigr) \\times_{h(X)} \\Bigl(\\coprod_i h(X_i)\\Bigr)\n\\]\nest somme directe d'une famille \\(\\Delta_{i,j}\\), \\((i,j) \\in I \\times I\\), de morphismes définis comme suit :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>β) Lorsque \\(i = j\\), \\(\\Delta_{i,i}\\) est le morphisme diagonal \\(h(X_i) \\to h(X_i) \\times_{h(X)} h(X_i)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>γ) Lorsque \\(i \\neq j\\), \\(\\Delta_{i,j}\\) est le morphisme \\(\\varnothing_{\\widehat{C}} \\to h(X_i) \\times_{h(X)} h(X_j)\\)\n(\\(\\varnothing_{\\widehat{C}}\\) désigne l'objet initial de \\(\\widehat{C}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le morphisme \\(a(\\Phi)\\) est un monomorphisme si et seulement si \\(a(\\Delta)\\) est un\nisomorphisme, et d'après (4.1) \\(a(\\Delta)\\) est isomorphisme si et seulement si les \\(a(\\Delta_{i,j})\\) sont des\nisomorphismes i.e. si et seulement si on a les propriétés b) et c).</p>"
+    },
+    {
+     "id": "II.4.6.1",
+     "type": "corollaire",
+     "label": "4.6.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.6.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie et \\(X\\) un objet de \\(C\\).</p>\n  <p>1) Soit \\(\\mathscr{C}\\) une \\(\\mathcal{U}\\)-topologie sur \\(C\\). L'objet \\(X\\) de \\(C\\) est transformé par le foncteur\n« faisceau associé » (pour la topologie \\(\\mathscr{C}\\)) en l'objet initial de \\(\\widetilde{C}_{\\mathscr{C}}\\) si et seulement si le crible\nvide recouvre \\(X\\).</p>\n  <p>2) Lorsque \\(X\\) est un objet initial strict de \\(C\\), le faisceau associé à \\(X\\), pour toute\n\\(\\mathcal{U}\\)-topologie plus fine que la topologie canonique, est un objet initial.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) On prend pour ensemble \\(I\\) dans 4.6 2) l'ensemble vide.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) D'après 1) et 4.6 1), il suffit de montrer que le crible vide recouvre \\(X\\) pour la\ntopologie canonique i.e. (2.6) il suffit de montrer que pour tout objet \\(Y \\to X\\) au-dessus de\n\\(X\\), \\(Y\\) est un objet initial de \\(X\\), ce qui résulte de la définition (4.5).</p>"
+    },
+    {
+     "id": "II.4.6.2",
+     "type": "corollaire",
+     "label": "4.6.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.6.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site et \\((s_i : X_i \\to X)\\), \\(i \\in I\\), une famille de\nmorphismes quarrables de \\(C\\) de même but possédant les propriétés suivantes :</p>\n  <p>α) La famille des \\(s_i\\), \\(i \\in I\\), est couvrante.</p>\n  <p>β) Pour tout \\(i \\in I\\), \\(s_i : X_i \\to X\\) est un monomorphisme.</p>\n  <p>γ) Pour tout couple \\((i,j)\\), \\(i \\neq j\\), d'éléments de \\(I\\), \\(X_i \\times_X X_j\\) est recouvert par le\ncrible vide, i.e. pour tout faisceau \\(F\\) sur \\(C\\), \\(F(X_i \\times_X X_j)\\) est un ensemble réduit à un\nélément.</p>\n  <p>Alors \\(\\varepsilon_C(X)\\) est somme des \\(\\varepsilon_C(X_i)\\), \\(i \\in I\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Résulte immédiatement de 4.6 2) et de 4.6.1 1).</p>"
+    },
+    {
+     "id": "II.4.6.3",
+     "type": "corollaire",
+     "label": "4.6.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.6.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie et \\((s_i : X_i \\to X)\\), \\(i \\in I\\), une famille\nde morphisme quarrables de même but. Supposons que la topologie canonique de \\(C\\) soit une\n\\(\\mathcal{U}\\)-topologie. Les conditions suivantes sont équivalentes :</p>\n  <p>i) Il existe une \\(\\mathcal{U}\\)-topologie \\(\\mathscr{C}\\) sur \\(C\\), moins fine que la topologie canonique, telle\nque \\(\\varepsilon_{\\mathscr{C}}(X)\\) soit somme des \\(\\varepsilon_{\\mathscr{C}}(X_i)\\), \\(i \\in I\\).</p>\n  <p>ii) L'objet \\(X\\) est somme disjointe et universelle (4.5) (dans \\(C\\)) des \\(X_i\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. ii) \\(\\Longrightarrow\\) i). Comme \\(X\\) est somme universelle des \\(X_i\\), \\(i \\in I\\), la famille des \\(s_i\\),\n\\(i \\in I\\), est couvrante pour la topologie canonique de \\(C\\) (2.6). La condition α) de 4.6.2 est donc\nsatisfaite lorsqu'on munit \\(C\\) de la topologie canonique. La condition β) est évidemment\nsatisfaite et la propriété γ) résulte de 4.6.1) 2), d'où i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). Soit \\(\\mathscr{C}\\) une topologie sur \\(C\\) moins fine que la topologie canonique telle que\n\\(\\varepsilon_{\\mathscr{C}}(X)\\) soit somme des \\(\\varepsilon_{\\mathscr{C}}(X_i)\\). Pour tout faisceau \\(F\\), pour \\(\\mathscr{C}\\), l'application canonique\n\\(\\mathrm{Hom}(X,F) \\to \\prod_i \\mathrm{Hom}(X_i,F)\\) est une bijection. De plus, tout préfaisceau représentable est\nun faisceau. Il en résulte aussitôt que \\(X\\) est somme dans \\(C\\) des \\(X_i\\), \\(i \\in I\\). Appliquant ceci au\ncas où l'ensemble \\(I\\) est vide, on voit que si un objet de \\(C\\) est transformé en l'objet initial\nde \\(\\widetilde{C}\\), cet objet est un objet initial de \\(C\\). Le foncteur \\(\\varepsilon_C : C \\to \\widetilde{C}\\) est pleinement fidèle et\ncommute aux limites projectives finies. Par suite la condition b) de 4.6 2) entraîne que les\n\\(s_i\\), \\(i \\in I\\), sont des monomorphismes de \\(C\\), et la condition c) entraîne, d'après qui précède,\nque les \\(X_i \\times_X X_j\\), \\(i \\neq j\\), sont des objets initiaux de \\(C\\). Par suite \\(X\\) est somme disjointe des\n\\(X_i\\). Comme \\(\\varepsilon_{\\mathscr{C}}\\) commute aux produits fibrés, cette dernière propriété est stable par tout\nchangement de base \\(Y \\to X\\), et par suite \\(X\\) est somme disjointe et universelle des \\(X_i\\), \\(i \\in I\\).</p>"
+    },
+    {
+     "id": "II.4.6.4",
+     "type": "corollaire",
+     "label": "4.6.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.6.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie et \\(X\\) un objet de \\(C\\). Supposons que la\ntopologie canonique sur \\(C\\) soit une \\(\\mathcal{U}\\)-topologie. Les propriétés suivantes sont\néquivalentes :</p>\n  <p>i) Il existe sur \\(C\\) une topologie moins fine que la topologie canonique telle que\n\\(\\varepsilon_{\\mathscr{C}}(X)\\) soit un objet initial de \\(\\widetilde{C}_{\\mathscr{C}}\\).</p>\n  <p>ii) \\(X\\) est un objet initial strict de \\(C\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. On prend pour ensemble \\(I\\) l'ensemble vide dans 4.6.3 .</p>"
+    },
+    {
+     "id": "II.4.7",
+     "type": "proposition",
+     "label": "4.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) une \\(\\mathcal{U}\\)-catégorie, \\(\\widetilde{C}\\) la catégorie des faisceaux sur \\(C\\)\npour la topologie canonique, \\(\\varepsilon_C : C \\to \\widetilde{C}\\) le foncteur canonique (4.4.0), \\(R \\rightrightarrows X\\) une\nrelation d'équivalence dans \\(C\\) admettant un conoyau \\(Y\\) dans \\(C\\). Soit \\(\\pi : X \\to Y\\) le morphisme\ncanonique et supposons-le quarrable. Considérons alors les propriétés suivantes :</p>\n  <p>i) \\(\\varepsilon_C(Y)\\) est le quotient de la relation d'équivalence \\(\\varepsilon_C(R) \\rightrightarrows \\varepsilon_C(X)\\).</p>\n  <p>ii) La relation d'équivalence \\(R \\rightrightarrows X\\) est effective universelle (cf. n° 7).</p>\n  <p>On a ii) \\(\\Longrightarrow\\) i). Lorsque \\(C\\) possède une \\(\\mathcal{U}\\)-topologie moins fine que la topologie\ncanonique, on a i) \\(\\Longrightarrow\\) ii).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. ii) \\(\\Longrightarrow\\) i). Le morphisme canonique \\(R \\to X \\times_Y X\\) est un isomorphisme. Soit\n\\(S \\hookrightarrow Y\\) le crible engendré par \\(\\pi : X \\to Y\\). Pour tout préfaisceau \\(F\\), on a un diagramme exact\n(I 2.12) :\n\\[\n\\mathrm{Hom}(S,F) \\longrightarrow \\mathrm{Hom}(X,F) \\rightrightarrows \\mathrm{Hom}(R,F) .\n\\]\nIl suffit donc de montrer que pour tout faisceau \\(F\\) pour la topologie canonique, l'application\n\\[\n\\mathrm{Hom}(X,F) \\longrightarrow \\mathrm{Hom}(S,F)\n\\]\nest une bijection i.e. il suffit de montrer que \\(S\\) est couvrant pour la topologie canonique, ou\nencore que le crible engendré par \\(\\pi : X \\to Y\\) est couvrant, ce qui résulte de la définition 2.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). Le foncteur \\(\\varepsilon_C : C \\to \\widetilde{C}\\) commute aux limites projectives finies et est\npleinement fidèle. Or le morphisme canonique\n\\(\\varepsilon_C(R) \\to \\varepsilon_C(X) \\times_{\\varepsilon_C(Y)} \\varepsilon_C(X)\\) est un isomorphisme (4.3). Par suite le morphisme\ncanonique \\(R \\to X \\times_Y X\\) est un isomorphisme. Le morphisme \\(\\varepsilon_C(X) \\to \\varepsilon_C(Y)\\) est un\népimorphisme, ce qui entraîne (4.4) que \\(\\pi : X \\to Y\\) est un morphisme couvrant de \\(C\\) pour la\ntopologie canonique, cqfd.</p>"
+    },
+    {
+     "id": "II.4.8",
+     "type": "proposition",
+     "label": "4.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(C\\) un \\(\\mathcal{U}\\)-site. La catégorie des faisceaux sur \\(C\\) possède les\npropriétés suivantes :</p>\n  <p style=\"margin-left:1.5em;\">a) Les limites projectives finies sont représentables.</p>\n  <p style=\"margin-left:1.5em;\">b) Les sommes directes indexées par un élément de \\(\\mathcal{U}\\) sont\nreprésentables. Elles sont disjointes et universelles. (4.5)</p>\n  <p style=\"margin-left:1.5em;\">c) Les relations d'équivalence sont effectives universelles.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela a été vu dans 4.1, 2) et 3), 4.3, 3), et 4.5.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces propriétés ont été mises en évidence car elles permettront plus tard de\ncaractériser les \\(\\mathcal{U}\\)-catégories équivalentes à des catégories de faisceaux sur des catégories\nappartenant à \\(\\mathcal{U}\\) (IV 1.2).</p>"
+    },
+    {
+     "id": "II.4.8.remarque",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.4.8.remarque\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>Rappelons que la propriété a) est équivalente à la propriété :\nil existe un objet final, et les produits fibrés sont représentables (I 2.3.1).</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.9\">4.9.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C\\) un site dont la catégorie sous-jacente soit une \\(\\mathcal{U}\\)-catégorie. Alors la\ncatégorie \\(\\widetilde{C}\\) des \\(\\mathcal{U}\\)-faisceaux sur \\(C\\) satisfait aux conditions envisagées dans I 7.3 ((i) ou\n(ii), au choix), donc par loc. cit. les diverses variantes envisagées dans I 7.1 pour la notion\nde <em>famille génératrice</em> dans \\(\\widetilde{C}\\) coïncident. Ceci posé :</p>"
+    },
+    {
+     "id": "II.4.10",
+     "type": "proposition",
+     "label": "4.10",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.10</span></div>\n  <div class=\"thm-body\"><p>Avec les notations précédentes, considérons le foncteur\ncanonique \\(\\varepsilon : C \\to \\widetilde{C}\\) (4.4.0), et soit \\(G \\subset \\mathrm{ob}\\, C\\) une famille topologiquement génératrice\ndans \\(C\\) (3.0.1). Alors la famille \\((\\varepsilon(X))_{X \\in G}\\) d'objets de \\(\\widetilde{C}\\) est une famille génératrice. En\nparticulier la famille \\((\\varepsilon(X))_{X \\in \\mathrm{ob}\\, C}\\) d'objets de \\(C\\) est génératrice.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il faut prouver que tout morphisme \\(u : F \\to F'\\) dans \\(\\widetilde{C}\\) tel que\n\\[\n(4.10.1) \\qquad \\mathrm{Hom}(\\varepsilon(X),F) \\longrightarrow \\mathrm{Hom}(\\varepsilon(X),F')\n\\]\nsoit une bijection pour tout \\(X \\in G\\), est un isomorphisme. Or l'application précédente\ns'identifie à l'application\n\\[\n(4.10.2) \\qquad u(X) : F(X) \\longrightarrow F'(X) ,\n\\]\net il faut montrer que si celle-ci est bijective pour tout \\(X \\in G\\), il en est de même pour tout\n\\(X \\in \\mathrm{ob}\\, C\\). Or soit \\((X_i \\to X)_{i \\in I}\\) une famille couvrante de \\(X\\) par des objets de \\(G\\), et pour tout\ncouple d'indices \\((i,j)\\) de \\(I\\), considérons l'ensemble de tous les morphismes\n\\(X_{ijk} \\to X_i \\times_X X_j\\) dans \\(\\widetilde{C}\\), avec \\(X_{ijk} \\in G\\) (\\(k\\) variant dans un ensemble d'indices \\(I_{i,j}\\)). On\nobtient alors un homomorphisme de diagrammes exacts d'ensembles\n\\[\n\\xymatrix{\nF(X) \\ar[r] \\ar[d] &amp; \\prod_i F(X_i) \\ar@&lt;0.5ex&gt;[r] \\ar@&lt;-0.5ex&gt;[r] \\ar[d]^-{\\wr} &amp; \\prod_{ijk} F(X_{ijk}) \\ar[d]^-{\\wr} \\\\\nF'(X) \\ar[r] &amp; \\prod_i F'(X_i) \\ar@&lt;0.5ex&gt;[r] \\ar@&lt;-0.5ex&gt;[r] &amp; \\prod_{ijk} F'(X_{ijk})\n}\n\\]\noù par hypothèse les deux dernières flèches verticales sont des bijections. Il en est donc de\nmême de la première flèche verticale, cqfd.</p>"
+    },
+    {
+     "id": "II.4.11",
+     "type": "corollaire",
+     "label": "4.11",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.11</span></div>\n  <div class=\"thm-body\"><p>Supposons que \\(C\\) soit un \\(\\mathcal{U}\\)-site (3.0.2). Alors la catégorie\n\\(\\widetilde{C}\\) est une \\(\\mathcal{U}\\)-catégorie et admet une \\(\\mathcal{U}\\)-petite famille génératrice.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, par hypothèse on peut prendre dans 4.10 pour \\(G\\) une petite famille\ngénératrice, ce qui prouve l'existence d'une petite famille génératrice. D'autre part, si\n\\(F, F' \\in \\mathrm{ob}\\, \\widetilde{C}\\), un homomorphisme de \\(F\\) dans \\(F'\\) est connu quand on connaît l'homomorphisme\n(4.10.1) i.e. (4.10.2) pour tout \\(X \\in \\mathrm{ob}\\, G\\) (I 7.1.1), d'où s'ensuit que l'application\n\\[\n\\mathrm{Hom}(F,F') \\longrightarrow \\prod_{X \\in G} \\mathrm{Hom}(F(X), F'(X))\n\\]\nest injective. Comme le deuxième membre est \\(\\mathcal{U}\\)-petit, il en est de même du premier, ce qui\nprouve que \\(\\widetilde{C}\\) est une \\(\\mathcal{U}\\)-catégorie.</p>"
+    },
+    {
+     "id": "II.4.12",
+     "type": "corollaire",
+     "label": "4.12",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.12</span></div>\n  <div class=\"thm-body\"><p>Soit \\(C\\) un \\(\\mathcal{U}\\)-site. Alors pour tout objet de \\(\\widetilde{C}\\), l'ensemble\ndes sous-objets de \\(X\\) et l'ensemble des objets quotients de \\(X\\) est \\(\\mathcal{U}\\)-petit.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte de I 7.4 resp. I 7.5, qui s'appliquent grâce à 4.11.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) Lorsque le site \\(C\\) ne possède pas nécessairement de petite famille topologiquement génératrice et lorsque la topologie de \\(C\\) est moins fine que la topologie canonique, on a ii) \\(\\Longrightarrow\\) i) (cf. démonstration de 4.4). </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-5",
+   "title": "5. Extension d'une topologie de \\(C\\) à \\(\\widehat{C}\\)",
+   "blocks": [
+    {
+     "id": "II.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.5\">5. Extension d'une topologie de \\(C\\) à \\(\\widehat{C}\\)</h2>"
+    },
+    {
+     "id": "II.5.1",
+     "type": "proposition",
+     "label": "5.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(C\\) un \\(\\mathcal{U}\\)-site et \\(f : H \\to K\\) un morphisme de \\(\\widehat{C}\\). Les\nconditions suivantes sont équivalentes :</p>\n  <p>i) Pour tout \\(X \\to K\\), avec \\(X \\in \\mathrm{ob}\\, C\\), le morphisme correspondant \\(H \\times_K X \\to X\\)\na pour image un crible couvrant de \\(X\\).</p>\n  <p>ii) Le morphisme \\(a(f) : aH \\to aK\\) sur les faisceaux associés est un épimorphisme\nde \\(\\widetilde{C}\\).</p>\n  <p>ii bis) Pour tout faisceau \\(F\\) sur \\(C\\), l'application \\(\\mathrm{Hom}(K,F) \\to \\mathrm{Hom}(H,F)\\) déduite de\n\\(f\\) est injective.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Il est clair que ii) équivaut à ii bis).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons que (i) \\(\\Longrightarrow\\) (ii). En vertu de 4.4, (i) signifie que\n\\(u : a(H \\times_K X) \\to a(X)\\) est un épimorphisme. Or, comme\n\\(a(H \\times_K X) \\simeq a(H) \\times_{a(K)} a(X)\\), \\(a\\) commutant aux \\(\\varprojlim\\) finies (4.1), le morphisme envisagé\nse déduit de \\(a(f) : a(H) \\to a(K)\\) par changement de base. Comme les épimorphismes de \\(\\widetilde{C}\\)\nsont universels, cela montre que (ii) \\(\\Longrightarrow\\) (i). Inversement, comme la famille des \\(X_i \\to K\\) est\népimorphique, il en est de même de la famille des \\(a(X) \\to a(K)\\) dans \\(\\widetilde{C}\\) (4.1), donc pour\nvérifier que \\(a(f) : a(H) \\to a(K)\\) est épimorphique, il suffit de le voir après tout changement\nde base du type précédent \\(a(X) \\to a(K)\\), ce qui prouve i) \\(\\Longrightarrow\\) ii), cqfd.</p>"
+    },
+    {
+     "id": "II.5.2",
+     "type": "definition",
+     "label": "5.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\">\n  <p>1) Un morphisme \\(f : H \\to K\\) satisfaisant aux trois conditions\néquivalentes de 5.1 est appelé un <em>morphisme couvrant</em>. Une famille de morphismes\n\\(f_i : H_i \\to K\\), \\(i \\in I\\), de même but est dite <em>couvrante</em> si le morphisme correspondant\n\\(f : \\coprod_i H_i \\to K\\) est couvrant.</p>\n  <p>2) Un morphisme \\(f : H \\to K\\) est dit <em>bicouvrant</em> s'il est couvrant et si le morphisme\ndiagonal \\(H \\to H \\times_K H\\) est couvrant. Une famille \\(f_i : H_i \\to K\\), \\(i \\in I\\), de même but est dite\n<em>bicouvrante</em> si le morphisme correspondant \\(f : \\coprod_i H_i \\to K\\) est bicouvrant.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par la condition i) de 5.1, dire qu'une famille \\((f_i : H_i \\to K)\\), \\(i \\in I\\), est couvrante,\nsignifie que pour tout morphisme \\(X \\to K\\), avec \\(X \\in \\mathrm{ob}\\, C\\), la famille des \\(H_i \\times_K X \\to X\\), \\(i \\in I\\),\na pour image un crible couvrant de \\(X\\) ; ou encore, par ii), la famille des morphismes\n\\(a(f_i) : aH_i \\to aK\\) dans \\(\\widetilde{C}\\) est épimorphique (compte tenu de ce que le foncteur \\(a\\) commute\naux sommes directes (4.1))<sup class=\"footnote-ref\"><a id=\"II-fn3ref\" href=\"#II-fn3\">(∗)</a></sup>.</p>"
+    },
+    {
+     "id": "II.5.3",
+     "type": "proposition",
+     "label": "5.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(C\\) un \\(\\mathcal{U}\\)-site et \\(f : H \\to K\\) un morphisme de \\(\\widehat{C}\\). Les\nconditions suivantes sont équivalentes :</p>\n  <p>i) Le morphisme \\(f\\) est bicouvrant.</p>\n  <p>i bis) Le morphisme \\(f\\) est couvrant et pour tout objet \\(X\\) de \\(C\\) et tout couple de\nmorphismes \\(u,v : X \\rightrightarrows H\\) tel que \\(fu = fv\\), le noyau de \\((u,v)\\) est un crible couvrant de \\(X\\).</p>\n  <p>ii) Le morphisme \\(a(f) : aH \\to aK\\) est un isomorphisme de \\(\\widetilde{C}\\).</p>\n  <p>ii bis) Pour tout faisceau \\(F\\) sur \\(C\\), l'application \\(\\mathrm{Hom}(K,F) \\to \\mathrm{Hom}(H,F)\\) est une\nbijection.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. L'équivalence i) \\(\\Longleftrightarrow\\) i bis) résulte de la condition i) de 5.1, appliquée au\nmorphisme diagonal \\(H \\to H \\times_K H\\) ; l'équivalence ii) \\(\\Longleftrightarrow\\) ii bis) est triviale.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). Le morphisme \\(a(f) : aH \\to aK\\) est un épimorphisme (5.1). Comme le\nfoncteur \\(a\\) commute à la formation des produits fibrés (4.1), le morphisme diagonal\n\\(aH \\to aH \\times_{aK} aH\\) est un épimorphisme (5.1). Comme le morphisme diagonal est toujours un\nmonomorphisme, c'est un isomorphisme (4.2). Par suite le morphisme \\(a(f)\\) est un\nmonomorphisme. C'est donc un isomorphisme (4.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ii) \\(\\Longrightarrow\\) i). Comme le foncteur \\(a\\) commute à la formation des produits fibrés, le\nmorphisme \\(f\\) et le morphisme diagonal \\(H \\to H \\times_K H\\) sont transformés par \\(a\\) en\nisomorphismes. En particulier, ils sont transformés par \\(a\\) en épimorphismes. Ils sont donc\ncouvrants, cqfd.</p>"
+    },
+    {
+     "id": "II.5.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.3.1\">5.3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de 5.3, et du fait que \\(a\\) commute aux sommes directes, qu'une famille\n\\((f_i : H_i \\to K)\\), \\(i \\in I\\), de morphismes de \\(\\widehat{C}\\) est bicouvrante si et seulement si les \\(f_i\\)\ninduisent sur les faisceaux associés un isomorphisme de la somme directe \\(\\coprod_i aH_i\\) sur \\(aK\\),\nou encore si et seulement si, pour tout faisceau \\(F\\), l'application\n\\[\n\\mathrm{Hom}(K,F) \\longrightarrow \\prod_i \\mathrm{Hom}(H_i,F)\n\\]\nest bijective.</p>"
+    },
+    {
+     "id": "II.5.4",
+     "type": "proposition",
+     "label": "5.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(C\\) un \\(\\mathcal{U}\\)-site. Il existe sur \\(\\widehat{C}\\) une topologie (évidemment\nunique) telle qu'une famille \\(H_i \\to K\\) de flèches de \\(\\widehat{C}\\) de même but soit couvrante pour\ncette topologie si et seulement si elle est couvrante au sens de 5.2. C'est aussi la topologie\nla moins fine sur \\(\\widehat{C}\\) parmi les topologies \\(T\\) ayant les propriétés suivantes :</p>\n  <p>a) \\(T\\) est plus fine que la topologie canonique de \\(\\widehat{C}\\) (i.e. toute famille\népimorphique de \\(\\widehat{C}\\) est couvrante pour \\(T\\)).</p>\n  <p>b) Toute famille couvrante dans \\(C\\) est couvrante dans \\(\\widehat{C}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Nous nous bornerons à donner des indications. Nous laissons au lecteur le soin\nde montrer que les familles couvrantes au sens de 5.2 sont les familles couvrantes d'une\ntopologie \\(T_C\\) sur \\(\\widehat{C}\\) (on utilise 4.1). Les familles couvrantes de la topologie canonique sur \\(\\widehat{C}\\)\nsont les familles épimorphiques sur \\(\\widehat{C}\\) (2.6 et I 3.1). Comme \\(a\\) commute aux limites\ninductives (4.1), la topologie \\(T_C\\) est plus fine que la topologie canonique de \\(\\widehat{C}\\). De plus les\nfamilles couvrantes de \\(C\\) sont des familles couvrantes de \\(T_C\\) (5.1). Si donc \\(T'\\) désigne la\nmoins fine des topologie de \\(\\widehat{C}\\) possédant les propriétés a) et b), \\(T_C\\) est plus fine que \\(T'\\).\nSoit \\((f_i : H_i \\to K)\\), \\(i \\in I\\), une famille couvrante de \\(T_C\\). Montrons que \\((f_i, i \\in I)\\) est une famille\ncouvrante de \\(T'\\). Soient \\(s_i : H_i \\to H = \\coprod H_i\\) les monomorphismes canoniques et\n\\(f = (f_i, i \\in I) : H = \\coprod_i H_i \\to K\\) le morphisme défini par les \\(f_i\\). La famille des \\(s_i\\) est\ncouvrante pour \\(T'\\). Pour montrer que \\((f_i, i \\in I)\\) est une famille couvrante de \\(T'\\), il suffit donc\nde montrer, en vertu de l'axiome (T2) des topologies, que le morphisme \\(f : H \\to K\\) est\ncouvrant pour \\(T'\\). Il existe une famille épimorphique de \\(\\widehat{C}\\), \\(u_\\lambda : X_\\lambda \\to K\\), \\(\\lambda \\in \\Lambda\\),\n\\(X_\\lambda \\in \\mathrm{ob}\\, C\\) (I 3.4). Pour montrer que \\(f : H \\to K\\) est couvrant pour \\(T'\\), il suffit donc, en vertu\nde l'axiome (T 2) des topologies, de montrer que pour tout \\(\\lambda \\in \\Lambda\\), le morphisme\n\\(\\mathrm{pr}_2 : H \\times_K X_\\lambda \\to X_\\lambda\\) est couvrant pour \\(T'\\). Soit alors \\(v_j : Y_j \\to H \\times_K X_\\lambda\\), \\(j \\in J\\),\n\\(Y_j \\in \\mathrm{ob}\\, C\\), une famille épimorphique de \\(\\widehat{C}\\). La famille \\((\\mathrm{pr}_2 \\circ v_j, j \\in J)\\) est couvrante pour\n\\(T_C\\). C'est donc une famille couvrante de \\(C\\) (5.1). C'est donc une famille couvrante de \\(T'\\). Par\nsuite le crible engendré par \\(\\mathrm{pr}_2 : H \\times_K X_\\lambda \\to X_\\lambda\\) contient un crible couvrant pour \\(T'\\). Il\nest donc couvrant pour \\(T'\\) et par suite \\(\\mathrm{pr}_2 : H \\times_K X_\\lambda \\to X_\\lambda\\) est couvrant, cqfd.</p>"
+    },
+    {
+     "id": "II.5.4.1",
+     "type": "remarque",
+     "label": "5.4.1",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.5.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.4.1</span></div>\n  <div class=\"thm-body\">\n  <p>La démonstration de 5.4 montre en fait que toute topologie \\(T'\\) sur \\(\\widehat{C}\\),\nplus fine que la topologie canonique de \\(\\widehat{C}\\), est la moins fine des topologies \\(T\\) sur \\(\\widehat{C}\\) qui\npossèdent les propriétés suivantes :</p>\n  <p>a) \\(T\\) est plus fine que la topologie canonique de \\(\\widehat{C}\\).</p>\n  <p>b) Toute famille couvrante pour \\(T'\\) de la forme \\(u_i : X_i \\to X\\), \\(i \\in I\\), où \\(X\\) et les \\(X_i\\)\nsont des objets de \\(C\\), est couvrante pour \\(T\\).</p>\n  <p>En particulier, toute topologie \\(T'\\) sur \\(\\widehat{C}\\), plus fine que la topologie canonique, est\nuniquement déterminée par les familles \\(u_i : X_i \\to X\\), \\(i \\in I\\), \\(X_i\\) et \\(X\\) objets de \\(C\\), qui sont\ncouvrantes pour \\(T'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.5.4.2",
+     "type": "remarque",
+     "label": "5.4.2",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.5.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.4.2</span></div>\n  <div class=\"thm-body\"><p>On peut facilement montrer que pour toute topologie \\(T'\\) sur \\(\\widehat{C}\\),\nplus fine que la topologie canonique, l'ensemble des familles de morphismes \\((X_i \\to X)\\), \\(i \\in I\\),\nde même but de \\(C\\), qui sont couvrantes pour \\(T'\\), est l'ensemble des familles couvrantes d'une\ntopologie sur \\(C\\). Donc 5.4 et 5.4.1 permettent d'établir une correspondance biunivoque entre\nles topologies sur \\(C\\) et les topologies sur \\(\\widehat{C}\\) plus fines que la topologie canonique.</p></div>\n</div>"
+    },
+    {
+     "id": "II.5.5.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.5.0\">5.5.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) une petite catégorie. Désignons par \\(\\mathrm{Caf}\\) l'ensemble des sous-catégories\nstrictement pleines (tout objet isomorphe à un objet de la sous-catégorie est un objet de la\nsous-catégorie) de \\(\\widehat{C}\\) dont le foncteur d'injection admette un adjoint à gauche qui commute\naux limites projectives finies. Désignons aussi par \\(\\mathscr{T}\\) l'ensemble des topologies sur \\(C\\). Le\nthéorème 3.4 nous définit une application :\n\\[\n\\Phi : \\mathscr{T} \\longrightarrow \\mathrm{Caf} .\n\\]\nNous allons définir une application en sens inverse. Pour cela, il faut associer à tout\nélément \\(e = (i' : C' \\rightleftarrows \\widehat{C}\\), \\(a'\\) adjoint à gauche de \\(i')\\) une topologie \\(T_e\\) sur \\(C\\). Pour tout\nobjet \\(X\\) de \\(C\\), nous définirons \\(J_e(X)\\) comme étant l'ensemble des sous-objets de \\(X\\) dont le\nmorphisme d'injection est transformé par \\(a'\\) en un isomorphisme. On vérifie immédiatement,\nà l'aide des hypothèses faites sur \\(a'\\), qu'on définit ainsi une topologie \\(T_e\\) sur \\(C\\). On a donc\ndéfini une application :\n\\[\n\\Psi : \\mathrm{Caf} \\longrightarrow \\mathscr{T} .\n\\]\nOn a alors le résultat (dû à J. GIRAUD) :</p>"
+    },
+    {
+     "id": "II.5.5",
+     "type": "theoreme",
+     "label": "5.5",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>L'application \\(\\Phi\\) est une bijection, et \\(\\Psi\\) est l'application\ninverse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. L'application \\(\\Psi \\circ \\Phi\\) est l'identité. En effet, ceci résulte immédiatement de\n5.1. L'application \\(\\Phi \\circ \\Psi\\) est l'identité. En effet, soient \\((i' : C' \\rightleftarrows \\widehat{C})\\) un élément de \\(\\mathrm{Caf}\\),\n\\(T_e\\) la topologie qui lui correspond par \\(\\Psi\\), \\(C_e\\) la catégorie des faisceaux pour \\(T_e\\). On\ndémontre alors, en utilisant la définition de la topologie \\(T_e\\) et la définition des morphismes\nbicouvrants (5.2), l'équivalence des assertions suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) Le morphisme \\(u\\) de \\(\\widehat{C}\\) est bicouvrant pour la topologie \\(T_e\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ii) Le morphisme \\(u\\) de \\(\\widehat{C}\\) est transformé par \\(a'\\) en un isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que \\(C'\\) est une sous-catégorie pleine de \\(C_e\\). Il suffit donc de montrer que\ntout faisceau \\(F\\) pour la topologie \\(T_e\\) est un objet de \\(C'\\). Mais, d'après l'équivalence\nci-dessus, le morphisme \\(F \\to i' \\circ a'(F)\\) est bicouvrant, et sa source et son but étant des\nfaisceaux, on en déduit par 5.3 (ii) que \\(F \\to i' \\circ a'(F)\\) est un isomorphisme, cqfd.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn3",
+     "number": "(∗)",
+     "html": "<p>(∗) Notons que la propriété pour un morphisme ou une famille de morphismes de \\(\\widehat{C}\\) d'être couvrant (resp. bicouvrant) est stable par changement de base. </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-6",
+   "title": "6. Faisceaux à valeurs dans une catégorie",
+   "blocks": [
+    {
+     "id": "II.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.6\">6. Faisceaux à valeurs dans une catégorie</h2>"
+    },
+    {
+     "id": "II.6.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.0\">6.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C\\) et \\(D\\) deux catégories. Un foncteur contravariant de \\(C\\) dans \\(D\\),\n\\(F : C^\\circ \\to D\\), est appelé un <em>préfaisceau sur \\(C\\) à valeurs dans \\(D\\)</em>.</p>"
+    },
+    {
+     "id": "II.6.1",
+     "type": "definition",
+     "label": "6.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(C\\) un site, \\(D\\) une catégorie. Un préfaisceau\n\\(F : C^\\circ \\to D\\) est appelé un <em>faisceau sur \\(C\\) à valeurs dans \\(D\\)</em> (ou, plus brièvement, un\n<em>faisceau à valeurs dans \\(D\\)</em>) si pour tout objet \\(S\\) de \\(D\\), le préfaisceau d'ensembles :\n\\[\nX \\mapsto \\mathrm{Hom}_D(S, F(X)) , \\qquad X \\in \\mathrm{ob}(C)\n\\]\nest un faisceau. La sous-catégorie pleine de \\(\\underline{\\mathrm{Hom}}(C^\\circ, D)\\) formée des faisceaux sur \\(C\\) à\nvaleurs dans \\(D\\) sera notée \\(\\underline{\\mathrm{Hom}}^{\\sim}(C^\\circ, D)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.6.2",
+     "type": "remarque",
+     "label": "6.2",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\">\n  <p>1) La condition 6.1 signifie que pour tout objet \\(X\\) de \\(C\\), tout crible couvrant\n\\(R\\) de \\(X\\), et tout objet \\(S\\) de \\(D\\), on a un isomorphisme (I 3.5 et 2.1) :\n\\[\n\\mathrm{Hom}_D(S, F(X)) \\xrightarrow{\\ \\sim\\ } \\varprojlim_{C/R} F(\\,\\cdot\\,) .\n\\]\nOn retrouve ainsi, lorsque \\(D\\) est la catégorie des \\(\\mathcal{U}\\)-ensembles, la définition des faisceaux\nd'ensembles (loc. cit.).</p>\n  <p>2) Soient \\(D'\\) une \\(\\mathcal{U}\\)-catégorie et \\(G : D \\to D'\\) un foncteur commutant aux limites\nprojectives. Le foncteur \\(G\\) transforme, par composition, les faisceaux à valeur dans \\(D\\) en\nfaisceaux à valeur dans \\(D'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.6.3.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3.0\">6.3.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\gamma\\) une espèce de structure algébrique définie par limites projectives finies\n(I 2.9) et \\(\\mathcal{U}\\text{-}\\gamma\\) la catégorie des \\(\\gamma\\)-ensembles qui appartiennent à \\(\\mathcal{U}\\). Désignons par\n\\(\\mathrm{esj} : \\mathcal{U}\\text{-}\\gamma \\to \\mathcal{U}\\text{-Ens}\\) le foncteur « ensemble sous-jacent ». Le foncteur \\(\\mathrm{esj}\\) commute aux\nlimites projectives et, par suite, d'après la remarque précédente, définit par composition des\nfoncteurs :\n\\[\n\\mathrm{esj}^\\wedge : \\underline{\\mathrm{Hom}}(C^\\circ, \\mathcal{U}\\text{-}\\gamma) \\longrightarrow \\widehat{C}\n\\]\n\\[\n\\mathrm{esj}^\\sim : \\underline{\\mathrm{Hom}}^{\\sim}(C^\\circ, \\mathcal{U}\\text{-}\\gamma) \\longrightarrow \\widetilde{C} .\n\\]\nLe foncteur \\(\\mathrm{esj}^\\sim\\) est appelé le foncteur « faisceau d'ensembles sous-jacent ». En fait, il se\nfactorise de façon canonique par la catégorie \\(\\gamma\\text{-}\\widetilde{C}\\) des \\(\\gamma\\)-objets de \\(\\widetilde{C}\\), et désignant encore\npar \\(\\widetilde{\\mathrm{esj}}\\) le foncteur\n\\[\n\\underline{\\mathrm{Hom}}^{\\sim}(C^\\circ, \\mathcal{U}\\text{-}\\gamma) \\longrightarrow \\gamma\\text{-}\\widetilde{C}\n\\]\nobtenu, on peut énoncer :</p>"
+    },
+    {
+     "id": "II.6.3.1",
+     "type": "proposition",
+     "label": "6.3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.3.1</span></div>\n  <div class=\"thm-body\"><p>Le foncteur \\(\\mathrm{esj}^\\sim\\) établit une équivalence de catégories\nentre la catégorie des faisceaux sur \\(C\\) à valeur dans \\(\\mathcal{U}\\text{-}\\gamma\\), celle des \\(\\gamma\\)-objets de la\ncatégorie des faisceaux d'ensembles, et la catégorie des \\(\\gamma\\)-objets de la catégorie des\npréfaisceaux d'ensembles dont le préfaisceau sous-jacent est un faisceau.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. La preuve utilise essentiellement (I 3.2) et le fait qu'une limite projective\nfinie de faisceaux dans la catégorie des préfaisceaux est un faisceau (4.1).</p>"
+    },
+    {
+     "id": "II.6.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3.2\">6.3.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition précédente justifie l'abus de langage qui consiste à identifier un\nfaisceau à valeur dans \\(\\mathcal{U}\\text{-}\\gamma\\) et le \\(\\gamma\\)-objet correspondant dans \\(\\widetilde{C}\\). Nous ferons désormais\nsystématiquement cet abus de langage. Nous emploierons la terminologie classique :\n<em>faisceaux de groupes</em>, <em>faisceaux de groupes commutatifs</em> (que nous appellerons le plus\nsouvent <em>faisceaux abéliens</em>), <em>faisceaux d'anneaux</em>, <em>faisceaux de \\(A\\)-modules</em>...</p>"
+    },
+    {
+     "id": "II.6.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3.3\">6.3.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous désignons par\n\\[\n\\widetilde{C}_\\gamma \\quad (\\text{resp. } \\widehat{C}_\\gamma)\n\\]\nla catégorie des \\(\\gamma\\)-objets de \\(\\widetilde{C}\\) (resp. de \\(\\widehat{C}\\)). Lorsque \\(\\gamma\\) est l'espèce de structure\n« \\(A\\)-module », on écrit aussi \\(\\widetilde{C}_A\\), ou simplement \\(\\widetilde{C}_{ab}\\) lorsque \\(A = \\mathbb{Z}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que \\(C\\) soit un \\(\\mathcal{U}\\)-site. Le foncteur « faisceau associé » est exact à gauche\n(4.1) et par suite :</p>"
+    },
+    {
+     "id": "II.6.4",
+     "type": "proposition",
+     "label": "6.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.4</span></div>\n  <div class=\"thm-body\"><p>Le foncteur d'inclusion \\(i_\\gamma : \\widetilde{C}_\\gamma \\to \\widehat{C}_\\gamma\\) admet un\nadjoint à gauche \\(a_\\gamma\\) exact à gauche, i.e. on a un isomorphisme :\n\\[\n\\mathrm{Hom}_{\\widetilde{C}_\\gamma}(a_\\gamma\\,,\\ ) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\widehat{C}_\\gamma}(\\ ,\\ i_\\gamma) .\n\\]\nSoit \\(X\\) un objet de \\(\\widehat{C}_\\gamma\\). Le faisceau d'ensembles sous-jacent à \\(a_\\gamma(X)\\) est\ncanoniquement isomorphe au faisceau associé au préfaisceau d'ensembles sous-jacent à \\(X\\).\nLe morphisme de préfaisceaux d'ensembles sous-jacents au morphisme d'adjonction\n\\(\\mathrm{id} \\to i_\\gamma a_\\gamma\\) s'identifie au morphisme d'adjonction appliqué au préfaisceau d'ensembles\nsous-jacent.</p></div>\n</div>"
+    },
+    {
+     "id": "II.6.5",
+     "type": "proposition",
+     "label": "6.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.5</span></div>\n  <div class=\"thm-body\"><p>Supposons que le foncteur \\(\\mathrm{esj} : \\gamma\\text{-}\\mathcal{U} \\to \\mathcal{U}\\text{-Ens}\\)\nadmette un adjoint à gauche<sup class=\"footnote-ref\"><a id=\"II-fn4ref\" href=\"#II-fn4\">(∗)</a></sup> :\n\\[\n\\mathrm{Hom}_{\\mathcal{U}\\text{-Ens}}(.\\,, \\mathrm{esj}(.)) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\gamma\\text{-}\\mathcal{U}}(\\mathrm{Lib}(.),.) .\n\\]\nLe foncteur \\(\\mathrm{esj}^\\sim : \\widetilde{C}_\\gamma \\to \\widetilde{C}\\) (resp. \\(\\mathrm{esj}^\\wedge : \\widehat{C}_\\gamma \\to \\widehat{C}\\)) admet un adjoint à gauche\n\\(\\mathrm{Lib}^\\sim\\) (resp. \\(\\mathrm{Lib}^\\wedge\\)) et on a un isomorphisme canonique\n\\[\n\\mathrm{Lib}^\\sim = a_\\gamma \\mathrm{Lib}^\\wedge i .\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. La preuve est formelle et est laissée au lecteur.</p>"
+    },
+    {
+     "id": "II.6.6",
+     "type": "corollaire",
+     "label": "6.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.6</span></div>\n  <div class=\"thm-body\"><p>Soit \\((X_i)\\), \\(i \\in I\\), une famille génératrice de \\(\\widetilde{C}\\) (4.9). Alors\nla famille \\(\\mathrm{Lib}^\\sim(X_i)\\) est une famille génératrice de \\(\\widetilde{C}_\\gamma\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. La preuve est formelle une fois qu'on a remarqué que le foncteur \\(\\mathrm{esj}^\\sim\\)\ncommute aux limites projectives et qu'il est conservatif (\\(\\mathrm{esj}^\\sim(u)\\) est un\nisomorphisme \\(\\Longleftrightarrow\\) \\(u\\) est isomorphisme).</p>"
+    },
+    {
+     "id": "II.6.7",
+     "type": "proposition",
+     "label": "6.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.7</span></div>\n  <div class=\"thm-body\"><p>Soient \\(A\\) un \\(\\mathcal{U}\\)-faisceau d'anneaux, ou bien un petit anneau,\n\\(\\widetilde{C}_A\\) (resp. \\(\\widehat{C}_A\\)) la catégorie des faisceaux (resp. des préfaisceaux) de \\(A\\)-modules unitaires\n(6.3.3) sur un \\(\\mathcal{U}\\)-site \\(C\\). Alors \\(\\widetilde{C}_A\\) est une \\(\\mathcal{U}\\)-catégorie abélienne vérifiant les axiomes\n(AB 5) (« existence de limites inductives filtrantes exactes à gauche ») et (AB 3)*\n(« existence de produits infinis ») de [TOHOKU]. Elle possède une famille de générateurs\nindexée par un élément de \\(\\mathcal{U}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Preuve. Il est clair que la catégorie \\(\\widehat{C}_A\\) est une catégorie abélienne vérifiant les\naxiomes (AB 3), (AB 4), et (AB 5) (I 2.8 et I 3.3). On déduit alors de 6.4 que la catégorie \\(\\widetilde{C}_A\\)\nest une catégorie additive où les noyaux et conoyaux sont représentables. Plus précisément,\nsoient \\(i_A\\) et \\(a_A\\) les foncteurs inclusion dans les préfaisceaux et faisceaux associés et\n\\(u : X \\to Y\\) un morphisme de \\(\\widetilde{C}_A\\). Le foncteur \\(a_A\\) est exact à gauche et commute aux limites\ninductives. Le foncteur \\(i_A\\) commute aux limites projectives. Par suite le foncteur\n\\(i_A a_A : \\widehat{C}_A \\to \\widehat{C}_A\\) est un foncteur additif exact à gauche. On en déduit des isomorphismes\ncanoniques :\n\\[\n(*) \\qquad i_A(\\mathrm{Ker}(u)) \\xrightarrow{\\ \\sim\\ } \\mathrm{Ker}(i_A(u)) ,\n\\]\n\\[\n(**) \\qquad \\mathrm{coker}(u) \\xrightarrow{\\ \\sim\\ } a_A \\mathrm{coker}(i_A(u)) .\n\\]\nOn a par suite un isomorphisme canonique :\n\\[\n(***) \\qquad \\mathrm{coim}(u) \\xrightarrow{\\ \\sim\\ } a_A \\mathrm{coim}(i_A(u)) .\n\\]\nMontrons que le morphisme canonique \\(\\mathrm{coim}(u) \\to \\mathrm{im}(u)\\) est un isomorphisme. Pour cela, il\nsuffit de montrer, d'après (*), que la suite :\n\\[\n0 \\to i_A(\\mathrm{coim}(u)) \\to i_A(Y) \\to i_A(\\mathrm{coker}(u))\n\\]\nest exacte. Utilisant les isomorphismes (**) et (***) et remarquant que \\(a_A i_A(Y)\\) est isomorphe\nà \\(Y\\), on voit que cette suite est isomorphe à la suite :\n\\[\n0 \\to i_A a_A(\\mathrm{coim}(i_A(u))) \\to i_A a_A i_A(Y) \\to i_A a_A(\\mathrm{coker}(i_A(u))) ,\n\\]\nqui n'est autre que la transformée par le foncteur \\(i_A a_A\\) de la suite :\n\\[\n0 \\to \\mathrm{coim}(i_A(u)) \\to i_A(Y) \\to \\mathrm{coker}(i_A(u)) .\n\\]\nOr, cette suite est exacte et le foncteur \\(i_A a_A\\) est exact à gauche. La catégorie \\(\\widetilde{C}_A\\) est donc\nune catégorie abélienne. Le foncteur \\(a_A : \\widehat{C}_A \\to \\widetilde{C}_A\\) est exact à gauche et commute aux\nlimites inductives quelconques. Par suite il est additif, exact et commute aux limites\ninductives. La catégorie \\(\\widehat{C}_A\\) vérifiant l'axiome (AB 5), il en est de même de la catégorie \\(\\widetilde{C}_A\\).\nEnfin il est clair que dans la catégorie \\(\\widetilde{C}_A\\), les produits indexés par un élément de \\(\\mathcal{U}\\) sont\nreprésentables et, par suite, que l'axiome (AB 3)* est vérifié, ce qui achève la démonstration\nde la première assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout anneau \\(A\\) élément de \\(\\mathcal{U}\\), le foncteur :\n\\[\n\\mathrm{esj} : \\mathcal{U}\\text{-}A\\text{-module} \\longrightarrow \\mathcal{U}\\text{-Ens}\n\\]\nadmet un adjoint à gauche \\(X_A\\) (\\(A\\)-module libre engendré). Il suffit donc d'appliquer 4.10 et\n6.6 pour achever la preuve.</p>"
+    },
+    {
+     "id": "II.6.8",
+     "type": "notation",
+     "label": "6.8",
+     "title": "Notation",
+     "html": "<div class=\"thm thm-remark notation\" id=\"II.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Notation</span> <span class=\"thm-num\">6.8</span></div>\n  <div class=\"thm-body\"><p>Soit \\(H\\) un faisceau d'ensembles. Le faisceau de \\(A\\)-modules\nassocié au préfaisceau (cf. notation 6.5)\n\\[\nX \\mapsto \\mathrm{Lib}_A H(X) \\qquad X \\in \\mathrm{ob}\\, C\n\\]\nest noté \\(A_H\\). Lorsque \\(H = a(X)\\) (faisceau associé au préfaisceau représenté par \\(X\\)) on écrit\nparfois simplement \\(A_X\\) (par abus de notation). La démonstration de 6.7 montre que la\nfamille de faisceaux de \\(A\\)-module \\(A_X\\), (\\(X \\in \\mathrm{ob}(C)\\)), est une famille génératrice, indexée par\nun élément de \\(\\mathcal{U}\\), de la catégorie des faisceaux de \\(A\\)-modules.</p></div>\n</div>"
+    },
+    {
+     "id": "II.6.9",
+     "type": "remarque",
+     "label": "6.9",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.6.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">6.9</span></div>\n  <div class=\"thm-body\"><p>D'après [TOHOKU], 6.7 montre que la catégorie \\(\\widetilde{C}_A\\), lorsque \\(A\\)\nest un élément de \\(\\mathcal{U}\\), possède suffisamment d'injectifs. On sait, par ailleurs, que les produits\ninfinis ne sont pas nécessairement exacts dans \\(\\widetilde{C}_A\\), et, par suite, que la catégorie \\(\\widetilde{C}_A\\)\nn'admet pas, en général, suffisamment de projectifs [ROOS].</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) On démontre qu'un tel adjoint existe toujours [C.F.] : groupe libre, groupe abélien libre, \\(A\\)-module libre... . </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-bibliographie",
+   "title": "Bibliographie",
+   "blocks": [
+    {
+     "id": "II.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.bibliographie\">Bibliographie</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] M. Artin ; <em>Grothendieck's topologies</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] M. Demazure : <em>Séminaire de Géométrie Algébrique III</em>, Exposé IV, Lecture Notes.\nSpringer-Verlag.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] A. Grothendieck : <em>Sur quelques points d'Algèbre Homologique</em>. Tohoku Math.\nJournal.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] J. E. Roos : CR</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par J.L. Verdier"
+}

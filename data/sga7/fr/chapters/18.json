@@ -1,0 +1,3276 @@
+{
+ "chapter_id": "18",
+ "title": "ÉTUDE COHOMOLOGIQUE DES PINCEAUX DE LEFSCHETZ",
+ "number": "XVIII",
+ "pages": [
+  {
+   "id": "18",
+   "title": "ÉTUDE COHOMOLOGIQUE DES PINCEAUX DE LEFSCHETZ",
+   "blocks": [
+    {
+     "id": "18",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"18\">EXPOSÉ XVIII<br>ÉTUDE COHOMOLOGIQUE DES PINCEAUX DE LEFSCHETZ<span class=\"author\">par N. Katz (*)</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-summary",
+   "title": "SOMMAIRE",
+   "blocks": [
+    {
+     "id": "18.summary",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.summary\">SOMMAIRE</h2>"
+    },
+    {
+     "id": null,
+     "type": "table",
+     "label": null,
+     "title": null,
+     "html": "<table class=\"tabular\">\n<tr><td>1.</td><td>La cohomologie d’un fibré projectif.</td><td>2</td></tr>\n<tr><td>2.</td><td>La cohomologie des variétés éclatées.</td><td>4</td></tr>\n<tr><td>3.</td><td>L’éclatement associé à un pinceau.</td><td>13</td></tr>\n<tr><td>4.</td><td>La cohomologie de l’éclatement associé à un pinceau.</td><td>17</td></tr>\n<tr><td>5.</td><td>Étude cohomologique du morphisme \\(p:\\widetilde X\\longrightarrow\\mathbb P^1\\) associé à un pinceau.</td><td>24</td></tr>\n<tr><td></td><td>5.1.   L’homomorphisme de restriction \\(H^*(\\widetilde X)\\longrightarrow H^*(Y)\\).</td><td>24</td></tr>\n<tr><td></td><td>5.2.   Le « théorème de Lefschetz vache » (LV).</td><td>27</td></tr>\n<tr><td></td><td>5.3.   La condition \\(A\\).</td><td>33</td></tr>\n<tr><td></td><td>5.8.   L’homomorphisme de Griffiths.</td><td>47</td></tr>\n<tr><td></td><td>5.9.   Un exemple où l’hypothèse \\(A\\) n’est pas vérifiée.</td><td>57</td></tr>\n<tr><td>6.</td><td>Applications de la théorie locale des cycles évanescents (Picard-Lefschetz).</td><td>58</td></tr>\n</table>"
+    }
+   ],
+   "footnotes": [
+    {
+     "number": "(*)",
+     "html": "D’après des notes (succintes) de GROTHENDIECK.",
+     "id": "18-fn1"
+    }
+   ]
+  },
+  {
+   "id": "18-introduction",
+   "title": "INTRODUCTION",
+   "blocks": [
+    {
+     "id": "18.introduction",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.introduction\">INTRODUCTION</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le présent exposé nous donnons la structure cohomologique élémentaire des pinceaux\nde Lefschetz. Les sections 1–4 donnent les faits « bien connus » sur la structure\ncohomologique des fibrés projectifs et des éclatements. Dans 5 nous faisons l’étude qui\nfigure dans le titre, en supposant que \\(X\\) satisfait au « théorème de Lefschetz vache »\n(5.2), et que le pinceau \\(D\\) en question satisfait à une certaine condition \\(A\\) de\nnature locale sur \\(D\\) (5.3). Les résultats principaux sont 5.6, 5.7 et 5.8.7, ce dernier\nintervenant de façon essentielle dans la démonstration du théorème de GRIFFITHS dans XX.\nDans la dernière section, de nature nettement moins élémentaire, nous nous appuyons sur\nl’exposé SGA 1 XIII de M<sup>me</sup> RAYNAUD sur le <u>groupe fondamental « modéré »</u>, et\nsur la <u>formule de Picard-Lefschetz</u> (XVI) pour démontrer :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">(1)</span> La condition \\(A\\) est souvent satisfaite (6.3, 6.4) ;</li>\n<li><span class=\"item-label\">(2)</span> Sauf dans le cas \\(\\dim(X)\\) impair et caractéristique = 2, le groupe de\nmonodromie d’un pinceau de Lefschetz agit irréductiblement sur la « cohomologie\névanescente », et transitivement (modulo signe) sur l’ensemble des</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>« cycles évanescents locaux » associés (via la formule de Picard-Lefschetz) aux divers\n« points critiques » du pinceau (6.6 et 6.7).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-1",
+   "title": "1. La cohomologie d’un fibré projectif",
+   "blocks": [
+    {
+     "id": "18.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.1\">1. La cohomologie d’un fibré projectif</h2>"
+    },
+    {
+     "id": "18.1.1",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 1.1. (DELIGNE).",
+     "html": "<div class=\"thm theorem\" id=\"18.1.1\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 1.1. (DELIGNE).</u></span></div>\n<div class=\"thm-body\"><p><u>Soient \\(f:X\\longrightarrow S\\) un morphisme propre, \\(\\ell\\) un nombre premier\ninversible sur \\(S\\), \\(u\\in H^2(X,\\mathbb Z_\\ell(1))\\) (resp. \\(u\\in H^2(X,\\mathbb Q_\\ell(1))\\))\nune classe de cohomologie sur \\(X\\), et \\(\\mathcal F\\) un \\(\\mathbb Z_\\ell\\)-faisceau\n(resp. \\(\\mathbb Q_\\ell\\)-faisceau) sur \\(X\\). On suppose qu’il existe un entier \\(n\\) tel\nque pour tout entier \\(j\\) et tout entier \\(i&gt;0\\), l’application</u></p>\n\n\\[\n\\tag{1.1.1}R^{n-i}f_*(\\mathcal F(j))\\xrightarrow{\\ \\wedge u^i\\ }\nR^{n+i}f_*(\\mathcal F(j+i)),\n\\]\n\n<p><u>soit un isomorphisme de \\(\\mathbb Z_\\ell\\)-faisceaux (resp. de\n\\(\\mathbb Q_\\ell\\)-faisceaux) sur \\(S\\). Alors pour tout morphisme\n\\(g:S\\longrightarrow T\\), la suite spectrale de Leray</u></p>\n\n\\[\nE_2^{p,q}=R^pg_*R^qf_*(\\mathcal F)\\Longrightarrow R^{p+q}(gf)_*(\\mathcal F)\n\\]\n\n<p><u>est dégénérée.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration se trouve dans [1, Prop. 2.4]. On remarquera que, grâce au théorème\nde changement de base pour un morphisme propre (SGA 4 XII 5.2), l’hypothèse se vérifie\nfibre par fibre.</p>"
+    },
+    {
+     "id": "18.1.2",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 1.2.",
+     "html": "<div class=\"thm theorem\" id=\"18.1.2\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 1.2.</u></span> (Cf. SGA 5 VII 2.2.1).</div>\n<div class=\"thm-body\"><p><u>Soit \\(\\mathcal E\\longrightarrow X\\) un fibré vectoriel,\nlocalement libre de rang \\(1+r\\). Désignons par \\(f:\\mathbb P(\\mathcal E)\\longrightarrow X\\) le fibré\nprojectif défini par \\(\\mathcal E\\), et par \\(u\\in H^2(\\mathbb P(\\mathcal E),\\mathbb Z_\\ell(1))\\) la première classe\nde Chern du faisceau inversible canonique \\(\\mathcal O_{\\mathbb P(\\mathcal E)}(1)\\). Alors, pour \\(\\ell\\) un\nnombre premier inversible sur \\(X\\), on a</u></p>\n\n<p>a) <u>la suite spectrale</u></p>\n\n\\[\n\\tag{1.2.1}E_2^{p,q}=H^p(X,R^qf_*\\mathbb Z_\\ell)\\Longrightarrow H^{p+q}(\\mathbb P(\\mathcal E),\\mathbb Z_\\ell)\n\\]\n\n<p><u>dégénère.</u></p>\n\n<p>b) <u>la flèche</u></p>\n\n\\[\n\\tag{1.2.2}\\bigoplus_{0\\leq j\\leq r}H^{q-2j}(X,\\mathbb Z_\\ell(-j))\n\\longrightarrow H^q(\\mathbb P(\\mathcal E),\\mathbb Z_\\ell)\n\\]\n\n<p><u>définie par \\(\\bigoplus\\tau_{q-2j}\\longmapsto\\sum f^*(\\tau_{q-2j})\\wedge u^j\\)\nest un isomorphisme.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Les fibres de \\(f\\) étant des espaces projectifs de dimension \\(r\\)\non sait que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.2.3}R^if_*\\mathbb Z_\\ell\\xleftarrow[\\sim]{\\ \\wedge u^{i/2}\\ }\n\\begin{cases}\n\\mathbb Z_\\ell\\left(-\\dfrac i2\\right)&amp;\\text{pour \\(i\\) pair, \\(0\\leq i\\leq2r\\),}\\\\\n0&amp;\\text{sinon.}\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le théorème 1.1 s’applique à la situation \\((f,\\ell,u,\\mathbb Z_\\ell,r)\\), d’où a).\nD’après 1.2.3 on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.4}E_2^{a,b}=\n\\begin{cases}\nH^a(X,\\mathbb Z_\\ell(-b/2))&amp;\\text{pour \\(b\\) pair, \\(0\\leq b\\leq2r\\),}\\\\\n0&amp;\\text{sinon,}\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc le gradué associé de \\(H^q(\\mathbb P(\\mathcal E),\\mathbb Z_\\ell)\\) pour la filtration provenant\nde la suite spectrale est \\(\\displaystyle\\bigoplus_{0\\leq j\\leq r}H^{q-2j}(X,\\mathbb Z_\\ell(-j))\\). On voit tout de\nsuite que, munissant \\(\\displaystyle\\bigoplus_{0\\leq j\\leq r}H^{q-2j}(X,\\mathbb Z_\\ell(-j))\\) de la filtration</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nF^i=\\bigoplus_{\\substack{0\\leq j\\leq r\\\\q-2j\\leq i}}H^{q-2j}(X,\\mathbb Z_\\ell(-j)),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la flèche 1.2.2 est compatible aux filtrations, et qu’elle induit\nl’identité sur les gradués associés, d’où b).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-2",
+   "title": "2. La cohomologie des variétés éclatées (cf. SGA 5 VII 8)",
+   "blocks": [
+    {
+     "id": "18.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.2\">2. La cohomologie des variétés éclatées <span style=\"font-weight:normal\">(cf. SGA 5 VII 8)</span></h2>"
+    },
+    {
+     "id": "18.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.2.1\"><strong>2.1.</strong> Soient \\(X\\) un schéma lisse sur un corps \\(k\\), et \\(\\Delta\\subset X\\) un schéma lisse\npartout de codimension \\(1+r\\). On sait (EGA IV 19.4.9) qu’il existe un\nschéma lisse \\(\\widetilde X\\), muni d’un morphisme projectif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.1}f:\\widetilde X\\longrightarrow X\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que, posant</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.2}\\widetilde\\Delta=f^{-1}(\\Delta)=\\Delta\\mathop{\\times}_X\\widetilde X,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(f\\) induise un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.3}f/\\widetilde X-\\widetilde\\Delta:\\widetilde X-\\widetilde\\Delta\\xrightarrow{\\sim}X-\\Delta,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et qu’il existe un \\(\\Delta\\)-isomorphisme entre \\(\\widetilde\\Delta\\) et \\(\\mathbb P(N_{\\Delta/X})\\), le fibré projectif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>des droites dans le fibré normal \\(N_{\\Delta/X}\\) de \\(\\Delta\\) dans \\(X\\). On a donc un\ndiagramme commutatif :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.4}\\xymatrix{\n\\widetilde\\Delta\\ar[rr]^{\\sim}\\ar[dr]_{f|\\widetilde\\Delta}&amp;&amp;\\mathbb P(N_{\\Delta/X})\\ar[dl]^{\\text{proj. canonique}}\\\\\n&amp;\\Delta\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": "18.2.1.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.2.1.5\"><strong>2.1.5.</strong> Dans le cas spécial \\(X=\\operatorname{Spec}(A)\\), \\(\\Delta=\\operatorname{Spec}(A/I)\\) où\n\\(I=(g_0,\\ldots,g_r)\\), \\(\\widetilde X\\) s’obtient par le procédé de Hopf (cf. EGA IV 19.4.11) :\nOn définit un morphisme de \\(X-\\Delta\\) dans \\(\\mathbb P^r\\) par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nx\\in X-\\Delta\\longmapsto(g_0(x),\\ldots,g_r(x))\\in\\mathbb P^r,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on considère son graphe \\(\\Gamma\\) comme plongé dans \\(X\\times\\mathbb P^r\\). Alors on définit\n\\(\\widetilde X\\) = l’adhérence schématique de \\(\\Gamma\\) dans \\(X\\times\\mathbb P^r\\), le morphisme\n\\(f:\\widetilde X\\longrightarrow X\\) s’obtient comme le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\widetilde X\\lhook\\joinrel\\longrightarrow X\\times\\mathbb P^r\\xrightarrow{\\operatorname{pr}_1}X.\n\\]\n\n</p>"
+    },
+    {
+     "id": "18.2.1.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.2.1.6\"><strong>2.1.6.</strong> De façon analogue (cf. encore EGA IV 19.4.11), si \\(X\\) est\nprojectif, et si \\(\\Delta\\) est l’intersection de \\(X\\) avec \\(1+r\\) hypersurfaces, disons\nd’équations \\(G_i=0\\), \\(i=0,\\ldots,r\\), on considère encore le morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nX-\\Delta\\longrightarrow\\mathbb P^r,\n\\qquad x\\in X-\\Delta\\longmapsto(G_0(x),\\ldots,G_r(x)),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on obtient \\(\\widetilde X\\) comme l’adhérence de son graphe dans \\(X\\times\\mathbb P^r\\). De façon</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>concrète, en termes des coordonnées homogènes \\(\\lambda_0,\\ldots,\\lambda_r\\) dans \\(\\mathbb P^r\\),\n\\(\\widetilde X\\) s’obtient comme le schéma de \\(X\\times\\mathbb P^r\\) défini par les équations</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.6.1}\\lambda_iG_j(x)-\\lambda_jG_i(x)=0\\qquad 0\\leq i&lt;j\\leq r.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit par ces équations que le point \\((x,\\lambda)\\) se trouve dans \\(\\widetilde\\Delta\\) si et\nseulement si \\(x\\in\\Delta\\) ; autrement dit, \\(\\mathbb P(N_{\\Delta/X})\\) est le fibré projectif\ntrivial</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.6.2}\\xymatrix{\n\\mathbb P(N_{\\Delta/X})\\ar[rr]^{\\sim}\\ar[dr]_{\\text{proj. canonique}}&amp;&amp;\\Delta\\times\\mathbb P^r\\ar[dl]^{\\operatorname{pr}_1}\\\\\n&amp;\\Delta\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a le diagramme commutatif suivant</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.6.3}\\xymatrix{\n\\Delta\\times\\mathbb P^r\\ar[r]^{\\sim}\\ar[dr]_{\\operatorname{pr}_1}&amp;\\widetilde\\Delta\\ar@{^{(}-&gt;}[r]\\ar[d]^{f|\\widetilde\\Delta}&amp;\\widetilde X\\ar@{^{(}-&gt;}[r]\\ar[d]^f&amp;X\\times\\mathbb P^r\\ar[dl]^{\\operatorname{pr}_1}\\\\\n&amp;\\Delta\\ar@{^{(}-&gt;}[r]&amp;X,\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et l’inclusion composée \\(\\Delta\\times\\mathbb P^r\\lhook\\joinrel\\longrightarrow X\\times\\mathbb P^r\\) provient de\n\\(\\Delta\\lhook\\joinrel\\longrightarrow X\\) par changement de base.</p>"
+    },
+    {
+     "id": "18.2.2",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 2.2.",
+     "html": "<div class=\"thm theorem\" id=\"18.2.2\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 2.2.</u></span></div>\n<div class=\"thm-body\"><p><u>Soient \\(X\\) lisse sur un corps \\(k\\), \\(\\Delta\\) un sous-schéma lisse\npartout de codimension \\(1+r\\), et \\(f:\\widetilde X\\longrightarrow X\\) l’éclatement de \\(X\\) en \\(\\Delta\\). Alors :</u></p>\n\n<p><u>(2.2.1) La suite spectrale de Leray</u></p>\n\n\\[\nE_2^{p,q}=H^p(X,R^qf_*\\mathbb Z_\\ell)\\Longrightarrow H^{p+q}(\\widetilde X,\\mathbb Z_\\ell)\n\\]\n\n<p><u>dégénère.</u></p>\n\n<!-- Source PDF page 8 (printed page 261) -->\n<p><u>2.2.2. Il existe un isomorphisme additif</u></p>\n\n\\[\nH^q(\\widetilde X,\\mathbb Z_\\ell)\\xleftarrow{\\sim}\nH^q(X,\\mathbb Z_\\ell)\\oplus H^q(\\widetilde\\Delta,\\mathbb Z_\\ell)/\\operatorname{Im}H^q(\\Delta,\\mathbb Z_\\ell)\n\\xleftarrow{\\sim}\n\\bigoplus_{j=1}^rH^{q-2j}(\\Delta,\\mathbb Z_\\ell(-j))\\oplus H^q(X,\\mathbb Z_\\ell).\n\\]\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.3}g:\\widetilde\\Delta\\longrightarrow\\Delta\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la restriction de \\(f\\) à \\(\\widetilde\\Delta\\), et par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.4}\\left\\{\\begin{aligned}\nj:&amp;\\ \\Delta\\lhook\\joinrel\\longrightarrow X\\\\\ni:&amp;\\ \\widetilde\\Delta\\lhook\\joinrel\\longrightarrow\\widetilde X\n\\end{aligned}\\right.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>les inclusions, de façon à obtenir le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.5}\\xymatrix{\n\\widetilde X&amp;\\widetilde\\Delta\\ar[l]_i\\\\\nX\\ar[u]^f&amp;\\Delta\\ar[l]^j\\ar[u]_g\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Celui-ci induit un homomorphisme des suites spectrales de Leray pour\nles morphismes \\(f\\) et \\(g\\), et le faisceau \\(\\mathbb Z_\\ell\\) sur \\(\\widetilde X\\) et \\(\\widetilde\\Delta\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.6}E_r^{p,q}(f)\\xrightarrow{(i^*,j^*)}E_r^{p,q}(g).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part, \\(f\\) induisant un isomorphisme de \\(\\widetilde X-\\widetilde\\Delta\\) avec \\(X-\\Delta\\), nous\navons, par le théorème de changement de base pour un morphisme propre,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.7}R^qf_*\\mathbb Z_\\ell\\simeq\n\\begin{cases}\n\\mathbb Z_\\ell&amp;\\text{si }q=0,\\\\\nj_*R^qg_*\\mathbb Z_\\ell&amp;\\text{si }q&gt;0,\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.8}E_2^{p,q}(f)\\xrightarrow{(i^*,j^*)}E_2^{p,q}(g)\\qquad\\text{pour }q\\ne0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons démontrer par récurrence sur \\(r\\) que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.9}E_r^{p,q}(f)\\xrightarrow{(i^*,j^*)}E_r^{p,q}(g)qquad\\text{pour }q\\ne0, r\\geq2\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.10}d_r^{p,q}(f)=0\\qquad\\text{pour }r\\geq2.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Admettons pour l’instant la formule</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.11}d_r^{p,r-1}(f)=0\\qquad\\text{pour }r\\geq2,\\ \\text{tout }p.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Commençons par \\(r=2\\). Nous avons un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.12}\\xymatrix@C=5em{\nE_2^{p,q}(f)\\ar[r]^{(i^*,j^*)}\\ar[d]_{d_2^{p,q}(f)}&amp;E_2^{p,q}(g)\\ar[d]^{0=d_2^{p,q}(g)}\\\\\nE_2^{p+2,q-1}(f)\\ar[r]^{(i^*,j^*)}&amp;E_2^{p+2,q-1}(g).\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(q\\leq0\\), on a \\(E_2^{p+2,q-1}(f)=0\\), donc \\(d_2^{p,q}(f)=0\\). Pour \\(q=1\\), on a\n\\(d_2^{p,1}(f)=0\\) par (2.2.11), et pour \\(q&gt;1\\), les flèches horizontales dans\n(2.2.12) sont des isomorphismes, et on sait que \\(d_2^{p,q}(g)=0\\) par 1.2 et\n2.1.4. Ceci donne (2.2.10) pour \\(r=2\\), et (2.2.9) pour \\(r=2\\) n’est autre\nque (2.2.8).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons connues (2.2.9) et (2.2.10) pour une valeur de \\(r\\geq2\\).\nL’hypothèse (2.2.10) implique \\(E_r^{p,q}(f)\\simeq E_{r+1}^{p,q}(f)\\), et par 1.2 on a\n\\(E_r^{p,q}(g)\\simeq E_{r+1}^{p,q}(g)\\), de sorte qu’on a le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.13}\\xymatrix@C=5em{\nE_r^{p,q}(f)\\ar[r]^{(i^*,j^*)}\\ar[d]_{\\sim}&amp;E_r^{p,q}(g)\\ar[d]^{\\sim}\\\\\nE_{r+1}^{p,q}(f)\\ar[r]^{(i^*,j^*)}&amp;E_{r+1}^{p,q}(g),\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui donne (2.2.9) pour (r+1), compte tenu de (2.2.9) pour \\(r\\). Pour\ndéduire (2.2.10) pour (r+1), on regarde le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.14}\\xymatrix@C=5em{\nE_{r+1}^{p,q}(f)\\ar[r]^{(i^*,j^*)}\\ar[d]_{d_{r+1}^{p,q}(f)}&amp;E_{r+1}^{p,q}(g)\\ar[d]^{0=d_{r+1}^{p,q}(g)}\\\\\nE_{r+1}^{p+r+1,q-r}(f)\\ar[r]^{(i^*,j^*)}&amp;E_{r+1}^{p+r+1,q-r}(g).\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(q\\leq r-1\\), on a \\(E_{r+1}^{p+r+1,q-r}(f)=0\\), donc \\(d_r^{p,q}(f)=0\\). Pour \\(q=r\\),\non a (2.2.11), et pour \\(q&gt;r\\) les flèches horizontales dans (2.2.14)\nsont des isomorphismes, et \\(d_{r+1}^{p,q}(g)=0\\) par 1.2, d’où la conclusion voulue.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à vérifier (2.2.11), qui signifie que le «edge homomorphism» composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.15}E_2^{p,0}(f)\\longrightarrow E_3^{p,0}(f)\\longrightarrow E_4^{p,0}(f)\\longrightarrow\\cdots E_\\infty^{p,0}(f)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un isomorphisme, i.e. que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.16}f^*:H^p(X,\\mathbb Z_\\ell)\\longrightarrow H^p(\\widetilde X,\\mathbb Z_\\ell)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est injectif. Or, il existe un inverse à gauche, savoir <u>l’homomorphisme\nde Gysin</u> (SGA 5 IV)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.17}f_*:H^p(\\widetilde X,\\mathbb Z_\\ell)\\longrightarrow H^p(X,\\mathbb Z_\\ell),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui vérifie en effet,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.18}f_*f^*=\\operatorname{id}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>comme il résulte de la formule de projection, et du fait que \\(f_*(1)=1\\),\n\\(f\\) étant birationnel donc de degré un.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci démontre (2.2.1). Quant à (2.2.2), remarquons que le\ndiagramme (2.2.5) donne, par passage à la cohomologie, un diagramme\ncommutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.19}\\xymatrix@C=5em{\nH^p(\\widetilde X,\\mathbb Z_\\ell)\\ar[r]^{i^*}&amp;H^p(\\widetilde\\Delta,\\mathbb Z_\\ell)\\\\\nH^p(X,\\mathbb Z_\\ell)\\ar[u]^{f^*}\\ar[r]_{j^*}&amp;H^p(\\Delta,\\mathbb Z_\\ell)\\ar[u]_{g^*}},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où un morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.20}\n\\frac{H^p(\\widetilde X,\\mathbb Z_\\ell)}{f^*H^p(X,\\mathbb Z_\\ell)}\n\\xrightarrow{(i^*,j^*)}\n\\frac{H^p(\\widetilde\\Delta,\\mathbb Z_\\ell)}{g^*H^p(\\Delta,\\mathbb Z_\\ell)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(F^i\\) les filtrations de \\(H^i(\\widetilde X,\\mathbb Z_\\ell)\\) et de\n\\(H^i(\\widetilde\\Delta,\\mathbb Z_\\ell)\\) provenant des suites spectrales de Leray, de sorte que (2.2.20) se réécrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.21}\n\\frac{H^p(\\widetilde X,\\mathbb Z_\\ell)}{F^pH^p(\\widetilde X,\\mathbb Z_\\ell)}\n\\xrightarrow{(i^*,j^*)}\n\\frac{H^p(\\widetilde\\Delta,\\mathbb Z_\\ell)}{H^pF^p(\\widetilde\\Delta,\\mathbb Z_\\ell)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, d’après (2.2.9), le gradué associé à la flèche (2.2.21) est un iso-\nmorphisme, donc (2.2.20) est un isomorphisme. D’autre part, (2.2.18)\ndonne une décomposition en somme directe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.22}\nH^*(\\widetilde X,\\mathbb Z_\\ell)\n\\xleftarrow[,f_*\\oplus(1-f^*f_*),]{,f^*+\\mathrm{inclusion},}\nH^*(X,\\mathbb Z_\\ell)\\oplus\\operatorname{Ker}f_*,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et (1.2.2) nous donne une décomposition en somme directe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.23}\n\\frac{H^*(\\widetilde\\Delta,\\mathbb Z_\\ell)}{g^*H^*(\\Delta,\\mathbb Z_\\ell)}\n\\xleftarrow{\\sim}\n\\bigoplus_{1\\leq j\\leq r}H^{*-2j}(\\Delta,\\mathbb Z_\\ell(-j));\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>mettant ensemble l’isomorphisme (2.2.20) et les décompositions (2.2.22)\net (2.2.23), on trouve (2.2.2), cqfd.</p>"
+    },
+    {
+     "id": "18.2.2.24",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.2.2.24\"><u>Remarque 2.2.24.</u> Esquissons une deuxième démonstration de (2.2.2)\nnettement plus simple, valable dans le cas où \\(X\\) est <u>propre</u> sur \\(k\\). Plus\ngénéralement, on trouve (sans hypothèse sur \\(X\\)) le résultat correspondant\n(2.2.26) en cohomologie à support propre. Nous avons les suites exactes\nde «cohomologie à supports propres», notée \\(H_c^*\\), pour les couples \\((\\widetilde X,\\widetilde\\Delta)\\) et \\((X,\\Delta)\\)\nqui forment un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=2.6em{\n(2.2.25)\\ar[r]&amp;H_c^i(\\widetilde X-\\widetilde\\Delta,\\mathbb Z_\\ell)\\ar[r]&amp;H_c^i(\\widetilde X,\\mathbb Z_\\ell)\\ar[r]&amp;H_c^i(\\widetilde\\Delta,\\mathbb Z_\\ell)\\ar[r]&amp;{H_c^{i+1}(\\widetilde X-\\widetilde\\Delta,\\mathbb Z_\\ell)}\\\\\n(2.2.26)\\ar[r]&amp;H_c^i(X-\\Delta,\\mathbb Z_\\ell)\\ar[u]^{\\sim}\\ar[r]&amp;H_c^i(X,\\mathbb Z_\\ell)\\ar[u]^{f^*}\\ar[r]&amp;H_c^i(\\Delta,\\mathbb Z_\\ell)\\ar[u]^{g^*}\\ar[r]&amp;{H_c^{i+1}(X-\\Delta,\\mathbb Z_\\ell)}\\ar[u]^{\\sim}}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, le quotient du complexe acyclique (2.2.25) par le\nsous-complexe acyclique (2.2.26) nous donne le complexe <u>acyclique</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.2.27}\\longrightarrow0\\longrightarrow\n\\frac{H_c^i(\\widetilde X,\\mathbb Z_\\ell)}{f^*H_c^i(X,\\mathbb Z_\\ell)}\n\\longrightarrow\n\\frac{H_c^i(\\widetilde\\Delta,\\mathbb Z_\\ell)}{g^*H_c^i(\\Delta,\\mathbb Z_\\ell)}\n\\longrightarrow0\\longrightarrow\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i.e., on trouve, sans considérer des suites spectrales, que (2.2.20) est\nun isomorphisme. Dès lors, les raisonnements qu’on vient de donner\ns’appliquent pour donner (2.2.2).</p>"
+    },
+    {
+     "id": "18.2.3",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 2.3.",
+     "html": "<div class=\"thm corollary\" id=\"18.2.3\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 2.3.</u></span> <u>Posons</u></div>\n<div class=\"thm-body\">\n\\[\nb_q(X)=\\dim_{\\mathbb Q_\\ell}H^q(X,\\mathbb Q_\\ell),\\qquad\n\\chi(X)=\\sum_q(-1)^qb_q(X).\n\\]\n<p><u>On a</u></p>\n\\[\n\\tag{2.3.1}b_q(\\widetilde X)=b_q(X)+\\sum_{j=1}^r b_{q-2j}(\\Delta),\n\\]\n\\[\n\\tag{2.3.2}\\chi(\\widetilde X)=\\chi(X)+r\\,\\chi(\\Delta).\n\\]\n</div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-3",
+   "title": "3. L’éclatement associé à un pinceau",
+   "blocks": [
+    {
+     "id": "18.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.3\">3. L’éclatement associé à un pinceau</h2>"
+    },
+    {
+     "id": "18.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.3.1\"><strong>3.1.</strong> Soient \\(X\\) projectif, lisse et irréductible sur un corps \\(k\\) algé-\nbriquement clos, de dimension \\(n\\), et \\(D=(H_\\tau)_{\\tau\\in\\mathbb P^1}\\) un pinceau d’hyper-\nsurfaces dont l’axe coupe transversalement \\(X\\), en \\(\\Delta\\). Considérons alors\nl’éclatement de \\(X\\) en \\(\\Delta\\), que nous allons décrire explicitement.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En termes d’équations, désignant par \\((\\lambda,\\mu)\\) des coordonnées\nhomogènes de \\(\\mathbb P^1\\), et par \\(F\\) et \\(G\\) deux formes linéaires tels que \\(F=G=0\\) dé-\nfinisse l’axe du pinceau, le pinceau s’écrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.1.1}\\lambda F-\\mu G.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le sous-schéma \\(\\Delta\\) est par définition l’intersection de \\(X\\) avec la\nsous-variété linéaire \\(G=F=0\\). D’après 2.1.6,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.1.2}\\widetilde X=\\{(x,(\\lambda,\\mu))\\in X\\times\\mathbb P^1\\mid \\lambda F-\\mu G=0\\}\\ ;\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c’est l’adhérence schématique, dans \\(X\\times\\mathbb P^1\\), du graphe de l’application</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.1.3}\\begin{aligned}\nX-\\Delta&amp;\\longrightarrow\\mathbb P^1\\\\\nx&amp;\\longmapsto(G(x),F(x)).\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La grande vertu de \\(\\widetilde X\\) est d’être une variété projective\n(car plongée dans \\(X\\times\\mathbb P^1\\)) et lisse (car \\(\\Delta\\) l’est) sur \\(k\\), qui admet un\nmorphisme \\(\\rho\\) vers \\(\\mathbb P^1\\), à savoir</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.1.4}\\rho:\\widetilde X\\longrightarrow X\\times\\mathbb P^1\\xrightarrow{\\operatorname{pr}_2}\\mathbb P^1,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont les fibres sont les sections hyperplanes de \\(X\\) par les membres de\nnotre pinceau</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\rho^{-1}(t)=X_t\\overset{\\mathrm{déf}}{=}X.H_t.\n\\]\n\n</p>"
+    },
+    {
+     "id": "18.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"18.3.2\">3.2. Le degré de la variété duale : méthode topologique.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons en plus que le pinceau de 3.1 soit tel que</p>"
+    },
+    {
+     "id": "18.3.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.3.2.1\"><strong>(3.2.1)</strong> \\(X_t\\) est lisse pour tout \\(t\\) contenu dans un ouvert non vide de \\(\\mathbb P^1\\),</p>"
+    },
+    {
+     "id": "18.3.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.3.2.2\"><strong>(3.2.2)</strong> Si \\(X_t\\) est singulier, elle n’a que des singularités quadratiques<br>\nnon dégénérées (XVII 1.1) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ces conditions sont vérifiées en particulier pour un <u>pinceau de Lefschetz</u>\n(XVII 2.21) si \\(\\operatorname{car}k\\ne2\\) ou si \\(X\\) est de dimension paire.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\eta\\) le point générique de \\(\\mathbb P^1\\), \\(\\bar\\eta\\) un point géométrique\nau-dessus, \\(n\\) la dimension de \\(X\\), et \\(\\chi\\) la caractéristique d’Euler-Poincaré\nà valeurs dans le faisceau \\(\\mathbb Q_\\ell\\). Alors la formule d’Euler-Poincaré XVI 2.1\nappliquée au morphisme \\(S\\), nous donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.2.3}\\chi(\\widetilde X)=\\chi(\\mathbb P^1)\\times\\chi(X_{\\bar\\eta})+(-1)^n\n\\sum_{\\substack{\\text{pts sing.}\\\\\\text{des fibres}}}1,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>formule qui, compte tenu de (2.2.2), se réécrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.2.4}(-1)^n[\\text{nombre total des points singuliers}]\n=\\chi(X)+\\chi(\\Delta)-2\\chi(X_{\\bar\\eta}).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On remarquera que la quantité \\(\\chi(X)+\\chi(\\Delta)-2\\chi(X_{\\bar\\eta})\\) est indépendante\ndu choix particulier du pinceau, et ne dépend que du plongement de \\(X\\)\ndans un \\(\\mathbb P^r\\), et même seulement de la classe de Chern de \\(\\mathcal O_X(1)\\),\ncf. [XVII, 5.7.5 et 5.7.6].</p>"
+    },
+    {
+     "id": "18.3.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.3.2.5\"><strong>3.2.5.</strong> Explicitons ceci dans un cas concret. Prenons \\(X=\\mathbb P^2\\), \\(\\{H_t\\}\\)\nun pinceau de courbes de degré \\(d\\) dans \\(\\mathbb P^2\\) qui vérifie (3.1), (3.2.1)\net (3.2.2). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.2.6}\\begin{aligned}\n\\chi(X)&amp;=3 &amp;&amp;\\text{(en vertu de 1.2)}\\\\\n\\chi(X_{\\bar\\eta})&amp;=-d(d-3) &amp;&amp;\\text{(cf. SGA 5 VII 7.3)}\\\\\n\\chi(\\Delta)&amp;=d^2,\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.2.7}\\text{le nombre total de points singuliers est }3(d-1)^2.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prenons le cas particulier \\(d=3\\), et considérons la famille des\ncourbes elliptiques (en caractéristique \\(\\ne3\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.2.8}X^3+Y^3+Z^3+3\\mu XYZ.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les quatre fibres singulières sont au-dessus de \\(\\mu=\\) racine cubique\nde l’unité, et \\(\\mu=\\infty\\), et chaque fibre singulière est l’union de trois\ndroites comme ceci</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.2.9}\\begin{array}{c}\n\\diagup\\!\\!\\!\\!\\diagdown\\\\[-0.8em]\n\\rule{5em}{0.4pt}\n\\end{array},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et a exactement trois points singuliers, tous quadratiques non-dégénérés.\nCela fait ensemble douze points singuliers, et vérifie (3.2.7) dans\ncet exemple.</p>"
+    },
+    {
+     "id": "18.3.2.10",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 3.2.10.",
+     "html": "<div class=\"thm proposition\" id=\"18.3.2.10\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 3.2.10.</u></span> <u>Soit \\(X\\hookrightarrow\\mathbb P^r\\) un plongement de Lefschetz (XVII 2.3),\net supposons que \\(n=\\dim X\\) soit pair, ou que \\(\\operatorname{car}k\\ne2\\). Alors tout\npinceau de Lefschetz, considéré comme droite dans \\(\\check{\\mathbb P}^r\\), coupe \\(\\check X\\) en</u></div>\n<div class=\"thm-body\">\n\\[\n\\tag{3.2.11}(-1)^n[\\chi(X)+\\chi(\\Delta)-2\\chi(X_{\\bar\\eta})]\n\\]\n<p><u>points, et le coupe transversalement (EGA IV 17.13.7).</u></p>\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par hypothèse, toute singularité d’une fibre du pinceau\nde Lefschetz est quadratique non-dégénérée, de sorte que (3.2.4) s’applique\npour donner que le nombre des fibres singulières (chacune contenant\nexactement un point singulier) dans le pinceau \\(D\\) est le nombre (3.2.11).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, la fibre \\(X_\\tau\\) est singulière si et seulement si \\(\\tau\\in\\check X\\cap D\\). Pour voir\nla transversalité de l’intersection, on remarque que le nombre (3.2.11)\nest <u>indépendant</u> du choix particulier du pinceau de Lefschetz, et que,\nle pinceau générique étant un pinceau de Lefschetz, ce nombre (3.2.11)\nest le degré de \\(\\check X\\) (i.e. son degré comme hypersurface dans \\(\\check{\\mathbb P}^r\\), qui est\n(par convention) 0 si \\(\\dim\\check X\\le r-2\\)). Or, si une droite \\(D\\) coupe une hyper-\nsurface de degré \\(d&gt;0\\) en \\(d\\) points distincts \\(x_i\\) (\\(1\\le i\\le d\\)), l’intersection\nest forcément transversale. En effet, la multiplicité d’intersection\n\\(\\mu_i=\\operatorname{rg}(D\\cap\\check X|x_i)\\) de \\(D\\) et \\(\\check X\\) en un \\(x_i\\) est \\(\\ge1\\), donc comme \\(\\sum_1^d\\mu_i=d\\),\non a \\(\\mu_i=1\\), pour tout \\(i\\), i.e. \\(D\\cap\\check X\\) est lisse, ce qui, équivaut\nà la transversalité, comme on voit aussitôt.</p>"
+    },
+    {
+     "id": "18.3.2.12",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.3.2.12\"><u>Remarque 3.2.12.</u> Pour un pinceau de Lefschetz \\(D\\) dont on suppose\ndéjà qu’il coupe \\(\\check X\\) transversalement (condition vérifiée en tous cas\npour \\(D\\) assez générale), le résultat 3.2.10 peut être considéré aussi\ncomme la conjonction de XVII 5.7.2 et du fait, que \\(\\deg\\varphi=1\\), contenu\ndans XVII 3.5. Bien entendu, le fait que tout pinceau de Lefschetz \\(D\\)\ncoupe \\(\\check X\\) transversalement, établi ici via la formule d’Euler-\nPoincaré XVI 2.1, peut aussi se vérifier directement de façon\nélémentaire, en utilisant le fait que l’axe de \\(D\\) coupe \\(X\\) transversalement.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-4",
+   "title": "4. La cohomologie de l’éclatement associé à un pinceau",
+   "blocks": [
+    {
+     "id": "18.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.4\">4. La cohomologie de l’éclatement associé à un pinceau</h2>"
+    },
+    {
+     "id": "18.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.4.1\"><strong>4.1.</strong> Nous reprenons la situation 3.1, résumée par le diagramme commu-\ntatif (cf. 2.1.6.3) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.1.1}\\xymatrix@C=3.2em@R=3em{\nX\\times\\mathbb P^1&amp;\\widetilde X\\ar[l]_{f\\times\\rho}&amp;\\widetilde\\Delta\\ar[l]_i\\ar[r]^{(g,\\rho_i)}&amp;\\Delta\\times\\mathbb P^1\\\\\n\\mathbb P^1&amp;\\widetilde X\\ar[l]_\\rho\\ar[u]^{f\\times\\rho}\\ar[d]^f&amp;&amp;\\widetilde\\Delta\\ar[u]_{(g,\\rho_i)}\\ar[d]^g\\\\\n&amp;&amp;X&amp;\\Delta\\ar[l]^j\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Commençons par préciser (2.2.2) dans ce cas.</p>"
+    },
+    {
+     "id": "18.4.2",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 4.2.",
+     "html": "<div class=\"thm proposition\" id=\"18.4.2\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 4.2.</u></span> <u>Sous les hypothèses de 3.1 :</u></div>\n<div class=\"thm-body\">\n<p><u>(4.2.1) Les homomorphismes de \\(\\mathbb Z_\\ell\\)-modules</u></p>\n\\[\nH^*(\\widetilde X,\\mathbb Z_\\ell)\n\\xleftarrow[,f^*+\\mathrm{ind},]{\\sim,f_*\\oplus(1-f^*f_*)}\nH^*(X,\\mathbb Z_\\ell)\\oplus\\operatorname{Ker}\\bigl(f_*:H^*(\\widetilde X,\\mathbb Z_\\ell)\\to H^*(X,\\mathbb Z_\\ell)\\bigr)\n\\]\n<p><u>sont des isomorphismes, inverses l’un de l’autre.</u></p>\n\n<!-- Source PDF page 19 (printed page 272) -->\n<p><u>(4.2.2) Les homomorphismes de \\(\\mathbb Z_\\ell\\)-modules</u></p>\n\\[\nH^*(\\widetilde X,\\mathbb Z_\\ell)\n\\xrightarrow{\\ f_*\\oplus(g_*i^*)\\ }\nH^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\n\\xrightarrow{\\ f^*+i_*g^*\\ }H^*(\\widetilde X,\\mathbb Z_\\ell)\n\\]\n<p><u>sont des isomorphismes, inverses l’un de l’autre.</u></p>\n\n<p><u>(4.2.3) La structure d’algèbre sur \\(H^*(X,\\mathbb Z_\\ell)\\oplus\nH^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\) déduite par « transport de structure »\npar (4.2.2) du cup-produit dans \\(H^*(\\widetilde X,\\mathbb Z_\\ell)\\), s’exprime,\nen termes des éléments</u></p>\n\\[a,b\\in H^*(X,\\mathbb Z_\\ell),\\quad x,y\\in H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1)),\\]\n<p><u>par les formules :</u></p>\n\\[\\tag{4.2.3.1}(0\\oplus x)\\wedge(0\\oplus y)=-j_*(xy)\\oplus2xy\\,c_1(\\mathcal O_\\Delta(1)),\\]\n\\[\\tag{4.2.3.2}(a\\oplus0)\\wedge(b\\oplus0)=ab\\oplus0,\\]\n\\[\\tag{4.2.3.3}(a\\oplus0)\\wedge(0\\oplus y)=0\\oplus j^*(a)y,\\]\n\\[\\tag{4.2.3.4}(0\\oplus x)\\wedge(b\\oplus0)=0\\oplus xj^*(b).\\]\n<p><u>En particulier, pour</u></p>\n\\[a\\oplus x\\in H^i(X,\\mathbb Z_\\ell)\\oplus H^{i-2}(\\Delta,\\mathbb Z_\\ell(-1)),\\]\n\\[b\\oplus y\\in H^{2n-i}(X,\\mathbb Z_\\ell)\\oplus H^{2n-2-i}(\\Delta,\\mathbb Z_\\ell(-1)),\\]\n\n<!-- Source PDF page 20 (printed page 273) -->\n<p><u>on a</u></p>\n\\[\\tag{4.2.3.5}(a\\oplus x)\\wedge(b\\oplus y)=ab-j_*(xy).\\]\n<p><u>Autrement dit, la matrice d’intersection totale de\n\\(H^*(\\widetilde X,\\mathbb Z_\\ell)\\) s’écrit :</u></p>\n\\[\n\\left(\\begin{array}{c|c}\n\\begin{array}{c}\\text{la matrice totale}\\\\\\text{des intersections sur }X\\end{array}&amp;0\\\\ \\hline\n0&amp;-\\begin{array}{c}\\text{la matrice totale}\\\\\\text{des intersections}\\\\\\text{sur }\\Delta\\end{array}\n\\end{array}\\right).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a déjà démontré (4.2.1) ; (cf. 2.2.22). Pour (4.2.2),\nremarquons d’abord que, \\(g:\\widetilde\\Delta\\longrightarrow\\Delta\\) étant un fibré\nprojectif de rang un, la suite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.4}0\\longrightarrow H^*(\\Delta,\\mathbb Z_\\ell)\\xrightarrow{g^*}\nH^*(\\widetilde\\Delta,\\mathbb Z_\\ell)\\xrightarrow{g_*}\nH^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est exacte (cf. (1.2.2)). Compte tenu de (2.2.26), on obtient le diagramme\ncommutatif de suites exactes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.2.5}\\xymatrix@C=2.2em@R=3em{\n0\\ar[r]&amp;H^*(X,\\mathbb Z_\\ell)\\ar[r]^{f^*}\\ar[d]^{j^*}&amp;H^*(\\widetilde X,\\mathbb Z_\\ell)\\ar[r]^{g_*i^*}\\ar[d]^{i^*}&amp;H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\ar[r]\\ar@{=}[d]&amp;0\\\\\n0\\ar[r]&amp;H^*(\\Delta,\\mathbb Z_\\ell)\\ar[r]^{g^*}&amp;H^*(\\widetilde\\Delta,\\mathbb Z_\\ell)\\ar[r]^{g_*}&amp;H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\ar[r]&amp;0.}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu du scindage (4.2.1), ceci donne un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.6}f_*\\oplus g_*i^*:H^*(\\widetilde X,\\mathbb Z_\\ell)\\xrightarrow{\\sim}\nH^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le transposé de (4.2.5) donne un diagramme commutatif de suites\nexactes (après le décalage, \\(\\widetilde{\\longrightarrow}\\,2n-*\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.2.7}\\xymatrix@C=2em@R=3em{\n0&amp;H^*(X,\\mathbb Z_\\ell)\\ar[l]&amp;H^*(\\widetilde X,\\mathbb Z_\\ell)\\ar[l]_{f_*}&amp;H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\ar[l]_{i_*g^*}&amp;0\\ar[l]\\\\\n0&amp;H^{*-2}(\\Delta,\\mathbb Z_\\ell(-2))\\ar[l]\\ar[u]^{j_*}&amp;H^{*-2}(\\widetilde\\Delta,\\mathbb Z_\\ell(-1))\\ar[l]_{g_*}\\ar[u]^{i_*}&amp;H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\ar[l]_{g^*}\\ar@{=}[u]&amp;0\\ar[l].}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on obtient un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.8}H^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\n\\xrightarrow{f^*+i_*g^*}H^*(\\widetilde X,\\mathbb Z_\\ell).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à démontrer que le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.9}H^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\n\\xrightarrow{f^*+i_*g^*}H^*(\\widetilde X,\\mathbb Z_\\ell)\n\\xrightarrow{f_*\\oplus(g_*i^*)}H^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est l’identité. Or, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f_*f^*=\\operatorname{id}\\text{ sur }H^*(X,\\mathbb Z_\\ell),\\quad\\text{par (2.2.18)},\\]\n\\[g_*i^*f^*=0\\quad\\text{par (4.2.5)},\\qquad f_*i_*g^*=0\\quad\\text{par (4.2.7)},\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu’il suffit de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.10}g_*i^*i_*g^*(x)=x\\quad\\text{pour }x\\in H^*(\\Delta,\\mathbb Z_\\ell(-1)).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour vérifier (4.2.10), remarquons d’abord que\n\\(i:\\widetilde\\Delta\\lhook\\joinrel\\longrightarrow\\widetilde X\\) étant\nl’inclusion d’une sous-variété lisse de codimension un, on a [SGA 5 VII]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.11}i^*i_*(x)=c_1(N_{\\widetilde\\Delta/\\widetilde X})x\\]\n\\[\\tag{4.2.12}i_*(x)i_*(y)=i_*\\bigl(xy\\,c_1(N_{\\widetilde\\Delta/\\widetilde X})\\bigr).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Écrivons \\(\\xi_X=\\mathcal O_X(1)\\), \\(\\xi_\\Delta=\\mathcal O_\\Delta(1)\\),\n\\(\\xi_{\\mathbb P^1}=\\mathcal O_{\\mathbb P^1}(1)\\), etc.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu de EGA II 8.1.7, on a, si \\(\\widetilde{\\mathcal J}\\) est l’Idéal\n\\(\\widetilde\\Delta\\) dans \\(\\widetilde X\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.13}\\check N_{\\widetilde\\Delta/\\widetilde X}\\simeq\n\\widetilde{\\mathcal J}/\\widetilde{\\mathcal J}^{2}\\simeq\n\\widetilde{\\mathcal J}\\otimes_{\\mathcal O_{\\widetilde X}}\\mathcal O_{\\widetilde\\Delta}\n\\simeq\\xi_X(1)\\otimes_{\\mathcal O_{\\widetilde X}}\\mathcal O_{\\widetilde\\Delta}\n=\\mathcal O_{\\widetilde\\Delta}(1),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\widetilde\\Delta\\) est interprété comme \\(\\mathbb P(\\mathcal J/\\mathcal J^2)\\),\n\\(\\mathcal J\\) étant l’Idéal de \\(\\Delta\\) dans \\(X\\). Or on a un isomorphisme\ncanonique (\\(\\Delta\\) étant représenté comme intersection de \\(X\\) avec deux\nhyperplans donnés dans \\(\\mathbb P^r\\)),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal J/\\mathcal J^2\\simeq\\mathcal O_\\Delta^2(-1),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui donne naissance à l’isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\widetilde\\Delta=\\mathbb P(\\mathcal J/\\mathcal J^2)\\simeq\n\\mathbb P(\\mathcal O_\\Delta^2(-1))\\xrightarrow{\\alpha}\\mathbb P(\\mathcal O_\\Delta^2)\n\\simeq\\Delta\\times\\mathbb P^1\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\alpha\\) est l’isomorphisme canonique EGA II 4.1.4. Par loc. cit. cet\nisomorphisme transforme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal O_{\\widetilde\\Delta}(1)=\\mathcal O_{\\mathbb P(\\mathcal J/\\mathcal J^2)}(1)\n=\\mathcal O_{\\mathbb P(\\mathcal O_\\Delta^2(-1))}(1)\\quad\\text{en}\\quad\n\\mathcal O_{\\mathbb P(\\mathcal O_\\Delta^2)}(1)\\otimes_{\\mathcal O_\\Delta^2}\n\\mathcal O_\\Delta(-1)=\\xi_{\\mathbb P^1}(1)\\otimes_k\\mathcal O_\\Delta(-1),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (4.2.13) s’écrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.2.14}\\check N_{\\widetilde\\Delta/\\widetilde X}\\simeq\n(\\rho_i)^*(\\xi_{\\mathbb P^1}(1))\\otimes g^*(\\mathcal O_\\Delta(-1)),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où en prenant le \\(c_1\\) des deux membres, le</p>"
+    },
+    {
+     "id": "18.4.3",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 4.3.",
+     "html": "<div class=\"thm lemma\" id=\"18.4.3\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 4.3.</u></span> <u>On a</u></div>\n<div class=\"thm-body\">\\[c_1(N_{\\widetilde\\Delta/\\widetilde X})\n=g^*(\\xi_\\Delta)-(\\rho_i)^*(\\xi_{\\mathbb P^1}).\\]</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Reprenons la démonstration de (4.2.10). D’après (4.2.11) et (4.3),\nil suffit de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[g_*\\left(g^*(x)\\left[(\\rho_i)^*\\bigl(c_1(\\xi_{\\mathbb P^1})\\bigr)\n-g^*\\bigl(c_1(\\xi_\\Delta)\\bigr)\\right]\\right)=x.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, d’après (4.2.4), \\(g_*g^*=0\\), et, compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\widetilde\\Delta\\xrightarrow{\\ g\\times\\rho_i\\ }\\Delta\\times\\mathbb P^1,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.3.1}g_*\\left(g^*(x)(\\rho_i)^*\\bigl(c_1(\\xi_{\\mathbb P^1})\\bigr)\\right)=x\\]\n\\[\\tag{4.3.2}g_*\\left(g^*(x)c_1(N_{\\widetilde\\Delta/\\widetilde X})\\right)=-x.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Calculons maintenant la structure d’algèbre sur\n\\(H^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\), déduite\ndu cup-produit par transport de structure via (4.2.2). Soient \\(a,b\\) des\néléments de \\(H^*(X,\\mathbb Z_\\ell)\\), \\(x,y\\) des éléments de\n\\(H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\). Commençons par (4.2.3.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(0\\oplus x)\\wedge(0\\oplus y)=?\\oplus ?',\\]\n\\[\\begin{aligned}\n?&amp;=f_*\\bigl((i_*g^*(x))(i_*g^*(y))\\bigr)\\\\\n&amp;=f_*\\bigl(i_*\\bigl(g^*(xy)c_1(N_{\\widetilde\\Delta/\\widetilde X})\\bigr)\\bigr)\n&amp;&amp;\\text{par (4.2.12)}\\\\\n&amp;=j_*g_*\\bigl(g^*(xy)c_1(N_{\\widetilde\\Delta/\\widetilde X})\\bigr)\\\\\n&amp;=j_*(-xy)&amp;&amp;\\text{par (4.3.2)}.\n\\end{aligned}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\begin{aligned}\n?'&amp;=-g_*i^*\\bigl(i_*g^*(x)\\wedge i_*g^*(y)\\bigr)\\\\\n&amp;=-g_*i^*\\bigl(i_*\\bigl(g^*(xy)c_1(N_{\\widetilde\\Delta/\\widetilde X})\\bigr)\\bigr)\n&amp;&amp;\\text{par (4.3.2)}\\\\\n&amp;=-g_*\\bigl(g^*(xy)(c_1(N_{\\widetilde\\Delta/\\widetilde X}))^2\\bigr)\n&amp;&amp;\\text{par (4.3.2)}.\n\\end{aligned}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>or,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\begin{aligned}\n(c_1(N_{\\widetilde\\Delta/\\widetilde X}))^2\n&amp;=\\bigl(g^*c_1(\\mathcal O_\\Delta(1))-(\\rho_i)^*(c_1(\\xi_{\\mathbb P^1}))\\bigr)^2\n&amp;&amp;\\text{par (4.3)}\\\\\n&amp;=g^*((c_1(\\xi_\\Delta))^2)-2g^*(c_1(\\xi_\\Delta))(\\rho_i)^*(c_1(\\xi_{\\mathbb P^1}))\n\\end{aligned}\\]\n\\[\\left(+\\ (\\rho_i)^*((c_1(\\xi_{\\mathbb P^1}))^2)=0\\right),\\]\n\\[?'=-g_*\\bigl(g^*(xy)g^*(c_1(\\xi_\\Delta)^2)\\bigr)\n+g_*\\bigl(2g^*(xy)g^*(c_1(\\xi_\\Delta))(\\rho_i)^*(c_1(\\xi_{\\mathbb P^1}))\\bigr)\\]\n\\[?=0+2xy\\,c_1(\\xi_\\Delta)\\qquad\\text{par (4.2.4) et (4.3.1)},\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui établit (4.2.3.1). Quant à (4.2.3.2) :\n\\((a\\oplus0)\\wedge(b\\oplus0)=ab\\oplus0\\), ceci exprime que \\(f^*\\) est un\nhomomorphisme d’algèbres.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons (4.2.3.3). Or, la formule de projection implique\n\\(\\operatorname{Ker}f_*\\cap\\operatorname{image}f^*\\subset\\operatorname{Ker}f_*\\),\nde sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(a\\oplus0)\\wedge(0\\oplus y)=0\\oplus ?,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.3.3}?=-g_*i^*\\bigl(f^*(a)i_*g^*(y)\\bigr)\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\begin{aligned}\n&amp;=-g_*\\bigl(i^*f^*(a)\\,g^*(y)\\,c_1(N_{\\widetilde\\Delta/\\widetilde X})\\bigr)\n&amp;&amp;\\text{par (4.3.2)}\\\\\n&amp;=-g_*\\bigl(g^*(j^*(a))\\,g^*(y)\\,c_1(N_{\\widetilde\\Delta/\\widetilde X})\\bigr)\\\\\n&amp;=j^*(a).y\n\\end{aligned}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui établit (4.2.3.3). On remarque enfin que (4.2.3.4) se déduit\nde (4.2.3.3) par l’anticommutativité du cup-produit.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-5",
+   "title": "5. Étude cohomologique du morphisme \\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\) associé à un pinceau",
+   "blocks": [
+    {
+     "id": "18.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.5\">5. Étude cohomologique du morphisme \\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\) associé à un pinceau</h2>"
+    },
+    {
+     "id": "18.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"18.5.1\">5.1. L’homomorphisme de restriction \\(H^*(\\widetilde X)\\longrightarrow H^*(Y)\\).</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(Y\\) une des fibres lisses de\n\\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\), disons\n\\(Y=\\rho^{-1}(t_0)=X.H_{t_0}\\). On a le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=2.5em@R=3em{\n\\mathbb P^1&amp;\\widetilde X\\ar[l]_\\rho\\ar[d]^f&amp;\\widetilde\\Delta\\ar[l]_i\\ar[r]^-\\sim\\ar[d]^g&amp;\\Delta\\times\\mathbb P^1\\\\\n{\\operatorname{Sp}(k)=\\{t_0\\}}\\ar[u]&amp;X&amp;\\Delta\\ar@{_{(}-&gt;}[l]^j\\ar[ur]_{\\ell=\\mathrm{id}\\times\\{t_0\\}}\\ar[dl]^h&amp;\\\\\n&amp;Y\\ar[ul]\\ar@/_1.2pc/[uu]^(.3){k}\\ar[u]_m&amp;&amp;\n}\n\\qquad \\ell=\\operatorname{id}\\times[t_0],\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(f:\\widetilde X\\to X\\), \\(j:\\Delta\\to X\\), et \\(m:Y\\to X\\).</p>"
+    },
+    {
+     "id": "18.5.1.1",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 5.1.1.",
+     "html": "<div class=\"thm proposition\" id=\"18.5.1.1\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 5.1.1.</u></span> <u>Sous les hypothèses de (3.1), \\(Y\\) désignant une fibre lisse :</u></div>\n<div class=\"thm-body\">\n<p><u>(5.1.2) L’homomorphisme restriction</u></p>\n\\[k^*:H^*(\\widetilde X,\\mathbb Z_\\ell)\\longrightarrow H^*(Y,\\mathbb Z_\\ell)\\]\n<p><u>s’exprime \\(via (4.2.2)\\) par</u></p>\n\\[H^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\n\\xrightarrow{\\ m^*+h^*\\ }H^*(Y,\\mathbb Z_\\ell).\\]\n<p><u>(5.1.3) La flèche de Gysin</u></p>\n\\[k_*:H^{*-2}(Y,\\mathbb Z_\\ell(-1))\\longrightarrow H^*(\\widetilde X,\\mathbb Z_\\ell)\\]\n<p><u>s’exprime par</u></p>\n\\[H^{*-2}(Y,\\mathbb Z_\\ell(-1))\\xrightarrow{\\ m_*\\oplus(-h^*)\\ }\nH^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1)).\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Les sous-schémas lisses \\(\\widetilde\\Delta\\) et \\(Y\\) de\n\\(\\widetilde X\\) se coupent transversalement en \\(\\Delta\\), autrement dit, le carré\nde schémas lisses</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.1.4}\\xymatrix{\n\\Delta\\ar[r]^\\ell\\ar[d]_h&amp;\\widetilde\\Delta\\ar[d]^i\\\\\nY\\ar[r]_k&amp;\\widetilde X\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est cartésien, ce qui implique la formule [SGA 5, IV       ]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{5.1.5}h_*\\ell^*=k^*i_*,\\qquad \\ell_*h^*=i^*k_*.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\n\\xrightarrow{\\ f^*+i_*g^*\\ }H^*(\\widetilde X,\\mathbb Z_\\ell)\n\\xrightarrow{\\ k^*\\ }H^*(Y,\\mathbb Z_\\ell)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est la somme de \\(k^*f^*=m^*\\) et de\n\\(k^*i_*g^*=h_*\\ell^*g^*\\) par (5.1.5), et \\(g.\\ell=\\operatorname{id}_\\Delta\\),\nce qui donne (5.1.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^{*-2}(Y,\\mathbb Z_\\ell(-1))\\xrightarrow{\\ k_*\\ }\nH^*(\\widetilde X,\\mathbb Z_\\ell)\\xrightarrow{\\ f_*\\oplus(g_*i^*)\\ }\nH^*(X,\\mathbb Z_\\ell)\\oplus H^{*-2}(\\Delta,\\mathbb Z_\\ell(-1))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est la somme de \\(f_*k_*=m_*\\) et de\n\\(-g_*i^*k_*=-g_*\\ell_*h^*=-h^*\\), ce qui donne (5.1.3).</p>"
+    },
+    {
+     "id": "18.5.1.6",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 5.1.6.",
+     "html": "<div class=\"thm corollary\" id=\"18.5.1.6\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 5.1.6.</u></span> <u>Sous les hypothèses de 5.1.1, pour \\(i\\le n-1\\), les images de</u></div>\n<div class=\"thm-body\">\n\\[m^*:H^i(X,\\mathbb Z_\\ell)\\longrightarrow H^i(Y,\\mathbb Z_\\ell)\\]\n<p><u>et de</u></p>\n\\[k^*:H^i(\\widetilde X,\\mathbb Z_\\ell)\\longrightarrow H^i(Y,\\mathbb Z_\\ell)\\]\n<p><u>sont égales.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> D’après le « théorème de Lefschetz faible » sur les\nsections hyperplanes (SGA 5 VII 7.1), pour \\(i\\le n-1\\) la flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{5.1.7}H^{i-2}(X,\\mathbb Z_\\ell(-1))\\xrightarrow{\\ j^*\\ }\nH^{i-2}(\\Delta,\\mathbb Z_\\ell(-1))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un isomorphisme, de sorte que pour \\(i\\le n-1\\), l’image de \\(k^*\\) est égale,\ngrâce à (5.1.2), à la somme de celle de \\(m^*\\) et de celle du composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^{i-2}(X,\\mathbb Z_\\ell(-1))\\xrightarrow{\\ j^*\\ }\nH^{i-2}(\\Delta,\\mathbb Z_\\ell(-1))\\xrightarrow{\\ h^*\\ }H^i(Y,\\mathbb Z_\\ell).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, par la formule de projection</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[h_*j^*(x)=h_*\\bigl(h^*(m^*(x))\\bigr)=m^*(x)h_*(1)=\\xi_Y\\,m^*(x)\n=m^*(x\\,\\xi_X)\\quad\\text{puisque }m^*(\\xi_X)=\\xi_Y,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où l’inclusion \\(\\operatorname{Im}k^i\\subset\\operatorname{Im}m^i\\), cqfd.</p>"
+    },
+    {
+     "id": "18.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"18.5.2\">5.2. Le « théorème de Lefschetz vache » (LV)</h3>"
+    },
+    {
+     "id": "18.5.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.2.1\"><strong>5.2.1.</strong> Soit \\(S\\) projectif de dimension \\(n\\), sur le corps\n\\(k\\) (alg. clos) muni d’un plongement projectif \\(S\\lhook\\joinrel\\longrightarrow\\mathbb P\\).\nDésignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[u\\in H^2(S,\\mathbb Z_\\ell(1))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la « classe de cohomologie d’une section hyperplane » (de sorte que \\(u\\)\ns’obtient comme l’image réciproque par le plongement\n\\(S\\lhook\\joinrel\\longrightarrow\\mathbb P\\) de la première classe de Chern de\n\\(\\mathcal O_{\\mathbb P}(1)\\), classe qui se trouve dans\n\\(H^2(\\mathbb P,\\mathbb Z_\\ell(1))\\)), et désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[L_S:H^i(S,\\mathbb Q_\\ell(j))\\longrightarrow H^{i+2}(S,\\mathbb Q_\\ell(j+1))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l’opération « multiplication par \\(u\\) ».</p>"
+    },
+    {
+     "id": "18.5.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.2.2\"><strong>5.2.2.</strong> <u>On dit que \\(S\\) (muni de \\(u\\)) vérifie (LV),\n(le « théorème de Lefschetz vache ») si pour tout (ou un) entier \\(j\\) et tout entier\n\\(i&gt;0\\), les applications</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[L_S^i:H^{n-i}(S,\\mathbb Q_\\ell(j))\\longrightarrow H^{n+i}(S,\\mathbb Q_\\ell(i+j))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>sont des isomorphismes.</u></p>"
+    },
+    {
+     "id": "18.5.2.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.2.2.1\"><strong>5.2.2.1.</strong> On conjecture que cette condition est vérifiée si \\(S\\) est lisse.\nC’est vrai si \\(k\\) est de caractéristique nulle [6], d’où on conclut,\ngrâce au « théorème de spécialisation », SGA 4 XVI 2.2 qu’il en est de même\nsi \\(S\\), avec son plongement projectif, se remonte en caractéristique nulle.\nDonc on trouve que c’est vérifié pour \\(S\\) une intersection complète lisse.\nOn sait également que c’est vrai pour \\(S\\) lisse de dimension \\(\\leq2\\) [2],\net pour \\(S\\) une variété abélienne (soit « directement » (LIEBERMAN [4] et [2]),\nsoit par le théorème de MUMFORD [5] qui dit qu’une variété abélienne\npolarisée se remonte, avec sa polarisation, en caractéristique nulle).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons que pour une variété \\(S\\) projective, on définit pour \\(i\\leq n\\) la\n« <u>partie primitive</u> » de la cohomologie :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.2.2}\\operatorname{Prim}^i(S,\\mathbb Q_\\ell(j))=\n\\operatorname{Ker}\\bigl(L^{n-i+1}:H^i(S,\\mathbb Q_\\ell(j))\\longrightarrow\nH^{2n-i+2}(S,\\mathbb Q_\\ell(j+n-i+1))\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Si \\(S\\) vérifie (LV), on a pour \\(i\\leq n\\) la décomposition :</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.2.3}H^i(S,\\mathbb Q_\\ell(j))\\xleftarrow[\\sim]{\\,1+L\\,}\n\\operatorname{Prim}^i(S,\\mathbb Q_\\ell(j))\\oplus H^{i-2}(S,\\mathbb Q_\\ell(j-1)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "18.5.2.3",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 5.2.3.",
+     "html": "<div class=\"thm proposition\" id=\"18.5.2.3\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 5.2.3.</u></span> <u>Soit \\(X\\) projectif et lisse, vérifiant (LV). Désignons\npar \\(\\tau:Y\\lhook\\joinrel\\longrightarrow X\\) l’inclusion d’une section hyperplane lisse. Alors</u></div>\n<div class=\"thm-body\">\n\\[\n\\tag{5.2.3.1}\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))=\n\\operatorname{Ker}\\bigl(\\tau^*:H^n(X,\\mathbb Q_\\ell(j))\\longrightarrow H^n(Y,\\mathbb Q_\\ell(j))\\bigr).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a, grâce à la formule de projection pour \\(m:Y\\longrightarrow X\\),\nle diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.3.2}\\xymatrix@C=5em@R=4em{\nH^n(X,\\mathbb Q_\\ell(j))\\ar[r]^L\\ar[dr]_{\\tau^*}&amp;\nH^{n+2}(X,\\mathbb Q_\\ell(j+1))\\ar[dl]^{\\tau_*}\\\\\n&amp;H^n(Y,\\mathbb Q_\\ell(j)).}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par dualité et Lefschetz faible,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tau_*:H^n(Y,\\mathbb Q_\\ell(j))\\longrightarrow H^{n+2}(X,\\mathbb Q_\\ell(j+1))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est la transposée d’une isomorphisme, donc un isomorphisme, d’où la conclusion.</p>"
+    },
+    {
+     "id": "18.5.2.4",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 5.2.4.",
+     "html": "<div class=\"thm lemma\" id=\"18.5.2.4\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 5.2.4.</u></span> <u>Soient \\(X\\) projectif et lisse, et \\(\\tau:Y\\lhook\\joinrel\\longrightarrow X\\) l’inclusion\nd’une section hyperplane lisse. Alors \\(X\\) vérifie (LV) si et seulement si\nles deux conditions suivantes sont vérifiées.</u></div>\n<div class=\"thm-body\">\n<p id=\"18.5.2.4.1\"><strong>5.2.4.1.</strong> <u>\\(Y\\) vérifie (LV).</u></p>\n<p id=\"18.5.2.4.2\"><strong>5.2.4.2.</strong> <u>La restriction du cup-produit \\(H^{n-1}(Y,\\mathbb Q_\\ell)\\) au sous-espace\n\\(\\operatorname{Im}H^{n-1}(X,\\mathbb Q_\\ell)\\) est une forme non-dégénérée.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.4.3}\\left\\{\\begin{aligned}\nL_X&amp;=\\tau_*\\tau^*,\\\\\nL_Y&amp;=\\tau^*\\tau_*\\qquad\\text{(par 4.2.11)},\n\\end{aligned}\\right.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.4.4}L_X^{i+1}=\\tau_*L_Y^i\\tau^*.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.4.5}\\xymatrix@C=4em@R=3.5em{\nH^{n-i-1}(X,\\mathbb Q_\\ell(j))\\ar[r]^{L_X^{i+1}}\\ar[d]_{\\tau^*}&amp;\nH^{n+i+1}(X,\\mathbb Q_\\ell(j+i+1))\\\\\nH^{n-1-i}(Y,\\mathbb Q_\\ell(j))\\ar[r]^{L_Y^i}&amp;\nH^{n-1+i}(Y,\\mathbb Q_\\ell(j+i))\\ar[u]_{\\tau_*}}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on sait que \\(\\tau^*\\) est un isomorphisme pour \\(i\\geq1\\) par « Lefschetz faible »,\net que \\(\\tau_*\\) l’est par dualité. Donc \\(X\\) vérifie (LV) si et seulement si\n\\(Y\\) vérifie (LV), et la flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.4.6}L_X:H^{n-1}(X,\\mathbb Q_\\ell(j))\\longrightarrow H^{n+1}(X,\\mathbb Q_\\ell(j+1))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un isomorphisme. Pour achever la démonstration, il suffit de voir\nl’équivalence de 5.2.4.2 et 5.2.4.6. Pour ceci, soit \\(a,b\\in H^{n-1}(X,\\mathbb Q_\\ell(j))\\).\nPar la dualité de Poincaré sur \\(X\\), (5.2.4.6) équivaut à :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>(5.2.4.7)</strong> La forme bilinéaire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{n-1}(X,\\mathbb Q_\\ell(j))\\times H^{n-1}(X,\\mathbb Q_\\ell(j))\n\\longrightarrow H^{2n}(X,\\mathbb Q_\\ell(2j+2)),\n\\qquad (a,b)\\longmapsto a.L_X(b)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est non-dégénérée.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais par (5.2.5) et la formule de projection, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\na.L_X(b)=a.\\tau_*(\\tau^*(b))=\\tau_*(\\tau^*(a).\\tau^*(b)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où l’équivalence de (5.2.4.7) et (5.2.4.2).</p>"
+    },
+    {
+     "id": "18.5.2.5",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 5.2.5.",
+     "html": "<div class=\"thm corollary\" id=\"18.5.2.5\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 5.2.5.</u></span> <u>Soient \\(X\\) projectif et lisse, de dimension \\(n\\), et\n\\(\\tau:Y\\lhook\\joinrel\\longrightarrow X\\) l’inclusion d’une section hyperplan lisse. Supposons que\n\\(X\\) satisfait à la condition (LV). Alors pour \\(i\\geq n\\), la flèche</u></div>\n<div class=\"thm-body\">\n\\[\n\\tau^*:H^i(X,\\mathbb Q_\\ell(j))\\longrightarrow H^i(Y,\\mathbb Q_\\ell(j))\n\\]\n<p><u>est surjective.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par (5.2.4.3), on a, pour \\(i\\geq0\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nL_Y^{i+1}=\\tau^*L_X^i\\tau_*,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=4em@R=4em{\nH^{n-i-1}(X,\\mathbb Q_\\ell(j+1))\\ar[r]^{L_X^i}&amp;\nH^{n+i-1}(X,\\mathbb Q_\\ell(j+i+1))\\ar[d]^{\\tau^*}\\\\\nH^{n-i-2}(Y,\\mathbb Q_\\ell(j))\\ar[u]^{\\tau_*}\\ar[r]_{L_Y^{i+1}}&amp;\nH^{n+i}(Y,\\mathbb Q_\\ell(j+i+1)),}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui donne le résultat voulu, cqfd.</p>"
+    },
+    {
+     "id": "18.5.2.6",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 5.2.6.",
+     "html": "<div class=\"thm lemma\" id=\"18.5.2.6\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 5.2.6.</u></span> <u>Soit \\(f:F\\longrightarrow B\\) un morphisme propre et lisse, avec\n\\(B\\) connexe. Désignons par \\(\\mathcal O_F(1)\\) un module relativement ample sur \\(F\\),\net munissons chaque fibre géométrique \\(F_{\\bar b}\\) du module ample induit par \\(\\mathcal O_F(1)\\).\nAlors, si une des fibres géométriques satisfait la condition (LV), il\nen est de même pour toutes les autres.</u></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Notons par \\(\\xi_F\\in H^2(F,\\mathbb Z_\\ell(1))\\) la première classe de\nChern de \\(\\mathcal O_F(1)\\). Cette classe, et ses puissances\n\\(\\xi_F^i\\in H^{2i}(F,\\mathbb Z_\\ell(i))\\) induisent des endomorphismes par cup-produit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.6.1}\\xi_F^i:R^{n-i}f_*\\mathbb Q_\\ell(j)\\longrightarrow\nR^{n+i}f_*\\mathbb Q_\\ell(j+i)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(n\\) désigne la dimension relative des fibres. Par le théorème de\nchangement de base pour un morphisme propre [SGA 4 XII 5.2], toutes\nles fibres géométriques satisfont à la condition (LV) si et seulement\nsi toutes les flèches (5.2.6.1) sont des isomorphismes. Or, par le\nthéorème de spécialisation [SGA 4 XVI 2.2], les faisceaux \\(R^if_*\\mathbb Q_\\ell(j)\\)\nsont constants tordus, de sorte que les flèches (5.2.6.1) sont des\nisomorphismes si et seulement ils le sont au-dessus d’un point\ngéométrique donné, cqfd.</p>"
+    },
+    {
+     "id": "18.5.2.7",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 5.2.7.",
+     "html": "<div class=\"thm corollary\" id=\"18.5.2.7\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 5.2.7.</u></span> <u>Soit \\(X\\) projective et lisse. Si une section hyperplane\nlisse vérifie (LV), il en est de même pour toute section hyperplane lisse.</u></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> En effet, la famille universelle des sections hyperplanes\nlisses de \\(X\\) vérifie les hypothèses de 5.2.5.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "18-5-3",
+   "title": "5.3. La condition \\(A\\).",
+   "blocks": [
+    {
+     "id": "18.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.5.3\">5.3. <u>La condition \\(A\\).</u></h2>"
+    },
+    {
+     "id": "18.5.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.3.1\"><strong>5.3.1.</strong> Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la «fibration» associée à un pinceau dont l’axe coupe transversalement \\(X\\),\net dont la fibre générique est supposée lisse.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(U\\) un ouvert non-vide de \\(\\mathbb P^1\\) au-dessus duquel \\(\\rho\\)\nsoit lisse, et par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.3.1.1}\\nu:U\\lhook\\joinrel\\longrightarrow\\mathbb P^1\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l’inclusion. Compte tenu de ce que les faisceaux \\(R^i\\rho_*\\mathbb Q_\\ell(j)\\) sont\n<u>constants tordus au-dessus de</u> \\(U\\), on voit que les faisceaux</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\nu_*\\nu^*R^i\\rho_*\\mathbb Q_\\ell(j)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont essentiellement <u>indépendants</u> du choix de \\(U\\), et que les homomorphismes\ncanoniques «d’adjonction»</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.3.2}R^i\\rho_*\\mathbb Q_\\ell(j)\\longrightarrow\n\\nu_*\\nu^*R^i\\rho_*\\mathbb Q_\\ell(j)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont aussi indépendants du choix de \\(U\\).</p>"
+    },
+    {
+     "id": "18.5.3.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.3.3\"><strong>5.3.3.</strong> Remarquons que pour un pinceau <u>quelconque</u> de sections hyperplanes,\nle théorème de Lefschetz faible implique que pour \\(i\\leq n-2\\), l’immersion\n\\(\\widetilde X\\mathop{\\lhook\\joinrel\\longrightarrow}\\limits^{(f\\times\\rho)}X\\times\\mathbb P^1\\) donne lieu à un isomorphisme de faisceaux sur \\(\\mathbb P^1\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR^i\\rho_*\\mathbb Q_\\ell(j)\\xleftarrow{\\ \\sim\\ }\nH^i(X,\\mathbb Q_\\ell(j))_{\\mathbb P^1},\\qquad i\\leq n-2,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i.e. \\(R^i\\rho_*\\mathbb Q_\\ell(j)\\) est un faisceau constant pour \\(i\\leq n-2\\) et, a fortiori,\nles flèches (5.3.2) sont des isomorphismes pour \\(i\\leq n-2\\).</p>"
+    },
+    {
+     "id": "18.5.3.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.3.4\"><strong>5.3.4.</strong> On sait, par la théorie locale des cycles évanescents et\nnotamment la <u>formule de Picard-Lefschetz</u> (XV 3.4), que, <u>pour un\npinceau de Lefschetz, les homomorphismes 5.3.2 sont des isomorphismes pour\n\\(i\\ne n\\), et sont surjectifs pour \\(i=n\\).</u></p>"
+    },
+    {
+     "id": "18.5.3.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.3.5\"><strong>5.3.5.</strong> On dit que \\(\\rho\\), ou le pinceau dont il provient, <u>vérifie la condition\n\\(A\\)</u>, si <u>tous</u> les homomorphismes (5.3.2) sont des isomorphismes (ou,\nce qui revient au même, s’ils le sont pour tout \\(i\\), et \\(j=0\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On verra plus bas (6.3, 6.4) que cette condition \\(A\\) a\nune nette tendance à être vérifiée.</p>"
+    },
+    {
+     "id": "18.5.4",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 5.4.",
+     "html": "<div class=\"thm lemma\" id=\"18.5.4\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 5.4.</u></span> <u>Si une des sections hyperplanes lisses de \\(X\\) (donc toute,\npar 5.2.7) vérifie (LV) (p.ex. si \\(X\\) vérifie (LV), cf. (5.2.4)), et\nsi \\(\\rho\\) vérifie l’hypothèse \\(A\\), alors toute fibre (y compris toute\nfibre singulière) vérifie (LV), et les faisceaux \\(R^i\\rho_*\\mathbb Q_\\ell(j)\\) sont\nconstants pour \\(i\\ne n-1\\).</u></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nL:R^i\\rho_*\\mathbb Q_\\ell(j)\\longrightarrow R^{i+2}\\rho_*\\mathbb Q_\\ell(j+1)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le morphisme multiplication par \\(f^*c_1(\\mathcal O_X(1))\\in H^2(\\widetilde X,\\mathbb Z_\\ell(1))\\) ; fibre par\nfibre, c’est l’opération envisagée dans (5.2.1). Par hypothèse, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>un isomorphisme au-dessus de \\(U\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.4.1}\\nu^*(L^i):\\nu^*R^{n-1-i}\\rho_*\\mathbb Q_\\ell(j)\n\\xrightarrow{\\ \\sim\\ }\\nu^*R^{n-1+i}\\rho_*\\mathbb Q_\\ell(j+i)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour \\(i&gt;0\\), tout \\(j\\). Appliquant le foncteur \\(\\nu_*\\), on obtient des\n<u>isomorphismes</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.4.2}(\\nu_*\\nu^*)L^i:\\nu_*\\nu^*R^{n-1-i}\\rho_*\\mathbb Q_\\ell(j)\n\\xrightarrow{\\ \\sim\\ }\\nu_*\\nu^*R^{n-1+i}\\rho_*\\mathbb Q_\\ell(j+i),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui, compte tenu de \\(A\\) s’identifient aux morphismes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.4.3}L^i:R^{n-1-i}\\rho_*\\mathbb Q_\\ell(j)\n\\xrightarrow{\\ \\sim\\ }R^{n-1+i}\\rho_*\\mathbb Q_\\ell(j+i).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On conclut par 5.3.3.</p>"
+    },
+    {
+     "id": "18.5.4.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.4.4\"><strong>5.4.4.</strong> Désignons par \\(Y\\) une fibre lisse de \\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\). Par\n«Lefschetz faible», la flèche de restriction</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{n-1}(X,\\mathbb Q_\\ell(j))\\xrightarrow{\\ m^*\\ }H^{n-1}(Y,\\mathbb Q_\\ell(j))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est injectif, et on a vu (5.2.4) que, si \\(X\\) vérifie (LV), le cup-produit\nsur \\(H^{n-1}(Y,\\mathbb Q_\\ell(j))\\), restreint à \\(m^*H^{n-1}(X,\\mathbb Q_\\ell(j))\\), reste non dégénéré.\nL’orthogonal de \\(H^{n-1}(X,\\mathbb Q_\\ell(j))\\) dans \\(H^{n-1}(Y,\\mathbb Q_\\ell(j))\\) est donc un sous-espace\ncomplémentaire de \\(H^{n-1}(X,\\mathbb Q_\\ell(j))\\) dans \\(H^{n-1}(Y,\\mathbb Q_\\ell(j))\\), qu’on appelle,\nsuivant la terminologie classique, <u>l’espace de cohomologie évanescente\nde \\(Y\\)</u>. On définit un sous-faisceau correspondant de \\(\\nu_*(R^{n-1}\\rho_*\\mathbb Q_\\ell(j))\\),\noù \\(\\nu:U\\longrightarrow\\mathbb P^1\\) est un ouvert de lissité \\(\\ne\\varnothing\\) de \\(\\rho\\), le <u>«faisceau de\ncohomologie évanescente»</u> \\(E^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\) sur \\(\\mathbb P^1\\), par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.4.4.1}E^{n-1}\\rho_*\\mathbb Q_\\ell(j)=\\nu_*\\left\\{\n\\begin{array}{c}\n\\text{l’orthogonal dans }\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\text{ du}\\\\\n\\text{sous-faisceau constant }H^{n-1}(X,\\mathbb Q_\\ell(j))_U\n\\end{array}\\right\\}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que ce faisceau est indépendant du choix de \\(U\\).</p>"
+    },
+    {
+     "id": "18.5.5",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 5.5.",
+     "html": "<div class=\"thm lemma\" id=\"18.5.5\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 5.5.</u></span> <u>Si \\(X\\) vérifie (LV) et si les flèches (5.3.2) sont des isomorphismes pour \\(i=n-1\\), par exemple si \\(\\rho\\) provient d’un pinceau de\nLefschetz (cf. (5.3.4)), on a une décomposition en somme directe</u></div>\n\\[\n\\tag{5.5.1}R^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\simeq\nH^{n-1}(X,\\mathbb Q_\\ell(j))_{\\mathbb P^1}\\oplus E^{n-1}\\rho_*\\mathbb Q_\\ell(j).\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par (LV), on a une telle décomposition au-dessus de \\(U\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.5.2}\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\simeq\nH^{n-1}(X,\\mathbb Q_\\ell(j))_U\\oplus\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>à laquelle on applique \\(\\nu_*\\).</p>"
+    },
+    {
+     "id": "18.5.6",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 5.6.",
+     "html": "<div class=\"thm theorem\" id=\"18.5.6\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 5.6.</u></span> <u>Soit \\(X\\) une variété projective, lisse et irréductible\nqui vérifie (LV) (5.2.2). Soit \\(\\{H_t\\}\\) un pinceau d’hyperplans dont\nl’élément générique et l’axe coupent transversalement \\(X\\), en \\(X_\\eta\\) et en \\(\\Delta\\)\nrespectivement. Supposons que la projection \\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\) vérifie la\ncondition (5.3.2). Alors :</u></div>\n<div class=\"thm-body\">\n<p><u>(5.6.1) la suite spectrale de Leray</u></p>\n\\[\nE_2^{p,q}=H^p(\\mathbb P^1,R^q\\rho_*\\mathbb Q_\\ell)\\Longrightarrow H^{p+q}(\\widetilde X,\\mathbb Q_\\ell)\n\\]\n<p><u>dégénère. (NB. Ceci reste valable si, au lieu de supposer que \\(X\\) satisfait\nla condition (LV), on suppose seulement qu’une section hyperplane lisse\n\\(Y\\) y satisfait.)</u></p>\n</div></div>"
+    },
+    {
+     "id": "18.5.6.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.6.2\"><strong><u>5.6.2.</u></strong> <u>Désignons par \\(\\eta\\) le point générique de \\(\\mathbb P^1\\), par \\(\\bar\\eta\\) le point\ngénérique géométrique, par \\(X_{\\bar\\eta}\\) la fibre générique géométrique de \\(\\rho\\),\net par \\(\\Pi\\) le groupe de Galois de \\(k(\\bar\\eta)/k(\\eta)\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Pour \\(q\\ne n-1\\), on a des isomorphismes canoniques :</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.2.1}E_2^{0,q}\\;(=H^0(\\mathbb P^1,R^q\\rho_*\\mathbb Q_\\ell))\\simeq H^q(X_{\\bar\\eta},\\mathbb Q_\\ell)\n\\]\n\\[\n\\tag{5.6.2.2}E_2^{2,q}\\;(=H^2(\\mathbb P^1,R^q\\rho_*\\mathbb Q_\\ell))\\simeq H^q(X_{\\bar\\eta},\\mathbb Q_\\ell(-1))\n\\]\n\\[\n\\tag{5.6.2.3}E_2^{p,q}\\;(=H^p(\\mathbb P^1,R^q\\rho_*\\mathbb Q_\\ell))=0,\\quad p\\ne0,2.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Pour \\(q=n-1\\), on a</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.2.4}E_2^{0,n-1}\\;(=H^0(\\mathbb P^1,R^{n-1}\\rho_*\\mathbb Q_\\ell))\n\\simeq H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell)^\\Pi\n\\simeq H^{n-1}(X,\\mathbb Q_\\ell),\n\\]\n\\[\n\\tag{5.6.2.5}E_2^{2,n-1}\\;(=H^2(\\mathbb P^1,R^{n-1}\\rho_*\\mathbb Q_\\ell))\n\\simeq H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(-1))^\\Pi\n\\simeq H^{n-1}(X,\\mathbb Q_\\ell(-1)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>(On trouvera la valeur manquante \\(E_2^{1,n-1}\\) dans 5.7 ci-dessous).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Le théorème 1.1 s’applique, par (5.4.3), pour donner\n(5.6.1). Quant aux trois premières formules (5.6.2), elles résultent\ndu fait que les \\(R^q\\rho_*\\mathbb Q_\\ell\\) pour \\(q\\ne n-1\\) sont constants (5.4) ; pour (5.6.2.3)\nil faut utiliser bien sûr que \\(\\mathbb P^1\\) est simplement connexe. La première</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>égalité de (5.6.2.4) résulte de ce que\n\\(R^{n-1}\\rho_*\\mathbb Q_\\ell\\xrightarrow{\\sim}\\nu_*\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell\\),\nde sorte qu’on a \\(H^0(\\mathbb P^1,R^{n-1}\\rho_*\\mathbb Q_\\ell)\\simeq\nH^0(U,\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell)\\), et de ce que\n\\(\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell\\) est un faisceau «constant tordu» sur \\(U\\), donc équivalent au\n\\(\\Pi\\)-module \\(H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell)\\). La deuxième égalité de (5.6.2.4) résulte de la\ndégénérescence, compte tenu de 5.1.6.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Passons à (5.6.2.5). Désignons par \\(F^\\bullet\\) la filtration définie\nsur \\(H^*(\\widetilde X,\\mathbb Q_\\ell)\\) par la suite spectrale. Par dégénérescence,\n\\(F^2H^{n+1}(\\widetilde X,\\mathbb Q_\\ell)=E_2^{2,n-1}\\), et\n\\(\\operatorname{gr}_F^1H^{n+1}(\\widetilde X,\\mathbb Q_\\ell)=E_2^{1,n}=0\\) (5.6.2.3), de\nsorte que (cf. 5.1.0)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.3}E_2^{2,n-1}=F^1H^{n+1}(\\widetilde X,\\mathbb Q_\\ell)\n=\\operatorname{Ker}\\bigl(H^{n+1}(\\widetilde X,\\mathbb Q_\\ell)\\longrightarrow\nH^0(\\mathbb P^1,R^{n+1}\\rho_*\\mathbb Q_\\ell)\\bigr)\n\\]\n\\[\n\\text{(par (A))}=\\operatorname{Ker}\\bigl(k^*:H^{n+1}(\\widetilde X,\\mathbb Q_\\ell)\n\\longrightarrow H^{n+1}(X_{\\bar\\eta},\\mathbb Q_\\ell)\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (5.1.2), \\(k^*\\) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.4}H^{n+1}(X,\\mathbb Q_\\ell)\\oplus H^{n-1}(\\Delta,\\mathbb Q_\\ell(-1))\n\\xrightarrow{\\ m^*+h_*\\ }H^{n+1}(X_{\\bar\\eta},\\mathbb Q_\\ell),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, par (5.2.2.3) se récrit encore</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.5}\\operatorname{Prim}^{n-1}(X,\\mathbb Q_\\ell(-1))\\oplus\nH^{n-3}(X,\\mathbb Q_\\ell(-2))\\oplus H^{n-1}(\\Delta,\\mathbb Q_\\ell(-1))\n\\xrightarrow{\\ m^*L+m^*L^2,h_*\\ }H^{n+1}(X_{\\bar\\eta},\\mathbb Q_\\ell).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, la flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{n-3}(X,\\mathbb Q_\\ell(-2))\\xrightarrow{\\ m^*L^2\\ }\nH^{n+1}(X_{\\bar\\eta},\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un isomorphisme, par (LV), car \\(m^*L_X^2=L_{X_{\\bar\\eta}}^2\\cdot m^*\\)\n(cf. (5.2.4) et (5.2.5)). Donc le noyau de (5.6.5) s’identifie (par\n\\(\\operatorname{pr}_1\\oplus\\operatorname{pr}_3\\)) à</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Prim}^{n-1}(X,\\mathbb Q_\\ell(-1))\\oplus H^{n-1}(\\Delta,\\mathbb Q_\\ell(-1)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (LV),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{n-1}(\\Delta,\\mathbb Q_\\ell(-1))\\xleftarrow[\\sim]{\\ L\\ }\nH^{n-3}(\\Delta,\\mathbb Q_\\ell(-2))\\xleftarrow[\\sim]{}H^{n-3}(X,\\mathbb Q_\\ell(-2)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la dernière par Lefschetz faible. Par (5.2.2.3), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.6}E_2^{2,n-1}\\simeq H^{n-1}(X,\\mathbb Q_\\ell(-1)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et l’autre égalité de (5.6.2.5) se déduit en «tordant» (5.6.2.4).</p>"
+    },
+    {
+     "id": "18.5.6.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.6.7\"><u>Remarque 5.6.7.</u> On peut démontrer (5.6.1) sous des hypothèses nettement\nplus faibles, comme DELIGNE m’a expliqué<sup>4</sup>.</p>"
+    },
+    {
+     "id": "18.5.6.8",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 5.6.8.",
+     "html": "<div class=\"thm theorem\" id=\"18.5.6.8\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 5.6.8.</u></span>\n<u>Soient \\(X\\) lisse de dimension \\(n\\) sur un corps \\(k\\) algébriquement\nclos, et</u></div><div class=\"thm-body\">\n\\[\n\\rho:X\\longrightarrow\\mathbb P_k^1\n\\]\n<p><u>un morphisme projectif, dont la fibre générique est lisse. Supposons que :</u></p>\n<p><u>(5.6.8.1) la fibre générique géométrique, munie de la restriction du\nmodule relativement ample \\(\\mathcal O_X(1)\\), satisfait à la condition (LV) ;</u></p>\n<p><u>(5.6.8.2) les flèches (5.3.2) sont des isomorphismes pour \\(i\\ne n\\), et\nsont surjectives pour \\(i=n\\) (condition satisfaite en particulier si \\(\\rho\\)\nprovient d’un pinceau de Lefschetz (cf. 5.3.4)). Alors, la suite spectrale\nde Leray</u></p>\n\\[\nE_2^{p,q}:H^p(\\mathbb P^1,R^q\\rho_*\\mathbb Q_\\ell)\\Longrightarrow H^{p+q}(X,\\mathbb Q_\\ell)\n\\]\n<p><u>dégénère.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remarque</u> : Le même théorème vaut, avec la même démonstration, pour\n\\(\\mathbb P_k^1\\) remplacé par une courbe projective lisse irréductible quelconque.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Nous allons identifier, pour la démonstration, le\nfaisceau \\(\\mathbb Q_\\ell(1)\\) à \\(\\mathbb Q_\\ell\\) (possible car on a pris \\(k\\) algébriquement clos).\nOn peut évidemment supposer \\(X\\) connexe, et \\(\\rho\\) surjectif, donc plat, à\nfibres de dimension \\(n-1\\). Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xi_X\\in H^2(X,\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la première classe de Chern de \\(\\mathcal O_X(1)\\). Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\nu:U\\longrightarrow\\mathbb P^1\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l’inclusion d’un ouvert de lissité de \\(\\rho\\). Par 5.6.8.1 et 5.2.6, les flèches\nde cup-produit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xi_X^i:\\nu^*R^{n-1-i}\\rho_*\\mathbb Q_\\ell\\longrightarrow\n\\nu^*R^{n-1+i}\\rho_*\\mathbb Q_\\ell\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont des isomorphismes, pour \\(i\\geq1\\), de sorte que, en appliquant le foncteur\n\\(\\nu_*\\), on trouve des isomorphismes (compte tenu de 5.6.8.2) pour \\(i\\geq2\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.3}\\xi_X^i:R^{n-1-i}\\rho_*\\mathbb Q_\\ell\\xrightarrow{\\sim}\nR^{n-1+i}\\rho_*\\mathbb Q_\\ell,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, pour \\(i=1\\), un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.4}\\xi_X:R^{n-2}\\rho_*\\mathbb Q_\\ell\\xrightarrow{\\sim}\n\\nu_*\\nu^*R^n\\rho_*\\mathbb Q_\\ell.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette dernière flèche se factorise en</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.5}R^{n-2}\\rho_*\\mathbb Q_\\ell\\xrightarrow{\\ \\xi_X\\ }\nR^n\\rho_*\\mathbb Q_\\ell\\xrightarrow{\\ \\text{flèche d’adjonction}\\ }\n\\nu_*\\nu^*R^n\\rho_*\\mathbb Q_\\ell,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu’on a une décomposition canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.6}R^n\\rho_*\\mathbb Q_\\ell\n\\xleftarrow[\\sim]{\\ \\xi_X+\\mathrm{ind}\\ }\nR^{n-2}\\rho_*\\mathbb Q_\\ell\\oplus\\operatorname{Local}^n\\mathbb Q_\\ell\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où l’on a posé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.7}\\operatorname{Local}^n\\mathbb Q_\\ell=\n\\operatorname{Ker}\\bigl(R^n\\rho_*\\mathbb Q_\\ell\\longrightarrow\n\\nu_*\\nu^*R^n\\rho_*\\mathbb Q_\\ell\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On remarque que le faisceau \\(\\operatorname{Local}^n\\mathbb Q_\\ell\\) est concentré aux points de \\(\\mathbb P^1\\)\noù la fibre de \\(\\rho\\) n’est pas lisse, de sorte que, compte tenu encore de\n(5.6.8.3), on trouve</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.8}H^j(\\mathbb P^1,R^{n-2-i}\\rho_*\\mathbb Q_\\ell)\n\\xrightarrow{\\ \\xi_X^i\\ }H^j(\\mathbb P^1,R^{n-1+i}\\rho_*\\mathbb Q_\\ell)\n\\quad\\text{si }i,j\\geq1.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons maintenant la dégénérescence. Compte tenu de ce que\n\\(E_2^{p,q}=0\\) sauf pour \\(p=0,1,2\\), il suffit de prouver que les opérations</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nd_2:H^0(\\mathbb P^1,R^i\\rho_*\\mathbb Q_\\ell)\\longrightarrow\nH^2(\\mathbb P^1,R^{i-1}\\rho_*\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont nulles. Pour \\(q\\leq n-1\\), posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.9}\\operatorname{Prim}(E_2^{p,q})=\n\\operatorname{Ker}\\bigl(\\xi_X^{n-q}:E_2^{p,q}\\longrightarrow E_2^{p,2n-q}\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Grâce à (5.6.8.3) et (5.6.8.6), impliquant l’<u>injectivité</u> de</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xi_X:H^p(\\mathbb P^1,R^{n-2}\\rho_*\\mathbb Q_\\ell)\\longrightarrow\nH^p(\\mathbb P^1,R^n\\rho_*\\mathbb Q_\\ell),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour \\(q\\leq n-1\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.10}E_2^{p,q}\\xleftarrow[\\sim]{\\ 1+\\xi_X+\\xi_X^2+\\cdots\\ }\n\\operatorname{Prim}(E_2^{p,q})\\oplus\\operatorname{Prim}(E_2^{p,q-2})\n\\oplus\\operatorname{Prim}(E_2^{p,q-4})\\oplus\\cdots.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour voir qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nd_2^{p,q}=0\\quad\\text{pour }q\\leq n-1,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>remarquons simplement que le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccc}\n\\operatorname{Prim}(E_2^{p,q}) &amp; \\xrightarrow{\\ \\xi_X^{n-q}=0\\ } &amp; E_2^{p,2n-q}\\\\\n\\big\\downarrow d_2^{p,q} &amp;&amp; \\big\\downarrow d_2^{p,2n-q}\\\\\nE_2^{p+2,q-1} &amp; \\xrightarrow[\\sim]{\\ \\xi_X^{n-1-(q-1)}\\ } &amp; E_2^{p+2,2n-q-1}\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(la flèche du bas étant un isomorphisme grâce à (5.6.8.8)), entraîne\nque \\(d_2^{p,q}\\) tue \\(\\operatorname{Prim}(E_2^{p,q})\\) pour \\(q\\leq n-1\\), et donc, par (5.6.8.10), que\n\\(d_2\\) tue \\(E_2^{p,q}\\) pour \\(q\\leq n-1\\). Par (5.6.8.3), ceci implique aussi que \\(d_2\\)\ntue \\(E_2^{p,q}\\) pour \\(q\\geq n+1\\). Donc il reste à prouver que l’homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nd_2^{0,n}:E_2^{0,n}\\longrightarrow E_2^{2,n-1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est nul, ou, ce qui revient au même, que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.12}\\dim E_3^{2,n-1}=\\dim E_2^{2,n-1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous avons déjà démontré qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.13}\\dim E_2^{p,q}=\\dim E_3^{p,q}\n\\quad\\text{pour }(p,q)\\ne(0,n),(2,n-1)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, pour une raison de degrés,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.14}E_3^{p,q}=E_\\infty^{p,q}\\quad\\text{pour tout couple }(p,q).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (5.6.8.14), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nb_i(X)=\\dim H^i(X,\\mathbb Q_\\ell)=\\sum_{p+q=i}\\dim E_3^{p,q},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, compte tenu de (5.6.8.13), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.15}b_{n-1}(X)=\\dim E_2^{0,n-1}+\\dim E_2^{1,n-2}+\\dim E_2^{2,n-3}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.16}b_{n+1}(X)=\\dim E_2^{0,n+1}+\\dim E_2^{1,n}+\\dim E_3^{2,n-1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par la dualité de Poincaré, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.17}b_{n-1}(X)=b_{n+1}(X).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons d’abord que, par (5.6.8.8), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\dim E_2^{1,n}=\\dim E_2^{1,n-2},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (par 5.6.8.17) la démonstration de (5.6.8.12) est terminée\nune fois connue</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.6.8.18}\\dim E_2^{2,n-3}=\\dim E_2^{0,n+1},\n\\]\n\\[\n\\tag{5.6.8.19}\\dim E_2^{0,n-1}=\\dim E_2^{2,n-1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, ces deux formules résultent de (5.6.8.2) et la dualité de Poincaré\npour les fibres lisses de \\(\\rho\\), compte tenu du lemme suivant, appliqué à \\(\\mathbb P^1\\)\net aux faisceaux \\(R^{n-3}\\rho_*\\mathbb Q_\\ell\\) et \\(R^{n-1}\\rho_*\\mathbb Q_\\ell\\).</p>"
+    },
+    {
+     "id": "18.5.6.9",
+     "type": "theorem",
+     "label": null,
+     "title": "Lemme 5.6.9.",
+     "html": "<div class=\"thm theorem\" id=\"18.5.6.9\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 5.6.9.</u></span>\n(cf. SGA 5 I § 5 et SGA 4 XVIII     ). <u>Soit \\(D\\) une courbe\npropre, lisse et connexe sur un corps \\(k\\) algébriquement clos. Désignons\npar \\(i:\\eta\\longrightarrow D\\) l’inclusion du point générique, et par \\(F\\) un \\(\\mathbb Q_\\ell\\)-faisceau\nconstructible sur \\(D\\) tel que \\(F\\xrightarrow{\\sim}i_*i^*F\\). Alors</u></div><div class=\"thm-body\">\n\\[\nH^2(D,F)\\xrightarrow{\\sim}H^0(D,\\check F(-1))^\\vee,\n\\]\n<p><u>où \\(\\check F\\xrightarrow{\\sim}i_*((i^*F)^\\vee)\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": "18.5.6.10",
+     "type": "theorem",
+     "label": null,
+     "title": "Corollaire 5.6.10.",
+     "html": "<div class=\"thm theorem\" id=\"18.5.6.10\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 5.6.10.</u></span>\n(Utilise Picard-Lefschetz). <u>Soit \\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\) la\n«fibration» provenant d’un pinceau de Lefschetz, et supposons que les\nfibres lisses satisfont à la condition (LV). Alors</u></div><div class=\"thm-body\">\n\\[\n\\tag{5.6.10.1}H^i(X_{\\bar\\eta},\\mathbb Q_\\ell)^\\pi=\n\\operatorname{Im}\\bigl(H^i(X,\\mathbb Q_\\ell)\\longrightarrow H^i(X_{\\bar\\eta},\\mathbb Q_\\ell)\\bigr).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par 5.3.4 (qui utilise la formule de Picard-Lefschetz),\n5.6.8 s’applique, et donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^i(X_{\\bar\\eta},\\mathbb Q_\\ell)^\\pi=\\operatorname{Image}H^i(\\widetilde X,\\mathbb Q_\\ell).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à voir que \\(H^i(X,\\mathbb Q_\\ell)\\) et \\(H^i(\\widetilde X,\\mathbb Q_\\ell)\\) ont la même image dans \\(H^i(X_{\\bar\\eta},\\mathbb Q_\\ell)\\).\nOr, ceci est vrai pour \\(i\\leq n-1\\) par 5.1.6, et pour \\(i\\geq n\\) par 5.2.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Passons maintenant au calcul le plus important :</p>"
+    },
+    {
+     "id": "18.5.7",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 5.7.",
+     "html": "<div class=\"thm theorem\" id=\"18.5.7\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 5.7.</u></span>\n<u>Sous les hypothèses de 5.6, posant</u></div><div class=\"thm-body\">\n\\[\nE^{n-2}(\\Delta,\\mathbb Q_\\ell(j))=\\text{orthogonal dans }H^{n-2}(\\Delta,\\mathbb Q_\\ell(j))\n\\text{ de l’image de }H^{n-2}(X,\\mathbb Q_\\ell(j))\n\\]\n<p><u>(partie «évanescente» de la cohomologie de \\(\\Delta\\), cf. 5.4.4), on a une\ndécomposition en somme directe (cf. 4.2)</u></p>\n\\[\n\\tag{5.7.1}E_2^{1,n-1}=H^1(\\mathbb P^1,R^{n-1}\\rho_*\\mathbb Q_\\ell)\n\\xleftarrow[\\ f^*+i_*g^*\\ ]{\\sim}\n\\operatorname{Prim}^n(X,\\mathbb Q_\\ell)\\oplus E^{n-2}(\\Delta,\\mathbb Q_\\ell(-1)).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par dégénérescence on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE_2^{1,n-1}\\simeq F^1H^n(\\widetilde X,\\mathbb Q_\\ell)/F^2H^n(\\widetilde X,\\mathbb Q_\\ell).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a par \\(A\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.2}F^1H^n(\\widetilde X,\\mathbb Q_\\ell)=\n\\operatorname{Ker}\\bigl(k^*:H^n(\\widetilde X,\\mathbb Q_\\ell)\\longrightarrow H^n(X_{\\bar\\eta},\\mathbb Q_\\ell)\\bigr),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(par 5.1.2) se récrit \\(\\bigl(H^n(X,\\mathbb Q_\\ell)\\oplus H^{n-2}(\\Delta,\\mathbb Q_\\ell(-1))\\bigr)\n\\xrightarrow{\\ m^*+h_*\\ }H^n(X_{\\bar\\eta},\\mathbb Q_\\ell)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (LV), \\(k^*\\) se récrit encore</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.3}\\operatorname{Prim}^n(X,\\mathbb Q_\\ell)\\oplus H^{n-2}(X,\\mathbb Q_\\ell(-1))\n\\oplus H^{n-2}(\\Delta,\\mathbb Q_\\ell(-1))\n\\xrightarrow{\\ m^*+m^*L+h_*\\ }H^n(X_{\\bar\\eta},\\mathbb Q_\\ell),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et la flèche du milieu</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.4}H^{n-2}(X,\\mathbb Q_\\ell(-1))\\xrightarrow{\\ m^*L\\ }H^n(X_{\\bar\\eta},\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un isomorphisme (cf. 5.2.3 et (5.2.2.3)), de sorte que, désignant par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.5}\\wp:H^n(X,\\mathbb Q_\\ell)\\longrightarrow\\operatorname{Prim}^n(X,\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la projection sur la partie primitive, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.6}F^1H^n(\\widetilde X,\\mathbb Q_\\ell)\n\\xrightarrow[\\ \\wp f_*\\oplus(-g_*L^{2*})\\ ]{\\sim}\n\\operatorname{Prim}^n(X,\\mathbb Q_\\ell)\\oplus H^{n-2}(\\Delta,\\mathbb Q_\\ell(-1)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (5.6.2.2) et dégénérescence, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.7}F^2H^n(\\widetilde X,\\mathbb Q_\\ell)\\xrightarrow{\\sim}E_2^{2,n-2}\n\\xrightarrow{\\sim}H^{n-2}(X_{\\bar\\eta},\\mathbb Q_\\ell(-1)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part, l’inclusion de \\(F^2H^n(\\widetilde X,\\mathbb Q_\\ell)=H^{n-2}(X_{\\bar\\eta},\\mathbb Q_\\ell(-1))\\) dans \\(H^n(\\widetilde X,\\mathbb Q_\\ell)\\)\nest par la flèche \\(k_*\\) de <u>Gysin</u>. (En toute rigueur, la flèche de Gysin\nn’est définie que comme une flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{i-2}(X_{\\bar\\eta},\\mathbb Q_\\ell)\\longrightarrow H^i(X_{\\overline{k(\\eta)}},\\mathbb Q_\\ell),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>mais compte tenu de ce qu’on a un isomorphisme canonique (SGA 4 XII 5.4)\npour tout corps \\(K/k\\) algébriquement clos</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^i(X,\\mathbb Q_\\ell)\\longrightarrow H^i(X\\otimes_kK,\\mathbb Q_\\ell),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>nous espérons que le lecteur nous permettra de tels abus.) D’après (5.1.3),\nla flèche de Gysin s’exprime par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.8}H^{n-2}(X_{\\bar\\eta},\\mathbb Q_\\ell(-1))\n\\xrightarrow{\\ m_*\\oplus(-h^*)\\ }H^n(X,\\mathbb Q_\\ell)\\oplus H^{n-2}(\\Delta,\\mathbb Q_\\ell(-1)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par Lefschetz faible,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nm_*H^{n-2}(X_{\\bar\\eta},\\mathbb Q_\\ell(-1))=m_*m^*H^{n-2}(X,\\mathbb Q_\\ell(-1))\n=L_XH^{n-2}(X,\\mathbb Q_\\ell(-1))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est l’orthogonal de la partie primitive, de sorte qu’on a le diagramme\ncommutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.9}\n\\begin{array}{ccc}\nF^2H^n(\\widetilde X,\\mathbb Q_\\ell)&amp;\\lhook\\joinrel\\longrightarrow&amp;F^1H^n(\\widetilde X,\\mathbb Q_\\ell)\\\\\n\\big\\uparrow\\rlap{\\scriptstyle\\sim}\\,k_*&amp;&amp;\\big\\downarrow\\rlap{\\scriptstyle\\sim}\\,\\wp f_*\\oplus(-g_*L^{2*})\\\\\nH^{n-2}(X_{\\bar\\eta},\\mathbb Q_\\ell(-1))&amp;\\xrightarrow{\\ 0\\oplus h^*\\ }&amp;\n\\operatorname{Prim}(X,\\mathbb Q_\\ell)\\oplus H^{n-2}(\\Delta,\\mathbb Q_\\ell(-1));\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui donne bien (5.7.1), cqfd.</p>"
+    },
+    {
+     "id": "18.5.7.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.7.10\"><u>Remarque 5.7.10.</u> Dans 5.7, l’hypothèse \\(A\\) peut-être remplacée par celle,\nplus faible, que pour \\(q=n\\), les flèches</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.11}H^q(\\widetilde X,\\mathbb Q_\\ell)\\longrightarrow H^0(\\mathbb P^1,R^q\\rho_*\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.7.12}H^q(\\widetilde X,\\mathbb Q_\\ell)\\longrightarrow H^q(X_{\\bar\\eta},\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>aient même noyau, comme le montre notre démonstration. En l’absence\nde cette condition, la conclusion peut tomber en défaut, cf. 5.9.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "number": "4",
+     "html": "Sic.",
+     "id": "18-fn-x2"
+    }
+   ]
+  },
+  {
+   "id": "18-5-8",
+   "title": "5.8. L’homomorphisme de Griffiths.",
+   "blocks": [
+    {
+     "id": "18.5.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"18.5.8\">5.8. L’homomorphisme de Griffiths.</h2>"
+    },
+    {
+     "id": "18.5.8.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.8.1\"><strong>5.8.1.</strong> Soit \\(f:T\\longrightarrow S\\) un morphisme de schémas. La suite spectrale\nde Leray définit une filtration \\((F^i)\\) sur les \\(H^\\bullet(T,\\mathbb Q_\\ell(j))\\). On définit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.1.1}\\operatorname{Prim}^\\bullet(T/S,\\mathbb Q_\\ell(j))=F^1H^\\bullet(T,\\mathbb Q_\\ell(j)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Grâce au fait que la suite spectrale de Leray est contenu dans le\n«premier quadrant», on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.1.2}E_\\infty^{0,\\bullet}\\lhook\\joinrel\\longrightarrow E_2^{0,\\bullet},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.1.3}\\operatorname{Prim}^\\bullet(T/S,\\mathbb Q_\\ell(j))=\n\\operatorname{Ker}\\bigl(H^\\bullet(T,\\mathbb Q_\\ell(j))\\longrightarrow H^0(S,R^\\bullet f_*\\mathbb Q_\\ell(j))\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la même raison, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.1.4}E_\\infty^{1,\\bullet}\\lhook\\joinrel\\longrightarrow E_2^{1,\\bullet},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.1.5}\\operatorname{Prim}^i(T/S,\\mathbb Q_\\ell(j))=F^1H^i(T,\\mathbb Q_\\ell(j))\n\\longrightarrow \\operatorname{gr}^1H^i(T,\\mathbb Q_\\ell(j))=E_\\infty^{1,i-1}\n\\lhook\\joinrel\\longrightarrow H^1(S,R^{i-1}f_*\\mathbb Q_\\ell(j))=E_2^{1,i-1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sera dénoté</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.1.6}u^i:\\operatorname{Prim}(T/S,\\mathbb Q_\\ell(j))\\longrightarrow\nH^1(S,R^{i-1}f_*\\mathbb Q_\\ell(j)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "18.5.8.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.8.2\"><strong>5.8.2.</strong> Soit maintenant \\(X\\) projective, lisse, et irréductible, \\(D=\\{H_t\\}\\)\nun pinceau d’hyperplans dont l’élément générique et l’axe coupent trans-\nversalement \\(X\\). Désignons par \\(\\nu:U\\longrightarrow\\mathbb P^1\\) un ouvert de lissité non vide\nde la projection \\(\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\) et soit\n\\(\\widetilde X|U=\\widetilde X\\times_{\\mathbb P^1}U\\). On a le diagramme\ncommutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.2.1}\\xymatrix@C=4em@R=3em{\n&amp;\\widetilde X\\ar[dl]_f\\ar[dd]^(.3)\\rho&amp;\\widetilde X|U\\ar[l]_\\alpha\\ar[dd]^{\\rho|U}\\\\\nX&amp;&amp;\\\\\n&amp;\\mathbb P^1&amp;U\\ar[l]^\\nu}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le morphisme \\(\\rho|U:\\widetilde X|U\\longrightarrow U\\) étant propre et lisse, on a, par le\nthéorème de la spécialisation de la cohomologie (SGA 4 XVI 2.2)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.2.2}\\operatorname{Prim}^\\bullet(\\widetilde X|U/U,\\mathbb Q_\\ell(j))\n=\\operatorname{Ker}\\bigl(H^\\bullet(\\widetilde X|U,\\mathbb Q_\\ell(j))\n\\longrightarrow H^\\bullet(X_{\\bar\\eta},\\mathbb Q_\\ell(j))\\bigr),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc, d’après (5.2.3.1), on a</p>"
+    },
+    {
+     "id": "18.5.8.2.3",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"18.5.8.2.3\"><div class=\"thm-head\"><u>Proposition 5.8.2.3.</u></div><div class=\"thm-body\">\n<p><u>Sous les hypothèses (5.8.2), pour \\(x\\in H^n(X,\\mathbb Q_\\ell(j))\\),\non a l’équivalence</u></p>\n\\[\n\\tag{5.8.2.4}x\\in\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\n\\Longleftrightarrow \\alpha^*f^*(x)\\in\n\\operatorname{Prim}^n(\\widetilde X|U/U,\\mathbb Q_\\ell(j)).\n\\]\n<p><u>Si de plus \\(\\rho\\) vérifie l’hypothèse \\(A\\) de 5.3, on a</u></p>\n\\[\n\\tag{5.8.2.5}x\\in\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\n\\Longleftrightarrow f^*(x)\\in\\operatorname{Prim}^n(\\widetilde X/\\mathbb P^1,\\mathbb Q_\\ell(j)).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> (5.8.2.4) est prouvé. Quant à (5.8.2.5), l’hypothèse \\(A\\)\nimplique que \\(H^0(\\mathbb P^1,R^n\\rho_*\\mathbb Q_\\ell(j))\\xrightarrow{\\sim}\nH^0(U,\\nu^*R^n\\rho_*\\mathbb Q_\\ell(j))\\), donc [\\(f^*(x)\\)\nest primitif rel. à \\(\\mathbb P^1\\)] \\(\\Rightarrow\\) [\\(\\alpha^*f^*(x)\\) l’est rel. à \\(U\\)].</p>"
+    },
+    {
+     "id": "18.5.8.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"18.5.8.3\"><strong><u>Définition 5.8.3.</u></strong> <u>Dans la situation 5.8.2, l’homomorphisme composé</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.3.1}\\xymatrix@C=4em@R=3em{\n\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\\ar[r]^{\\alpha^*f^*}\\ar[dr]_{\\operatorname{Grif}}&amp;\n\\operatorname{Prim}^n(\\widetilde X|U/U,\\mathbb Q_\\ell(j))\\ar[d]^u\\\\\n&amp;H^1(U,\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j))}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>s’appelle l’homomorphisme de Griffiths (pour \\(X\\), relatif au pinceau donné \\(D\\)).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ajoutons au diagramme (5.8.2.1) la famille constante au-dessus\nde \\(U\\), de fibre \\(X\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.3.2}\\xymatrix@C=4em@R=3em{\n&amp;\\widetilde X\\ar[dl]_f\\ar[dd]^(.3)\\rho&amp;\\widetilde X|U\\ar[l]_\\alpha\\ar[r]^{f\\times\\rho|U}\\ar[dd]^{\\rho|U}&amp;X\\times U\\ar[ddl]^{\\operatorname{pr}_2}\\\\\nX&amp;&amp;&amp;\\\\\n&amp;\\mathbb P^1&amp;U\\ar[l]^\\nu&amp;}.\n\\]\n\n</p>"
+    },
+    {
+     "id": "18.5.8.4",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"18.5.8.4\"><div class=\"thm-head\"><u>Théorème 5.8.4.</u></div><div class=\"thm-body\">\n<p><u>Supposons que \\(X\\) vérifie (LV) (5.2.2), et que \\(\\rho\\) vérifie\nl’hypothèse \\(A\\) (5.3). Alors pour tout \\(U\\xrightarrow{\\nu}\\mathbb P^1\\), ouvert de lissité \\(\\ne\\varnothing\\)\nde \\(\\rho\\), l’homomorphisme de Griffiths «modulo partie fixe» qui est, par\ndéfinition, le composé</u></p>\n\\[\n\\tag{5.8.4.1}\\xymatrix@C=4em@R=3em{\n\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\\ar[r]^{\\operatorname{Grif}}&amp;\nH^1(U,\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j))\\ar[d]\\\\\n&amp;H^1(U,\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j))\\simeq\n\\dfrac{H^1(U,\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j))}\n{(f\\times\\rho|U)^*H^1(U,H^{n-1}(X,\\mathbb Q_\\ell(j))_U)}}\n\\]\n<p><u>est injectif.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par (5.5.1), on a, au-dessus de \\(\\mathbb P^1\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.2}R^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\simeq\nH^{n-1}(X,\\mathbb Q_\\ell(j))_{\\mathbb P^1}\\oplus E^{n-1}\\rho_*\\mathbb Q_\\ell(j),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et au-dessus de \\(U\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.3}\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\simeq\nH^{n-1}(X,\\mathbb Q_\\ell(j))_U\\oplus\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui permet de récrire (5.8.4.1) comme indiqué :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.4}\\xymatrix@C=4em@R=3em{\n\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\\ar[r]^{\\operatorname{Grif}}&amp;\nH^1(U,\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j))\\ar[d]\\\\\n&amp;H^1(U,\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j)).}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’après (5.7.1), la flèche (qui n’est défini que grâce à l’hypothèse \\(A\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.5}u:\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\n\\longrightarrow H^1(\\mathbb P^1,R^{n-1}\\rho_*\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est injective. La décomposition (5.8.4.2), compte tenu de ce que \\(\\mathbb P^1\\)\nest simplement connexe, donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.6}H^1(\\mathbb P^1,R^{n-1}\\rho_*\\mathbb Q_\\ell)\n\\simeq H^1(\\mathbb P^1,E^{n-1}\\rho_*\\mathbb Q_\\ell(j)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu’on peut compléter (5.8.4.4) en un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.7}\\xymatrix@C=4em@R=3em{\n\\operatorname{Prim}^n(X,\\mathbb Q_\\ell(j))\\ar[r]^{\\operatorname{Grif}}\\ar[d]_u&amp;\nH^1(U,\\nu^*R^{n-1}\\rho_*\\mathbb Q_\\ell(j))\\ar[d]\\\\\nH^1(\\mathbb P^1,E^{n-1}\\rho_*\\mathbb Q_\\ell(j))\\ar[r]^{\\nu^*}&amp;\nH^1(U,\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j)).}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit maintenant de voir que la flèche en bas est injective, ce\nqui résulte du fait</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.4.8}E^{n-1}\\rho_*\\mathbb Q_\\ell(j)\\simeq\n\\nu_*\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par le lemme (bien connu !) suivant :</p>"
+    },
+    {
+     "id": "18.5.8.5",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"18.5.8.5\"><div class=\"thm-head\"><u>Lemme 5.8.5.</u></div><div class=\"thm-body\">\n<p><u>Soient \\(\\nu:A\\longrightarrow B\\) un morphisme de topos, et soit \\(F\\) un\nfaisceau sur \\(A\\). Alors la flèche canonique</u></p>\n\\[\n\\tag{5.8.5.1}H^1(B,\\nu_*F)\\longrightarrow H^1(A,F)\n\\]\n<p><u>est injective.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Dans une suite spectrale du premier quadrant, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.8.5.2}E_2^{1,0}\\simeq E_\\infty^{1,0}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc pour la suite spectrale de Leray</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE_2^{p,q}=H^p(B,R^q\\nu_*F)\\Longrightarrow H^{p+q}(A,F)\n\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par N. Katz (*)"
+}

@@ -1,0 +1,1315 @@
+{
+ "chapter_id": "XI",
+ "title": "EXPOSÉ XI REPRESENTABILITY CRITERIA. APPLICATIONS TO SUBGROUPS OF MULTIPLICATIVE TYPE OF AFFINE GROUP SCHEMES",
+ "number": "XI",
+ "pages": [
+  {
+   "id": "XI",
+   "title": "EXPOSÉ XI REPRESENTABILITY CRITERIA. APPLICATIONS TO SUBGROUPS OF MULTIPLICATIVE TYPE OF AFFINE GROUP SCHEMES",
+   "blocks": [
+    {
+     "id": "XI",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XI\">EXPOSÉ XI<br>REPRESENTABILITY CRITERIA. APPLICATIONS TO SUBGROUPS OF MULTIPLICATIVE TYPE OF AFFINE GROUP SCHEMES<span class=\"author\">by A. Grothendieck</span><sup class=\"footnote-ref\"><a id=\"XI-fn0ref\" href=\"#XI-fn0\">0</a></sup></h1>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn0",
+     "number": "0",
+     "html": "xy version of 5/12/08"
+    }
+   ]
+  },
+  {
+   "id": "XI-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "XI.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.0\">0. Introduction</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As we have already seen through examples in <a class=\"ref\" href=\"#X.4\">Exp. X, N<sup>os</sup> 4, 5</a>, the representability of certain functors, such as certain functors of the type \\(\\underline{\\mathrm{Hom}}_S(X, Y)\\) and various variants, plays an important role in many questions concerning group preschemes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Among the results that are particularly useful in this theory, let us point out (in addition to the questions of representability of quotients, studied in exposés <a class=\"ref\" href=\"#V\">V</a> and <a class=\"ref\" href=\"#VIA\">VI</a> and in <a class=\"ref\" href=\"#VIII.5\">Exp. VIII 5</a>) the question of the representability of functors of the form \\(\\prod_{X/S} Y/X\\) (Y a subobject of X) studied in <a class=\"ref\" href=\"#VIII.6\">Exp VIII 6</a> in a very elementary case, of which variants will be given in <a class=\"ref\" href=\"#XI.6\">N<sup>o</sup> 6</a> of the present exposé; these results provide us with the representability of various centralizers, normalizers, and transporters.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Less elementary representability criteria, using results which will appear in EGA VI, are indicated in <a class=\"ref\" href=\"#XI.6.12\">6.12</a> and in Exp XV, XVI, where a representability criterion will be given for quotients G/H in cases not covered by the earlier exposés (a criterion which was not developed in the oral exposés).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Our main object in the present exposé is the proof of theorems <a class=\"ref\" href=\"#XI.4.1\">4.1</a> and <a class=\"ref\" href=\"#XI.4.2\">4.2</a>, which provide a typical example of a non-projective construction technique (close to the one that will be developed in EGA VI). It has moreover become apparent, since the oral exposé and the writing of the present text, that the affineness hypotheses made in 4.1 and 4.2 can be eliminated to a large extent (cf. XV), and that on the other hand one can, for the essentials of the theory developed in the following exposé, dispense with 4.1 and 4.2. Finally, it could be interesting to prove the analogue of these results for a general reductive (for example semisimple) group prescheme instead of a group of multiplicative type, in which case 4.1 and 4.2 will no doubt be the key result for the proof.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XI-1",
+   "title": "1. Reminders on smooth, étale, and unramified morphisms",
+   "blocks": [
+    {
+     "id": "XI.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.1\">1. Reminders on smooth, étale, and unramified morphisms</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The reader is referred to EGA IV §§ 17 &amp; 18, and while awaiting its publication, to SGA 1 I, II, III (where, however, certain noetherian hypotheses, which are inconvenient in applications, should be replaced by hypotheses of finite presentation).</p>"
+    },
+    {
+     "id": "XI.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XI.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme and F a functor \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\). We say that F is <em>formally smooth</em> (resp. <em>formally unramified</em> <sup class=\"footnote-ref\"><a id=\"XI-fn1ref\" href=\"#XI-fn1\">1</a></sup>, resp. <em>formally étale</em>) if for every S-prescheme \\(S'\\), affine (in the absolute sense), and every subscheme \\(S'_0\\) of \\(S'\\) defined by a nilpotent ideal \\(\\mathscr{J}\\), the map\n  \\[\n  F(S') \\longrightarrow F(S'_0)\n  \\]\n  is surjective (resp. injective, resp. bijective). A prescheme X over S is said to be <em>formally smooth over S</em> (resp. <em>formally unramified over S</em>, resp. <em>formally étale over S</em>) if the corresponding functor is formally smooth (resp. formally unramified, resp. formally étale); we say that X is <em>smooth over S</em> (resp. <em>unramified over S</em>, resp. <em>étale over S</em>) if it satisfies the preceding condition and if moreover X is locally of finite presentation over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The interest of these definitions for X lies in the fact that, on the one hand, they are expressed in a remarkably simple way in terms of the functor represented by X (and in practice, X is often given as the object over S representing an explicitly described functor), and that, on the other hand, they are also expressed by remarkable properties concerning the local structure of X, which we shall recall in the following statements (for the proof we refer to <em>loc. cit.</em>).</p>"
+    },
+    {
+     "id": "XI.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Let X be a prescheme locally of finite presentation over S. Then:</p>\n  <p>(i) For X to be smooth over S, it is necessary and sufficient that X be flat over S and that its geometric fibers \\(X \\otimes_S \\mathrm{Spec}(\\overline{\\kappa(s)})\\) be regular schemes. More generally, for X to be smooth over S in a neighborhood of the point \\(x \\in X\\) (we then say that X is smooth over S at x), it is necessary and sufficient that X be flat over S at x and that \\(X_s\\) be smooth over \\(\\kappa(s)\\) at x, i.e. that \\(X_s \\otimes_{\\kappa(s)} \\overline{\\kappa(s)}\\) be regular at the points (or simply, at one point) above x.</p>\n  <p>(ii) Suppose S, hence X, locally noetherian, let \\(x \\in X\\) and let \\(s \\in S\\) be its image in S; then the smoothness of X over S at x can be recognized from the local homomorphism \\(A = \\mathscr{O}_{S,s} \\to B = \\mathscr{O}_{X,x}\\) of noetherian local rings (or even from the local homomorphism \\(\\widehat{A} \\to \\widehat{B}\\) of their completions), by the following characteristic property: B is flat over A, and \\(B \\otimes_A k\\) is geometrically regular over k (the residue field of A), i.e. for every finite extension \\(k'\\) of k, \\((B \\otimes_A k) \\otimes_k k' = B \\otimes_A k'\\) is a regular semi-local ring. When the residue extension \\(k(B)/k(A)\\) is trivial, these conditions are also equivalent to the following one: \\(\\widehat{B}\\) is isomorphic as an \\(\\widehat{A}\\)-algebra to an algebra of formal power series \\(\\widehat{A}[[t_1, \\ldots, t_n]]\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, from the \"formal\" point of view, the structure of X over S is that of the <em>standard affine space</em> \\(S[t_1, \\ldots, t_n]\\) <em>over S</em>.</p>"
+    },
+    {
+     "id": "XI.1.3",
+     "type": "proposition",
+     "label": "1.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>Let X be a prescheme locally of finite presentation over S. Then:</p>\n  <p>(i) The following conditions are equivalent:</p>\n  <p>a) X is unramified over S.</p>\n  <p>b) The diagonal morphism \\(X \\to X \\times_S X\\) is an open immersion.</p>\n  <p>c) \\(\\Omega^1_{X/S} = 0\\).</p>\n  <p>d) The geometric fibers of \\(X/S\\) are discrete and reduced, i.e. isomorphic to sums of copies of the base field.</p>\n  <p>e) For every \\(s \\in S\\), the fiber \\(X \\otimes_S \\mathrm{Spec}\\,\\kappa(s) = X_s\\) is unramified over \\(\\kappa(s)\\), or equivalently is isomorphic to a sum of spectra of finite separable extensions of \\(\\kappa(s)\\).</p>\n  <p>(ii) There are analogous conditions of a pointwise nature for X to be unramified over S at a given point x (i.e. in a neighborhood of the said point); for example, it is necessary and sufficient that \\(\\mathscr{O}_{X_s,x}\\) be a finite separable extension of \\(\\kappa(s)\\), which can also be expressed in terms of the local homomorphism \\(A = \\mathscr{O}_{S,s} \\to B = \\mathscr{O}_{X,x}\\) by the condition that \\(B \\otimes_A k\\) be a finite separable extension of k (the residue field of A), i.e. \\(r(A)B = r(B)\\) and \\(k(B)\\) is a finite separable extension of \\(k(A)\\). When A, hence also B, is noetherian, and \\(k(A) \\xrightarrow{\\ \\sim\\ } k(B)\\), this also means that \\(\\widehat{A} \\to \\widehat{B}\\) is surjective.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, from the \"formal\" point of view, saying that X is unramified over S means that X is essentially a <em>subprescheme</em> of S. Observe also that conditions d) and e) are expressed solely in terms of the fibers of \\(X/S\\).</p>"
+    },
+    {
+     "id": "XI.1.4",
+     "type": "proposition",
+     "label": "1.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Let X be a prescheme locally of finite presentation over S. For X to be étale over S, it is necessary and sufficient that it be smooth over S and unramified over S (trivial by definition), which allows one to apply the criteria <a class=\"ref\" href=\"#XI.1.2\">1.2</a> and <a class=\"ref\" href=\"#XI.1.3\">1.3</a>. In particular one finds:</p>\n  <p>(i) For X to be étale over S, it is necessary and sufficient that it be flat over S and unramified over S. There is an analogous local criterion for X to be étale over S at a given point x.</p>\n  <p>(ii) Suppose moreover S, hence X, locally noetherian. Then the fact that X is étale over S at a point x can be recognized from the local homomorphism \\(A = \\mathscr{O}_{S,s} \\to B = \\mathscr{O}_{X,s}\\) (and even from the local homomorphism \\(\\widehat{A} \\to \\widehat{B}\\)) by the following characteristic property: B is flat over A, and \\(B \\otimes_A k\\) is a finite separable extension of k (the residue field <sup class=\"footnote-ref\"><a id=\"XI-fn2ref\" href=\"#XI-fn2\">2</a></sup> of A). When \\(k(A) \\xrightarrow{\\ \\sim\\ } k(B)\\), this condition simply means that \\(\\widehat{A} \\to \\widehat{B}\\) is an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, from the \"formal\" point of view, saying that X is étale over S simply means that X is locally isomorphic to S.</p>"
+    },
+    {
+     "id": "XI.1.5",
+     "type": "remarque",
+     "label": "1.5",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>When X is locally of finite presentation over S, and a point \\(x \\in X\\) is given, then the fact that X is smooth (resp. unramified, resp. étale) over S at x, i.e. in a neighborhood of x, can again be recognized from the <em>functor</em> \\(X : (\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) by the following property: for every \\(S'\\) over S, with \\(S'\\) the spectrum of a local ring, every subscheme \\(S'_0\\) of \\(S'\\) defined by a nilpotent ideal, and every S-morphism \\(u_0 : S'_0 \\to X\\) sending the closed point \\(s'\\) of \\(S'\\) to x, there exists at least one (resp. at most one, resp. exactly one) S-morphism \\(u : S' \\to X\\) extending it. This statement shows in particular that in definition <a class=\"ref\" href=\"#XI.1.1\">1.1</a> one may restrict to \\(S'\\) which are local schemes (provided that the functor under consideration is representable by a prescheme locally of finite presentation over S). On the other hand, when S is locally noetherian, one may even, in the preceding pointwise criterion, restrict to \\(S'\\) which are <em>artinian</em> local schemes, and one may therefore make the same restriction on \\(S'\\) in definition 1.1 (provided that S is locally noetherian and the functor under consideration is represented by a prescheme locally of finite type over S).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.1.6",
+     "type": "remarque",
+     "label": "1.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\"><p>Of course, given a morphism \\(f : X \\to Y\\) of preschemes, we shall say that f is smooth (resp. …) if f makes X a smooth Y-prescheme (resp. …). When X and Y are S-preschemes and f is an S-morphism of finite presentation, then these properties of f can be expressed immediately in terms of the morphism of functors \\(F, G : (\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) defined by f: f is smooth (resp. unramified, resp. étale) if for every S-prescheme \\(S'\\), with \\(S'\\) affine (in the absolute sense), and every subscheme \\(S'_0\\) of \\(S'\\) defined by a nilpotent ideal \\(\\mathscr{J}\\), the map\n  \\[\n  F(S') \\longrightarrow F(S'_0) \\underset{G(S'_0)}{\\times} G(S')\n  \\]\n  deduced from the commutative square\n  \\[\n  \\xymatrix{\n  F(S') \\ar[r] \\ar[d] &amp; G(S') \\ar[d] \\\\\n  F(S'_0) \\ar[r] &amp; G(S'_0)\n  }\n  \\]\n  is surjective (resp. injective, resp. bijective), i.e. for every commutative square of morphisms of functors over S (where \\(S'\\), \\(S'_0\\) are as above and \\(i : S'_0 \\to S'\\) is the canonical immersion):\n  \\[\n  (\\mathrm{Q}) \\qquad\n  \\xymatrix{\n  S'_0 \\ar[r]^-{i} \\ar[d]_-{u_0} &amp; S' \\ar[d]^-{v} \\\\\n  F \\ar[r]_-{f} &amp; G\n  }\n  \\]\n  there exists at least one (resp. at most one, resp. exactly one) morphism\n  \\[\n  \\xymatrix{\n  &amp; S' \\ar[dl]^-{u} \\\\\n  F &amp;\n  }\n  \\]\n  making the two corresponding triangles commutative: \\(u_0 = ui\\) and \\(v = fu\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This property for a homomorphism of functors \\(f : F \\to G\\) over S retains a meaning even if the functors under consideration are not representable; we shall say (if it is satisfied) that the homomorphism of functors \\(f : F \\to G\\) is formally smooth (resp. formally unramified, resp. formally étale). Note that it depends only on the homomorphism of the functors \\((\\mathbf{Sch})^{\\circ} \\to (\\mathbf{Ens})\\) defined by F, G (cf. <a class=\"ref\" href=\"#I.1.4.1\">I 1.4.1</a>), and not on the structural morphisms \\(F \\to S\\) and \\(G \\to S\\). An equivalent way of expressing the preceding definition, rather more manageable in applications, is the following: the morphism of functors \\(F \\to G\\) over S is said to be formally smooth (resp. formally unramified, resp. formally étale) when for every \\(S'\\) over S and every morphism \\(S' \\to G\\), the functor \\(F' = F \\times_G S'\\) over \\(S'\\) is formally smooth (resp. formally unramified, resp. formally étale).</p>"
+    },
+    {
+     "id": "XI.1.7",
+     "type": "remarque",
+     "label": "1.7",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">1.7</span></div>\n  <div class=\"thm-body\"><p>Under the conditions of <a class=\"ref\" href=\"#XI.1.6\">1.6</a>, when we are given a \"point of F\" with values in a field k, i.e. an element x of \\(F(\\mathrm{Spec}(k))\\) or, what amounts to the same thing, a morphism \\(\\mathrm{Spec}(k) \\to F\\), we likewise say that f is formally smooth (resp. formally unramified, resp. formally étale) at x if the condition of the preceding definition is satisfied whenever \\(S'\\) is a local scheme and the morphism \\(S'_0 \\to F\\) in the diagram (Q) above is \"compatible with the marked points\" in the following sense: if \\(k'\\) denotes the residue field of \\(S'\\) and \\(S'_0\\) at their closed point, the diagram\n  \\[\n  \\xymatrix{\n  \\mathrm{Spec}(k') \\ar[d]_-{j} &amp; \\mathrm{Spec}(k) \\ar[d]^-{x} \\\\\n  S'_0 \\ar[r]_-{u_0} &amp; F\n  }\n  \\]\n  (where \\(j : \\mathrm{Spec}(k') \\to S'_0\\) denotes the canonical immersion) can be completed to a commutative diagram\n  \\[\n  \\xymatrix{\n  &amp; \\mathrm{Spec}(k'') \\ar[dl] \\ar[dr] &amp; \\\\\n  \\mathrm{Spec}(k') \\ar[d] &amp; &amp; \\mathrm{Spec}(k) \\ar[d] \\\\\n  S'_0 \\ar[rr] &amp; &amp; F\n  }\n  \\]\n  where \\(k''\\) is the spectrum of a field. When F, G are representable by S-preschemes X, Y and the S-morphism \\(f : X \\to Y\\) is locally of finite presentation, this condition means precisely (by virtue of <a class=\"ref\" href=\"#XI.1.5\">1.5</a>) that \\(f : X \\to Y\\) is smooth at the point of X which is the image of \\(\\mathrm{Spec}(k)\\) under \\(x : \\mathrm{Spec}(k) \\to X\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.1.8",
+     "type": "remarque",
+     "label": "1.8",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">1.8</span></div>\n  <div class=\"thm-body\"><p>When the condition of the preceding definition is satisfied on restricting to artinian local \\(S'\\), we shall say that \\(F \\to G\\) is infinitesimally smooth (resp. infinitesimally unramified, resp. infinitesimally étale) at x, and we say that \\(F \\to G\\) is infinitesimally smooth (resp. …) if it is so at every point x, in other words if the condition considered in <a class=\"ref\" href=\"#XI.1.6\">1.6</a> is satisfied whenever \\(S'\\) is artinian local. This variant of the preceding notions is technically useful, for it is often more convenient to verify, being a weaker notion, while frequently being sufficient (for example if \\(F \\to G\\) is a morphism locally of finite presentation, with G representable by a locally noetherian prescheme…) to imply the strong condition.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Smooth morphisms of preschemes behave in a remarkably simple way with respect to differential calculus. We confine ourselves here to recalling the following property:</p>"
+    },
+    {
+     "id": "XI.1.9",
+     "type": "proposition",
+     "label": "1.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.9</span></div>\n  <div class=\"thm-body\"><p>Let \\(f : X \\to S\\) be a smooth morphism of preschemes. Then \\(\\Omega^1_{X/S}\\) is a locally free module of finite type over X, and its rank at a point \\(x \\in X\\) is equal to the dimension of the fiber \\(X_s\\) (where \\(s = f(x)\\)) in a neighborhood of the point x.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This dimension is called the <em>relative dimension</em> of X over S at x. Note that it is zero (when f is smooth at x) if and only if f is étale at x. This dimension can in practice again be computed in terms of the functor F represented by X, in the following way. Let \\(\\xi\\) be a point of F with values in a field k, \"localized at x\", i.e. a morphism \\(\\mathrm{Spec}(k) \\to F = X\\) whose image is x. Consider the algebra \\(D(k) = k[t]/(t^2)\\) of dual numbers over k, regarded as an S-prescheme, and consider the map\n\\[\nF(D(k)) \\longrightarrow F(k)\n\\]\ndeduced from the augmentation \\(D(k) \\to k\\); finally let \\(F(D(k), \\xi)\\) be the inverse image of \\(\\xi \\in F(k)\\) under this map. Then this set is naturally endowed with a structure of a vector space over k (in fact, it is the vector space dual to \\(\\Omega^1_{X/S} \\otimes_{\\mathscr{O}_{X,x}} k\\)), whose dimension is the relative dimension of X over S at x.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To make explicit the vector space law on \\(F(D(k), \\xi)\\), it is worthwhile to introduce more generally, as in exposé II, for every vector space V over k, the algebra \\(D_k(V) = k + V\\) (V an ideal of square zero), and to consider \\(F(D_k(V), \\xi)\\), the inverse image of \\(\\xi\\) under \\(F(D_k(V)) \\to F(k)\\), as a covariant functor in V with values in (<strong>Ens</strong>). It then suffices that this functor commute with the product of two factors (which means that F transforms certain amalgamated sums of a very particular type into fibered products, compare exposé II — a condition always satisfied if F is representable) to conclude that the \\(F(D_k(V), \\xi)\\), and in particular \\(F(D(k), \\xi)\\), are endowed with vector space structures over k. One can thus define the relative dimension of F over X at the \"point\" \\(\\xi\\), under conditions appreciably wider than the representability of F.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the present exposé, the fact that certain functors which we shall describe explicitly are representable by preschemes smooth over S will serve us mainly through the following result, which will be for us the technical intermediary for passing from constructions over the <em>completion</em> of the local ring A of a point s of a noetherian scheme S, to a local ring \\(A'\\) over A that is <em>étale over</em> A, which will in particular give a means of passing from s to nearby points:</p>"
+    },
+    {
+     "id": "XI.1.10",
+     "type": "proposition",
+     "label": "1.10",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.10</span></div>\n  <div class=\"thm-body\"><p>Let \\(f : X \\to S\\) be a smooth morphism of preschemes, s a point of S, and x a point of X above s such that \\(\\kappa(x)\\) is a finite separable extension of \\(\\kappa(s)\\). Then there exists a subscheme \\(S'\\) of S, étale over S, passing through x. Hence one can find an étale morphism \\(S' \\to S\\), a point \\(s'\\) of \\(S'\\) above s with residue extension equal to \\(\\kappa(x)/\\kappa(s)\\), and an S-morphism \\(S' \\to X\\) sending \\(s'\\) to x.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To construct \\(S'\\), one simply takes a system \\(g_1, \\ldots, g_n\\) of sections of \\(\\mathscr{O}_X\\) over a neighborhood of x which induce at x a regular system of parameters of the local ring of the fiber \\(X_s\\) at x; the subscheme \\(S'\\) defined by the \\(g_i\\) is then étale over S at x, and provided \\(S'\\) is shrunk, it will thus be étale over S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall use <a class=\"ref\" href=\"#XI.1.10\">1.10</a> when \\(\\kappa(x) = \\kappa(s)\\), i.e. x is rational over \\(\\kappa(s)\\), i.e. x can be regarded as a section of \\(X_s\\) over \\(\\mathrm{Spec}(\\kappa(s))\\). Then 1.10 is in the nature of a theorem on extension of sections (after étale extension of the base). It takes a particularly simple form in the following special case:</p>"
+    },
+    {
+     "id": "XI.1.11",
+     "type": "corollaire",
+     "label": "1.11",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.1.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.11</span></div>\n  <div class=\"thm-body\"><p>Under the conditions of <a class=\"ref\" href=\"#XI.1.10\">1.10</a>, suppose that S is the spectrum of a henselian local ring, and that \\(\\kappa(x) = \\kappa(s)\\). Then there exists a section of X over S passing through x (uniquely determined if X is moreover étale over S at x).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, S being henselian, it follows under the conditions of 1.10 that \\(S'\\) contains an open subscheme which is finite over S and whose fiber at s is reduced to x. As it is étale over S, it follows that it is isomorphic to S, whence the conclusion. — Note that when S is the spectrum of a <em>complete</em> local ring, 1.10 or 1.11 is more or less the equivalent of the classical \"<em>Hensel's lemma</em>\", and it is sometimes referred to by that name.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn1",
+     "number": "1",
+     "html": "One would now rather say \"net\" instead of \"non ramifié\" (unramified)."
+    },
+    {
+     "id": "XI-fn2",
+     "number": "2",
+     "html": "N.D.E.: \"residue extension\" has been replaced by \"residue field\"."
+    }
+   ]
+  },
+  {
+   "id": "XI-2",
+   "title": "2. Examples of formally smooth functors drawn from the theory of groups of multiplicative type",
+   "blocks": [
+    {
+     "id": "XI.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.2\">2. Examples of formally smooth functors drawn from the theory of groups of multiplicative type</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We are going to interpret, in the language introduced in the preceding N<sup>o</sup>, the results stated in <a class=\"ref\" href=\"#IX.3\">IX 3</a> concerning infinitesimal extensions of a homomorphism of a group of multiplicative type (consequences of the vanishing of the Hochschild cohomology of such a group, established in Exposé I).</p>"
+    },
+    {
+     "id": "XI.2.1",
+     "type": "proposition",
+     "label": "2.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, H a group of multiplicative type over S, G an S-group prescheme smooth over S, and consider the functor over S\n  \\[\n  M_H = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\n  \\]\n  (whose value at \\(S'\\) over S is the set of homomorphisms of \\(S'\\)-groups from \\(H_{S'}\\) to \\(G_{S'}\\)). This functor is formally smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cf. <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a>. More generally:</p>"
+    },
+    {
+     "id": "XI.2.2",
+     "type": "corollaire",
+     "label": "2.2",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Let S, G be as above, and consider a homomorphism \\(u : H_1 \\to H_2\\) of group schemes of multiplicative type over S, whence with the preceding notations a morphism of functors over S:\n  \\[\n  M_{H_2} \\longrightarrow M_{H_1} \\quad (M_{H_i} = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H_i, G)),\n  \\]\n  given by \\(w \\mapsto w \\circ u\\). This homomorphism is formally smooth.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, by virtue of the definitions <a class=\"ref\" href=\"#XI.1.6\">1.6</a>, this is equivalent to the following statement: when S is affine and \\(S_0\\) is a subscheme defined by a nilpotent ideal, let\n\\[\nv : H_1 \\longrightarrow G\n\\]\nbe a homomorphism of S-groups, and\n\\[\nw_0 : (H_2)_{S_0} \\longrightarrow G_{S_0}\n\\]\na homomorphism of \\(S_0\\)-groups such that \\(w_0 u_{S_0} = v_{S_0}\\); then there exists a homomorphism of S-groups\n\\[\nw : H_2 \\longrightarrow G\n\\]\nextending \\(w_0\\) and such that \\(wu = v\\). To see this, one begins by extending \\(w_0\\) to a homomorphism of S-groups \\(w' : H_2 \\to G\\), which is possible by <a class=\"ref\" href=\"#XI.2.1\">2.1</a>; then consider \\(v' = w'u : H_1 \\to G\\); it satisfies \\(v'_{S_0} = v_{S_0}\\) by the hypothesis on \\(w_0\\), hence by virtue of <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> there exists an element g of \\(G(S)\\), whose image in \\(G(S_0)\\) is the unit element, such that \\(v = \\mathrm{int}(g)v'\\), whence \\(v = (\\mathrm{int}(g)w')u\\), and it therefore suffices to take \\(w = \\mathrm{int}(g)w'\\).</p>"
+    },
+    {
+     "id": "XI.2.3",
+     "type": "corollaire",
+     "label": "2.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>With the notations of <a class=\"ref\" href=\"#XI.2.1\">2.1</a>, consider \\(M_H = M\\) as a functor with group of operators G (G acting by \\((v, g) \\mapsto \\mathrm{int}(g) \\circ v\\)). Then the corresponding morphism\n  \\[\n  R : G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M\n  \\]\n  defined by \\((g, v) \\mapsto (\\mathrm{int}(g) \\circ v, v)\\) is a formally smooth morphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By means of a base change \\(S' \\to S\\), this is equivalent to the following statement:</p>"
+    },
+    {
+     "id": "XI.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>With the notations of <a class=\"ref\" href=\"#XI.2.1\">2.1</a>, let \\(v_1, v_2 : H \\to G\\) be two morphisms of S-groups, and let \\(\\underline{\\mathrm{Transp}}(v_1, v_2)\\) be the subfunctor of G formed by the g such that \\(\\mathrm{int}(g)v_1 = v_2\\). Then this functor is formally smooth over S. In particular (if \\(v_1 = v_2 = v\\)) the functor \\(\\underline{\\mathrm{Centr}}(v)\\), the subgroup of G formed by the h such that \\(\\mathrm{int}(h)v = v\\), is formally smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(N.B. the pair \\((v_1, v_2)\\) can be regarded as a section over S of the target in the morphism R of <a class=\"ref\" href=\"#XI.2.3\">2.3</a>, and \\(\\underline{\\mathrm{Transp}}(v_1, v_2)\\) as the functor inverse image of the said section under R). The statement <a class=\"ref\" href=\"#XI.2.4\">2.4</a> itself is equivalent to the following: when S is affine and \\(S_0\\) is a subscheme of S defined by a nilpotent ideal, for every \\(g_0 \\in G(S_0)\\) such that \\(\\mathrm{int}(g_0)(v_1)_{S_0} = (v_2)_{S_0}\\), \\(g_0\\) extends to a \\(g \\in G(S)\\) such that \\(\\mathrm{int}(g)v_1 = v_2\\). To prove it, one begins by extending \\(g_0\\) to a section \\(g'\\) of G over S, which is possible since G is smooth over S; one sets \\(v'_2 = \\mathrm{int}(g')v_1\\); one notes that \\(v_2\\) and \\(v'_2\\) have the same restriction over \\(S_0\\), hence by the result already invoked, <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a>, there exists a \\(g'' \\in G(S)\\), inducing the unit section over \\(S_0\\), such that \\(v_2 = \\mathrm{int}(g'')v'_2 = \\mathrm{int}(g'')\\mathrm{int}(g')v_1 = \\mathrm{int}(g''g')v_1\\); it therefore suffices to take \\(g = g''g'\\).</p>"
+    },
+    {
+     "id": "XI.2.1bis",
+     "type": "proposition",
+     "label": "2.1 bis",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.2.1bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1 bis</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, G an S-group prescheme smooth over S, and consider the functor \\(M : (\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\):\n  \\[\n  M(S') = \\text{ set of subgroups of multiplicative type of } G_{S'}.\n  \\]\n  Then M is formally smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cf. <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a>.</p>"
+    },
+    {
+     "id": "XI.2.2bis",
+     "type": "corollaire",
+     "label": "2.2 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.2bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.2 bis</span></div>\n  <div class=\"thm-body\"><p>Let n be an integer, and consider the morphism of functors\n  \\[\n  \\varphi_n : M \\longrightarrow M\n  \\]\n  defined by\n  \\[\n  \\varphi_n(H) = {}_nH = \\mathrm{Ker}(n \\cdot \\mathrm{id}_H).\n  \\]\n  Then \\(\\varphi_n\\) is a formally smooth morphism. If for every integer \\(p &gt; 0\\), \\(M_p\\) denotes the subfunctor of M such that \\(M_p(S')\\) is the set of subgroups of multiplicative type H of \\(G_{S'}\\) such that \\({}_pH = H\\), then the morphism induced by \\(\\varphi_n\\):\n  \\[\n  M_{np} \\longrightarrow M_n\n  \\]\n  is formally smooth.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The second assertion is trivially contained in the first and is included only for the convenience of a later reference. The proof of the first is analogous to that of <a class=\"ref\" href=\"#XI.2.2\">2.2</a>, this time invoking <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a>.</p>"
+    },
+    {
+     "id": "XI.2.3bis",
+     "type": "corollaire",
+     "label": "2.3 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.3 bis</span></div>\n  <div class=\"thm-body\"><p>With the notations of <a class=\"ref\" href=\"#XI.2.1bis\">2.1 bis</a>, consider M as a functor with group of operators G (G acting by \\((g, H) \\mapsto \\mathrm{int}(g)(H)\\)). Then the corresponding morphism\n  \\[\n  R : G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M\n  \\]\n  defined by \\((g, v) \\mapsto (\\mathrm{int}(g)v, v)\\) is formally smooth.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This is equivalent to the following statement:</p>"
+    },
+    {
+     "id": "XI.2.4bis",
+     "type": "corollaire",
+     "label": "2.4 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.4 bis</span></div>\n  <div class=\"thm-body\"><p>With the notations of <a class=\"ref\" href=\"#XI.2.1bis\">2.1 bis</a>, let \\(H_1, H_2\\) be two subgroups of multiplicative type of G, and let \\(\\underline{\\mathrm{Transp}}_G(H_1, H_2)\\) be the subfunctor of G formed by the g such that \\(\\mathrm{int}(g)H_1 = H_2\\). Then this functor is formally smooth over S. In particular, if \\(H_1 = H_2 = H\\), the subfunctor \\(\\underline{\\mathrm{Norm}}_G(H)\\) of G, the normalizer of H, is formally smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof is analogous to that of <a class=\"ref\" href=\"#XI.2.4\">2.4</a>, again invoking <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a>.</p>"
+    },
+    {
+     "id": "XI.2.5",
+     "type": "proposition",
+     "label": "2.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, G an S-group prescheme smooth over S, K a sub-S-group prescheme, smooth over S or of multiplicative type, H an S-group prescheme of multiplicative type, \\(u : H \\to G\\) a homomorphism of S-groups, and denote by \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) the subfunctor of G whose value, at an \\(S'\\) over S, is formed by the \\(g \\in G(S')\\) such that \\(\\mathrm{int}(g)u_{S'} : H_{S'} \\to G_{S'}\\) factors through \\(K_{S'}\\). Then this functor is formally smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof is analogous to that of <a class=\"ref\" href=\"#XI.2.2\">2.2</a>, invoking <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> and <a class=\"ref\" href=\"#X.2.1\">X 2.1</a> (the latter in the case where K is of multiplicative type).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XI-3",
+   "title": "3. Auxiliary representability results",
+   "blocks": [
+    {
+     "id": "XI.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.3\">3. Auxiliary representability results</h2>"
+    },
+    {
+     "id": "XI.3.1",
+     "type": "proposition",
+     "label": "3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(F \\to S\\) be a functor over the prescheme S. The following conditions are equivalent:</p>\n  <p>(i) F is representable, and \\(F \\to S\\) is an open immersion (one also says simply that \\(F \\to S\\) is an open immersion).</p>\n  <p>(ii) F is a sheaf for the faithfully flat quasi-compact topology, \"commutes with inductive limits of rings\", \\(F \\to S\\) is a monomorphism, and finally the following condition is satisfied: for every local prescheme \\(S'\\) over S, with residue field k, and every S-morphism \\(\\mathrm{Spec}(k) = S'_0 \\to F\\), there exists an S-morphism \\(S' \\to F\\) extending it.</p>\n  <p>(iii) (When S is locally noetherian). F is a sheaf for the faithfully flat quasi-compact topology, \"commutes with inductive limits of rings\", \"commutes with adic projective limits of artinian local rings\", \\(F \\to S\\) is a monomorphism, and is infinitesimally étale (cf. <a class=\"ref\" href=\"#XI.1.8\">1.8</a>).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first make two points of terminology precise.</p>"
+    },
+    {
+     "id": "XI.3.2",
+     "type": "remarque",
+     "label": "3.2",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>We say that a functor <sup class=\"footnote-ref\"><a id=\"XI-fn3ref\" href=\"#XI-fn3\">3</a></sup> F over S \"commutes with inductive limits (implicitly: filtered) of rings\" if for every filtered projective system \\((S'_i)_{i \\in I}\\) of affine S-schemes over an affine open subset of S, with rings \\(A'_i\\), the natural homomorphism\n  \\[\n  (\\ast) \\qquad \\varinjlim_i F(S'_i) \\to F(S') \\quad (\\text{where } S' = \\mathrm{Spec}\\,A', \\ A' = \\varinjlim_i A'_i)\n  \\]\n  is bijective. Note that \\(S'\\) is none other than the projective limit of \\((S'_i)\\) in the category of preschemes (and even of all ringed spaces), so the condition under consideration is in the nature of a <em>right exactness</em> condition (commutation with certain inductive limits in \\((\\mathbf{Sch})^{\\circ}_{/S}\\)), just like the condition of being a sheaf for some topology. Beware that the condition under consideration is essentially <em>relative</em>, i.e. it involves the morphism \\(F \\to S\\) and not only the functor \\(F : (\\mathbf{Sch})^{\\circ} \\to (\\mathbf{Ens})\\); precisely, in \\((\\ast)\\), \\(F(S'_i)\\) and \\(F(S')\\) denote \\(\\mathrm{Hom}_S(S'_i, F)\\), \\(\\mathrm{Hom}_S(S', F)\\). Thus, when F is representable, the condition under consideration means that F is locally of finite presentation over S. (And we have made use several times, in the last two exposés, of the fact that a functor represented by an S-prescheme locally of finite presentation commutes with inductive limits of rings).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.3",
+     "type": "remarque",
+     "label": "3.3",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>We say that a functor <sup class=\"footnote-ref\"><a id=\"XI-fn3ref\" href=\"#XI-fn3\">3</a></sup> F over S <em>commutes with adic projective limits of artinian local rings</em> if for every \\(S'\\) over S which is the spectrum of a complete noetherian local ring \\(A'\\), setting \\(S'_n = \\mathrm{Spec}(A'/\\mathrm{rad}(A')^{n+1})\\), the natural map\n  \\[\n  (\\mathrm{xx}) \\qquad F(S') \\longrightarrow \\varprojlim_n F(S'_n)\n  \\]\n  is bijective. Note that this condition, which is in the nature of a left exactness condition, is <em>satisfied whenever F is representable</em>. One sees easily that, contrary to the condition of commutation with inductive limits of rings, it is intrinsic to F as an element of \\(\\mathrm{Ob}(\\widehat{\\mathbf{Sch}})\\), i.e. it does not involve the morphism \\(F \\to S\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.4",
+     "type": "remarque",
+     "label": "3.4",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Let F be a functor over S which is a sheaf for the Zariski topology, or as one also says, which is \"of local nature\". (For this it suffices that F be a sheaf for a finer topology, such as the faithfully flat quasi-compact topology). Let \\((S_i)\\) be a covering of S by open subsets; then one verifies easily (by a method of gluing pieces) that F is representable if and only if the \\(F_i = F \\times_S S_i\\) are, which allows one for example to reduce to the case where S is affine. Suppose that the functor F of local nature commutes with inductive limits of rings. Then, for F to be representable, it is necessary and sufficient that its restriction to the category of preschemes locally of finite presentation over S be representable. The \"necessary\" part was pointed out in <a class=\"ref\" href=\"#XI.3.2\">3.2</a>; the \"sufficient\" part comes down to this: if X is a prescheme locally of finite presentation over S and \\(X \\to F\\) a morphism such that, for every \\(S'\\) locally of finite presentation over S, the induced morphism\n  \\[\n  \\mathrm{Hom}_S(S', X) \\longrightarrow \\mathrm{Hom}_S(S', F)\n  \\]\n  is bijective, then \\(X \\to F\\) is an isomorphism. Now this follows easily from the fact that X and F are two functors of local nature which commute with inductive limits of rings.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now prove <a class=\"ref\" href=\"#XI.3.1\">3.1</a>. The implications (i) ⇒ (ii) and (i) ⇒ (iii) are obvious; let us prove the converse implications.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have (ii) ⇒ (i). Indeed, let U be the set of \\(s \\in S\\) such that the canonical monomorphism \\(\\mathrm{Spec}(\\kappa(s)) \\to S\\) factors through F. By virtue of the last condition of (ii), for every \\(s \\in U\\), the canonical monomorphism \\(\\mathrm{Spec}(\\mathscr{O}_{S,s}) \\to S\\) factors through F. Noting that \\(\\mathscr{O}_{S,s}\\) is the inductive limit of the rings of the affine neighborhoods of s, it follows from the fact that F commutes with inductive limits of rings that for every \\(s \\in S\\), there exists an open neighborhood \\(U^s\\) such that the canonical immersion \\(U^s \\to S\\) factors through F. This implies \\(U^s \\subset U\\), hence U <em>is open</em>. As \\(F \\to S\\) is a monomorphism, and F of local nature, the S-morphisms \\(U^s \\to F\\) glue together in the \\(U^s \\cap U^{s'}\\) \\((s, s' \\in U)\\), hence come from an S-morphism \\(U \\to F\\). It remains to prove that it is an isomorphism, hence that every S-morphism \\(S' \\to F\\) factors uniquely through U (where \\(S'\\) is an S-prescheme). As \\(F \\to S\\) and \\(U \\to S\\) are monomorphisms, it amounts to the same to say that the structural morphism \\(S' \\to S\\) factors through U, which reduces us to the case where \\(S'\\) is the spectrum of a field, hence reduced to a single point \\(s'\\). Let s be the point of S below \\(s'\\); I claim that the S-morphism \\(S' \\to F\\) factors through \\(\\mathrm{Spec}(\\kappa(s)) = S_0 \\to F\\) (which implies \\(s \\in U\\) and will prove what we want). Since \\(S' \\to S_0\\) is covering for fpqc and F is a sheaf for this topology, it amounts to the same that the two composites\n\\[\nS'' = S' \\underset{S_0}{\\times} S' \\rightrightarrows S' \\to F\n\\]\nare the same, which follows from the fact that \\(F \\to S\\) is a monomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have (iii) ⇒ (ii) (when S is locally noetherian). It suffices to prove the last condition of (ii), and moreover (by virtue of the preceding proof) it suffices to do so when \\(S'\\) is of the form \\(\\mathrm{Spec}(\\mathscr{O}_{S,s})\\), with \\(s \\in S\\). Let \\(A = \\mathscr{O}_{S,s}\\), \\(A_n = A/\\mathfrak{m}^{n+1}\\), \\(S_n = \\mathrm{Spec}(A_n)\\); then it follows from the hypothesis that \\(F \\to S\\) is infinitesimally smooth that the given morphism \\(S_0 \\to F\\) extends to morphisms \\(S_n \\to F\\). As \\(F \\to S\\) is a monomorphism, we thus obtain an element of \\(\\varprojlim_n F(S_n)\\), and as F commutes with adic projective limits of artinian local rings, the \\(S_n \\to F\\) come from a morphism \\(\\mathrm{Spec}(\\widehat{A}) = \\widehat{S}' \\to F\\). As \\(F \\to S\\) is a monomorphism, F a sheaf for fpqc, and \\(\\widehat{S}' \\to S'\\) covering for the said topology, this morphism \\(\\widehat{S}' \\to F\\) factors through \\(S' \\to F\\), which completes the proof.</p>"
+    },
+    {
+     "id": "XI.3.5",
+     "type": "proposition",
+     "label": "3.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Let S be a locally noetherian prescheme, \\(F \\to S\\) a functor over S, and \\((X_i, u_i)_{i \\in I}\\) a family of S-morphisms \\(u_i : X_i \\to F\\), where the \\(X_i\\) are preschemes locally of finite type over S. We suppose the following conditions satisfied:</p>\n  <p>a) F is a sheaf for the faithfully flat quasi-compact topology, commutes with inductive limits of rings, and commutes with adic projective limits of artinian local rings.</p>\n  <p>b) The \\(u_i : X_i \\to F\\) are monomorphisms, and are infinitesimally étale (cf. <a class=\"ref\" href=\"#XI.1.8\">1.8</a>).</p>\n  <p>c) The family of the \\(u_i\\) is \"set-theoretically surjective\".</p>\n  <p>Under these conditions, F is representable by a prescheme locally of finite type over S (and the \\(u_i\\) are open immersions, which make the family of the \\(X_i\\) an open covering of F).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.6",
+     "type": "remarque",
+     "label": "3.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>Proceeding as at the end of remark <a class=\"ref\" href=\"#XI.1.7\">1.7</a>, one defines, for every functor \\(F : (\\mathbf{Sch})^{\\circ} \\to (\\mathbf{Ens})\\), an \"underlying set\" \\(\\mathrm{ens}(F)\\) as a quotient set of the set of points of F with values in fields (for the equivalence relation made precise in 1.7). When F is representable by X, one indeed recovers the set underlying X. Evidently \\(\\mathrm{ens}(F)\\) depends functorially on F, so if \\(G \\to F\\) is a morphism of functors, we may say that this morphism is set-theoretically surjective if the induced map \\(\\mathrm{ens}(G) \\to \\mathrm{ens}(F)\\) is surjective. This therefore also means that every point of F with values in a field k \"comes from\" a point of G with values in a suitable extension of k. This definition extends immediately to the case of a family of morphisms \\(G_i \\to F\\), which makes precise the meaning of c).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove <a class=\"ref\" href=\"#XI.3.5\">3.5</a>. For this, introduce for \\((i, j) \\in I \\times I\\)\n\\[\nX_{i,j} = X_i \\underset{F}{\\times} X_j,\n\\]\nand consider the projections\n\\[\nv_{i,j} : X_{i,j} \\longrightarrow X_i \\quad \\text{and} \\quad w_{i,j} : X_{i,j} \\longrightarrow X_j.\n\\]\nI claim that the latter are <em>representable by open immersions</em>. To see this, one applies the criterion <a class=\"ref\" href=\"#XI.3.1\">3.1</a> (iii): \\(X_{i,j}\\) satisfies the three exactness conditions (being a sheaf, commuting with \\(\\varinjlim\\) of rings and with adic \\(\\varprojlim\\) of artinian local rings), for F, \\(X_i\\), \\(X_j\\) satisfy them, and these conditions are stable under finite projective limits, in particular under fibered products; as \\(X_i \\to F\\) is a monomorphism, so is \\(v_{i,j} : X_{i,j} \\to X_i\\), which is deduced from it by the base change \\(X_j \\to F\\), and symmetrically \\(v_{j,i}\\) is a monomorphism; finally the condition \"infinitesimally étale\" is likewise preserved under base change. This proves that we are under the conditions of 3.1 (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We can now use the \\(X_i\\), \\(X_{i,j}\\), \\(v_{i,j}\\) and \\(w_{i,j}\\) to construct in the usual way an S-prescheme X, such that the \\(X_i\\) are identified with open subsets of X, the \\(X_{i,j}\\) with the intersections \\(X_i \\cap X_j\\), and the \\(v_{i,j}\\), \\(w_{i,j}\\) with the canonical immersions. Note that X is also the quotient of\n\\[\n\\mathbf{X} = \\coprod_i X_i\n\\]\nby the equivalence relation \\(R = \\coprod_{i,j} X_{i,j}\\) (the two projections \\(v, w : R \\rightrightarrows \\mathbf{X}\\) being defined by the \\(v_{i,j}\\) resp. the \\(w_{i,j}\\)). Precisely, F being a sheaf for fpqc, the \\(u_i : X_i \\to F\\) come from a \\(\\mathbf{u} : \\mathbf{X} \\to F\\), and R is none other than the equivalence relation defined by \\(\\mathbf{u}\\), \\(R = \\mathbf{X} \\times_F \\mathbf{X}\\); finally the quotient \\(X = \\mathbf{X}/R\\) is also a quotient in the category of sheaves for fpqc (and even in the category of sheaves for the Zariski topology: it suffices to use the definitions of \"quotient\" and \"sheaf\" to convince oneself of this). Consequently, \\(\\mathbf{u}\\) factors uniquely through a morphism\n\\[\nu : X \\longrightarrow F,\n\\]\nand this morphism is a <em>monomorphism</em>. It remains to show that it is an isomorphism. As F is of local nature, we may suppose S affine, and as moreover F commutes with inductive limits of rings, it suffices to verify that for every T affine of finite type over S, every morphism \\(T \\to F\\) factors through X (cf. <a class=\"ref\" href=\"#XI.3.4\">3.4</a>). For this, consider \\(G = X \\times_F T \\to T\\); it suffices to prove that it is an isomorphism. Now, T being noetherian, one sees as above that it is an open immersion (N.B. \\(X \\to F\\) is infinitesimally étale, as follows at once from the fact that the induced morphisms \\(u_i : X_i \\to F\\) are). Now by hypothesis \\(X \\to F\\) is set-theoretically surjective, and one sees immediately that this is a condition stable under base change, hence \\(G \\to T\\) is set-theoretically surjective, hence an isomorphism since it is an open immersion. Q.E.D.</p>"
+    },
+    {
+     "id": "XI.3.7",
+     "type": "proposition",
+     "label": "3.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>Let S be a locally noetherian prescheme, I a filtered increasing index set, \\((T_i)_{i \\in I}\\) a projective system of S-preschemes locally of finite type, \\(T = \\varprojlim T_i\\) the projective limit functor, F a functor over S, and \\(u : F \\to T\\) an S-morphism. We suppose the following conditions satisfied:</p>\n  <p>a) F is a sheaf for the faithfully flat quasi-compact topology, commutes with inductive limits of rings, and with adic projective limits of artinian local rings.</p>\n  <p>b) The morphism \\(u : F \\to T\\) is a monomorphism.</p>\n  <p>b') The morphism \\(u : F \\to T\\) is infinitesimally étale.</p>\n  <p>c) For every point \\(\\xi\\) of F with values in the spectrum of a field k, denoting by \\(\\xi_i \\in T_i(\\mathrm{Spec}(k))\\) its image and by \\(t_i\\) the corresponding element of \\(T_i\\), there exists an \\(i \\in I\\) such that for \\(j \\geqslant i\\) the transition morphism \\(p_{i,j} : T_j \\to T_i\\) is étale at \\(t_j\\).</p>\n  <p>d) For every prescheme X locally of finite type over S, and every S-morphism \\(X \\to F\\), the set of \\(x \\in X\\) at which this morphism is infinitesimally étale is open.</p>\n  <p>Under these conditions, F is representable by a prescheme locally of finite type over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us note right away that in the case that will occupy us in the following N<sup>o</sup>, conditions c) and d) will be verified by means of the following corollary:</p>"
+    },
+    {
+     "id": "XI.3.8",
+     "type": "corollaire",
+     "label": "3.8",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p>Granting a), b), b'), conditions c) and d) are implied by the following ones:</p>\n  <p>c') The \\(T_i\\) are smooth over S, and the transition morphisms \\(p_{i,j} : T_j \\to T_i\\) are smooth.</p>\n  <p>d') For every point \\(\\xi\\) of F with values in the spectrum of a field k, let \\(t_i(\\xi)\\) be the element of \\(T_i\\) defined by \\(\\xi\\), \\(d_i(\\xi)\\) the relative dimension of \\(T_i\\) over S at \\(t_i(\\xi)\\), and \\(d(\\xi) = \\mathrm{Sup}\\, d_i(\\xi)\\). Then:</p>\n  <p>1°) for every \\(\\xi\\) as above, we have \\(d(\\xi) &lt; +\\infty\\), and</p>\n  <p>2°) for every prescheme X locally of finite type over S, and every S-monomorphism \\(v : X \\to F\\), the function \\(x \\mapsto d(\\xi_x)\\) on X is locally constant (where for \\(x \\in X\\), we denote by \\(\\xi_x\\) the point of F with values in \\(\\kappa(x)\\) induced by v).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove <a class=\"ref\" href=\"#XI.3.7\">3.7</a>. Place ourselves under the conditions of c), let t be the element of \\(\\mathrm{ens}(F)\\) defined by \\(\\xi\\) (cf. <a class=\"ref\" href=\"#XI.3.6\">3.6</a>) and set\n\\[\n\\mathscr{O}_t = \\varinjlim_i \\mathscr{O}_{T_i, t_i}.\n\\]\nThen using the condition stated in c), one sees easily that \\(\\mathscr{O}_t\\) is a <em>noetherian</em> local ring (EGA <span style=\"white-space:nowrap\">0<sub>IV</sub></span> 10.3.1.3). Its residue field \\(\\kappa(t)\\) is the inductive limit of the residue fields \\(\\kappa(t_i)\\), and k is an extension of it. If \\(\\eta\\) denotes the spectrum of \\(\\kappa(t)\\), \\(\\xi\\) that of k, we have a commutative diagram\n\\[\n\\xymatrix{\n\\xi \\ar[r] \\ar[d] &amp; F \\ar[d] \\\\\n\\eta \\ar[r] &amp; T\n}\n\\]\nwhose definition is obvious and left to the reader. As \\(\\xi \\to \\eta\\) is covering for the fpqc topology, F is a sheaf for the said topology by virtue of a), and \\(F \\to T\\) a monomorphism by virtue of b), one sees at once that the morphism \\(\\eta \\to T\\) factors (in a unique way) through a morphism \\(\\eta \\to F\\). Let us now note the</p>"
+    },
+    {
+     "id": "XI.3.9",
+     "type": "lemme",
+     "label": "3.9",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.3.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.9</span></div>\n  <div class=\"thm-body\"><p>Under the conditions of <a class=\"ref\" href=\"#XI.3.7\">3.7</a>, let \\(T' = \\mathrm{Spec}(A)\\) be a noetherian local scheme, \\(T'_0 = \\mathrm{Spec}(k(A))\\), \\(i : T'_0 \\to T'\\) the canonical immersion, and suppose given a commutative square of morphisms\n  \\[\n  \\xymatrix{\n  T'_0 \\ar[r] \\ar[d]_-{i} &amp; F \\ar[d] \\\\\n  T' \\ar[r] &amp; T\n  }\n  \\]\n  Then there exists a unique T-morphism \\(T' \\to F\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof is that of 3.1 (iii) ⇒ (ii) (where the fact that the S of the cited statement is representable was not used), using the facts that F is a sheaf for the fpqc topology, commutes with adic projective limits of artinian local rings (in this case the \\(A/\\mathrm{rad}(A)^{n+1}\\)), and that \\(F \\to T\\) is a monomorphism and is infinitesimally étale.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall apply lemma 3.9 to the case where \\(T' = \\mathrm{Spec}(\\mathscr{O}_t)\\), hence \\(T'_0 = \\mathrm{Spec}(\\kappa(t))\\), noting that we have just constructed \\(T'_0 \\to F\\), and that the canonical homomorphisms \\(\\mathscr{O}_{T_i, t_i} \\to \\mathscr{O}_t\\) define a projective system of morphisms \\(\\mathrm{Spec}(\\mathscr{O}_t) \\to T_i\\), whence a canonical morphism \\(\\mathrm{Spec}(\\mathscr{O}_t) \\to T\\). The commutativity of the corresponding square \\((\\mathrm{x})\\) is trivial (for by definition of T, it suffices to verify it with T replaced by \\(T_i\\)), whence a unique T-morphism\n\\[\nv' : T' = \\mathrm{Spec}(\\mathscr{O}_t) \\longrightarrow F.\n\\]\nAs F commutes with inductive limits of rings, this morphism factors as\n\\[\nv'_i : T'_i = \\mathrm{Spec}(\\mathscr{O}_{T_i, t_i}) \\longrightarrow F\n\\]\nfor i large. For such an i, we have\n\\[\nT' \\xrightarrow{\\ \\sim\\ } T'_i \\quad \\text{i.e.} \\quad \\mathscr{O}_{T_i, t_i} \\xrightarrow{\\ \\sim\\ } \\mathscr{O}_t.\n\\]\nIndeed, as \\(T' \\to T'_i\\) is faithfully flat quasi-compact, hence an effective epimorphism, it suffices to see that it is a monomorphism. Now if we have two morphisms \\(R \\rightrightarrows T'\\) (with R representable) having the same composite with \\(T' \\to T'_i\\), they have the same composite with \\(T' \\to T\\) (which factors through \\(T' \\to T'_i\\)), hence the same composite with \\(T' \\to T_j\\) for every j, hence with \\(T' \\to T'_j\\) for every j, hence are equal since \\(T'\\) is the projective limit of the \\(T'_j\\) in the category \\((\\mathbf{Sch})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider the diagram\n\\[\n\\xymatrix{\nT' \\ar[r]^-{v'} \\ar[d] &amp; F \\ar[d] \\\\\nT'_i \\ar[r] \\ar[ur]^-{v'_i} &amp; T_i\n}\n\\]\nwhere the unspecified arrows are the obvious ones. The square is commutative and the upper triangle as well, hence as \\(T' \\to T'_i\\) is an epimorphism, it follows that the lower triangle is commutative. Now \\(\\mathscr{O}_{T_i, t_i}\\) is the inductive limit of the affine rings of the affine open neighborhoods of \\(t_i\\) in \\(T_i\\), hence as F commutes with inductive limits of rings, \\(v'_i\\) comes from a morphism\n\\[\nv_t : U_t \\longrightarrow F\n\\]\nof an open neighborhood \\(U_t\\) of \\(t_i\\) in \\(T_i\\). One sees at once that, after shrinking this neighborhood if necessary, \\(v_t\\) is necessarily a \\(T_i\\)-morphism (\\(T_i\\) being locally of finite type over S, hence likewise commuting with inductive limits of rings). Then the composite of \\(v_t\\) with \\(F \\to T_i\\) is a monomorphism, hence \\(v_t\\) is a <em>monomorphism</em>. I claim that it is <em>infinitesimally étale at \\(t_i\\)</em>. As \\(F \\to T\\) is infinitesimally étale, it amounts to the same to say that the composite \\(U_t \\to F \\to T\\) is infinitesimally étale at \\(t_i\\), or again that the induced morphism \\(T'_i \\to T\\) is infinitesimally étale, or finally (since \\(T' \\xrightarrow{\\ \\sim\\ } T'_i\\)) that \\(T' \\to T\\) is infinitesimally étale, which is immediate, this morphism being the projective limit of the infinitesimally étale morphisms \\(T'_i \\to T_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now apply condition d) (which had not yet been used); it follows that \\(v_t\\) is infinitesimally étale in a neighborhood of t, hence, after passing to a smaller open subset, we may suppose that \\(v_t\\) is an <em>infinitesimally étale monomorphism</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For variable \\(t \\in \\mathrm{ens}(F)\\), the family of morphisms \\(v_t\\) is amenable to <a class=\"ref\" href=\"#XI.3.5\">3.5</a>, which implies the conclusion of 3.7.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now prove <a class=\"ref\" href=\"#XI.3.8\">3.8</a>, supposing conditions c') and d') of 3.8 satisfied. Then with the notations of d'), we shall have \\(d_i(\\xi) = \\) constant for i large, hence the relative dimension of \\(T_j\\) over \\(T_i\\) at \\(t_j\\), equal to \\(d_j(\\xi) - d_i(\\xi)\\), is zero, hence \\(T_j \\to T_i\\) is étale at \\(t_j\\), which proves condition c). Consequently the preceding proof applies to give, for each \\(t \\in \\mathrm{ens}(F)\\), an index i, an open neighborhood \\(U_t\\) of \\(t_i\\) and a morphism \\(U_t \\to F\\) which is a monomorphism, infinitesimally étale at \\(t_i\\), and everything comes down to proving that this morphism is infinitesimally étale in a neighborhood of \\(t_i\\). Now with the notation of d') 2°), where we take \\(X = U_t\\), we may suppose, after replacing \\(U_t\\) by the connected component of \\(t_i\\) in \\(U_t\\), that for every \\(x \\in U_t\\), we have\n\\[\nd(\\xi_x) = d(\\xi_{t_i}) \\quad \\text{for every} \\quad x \\in U_t.\n\\]\nNow \\(d(\\xi_{t_i}) = \\) the relative dimension of \\(T_i\\) over S at \\(t_i\\), and as the relative dimension of \\(T_i\\) over S remains constant on \\(U_t\\), we shall also have, for every \\(x \\in U_t\\):\n\\[\n(\\ast) \\qquad d(\\xi_x) = \\text{relative dimension of } U_t \\text{ over S at } x.\n\\]\nOn the other hand, with the notations of the proof of 3.7, one sees at once that for every local noetherian prescheme \\(R' = \\mathrm{Spec}(A)\\), setting \\(R'_0 = \\mathrm{Spec}\\,k(A)\\), every morphism \\(R' \\to F\\) such that the induced morphism \\(R'_0 \\to F\\) factors through F (i.e. sending the closed point of \\(R'\\) to \\(t \\in \\mathrm{ens}(F)\\)) factors (in an evidently unique way) through \\(T'\\). (The proof is that of 3.1 and 3.9: one uses the facts that \\(T' \\to F\\) is a monomorphism which is infinitesimally étale <em>at t</em>, and that \\(T'\\) is a sheaf for fpqc commuting with adic \\(\\varprojlim\\)…). Applying this result to the morphism \\(\\mathrm{Spec}(\\mathscr{O}_{U_t, x}) = R' \\to F\\) induced by \\(v_t\\) and to the point \\(t_x \\in \\mathrm{ens}(F)\\) which is the image of the closed point of \\(R'\\), i.e. the image of x under \\(v_t\\), we find a factorization\n\\[\n\\mathrm{Spec}(\\mathscr{O}_{U_t, x}) \\longrightarrow \\mathrm{Spec}(\\mathscr{O}_{t_x}) \\longrightarrow F\n\\]\nand as the second arrow is infinitesimally étale at \\(t_x\\), to prove that the composite is so at x, it suffices to prove that the first is so at \\(t_x\\). Now thanks to the formula \\((\\mathrm{x})\\) above, it is a local S-homomorphism of the localizations, at two points \\(x, t_x\\), of smooth S-preschemes \\(U_t\\), \\(U_{t_x}\\) of the same relative dimension d over S at \\(t, t_x\\). This morphism is induced by an S-morphism\n\\[\nw : U \\longrightarrow V\n\\]\nwhere U is an open neighborhood of x in \\(U_t\\), and where \\(V = U_{t_x}\\) (EGA I 6.5.1). Everything comes down to proving that this morphism is étale at x. Moreover, U and V are equipped with monomorphisms \\(U \\to F\\), \\(V \\to F\\), and one sees at once that, after restricting U further, w is an F-morphism, hence w is a <em>monomorphism</em>. It now suffices to prove the</p>"
+    },
+    {
+     "id": "XI.3.10",
+     "type": "lemme",
+     "label": "3.10",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.3.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.10</span></div>\n  <div class=\"thm-body\"><p>Let U, V be two smooth S-preschemes, of the same relative dimension d over S, and \\(w : U \\to V\\) an S-morphism which is a monomorphism; then w is an open immersion (and a fortiori is étale).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By virtue of SGA I 5.7 we are reduced to the case where S is the spectrum of a field, which we may suppose algebraically closed. By virtue of SGA I 5.1 it suffices to prove that w is étale, and it suffices to prove it at the closed points of U. Let x be such a point, \\(y = w(x)\\); then taking a regular system of parameters \\(f_1, \\ldots, f_d\\) of \\(\\mathscr{O}_{V,y}\\), one sees that \\(A = \\mathscr{O}_{U,x}/\\sum f_i \\mathscr{O}_{U,x}\\) is the trivial extension of \\(k = \\mathscr{O}_{V,y}/\\sum f_i \\mathscr{O}_{V,y}\\) (for w being a monomorphism, the same is true of the structural morphism \\(\\mathrm{Spec}(A) \\to \\mathrm{Spec}(k)\\) deduced from it by base change). As \\(\\mathscr{O}_{U,x}\\) is a regular local ring of dimension d, it follows that the \\(f_i\\) form a regular system of parameters of this ring, which immediately implies that w is étale at x and completes the proof of 3.10, hence of 3.8.</p>"
+    },
+    {
+     "id": "XI.3.11",
+     "type": "corollaire",
+     "label": "3.11",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.3.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.11</span></div>\n  <div class=\"thm-body\"><p>Under the conditions of <a class=\"ref\" href=\"#XI.3.8\">3.8</a>, for every quasi-compact open subset U of F separated over S, there exists an \\(i \\in I\\) such that for every \\(j \\geqslant i\\) the morphism \\(u_j|U : U \\to T_j\\) is an open immersion. In particular, if the \\(T_i\\) are quasi-affine over S, then every open subset U of F quasi-compact over S, i.e. of finite type over S, is quasi-affine over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof of 3.7 shows that for every \\(t \\in F\\), there exists an \\(i \\in I\\) such that \\(u_i : F \\to T_i\\) is a local isomorphism at t, and then \\(u_j\\) is a local isomorphism at x for every \\(j \\geqslant i\\). For reasons of quasi-compactness, one can choose i independent of \\(x \\in U\\). It remains to prove that for i large, \\(u_i|_U : U \\to T_i\\) is a monomorphism. Now as \\(U \\to T\\) is a monomorphism, one sees that the intersection of the equivalence relations \\(U \\times_{T_i} U \\subset U \\times_S U\\) is reduced to the diagonal, and as \\(U \\times_S U\\) is a noetherian prescheme and the \\(U \\times_{T_i} U\\) are closed subpreschemes, it follows that one of these \\(U \\times_{T_i} U\\) is already reduced to the diagonal, i.e. \\(u_i|U\\) is a monomorphism. This proves the first assertion in 3.11, and the second is an immediate consequence of it.</p>"
+    },
+    {
+     "id": "XI.3.12",
+     "type": "proposition",
+     "label": "3.12",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.12</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, G an affine S-group prescheme.</p>\n  <p>a) Let F be the functor \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) such that, for every T over S,\n  \\[\n  F(T) = \\text{ set of subgroups of multiplicative type of } G_T \\text{ which are finite over T.}\n  \\]\n  Suppose S locally noetherian or G of finite presentation over S. Then the functor F is representable and is affine over S. If G is of finite presentation over S, then F is locally of finite presentation over S.</p>\n  <p>b) Let H be an S-group prescheme of multiplicative type, and finite over S. Then \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) is representable. It is affine over S, and if G is of finite type (resp. of finite presentation) over S, the same holds for \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.13",
+     "type": "remarque",
+     "label": "3.13",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">3.13</span></div>\n  <div class=\"thm-body\"><p>Except for the precision that \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}\\) is affine, and in the case where G is of finite presentation over S (which will suffice for us), <a class=\"ref\" href=\"#XI.3.12\">3.12</a> is an immediate consequence of the theory of Hilbert Schemes (A. Grothendieck, Techniques de construction et théorèmes d'existence en Géométrie Algébrique : IV Les Schémas de Hilbert, Séminaire Bourbaki Mai 1961, N°221). It even suffices that G be quasi-projective over S; in case a), one can also represent the bigger functor\n  \\[\n  F'(T) = \\left\\{\\begin{array}{l}\\text{set of subgroup preschemes of } \\overline{G}_T \\\\ \\text{flat, proper and of finite presentation over T,}\\end{array}\\right\\}\n  \\]\n  (the canonical monomorphism \\(F \\to F'\\) is an \"open immersion\", as follows from the criterion 3.1 and from <a class=\"ref\" href=\"#X.4.7\">X 4.7 b)</a>, so that the representability of \\(F'\\) implies that F is representable by an open subset of \\(F'\\)); in case b), one can restrict oneself to supposing that H is projective and of finite presentation over S. In both cases, one obtains a functor locally of finite presentation over S. In the present exposé, 3.12 is only a technical lemma for proving a key result in the following N<sup>o</sup>, so we are going to sketch an easy direct proof of 3.12, not using Hilbert schemes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first prove b). It will suffice for us to prove that \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) is representable (independently of any group structure on H, G), and has the additional properties stated for \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\), for using the same result also for \\(\\underline{\\mathrm{Hom}}_S(H \\times_S H, G)\\), one describes the subfunctor \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) of \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) by a finite projective limit (in fact, using fibered products) involving G, \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) and \\(\\underline{\\mathrm{Hom}}_S(H \\times_S H, G)\\), which we leave to the reader to make explicit. On the other hand, we shall have\n\\[\nH = \\mathrm{Spec}(\\mathscr{B}),\n\\]\nwhere \\(\\mathscr{B}\\) is a sheaf of algebras on S which is locally free as a sheaf of modules (this is the only hypothesis on H that we shall need to retain). As the representability question under consideration is local on S, we may suppose S affine with ring A. On the other hand, we shall have \\(G = \\mathrm{Spec}(C)\\), where C is an A-algebra. When \\(G = S[t] = G_0\\), t an indeterminate, the functor \\(\\underline{\\mathrm{Hom}}\\) is none other than\n\\[\nT \\mapsto \\Gamma(T, \\mathscr{B}_T),\n\\]\nwhich is representable (\\(\\mathscr{B}\\) being locally free) by the vector bundle \\(\\mathbb{V}(\\mathscr{B}^{\\vee})\\), where \\(\\mathscr{B}^{\\vee}\\) is the sheaf of modules dual to \\(\\mathscr{B}\\). When \\(G = S[(t_i)]\\), with \\((t_i)\\) a (not necessarily finite) family of indeterminates, we shall thus have \\(G = G_0^I\\) (product over S of a family of copies of \\(G_0\\)), which is representable by the affine scheme\n\\[\n\\underline{\\mathrm{Hom}}_S(H, G)^I = \\mathbb{V}(\\mathscr{B}^{\\vee})^I = \\mathbb{V}(\\mathscr{B}^{\\vee(I)}).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the general case, G will be isomorphic to a closed subscheme of a scheme of the form \\(S[(t_i)]\\), i.e. C will be a quotient of an A-algebra of the form \\(A[(t_i)]\\). Let \\((F_j)\\) be a system of generators of the ideal by which one divides. Suppose \\(\\mathscr{B}\\) free of rank n, which is permissible after covering S by smaller affine open subsets. Choose a basis \\((e_k)_{1 \\leqslant k \\leqslant n}\\) of \\(\\mathscr{B}\\); then writing out the n components with respect to this basis of \\(F_j((x_i))\\), for the \\(x_i = \\sum x_{ik} e_k\\) (\\(x_{ik}\\) indeterminate coefficients, taken in an unspecified algebra \\(A'\\) over A), one finds, for each \\(F_j\\), n polynomials \\(F_{j,k}\\) in the \\((x_{i,k})_{i \\in I, 1 \\leqslant k \\leqslant n}\\), with coefficients in A. One verifies at once that \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) is represented by the spectrum of the quotient of the polynomial ring \\(A[(x_{i,k})]\\) by the ideal generated by the \\(F_{j,k}\\). This proves b) at once.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove a). For every ordinary finite commutative group M, let \\(F_M\\) be the subfunctor of F obtained by restricting to the subgroups of \\(G_T\\) which are of multiplicative type and of type M. One sees easily, by a gluing argument like the one which served in <a class=\"ref\" href=\"#XI.3.5\">3.5</a> (which we should have stated with a bit more dévissage!), that it suffices to verify that the \\(F_M\\) are representable; then F will be representable by the prescheme sum of the \\(F_M\\), where M runs through the set of classes of finite commutative groups up to isomorphism. (F is indeed the sum of the \\(F_M\\) in the category of sheaves…).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From now on we suppose M fixed, and write F instead of \\(F_M\\). Let \\(H = \\mathbf{D}_S(M)\\), and consider the subfunctor \\(F' = \\underline{\\mathrm{Imm}}_{S\\text{-gr}}(H, G)\\) of \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) whose value at T is the set of homomorphisms of T-groups \\(H_T \\to G_T\\) which are closed immersions. We already know that \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) is representable by an affine S-prescheme by virtue of b), and using <a class=\"ref\" href=\"#IX.6.8\">IX 6.8</a>, one sees at once that \\(F'\\) is represented by an open and closed subprescheme of the latter, hence it is likewise <em>affine</em> over S. Finally, consider the canonical morphism \\(F' \\to F\\), which associates with each monomorphism \\(H_T \\to G_T\\) the image group. One verifies at once, by virtue of the definitions, that in this way \\(F'\\) becomes a principal homogeneous bundle (in the category of sheaves for fpqc) over F, with group \\(\\Gamma_F = \\Gamma_S \\times_S F\\), where \\(\\Gamma = \\mathrm{Aut}_{\\mathrm{gr}}(M)\\), whence it follows \"by descent\" that this morphism is representable (i.e. for every morphism \\(T \\to F\\), with T representable, \\(T \\times_F F'\\) over T is representable — in fact, representable by a principal Galois bundle under \\(\\Gamma\\)). Hence by virtue of IV 4.6.6, F is representable if and only if the quotient \\(F'/F''\\), where \\(F'' = F' \\times_F F'\\), exists in \\((\\mathbf{Sch})\\) and is universally effective for faithfully flat quasi-compact morphisms, or what amounts to the same, if and only if the quotient \\(F'/\\Gamma\\) exists and is universally effective for the said morphisms. Now as \\(F'\\) is affine over S, we saw in <a class=\"ref\" href=\"#V.4.1\">V 4.1</a> that the condition in question is indeed satisfied. This proves the representability of F in a).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As for the complement, concerning the case where G is supposed of finite presentation over S, it follows at once from the preceding proof, taking into account that by virtue of b), \\(F'\\) is then locally of finite presentation over S, so that one can apply Exposé V <sup class=\"footnote-ref\"><a id=\"XI-fn4ref\" href=\"#XI-fn4\">4</a></sup>.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn3",
+     "number": "3",
+     "html": "N.D.E.: contravariant"
+    },
+    {
+     "id": "XI-fn4",
+     "number": "4",
+     "html": "N.D.E.: reference to be checked/made precise"
+    }
+   ]
+  },
+  {
+   "id": "XI-4",
+   "title": "4. The scheme of subgroups of multiplicative type of a smooth affine group",
+   "blocks": [
+    {
+     "id": "XI.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.4\">4. The scheme of subgroups of multiplicative type of a smooth affine group</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The main result of the present exposé is constituted by the</p>"
+    },
+    {
+     "id": "XI.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, G an S-group prescheme smooth and affine over S, F the functor \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) defined by\n  \\[\n  F(T) = \\text{ set of subgroups of multiplicative type of } G_T.\n  \\]\n  Then the functor F <em>is representable, and is smooth and separated over S</em>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us point out right away the following variant:</p>"
+    },
+    {
+     "id": "XI.4.2",
+     "type": "corollaire",
+     "label": "4.2",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Let G, H be two S-group preschemes, with G smooth and affine over S, H of multiplicative type and of finite type. Then \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) is representable, and is smooth and separated over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, when H is smooth over S, the same is true of \\(H \\times_S G\\), and one can apply <a class=\"ref\" href=\"#XI.4.1\">4.1</a> to the latter. By considering graph groups, \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) becomes a subfunctor \\(F'\\) of the functor F: \"subgroups of multiplicative type of \\(H \\times_S G\\)\", namely \\(F'(T) = \\) the set of subgroups of multiplicative type K of \\((H \\times_S G)_T = H_T \\times_T G_T\\) such that the homomorphism induced by the first projection\n\\[\nK \\longrightarrow H_T\n\\]\nis an isomorphism. By virtue of <a class=\"ref\" href=\"#IX.2.9\">IX 2.9</a>, the canonical morphism \\(F' \\to F\\) is an open immersion, hence F being representable, the same is true of \\(F'\\), which will be representable by an open subset of F; and F being separated and smooth over S, the same is true of \\(F'\\). In the case where H is finite over S, it suffices to apply <a class=\"ref\" href=\"#XI.3.12\">3.12 b)</a> for the representability of \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\). When H is a product \\(H_1 \\times_S H_2\\), with \\(H_1\\) smooth over S and \\(H_2\\) finite over S, then \\(\\underline{\\mathrm{Hom}}_{T\\text{-gr}}(H_T, G_T)\\) is identified with the subset of \\(\\mathrm{Hom}_{T\\text{-gr}}((H_1)_T, G_T) \\times \\mathrm{Hom}_{T\\text{-gr}}((H_2)_T, G_T)\\) formed by the pairs \\((u_1, u_2)\\) such that \\(u_1 \\cdot u_2 = u_2 \\cdot u_1\\), whence it follows that \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) is representable by a closed subprescheme of \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H_1, G) \\times_S \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H_2, G) = X\\), as one sees by applying <a class=\"ref\" href=\"#VIII.6.5\">VIII 6.5 b)</a>, where one takes \\(Y = H\\), \\(Z = G\\), \\(q_1\\) and \\(q_2\\) being defined respectively by \\((u_1, u_2) \\mapsto u_1 \\cdot u_2\\) and \\((u_1, u_2) \\mapsto u_2 \\cdot u_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the general case, the question being local on S for the Zariski topology, we may suppose that S is affine and H of constant type over S. Then H being quasi-isotrivial (<a class=\"ref\" href=\"#X.4.5\">X 4.5</a>), one can find a surjective étale morphism \\(S' \\to S\\), with \\(S'\\) affine, which splits H, i.e. such that \\(H' = H_{S'}\\) is diagonalizable. Then the preceding result applies, for a diagonalizable group is the product of a diagonalizable torus by a finite diagonalizable group. It remains to see that the descent datum obtained on the \\(S'\\)-prescheme \\(\\underline{\\mathrm{Hom}}_{S'\\text{-gr}}(H', G') = X'\\) is effective. This is seen by the argument of <a class=\"ref\" href=\"#X.5.4\">X 5.4</a>, noting that in <em>loc. cit.</em>, the hypothesis that \\(X' \\to S'\\) was separated and locally quasi-finite had served only to ensure that every open subset of \\(X'\\) quasi-compact over \\(S'\\) was quasi-affine over \\(S'\\). Now this property is again satisfied in the present case, as follows easily from the fact that it is so for the functor F of 4.1 (which will be seen in the course of the proof of 4.1). This (or any other variant of this little dévissage) establishes the representability of \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\), and at the same time the fact that it is separated over S. It is locally of finite presentation over S, as one sees for example (as was pointed out in <a class=\"ref\" href=\"#XI.3.2\">3.2</a>) thanks to the fact that this functor \"commutes with inductive limits of rings\". Finally, this functor being formally smooth over S (by virtue of <a class=\"ref\" href=\"#XI.2.1\">2.1</a>), it is smooth over S.</p>"
+    },
+    {
+     "id": "XI.4.3",
+     "type": "remarque",
+     "label": "4.3",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>We have here deduced <a class=\"ref\" href=\"#XI.4.2\">4.2</a> from <a class=\"ref\" href=\"#XI.4.1\">4.1</a>, which is really immediate only when H is also smooth over S. For the deduction to be carried out without contortions in the general case, the representability result 4.1 would have to be established without supposing G smooth over S, but only affine of finite presentation over S. (Of course, F will then no longer be smooth over S in general!). There is hardly any doubt that 4.1 remains true under these more general hypotheses, but the proof seems bound to be more delicate (for want of being able to invoke 3.8) <sup class=\"footnote-ref\"><a id=\"XI-fn5ref\" href=\"#XI-fn5\">5</a></sup> <sup class=\"footnote-ref\"><a id=\"XI-fn6ref\" href=\"#XI-fn6\">6</a></sup>. Let us point out, however, that when G is a closed subgroup of an affine and smooth group \\(G'\\) over S, then the functor F representing the subgroups of multiplicative type of G is representable by a closed subprescheme of the prescheme representing the analogous functor \\(F'\\) for \\(G'\\) (amenable to 4.1), as one sees easily by applying <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>. This also raises the question: is a group scheme G over an affine S, which is affine and of finite presentation over S, isomorphic to a subgroup scheme of some \\(GL(n)_S\\), for suitable n? This is true when S is the spectrum of a field, cf. <a class=\"ref\" href=\"#VIB.11.11\">VI<sub>B</sub> 11.11</a>, but is unfortunately false in general, even for tori, cf. <a class=\"ref\" href=\"#XI.4.6\">4.6</a>. Finally, let us note that one could also prove 4.2 directly by exactly the same method as 4.1.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now prove <a class=\"ref\" href=\"#XI.4.1\">4.1</a>. As the functor F is evidently of local nature, we may suppose S affine, hence \\(S = \\mathrm{Spec}(A)\\), A a ring. Regarding A as the inductive limit of its subrings of finite type over \\(\\mathbb{Z}\\), and noting that G comes from a smooth and affine group over such a subring (EGA IV 8), we are reduced to the case where S is noetherian. For every integer \\(n &gt; 0\\), let \\(T_n\\) be the functor defined like F, but restricting to the subgroups H of multiplicative type of \\(G_T\\) such that \\(n \\cdot \\mathrm{id}_H = 0\\), i.e. such that \\({}_nH = H\\). Order the set I of integers \\(&gt; 0\\) by the divisibility relation. When m is a multiple of n, define\n\\[\np_{n,m} : T_m \\longrightarrow T_n\n\\]\nby \\(p_{n,m}(H) = {}_nH = \\mathrm{Ker}(n \\cdot \\mathrm{id}_H)\\). In this way the \\(T_n\\) form a projective system of functors over S. By virtue of <a class=\"ref\" href=\"#XI.3.12\">3.12 a)</a> the functors \\(T_n\\) are representable, affine and of finite type over S. Define likewise the morphisms\n\\[\nu_n : F \\longrightarrow T_n,\n\\]\nby the relation \\(u_n(H) = {}_nH\\). In this way, one obtains a morphism\n\\[\nu : F \\longrightarrow T = \\varprojlim_n T_n,\n\\]\nwhere the \\(\\varprojlim\\) is taken in the category of functors over S. But let us point out right away that, the \\(T_n\\) being representable and affine over S, the same is true of T (it will be the spectrum of the inductive limit of the quasi-coherent algebras on S which define the \\(T_n\\)). Of course, T is not in general of finite type over S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We are going to apply <a class=\"ref\" href=\"#XI.3.7\">3.7</a> and are reduced to verifying conditions a) to d) of 3.7, which will imply that F is representable by a prescheme locally of finite type over S. It then follows from <a class=\"ref\" href=\"#XI.2.1bis\">2.1 bis</a> that F is even smooth over S, and as F is a subfunctor of T which is affine over S, it follows that F is separated over S (being separated over T, which is separated over S). Let us prove right away the complement invoked above, namely that every open subset U of F quasi-compact over S is quasi-affine over S: this follows from <a class=\"ref\" href=\"#XI.3.11\">3.11</a> and from the fact that the \\(T_n\\) are affine over S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us therefore verify the conditions of 3.7.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) F is a sheaf for the faithfully flat quasi-compact topology, by the descent theory of SGA 1 VIII, which applies here since groups of multiplicative type over T are affine over T. It commutes with inductive limits of rings by the general machinery of EGA IV 8. Let us show that it commutes with adic projective limits of artinian local rings. When one is dealing, instead of with the functor F, with the analogous functor considered in <a class=\"ref\" href=\"#XI.4.2\">4.2</a>, this property is none other than that of <a class=\"ref\" href=\"#IX.7.1\">IX 7.1</a> in the special case where A is a complete noetherian local ring, equipped with an ideal of definition for its usual topology (N.B. it is exactly here that the hypothesis G affine intervenes in an essential way). In the present case, we are reduced to proving the</p>"
+    },
+    {
+     "id": "XI.4.4",
+     "type": "lemme",
+     "label": "4.4",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Let A be a complete noetherian local ring, with maximal ideal \\(\\mathfrak{m}\\), G an affine group scheme over \\(S = \\mathrm{Spec}(A)\\). For every integer \\(n \\geqslant 0\\), let \\(S_n = \\mathrm{Spec}(A/\\mathfrak{m}^{n+1})\\), \\(G_n = G \\times_S S_n\\). Let, for every n, \\(H_n\\) be a subgroup of multiplicative type and of finite type of \\(G_n\\), such that for \\(m \\geqslant n\\), \\(H_n\\) is deduced from \\(H_m\\) by reduction. Under these conditions, there exists a unique subgroup of multiplicative type H in G which reduces to the \\(H_n\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By virtue of <a class=\"ref\" href=\"#X.3.2\">X 3.2</a> there exists a group of multiplicative type H over S, necessarily of finite type and isotrivial, determined up to unique isomorphism, equipped with an isomorphism \\(H \\times_S S_0 \\simeq H_0\\) (using the fact that \\(H_0\\) is isotrivial, being of finite type over a field, cf. <a class=\"ref\" href=\"#X.1.4\">X 1.4</a>). By virtue of <a class=\"ref\" href=\"#X.2.1\">X 2.1</a>, for every n, the isomorphism \\(H \\times_S S_0 \\simeq H_0\\) lifts to a unique isomorphism \\(H \\times_S S_n \\simeq H_n\\). This said, by virtue of <a class=\"ref\" href=\"#IX.7.1\">IX 7.1</a> already cited, the homomorphisms \\(H_n \\to G_n\\) come from a unique homomorphism of S-groups \\(u : H \\to G\\). By virtue of <a class=\"ref\" href=\"#IX.6.6\">IX 6.6</a> the latter is a monomorphism since \\(u_0 : H_0 \\to G_0\\) is. This completes the proof of 4.4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) The morphism \\(u : F \\to T\\) is a monomorphism. This follows from the density theorem <a class=\"ref\" href=\"#IX.4.7\">IX 4.7</a>, in the form of the corollary <a class=\"ref\" href=\"#IX.4.8\">4.8 b)</a>. One should take care that it is essential, for the application we make of it here, to have this result available over a not necessarily noetherian base. (N.B. as the functor T does not commute with inductive limits of rings, it is not possible to reduce to that case a priori).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b') The morphism \\(u : F \\to T\\) is infinitesimally étale; in other words we have the</p>"
+    },
+    {
+     "id": "XI.4.5",
+     "type": "lemme",
+     "label": "4.5",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>Let A be an artinian local ring with residue field k, \\(S = \\mathrm{Spec}(A)\\), I an ideal \\(\\subset \\mathrm{rad}(A)\\), \\(S' = \\mathrm{Spec}(A/I)\\), G an S-group prescheme smooth over S, \\(G' = G \\times_S S'\\); suppose given a subgroup of multiplicative type \\(H'\\) of \\(G'\\) and, for every integer \\(n &gt; 0\\), a subgroup of multiplicative type \\(H(n)\\) of G in such a way that</p>\n  <p>1°) for every multiple m of n, \\(H(n) = {}_nH(m)\\), and</p>\n  <p>2°) \\(H(n)' = {}_nH'\\).</p>\n  <p>Under these conditions, there exists one and only one subgroup of multiplicative type H of G such that \\({}_nH = H(n)\\) for every n.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The uniqueness is already contained in b). For the existence, an immediate induction reduces us to the case where \\(J\\mathfrak{m} = 0\\), \\(\\mathfrak{m}\\) being the maximal ideal of A. Let \\(k = A/\\mathfrak{m}\\), \\(S_0 = \\mathrm{Spec}(k)\\), \\(G_0 = G \\times_S S_0\\), \\(\\mathfrak{g}_0\\) the Lie algebra of \\(G_0\\), \\(\\mathfrak{h}_0\\) that of \\(H_0\\). We have a canonical isomorphism of groups:\n\\[\n\\mathfrak{g}_0 \\otimes_k J \\simeq \\mathrm{Ker}(G(S) \\longrightarrow G(S_0)),\n\\]\ncf. Exp III. By virtue of <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a> and <a class=\"ref\" href=\"#XI.3.7\">3.7</a>, there exists a subgroup of multiplicative type H of G reducing to \\(H'\\), and such an H is determined modulo inner automorphism by an element of \\(N = \\mathrm{Ker}(G(S) \\to G(S_0))\\). Thus, the set P of liftings H of \\(H_0\\) is a principal homogeneous set under the group N/M, where M is the group of the \\(g \\in N\\) such that \\(\\mathrm{int}(g) \\cdot H = H\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now one sees easily (Exp III) that this subgroup is none other than the vector subspace of \\(\\mathfrak{g}_0 \\otimes_k J\\) formed by the invariants under \\(H_0\\), when \\(H_0\\) acts on \\(\\mathfrak{g}_0 \\otimes_k J\\) via the representation induced by the adjoint representation of \\(G_0\\). Likewise, the set \\(P(n)\\) of liftings of \\(H(n)_0 = {}_nH_0\\) is a principal homogeneous set under \\(N/M(n)\\), where \\(M(n)\\) is the vector subspace of \\(\\mathfrak{g}_0 \\otimes_k J = N\\) formed by the invariants under \\({}_nH_0\\). Using the density theorem <a class=\"ref\" href=\"#IX.4.7\">Exp IX 4.7</a>, one sees easily that for n large (in the sense of the order relation put on the set of integers \\(n &gt; 0\\), namely the divisibility relation) we have \\(M = M(n)\\). Consequently, the natural map \\(H \\mapsto {}_nH\\) from P to \\(P(n)\\), which is compatible with the actions of N, hence with the homomorphism \\(N/M \\to N/M(n)\\) on the groups of operators, is bijective for n large. The conclusion of 4.5 follows at once.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To verify c) and d) of 3.7, we use <a class=\"ref\" href=\"#XI.3.8\">3.8</a>, which reduces us to the verification of c') and d') below.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c') The \\(T_n\\) are smooth over S, and the transition morphisms \\(p_{n,m} : T_m \\to T_n\\) are smooth.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This is none other than <a class=\"ref\" href=\"#XI.2.2bis\">2.2 bis</a>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d') With the notations of 3.8, a point \\(\\xi\\) of F with values in a field k over S is none other than a subgroup of multiplicative type \\(H_0\\) of \\(G_0 = G_k\\). Resuming the argument of b') above, one sees that the integer \\(d(\\xi)\\) considered in 3.8 is none other than the dimension of \\(\\mathfrak{g}_0/\\mathfrak{g}_0^{H_0}\\), where \\(\\mathfrak{g}_0\\) is the Lie algebra of \\(G_0\\) and \\(\\mathfrak{g}_0^{H_0}\\) is the vector subspace of invariants under \\(H_0\\). It is therefore a finite integer, i.e. condition d') 1°) of 3.8 is satisfied. With the notations of d') 2°), the datum of a morphism \\(v : X \\to F\\) amounts to the datum of a subgroup of multiplicative type H of \\(G_X\\). For \\(x \\in X\\), the integer \\(d(\\xi_x)\\) is then none other than the dimension of \\((\\mathfrak{g} \\otimes \\kappa(x))/(\\mathfrak{g} \\otimes \\kappa(x))^{H_x}\\), where \\(\\mathfrak{g}\\) is the sheaf of Lie algebras of \\(G_X\\) (which is locally free of finite type over X since \\(G_X\\) is smooth over X, and \\(\\mathfrak{g} \\otimes \\kappa(x)\\) is none other than the Lie algebra of the fiber \\(G_x\\) of \\(G_X\\) at x), and \\(H_x\\) is the fiber of H at x. Now \\(\\mathfrak{g}\\) being a locally free module over X on which the group of multiplicative type H acts, one sees at once that the subfunctor \\(\\mathfrak{g}^H\\) of invariants under H is given by a locally direct-summand, hence locally free, subsheaf of \\(\\mathfrak{g}\\). (By descent, one is reduced to the case where H is diagonalizable, where one applies <a class=\"ref\" href=\"#I.4.7.3\">Exp I 4.7.3</a>, noting that the subsheaf of invariants corresponds to the component of degree zero). Consequently \\(d(\\xi_x) = \\) the rank at x of \\(\\mathfrak{g}/\\mathfrak{g}^H\\), hence it is a locally constant function of x. This completes the proof of condition d').</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have thus verified the conditions of 3.7, which completes the proof of 4.1.</p>"
+    },
+    {
+     "id": "XI.4.6",
+     "type": "remarque",
+     "label": "4.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\"><p>When \\(G = GL(n)_S\\), one can give a markedly simpler and more explicit direct proof of <a class=\"ref\" href=\"#XI.4.1\">4.1</a>, using <a class=\"ref\" href=\"#I.4.7.3\">I 4.7.3</a>. The proof shows moreover that in this case, the modular scheme is a scheme which is the sum of a family of schemes <em>affine</em> over S. Proceeding as was said in <a class=\"ref\" href=\"#XI.4.3\">4.3</a>, one deduces the same result whenever G is a closed subgroup of a group of the form \\(GL(n)_S\\). One should beware of believing, however, that the preschemes which represent the functors in 4.1 or 4.2 are always sums of a family of schemes affine over S. Let for example H be a group of multiplicative type and of finite type over a locally noetherian prescheme S; then by virtue of <a class=\"ref\" href=\"#X.5.11\">X 5.11</a>, H is isotrivial if and only if \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, \\mathbb{G}_m)\\) is the sum of a family of preschemes affine over S; now it was pointed out (<a class=\"ref\" href=\"#X.1.6\">X 1.6</a>) that there can exist non-isotrivial tori H (of relative dimension 2); for such a torus, \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, \\mathbb{G}_m)\\) is therefore not a sum of S-preschemes affine over S, and one sees likewise that the \"dual\" twisted constant group \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(\\mathbb{G}_m, H)\\) is not such a sum either (for if two commutative twisted constant groups of finite presentation R, \\(R'\\) are dual to each other, \\(R' = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(R, \\mathbb{Z}_S)\\), one sees easily that one is isotrivial if and only if the other is). This last point also shows that such an H is not isomorphic to a subgroup of a group of the form \\(GL(n)_S\\); more precisely, one can show that a group of multiplicative type and of finite type over a connected locally noetherian S is isomorphic to a subgroup of a group of the form \\(\\underline{\\mathrm{Aut}}_{\\mathrm{Mod}}(\\mathscr{E})\\) (with \\(\\mathscr{E}\\) a locally free module of finite type over S) if and only if it is isotrivial. Finally, taking \\(G = H \\times \\mathbb{G}_m\\) in the two preceding examples, one finds an example where the prescheme representing the functor F of 4.1 is not the sum of a family of S-preschemes affine over S (with G a torus of relative dimension 3 if one wishes).</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn5",
+     "number": "5",
+     "html": "This has indeed been proved for G flat and quasi-affine over S with connected fibers, provided one restricts to <em>central</em> subtori of G (XV 8.8)."
+    },
+    {
+     "id": "XI-fn6",
+     "number": "6",
+     "html": "N.D.E.: In the case where H is smooth (not necessarily affine) over a normal locally noetherian base S, M. Raynaud showed that the largest representable open subfunctor of the functor of subtori of H is a disjoint sum of open subsets smooth and affine over S. This is theorem IX.9.26 in <em>Faisceaux amples sur les schémas en groupes et sur les espaces homogènes</em>, Lecture Notes Maths. 119 (1970)."
+    }
+   ]
+  },
+  {
+   "id": "XI-5",
+   "title": "5. First corollaries of the representability theorem",
+   "blocks": [
+    {
+     "id": "XI.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.5\">5. First corollaries of the representability theorem</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let H, G be as in <a class=\"ref\" href=\"#XI.4.2\">4.2</a>. Set\n\\[\nM = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G),\n\\]\nwhich is an S-prescheme smooth and separated over S, by virtue of 4.2. Note that G acts on the functor \\(M = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) by\n\\[\n(g, u) \\mapsto \\mathrm{int}(g) \\circ u,\n\\]\nwhence a canonical morphism\n\\[\n(\\mathrm{x}) \\qquad G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M,\n\\]\nwhose components are the preceding morphism \\(G \\times_S M \\to M\\), and the second projection \\(G \\times_S M \\to M\\).</p>"
+    },
+    {
+     "id": "XI.5.1",
+     "type": "corollaire",
+     "label": "5.1",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\"><p>The preceding morphism (x) is smooth.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This follows from <a class=\"ref\" href=\"#XI.4.2\">4.2</a> and <a class=\"ref\" href=\"#XI.2.3\">2.3</a>. This statement is equivalent to the following one:</p>"
+    },
+    {
+     "id": "XI.5.2",
+     "type": "corollaire",
+     "label": "5.2",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(u_1, u_2 : H \\rightrightarrows G\\) be two homomorphisms of S-groups. Then the subfunctor \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) of G (cf. <a class=\"ref\" href=\"#XI.2.4\">2.4</a>) is representable by a closed subprescheme of G, smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It only remains to prove that \\(\\underline{\\mathrm{Transp}}(u_1, u_2) \\to G\\) is indeed a closed immersion, which follows from the fact that it is the <em>kernel</em> of a pair of morphisms \\(G \\rightrightarrows M\\) (namely \\(g \\mapsto \\mathrm{int}(g)u_1\\) and the \"constant\" morphism \\(g \\mapsto u_2\\)), and from the fact that M is separated over S. In particular:</p>"
+    },
+    {
+     "id": "XI.5.3",
+     "type": "corollaire",
+     "label": "5.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(u : H \\to G\\) be a morphism of S-groups. Then \\(\\underline{\\mathrm{Centr}}_G(u) = \\underline{\\mathrm{Transp}}(u, u)\\) is representable by a closed subgroup prescheme of G, smooth over S. Moreover, \\(G/\\underline{\\mathrm{Centr}}_G(u)\\) is representable by an open subprescheme of M.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove this last point. Now the morphism\n\\[\ng \\mapsto \\mathrm{int}(g) \\circ u\n\\]\nfrom G to M is smooth of finite type by virtue of <a class=\"ref\" href=\"#XI.5.2\">5.2</a>, hence it is an open morphism (EGA IV 6.6), and if U denotes its image, with the structure induced from M, the morphism \\(G \\to U\\) is smooth, surjective, of finite type, hence covering for the faithfully flat and quasi-compact topology. Moreover it is obvious that the preceding morphism \\(G \\to M\\) makes G a formally principal homogeneous sheaf under \\(\\underline{\\mathrm{Centr}}_G(u)_M\\), which implies that the sheaf \\(G/\\underline{\\mathrm{Centr}}_G(u)\\) is indeed representable by U.</p>"
+    },
+    {
+     "id": "XI.5.4",
+     "type": "corollaire",
+     "label": "5.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(u_1, u_2 : H \\rightrightarrows G\\) be two homomorphisms of S-groups. The following conditions are equivalent:</p>\n  <p>(i) \\(u_1\\) and \\(u_2\\) are conjugate locally for the étale topology.</p>\n  <p>(i bis) \\(u_1, u_2\\) are conjugate locally in the sense of the faithfully flat quasi-compact topology.</p>\n  <p>(ii) For every \\(s \\in S\\), denoting by \\(\\overline{s}\\) the spectrum of an algebraic closure of \\(\\kappa(s)\\), the morphisms \\(u_{1,\\overline{s}}, u_{2,\\overline{s}} : H_{\\overline{s}} \\rightrightarrows G_{\\overline{s}}\\) are conjugate by an element of \\(G(\\kappa(\\overline{s}))\\).</p>\n  <p>(ii bis) The structural morphism \\(\\underline{\\mathrm{Transp}}(u_1, u_2) \\to S\\) is surjective.</p>\n  <p>(iii) \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) is a torsor under the action of the smooth S-group prescheme of finite type \\(\\underline{\\mathrm{Centr}}_G(u_1)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) ⇒ (i bis) and (ii) ⇒ (ii bis) are trivial (the second thanks to the Nullstellensatz); moreover (i bis) ⇒ (ii) by the \"principle of finite extension\" (EGA IV 9). On the other hand, (ii bis) ⇒ (iii) thanks to the fact that \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) is smooth over S, hence flat over S, and of finite type, hence quasi-compact over S; it is therefore faithfully flat quasi-compact over S if and only if its structural morphism is surjective. As, on the other hand, it is formally principal homogeneous under \\(\\underline{\\mathrm{Centr}}_G(u_1)\\), which is faithfully flat and quasi-compact over S, one sees that this last condition is also equivalent to saying that \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) is a torsor under \\(\\underline{\\mathrm{Centr}}_G(u_1)\\) (implicitly: in the sense of the faithfully flat and quasi-compact topology). Finally (iii) ⇒ (i) thanks to the fact that \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) is smooth over S and to \"Hensel's lemma\" in the form <a class=\"ref\" href=\"#XI.1.10\">1.10</a>.</p>"
+    },
+    {
+     "id": "XI.5.5",
+     "type": "remarque",
+     "label": "5.5",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>For fixed \\(u_1 = u : H \\to G\\), the functor \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) which associates with every T over S the set of homomorphisms of T-groups \\(u_2 : H_T \\to G_T\\) which are conjugate to \\(u_T : H_T \\to G_T\\) locally for the étale topology, is precisely representable by the open subset of M, isomorphic to \\(G/\\underline{\\mathrm{Centr}}_G(u)\\), considered in <a class=\"ref\" href=\"#XI.5.3\">5.3</a>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us sketch the variants of the preceding results, obtained by applying <a class=\"ref\" href=\"#XI.4.1\">4.1</a> instead of <a class=\"ref\" href=\"#XI.4.2\">4.2</a>. So let G be a group prescheme smooth and affine over S, and denote now by M the S-prescheme, smooth and separated over S, which represents the functor considered in 4.1. We again have actions of G on M:\n\\[\n(g, H) \\longmapsto \\mathrm{int}(g)(H),\n\\]\nwhence as above a morphism\n\\[\n(\\mathrm{x\\ bis}) \\qquad G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M.\n\\]</p>"
+    },
+    {
+     "id": "XI.5.1bis",
+     "type": "corollaire",
+     "label": "5.1 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.1bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.1 bis</span></div>\n  <div class=\"thm-body\"><p>The preceding morphism is smooth.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Follows from <a class=\"ref\" href=\"#XI.4.1\">4.1</a> and <a class=\"ref\" href=\"#XI.2.3bis\">2.3 bis</a>. One again concludes:</p>"
+    },
+    {
+     "id": "XI.5.2bis",
+     "type": "corollaire",
+     "label": "5.2 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.2bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.2 bis</span></div>\n  <div class=\"thm-body\"><p>Let \\(H_1, H_2\\) be two subgroups of multiplicative type of G. Then the subfunctor \\(\\underline{\\mathrm{Transp}}_G(H_1, H_2)\\) of G is representable by a closed subprescheme of G, smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular:</p>"
+    },
+    {
+     "id": "XI.5.3bis",
+     "type": "corollaire",
+     "label": "5.3 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.3 bis</span></div>\n  <div class=\"thm-body\"><p>Let H be a subgroup of multiplicative type of G. Then the subgroup functor \\(\\underline{\\mathrm{Norm}}_G(H)\\) of G is representable by a closed subprescheme of G, smooth over S. Moreover, the quotient \\(G/\\underline{\\mathrm{Norm}}_G(H)\\) is representable by an open subprescheme of M.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.4bis",
+     "type": "corollaire",
+     "label": "5.4 bis",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.4 bis</span></div>\n  <div class=\"thm-body\"><p>Let \\(H_1, H_2\\) be two subgroups of multiplicative type of G. The following conditions are equivalent:</p>\n  <p>(i) \\(H_1\\) and \\(H_2\\) are conjugate locally for the étale topology.</p>\n  <p>(i bis) \\(H_1\\) and \\(H_2\\) are conjugate locally for the faithfully flat quasi-compact topology.</p>\n  <p>(ii) For every \\(s \\in S\\), denoting by \\(\\overline{s}\\) the spectrum of an algebraic closure of \\(\\kappa(s)\\), the subgroups \\(H_{1,\\overline{s}}, H_{2,\\overline{s}}\\) of \\(G_{\\overline{s}}\\) are conjugate by an element of \\(G(\\kappa(\\overline{s}))\\).</p>\n  <p>(ii bis) The structural morphism \\(\\underline{\\mathrm{Transp}}(H_1, H_2) \\to S\\) is surjective.</p>\n  <p>(iii) \\(\\underline{\\mathrm{Transp}}(H_1, H_2)\\) is a principal homogeneous bundle under the action of the smooth S-group prescheme of finite type \\(\\underline{\\mathrm{Norm}}_G(H_1)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.5bis",
+     "type": "remarque",
+     "label": "5.5 bis",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.5bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">5.5 bis</span></div>\n  <div class=\"thm-body\"><p>Remark 5.5 likewise carries over to the present case.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.6",
+     "type": "remarque",
+     "label": "5.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\"><p>Note that to establish the result <a class=\"ref\" href=\"#XI.5.2\">5.2</a>, and consequently also the first assertion in 5.3, as well as 5.4, the reference to <a class=\"ref\" href=\"#XI.4.2\">4.2</a> can be replaced by a reference to <a class=\"ref\" href=\"#VIII.6.4\">VIII, 6.4</a>, whose proof is much easier. This also shows that the hypothesis G affine over S is unnecessary there. Moreover, in <a class=\"ref\" href=\"#XI.6\">N<sup>o</sup> 6</a>, we shall show how a variant of this method makes it possible to extend these results to the case of certain groups H more general than groups of multiplicative type. These same observations extend to the variants 5.2 bis etc. On the other hand, the result <a class=\"ref\" href=\"#XI.5.8\">5.8</a> below uses in an essential way all the hypotheses made (in particular G affine and smooth over S, H of multiplicative type), and the lecturer knows no proof of it other than via the representability theorems 4.1 or 4.2 <sup class=\"footnote-ref\"><a id=\"XI-fn7ref\" href=\"#XI-fn7\">7</a></sup>.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.5.7\">5.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As the morphism (x) resp. (x bis) is smooth, hence open, its image is open. Let R be this image, endowed with the structure induced from \\(M \\times_S M\\); one verifies easily that R is an <em>equivalence relation</em> in M, which is moreover none other than the one made explicit in <a class=\"ref\" href=\"#XI.5.4\">5.4</a> resp. <a class=\"ref\" href=\"#XI.5.4bis\">5.4 bis</a>. It would be interesting to know whether the quotient sheaf M/R (which is formally étale over S) is representable (it is then representable by a prescheme <em>étale</em> over S); it is, for example, if S is the spectrum of a field. Note moreover that it may happen that R is not closed in \\(M \\times_S M\\) (even if G is quasi-finite over S…), which means (when M/R is representable) that M/R is then not separated over S.</p>"
+    },
+    {
+     "id": "XI.5.8",
+     "type": "theoreme",
+     "label": "5.8",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">5.8</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, G an S-prescheme smooth and affine over S, \\(s \\in S\\). Then:</p>\n  <p>a) For every subgroup of multiplicative type \\(H_0\\) of \\(G_s\\), there exist an étale morphism \\(S' \\to S\\), a point \\(s'\\) of \\(S'\\) above s such that the residue extension \\(\\kappa(s')/\\kappa(s)\\) is trivial, and a subgroup of multiplicative type \\(H'\\) of \\(G' = G \\times_S S'\\), such that \\(H'_{s'} = H_0 \\otimes_{\\kappa(s)} \\kappa(s')\\).</p>\n  <p>b) For every group homomorphism \\(u_0 : H_s \\to G_s\\), where H is an S-group prescheme of multiplicative type and of finite type, there exist an étale morphism \\(S' \\to S\\), a point \\(s'\\) of \\(S'\\) above s such that the residue extension \\(\\kappa(s')/\\kappa(s)\\) is trivial, and a group homomorphism \\(u' : H' \\to G'\\), such that \\(u'_{s'} : H'_{s'} \\to G'_{s'}\\) is equal to \\(u_0 \\otimes_{\\kappa(s)} \\kappa(s')\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This follows from <a class=\"ref\" href=\"#XI.4.1\">4.1</a> resp. <a class=\"ref\" href=\"#XI.4.2\">4.2</a>, and from Hensel's lemma in the form <a class=\"ref\" href=\"#XI.1.10\">1.10</a>.</p>"
+    },
+    {
+     "id": "XI.5.9",
+     "type": "proposition",
+     "label": "5.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.5.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.9</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, G an S-prescheme smooth and affine over S, H a subgroup of multiplicative type of G. Consider \\(\\underline{\\mathrm{Centr}}_G(H) \\hookrightarrow \\underline{\\mathrm{Norm}}_G(H)\\), which by <a class=\"ref\" href=\"#XI.5.3\">5.3</a> and <a class=\"ref\" href=\"#XI.5.3bis\">5.3 bis</a> are closed subgroup preschemes of G, smooth over S. Then the first group is an open and closed subprescheme of the second, and the quotient sheaf\n  \\[\n  W_G(H) = \\underline{\\mathrm{Norm}}_G(H)/\\underline{\\mathrm{Centr}}_G(H)\n  \\]\n  is representable by an open subgroup prescheme of \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\); it is therefore an S-group prescheme quasi-finite, étale and separated over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, consider the obvious homomorphism\n\\[\n\\theta : \\underline{\\mathrm{Norm}}_G(H) \\longrightarrow \\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H),\n\\]\nwhose kernel is by definition \\(\\underline{\\mathrm{Centr}}_G(H)\\). As \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) is representable by an S-group prescheme <em>étale and separated</em> over S (<a class=\"ref\" href=\"#X.5.10\">X 5.10</a>), its unit section is an open and closed immersion, hence its inverse image under \\(\\theta\\) is an open and closed subgroup of \\(\\underline{\\mathrm{Norm}}_G(H)\\). I claim moreover that \\(\\theta\\) is a smooth morphism: this follows indeed formally from the definitions, and from the fact that \\(\\underline{\\mathrm{Norm}}_G(H)\\) is smooth over S and \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) is étale over S. One concludes as in <a class=\"ref\" href=\"#XI.5.3\">5.3</a> that the image of \\(\\theta\\) is an open subset U of \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) and that, endowed with the induced structure, U represents the quotient sheaf \\(\\underline{\\mathrm{Norm}}_G(H)/\\underline{\\mathrm{Centr}}_G(H)\\). The latter is therefore étale and separated over S since \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) is, and it is quasi-finite over S, being quasi-compact over S as the image of \\(\\underline{\\mathrm{Norm}}_G(H)\\), which is. This completes the proof of 5.9.</p>"
+    },
+    {
+     "id": "XI.5.10",
+     "type": "corollaire",
+     "label": "5.10",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">5.10</span></div>\n  <div class=\"thm-body\"><p>For every \\(s \\in S\\), let\n  \\[\n  w(s) = \\mathrm{rank}\\ \\underline{\\mathrm{Norm}}_{G_s}(H_s)/\\underline{\\mathrm{Centr}}_{G_s}(H_s)\n  \\]\n  (which is also the index of \\(\\underline{\\mathrm{Centr}}_{G(k)} H(k)\\) in \\(\\underline{\\mathrm{Norm}}_{G(k)} H(k)\\), where k is an algebraic closure of \\(\\kappa(s)\\)). Then the function \\(s \\mapsto w(s)\\) is lower semi-continuous. For it to be constant in a neighborhood of the point s, it is necessary and sufficient that \\(W_G(H)\\) be finite over S in a neighborhood of s.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, for every S-prescheme W which is étale, of finite type and separated over S, it is true that the function \\(s \\mapsto w(s) = \\mathrm{rank}\\ [W_s : \\kappa(s)]\\) is lower semi-continuous, and that it is constant in a neighborhood of the point s if and only if W is finite over S in a neighborhood of s (a fact pointed out in SGA 1, I 10.9, whose proof, which presents no difficulty, will be found in EGA IV <sup class=\"footnote-ref\"><a id=\"XI-fn8ref\" href=\"#XI-fn8\">8</a></sup>).</p>"
+    },
+    {
+     "id": "XI.5.11",
+     "type": "remarque",
+     "label": "5.11",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">5.11</span></div>\n  <div class=\"thm-body\"><p><sup class=\"footnote-ref\"><a id=\"XI-fn9ref\" href=\"#XI-fn9\">9</a></sup> Let G be a group prescheme affine and smooth over S, H a subgroup of multiplicative type; then <a class=\"ref\" href=\"#XI.5.3\">5.3</a> and <a class=\"ref\" href=\"#XI.5.3bis\">5.3 bis</a> imply that the quotients \\(G/\\underline{\\mathrm{Centr}}_G(H)\\) and \\(G/\\underline{\\mathrm{Norm}}_G(H)\\) are preschemes smooth over S and <em>quasi-affine</em> over S, since in both cases, the modular prescheme M in which the quotient is embedded is such that every open subset U of M quasi-compact over S is quasi-affine over S (<a class=\"ref\" href=\"#XI.3.11\">3.11</a>). We shall see moreover in the following exposé <sup class=\"footnote-ref\"><a id=\"XI-fn10ref\" href=\"#XI-fn10\">10</a></sup> that for every U as above, the schematic closure \\(\\overline{U}\\) of U in M is even affine over S, which shows that the quotients under consideration are affine over S provided that the open subset U in the corresponding modular scheme (of group homomorphisms from H to G, resp. of subgroups of multiplicative type of G) is <em>closed</em> in M. This is for example the case if H is a \"maximal torus\" in the second case considered, or when S is the spectrum of a field, cf. <a class=\"ref\" href=\"#XII.5.4\">XII.5.4</a> <sup class=\"footnote-ref\"><a id=\"XI-fn11ref\" href=\"#XI-fn11\">11</a></sup>. I do not know whether the quotients under consideration are affine over S in general.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn7",
+     "number": "7",
+     "html": "The situation has changed since the writing of this text, cf. XV and XIX n<sup>o</sup> 6."
+    },
+    {
+     "id": "XI-fn8",
+     "number": "8",
+     "html": "EGA IV 15.5.1 and 18.10.7."
+    },
+    {
+     "id": "XI-fn9",
+     "number": "9",
+     "html": "N.D.E.: For a generalization to the non-affine case, see M. Raynaud, <em>Faisceaux amples sur les schémas en groupes et les espaces homogènes</em>, Lecture Notes Math. 119 (1970), IX.2.8."
+    },
+    {
+     "id": "XI-fn10",
+     "number": "10",
+     "html": "N.D.E.: cf. remark <a class=\"ref\" href=\"#XII.5.7\">XII.5.7</a>. Let us mention here the following generalization. Without any affineness hypothesis on G, if H is a torus and S is locally noetherian, U is affine and smooth by a theorem of Raynaud (<em>loc. cit.</em>, IX.2.6 and IX.2.8). Indeed, \\(G/\\underline{\\mathrm{Norm}}_G(H)\\) is an open subset of M and the largest representable open subfunctor of M is a disjoint sum of open subsets smooth and affine over S."
+    },
+    {
+     "id": "XI-fn11",
+     "number": "11",
+     "html": "N.D.E.: under the hypothesis that G is of locally constant reductive rank."
+    }
+   ]
+  },
+  {
+   "id": "XI-6",
+   "title": "6. On a rigidity property for homomorphisms of certain group schemes, and the representability of certain transporters12",
+   "blocks": [
+    {
+     "id": "XI.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.6\">6. On a rigidity property for homomorphisms of certain group schemes, and the representability of certain transporters<sup class=\"footnote-ref\"><a id=\"XI-fn12ref\" href=\"#XI-fn12\">12</a></sup></h2>"
+    },
+    {
+     "id": "XI.6.1",
+     "type": "proposition",
+     "label": "6.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Let S be a locally noetherian prescheme, H a commutative S-group prescheme of finite type over S, E a set of integers \\(&gt; 0\\), stable under multiplication, and suppose the following conditions satisfied:</p>\n  <p>a) For every \\(n \\in E\\), the subgroup \\({}_nH = \\mathrm{Ker}(n \\cdot \\mathrm{id}_H)\\) is finite and flat over S.</p>\n  <p>b) For every \\(s \\in S\\), the family of the \\({}_nH_s\\) \\((n \\in E)\\) is schematically dense in H.</p>\n  <p>Let Y be a closed subprescheme of H. Then the subfunctor \\(\\prod_{H/S} Y/H\\) of S (compare <a class=\"ref\" href=\"#VIII.6\">VIII, 6</a>) is representable by a closed subprescheme T of S, and if S is noetherian, there exists an \\(n \\in E\\) such that\n  \\[\n  (\\mathrm{x}) \\qquad \\prod_{H/S} Y/H = \\prod_{{}_nH/S} Y \\cap {}_nH/S.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, by virtue of <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>, as by condition a) \\({}_nH\\) is finite and flat, and a fortiori \"essentially free\" over S, it follows that the right-hand side of (x) is representable by a closed subprescheme \\(T_n\\) of T. Of course, for \\(n \\in E\\), E ordered by divisibility, the \\(T_n\\) form a decreasing family of closed subpreschemes of S, hence if S is noetherian (which we may suppose) it is stationary for n large. Let T be the value of \\(T_n\\) for n large; I claim that T does represent the left-hand side of (x), which will complete the proof. We are reduced to proving that if \\(S'\\) is a prescheme over S such that \\((Y \\cap {}_nH)_{S'} = ({}_nH)_{S'}\\) for every \\(n \\in E\\), i.e. such that \\(Y_{S'} \\supset {}_nH_{S'}\\) for every \\(n \\in E\\), then \\(Y_{S'} = H_{S'}\\). Now this is indeed the case, for by virtue of <a class=\"ref\" href=\"#IX.4.4\">IX 4.4</a> the family of the \\({}_nH_{S'}\\) is schematically dense in \\(H_{S'}\\), taking into account conditions a) and b).</p>"
+    },
+    {
+     "id": "XI.6.2",
+     "type": "theoreme",
+     "label": "6.2",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\"><p>Let S be a prescheme, H, E as in <a class=\"ref\" href=\"#XI.6.1\">6.1</a> satisfying conditions a), b), \\(u : H \\to G\\) a homomorphism of S-groups from H to an S-group prescheme locally of finite type over S, and finally K a closed subgroup prescheme of H. Consider the subfunctor \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) of G (cf. <a class=\"ref\" href=\"#XI.2.5\">2.5</a>). Then the latter is representable by a closed subprescheme of G, and if G is noetherian (for example S noetherian and G of finite type over S), there exists an integer \\(n \\in E\\) such that \\(\\underline{\\mathrm{Transp}}_G(u, K) = \\underline{\\mathrm{Transp}}_G(u|_{{}_nH}, K)\\). If finally G is smooth over S, and K smooth over S or of multiplicative type, and if H, E satisfy the following condition, stronger than a):</p>\n  <p>a') For every \\(n \\in E\\), the subgroup \\({}_nH\\) of H is of multiplicative type,</p>\n  <p>then \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) is smooth over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, consider the G-group \\(H_G = H \\times_S G\\), which evidently satisfies the conditions of 6.1 (S replaced by G, and H by \\(H_G\\)), and the closed subprescheme Y of \\(H_G\\), the inverse image of \\(K \\subset G\\) under\n\\[\nH_G = H \\underset{S}{\\times} G \\longrightarrow G\n\\]\ndefined by \\((h, g) \\mapsto \\mathrm{int}(g) \\cdot u(h)\\). Then \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) is none other than \\(\\prod_{H_G/G} Y/H_G\\) (compare <a class=\"ref\" href=\"#VIII.6.5\">VIII, examples 6.5 e)</a>). Hence the first assertions follow from 6.1, and moreover, one sees that for every quasi-compact open subset U of G, there exists \\(n \\in E\\) such that \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) and \\(\\underline{\\mathrm{Transp}}_G(u|_{{}_nH}, K)\\) have the same trace on U. To verify the last assertion of 6.2, one may therefore replace H by an \\({}_nH\\), and then it suffices to apply <a class=\"ref\" href=\"#XI.2.5\">2.5</a>, which applies since \\({}_nH\\) is supposed of multiplicative type over S.</p>"
+    },
+    {
+     "id": "XI.6.3",
+     "type": "remarque",
+     "label": "6.3",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">6.3</span></div>\n  <div class=\"thm-body\"><p>The preceding proof uses only the very elementary result <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>, and in addition (for the last part) <a class=\"ref\" href=\"#XI.2.5\">2.5</a>, that is, when K is smooth over S, the infinitesimal result <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a>, hence the vanishing of the cohomology of groups of multiplicative type. Note that in the most important cases (cf. <a class=\"ref\" href=\"#XI.6.7\">6.7</a>) one may even suppose the \\(n \\in E\\) prime to the residue characteristics of S, i.e. invertible in \\(\\mathscr{O}_S\\), hence the \\({}_nH\\) finite étale over S, and then the cohomological result invoked is practically trivial, so 6.2 is then independent of the theory of groups of multiplicative type.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.6.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.4\">6.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One sees as usual that <a class=\"ref\" href=\"#XI.6.1\">6.1</a> extends to the case where one has an S-prescheme \\(S'\\) over S (not necessarily locally noetherian), and a closed subprescheme \\(Y'\\) of \\(H' = H_{S'}\\), provided that \\(Y' \\to H'\\) is of finite presentation, i.e. the ideal defining \\(Y'\\) is of finite type: then \\(\\prod_{H'/S'} Y'/H'\\) is representable by a closed subprescheme \\(T'\\) of \\(S'\\), such that \\(T' \\to S'\\) is of finite presentation, and if \\(S'\\) is quasi-compact, there exists an \\(n \\in E\\) such that the relation analogous to (x) holds. It also follows that the first statement in 6.2 is valid without supposing G locally of finite type over S, provided that the immersion \\(K \\to G\\) is of finite presentation.</p>"
+    },
+    {
+     "id": "XI.6.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.5\">6.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As announced in <a class=\"ref\" href=\"#XI.5.6\">5.6</a>, theorem <a class=\"ref\" href=\"#XI.6.2\">6.2</a> makes it possible to extend to group preschemes satisfying a') and b) above certain results established by another method and under more restrictive conditions for groups of multiplicative type. This is the case for the results <a class=\"ref\" href=\"#XI.5.2\">5.2</a>, the beginning of <a class=\"ref\" href=\"#XI.5.3\">5.3</a>, <a class=\"ref\" href=\"#XI.5.4\">5.4</a> and the \"bis\" variants of the preceding results, and <a class=\"ref\" href=\"#XI.5.9\">5.9</a> and <a class=\"ref\" href=\"#XI.5.10\">5.10</a>. The same holds for the results of <a class=\"ref\" href=\"#IX\">IX, N<sup>os</sup> 5 and 6</a>, with the exception of <a class=\"ref\" href=\"#IX.6.8\">IX 6.8</a> (already false for a homomorphism of abelian schemes \\(u : H \\to G\\) over the spectrum S of a discrete valuation ring with residue characteristic \\(p &gt; 0\\): it may indeed happen that \\(\\mathrm{Ker}\\, u\\) has as generic fiber the unit group, and as special fiber a radicial group not reduced to the unit group).</p>"
+    },
+    {
+     "id": "XI.6.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.6\">6.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have just given an example of a rigidity property for groups of multiplicative type which is not shared by abelian schemes. Another example, extremely important, lies in the fact that the existence theorem for infinitesimal extensions of homomorphisms <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> is no longer valid when H is an abelian scheme. Thus, an abelian scheme \\(\\neq 0\\) over a field admits nontrivial infinitesimal variations, contrary to what happens for a group of multiplicative type — which is the infinitesimal aspect of the fact that there exists a \"theory of moduli\" (moreover far from being complete) for abelian varieties, whereas the theory of moduli for groups of multiplicative type is empty. Another \"global\" aspect of this infinitesimal difference is that if H is an abelian scheme over a locally noetherian S, and G a commutative S-group prescheme locally of finite type over S, then one can show that \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) is representable by a prescheme locally of finite type over S, but contrary to what happens for H of multiplicative type, this prescheme <em>is not étale over S</em>, but only unramified over S. Thus, if S is for example the spectrum of a complete discrete valuation ring, H and G abelian schemes over S, there may exist homomorphisms \\(H_0 \\to G_0\\) on the special fibers which do not come \"by specialization\" from a homomorphism on the generic fibers.</p>"
+    },
+    {
+     "id": "XI.6.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.7\">6.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Theorem <a class=\"ref\" href=\"#XI.6.2\">6.2</a> applies whenever H is an abelian scheme over S, or more generally an extension of such a scheme by a torus. Indeed, the question being local on S, one may suppose that there exists a prime number \\(\\ell\\) prime to the residue characteristics of S, and one sees that it then suffices to take for E the set of powers of \\(\\ell\\) in order to satisfy conditions a') and b).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>An argument analogous to that of <a class=\"ref\" href=\"#XI.6.1\">6.1</a> gives us the</p>"
+    },
+    {
+     "id": "XI.6.8",
+     "type": "theoreme",
+     "label": "6.8",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">6.8</span></div>\n  <div class=\"thm-body\"><p>Let X be a prescheme smooth over S, with nonempty connected geometric fibers. Then for every closed subprescheme Y of X, the functor \\(\\prod_{X/S} Y/X\\) is representable by a closed subprescheme T of S. If Y is of finite presentation over X, then T is of finite presentation over S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As \\(f : X \\to S\\) is faithfully flat and locally of finite presentation, it is covering for the fpqc topology. As, on the other hand, \\(T = \\prod_{X/S} Y/X\\) is evidently a sub<em>sheaf</em> of S (for the fpqc topology), it follows that the question of the representability of T by a closed subprescheme of S is of local nature on S for the fpqc topology, and the same is true of the question of deciding whether T is of finite presentation over S. After performing the base change \\(S' \\to S\\), with \\(S' = X\\), we are reduced to the case where X admits a section e over S. We may moreover suppose S affine and a fortiori quasi-compact. We then have:</p>"
+    },
+    {
+     "id": "XI.6.9",
+     "type": "corollaire",
+     "label": "6.9",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.6.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">6.9</span></div>\n  <div class=\"thm-body\"><p>Under the conditions of <a class=\"ref\" href=\"#XI.6.8\">6.8</a>, suppose that S is quasi-compact and that X admits a section e over S. Let, for every integer \\(n \\geqslant 0\\), \\(X_n\\) be the subprescheme of X, the n-th infinitesimal neighborhood of the section e. Suppose Y of finite presentation over X. Then there exists an integer \\(n \\geqslant 0\\) such that \\(\\prod_{X/S} Y/X = \\prod_{X_n/S} Y_n/X_n\\) (where \\(Y_n = Y \\cap X_n\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This corollary does imply 6.8 when Y is of finite presentation over X, thanks to <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>, for X being smooth over S, \\(X_n\\) is finite and locally free over S and a fortiori is \"essentially free\" over S in the sense of <a class=\"ref\" href=\"#VIII.6.1\">VIII 6.1</a>, hence \\(\\prod_{X_n/S} Y_n/X_n\\) is representable by a closed subprescheme of S. Moreover, the proof of <em>loc. cit.</em>, or the reduction to the noetherian case, shows us immediately that the said closed subprescheme of S is of finite presentation over S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first prove 6.9, hence 6.8, when S is <em>noetherian</em>. Let \\(T_n = \\prod_{X_n/S} Y_n/X_n\\); then the \\(T_n\\) form a decreasing sequence of closed subpreschemes of S, and S being noetherian, this sequence is stationary. Let \\(R = \\bigcap_{n \\geqslant 0} \\prod_{X_n/S} Y_n/X_n\\) be their common value for n large; we evidently have \\(T \\subset R\\), and it suffices to establish that \\(R \\subset T\\). After performing the base change \\(R \\to S\\), we are reduced to the case where \\(R = S\\), i.e. \\(Y_n = X_n\\) for every n, i.e. \\(Y \\supset X_n\\) for every n, and to proving then that \\(T = S\\), i.e. \\(Y = X\\). Now \\(Y \\supset X_n\\) for every n implies (thanks to the fact that X is locally noetherian) that Y is, in a neighborhood of each point of \\(e(S)\\), an induced open subprescheme of X, hence there exists an induced open subset U of X, containing \\(e(S)\\), such that \\(U \\subset Y\\). By virtue of <a class=\"ref\" href=\"#IX.4.3\">IX 4.3</a>, the fibers of \\(X/S\\) being integral, U is schematically dense in X, hence (Y being a closed subprescheme dominating U) we have \\(Y = X\\). This proves 6.9, hence 6.8, in this case.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The general case proceeds by reduction to the preceding one. For every \\(s \\in S\\), there exist an affine open neighborhood U of s and an affine open neighborhood V of \\(e(s)\\) such that \\(f(V) \\subset U\\). Then \\(f(V)\\) is an open neighborhood of s contained in U, and if \\(S'\\) is an affine open neighborhood of s contained in \\(e^{-1}(V) \\cap f(V)\\), and \\(X' = V \\cap f^{-1}(S')\\), then \\(X'\\) and \\(S'\\) are affine open subsets of X resp. S, and \\(X'/S'\\) admits a section. Because of the local nature of 6.8 and 6.9 we may suppose \\(S = S'\\). I claim that then \\(\\prod_{X/S} Y/X = \\prod_{X'/S} Y'/X'\\), where \\(Y' = Y \\cap X'\\); indeed, by virtue of <a class=\"ref\" href=\"#IX.4.6\">IX 4.6</a>, \\(X'\\) is schematically dense in X (at least when X is quasi-separated over S, so that \\(X'\\) is retrocompact in X; but in fact one can show without difficulty that IX 4.6 remains valid without the retrocompactness hypothesis), and likewise for every base change \\(S_1 \\to S\\), \\(X' \\times_S S_1\\) is schematically dense in \\(X \\times_S S_1\\), whence at once the stated equality. This reduces us to the case where \\(X = X'\\), so we may suppose S and X affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, if \\(X = \\mathrm{Spec}(B)\\) and if J is the ideal of B which defines Y, J is the inductive limit of its subideals of finite type, hence Y is an intersection of closed subpreschemes \\(Y_i\\) of X which are of finite presentation over S, and consequently \\(\\prod_{X/S} Y/X = \\bigcap_i \\prod_{X/S} Y_i/X\\), which reduces us, in order to prove 6.8, to the case where Y is of finite presentation over X. It then suffices to prove 6.9 with S and X affine. But then X and Y over S come by base change \\(S \\to S_0\\) from an analogous situation \\(X_0\\) and \\(Y_0\\) over \\(S_0\\), with \\(S_0\\) noetherian, which reduces us to the case where S is noetherian, which has already been treated. This completes the proof of 6.8 and 6.9.</p>"
+    },
+    {
+     "id": "XI.6.10",
+     "type": "corollaire",
+     "label": "6.10",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.6.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">6.10</span></div>\n  <div class=\"thm-body\"><p>Let X be a smooth S-group prescheme of finite presentation, with connected fibers, Y a group prescheme of finite presentation over S, \\(i : Y \\to X\\) a monomorphism of S-group preschemes, thus making Y a subgroup of X. Then \\(\\prod_{X/S} Y/X\\) is representable by a closed subprescheme of finite presentation of S. If S is quasi-compact, denoting for every integer \\(n \\geqslant 0\\) by \\(X_n\\) the n-th infinitesimal neighborhood of the unit section of X, and setting \\(Y_n = X_n \\cap Y\\), we have for n large enough: \\(\\prod_{X/S} Y/X = \\prod_{X_n/S} Y_n/X_n\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof is essentially that of <a class=\"ref\" href=\"#XI.6.9\">6.9</a>. Note that the unit sections of X and of Y induce bijective immersions \\(S \\to X_n\\) and \\(S \\to Y_n\\), hence inducing isomorphisms of \\(S_{\\mathrm{réd}}\\) with \\((X_n)_{\\mathrm{réd}}\\) and \\((Y_n)_{\\mathrm{réd}}\\), which implies that the injection \\(Y_n \\to X_n\\) is <em>proper</em>, hence, being a monomorphism of finite presentation, is a closed immersion. Consequently, by virtue of <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a> already used, \\(\\prod_{X_n/S} Y_n/X_n\\) is representable by a closed subprescheme of S of finite presentation over S, and it therefore remains to prove the last assertion of 6.10 in the case where we suppose S moreover affine. One again reduces immediately to the case where S is noetherian, and we are reduced to proving that then \\(R = T\\) (with the notations of the proof of 6.9), or again that \\(Y \\supset X_n\\) for every n implies \\(Y = X\\). Now the hypothesis implies that \\(i : Y \\to X\\) is étale at the points of the unit section of Y over S, hence Y is smooth over S at the points of the unit section, whence it follows that the open subset \\(Y'\\) of the points of Y at which Y is smooth over S is an induced open subgroup of Y. Then \\(Y' \\to X\\) is an étale monomorphism by virtue of <a class=\"ref\" href=\"#X.3.5\">X 3.5</a>, hence an open immersion; now the fibers of X being connected and every open subgroup of an algebraic group being also closed, it follows that it is a surjective open immersion, i.e. an isomorphism. Hence \\(Y' = X\\) and a fortiori \\(Y = X\\), which completes the proof of 6.10.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proceeding as in <a class=\"ref\" href=\"#VIII.6.5\">VIII 6.5</a>, one concludes from 6.10:</p>"
+    },
+    {
+     "id": "XI.6.11",
+     "type": "corollaire",
+     "label": "6.11",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.6.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">6.11</span></div>\n  <div class=\"thm-body\"><p>Let G be an S-group prescheme locally of finite type and quasi-separated over S, H a group prescheme smooth of finite presentation over S with connected fibers, \\(i : H \\to G\\) a monomorphism of S-groups, thus making H a subgroup of G. Then:</p>\n  <p>a) \\(\\underline{\\mathrm{Centr}}_G(H)\\) and \\(\\underline{\\mathrm{Norm}}_G(H)\\) are representable by closed subpreschemes of G of finite presentation over G, and likewise, for every monomorphism \\(j : K \\to G\\) of finite presentation of S-group preschemes, \\(\\underline{\\mathrm{Transp}}_G(H, K)\\) is representable by a closed subprescheme of G of finite presentation over G.</p>\n  <p>b) If G is quasi-compact, in the various cases considered in a), there exists an integer \\(n \\geqslant 0\\) such that (if \\(H_n\\) denotes the n-th infinitesimal neighborhood of the unit section of H) we have\n  \\[\n  \\begin{aligned}\n  \\underline{\\mathrm{Centr}}_G(H) &amp;= \\underline{\\mathrm{Centr}}_G(H_n) \\\\\n  \\underline{\\mathrm{Norm}}_G(H) &amp;= \\underline{\\mathrm{Norm}}_G(H_n) \\\\\n  \\underline{\\mathrm{Transp}}_G(H, K) &amp;= \\underline{\\mathrm{Transp}}_G(H_n, K) = \\underline{\\mathrm{Transp}}_G(H_n, K_n).\n  \\end{aligned}\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One applies <a class=\"ref\" href=\"#XI.6.10\">6.10</a> to the group prescheme \\(X = H_G = H \\times_S G\\) over the base prescheme G, and to the subgroup prescheme Y the inverse image of the diagonal subgroup of \\((G \\times_S G)_G\\) over G under a suitable homomorphism of G-groups from X to \\((G \\times_S G)_G\\) (in the case of Centr), resp. the inverse image of \\(K_G\\) under a suitable homomorphism of G-groups from X to \\(G_G\\) (in the case of Transp). The case of Norm reduces to the transporter by taking \\(K = H\\), the hypothesis on G ensuring that \\(H \\to G\\) is of finite presentation (hence \\(Y \\to X\\) is of finite presentation); in the case of Centr, the hypothesis made on G ensures that the diagonal group of \\(G \\times_S G\\) is of finite presentation over \\(G \\times_S G\\), whence again the fact that Y is of finite presentation over X.</p>"
+    },
+    {
+     "id": "XI.6.12",
+     "type": "remarque",
+     "label": "6.12",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.6.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">6.12</span></div>\n  <div class=\"thm-body\"><p>One can prove (using rather delicate results from EGA VI <sup class=\"footnote-ref\"><a id=\"XI-fn13ref\" href=\"#XI-fn13\">13</a></sup>) that if X is a flat prescheme of finite presentation over S, which is <em>proper</em> over S or has <em>nonempty connected</em> geometric fibers, then for every closed subprescheme Y of X of finite presentation over S, \\(\\prod_{X/S} Y/X\\) is representable by a closed subprescheme of S of finite presentation over S. Likewise, if X is a flat S-group prescheme of finite presentation with connected fibers, and \\(i : Y \\to X\\) a monomorphism of S-groups, with Y an S-group prescheme of finite presentation, then \\(\\prod_{X/S} Y/X\\) is representable by a closed subprescheme of S of finite presentation over S. In particular, 6.11 a) remains valid on replacing the hypothesis \"H smooth over S\" by \"H flat over S\".</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn12",
+     "number": "12",
+     "html": "The present Number does not use the results of N<sup>os</sup> 3, 4, 5; its natural place would be in VI<sub>B</sub>."
+    },
+    {
+     "id": "XI-fn13",
+     "number": "13",
+     "html": "cf. also J.P. Murre, <em>Representation of unramified functors. Applications</em>, Sém. Bourbaki N<sup>o</sup> 294 (Mai 1965), th. 3 (p. 13)."
+    }
+   ]
+  }
+ ]
+}

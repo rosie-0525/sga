@@ -1,0 +1,2128 @@
+{
+ "chapter_id": "21",
+ "title": "EXPOSÉ XXI THE LEVEL OF THE COHOMOLOGY OF COMPLETE INTERSECTIONS",
+ "number": "XXI",
+ "pages": [
+  {
+   "id": "21",
+   "title": "EXPOSÉ XXI THE LEVEL OF THE COHOMOLOGY OF COMPLETE INTERSECTIONS",
+   "blocks": [
+    {
+     "id": "21",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"21\">EXPOSÉ XXI<br>THE LEVEL OF THE COHOMOLOGY OF COMPLETE INTERSECTIONS<span class=\"author\">by N. Katz<br><br>with an Appendix by P. Deligne (§ 5)</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-s2",
+   "title": "CONTENTS",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>CONTENTS</h2>"
+    },
+    {
+     "id": null,
+     "type": "table",
+     "label": null,
+     "title": null,
+     "html": "<table class=\"tabular\">\n<tr><td>0.</td><td>Introduction.</td><td>1</td></tr>\n<tr><td>1.</td><td>The Hasse-Witt matrix of a complete intersection.</td><td>2</td></tr>\n<tr><td>2.</td><td>The coniveau in the case of a finite field of definition.</td><td>14</td></tr>\n<tr><td>3.</td><td>Application to complete intersections.</td><td>16</td></tr>\n<tr><td>4.</td><td>The conclusions.</td><td>19</td></tr>\n<tr><td>5.</td><td>Integrality theorems.</td><td>21</td></tr>\n</table>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "21.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"21.0\">0. <u>Introduction</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be a projective and smooth variety of dimension \\(n\\geq3\\),\n\\(Y(d)\\) a section by a hypersurface of degree \\(d\\), and\n\\(E^{n-1}(Y(d),\\mathbb Q_\\ell)\\) the « vanishing » co\\rhomology of \\(Y(d)\\)\n(XVIII 5.4.4). The aim of the present exposé is to prove that for \\(d\\)\nsufficiently large, and \\(Y(d)\\) sufficiently general, it is not true\nthat every \\(E^{n-1}(Y(d),\\mathbb Q_\\ell)\\) « comes from » the \\(H^i\\) (\\(i&lt;n-1\\))\nof proper and smooth algebraic varieties, via algebraic\ncorrespondences. In characteristic zero, this is a trivial consequence of the\nHodge bigrading on complex co\\rhomology, and of the fact that, for\nco\\rherent co\\rhomology, we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\dim H^{n-1}(Y(d),\\mathcal O_{Y(d)})\\longrightarrow\\infty\n\\quad\\text{for }d\\longrightarrow\\infty.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The met\\rhod employed in characteristic \\(p\\) is again to relate the\nco\\rherent co\\rhomology \\(H^{n-1}(Y(d),\\mathcal O_{Y(d)})\\) (a vector space in\nchar. \\(p\\)) to the étale co\\rhomology \\(H^{n-1}_{\\mathrm{et}}(Y(d),\\mathbb Q_\\ell)\\).\nFor this, one places oneself over a base field</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which is finite, where the two are linked by the ζ function of the variety\n\\(Y(d)\\), a function which is expressed in terms of ℓ-adic co\\rhomology, and\nwhose « reduction modulo \\(p\\) » is expressed in terms of co\\rherent\nco\\rhomology (cf. XXII 3.9). This met\\rhod works without problem for\ncomplete intersections, thanks to the detailed knowledge of the two kinds\nof co\\rhomology (étale and co\\rherent) in this case, and gives the main result\n4.2 as a consequence of a result (1.4) on the Hasse-Witt operations (1.0).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There exist heuristic arguments due to A. GROTHENDIECK, relying\non the yoga of crystalline co\\rhomology, which make plausible the general\nstatement for every projective and smooth \\(X\\), by essentially the same met\\rhod.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Even in the particular case of complete intersections, the proof\nuses in an essential way (2.2) the integrality theorem for the eigenvalues\nof Frobenius 2.1, recently proved by P. DELIGNE, and which is proved in\nAppendix I.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-1",
+   "title": "1. The Hasse-Witt matrix of a complete intersection",
+   "blocks": [
+    {
+     "id": "21.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"21.1\">1. <u>The Hasse-Witt matrix of a complete intersection</u></h2>"
+    },
+    {
+     "id": "21.1.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"21.1.0\"><u>Definition 1.0.</u> <u>A proper scheme over a field \\(k\\)\nof characteristic exponent \\(p\\) is called special if the additive\n\\(p\\)-linear operation</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.0.1}\n\\mathcal F_p:\\mathcal O_X\\longrightarrow\\mathcal O_X,\\qquad g\\longmapsto g^p\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>induces an operation</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.0.2}\n\\mathcal F_p:H^{\\dim X}(X,\\mathcal O_X)\\longrightarrow H^{\\dim X}(X,\\mathcal O_X)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>which is nilpotent (or, what amounts to the same thing, setting\n\\(M=\\dim_k(H^{\\dim X}(X,\\mathcal O_X))\\), if the \\(p^M\\)-linear operation</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.0.3}\n\\mathcal F_p^M=\\mathcal F_{p^M}:\\mathcal O_X\\longrightarrow\\mathcal O_X,\n\\qquad g\\longmapsto g^{p^M}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>kills \\(H^{\\dim X}(X,\\mathcal O_X)\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Recall [2] that for every \\(i\\in\\mathbb Z\\), the \\rhomomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nH^i(X,\\mathcal O_X)\\xrightarrow{\\ \\mathcal F_p\\ }H^i(X,\\mathcal O_X)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>induced by (1.0.1) is classically called <u>the Hasse-Witt \\rhomomorphism</u>\nin \\(H^i(X,\\mathcal O_X)\\). Note that if \\(p=1\\), saying that \\(X\\) is\nnon-special simply means that \\(H^{\\dim X}(X,\\mathcal O_X)\\ne0\\).</p>"
+    },
+    {
+     "id": "21.1.1",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.1.1\"><div class=\"thm-head\"><u>Theorem 1.1.</u></div><div class=\"thm-body\">\n<p><u>Fix a characteristic exponent \\(p\\), a dimension \\(n\\geq1\\), an integer\n\\(r\\geq1\\) and a multidegree \\((d_1,\\ldots,d_r)\\). If we have</u></p>\n\n\\[\n\\tag{1.1.0}\n\\sum_{i=1}^r d_i\\geq(n+r)+1\n\\]\n\n<p><u>then, among all the complete intersections (of dimension \\(n\\)) in\n\\(\\mathbb P^{n+r}\\) of multidegree \\((d_1,\\ldots,d_r)\\) in characteristic \\(p\\),\na « sufficiently general » element is non-special (1.0).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> Denote by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.1.1}\nf:X_U\\longrightarrow U\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the « universal family » of complete intersections in \\(\\mathbb P^{n+r}\\) of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>multidegree \\((d_1,\\ldots,d_r)\\) in characteristic \\(p\\) (equipped with the defining\nequations), so that \\(U\\) is an open set in a product of \\(r\\) projective\nspaces over \\(\\mathbb F_p\\), of an impressive dimension.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know that the \\(\\mathcal O_U\\)-module</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.1.2}\nR^nf_*\\mathcal O_{X_U}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is locally free, and its formation commutes with any base change\n(XI 1.5 (i)) and, by the hypothesis (1.1.0), that its rank \\(M\\) is nonzero\n(XI 2.5). This gives the theorem if \\(p=1\\), for every complete intersection\nsatisfying (1.1.0).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose \\(p\\geq2\\). The iterated Hasse-Witt operation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.1.3}\n\\mathcal F_p^M=\\mathcal F_{p^M}:R^nf_*\\mathcal O_{X_U}\n\\longrightarrow R^nf_*\\mathcal O_{X_U}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>being \\(p^M\\)-linear over \\(\\mathcal O_U\\), and \\(R^nf_*\\mathcal O_{X_U}\\)\nbeing locally free, the action (1.1.3) is expressed locally on \\(U\\) by a\nmatrix \\(H\\) of type \\((M,M)\\) with values in \\(\\mathcal O_U\\), so that</p>"
+    },
+    {
+     "id": "21.1.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"21.1.1.4\"><strong>(1.1.4)</strong>\n\\(\\{u\\in U\\mid X_u\\text{ is non-special}\\}\\) is open in \\(U\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(for it is the set of the \\(u\\) such that \\(H(u)\\ne0\\)), and, \\(U\\) being\nirreducible, it suffices to find a value of \\(u\\) such that \\(X_u\\) is non-\nspecial, which we are going to do over a finite field.</p>"
+    },
+    {
+     "id": "21.1.1.5",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"21.1.1.5\"><div class=\"thm-head\"><u>Proposition 1.1.5.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a complete intersection over \\(\\mathbb F_q\\). If \\(X\\) has no\n\\(\\mathbb F_q\\)-rational points, then \\(X\\) is non-special.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> Indeed, it evidently suffices to prove that for \\(X\\)\na complete intersection, we have the implication</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.5.1}X\\text{ special}\\Longrightarrow \\operatorname{card}(X(\\mathbb F_q))\\equiv1\\pmod p.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now, by the trace formula (proved in the following exposé\nXXII, 3.2), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{card}(X(\\mathbb F_q))=\\sum_{i\\geq0}(-1)^i\n\\operatorname{tr}(\\mathfrak F_q,H^i(X,\\mathcal O_X)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Taking into account that \\(H^i(X,\\mathcal O_X)=0\\) if \\(i\\ne0,n=\\dim(X)\\)\nand \\(H^0(X,\\mathcal O_X)\\simeq\\mathbb F_q\\) (XI, 1.5 (iii)), this can be rewritten</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{card}(X(\\mathbb F_q))=1+(-1)^n\n\\operatorname{tr}(\\mathfrak F_q,H^n(X,\\mathcal O_X)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X\\) is special, then by definition the operation of \\(\\mathfrak F_q\\) on\n\\(H^n(X,\\mathcal O_X)\\) is nilpotent, hence has zero trace, whence the implication\n(1.1.5.1) and the proposition.</p>"
+    },
+    {
+     "id": "21.1.2",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"21.1.2\"><div class=\"thm-head\"><u>Proposition 1.2.</u></div><div class=\"thm-body\">\n<p><u>Whatever the power \\(q\\) of \\(p\\), if</u></p>\n\\[\n\\sum_{i=1}^r d_i\\geq n+r+1,\n\\]\n<p><u>there exists a complete intersection in \\(\\mathbb P_{\\mathbb F_q}^{n+r}\\) of multidegree\n\\((d_1,\\ldots,d_r)\\) which has no \\(\\mathbb F_q\\)-rational point.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> Let us begin with the case \\(r=1\\). For every \\(d\\geq n+2\\), we must find a\nhomogeneous form of degree \\(d\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.1}H(X_1,\\ldots,X_{n+2})\\in\\mathbb F_q[X_1,\\ldots,X_{n+2}]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.2}(\\alpha_1,\\ldots,\\alpha_{n+2})\\in(\\mathbb F_q)^{n+2},\\quad\nH(\\alpha_1,\\ldots,\\alpha_{n+2})=0\\Longrightarrow\n\\alpha_1=\\cdots=\\alpha_{n+2}=0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For this, let us set \\(E=\\mathbb F_{q^d}\\), and let \\(\\beta_1,\\ldots,\\beta_{n+2}\\) be elements of \\(E\\) which\nare linearly independent over \\(\\mathbb F_q\\). We take</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.3}H(X_1,\\ldots,X_{n+2})=N_{E/\\mathbb F_q}\n\\left(\\sum_{i=1}^{n+2}\\beta_iX_i\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the general case, taking into account that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.4}\\sum_i^r d_i\\geq n+r+1,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>we can find \\(r\\) integers</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.5}1\\leq a_1&lt;a_2&lt;\\cdots&lt;a_r=n+r+1\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>satisfying</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.6}\\begin{cases}\nd_1\\geq a_1,\\\\\nd_2\\geq a_2-a_1,\\\\\n\\phantom{d_2\\geq a_2-a_1,}\\\\[-10pt]\nd_r\\geq a_r-a_{r-1}.\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We take, for \\(i=1,\\ldots,r\\), a homogeneous form of degree \\(d_i\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_i(X_{a_{i-1}+1},\\ldots,X_{a_i})\\in\n\\mathbb F_q[X_{a_{i-1}+1},\\ldots,X_{a_i}]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in \\(a_i-a_{i-1}\\) variables which has the property (1.2.2). The desired complete\nintersection is the one defined by the homogeneous forms</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_1(X_1,\\ldots,X_{a_1}),\\ldots,\nH_r(X_{a_{r-1}},\\ldots,X_{a_r}).\n\\]\n\n</p>"
+    },
+    {
+     "id": "21.1.3",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.1.3\"><div class=\"thm-head\"><u>Theorem 1.3.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a complete intersection, irreducible, of dimension\n\\(n\\geq1\\) over a field \\(k\\) of characteristic exponent \\(p\\). For every integer\n\\(d\\geq1+n\\), a sufficiently general section of \\(X\\) by a hypersurface of\ndegree \\(d\\) is non-special (1.0).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> The sections \\(X.H_u\\) of \\(X\\) (by hypersurfaces) of\ndegree \\(d\\) are (parametrized by) the lines in \\(H^0(X,\\mathcal O_X(d))\\), i.e. by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.1}\\mathbb P(H^0(X,\\mathcal O_X(d)))=U\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and above \\(U\\), we have the « universal section of \\(X\\) by a\nhypersurface of degree \\(d\\) »</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.2}f:X.H_u\\longrightarrow U,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>let \\(U'\\) be the open set of the \\(u\\in U\\) such that \\(\\dim(X_u)=n-1\\). We know by\n(XI 1.5 (i) and 2.5) that the \\(\\mathcal O_{U'}\\)-module</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.3}R^{n-1}f_*(\\mathcal O_{X.H_u})\\bigm|U'\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a locally free sheaf whose formation commutes with any base\nchange, and is of rank \\(M\\geq1\\). This gives the theorem\nif \\(p=1\\), for every section by a hypersurface of degree \\(\\geq1+n\\).\nWe therefore suppose that \\(p&gt;0\\); the operation \\(\\mathfrak F_p^n\\) is again expressed locally\nin terms of a matrix \\(M\\times M\\) with values in \\(\\mathcal O_{U'}\\), so that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.4}\\{u\\in U'\\mid X.H_u\\text{ is non-special}\\}\\text{ is open in }U'.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It therefore suffices to prove that the set (1.3.4) is <u>nonempty</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first treat the case</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.5}k=\\mathbb F_q.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Replacing \\(\\mathbb F_q\\) by a finite extension if necessary, we may assume</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.6}\\operatorname{card}(X(\\mathbb F_q))&gt;0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.7}\\text{there exist homogeneous coordinates }X_1,\\ldots,X_{n+r+1}\n\\text{ in the ambient space }\\mathbb P_k^{n+r},\\text{ such that }X\\text{ does not}\n\\text{ meet the linear variety }X_1=\\cdots=X_{n+1}=0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We then take a homogeneous form of degree \\(d\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.8}H(X_1,\\ldots,X_{n+1})\\in\\mathbb F_q[X_1,\\ldots,X_{n+1}]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which has the property (1.2.2) (this is possible since \\(d\\geq1+n\\)). We take\nfor \\(H\\) the hypersurface in \\(\\mathbb P^{n+r}\\) with equation \\(H(X_1,\\ldots,X_{n+1})=0\\). Then</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the intersection \\(X.H\\) has no \\(\\mathbb F_q\\)-rational point by construction, which\nshows at the same time, thanks to (1.3.6), that \\(X\\not\\subset H\\), hence \\(X.H\\) is of\ndimension \\(n-1\\) (\\(X\\) being irreducible), i.e. \\(H\\in U'\\), and that \\(X.H\\) is\nnon-special (1.5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us pass to the general case. Looking at the equations which define\n\\(X\\), we see that we may assume that \\(k\\) is of finite type over \\(\\mathbb F_p\\), and that there\nexists a subring \\(B\\) of \\(k\\), of finite type (as a ring) over \\(\\mathbb F_p\\), whose\nfield of fractions is \\(k\\), such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.9}X\\subset\\mathbb P_k^{n+r}\\text{ is the generic fiber of a relative complete intersection }\n\\widetilde X\\subset\\mathbb P_B^{n+r}\\text{ which is, fiber by fiber, of the same multidegree as }X,\n\\text{ and geometrically irreducible.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Denote by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.10}\\rho:\\widetilde X\\longrightarrow S=\\operatorname{Spec}(B)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the projection, by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.11}E,\\text{ the locally free }\\mathcal O_S\\text{-module }\\rho_*\\mathcal O_{\\widetilde X}(d),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.12}\\pi:T=\\mathbb P^{\\vee}(E)\\longrightarrow S\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the associated bundle of lines in \\(E\\). Note that the generic fiber of\n(1.3.12) is none other than \\(U=\\mathbb P(H^0(X,\\mathcal O_X(d)))\\). Above \\(T\\) we have\nthe universal section of \\(\\widetilde X\\subset\\mathbb P_B^{n+r}\\) by hypersurfaces of degree \\(d\\), denoted</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.13}\\alpha:\\widetilde X.H_T\\longrightarrow T.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>These constructions fit into the diagram with cartesian squares</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.14}\n\\xymatrix{\n\\widetilde X.H_T &amp; \\widetilde X.H_U=(\\widetilde X.H_T)\\times_U T \\ar[l] \\\\\nT \\ar[u]^{\\alpha} &amp; U=T\\times_S\\operatorname{Sp}(k) \\ar[l]\\ar[u] \\\\\nS \\ar[u]^{\\pi} &amp; \\operatorname{Sp}(k)\\ar[l]\\ar[u]\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and we again have that the \\(\\mathcal O_T\\)-module</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.15}R^{n-1}\\alpha_*(\\mathcal O_{\\widetilde X.H_T})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>above the open set \\(T'\\subset T\\) formed by the \\(t\\) such that\n\\(\\dim\\alpha^{-1}(t)=n-1\\), is locally free, and its formation there commutes with\nany base change. Taking into account that the schemes \\(T\\) and \\(U\\) have\nthe same generic point, to prove that (1.3.4) is nonempty, it suffices to\nverify that the open subset of \\(T'\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.16}\\{t\\in T'\\mid \\widetilde X_{\\pi(t)}.H_t\\text{ is non-special}\\}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is nonempty. Now, the case (1.3.5) already treated proves that for <u>every</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>closed point</u> \\(s\\in S\\), the fiber \\(\\pi^{-1}(s)\\) has a nonempty intersection\nwith the open set (1.3.16), Q.E.D.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Entirely similar arguments allow one to prove:</p>"
+    },
+    {
+     "id": "21.1.4",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.1.4\"><div class=\"thm-head\"><u>Theorem 1.4.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\subset\\mathbb P^N\\) be a projective Cohen-Macaulay scheme,\nequidimensional, of dimension \\(n\\geq1\\), over a field \\(k\\); then there exists\nan integer \\(d_0\\) such that for \\(d\\geq d_0\\), denoting by\n\\(X.H\\mathrel{\\mat\\rhop{\\longrightarrow}^{i}}X\\) the inclusion of a section by a\ngeneral hypersurface of degree \\(d\\), the action of</u></p>\n\\[\n\\tag{1.4.0}\\mathfrak F_p\\text{ on }H^{n-1}(X.H,\\mathcal O_{X.H})/\ni^*H^{n-1}(X,\\mathcal O_X)\n\\]\n<p><u>is non-nilpotent.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> One reduces, just as above, to the case\n\\(k=\\mathbb F_q\\), and to the problem of finding a <u>single</u> \\(H\\) (for a given degree\nlarge enough and such that \\(\\dim(H^{n-1}(X.H,\\mathcal O_{X.H}))\\) is\nindependent of \\(H\\); cf. 1.4.4) which makes (1.4.0) true. Enlarging\n\\(q\\) if necessary, we may assume that the irreducible components \\(X_i\\) of \\(X\\) are\ngeometrically irreducible, satisfy</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.1}\\operatorname{Card}X_i(\\mathbb F_q)\\geq2,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.2}\\text{there are projective coordinates }X_0,\\ldots,X_N\n\\text{ such that }X\\text{ does not meet the linear variety }X_0=\\cdots=X_n=0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By a vanishing theorem of Serre ([1] or SGA 2 XII 1.4), there exists\nan integer \\(d_1\\) such that for every integer \\(d\\geq d_1\\), we have:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.3}H^i(X,\\mathcal O_X(-d))=0\\quad\\text{if }i\\neq n=\\dim X.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Denoting by \\(H\\) a hypersurface of degree \\(d\\geq d_1\\), we have (by 1.4.3):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.4}\n\\begin{aligned}\nH^i(X,\\mathcal O_X)&amp;\\xrightarrow{\\sim}H^i(X.H,\\mathcal O_{X.H})\n&amp;&amp;\\text{if }i\\leq n-2,\\\\\nH^{n-1}(X,\\mathcal O_X)&amp;\\l\\rhook\\joinrel\\longrightarrow\nH^{n-1}(X.H,\\mathcal O_{X.H})&amp;&amp;\\text{injective}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We are going to prove the theorem by taking \\(d_0=\\max(1+N,d_1)\\). For\nevery integer \\(d\\geq d_0\\), we must find a hypersurface \\(H\\) of degree\n\\(d\\), defined over \\(\\mathbb F_q\\), which contains no \\(X_i\\), and such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.5}\\operatorname{trace}\\bigl(\\mathfrak F_q\\text{ on }\nH^{n-1}(X.H,\\mathcal O_{X.H})/H^{n-1}(X,\\mathcal O_X)\\bigr)\\neq0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By the trace formula (XX, 3.2.1), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.6}\\operatorname{card}(X.H(\\mathbb F_q))\\bmod p\n=\\sum_{i=0}^{n-1}(-1)^i\\operatorname{tr}(\\mathfrak F_q\\text{ on }\nH^i(X.H,\\mathcal O_{X.H}))\n\\]\n\\[\n\\mathrel{\\mat\\rhop=^{(1.4.4)}}\n\\sum_{i=0}^{n-1}(-1)^i\\operatorname{tr}(\\mathfrak F_q\\text{ on }\nH^i(X,\\mathcal O_X))+(-1)^{n-1}\\operatorname{tr}\\left(\\mathfrak F_q\\text{ on }\n\\frac{H^{n-1}(X.H,\\mathcal O_{X.H})}{H^{n-1}(X,\\mathcal O_X)}\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Denote by \\(a\\in\\mathbb Z/p\\mathbb Z\\) the quantity</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\sum_{i=0}^{n-1}(-1)^i\\operatorname{tr}(\\mathfrak F_q\\text{ on }H^i(X,\\mathcal O_X)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It then suffices, for every \\(d\\geq d_0\\), to find an \\(H\\) defined over\n\\(\\mathbb F_q\\), of degree \\(d\\), which does not contain \\(X\\), and such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.7}\\operatorname{Card}(X.H(\\mathbb F_q))\\neq a\\pmod p.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There are two cases to distinguish. If \\(a\\neq0\\), it suffices to take an\n\\(H\\) over \\(\\mathbb F_q\\) such that \\((X.H)(\\mathbb F_q)\\) is empty, just as\nin (1.3.8). Such an \\(H\\) satisfies (1.4.7), and contains no \\(X_i\\) (by\nhypothesis we know that \\(\\operatorname{card}(X_i(\\mathbb F_q))\\geq2\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(a=0\\), it will suffice to find an \\(H\\) such that\n\\(\\operatorname{Card}(X.H)(\\mathbb F_q)=1\\); (1.4.7) will be satisfied, and\n\\(X_i\\not\\subset H\\), since \\(\\operatorname{Card}(X_i)(\\mathbb F_q)\\geq2\\). For\nthis, one c\\rhooses projective coordinates \\(X_0,\\ldots,X_N\\) such that\n\\((1,0,\\ldots,0)\\) is a point of \\(X\\). We take \\(H\\) with equation\n\\(H(X_1,\\ldots,X_N)=0\\), where \\(H\\) is a homogeneous form such that (cf. (1.2.2))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.8}\\alpha_1,\\ldots,\\alpha_N\\in\\mathbb F_q,\\quad\nH(\\alpha_1,\\ldots,\\alpha_N)=0\\Longrightarrow\\alpha_1=\\cdots=\\alpha_N=0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Then, the hypersurface defined by \\(H\\) in \\(\\mathbb P^N\\) has only the point\n\\((1,0,\\ldots,0)\\) as a point with values in \\(\\mathbb F_q\\), hence a fortiori,\n\\(X.H\\) has only this point as an \\(\\mathbb F_q\\)-point. qed.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-2",
+   "title": "2. The coniveau in the case of a finite field of definition",
+   "blocks": [
+    {
+     "id": "21.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"21.2\">2. The coniveau in the case of a finite field of definition</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>2.0.</strong> Let \\(X\\) be a separated scheme of finite type over\n\\(\\mathbb F_q\\). For every prime number \\(\\ell\\neq\\operatorname{car}(\\mathbb F_q)\\),\nwe denote by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.1}H_c^i(\\overline X,\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the co\\rhomology groups with proper supports of\n\\(\\overline X=X\\otimes_{\\mathbb F_q}\\overline{\\mathbb F}_q\\), which are\n\\(\\mathbb Q_\\ell\\)-vector spaces of finite rank on which the Galois group\n\\(\\operatorname{Gal}(\\overline{\\mathbb F}_q/\\mathbb F_q)\\) operates. Denote by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.2}\\varphi_q\\in\\operatorname{Gal}(\\overline{\\mathbb F}_q/\\mathbb F_q)\n\\quad\\text{the Frobenius automorphism}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know (SGA 5 XIII 3.2.1) that the zeta function of \\(X\\) (XXII 3.0.1) is\ngiven by the formula</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.3}Z(t,X/\\mathbb F_q)=\\prod_{i\\geq0}\n\\det\\bigl(1-t\\,\\varphi_q^{-1}\\mid H_c^i(\\overline X,\\mathbb Q_\\ell)\\bigr)^{(-1)^{i+1}}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>DELIGNE has recently proved, generalizing a result due to WASHNITZER\nin the case \\(X\\) projective and smooth, the following theorem, which is proved in\nthe appendix below (5.5.3):</p>"
+    },
+    {
+     "id": "21.2.1",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.2.1\"><div class=\"thm-head\"><u>Theorem 2.1.</u></div><div class=\"thm-body\">\n<p><u>The eigenvalues of \\(\\varphi_q^{-1}\\) in\n\\(H_c^i(\\overline X,\\mathbb Q_\\ell)\\) are algebraic integers, and, if\n\\(i&gt;\\dim X\\), they are divisible (as algebraic integers) by\n\\(q^{i-\\dim X}\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular, one obtains (tautologically),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1 bis}\\text{the eigenvalues of }\\varphi_q^{-1}\\text{ in }\nH_c^i(\\overline X,\\mathbb Q_\\ell(-j))\\text{ are algebraic integers\ndivisible by }q^j.\n\\]\n\n</p>"
+    },
+    {
+     "id": "21.2.2",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"21.2.2\"><div class=\"thm-head\"><u>Corollary 2.2.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be proper, smooth and geometrically connected over \\(\\mathbb F_q\\).\nThen the eigenvalues of \\(\\varphi_q^{-1}\\) in\n\\(N^jH^q(\\overline X,\\mathbb Q_\\ell)\\) (notation of XX 2.0.6) are algebraic\nintegers divisible by \\(q^j\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> The statement is invariant under a finite extension\n\\(\\mathbb F_q\\subset\\mathbb F_{q^m}\\) (which amounts to taking the \\(m\\)-th powers\nof the eigenvalues considered). After such a base change\nif necessary, we have, by definition, a finite number of schemes \\(T_i\\) projective, smooth,\nand geometrically connected over \\(\\mathbb F_q\\), of dimensions \\(d_i\\), and\nalgebraic cycles</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nZ_i\\text{ on }T_i\\mathbin{\\mathop{\\times}_{\\mathbb F_q}}X\n\\text{ of codimension }j+d_i\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that <u>the homomorphism of\n\\(\\operatorname{Gal}(\\overline{\\mathbb F}_q/\\mathbb F_q)\\)-modules</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{q-2j}(\\overline T_i,\\mathbb Q_\\ell(-j))\n\\xrightarrow{\\ \\theta\\mathrm{Cl}(Z_i)\\ }N^jH^q(\\overline X,\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is surjective, and one concludes by 2.1 bis.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-3",
+   "title": "3. Application to complete intersections",
+   "blocks": [
+    {
+     "id": "21.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"21.3\">3. Application to complete intersections</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.0.</strong> Let \\(X\\) be a complete intersection in\n\\(\\mathbb P^N\\), smooth of dimension \\(n\\geq1\\) over a field \\(k\\). For\n\\(\\ell\\neq\\operatorname{car}(k)\\), we know by « weak Lefschetz » and duality\nthat (XI 1.6)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.1}H^i(\\overline X,\\mathbb Q_\\ell)=\n\\begin{cases}\n0&amp;\\text{if }i\\text{ odd and }i\\neq n,\\\\\n\\mathbb Q_\\ell(-i/2)&amp;\\text{if }i\\text{ even }\\leq2n\\text{ and }i\\neq n,\\\\\nH^n(\\overline X,\\mathbb Q_\\ell)&amp;\\text{if }i=n.\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(k=\\mathbb F_q\\), we therefore obtain a formula for the zeta function:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.2}Z(t,X/\\mathbb F_q)\\prod_{i=0}^{n}(1-q^it)\n=\\det(1-t\\varphi_q^{-1}\\mid\\operatorname{Prim}^n(\\overline X,\\mathbb Q_\\ell))^{(-1)^{n+1}},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(we have used the primitive decomposition, and (3.0.1).)</p>"
+    },
+    {
+     "id": "21.3.0.3",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"21.3.0.3\"><div class=\"thm-head\"><u>Corollary 3.0.3.</u></div><div class=\"thm-body\">\n<p><u>Under the hypotheses 3.0, with \\(k=\\mathbb F_q\\), we have a congruence modulo \\(p\\)</u></p>\n\\[\n\\det(1-t\\varphi_q^{-1}\\mid H^n(\\overline X,\\mathbb Q_\\ell))\n\\equiv\\det(1-t\\mathfrak F_q\\mid H^n(X,\\mathcal O_X)).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> By the congruence formula (XXII, 3.2.1), and\ntaking into account that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.4}H^i(X,\\mathcal O_X)\\simeq\n\\begin{cases}\\mathbb F_q&amp;i=0,\\\\0&amp;1\\leq i\\leq n-1,\\\\0&amp;i\\geq n+1,\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.5}Z(t,X/\\mathbb F_q)\\equiv(1-t)^{-1}\n\\det(1-t\\mathfrak F_q\\mid H^n(X,\\mathcal O_X))^{(-1)^{n+1}}\\pmod p\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>so that (3.0.5) and (3.0.2) give the congruence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.6}\\det(1-t\\varphi_q^{-1}\\mid\\operatorname{Prim}^n(\\overline X,\\mathbb Q_\\ell))\n\\equiv\\det(1-t\\mathfrak F_q\\mid H^n(X,\\mathcal O_X))\\pmod p.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The desired conclusion follows, taking into account that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.7}H^n(\\overline X,\\mathbb Q_\\ell)\\simeq\n\\begin{cases}\n\\operatorname{Prim}^n(\\overline X,\\mathbb Q_\\ell)&amp;\\text{if }n\\text{ is odd},\\\\\n\\operatorname{Prim}^n(\\overline X,\\mathbb Q_\\ell)\\oplus\\mathbb Q_\\ell(-n/2)&amp;\\text{if }n\\text{ is even}.\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": "21.3.1",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"21.3.1\"><div class=\"thm-head\"><u>Corollary 3.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a complete intersection, smooth of dimension \\(n\\geq1\\) over\n\\(\\mathbb F_q\\). If</u></p>\n\\[\n\\tag{3.1.0}H^n(\\overline X,\\mathbb Q_\\ell)=N^1H^n(\\overline X,\\mathbb Q_\\ell)\n\\]\n<p><u>then</u></p>\n\\[\n\\tag{3.1.1}\\mathfrak F_p\\text{ is nilpotent on }H^n(X,\\mathcal O_X).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> By (2.2), (3.1.0) implies that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.2}\\det(1-t\\varphi_q^{-1}\\mid H^n(\\overline X,\\mathbb Q_\\ell))\n\\equiv1\\pmod p\\quad(\\text{and even mod }q),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and this, together with (3.0.3), implies that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.3}\\det(1-t\\mathfrak F_q\\mid H^n(X,\\mathcal O_X))=1,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which implies that \\(\\mathfrak F_q\\) is nilpotent on\n\\(H^n(X,\\mathcal O_X)\\), and hence that \\(\\mathfrak F_p\\) is, qed.</p>"
+    },
+    {
+     "id": "21.3.2",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"21.3.2\"><div class=\"thm-head\"><u>Proposition 3.2.</u></div><div class=\"thm-body\">\n<p>Let \\(X\\) be a complete intersection, smooth of dimension \\(n\\geq1\\) over a\nfield \\(k\\). If</p>\n\\[\n\\tag{3.2.1}H^n(\\overline X,\\mathbb Q_\\ell)=N^1H^n(\\overline X,\\mathbb Q_\\ell)\n\\]\n<p>then \\(X\\) is special, i.e.</p>\n\\[\n\\tag{3.2.2}\\mathfrak F_p\\text{ is nilpotent on }H^n(X,\\mathcal O_X).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> We may assume \\(k\\) of finite type over\n\\(\\mathbb F_p\\) (the case \\(p=0\\) being trivial), and that there exists a\nsub-\\(\\mathbb F_p\\)-algebra \\(B\\) of finite type of \\(k\\), such that \\(X/k\\) is\nthe generic fiber of a smooth relative complete intersection \\(\\widetilde X\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.2.3}\n\\xymatrix{\n\\widetilde X &amp; X=\\widetilde X/\\eta\\ar[l]\\ar[d]\\\\\n\\operatorname{Spec}(B)=S\\ar[u]^{\\pi} &amp; \\eta=\\operatorname{Sp}(k).\\ar[l]\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know that the \\(B\\)-module \\(R^n\\pi_*(\\mathcal O_{\\widetilde X})\\) is\nlocally free, and its formation commutes with any base change, hence\nthe set of points</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.2.4}\\{\\,s\\in S\\mid X_s\\text{ is special}\\,\\}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a closed subset of \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By (XX, 2.3), shrinking \\(S\\) if necessary, we may assume that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.2.5}\\forall s\\in S,\\quad\nH^n(\\overline X_s,\\mathbb Q_\\ell)=N^1H^n(\\overline X_s,\\mathbb Q_\\ell).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By (3.1), for every <u>closed</u> point \\(s\\) of \\(S\\), \\(X_s\\) is\nspecial. It follows that the closed subset (3.2.4) of \\(S\\) is all of \\(S\\), hence,\nin particular, that \\(X=\\widetilde X_\\eta\\) is special.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-4",
+   "title": "4. The conclusions",
+   "blocks": [
+    {
+     "id": "21.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"21.4\">4. The conclusions</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Putting together 1.1 and 3.2, we find:</p>"
+    },
+    {
+     "id": "21.4.1",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.4.1\"><div class=\"thm-head\"><u>Theorem 4.1.</u></div><div class=\"thm-body\">\n<p><u>Fix a characteristic \\(p\\), a dimension \\(n\\), and a multidegree\n\\((d_1,\\ldots,d_r)\\). Denote by</u></p>\n\\[\n\\tag{4.1.0}X_V\\longrightarrow V\n\\]\n<p><u>the universal smooth complete intersection of dimension \\(n\\) and multidegree\n\\((d_1,\\ldots,d_r)\\) in characteristic \\(p\\).</u></p>\n\n<p><u>If</u></p>\n\\[\n\\tag{4.1.1}\\sum_{1}^{r}d_i\\geq n+r+1,\n\\]\n<p><u>then there exists a dense open set \\(U\\subset V\\) such that</u></p>\n\\[\n\\tag{4.1.2}\\text{for }u\\in U,\\text{ we have }\nH^n(X_u,\\mathbb Q_\\ell)\\neq N^1H^n(X_u,\\mathbb Q_\\ell).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Putting together 1.3 and 3.2, we likewise find:</p>"
+    },
+    {
+     "id": "21.4.2",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.4.2\"><div class=\"thm-head\"><u>Theorem 4.2.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a complete intersection, smooth of dimension\n\\(n&gt;1\\) over a field \\(k\\). Fix an integer</u></p>\n\\[\n\\tag{4.2.1}d\\geq1+n.\n\\]\n<p><u>Denote by</u></p>\n\\[\n\\tag{4.2.2}X\\mathbin{.}H_u^d\\longrightarrow U\n\\]\n<p><u>the universal family of sections of \\(X\\) by hypersurfaces of degree \\(d\\),\nwhich are smooth of dimension \\(n-1\\). There exists a dense open set \\(T\\subset U\\)\nsuch that</u></p>\n\\[\n\\tag{4.2.3}\\text{for }t\\in T,\\text{ we have }\nH^{n-1}(X\\mathbin{.}H_t^d,\\mathbb Q_\\ell)\\neq\nN^1H^{n-1}(X\\mathbin{.}H_t^d,\\mathbb Q_\\ell).\n\\]\n</div></div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-s8",
+   "title": "BIBLIOGRAPHY",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>BIBLIOGRAPHY</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] J.P. Serre. <em>Faisceaux algébriques cohérents</em>, Annals of Math,\n61, 1955, pp. 197–278.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] J.P. Serre. <em>Sur la topologie des variétés algébriques en\ncaractéristique p</em>, in Symposium Internacional de<br>\ntopología algebraica, Mexico 1958.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-5",
+   "title": "§ 5. Appendix. Integrality theorems. By P. Deligne",
+   "blocks": [
+    {
+     "id": "21.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"21.5\">§ 5. Appendix. Integrality theorems. <span class=\"author\">By P. Deligne</span></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>5.0.</strong> Let \\(p\\) be a prime number, \\(q\\) a power of \\(p\\),\n\\(\\mathbb F_q\\) a field with \\(q\\) elements, \\(E\\) the completion of a number field\nat a place dividing a prime number \\(\\ell\\) distinct from \\(p\\), and \\(T\\) a\nset of prime numbers (for example \\(T=\\varnothing\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>An element \\(\\alpha\\) of an algebraic closure of \\(E\\) is called <u>\\(T\\)-integral</u>\nif it is algebraic over \\(\\mathbb Q\\) and integral over\n\\(\\mathbb Z[(1/r)_{r\\in T}]\\). An endomorphism \\(F\\) of a finite-dimensional vector space\nover \\(E\\) is called <u>\\(T\\)-integral</u> if its eigenvalues are\n\\(T\\)-integral.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(k\\) be a finite field with \\(q'\\) elements, \\(\\bar k\\) an algebraic closure\nof \\(k\\) and \\(\\mathfrak G=\\operatorname{Gal}(\\bar k/k)\\) the Galois group of\n\\(k\\); we denote by \\(f\\in\\mathfrak G\\) the Frobenius substitution, given by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf(x)=x^{q'},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and by \\(F\\) the « geometric » Frobenius, the inverse of \\(f\\) in\n\\(\\mathfrak G\\). A representation \\(\\rho\\) of \\(\\mathfrak G\\) in a finite-dimensional vector\nspace over \\(E\\) is called \\(T\\)-integral if \\(\\rho(F)\\) is\n\\(T\\)-integral. If \\(X\\) is a scheme of finite type over \\(\\mathbb F_q\\) and \\(x\\) a\nclosed point of \\(X\\), we denote by \\(F_x\\) the geometric Frobenius element\nof the Galois group of \\(k(x)\\); if \\(\\bar x\\) is a geometric point of \\(X\\)\nlocalized at \\(x\\) and \\(G\\) an \\(E\\)-sheaf on \\(X\\), \\(F_x\\) acts by transport\nof structure on the stalk \\(G_{\\bar x}\\).</p>"
+    },
+    {
+     "id": "21.5.1",
+     "type": "definition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm definition\" id=\"21.5.1\"><div class=\"thm-head\"><u>Definition 5.1.</u></div><div class=\"thm-body\">\n<p><u>A constructible \\(E\\)-sheaf \\(G\\) on a scheme \\(X\\) of finite type\nover \\(\\mathbb F_q\\) is called \\(T\\)-integral if, for every geometric point\n\\(\\bar x\\) of \\(X\\) localized at a closed point \\(x\\) of \\(X\\), \\(F_x\\) is a\n\\(T\\)-integral automorphism of \\(G_{\\bar x}\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(a:X\\longrightarrow\\operatorname{Spec}(\\mathbb F_q)\\) is a scheme of\nfinite type over \\(\\mathbb F_q\\) and \\(G\\) a constructible \\(E\\)-sheaf on \\(X\\),\nwe will denote by \\(H^*(X,G)\\) the \\(E\\)-sheaves \\(R^*a_*(G)\\) on\n\\(\\operatorname{Spec}(\\mathbb F_q)_{\\mathrm{ét}}\\); if \\(\\overline{\\mathbb F}_q\\)\nis an algebraic closure of \\(\\mathbb F_q\\) and if \\(\\overline X\\) is the scheme\ndeduced from \\(X\\) by extension of scalars from \\(\\mathbb F_q\\) to\n\\(\\overline{\\mathbb F}_q\\), the \\(H^*(X,G)\\) are identified with the cohomology\ngroups \\(H^*(\\overline X,G)\\), considered as Galois modules, i.e.\nequipped with an action of the geometric Frobenius \\(F\\). Similarly in cohomology with\nproper support.</p>"
+    },
+    {
+     "id": "21.5.2.1",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"21.5.2.1\"><div class=\"thm-head\"><u>Lemma 5.2.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(G\\) be a constructible \\(E\\)-sheaf on a scheme \\(X\\) of finite type\nover \\(\\mathbb F_q\\) and of dimension \\(\\leq n\\).</u></p>\n<p>(i) <u>There exists a closed subset \\(Y\\) of dimension 0 of \\(X\\) such that the\nobvious arrow from \\(H^0(X,G)\\) to \\(H^0(Y,G)\\) is injective.</u></p>\n<p>(ii) <u>If \\(X\\) is separated, and if \\(U\\) is an open subset of \\(X\\) whose\ncomplement \\(Z\\) is of dimension \\(&lt;n\\), there exist a closed subset \\(Y\\)\nof dimension 0 of \\(U\\) and a surjective arrow from \\(H^0(Y,G)(-n)\\) to\n\\(H_c^{2n}(X,G)\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Assertion (i) is obvious. Let us prove (ii). Replacing \\(X\\) by\n\\(X_{\\mathrm{red}}\\) and shrinking \\(U\\) if necessary, we may assume that \\(U\\) is smooth and\nthat \\(G|U\\) is twisted constant. We have, since \\(\\dim(Z)&lt;n\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0=H_c^{2n-1}(Z,G)\\longrightarrow H_c^{2n}(U,G)\\xrightarrow{\\sim}\nH_c^{2n}(X,G)\\longrightarrow H_c^{2n}(Z,G)=0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and, by Poincaré duality (SGA 4 XVIII and [2])</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_c^{2n}(U,G)\\xrightarrow{\\sim}H^0(U,G^\\vee(n))^\\vee.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We conclude by (i).</p>"
+    },
+    {
+     "id": "21.5.2.2",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.5.2.2\"><div class=\"thm-head\"><u>Theorem 5.2.2.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a separated scheme of finite type over \\(\\mathbb F_q\\) and of\ndimension \\(\\leq n\\), and \\(G\\) a constructible \\(E\\)-integral \\(T\\)-sheaf.\nThen the endomorphisms \\(F\\) and \\(q^{n-i}F\\) of \\(H_c^i(X,G)\\) are\n\\(T\\)-integral.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The case where \\(\\dim X\\leq0\\) is trivial, and the cases \\(i=0\\) and \\(i=2n\\) of the\ntheorem follow from 5.2.1. Let \\(Z(X,G,t)\\) be the formal series</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nZ(X,G,t)=\\prod_{x\\in X}\\det(1-F_x\\,t^{\\deg(x)};G_{\\bar x})^{-1}\\in E[[t]].\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By (SGA 5 XV 3.2), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.2.3}Z(X,G,t)=\\prod_i\\det(1-Ft;H_c^i(X,G))^{(-1)^{i+1}}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove 5.2.2 for \\(n=1\\). We then have \\(H_c^i(X,G)=0\\) for \\(i&gt;2\\)\n(SGA 4 X 4.3 or XVIII 5.2.11.1). By hypothesis, the formal series \\(Z(X,G,t)\\)\nhas \\(T\\)-integral coefficients. By the cases \\(i=0\\) and \\(i=2n=2\\) of\n5.2.2, the product of \\(Z(X,G,t)\\) by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\det(1-Ft;H_c^0(X,G))\\mathbin{.}\\det(1-Ft;H_c^2(X,G))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>again has \\(T\\)-integral coefficients. This product is none other than\n\\(\\det(1-Ft;H_c^1(X,G))\\), and the theorem follows for \\(n=1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now proceed by induction on \\(n=\\dim(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(U\\) be a Zariski open subset of \\(X\\), whose complement \\(Z\\) is of\ndimension \\(&lt;n\\), and such that there exists a morphism \\(f:U\\longrightarrow Y\\), whose\ntarget is a curve and whose fibers are of dimension \\(\\leq n-1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nU\\ar@{^{(}-&gt;}[r]^j\\ar[d]_f &amp; X &amp; Z\\ar@{^{(}-&gt;}[l]_i\\\\\nY\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow j_!j^*G\\longrightarrow G\\longrightarrow i_*i^*G\\longrightarrow0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>induces exact sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_c^i(U,G)\\longrightarrow H_c^i(X,G)\\longrightarrow H_c^i(Z,G)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>so that by induction, it suffices to verify the theorem for the\nsheaf \\(G\\) on \\(U\\). Thanks to the induction hypothesis applied to the fibers\nof \\(f\\), and to the base change theorem for a proper morphism, we know\nthat the sheaves \\(R^if_!G\\) on \\(Y\\) are \\(T\\)-integral, and that the sheaves\n\\(R^if_!G(i-(n-1))\\) are \\(T\\)-integral. The Leray spectral sequence for \\(f\\)\nis written</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE_2^{pq}=H_c^p(Y,R^qf_!G)\\Longrightarrow H_c^{p+q}(U,G).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By virtue of what precedes, and of the theorem already known for \\(Y\\), the\n\\(E_2^{pq}\\) are \\(T\\)-integral, and the \\(E_2^{pq}(p+q-n)\\) are as well. The\ntheorem follows.</p>"
+    },
+    {
+     "id": "21.5.3",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"21.5.3\"><div class=\"thm-head\"><u>Corollary 5.3.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a scheme of finite type over \\(\\mathbb F_q\\), of dimension\n\\(\\leq1\\), \\(U\\) an open subset of \\(X\\), \\(j:U\\hookrightarrow X\\) the inclusion\nmorphism and \\(G\\) a constructible \\(E\\)-sheaf on \\(U\\). Then</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> <u>If \\(G\\) is \\(T\\)-integral, then \\(j_*G\\) is \\(T\\)-integral.</u></li>\n<li><span class=\"item-label\">\\(b\\)</span> <u>If for every \\(x\\in U\\), \\(G_x^\\vee\\) is \\(T\\)-integral, then, for every \\(x\\in X\\), \\((j_*G)_x^\\vee\\) is \\(T\\)-integral.</u></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One reduces to the case \\(X\\) affine, then \\(X\\) projective.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Define \\(H\\) by the exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow j_!G\\longrightarrow j_*G\\longrightarrow H\\longrightarrow0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The corresponding exact cohomology sequence provides, if \\(Y\\) is the\nsupport \\(fini\\) of \\(H\\), an exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^0(U,G)\\longrightarrow H^0(Y,H)\\longrightarrow H_c^1(U,G).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know, by 5.2.1 and by Theorem 5.2, that \\(H^0(U,G)\\) and \\(H_c^1(U,G)\\)\nare \\(T\\)-integral; it follows that \\(H^0(Y,H)\\) is \\(T\\)-integral, which\nproves \\(a\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X'\\) is the normalization of the purely one-dimensional part of\n\\(X_{\\mathrm{red}}\\) and \\(U'\\) an open subset of \\(U\\), dense in the smooth locus of\ndimension 1 of \\(U_{\\mathrm{red}}\\), and such that \\(G\\) restricted to \\(U'\\) is\ntwisted constant:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nU'\\ar@{^{(}-&gt;}[r]^{j'}\\ar@{^{(}-&gt;}[d] &amp; X'\\ar[d]^p\\\\\nU\\ar@{^{(}-&gt;}[r]^j &amp; X &amp; Y\\ar@{^{(}-&gt;}[l]\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>then \\(p_*j'_*G|Y\\simeq j_*G|Y\\). It therefore suffices to study the case where \\(X\\)\nis smooth of dimension one and where \\(G|U\\) is twisted constant. The sheaf\n\\(G^\\vee\\) is then \\(T\\)-integral, so that we already know that for every\n\\(x\\in X\\), \\((j_*G^\\vee)_x\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is \\(T\\)-integral. Denote by \\(\\mathcal G_x\\) the Galois group of the field\nof fractions of \\(\\widehat{\\mathcal O}_{X,x}\\), for \\(x\\in X\\), and by\n\\(\\mathcal I_x\\) the inertia group. The sheaf \\(G\\) then defines a\nrepresentation, still denoted \\(G\\), of \\(\\mathcal G_x\\), and the\n\\(\\mathcal G_x/\\mathcal I_x=\\operatorname{Gal}(\\overline{k(x)}/k(x))\\)-module\n\\((j_*G^\\vee)_x\\) \\(resp. ((j_*G)_x^\\vee)\\) is then identified with the\n\\(\\mathcal G_x/\\mathcal I_x\\)-module of invariants \\(resp. des coinvariants\\)\nin \\(G^\\vee\\). It remains to prove:</p>"
+    },
+    {
+     "id": "21.5.3.1",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"21.5.3.1\"><div class=\"thm-head\"><u>Lemma 5.3.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(K\\) be a local field with residue field \\(\\mathbb F_q\\), \\(\\mathcal G\\)\nits Galois group, \\(I\\) the inertia group, and \\(\\rho\\) a continuous representation\nof \\(\\mathcal G\\) in a vector space \\(V\\) of dimension \\(n\\) over \\(E\\)\n\\(cf. 5.0\\), \\(V^I\\) the space of invariants under \\(I\\), and \\(V_I\\) the space of\ncoinvariants under \\(I\\), considered as \\(\\mathcal G/I\\)-modules. Let\n\\(\\alpha_1\\ldots\\alpha_n\\) be the eigenvalues of \\(F\\) acting on \\(V^I\\).\nThen there exist integers \\(m_i\\geq0\\) such that the eigenvalues of \\(F\\)\nacting on \\(V_I\\) are the \\(\\alpha_iq^{m_i}\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(I'\\) be the largest subgroup of \\(I\\) of order prime to \\(\\ell\\).\nThe group \\(\\rho(I')\\) is finite, being a compact subgroup of order prime to\n\\(\\ell\\) of \\(GL(V)\\). We therefore have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nV_I\\simeq\\bigl(V^{\\rho(I')}\\bigr)_I\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and, replacing \\(V\\) by \\(V^{I'}\\), we may assume that \\(I'\\) acts\ntrivially on \\(V\\). We have \\(I/I'\\simeq\\mathbb Z_\\ell(1)\\) (as\n\\(\\mathcal G/I\\)-modules); let \\(T\\) be a topological generator of \\(I/I'\\),\nand, for each \\(\\alpha\\), let \\(V^{(\\alpha)}\\) be the generalized eigenspace\nof \\(T\\) in \\(V\\) with eigenvalue \\(\\alpha\\): we have\n\\(V=\\bigoplus V^{(\\alpha)}\\); and the decomposition</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nV=V^{(1)}\\oplus\\sum_{\\alpha\\ne1}V^{(\\alpha)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is stable under \\(\\mathcal G\\), and compatible</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>with passage to the dual; we may therefore replace \\(V\\) by \\(V^{(1)}\\), which\nallows us to assume that \\(I\\) acts in a unipotent way.</p>"
+    },
+    {
+     "id": "21.5.3.2",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"21.5.3.2\"><div class=\"thm-head\"><u>Lemma 5.3.2.</u></div><div class=\"thm-body\">\n<p><u>Let \\(V\\) be a finite-dimensional vector space over a field \\(k\\) of\ncharacteristic 0, \\(I\\) a one-parameter additive group,\n\\(\\rho:I\\longrightarrow Gl(V)\\) a representation of \\(I\\) in \\(V\\), \\(N\\)\nan infinitesimal generator of \\(I\\), and set</u></p>\n\\[\nV^{I,k}=V^I\\cap\\operatorname{Im}(N^k),\n\\qquad\nV_{I,k}=\\operatorname{Im}\\bigl(\\ker(N^{k+1})\\longrightarrow V_I\\bigr).\n\\]\n<p><u>Then the arrow \\(N^k\\) induces an isomorphism</u></p>\n\\[\nN^k:V_{I,k}/V_{I,k-1}\\xrightarrow{\\sim}V^{I,k}/V^{I,k+1}\n\\]\n<p><u>and defines canonical isomorphisms</u></p>\n\\[\nV_{I,k}/V_{I,k-1}\\otimes I^{\\otimes k}\\xrightarrow{\\sim}\nV^{I,k}/V^{I,k+1}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The representations \\(V\\) of \\(I\\) are identified, via \\(N\\), with the\n\\(k[T]\\)-modules killed by a power of \\(T\\). It suffices to verify 3.2\nwhen \\(V\\) corresponds to an irreducible \\(k[T]\\)-module \\(k[T]/T^k\\), which\nis trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us finish the proof of 5.3.1. The sorite 5.3.2 provides increasing\nand decreasing filtrations \\(V_{I,k}\\) and \\(V^{I,k}\\) of \\(V_I\\) and \\(V^I\\),\nand isomorphisms of \\(\\mathcal G/I\\)-modules</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nV^{I,k}/V^{I,k+1}\\simeq V_{I,k}/V_{I,k-1}(k),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whence the assertions.</p>"
+    },
+    {
+     "id": "21.5.4",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.5.4\"><div class=\"thm-head\"><u>Theorem 5.4.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a scheme of finite type over \\(\\mathbb F_q\\), separated and of\ndimension \\(n\\), and \\(G\\) a constructible \\(E\\)-sheaf on \\(X\\). We assume\nthat for every \\(x\\in X\\), the endomorphism \\(F_x\\) of \\(G_x^\\vee\\) is\n\\(T\\)-integral. Then the endomorphism \\(q^iF^\\vee\\) of \\(H_c^i(X,G)^\\vee\\) is\n\\(T\\)-integral, as is the endomorphism \\(q^nF^\\vee\\) of\n\\(H_c^i(X,G)^\\vee\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One proceeds as in Theorem 5.2 to reduce to the case where \\(X\\) is\na smooth curve and where \\(G\\) is twisted constant on \\(X\\). Let \\(j\\)\nbe the inclusion of \\(X\\) into the projective and smooth curve \\(X'\\) which compactifies\n\\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know \\(dualité de Poincaré\\) that \\(H^i(X',j_*G)\\) is dual to\n\\(H^{2-i}(X',j_*G^\\vee(1))\\). By virtue of Corollary 5.3 \\(a\\), Theorem 5.2\napplies to \\(j_*G^\\vee\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\nH^0(X',j_*G^\\vee)&amp;\\simeq H^2(X',j_*G)^\\vee(-1) &amp;&amp;\\text{is (T)-integral},\\\\\nH^1(X',j_*G^\\vee)&amp;\\simeq H^1(X',j_*G)^\\vee(-1) &amp;&amp;\\text{is (T)-integral},\\\\\nH^2(X',j_*G^\\vee)(1)&amp;\\simeq H^0(X',j_*G)^\\vee &amp;&amp;\\text{is (T)-integral},\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which proves the theorem for \\(j_*G\\). Define \\(H\\) by the exact\nsequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow j_!G\\longrightarrow j_*G\\longrightarrow H\\longrightarrow0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The exact cohomology sequence provides, if \\(Y\\) is the support of \\(H\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_c^0(X,G)\\lhook\\joinrel\\longrightarrow H^0(X',j_*G),\n\\]\n\\[\nH^0(Y,H)\\longrightarrow H_c^1(X,G)\\longrightarrow H^1(X',j_*G),\n\\]\n\\[\nH_c^2(X,G)\\xrightarrow{\\sim}H^2(X',j_*G),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>so that the theorem for \\((X,G)\\) follows from the theorem for\n\\((X',j_*G)\\).</p>"
+    },
+    {
+     "id": "21.5.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"21.5.5\"><strong>5.5.</strong> The preceding method of fibration into\ncurves also makes it possible to obtain bounds à la Lang-Weil [3] on the\ncomplex absolute values of the eigenvalues of Frobenius.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be a scheme of finite type over \\(\\mathbb F_q\\), \\(G\\) a\nconstructible \\(E\\)-sheaf on \\(X\\), and \\(\\lambda\\in\\mathbb R\\). If, for\nevery point \\(x\\in X\\), with \\(#k(x)=q_x\\), the eigenvalues of \\(F_x\\)\nacting on \\(G_x\\) are algebraic numbers \\(\\alpha\\) all of whose\ncomplex absolute values satisfy</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n|\\alpha|\\leq q_x^\\lambda,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>we will write</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\log|G|\\leq\\lambda.\n\\]\n\n</p>"
+    },
+    {
+     "id": "21.5.5.1",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"21.5.5.1\"><div class=\"thm-head\"><u>Lemma 5.5.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a curve over \\(\\mathbb F_q\\), by which we mean here a\nscheme \\(X\\) of finite type over \\(\\mathbb F_q\\), separated and of dimension \\(\\leq1\\).\nLet \\(G\\) be a constructible \\(E\\)-sheaf on \\(X\\) such that\n\\(log|G|\\leq\\lambda\\) with \\(\\lambda\\in\\mathbb R\\). Then the complex absolute values\nof the eigenvalues \\(\\alpha\\) of \\(F\\) acting on \\(H_c^1(X,G)\\)\nsatisfy \\(|\\alpha|\\leq q^{\\lambda+1}\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\sigma\\) be a complex embedding of \\(E\\), or simply a complex\nembedding of the algebraic closure of \\(\\mathbb Q\\) in \\(E\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It suffices to verify that, whatever \\(\\sigma\\), the zeros \\(\\beta\\) of the\nrational fraction \\(\\sigma Z(X,G,t)\\) satisfy\n\\(|\\beta^{-1}|\\leq q^{\\lambda+1}\\). We already know in</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>effect by 5.2.1 that if \\(\\alpha\\) is an eigenvalue of Frobenius acting on\n\\(H_c^0(X,G)\\) or on \\(H_c^2(X,G)\\), we have\n\\(|\\sigma\\alpha|\\leq q^{\\lambda+1}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us verify that the series</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\log\\sigma Z(X,G,t)=\\sum_k\\frac{t^k}{k}\\cdot\n\\sum_{x\\in X(\\mathbb F_{q^k})}\\sigma\\operatorname{Tr}(F,x^*G)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is convergent for \\(|t|&lt;q^{-\\lambda-1}\\). Representing \\(X\\) as a\nramified covering of \\(\\mathbb P^1\\), one trivially obtains a bound</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\#X(\\mathbb F_{q^k})\\leq A.q^k.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By hypothesis, we have on the other hand</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\left|\\sigma\\operatorname{Tr}(F,x^*G)\\right|\\leq B.(q^k)^\\lambda.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The coefficient \\(c_k\\) of \\(t^k\\) in \\(\\sigma Z(X,G,t)\\) therefore satisfies</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n|c_k|\\leq\\frac1k.C.(q^{1+\\lambda})^k\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and the assertion follows.</p>"
+    },
+    {
+     "id": "21.5.5.2",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.5.5.2\"><div class=\"thm-head\"><u>Theorem 5.5.2.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a scheme of finite type over \\(\\mathbb F_q\\), separated and of\ndimension \\(\\leq n\\), and \\(G\\) a constructible \\(E\\)-sheaf on \\(X\\) such\nthat \\(\\log|G|\\leq\\lambda\\) with \\(\\lambda\\in\\mathbb R\\).</u></p>\n<p><u>Then the complex absolute values of the eigenvalues \\(\\alpha\\) of\nFrobenius acting on \\(H_c^i(X,G)\\) satisfy</u></p>\n\\[\n|\\alpha|\\leq q^{\\lambda+i}\\qquad\\text{and}\\qquad\n|\\alpha|\\leq q^{\\lambda+n}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(n\\leq0\\), 5.5.2 is trivial. If \\(n=1\\), the cases \\(i=0\\) and\n\\(i=2\\) of 5.5.2 follow from 5.2.1, while the case \\(i=1\\) follows from\n5.5.1. One then proceeds by induction on \\(n\\), as in the proof\nof 5.5.2.</p>"
+    },
+    {
+     "id": "21.5.5.3",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"21.5.5.3\"><div class=\"thm-head\"><u>Corollary 5.5.3.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a separated scheme of finite type of dimension \\(n\\) over\n\\(\\mathbb F_q\\). Then the eigenvalues \\(\\alpha\\) of the geometric Frobenius\nendomorphism \\(F\\) of \\(H_c^i(X,\\mathbb Q_\\ell)\\) are algebraic\nintegers. Moreover</u></p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>For \\(\\ell'\\ne p\\), \\(\\alpha\\) is an \\(\\ell'\\)-adic unit.</u></li>\n<li><span class=\"item-label\">(ii)</span> <u>For \\(i&gt;n\\), \\(\\alpha\\) is divisible by \\(q^{i-n}\\).</u></li>\n<li><span class=\"item-label\">(iii)</span> <u>For \\(i\\leq n\\) (resp. for \\(i\\geq n\\)), \\(q^i\\alpha^{-1}\\)\n(resp. \\(q^n\\alpha^{-1}\\)) is an algebraic integer.</u></li>\n<li><span class=\"item-label\">(iv)</span> <u>For \\(0&lt;i\\), the complex absolute values of \\(\\alpha\\) satisfy</u>\n\\[\n|\\alpha|\\leq q^{i-\\frac12}\\qquad\\text{and}\\qquad |\\alpha|\\leq q^n.\n\\]</li>\n</ol>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By 5.2.2, \\(\\alpha\\) and \\(q^{n-i}\\alpha\\) are algebraic integers.\nAssertions (i) to (iii) then follow from 5.4. For \\(i&gt;n\\), (iv) follows\nfrom 5.5.2. To obtain (iv) when \\(i\\leq n\\), we will have to combine 5.5.2\nwith the Riemann hypothesis for curves. Let us proceed by induction on \\(n\\),\nthe case \\(n=0\\) being trivial. If \\(U\\) is an open subset of \\(X\\), with complement\n\\(Z\\) of dimension \\(&lt;n\\), the exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_c^i(U,\\mathbb Q_\\ell)\\longrightarrow H_c^i(X,\\mathbb Q_\\ell)\n\\longrightarrow H_c^i(Z,\\mathbb Q_\\ell)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>shows that it suffices to prove 5.2.2 for \\(U\\). Replacing\n\\(X\\) beforehand by \\(X_{\\mathrm{red}}\\) if necessary, this reduces us to the case where \\(X\\) is\nsmooth affine,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and such that there exists a smooth morphism \\(f:X\\longrightarrow S\\) satisfying the\nfollowing conditions:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> \\(\\dim(S)\\leq n-1\\)</li>\n<li><span class=\"item-label\">\\(b\\)</span> the fibers of \\(f\\) are purely of dimension 1.</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since the fibers of \\(f\\) are affine curves, we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR^0f_!\\mathbb Q_\\ell=0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By Weil [4], we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.5.3.1}\\log|R^1f_!\\mathbb Q_\\ell|\\leq\\frac12,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and by 5.2.1 applied to the fibers of \\(f\\), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.5.3.2}\\log|R^2f_!\\mathbb Q_\\ell|\\leq1.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The Leray spectral sequence for \\(f\\) reduces here to a long exact\nsequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH_c^{i-2}(S,R^2f_!\\mathbb Q_\\ell)\\longrightarrow H_c^i(X,\\mathbb Q_\\ell)\n\\longrightarrow H_c^{i-1}(S,R^1f_!\\mathbb Q_\\ell).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By (5.5.3.1) (resp. 5.5.3.2) and 5.5.2, the complex absolute values\nof the eigenvalues \\(\\alpha\\) of Frobenius acting on\n\\(H_c^{i-1}(S,R^1f_!\\mathbb Q_\\ell)\\) (resp. on\n\\(H_c^{i-2}(S,R^2f_!\\mathbb Q_\\ell)\\)) satisfy</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n|\\alpha|\\leq q^{i-1+\\frac12}=q^{i-\\frac12}\n\\]\n\\[\n(\\text{resp. }|\\alpha|\\leq q^{i-2+1}=q^{i-1}\\leq q^{i-\\frac12}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The corollary follows.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To obtain some results analogous to the preceding ones, in cohomology\nwithout supports, it seems necessary to have resolution of\nsingularities at one's disposal. In dimension \\(\\leq1\\), the solution of the problem is provided by\nCorollary 5.3.</p>"
+    },
+    {
+     "id": "21.5.6",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"21.5.6\"><div class=\"thm-head\"><u>Theorem 5.6.</u></div><div class=\"thm-body\">\n<p><u>Let \\(N\\) be an integer, and suppose that we have resolution of\nsingularities at our disposal, in the strong form of Hironaka, for schemes of dimension\n\\(\\leq N\\) of finite type over \\(\\mathbb F_q\\) (so far, one can therefore take\n\\(N=2\\) [1]). Let \\(f:X\\longrightarrow Y\\) be a morphism of schemes of finite\ntype over \\(\\mathbb F_q\\) and \\(G\\) a constructible \\(E\\)-integral \\(T\\)-sheaf\non \\(X\\). Then, if \\(\\dim(X)\\leq N\\), the \\(E\\)-sheaves \\(R^if_*G\\) on\n\\(Y\\) are \\(T\\)-integral.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof proceeds by induction on the dimension \\(n\\leq N\\) of\n\\(X\\). Let \\(j:U\\longrightarrow X\\) be an open subset of \\(X\\), smooth, affine, such\nthat \\(G\\) restricted to \\(U\\) is twisted constant and such that the dimension of its\ncomplement \\(Z\\) is \\(&lt;n\\). Using the resolution hypothesis, we know that\nthe \\(R^ij_*(j^*G)\\) are constructible (SGA 5 I, [2]); for \\(i&gt;0\\), they\nare concentrated on \\(Z\\) and, for \\(i=0\\), \\(j_*j^*G\\) differs from \\(G\\)\nonly on \\(Z\\). It follows, by the induction hypothesis, that it suffices\nto verify the theorem for the sheaf \\(j^*G\\) and the morphisms \\(j\\) and\n\\(fj\\). It suffices to verify the theorem under the additional hypothesis that\n\\(X\\) is affine smooth and \\(G\\) twisted constant (i.e. furnished by a\ncontinuous representation of the fundamental group of \\(X\\) in a finite-dimensional\n\\(E\\)-vector space).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(R\\) be the ring of integers of \\(E\\), \\(\\lambda\\) a uniformizer,\n\\(e\\) the absolute ramification index and \\(b\\) an integer\n\\(&gt;\\frac{e}{\\ell-1}\\). Since \\(X\\) is smooth, hence normal and with profinite\nfundamental group, there exists a twisted constant \\(R\\)-sheaf \\(G^0\\) such that\n\\(G\\simeq G^0\\otimes_R E\\). Let \\(p:X'\\longrightarrow X\\) be the étale covering\nof \\(X\\) which trivializes the locally constant sheaf\n\\(G^0\\otimes_R R/\\lambda^b\\). The sheaf \\(G\\) is a direct factor of\n\\(p_*p^*G\\), so that it suffices to verify the theorem for \\(p^*G\\) and\n\\(f\\circ p\\). It therefore remains to treat the case where the following hypotheses are\nsatisfied:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((*)\\) \\(X\\) is affine and smooth, and there exists an \\(R\\)-sheaf \\(G^0\\),\ntwisted constant, such that \\(G\\simeq G^0\\otimes_R E\\) and that the sheaf\n\\(G^0\\otimes_R R/\\lambda^b\\) is constant.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us factor the morphism \\(f\\) into a proper morphism and an open\nimmersion \\(f=\\bar f j\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nX\\ar@{^{(}-&gt;}[r]^j\\ar[d]_f &amp; X'\\ar[dl]^{\\bar f}\\\\\nY\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The theorem has already been established for \\(\\bar f\\) (5.2), so that it suffices\nto establish it for \\(j\\). By resolution of singularities, applied to\n\\(X'\\), we could assume that \\(X'\\) is smooth and that \\(X\\) is the\ncomplement of a divisor with normal crossings in \\(X'\\), a union of smooth\ndivisors. The hypothesis \\((*)\\) implies that the sheaf \\(G\\) is tamely\nramified along this divisor. We then have:</p>"
+    },
+    {
+     "id": "21.5.6.1",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"21.5.6.1\"><div class=\"thm-head\"><u>Lemma 5.6.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be a smooth scheme of finite type over \\(\\mathbb F_q\\), \\(D\\) a divisor\nwith normal crossings in \\(X\\), a union of smooth divisors \\(D_i\\),\n\\(j:U\\lhook\\joinrel\\longrightarrow X\\) the complement of \\(D\\) in \\(X\\) and \\(G\\) a\ntwisted constant \\(E\\)-sheaf on \\(U\\), tamely ramified along \\(D\\).\nThen, if \\(G\\) is \\(T\\)-integral, the sheaves \\(R^ij_*G\\) are \\(T\\)-integral.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We will admit (cf. SGA 1 XIII     ):</p>"
+    },
+    {
+     "id": "21.5.6.2",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"21.5.6.2\"><div class=\"thm-head\"><u>Lemma 5.6.2.</u></div><div class=\"thm-body\">\n<p><u>(i) Under the hypotheses 5.6.1, let \\(D'\\) be a component of \\(D\\),\n\\(D''\\) the union of the other components, \\(U'=X-D''\\) and\n\\(D'^{,0}=D'\\cap U'\\):</u></p>\n\\[\n\\xymatrix{\nD'^{\\,0}\\ar@{^{(}-&gt;}[r]^{j'_D}\\ar[d]_{i^0} &amp; D'\\ar[d]^i\\\\\nU\\ar@{^{(}-&gt;}[r]_{j_1} &amp; U'\\ar@{^{(}-&gt;}[r]_{j'} &amp; X .\n}\n\\]\n<p><u>Then the base change arrow</u></p>\n\\[\ni^*Rj'_*\\bigl(Rj_{1*}G\\bigr)\\longrightarrow Rj'_{D*}\\,i^{0*}\\bigl(Rj_{1*}G\\bigr)\n\\]\n<p><u>is an isomorphism, and the sheaves \\(i^{0*}Rj_{1*}G\\) are twisted constant,\ntamely ramified along \\(D'-D'^{,0}\\).</u></p>\n\n<p><u>(ii) If \\(C\\) is a smooth curve over \\(X\\), transversal to \\(D\\) at a\nsmooth point \\(x\\) of \\(D\\),</u></p>\n\\[\n\\xymatrix{\nC\\cap U\\ar@{^{(}-&gt;}[r]^{j_C}\\ar[d]_{k'} &amp; C\\ar[d]^k\\\\\nU\\ar@{^{(}-&gt;}[r]_j &amp; X ,\n}\n\\]\n\n<!-- Source PDF page 37 (printed page 399) -->\n<p><u>then the base change arrow</u></p>\n\\[\nk^*Rj_*G\\longrightarrow Rj_{C*}\\,k'^*G\n\\]\n<p><u>is an isomorphism at \\(x\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us deduce 5.6.1 from 5.6.2 by arguing by induction on the dimension, and\nby provisionally admitting 5.6.1 in the case of curves. It follows from\n5.6.2 (ii) and from this hypothesis that the sheaves \\(R^ij_*G\\) are\n\\(T\\)-integral at every smooth point of \\(D\\). In particular, with the notation\nof 5.6.2 (i), the sheaves \\(R^ij_{1*}G\\) are \\(T\\)-integral, so that,\nby 6.2 (i) and the induction hypothesis applied to \\(i^{0*}Rj_{1*}G\\)\nand to \\(j'_D\\), the sheaves \\(i^*R^ij_*G\\) are \\(T\\)-integral, whatever\nthe chosen component \\(D'\\) of \\(D\\). This proves the conclusion of\n5.6.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There remains the case of curves. For a curve, under the hypotheses 5.6.1, if\n\\(x\\) is a point of (X-U), if \\(\\mathcal G\\) is the Galois group of the\nfield of fractions of \\(\\widehat{\\mathcal O}_{X,x}\\) and \\(\\mathcal I\\) the\ninertia group, if we again denote by \\(G\\) the representation of\n\\(\\mathcal G\\) defined by \\(G\\) and if \\(\\bar x\\) is a geometric point of\n\\(X\\) localized at \\(x\\), we have isomorphisms of Galois\n\\(\\mathcal G/\\mathcal I\\)-modules:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(j_*G)_{\\bar x}\\simeq G^{\\mathcal I}\n\\]\n\\[\n(R^1j_*G)_{\\bar x}\\simeq G_{\\mathcal I}(-1)\n\\]\n\\[\n(R^ij_*G)_{\\bar x}=0\\quad\\text{if }i\\geq2\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and the assertion follows from 5.3 \\(a\\) and 5.3.1.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "21-s10",
+   "title": "BIBLIOGRAPHY",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>BIBLIOGRAPHY</h2>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">[1]</span> S.S. ABHYANKAR. <i>Resolution of singularities of embedded algebraic\nsurfaces.</i> Acad. Press, New York 1966.</li>\n<li><span class=\"item-label\">[2]</span> J.P. JOUANOLOU. <i>Cohomologie \\(\\ell\\)-adique des schémas.</i> To appear in\nLecture Notes of Math.</li>\n<li><span class=\"item-label\">[3]</span> S. LANG and A. WEIL. <i>Number of points of varieties in finite\nfields.</i> Am. J. Math. 76 (1954) 819–827.</li>\n<li><span class=\"item-label\">[4]</span> A. WEIL. <i>Sur les courbes algébriques et les variétés qui s’en\ndéduisent.</i> Act. Sci. Ind. 1041. Hermann 1948.</li>\n</ol>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

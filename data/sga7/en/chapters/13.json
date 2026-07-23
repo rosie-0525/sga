@@ -1,0 +1,2555 @@
+{
+ "chapter_id": "13",
+ "title": "EXPOSÉ XIII THE FORMALISM OF VANISHING CYCLES",
+ "number": "XIII",
+ "pages": [
+  {
+   "id": "13",
+   "title": "EXPOSÉ XIII THE FORMALISM OF VANISHING CYCLES",
+   "blocks": [
+    {
+     "id": "13",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"13\">EXPOSÉ XIII<br><u>THE FORMALISM OF VANISHING CYCLES</u><span class=\"author\"><u>by P. Deligne</u></span></h1>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"toc\">\n<div class=\"toc-row\"><span>Introduction</span><span>2</span></div>\n<div class=\"toc-row\"><span>§ 1.   Sheaves of sets</span><span>6</span></div>\n<div class=\"toc-row toc-sub\"><span>1.1   Galois sheaves</span><span>6</span></div>\n<div class=\"toc-row toc-sub\"><span>1.2   The topos \\(Y\\mathop{\\times}\\limits_S X\\)</span><span>8</span></div>\n<div class=\"toc-row toc-sub\"><span>1.3   The functor \\(\\Psi\\)</span><span>13</span></div>\n<div class=\"toc-row toc-sub\"><span>1.4   The variation</span><span>16</span></div>\n<div class=\"toc-row\"><span>§ 2.   Vanishing cycles</span><span>17</span></div>\n<div class=\"toc-row toc-sub\"><span>2.1   The functor \\(R\\Psi\\)</span><span>17</span></div>\n<div class=\"toc-row toc-sub\"><span>2.2   A compatibility (trace morphisms)</span><span>26</span></div>\n<div class=\"toc-row toc-sub\"><span>2.3   Finiteness theorem (in equal characteristic zero)</span><span>29</span></div>\n<div class=\"toc-row toc-sub\"><span>2.4   Isolated singularities</span><span>30</span></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-0",
+   "title": "Introduction",
+   "blocks": [
+    {
+     "id": "13.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"13.0\"><u>Introduction</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this exposé, we take up again the formalism introduced in n° 2 of exposé I of Grothendieck. The only new point is the introduction of the algebraic analogue of the <u>variation</u> of the classical theory.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The topological picture I am following is the following. Let \\(X\\) be an analytic space, \\(D\\subset\\mathbb C\\) a disk with center 0, \\(D^*=D-\\{0\\}\\) and \\(f:X\\to D\\) a proper morphism (the non-proper case will be considered afterwards). Let us replace \\(D\\) by a sufficiently small disk centered at 0, \\(X\\) by the inverse image of this small disk, and let us again denote the result by \\(f:X\\to D\\). By the complex analytic variant of Thom's isotopy theorem, \\(f^{-1}(D^*)\\) is a topological fiber bundle over \\(D^*\\). I do not know whether one can always construct a pair \\((\\Gamma,r)\\) of the type described below, but it seems plausible that one can.</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> \\(\\Gamma\\) is a locally coherent system of local trivializations of the bundle \\(f^{-1}(D^*)\\) over \\(D^*\\). In other words, \\(\\Gamma\\) defines a \\(\\pi_1(D^*)\\)-equivariant trivialization of the inverse image of \\(X\\) on a universal covering \\(\\widetilde D^*\\) of \\(D^*\\).</li>\n<li><span class=\"item-label\">\\(b\\)</span> \\(r\\) is a retraction of \\(X\\) onto the special fiber \\(X_0=f^{-1}(0)\\), compatible with \\(\\Gamma\\) : if, on a connected open set \\(U\\) of \\(D^*\\), \\(\\Gamma\\) identifies \\(X_U=f^{-1}(U)\\) with \\(X_1\\times U\\), \\(r=r(x_1,u)\\) is independent of \\(u\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose given \\((X,f,\\Gamma,r)\\). Let \\(t\\in D\\), and let \\(X_t=f^{-1}(t)\\) be the «general fiber». The bundle \\(\\varphi^*X\\), inverse image of \\(X/D\\) under \\(\\varphi:[0,1]\\to D^*:x\\mapsto\\exp(2\\pi i x).t\\), is trivialized by \\(\\Gamma\\). The <u>monodromy</u> \\(T:X_t\\longrightarrow X_t\\) is the homeomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX_t=(\\varphi^*X)_0\\xrightarrow[\\Gamma]{\\sim}(\\varphi^*X)_1=X_t.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(r_t:X_t\\to X_0\\) be the restriction of \\(r\\) to \\(X_t\\). We have \\(r_tT=r_t\\). One reconstructs \\((X,f)\\) from \\((X_t,X_0,T,r_t)\\) as follows :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">(α)</span> one glues, in \\(X_t\\times[0,1]\\), the extremities \\(X_t\\times\\{0\\}\\) and \\(X_t\\times\\{1\\}\\) by means of \\(T\\), to obtain \\(f':X'\\to S^1\\) ;</li>\n<li><span class=\"item-label\">(β)</span> \\(r_t\\) defines \\(r':X'\\to X_0\\) ; \\((X,f)\\) is identified with</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{cône}(f'):\\bigl(\\operatorname{cône}\\text{ of the map }r':X'\\to X_0\\bigr)\\to D\n=\\operatorname{cône}\\text{ of the map }(S^1\\to P^t).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\psi=(r,f):X\\to X_0\\times D\\). The higher direct image sheaves \\(R^i\\psi_*\\mathbb Z\\) of Leray satisfy the following condition.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(*) \\(D^*\\) is covered by open sets \\(U\\) such that the restriction of the sheaf \\(F\\) to \\(X_0\\times U\\) is the inverse image of a sheaf on \\(X_0\\).</p>"
+    },
+    {
+     "id": "13.0.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.1\"><strong><u>Construction 0.1.</u></strong> <u>The sheaves \\(F\\) on \\(X_0\\times D\\) satisfying (*) are identified with the systems \\((F_0,F_t,T,\\alpha)\\) where</u></p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">α)</span> \\(F_0\\) <u>is a sheaf on</u> \\(X_0\\) ;</li>\n<li><span class=\"item-label\">β)</span> \\(F_t\\) <u>is a sheaf on</u> \\(X_0\\), <u>equipped with an action of the generator</u> \\(T\\) <u>of</u> \\(\\pi_1(D^*,t)\\) ;</li>\n<li><span class=\"item-label\">γ)</span> \\(\\alpha\\) <u>is a morphism from</u> \\(F_0\\) <u>into the sheaf of</u> \\(T\\)<u>-invariants of</u> \\(F_t\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If a sheaf \\(G\\) on \\(X_0\\times D^*\\) satisfies (*), and if \\(\\widetilde D^*\\) is the universal covering of \\(D^*\\) (equipped with the base point \\(t\\)), the inverse image of \\(G\\) on \\(X_0\\times\\widetilde D^*\\) is in one and only one way the inverse image of a sheaf \\(G_t\\) on \\(X_0\\) ; \\(G_t\\) is equipped with an action of \\(\\pi_1(D^*,t)\\) and \\(G\\) is deduced from \\(\\operatorname{pr}_1^*(G_t)\\) on \\(X_0\\times\\widetilde D^*\\) by passage to the quotient by \\(\\pi_1(D^*,t)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A sheaf \\(F\\) on \\(X_0\\times D\\) is determined by</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">1)</span> its restriction to \\(X_0\\), say \\(F_0\\),</li>\n<li><span class=\"item-label\">2)</span> its restriction to \\(X_0\\times D^*\\), say \\(G\\),</li>\n<li><span class=\"item-label\">3)</span> a morphism \\(\\alpha:F_0\\to i^*j_*G\\) (for \\(i:X_0\\to X_0\\times D\\), \\(j:X_0\\times D^*\\to X_0\\times D\\)).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(F\\) satisfies (*), \\(G\\) is described by \\((G_t,T)\\) on \\(X_0\\), and one finds the announced description of \\(F\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For the sheaves \\(R^i\\psi_*\\mathbb Z\\), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(R^i\\psi_*\\mathbb Z)_0=\n\\begin{cases}\n\\mathbb Z&amp;\\text{for }i=0,\\\\\n0&amp;\\text{for }i&gt;0,\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>while the \\((R^i\\psi_*\\mathbb Z)_t\\) deserve (for \\(i&gt;0\\)) the name of <u>sheaves of vanishing cycles</u> (cf. the discussion at the beginning of paragraph 2 of I).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This discussion is useful only if one refines it by passing to the derived category : the \\(R^i\\psi_*\\mathbb Z\\) are deduced from an object of the derived category \\(D^+(X_0\\times D)\\), and even from an object \\(R\\psi_*\\mathbb Z\\) of the derived category of the category of abelian sheaves on \\(X_0\\times D\\) satisfying (*). This object determines not only the sheaves of vanishing cycles and their monodromy, but also the classical «variation» morphisms (cf. 1.4 and XIV 3.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is its analogue that we will define in algebraic geometry. If \\(S\\) is a strictly henselian trait and \\(f:X\\to S\\) is a morphism of schemes, we will define an object \\(R\\Psi(\\mathbb Z/\\ell^n)\\) of the derived category of the category of abelian sheaves on the product topos \\((X_0)_{\\mathrm{et}}\\times S_{\\mathrm{et}}\\). A sheaf on this topos is interpreted as a system \\((F_0,F_t,T,\\alpha)\\) where</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">α)</span> \\(F_0\\) is a sheaf on \\(X_0\\),</li>\n<li><span class=\"item-label\">β)</span> \\(F_t\\) is a sheaf on \\(X_0\\), equipped with a continuous action \\(T\\) of the inertia group \\(I\\),</li>\n<li><span class=\"item-label\">γ)</span> \\(\\alpha\\) is a morphism from \\(F_0\\) into the sheaf of \\(I\\)-invariants of \\(F_t\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We will have to work in a slightly more general setting than the one indicated above :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">a)</span> The construction of \\(R\\Psi(\\mathbb Z/\\ell^n)\\) does not assume that \\(f\\) is proper. To interpret it topologically, one would have to take up the preceding construction again, replacing \\(X\\) by a neighborhood of the special fiber \\(X_0\\).</li>\n<li><span class=\"item-label\">b)</span> To construct \\(R\\Psi(\\mathbb Z/\\ell^n)\\) and prove its properties, we will have to consider not only the constant sheaf \\(\\mathbb Z/\\ell^n\\), but also general sheaves, indeed complexes of sheaves.</li>\n<li><span class=\"item-label\">c)</span> When one does not assume that the residue field \\(k\\) of the henselian trait \\(S\\) is separably closed, one must replace the product topos \\((X_0)_{\\mathrm{et}}\\times S_{\\mathrm{et}}\\) by the fibered product topos \\((X_0)_{\\mathrm{et}}\\times_{\\operatorname{Spec}(k)_{\\mathrm{et}}}S_{\\mathrm{et}}\\). The reader averse to 2-fibered products of topoi may take the Galois description 1.2.4 of this topos as being its definition.</li>\n</ol>"
+    },
+    {
+     "id": "13.0.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"13.0.2\"><strong>0.2.</strong> <u>Notations and terminology</u>.</h3>"
+    },
+    {
+     "id": "13.0.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.1\"><strong>(0.2.1)</strong> <u>trait</u> : spectrum of a discrete valuation ring.</p>"
+    },
+    {
+     "id": "13.0.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.2\"><strong>(0.2.2)</strong> <u>henselian</u> : (for a scheme) spectrum of a henselian local ring.</p>"
+    },
+    {
+     "id": "13.0.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.3\"><strong>(0.2.3)</strong> <u>strictly henselian</u> : for a ring : henselian with separably closed residue field. For a scheme : spectrum of such a ring.</p>"
+    },
+    {
+     "id": "13.0.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.4\"><strong>(0.2.4)</strong> <u>geometric point</u> of \\(S\\) : a morphism \\(\\bar x:\\operatorname{Spec}(\\bar k)\\to S\\) with image \\(x\\in S\\), \\(k(\\bar x)=_{\\mathrm{dfn}}\\bar k\\) being a separable closure of \\(k(x)\\). We say that \\(\\bar x\\) is localized at \\(x\\). By abuse of language, we will sometimes also call a geometric point a morphism \\(\\bar x:\\operatorname{Spec}(\\bar k)\\to S\\) such that \\(\\bar k\\) is a separably closed extension of \\(k(x)\\) ; such a morphism factors in a unique way through a geometric point (in the proper sense) of \\(S\\).</p>"
+    },
+    {
+     "id": "13.0.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.5\"><strong>(0.2.5)</strong> \\(s,\\eta,\\bar s,\\bar\\eta,\\bar S\\) : If \\(S=\\operatorname{Spec}(V)\\) is a henselian trait, we will in principle denote by \\(s\\) the closed point of \\(S\\), by \\(\\eta\\) its generic point, by \\(\\bar\\eta\\) a generic geometric point (= localized at \\(\\eta\\)) of \\(S\\) and by \\(\\bar s\\) the corresponding geometric point localized at \\(s\\) (I 0.0.3). We denote by \\(\\bar S\\) the spectrum of the normalization of \\(V\\) in \\(k(\\bar\\eta)\\), whose residue field is an inseparable extension of \\(k(\\bar s)\\). We denote by \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\) the Galois group of \\(k(\\bar\\eta)\\) over \\(k(\\eta)\\). Similarly for \\(s\\). We have an exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow I\\longrightarrow\\operatorname{Gal}(\\bar\\eta/\\eta)\\longrightarrow\\operatorname{Gal}(\\bar s/s)\\longrightarrow0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(\\(I\\) the inertia group).</p>"
+    },
+    {
+     "id": "13.0.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.6\"><strong>(0.2.6)</strong> <u>sheaf</u> (on a scheme \\(X\\)) always means sheaf on the étale site \\(X_{\\mathrm{et}}\\) of \\(X\\).</p>"
+    },
+    {
+     "id": "13.0.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.0.2.7\"><strong>(0.2.7)</strong> <u>prime to</u> : a torsion sheaf \\(F\\) on a scheme \\(S\\) (or a torsion abelian group \\(F\\)) is prime to the residue characteristics of \\(S\\) if for every \\(s\\in S\\), multiplication by the characteristic exponent of \\(k(s)\\) is an automorphism of \\(F\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-1",
+   "title": "1. Sheaves of sets",
+   "blocks": [
+    {
+     "id": "13.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"13.1\"><u>1. Sheaves of sets</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The sheaves of vanishing cycles will be defined as values of derived functors of the left exact functor \\(\\Psi\\) defined in n° 3 for every sheaf of sets.</p>"
+    },
+    {
+     "id": "13.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"13.1.1\"><u>1.1. Galois sheaves.</u></h3>"
+    },
+    {
+     "id": "13.1.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.1.1\"><strong>1.1.1.</strong> Let \\(Y\\) be a scheme over a field \\(k\\) with separable closure \\(\\bar k\\) and \\(\\bar Y=Y\\otimes_k\\bar k\\). Let \\(G\\) be a profinite group and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu:G\\longrightarrow\\operatorname{Gal}(\\bar k/k)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a continuous homomorphism from \\(G\\) into the Galois group of \\(\\bar k\\) over \\(k\\). The Galois group \\(\\operatorname{Gal}(\\bar k/k)\\) acts (on the left) on \\(\\bar Y\\) by transport of structure. The group \\(G\\) acts on \\(\\bar Y\\) via \\(u\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\mathcal F\\) be a sheaf of sets on (the étale site of) \\(\\bar Y\\). An action of \\(G\\) on \\(\\mathcal F\\), <u>compatible</u> with the action of \\(G\\) on \\(\\bar Y\\), is an action by automorphisms of \\(G\\) on \\((\\bar Y,\\mathcal F)\\), inducing the given action on \\(\\bar Y\\). In other words, it is a system of isomorphisms</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\sigma(g):u(g)_*\\mathcal F\\longrightarrow\\mathcal F,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>satisfying \\(\\sigma(gh)=\\sigma(g)\\,\\sigma(h)\\). If \\(G\\) acts on \\(\\mathcal F\\), then, for any \\(U\\) étale over \\(Y\\), defining \\(\\bar U=U\\otimes_k\\bar k\\) étale over \\(\\bar Y\\), the group \\(G\\) acts on \\(\\mathcal F(\\bar U)\\).</p>"
+    },
+    {
+     "id": "13.1.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.1.2\"><strong><u>Definition 1.1.2.</u></strong> <u>We say that \\(G\\) acts continuously on \\(\\mathcal F\\) if, for every \\(U\\) quasi-compact and étale over \\(Y\\), \\(G\\) acts continuously on the discrete set \\(\\mathcal F(\\bar U)\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It would come to the same thing to consider only affine \\(U\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(\\mathcal F\\) is a sheaf of sets on \\(Y\\), with inverse image \\(\\bar{\\mathcal F}\\) on \\(\\bar Y\\), then the group \\(\\operatorname{Gal}(\\bar k/k)\\) acts on \\(\\bar{\\mathcal F}\\), by transport of structure, in a way compatible with its action on \\(\\bar Y\\).</p>"
+    },
+    {
+     "id": "13.1.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.1.3\"><strong><u>Reminder 1.1.3.</u></strong> (i) <u>The action of \\(\\operatorname{Gal}(\\bar k/k)\\) on \\(\\bar{\\mathcal F}\\) is continuous.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) <u>The functor</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal F\\longmapsto\\bar{\\mathcal F}\\ \\text{equipped with the action of }\\operatorname{Gal}(\\bar k/k)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>is an equivalence of the category of sheaves of sets on \\(Y\\) with the category of sheaves of sets on \\(\\bar Y\\) equipped with a continuous action of \\(\\operatorname{Gal}(\\bar k/k)\\) compatible with the action of \\(\\operatorname{Gal}(\\bar k/k)\\) on \\(\\bar Y\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us express \\(\\bar k\\) as an inductive limit of finite Galois extensions \\(k_i\\). Let \\(\\varphi_i:Y_i=Y\\otimes_k k_i\\longrightarrow Y\\) and \\(\\varphi:\\bar Y\\longrightarrow Y\\) be the projections. For \\(U\\) étale over \\(Y\\), assumed affine, let \\(U_i=U\\otimes_k k_i\\). We have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\bar{\\mathcal F}(\\bar U)=\\varinjlim\\varphi_i^*\\mathcal F(U_i).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On \\(\\varphi_i^*\\mathcal F(U_i)\\), \\(\\operatorname{Gal}(\\bar k/k)\\) acts via \\(\\operatorname{Gal}(k_i/k)\\), which proves (i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The functor (ii) has as right adjoint the functor</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal G\\longmapsto(\\varphi_*\\mathcal G)^{\\operatorname{Gal}(\\bar k/k)}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every \\(\\mathcal F\\) on \\(Y\\), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi_*\\varphi^*\\mathcal F=\\varinjlim\\varphi_{i*}\\varphi_i^*\\mathcal F.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove that \\(\\mathcal F\\xrightarrow{\\sim}(\\varphi_*\\varphi^*\\mathcal F)^{\\operatorname{Gal}(\\bar k/k)}\\), it therefore suffices to prove that for every \\(i\\), \\(\\mathcal F\\xrightarrow{\\sim}(\\varphi_{i*}\\varphi_i^*\\mathcal F)^{\\operatorname{Gal}(k_i/k)}\\). It even suffices to prove that this arrow becomes an isomorphism after extension of scalars from \\(k\\) to \\(k_i\\) ; \\(\\operatorname{Spec}(k_i)\\) then becomes a sum of copies of \\(\\operatorname{Spec}(k)\\), permuted in a simply transitive way by \\(\\operatorname{Gal}(k_i/k)\\), and the assertion becomes trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The exact functor (ii) is therefore fully faithful. To conclude, it remains to verify that the arrow</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi^*(\\varphi_*\\mathcal G)^{\\operatorname{Gal}(\\bar k/k)}\\longrightarrow\\mathcal G\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is an epimorphism. Let \\(\\bar\\varphi_i:\\bar Y\\to Y_i\\). The hypothesis gives that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varinjlim\\bar\\varphi_i^*(\\varphi_{i*}\\mathcal G)^{\\operatorname{Gal}(\\bar k/k_i)}\\longrightarrow\\mathcal G\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is epimorphic. We have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi^*(\\varphi_*\\mathcal G)^{\\operatorname{Gal}(\\bar k/k)}\n=\\bar\\varphi_i^*\\Bigl(\\varphi_{i*}\\bigl((\\bar\\varphi_{i*}\\mathcal G)^{\\operatorname{Gal}(\\bar k/k_i)}\\bigr)\\Bigr)^{\\operatorname{Gal}(k_i/k)},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and one concludes by noting, by the same Galois descent argument as above, that for \\(\\mathcal G'\\) on \\(Y_i\\), equipped with an action of \\(\\operatorname{Gal}(k_i/k)\\) compatible with its action on \\(Y_i\\), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi_i^*(\\varphi_{i*}\\mathcal G')^{\\operatorname{Gal}(k_i/k)}\\xrightarrow{\\sim}\\mathcal G'.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"13.1.2\"><u>1.2. The topos \\(Y\\mathop{\\times}\\limits_S S\\).</u></h3>"
+    },
+    {
+     "id": "13.1.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.1\"><strong>1.2.1.</strong> Let \\(S\\) be a henselian local scheme with closed point \\(i:s\\lhook\\joinrel\\longrightarrow S\\). The functor \\(S'\\longmapsto S'\\times_Ss=i^*S'\\) is an equivalence of the category of finite étale \\(S\\)-schemes \\(S'\\) with the category of finite étale \\(s\\)-schemes \\(s'\\) (spectra of étale \\(k(s)\\)-algebras). The inverse functor \\(sp^*\\), from the étale site of \\(s\\) into the étale site of \\(S\\), is a morphism of sites</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nsp:S\\longrightarrow s,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the <u>specialization morphism</u> (cf. SGA4 VIII 7). For \\(s'\\) étale over \\(s\\), we say that \\(sp^*(s')\\) is deduced from \\(S\\) by <u>extension of the residue field</u>. For \\(F\\) a sheaf on \\(S\\), we have a functorial isomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.1.1}sp_*F=i^*F.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every open subset of \\(S\\), \\(j:U\\lhook\\joinrel\\longrightarrow S\\), or for every point of \\(S\\), \\(j:\\eta\\lhook\\joinrel\\longrightarrow S\\), we will again denote by \\(sp\\) the composite morphism \\(sp\\circ j\\). For \\(F\\) a sheaf on \\(U\\) (resp. on \\(\\eta\\)), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.1.2}sp_*F=i^*j_*F.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.2\"><strong>1.2.2.</strong> Let \\(S\\) be a henselian trait, and \\(s,\\eta,\\bar s,\\bar\\eta,I\\) as in 0.2.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ns\\overset{i}{\\lhook\\joinrel\\longrightarrow}S\\overset{j}{\\longleftarrow\\joinrel\\lhook}\\eta.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Here is how the sheaves on \\(s,\\eta,S\\) and the specialization morphism are interpreted in Galois terms.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(a\\) The sheaves \\(F\\) on \\(s\\) (resp. \\(\\eta\\)) are identified, by \\(F\\longmapsto F_{\\bar s}\\) (resp. \\(F_{\\bar\\eta}\\)), with the sets equipped with a continuous action of \\(\\operatorname{Gal}(\\bar s/s)\\) (resp. \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\)) (SGA4 VIII 2.1, or 1.1.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(b\\) A sheaf \\(F\\) on \\(S\\) defines sheaves \\(F_s=i^*F\\) and \\(F_\\eta=j^*F\\) on \\(s\\) and \\(\\eta\\), and an adjunction arrow \\(F\\longrightarrow j_*j^*F\\) inducing</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi:F_s=i^*F\\longrightarrow i^*j_*j^*F=sp_*F_\\eta.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know (SGA4 IV 9.5.4) that the functor \\(F\\longmapsto(F_s,F_\\eta,\\varphi)\\) is an equivalence of the category of sheaves on \\(S\\) with that of triples \\((F_s,F_\\eta,\\varphi)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(F_s\\text{ sheaf on }s,\\ F_\\eta\\text{ sheaf on }\\eta,\\ \\varphi:F_s\\longrightarrow i^*j_*F_\\eta).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Via the equivalence \\(a\\), the functor \\(i^*j_*\\) is identified with the functor «invariants under \\(I\\)». The sheaves on \\(S\\) are therefore identified with the triples formed of a set \\(F_{\\bar s}\\) equipped with an action of \\(\\operatorname{Gal}(\\bar s/s)\\), a set \\(F_{\\bar\\eta}\\) equipped with an action of \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\) and an equivariant morphism \\(\\varphi:F_{\\bar s}\\longrightarrow F_{\\bar\\eta}^I\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(c\\) The morphisms \\(sp,j,i,sp=sp\\circ j\\) are expressed as follows, via \\(a\\) \\(b\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\nsp:S\\to s:&amp;\\quad sp^*(F_{\\bar s})=(F_{\\bar s},F_{\\bar s},\\operatorname{Id}),\\\\\n&amp;\\quad sp_*(F_{\\bar s},F_{\\bar\\eta},\\varphi)=F_{\\bar s},\\\\\nj:\\eta\\to S:&amp;\\quad j^*(F_{\\bar s},F_{\\bar\\eta},\\varphi)=F_{\\bar\\eta},\\\\\n&amp;\\quad j_*(F_{\\bar\\eta})=(F_{\\bar\\eta}^I,F_{\\bar\\eta},\\text{inclusion}),\\\\\ni:s\\to S:&amp;\\quad i^*(F_{\\bar s},F_{\\bar\\eta},\\varphi)=F_{\\bar s},\\\\\n&amp;\\quad i_*(F_{\\bar s})=(F_{\\bar s},\\{0\\},\\text{projection}),\\\\\nsp=sp\\,j:\\eta\\to s:&amp;\\quad sp^*(F_{\\bar s})=F_{\\bar s},\\\\\n&amp;\\quad sp_*(F_{\\bar\\eta})=F_{\\bar\\eta}^I.\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.3\"><strong>1.2.3.</strong> Let \\(S\\) be a henselian trait as in 1.2.2 and \\(Y\\) a scheme over \\(s\\). We will have to work with the 2-fibered product \\(Y\\mathop{\\times}\\limits_sS\\) of the étale topoi of \\(Y\\) and \\(S\\) over the étale topos of \\(s\\). By Giraud [1], this 2-fibered product exists, and one sees easily that it admits the Galois description given below. Those averse to 2-fibered products may take this description as a definition.</p>"
+    },
+    {
+     "id": "13.1.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.4\"><strong><u>Construction 1.2.4.</u></strong> <u>The sheaves \\(F\\) on \\(Y\\mathop{\\times}\\limits_sS\\) are identified with the triples \\((F_s,F_\\eta,\\varphi)\\) where</u></p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> <u>\\(F_s\\) is a sheaf on \\(Y\\), or equivalently a sheaf \\(F_{\\bar s}\\) on \\(\\bar Y=Y\\otimes_s\\bar s\\), equipped with a continuous action of \\(\\operatorname{Gal}(\\bar s/s)\\) compatible with the action of \\(\\operatorname{Gal}(\\bar s/s)\\) on \\(\\bar Y\\).</u></li>\n<li><span class=\"item-label\">\\(b\\)</span> <u>\\(F_\\eta\\) is a sheaf \\(F_{\\bar\\eta}\\) on \\(\\bar Y\\), equipped with a continuous action of \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\), compatible with the action (via 1.1.1) of \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\) on \\(\\bar Y\\).</u></li>\n<li><span class=\"item-label\">\\(c\\)</span> <u>\\(\\varphi\\) is an equivariant morphism from \\(F_{\\bar s}\\) into \\(F_{\\bar\\eta}\\).</u></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Similarly, a sheaf \\(F_\\eta\\) on \\(Y\\mathop{\\times}\\limits_s\\eta\\) is an object 1.2.4\\(b\\). We have a diagram of topoi</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.4.1}\n\\xymatrix@C=3.5em@R=3em{\nY\\ar[d]&amp;Y\\mathop{\\times}\\limits_sS\\ar[l]_{sp}\\ar[r]^j\\ar[d]&amp;Y\\mathop{\\times}\\limits_s\\eta\\ar[d]\\\\\ns&amp;S\\ar[l]^i\\ar[r]_j&amp;\\eta\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(Y\\mathop{\\times}\\limits_sS\\) is the union of the open subtopos \\(Y\\mathop{\\times}\\limits_s\\eta\\) and the complementary closed subtopos \\(Y\\). The formulas 1.2.2\\(c\\) remain valid for \\(sp:Y\\mathop{\\times}\\limits_sS\\longrightarrow Y\\) (still denoted \\(\\operatorname{pr}_1\\)), \\(j:Y\\mathop{\\times}\\limits_s\\eta\\lhook\\joinrel\\longrightarrow Y\\mathop{\\times}\\limits_sS\\), \\(i:Y\\lhook\\joinrel\\longrightarrow Y\\mathop{\\times}\\limits_sS\\) and \\(sp:Y\\mathop{\\times}\\limits_s\\eta\\longrightarrow Y\\) (still denoted \\(\\operatorname{pr}_1\\)).</p>"
+    },
+    {
+     "id": "13.1.2.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.4.2\"><strong>1.2.4.2.</strong> If one takes 1.2.4 as the definition of \\(Y\\mathop{\\times}\\limits_sS\\), one has to show, by a direct construction, that \\(Y\\mathop{\\times}\\limits_sS\\) does not depend, up to unique isomorphism, on the choice of the separable closure \\(k(\\bar\\eta)\\) of \\(k(\\eta)\\). One does this by interpreting \\(F_\\eta\\) of 1.2.4\\(b\\) as a functor which to each separable closure \\(k(\\bar\\eta)\\) of \\(k(\\eta)\\), defining a separable closure \\(k(\\bar s)\\) of \\(k(s)\\), associates a sheaf on \\(Y\\otimes_{k(s)}k(\\bar s)\\) : the \\(F_{\\bar\\eta}\\) of 1.2.4\\(b\\) is the restriction of this functor to \\(\\{\\bar\\eta\\}\\).</p>"
+    },
+    {
+     "id": "13.1.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.5\"><strong>1.2.5.</strong> Each geometric point \\(\\bar x\\) of \\(Y_s\\) defines a geometric point \\((\\bar x,\\bar\\eta)\\) of \\(Y\\mathop{\\times}\\limits_s\\eta\\), with corresponding fiber functor</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF_{\\bar\\eta}\\longmapsto(F_{\\bar\\eta})_{\\bar x}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It defines geometric points \\((\\bar x,\\bar\\eta)\\) and \\((\\bar x,\\bar s)\\) of \\(Y\\mathop{\\times}\\limits_sS\\) by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF_{(\\bar x,\\bar\\eta)}=(F_{\\bar\\eta})_{\\bar x}\\quad\\text{and}\\quad\nF_{(\\bar x,\\bar s)}=(F_{\\bar s})_{\\bar x}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One verifies that one obtains in this way all the points of the topoi \\(Y\\mathop{\\times}\\limits_s\\eta\\) and \\(Y\\mathop{\\times}\\limits_sS\\). We will not use this. One verifies at once that these sets of points are conservative.</p>"
+    },
+    {
+     "id": "13.1.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.6\"><strong><u>*Remark 1.2.6.</u></strong> The construction 1.2.5 defines an equivalence of the category \\(\\operatorname{Point}(Y\\mathop{\\times}\\limits_s\\eta)\\) (resp. \\(\\operatorname{Point}(Y\\mathop{\\times}\\limits_sS)\\)) of points of \\(Y\\mathop{\\times}\\limits_s\\eta\\) (resp. ……) with the 2-fibered product \\(\\operatorname{Point}(Y)\\mathop{\\times}\\limits_{\\operatorname{Point}(s)}\\operatorname{Point}(\\eta)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This equivalence also follows from the fact that \\(Y\\mathop{\\times}\\limits_s\\eta\\) (resp. \\(Y\\mathop{\\times}\\limits_sS\\)) is a 2-fibered product of topoi.<sup>*</sup></p>"
+    },
+    {
+     "id": "13.1.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.7\"><strong>1.2.7.</strong> By the functoriality of 2-fibered products, the diagram (1.2.4.1) is functorial in \\(Y\\) and \\(S\\). In particular</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Every morphism \\(f:Y\\longrightarrow Y'\\) of schemes over \\(s\\) induces a morphism of topoi from \\(Y\\mathop{\\times}\\limits_sS\\) into \\(Y'\\mathop{\\times}\\limits_sS\\). We have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.7.1}f^*(F_{\\bar s},F_{\\bar\\eta},\\varphi)=\n(f^*F_{\\bar s},f^*F_{\\bar\\eta},f^*(\\varphi))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and for \\(f\\) quasi-compact</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.7.2}f_*(F_{\\bar s},F_{\\bar\\eta},\\varphi)=\n(f_*F_{\\bar s},f_*F_{\\bar\\eta},f_*(\\varphi)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Analogous formulas hold for \\(f:Y\\mathop{\\times}\\limits_s\\eta\\longrightarrow Y'\\mathop{\\times}\\limits_s\\eta\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Every surjective morphism of henselian traits \\(f:S'\\longrightarrow S\\) induces a morphism of topoi from \\(Y_{s'}\\mathop{\\times}\\limits_{s'}S'\\) into \\(Y\\mathop{\\times}\\limits_sS\\). Denoting again by \\(f\\) the natural morphism from \\(Y_{s'}=Y\\otimes_{k(s)}k(s')\\) into \\(Y\\), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.7.3}f^*(F_{\\bar s},F_{\\bar\\eta},\\varphi)=\n(f^*F_{\\bar s},f^*F_{\\bar\\eta},f^*(\\varphi)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(f\\) is a finite morphism, \\(f_*\\) is expressed as an induced representation.</p>"
+    },
+    {
+     "id": "13.1.2.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.8\"><strong>1.2.8.</strong> Let \\(f:Y\\longrightarrow Y'\\) be a locally of finite type and separated morphism of \\(s\\)-schemes. One defines a functor «direct image with proper support»</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf_!: (\\text{sheaves of pointed sets on }Y\\mathop{\\times}\\limits_sS)\n\\longrightarrow(\\text{sheaves of pointed sets on }Y'\\mathop{\\times}\\limits_sS)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>by the formula</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.8.1}f_!(F_{\\bar s},F_{\\bar\\eta},\\varphi)=\n(f_!F_{\\bar s},f_!F_{\\bar\\eta},f_!(\\varphi)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(f\\) a locally closed embedding, \\(f_!\\) is called the functor of extension by zero.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>An analogous functor is defined for \\(Y\\mathop{\\times}\\limits_s\\eta\\).</p>"
+    },
+    {
+     "id": "13.1.2.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.2.9\"><strong>1.2.9.</strong> Let \\(f:Y\\lhook\\joinrel\\longrightarrow Y'\\) be a locally closed embedding of \\(s\\)-schemes. The functor \\(f_!\\) has a right adjoint \\(f^!\\), «sections with support in \\(Y\\)», satisfying</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.9.1}f^!(F_{\\bar s},F_{\\bar\\eta},\\varphi)=\n(f^!F_{\\bar s},f^!F_{\\bar\\eta},f^!(\\varphi)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose only that \\(f\\) is quasi-finite. The functor \\(f_!\\) from abelian sheaves on \\(Y\\mathop{\\times}\\limits_sS\\) into abelian sheaves on \\(Y'\\mathop{\\times}\\limits_sS\\) still admits a right adjoint \\(f^!\\), given by 1.2.9.1 (cf. SGA4 XVIII 3.1.8). For \\(f\\) étale, \\(f^!=f^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Analogous functors are defined for \\(Y\\mathop{\\times}\\limits_s\\eta\\).</p>"
+    },
+    {
+     "id": "13.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"13.1.3\"><u>1.3. The functor \\(\\Psi\\).</u></h3>"
+    },
+    {
+     "id": "13.1.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.1\"><strong>1.3.1.</strong> Let \\(S\\) be a henselian trait as in 0.2.5 and \\(p:X\\longrightarrow S\\). We propose to define a left exact functor \\(\\Psi\\) from sheaves on \\(X\\) into sheaves on the topos \\(X_s\\mathop{\\times}\\limits_sS\\) constructed in 1.2. This functor is not in general the direct image functor of a morphism of topoi.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We will also define \\(\\Psi_\\eta:(\\text{sheaves on }X_\\eta)\\longrightarrow(\\text{sheaves on }X_s\\mathop{\\times}\\limits_s\\eta)\\).</p>"
+    },
+    {
+     "id": "13.1.3.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.2\"><strong>1.3.2.</strong> Let \\(\\bar X=X\\times_S\\bar S\\). We have a diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.2.1}\n\\xymatrix@C=3em@R=3em{\nX_{\\bar s}\\ar@{^{(}-&gt;}[r]^{\\bar i}\\ar[d]&amp;\\bar X&amp;X_{\\bar\\eta}\\ar@{_{(}-&gt;}[l]_{\\bar j}\\ar[d]\\\\\nX_s\\ar@{^{(}-&gt;}[r]&amp;X&amp;X_\\eta\\ar@{_{(}-&gt;}[l]\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>cartesian over the diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=3em@R=3em{\n\\bar s\\ar@{^{(}-&gt;}[r]\\ar[d]&amp;\\bar S&amp;\\bar\\eta\\ar@{_{(}-&gt;}[l]\\ar[d]\\\\\ns\\ar@{^{(}-&gt;}[r]&amp;S&amp;\\eta\\ar@{_{(}-&gt;}[l].\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(F\\) be a sheaf on \\(X_\\eta\\), with inverse image \\(F_{\\bar\\eta}\\) on \\(X_{\\bar\\eta}\\). We set</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.2.2}\\Psi_\\eta(F)=\\bar i^*\\bar j_*F_{\\bar\\eta}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By transport of structure, this sheaf is equipped with a continuous action of \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\), compatible with the action of \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\) on \\(X_{\\bar s}\\). The functor</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.2.3}\\Psi_\\eta:(X_{\\eta\\,\\mathrm{et}})^\\sim\\longrightarrow\n(X_s\\mathop{\\times}\\limits_s\\eta)^\\sim\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is left exact.</p>"
+    },
+    {
+     "id": "13.1.3.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.3\"><strong>1.3.3.</strong> Let \\(F\\) be a sheaf on \\(X\\), \\(F_\\eta\\) its restriction to \\(X_\\eta\\) and \\(F_s\\) its restriction to \\(X_s\\). We set</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.3.1}(\\Psi(F))_\\eta=\\Psi_\\eta(F_\\eta),\n\\qquad\n\\tag{1.3.3.2}(\\Psi(F))_s=F_s.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\bar F\\) be the inverse image of \\(F\\) on \\(\\bar X\\) and \\(\\varphi'\\) the adjunction morphism \\(\\varphi':\\bar F\\longrightarrow\\bar j_*\\bar j^*\\bar F\\). This morphism induces</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi:F_{\\bar s}=\\bar i^*\\bar F\\longrightarrow\n\\bar i^*\\bar j_*\\bar j^*\\bar F=(\\Psi_\\eta(F_\\eta))_{\\bar\\eta}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The triple \\(\\Psi(F)=((\\Psi(F))_s,(\\Psi(F))_\\eta,\\varphi)\\) is a sheaf on \\(X_s\\mathop{\\times}\\limits_sS\\). The functor</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.3.3}\\Psi:(X_{\\mathrm{et}})^\\sim\\longrightarrow\n(X_s\\mathop{\\times}\\limits_sS)^\\sim\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is left exact.</p>"
+    },
+    {
+     "id": "13.1.3.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.4\"><strong>1.3.4.</strong> When there is no risk of confusion, we will set</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi_\\eta(F)=(\\Psi(F))_\\eta,\\qquad\n\\Psi_{\\bar\\eta}(F)=(\\Psi(F))_{\\bar\\eta}\\quad\\text{and}\\quad\n\\Psi_{\\bar\\eta}(F)=(\\Psi_\\eta(F))_{\\bar\\eta}.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.3.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.5\"><strong>1.3.5.</strong> In the remainder of this section, we draw up a list of functoriality properties of \\(\\Psi\\) (cf. 1.2.7 to 1.2.9). They will be useful mainly in their derived form (2.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(f:X\\longrightarrow X'\\) be a morphism of \\(S\\)-schemes, whence a diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.5.1}\n\\xymatrix@C=3em@R=3em{\nX_{\\bar s}\\ar@{^{(}-&gt;}[r]^{\\bar i}\\ar[d]^f&amp;\\bar X&amp;X_{\\bar\\eta}\\ar@{_{(}-&gt;}[l]_{\\bar j}\\ar[d]^f\\\\\nX'_{\\bar s}\\ar@{^{(}-&gt;}[r]^{\\bar i}&amp;\\bar X'&amp;X'_{\\bar\\eta}\\ar@{_{(}-&gt;}[l]_{\\bar j}}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The ambiguity in the notation of the arrows will simplify the formulas, and does not lead to confusion : only one interpretation gives a meaning to the composite arrows below. Similarly, we will denote by \\(\\Psi\\) the functor (1.3.3.3) for \\(X\\) as well as for \\(X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The morphisms of functors described below for \\(\\Psi\\) have a variant for \\(\\Psi_\\eta\\), which we generally omit to make explicit.</p>"
+    },
+    {
+     "id": "13.1.3.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.6\"><strong>1.3.6.</strong> The base change morphism \\(\\bar i^*f_*\\longrightarrow f_*\\bar i^*\\) induces a morphism of functors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.6.1}\\Psi f_*\\longrightarrow f_*\\Psi\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which is an isomorphism for \\(f\\) proper (SGA4 XII 5.1(i)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The essential case is that where \\(X'=S\\). One finds a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.6.2}f_*\\longrightarrow f_{s*}\\Psi\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>with essential component</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.6.3}\\Gamma(X_{\\bar\\eta},F)\\longrightarrow\n\\Gamma(X_{\\bar s},\\Psi_{\\bar\\eta}(F));\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>this morphism is an isomorphism for \\(f\\) proper.</p>"
+    },
+    {
+     "id": "13.1.3.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.7\"><strong>1.3.7.</strong> The base change morphism \\(f^*\\bar j_*\\longrightarrow\\bar j_*f^*\\) induces a morphism of functors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.7.1}f^*\\Psi\\longrightarrow\\Psi f^*.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.3.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.8\"><strong>1.3.8.</strong> Suppose \\(f\\) quasi-finite. The functors \\(f_!\\) commute with base changes ; the morphism \\(f_!\\bar j_*\\longrightarrow\\bar j_*f_!\\) induces a morphism of functors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.8.1}f_!\\Psi\\longrightarrow\\Psi f_!.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(f\\) is finite, this is the inverse of (1.3.6.1).</p>"
+    },
+    {
+     "id": "13.1.3.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.9\"><strong>1.3.9.</strong> The situation is dual for \\(f^!\\) (we assume that \\(f\\) is quasi-finite in order to work with abelian sheaves, or is an embedding for sheaves of pointed sets). This functor commutes with direct images, and the morphism \\(\\bar i^*f^!\\longrightarrow f^!\\bar i^*\\) induces a morphism of functors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.9.1}\\Psi f^!\\longrightarrow f^!\\Psi.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(f\\) étale, this is the inverse of (1.3.7.1).</p>"
+    },
+    {
+     "id": "13.1.3.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.3.10\"><strong>1.3.10.</strong> Finally, for a base change \\(S'\\xrightarrow f S\\), one finds a base change morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.10.1}f^*\\Psi\\longrightarrow\\Psi f^*.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"13.1.4\"><u>1.4. The variation.</u></h3>"
+    },
+    {
+     "id": "13.1.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.4.1\"><strong>1.4.1.</strong> Let \\(S\\) be a henselian trait as in 0.2.5 and \\(Y\\) a scheme over \\(s\\). Let \\(\\Lambda\\) be a ring. More generally, one could take for \\(\\Lambda\\) a sheaf of rings on \\(Y\\). For every object \\(K\\) of the derived category \\(D(Y\\mathop{\\times}\\limits_sS,\\Lambda)\\) of the category of sheaves of \\(\\Lambda\\)-modules on \\(Y\\mathop{\\times}\\limits_sS\\), we propose to define a <u>variation</u> morphism.</p>"
+    },
+    {
+     "id": "13.1.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.4.2\"><strong>1.4.2.</strong> A complex of sheaves of \\(\\Lambda\\)-modules \\(K\\) on \\(Y\\mathop{\\times}\\limits_sS\\) is identified with a triple \\((K_s,K_\\eta,\\varphi)\\) where</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) \\(K_s\\) (resp. \\(K_\\eta\\)) is a complex of sheaves \\(K_{\\bar s}\\) (resp. \\(K_{\\bar\\eta}\\)) on \\(\\bar Y\\), equipped with a continuous action of \\(\\operatorname{Gal}(\\bar s/s)\\) (resp. \\(\\operatorname{Gal}(\\bar\\eta/\\eta)\\));</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \\(\\varphi\\) is an equivariant morphism \\(\\varphi:K_{\\bar s}\\longrightarrow K_{\\bar\\eta}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Such a complex \\(K\\) is always homotopic to a complex \\(K'=(K'_s,K'_\\eta,\\varphi')\\) such that \\(\\varphi'\\) is injective and such that the exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.2.1}0\\longrightarrow K'_{\\bar s}\\longrightarrow K'_{\\bar\\eta}\\longrightarrow\\operatorname{coker}(\\varphi')\\longrightarrow0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is split degree by degree. It suffices to take \\(K_{\\bar s}=K'_{\\bar s}\\), and to take for \\(K'_{\\bar\\eta}\\) the sum of \\(K_{\\bar\\eta}\\) and the cone of \\(sp^*K_{\\bar s}\\). Let us set \\(\\Phi(K)=\\operatorname{coker}(\\varphi')\\). The exact sequence (1.4.2.1) defines a distinguished triangle</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.2.2}\n\\xymatrix@C=4em@R=3em{\n&amp;\\Phi(K)\\ar[dl]\\ar[dr]&amp;\\\\\nsp^*K_{\\bar s}\\ar[rr]&amp;&amp;K_{\\bar\\eta}\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in the category \\(K(Y\\mathop{\\times}\\limits_s\\eta,\\Lambda)\\) of complexes of sheaves of \\(\\Lambda\\)-modules up to homotopy on \\(Y\\mathop{\\times}\\limits_s\\eta\\). This triangle depends only on \\(K\\in\\operatorname{Ob}K(Y\\mathop{\\times}\\limits_sS,\\Lambda)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This construction passes to the derived category, and associates with every object \\(K\\) of \\(D(Y\\mathop{\\times}\\limits_sS,\\Lambda)\\) a distinguished triangle of \\(D(Y\\mathop{\\times}\\limits_s\\eta,\\Lambda)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The triangle (1.4.2.2) is useful mainly via the long exact sequence of hypercohomology deduced from it</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\cdots\\longrightarrow H^i(\\bar Y,K_{\\bar s})\\longrightarrow H^i(\\bar Y,K_{\\bar\\eta})\\longrightarrow H^i(\\bar Y,\\Phi(K)_{\\bar\\eta})\\longrightarrow\\cdots.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.1.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.1.4.3\"><strong>1.4.3.</strong> The inertia group \\(I\\) acts trivially on \\(K'_{\\bar s}\\). For every \\(\\sigma\\in I\\), the endomorphism \\(\\sigma-1\\) of \\(K'_{\\bar\\eta}\\) (notation (1.4.2.1)) therefore factors through a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Var}(\\sigma):\\operatorname{coker}(\\varphi')\\longrightarrow K'_{\\bar\\eta}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This construction passes to the derived category : for \\(K\\in\\operatorname{Ob}D(Y\\mathop{\\times}\\limits_sS,\\Lambda)\\) and \\(\\sigma\\in I\\), it defines the <u>variation</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.3.1}\\operatorname{Var}(\\sigma):\\Phi(K)_{\\bar\\eta}\\longrightarrow K_{\\bar\\eta}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Denoting by \\(q\\) the arrow from \\(K_{\\bar\\eta}\\) into \\(\\Phi(K)_{\\bar\\eta}\\), we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.3.2}\\sigma=1+\\operatorname{Var}(\\sigma)q\\qquad\\text{(on }K_{\\bar\\eta}\\text{)}\n\\]\n\\[\n\\tag{1.4.3.3}\\sigma=1+q\\operatorname{Var}(\\sigma)\\qquad\\text{(on }\\Phi(K)_{\\bar\\eta}\\text{)}\n\\]\n\\[\n\\tag{1.4.3.4}\\operatorname{Var}(\\sigma\\tau)=\\operatorname{Var}(\\sigma)q\\operatorname{Var}(\\tau)+\\operatorname{Var}(\\sigma)+\\operatorname{Var}(\\tau).\n\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-2",
+   "title": "2. Vanishing cycles",
+   "blocks": [
+    {
+     "id": "13.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"13.2\"><u>2. Vanishing cycles</u></h2>"
+    },
+    {
+     "id": "13.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"13.2.1\"><u>2.1. The functor \\(R\\Psi\\).</u></h3>"
+    },
+    {
+     "id": "13.2.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.1\"><strong>2.1.1.</strong> Let \\(S\\) be a henselian trait as in (0.2.5) and \\(\\Lambda\\) a torsion ring prime to the residue characteristic \\(p\\) of \\(S\\) (0.2.7). More generally, one could take for \\(\\Lambda\\) a torsion sheaf prime to the residue characteristics ; the most important case is that where \\(\\Lambda=\\mathbb Z/\\ell^n\\) (\\(\\ell\\) a prime invertible in \\(\\mathcal O_S\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be a scheme over \\(S\\). The functor \\(\\Psi\\) (resp. \\(\\Psi_\\eta\\)) transforms sheaves of \\(\\Lambda\\)-modules on \\(X\\) (resp. \\(X_\\eta\\)) into sheaves of \\(\\Lambda\\)-modules on \\(X_s\\mathop{\\times}\\limits_sS\\) (resp. \\(X_s\\mathop{\\times}\\limits_s\\eta\\)). Let \\(R\\Psi\\) and \\(R\\Psi_\\eta\\) be the derived functors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Psi:D^+(X,\\Lambda)\\longrightarrow D^+(X_s\\mathop{\\times}\\limits_sS,\\Lambda),\n\\]\n\\[\nR\\Psi_\\eta:D^+(X_\\eta,\\Lambda)\\longrightarrow D^+(X_s\\mathop{\\times}\\limits_s\\eta,\\Lambda),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and \\(R\\Phi\\) the composite functor \\(\\Phi\\circ R\\Psi\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Phi:D^+(X,\\Lambda)\\longrightarrow D^+(X_s\\mathop{\\times}\\limits_s\\eta,\\Lambda).\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.2.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.2\"><strong>2.1.2.</strong> Consider the commutative diagram (1.3.2.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=3em@R=3em{\nX_{\\bar s}\\ar@{^{(}-&gt;}[r]^{\\bar i}\\ar[d]&amp;\\bar X\\ar[d]&amp;X_{\\bar\\eta}\\ar@{_{(}-&gt;}[l]_{\\bar j}\\ar[d]\\\\\nX_s\\ar@{^{(}-&gt;}[r]^i&amp;X&amp;X_\\eta\\ar@{_{(}-&gt;}[l]_j}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(F\\) is an injective sheaf of modules on \\(X\\), its restriction to the open subscheme \\(X_\\eta\\) is again injective. For \\(F_\\eta\\) injective on \\(X_\\eta\\), the inverse image \\(F_{\\bar\\eta}\\) is acyclic. The formulas (1.3.3.1) and (1.3.3.2) therefore derive to give</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.2.1}R\\Psi(K)_s=i^*K\\qquad(K\\in\\operatorname{Ob}D^+(X,\\Lambda))\n\\]\n\\[\n\\tag{2.1.2.2}R\\Psi(K)_\\eta=R\\Psi_\\eta(K_\\eta)\\qquad(K\\in\\operatorname{Ob}D^+(X,\\Lambda))\n\\]\n\\[\n\\tag{2.1.2.3}R\\Psi_\\eta(K)_{\\bar\\eta}=\\bar i^*R\\bar j_*K_{\\bar\\eta}\\qquad(K\\in\\operatorname{Ob}D^+(X_\\eta,\\Lambda)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This allows us to set without conflict</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Psi_\\eta(K)=(R\\Psi(K))_\\eta,\\quad R\\Psi_{\\bar\\eta}(K)=(R\\Psi(K))_{\\bar\\eta}\\quad\\text{and}\\quad R\\Psi_{\\bar\\eta}(K)=(R\\Psi_\\eta(K))_{\\bar\\eta}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>With these notations, the distinguished triangle (1.4.2.2) is written</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.2.4}\n\\xymatrix@C=4em@R=3em{\n&amp;R\\Phi(K)_{\\bar\\eta}\\ar[dl]\\ar[dr]&amp;\\\\\nsp^*i^*K\\ar[rr]&amp;&amp;R\\Psi_\\eta(K_s).\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(\\sigma\\in I\\), we have a <u>variation</u> morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.2.5}\\operatorname{Var}(\\sigma):R\\Phi(K)_{\\bar\\eta}\\longrightarrow R\\Psi_{\\bar\\eta}(K).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The sheaves \\(R^i\\Phi(\\Lambda)\\) (or more generally \\(R^i\\Phi(K)\\)) are the <u>sheaves of vanishing cycles</u>.</p>"
+    },
+    {
+     "id": "13.2.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.3\"><strong>2.1.3.</strong> Let \\((\\bar x,\\bar\\eta)\\) be the geometric point of \\(X_s\\mathop{\\times}\\limits_s\\eta\\) defined by a geometric point \\(\\bar x\\) of \\(X_{\\bar s}\\) (1.2.5). Let us compute the stalk of \\(R\\Psi_\\eta(K_\\eta)\\) at \\((\\bar x,\\bar\\eta)\\) by means of (2.1.2.3) (cf. I 2.3). The strict henselization \\(X_{(\\bar x)}\\) of \\(X\\) at \\(\\bar x\\) is a scheme over the strict henselization \\(S_{nr}\\) of \\(S\\), with geometric point \\(\\eta_{nr}\\).</p>"
+    },
+    {
+     "id": "13.2.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.4\"><strong><u>Proposition 2.1.4.</u></strong> <u>We have</u> \\((R\\Psi(K_\\eta))_{(\\bar x,\\bar\\eta)}=R\\Gamma(X_{(\\bar x)}\\times_{\\eta_{nr}}\\bar\\eta,K)\\) ; <u>in particular,</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR^i\\Psi(K)_{\\eta(\\bar x,\\bar\\eta)}=H^i(X_{(\\bar x)}\\times_{\\eta_{nr}}\\bar\\eta,K).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us apply SGA4 XV 2.1 (local acyclicity theorem for smooth morphisms). One finds the</p>"
+    },
+    {
+     "id": "13.2.1.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.5\"><strong><u>Reformulation 2.1.5.</u></strong> <u>If \\(f\\) is smooth and \\(F\\) a locally constant sheaf, we have \\(R\\Phi(F)=0\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>More generally, if \\(K\\in\\operatorname{Ob}D^+(X,\\Lambda)\\), then \\(R\\Phi(K)=0\\) wherever \\(f\\) is smooth and the \\(\\mathcal H^i(K)\\) are locally constant. See also 2.1.11.</p>"
+    },
+    {
+     "id": "13.2.1.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.6\"><strong>2.1.6.</strong> Let \\(f:Y\\longrightarrow Y'\\) be a morphism of schemes over \\(s\\). The functors \\(f^*,f_*,f_!,f^!\\) (1.2.7 to 1.2.9) have a natural analogue in the derived category.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) The functor \\(f^*\\) is exact, hence derives trivially.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) The functor \\(f_*\\) has a right derived functor, \\(Rf_*\\) ; for \\(f\\) quasi-compact, we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.6.1}(Rf_*K)_s=Rf_{s*}(K_s);\n\\]\n\\[\n\\tag{2.1.6.2}(Rf_*K)_\\eta=Rf_{s*}(K_\\eta).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) For \\(f\\) quasi-finite, the functor \\(f_!\\) is exact, hence derives trivially. In the general case, the derived functor of the functor \\(f_!\\) is pathological, and one proceeds as in SGA4 XVII. We assume \\(f\\) separated of finite type, and \\(Y'\\) noetherian. There then exists [2] a decomposition \\(f=\\widetilde f j\\), where \\(j\\) is an open immersion and \\(\\widetilde f\\) is proper, and one defines</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nRf_!=R\\widetilde f_*\\circ j_!.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The arguments of SGA4 XVII show that the functor \\(Rf_!\\) is independent of the choice of the factorization \\(\\widetilde f j\\). The analogue of (2.1.6.1) (2.1.6.2) is valid.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d) We will use \\(Rf^!\\) only for a quasi-finite morphism, in which case it is the derived functor of \\(f^!\\). We again have the analogue of (2.1.6.1) (2.1.6.2).</p>"
+    },
+    {
+     "id": "13.2.1.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.7\"><strong>2.1.7.</strong> Let us review the functoriality properties of \\(R\\Psi\\) (i.e. let us derive 1.3.5 to 1.3.10). Let \\(f:X\\longrightarrow X'\\) be a morphism of \\(S\\)-schemes, and let us take up again the notations of 1.3.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The morphism (1.3.6.1) defines</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.7.1}R\\Psi\\,Rf_*\\longrightarrow Rf_*\\,R\\Psi.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By the base change theorem for a proper morphism (SGA4 XII 5.1), <u>this morphism is an isomorphism if \\(f\\) is proper.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The morphism (1.3.7.1) defines</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.7.2}f^*R\\Psi\\longrightarrow R\\Psi\\,f^*.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By the base change theorem for a smooth morphism (SGA4 XVI 1.2), <u>this morphism is an isomorphism if \\(f\\) is smooth.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The isomorphism (2.1.7.1) for \\(f\\) proper and the morphism (1.3.8.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>define a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.7.3}Rf_!\\,R\\Psi\\longrightarrow R\\Psi\\,Rf_!\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which, for \\(f\\) proper, is the inverse of (2.1.8.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(f\\) quasi-finite, (1.3.9.1) derives to give</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.7.4}R\\Psi\\,Rf^!\\longrightarrow Rf^!\\,R\\Psi\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which, for \\(f\\) étale, is the inverse of (2.1.7.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider a change of trait \\(f:S'\\longrightarrow S\\) and \\(X'=X\\mathop{\\times}\\limits_SS'\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=5em@R=3em{X'\\ar[r]^f\\ar[d]_p&amp;X\\ar[d]^p\\\\S'\\ar[r]^f&amp;S}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(for the ambiguity in the notations, cf. 1.3.5). We assume \\(f\\) surjective. The base change arrow (1.3.10.1) derives to give</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.7.5}f^*R\\Psi\\longrightarrow R\\Psi\\,f^*.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The same statements hold for \\(R\\Psi_\\eta\\).</p>"
+    },
+    {
+     "id": "13.2.1.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.8\"><strong>2.1.8.</strong> The essential case of 2.1.7.1 and 2.1.7.3 is that where \\(X'=S\\). One then finds for \\(K\\in\\operatorname{Ob}D^+(X_\\eta,\\Lambda)\\) morphisms</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.8.1}Rf_*\\longrightarrow Rf_*R\\Psi\n\\]\n\\[\n\\tag{2.1.8.2}Rf_!R\\Psi\\longrightarrow Rf_!\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.8.3}H^i(X_{\\bar\\eta},K)\\longrightarrow H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\n\\]\n\\[\n\\tag{2.1.8.4}H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\\longrightarrow H_c^i(X_{\\bar\\eta},K)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and the commutativity of the diagrams</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.8.5}\n\\xymatrix@C=5em@R=3em{(R^if_*K)_{\\bar s}\\ar[r]^{sp}\\ar[d]&amp;H^i(X_{\\bar\\eta},K)\\ar[d]\\\\H^i(X_{\\bar s},K)\\ar[r]&amp;H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))}\n\\]\n\\[\n\\tag{2.1.8.6}\n\\xymatrix@C=5em@R=3em{H_c^i(X_{\\bar s},K)\\ar[rr]^{sp}\\ar[dr]&amp;&amp;H_c^i(X_{\\bar\\eta},K)\\\\&amp;H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\\ar[ur]&amp;}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(K\\in\\operatorname{Ob}D^+(X_\\eta,\\Lambda)\\) and \\(\\sigma\\in I\\), the following diagrams are commutative</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.8.7}\n\\xymatrix@C=3.2em@R=3em{H^i(X_{\\bar\\eta},K)\\ar[rrr]^{\\sigma-1}\\ar[d]&amp;&amp;&amp;H^i(X_{\\bar\\eta},K)\\ar[d]\\\\H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\\ar[r]&amp;H^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\\ar[r]^{\\operatorname{Var}(\\sigma)}&amp;H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))&amp;}\n\\]\n\\[\n\\tag{2.1.8.8}\n\\xymatrix@C=3.2em@R=3em{H_c^i(X_{\\bar\\eta},K)\\ar[rrr]^{\\sigma-1}&amp;&amp;&amp;H_c^i(X_{\\bar\\eta},K)\\\\H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\\ar[u]\\ar[r]&amp;H_c^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\\ar[r]^{\\operatorname{Var}(\\sigma)}&amp;H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\\ar[u]&amp;}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(f\\) proper, (2.1.8.1) and (2.1.8.2), as well as (2.1.8.3) and (2.1.8.4), are isomorphisms inverse to each other. The distinguished triangle (2.1.2.4) provides a long exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.1.8.9}\\cdots\\longrightarrow H^i(X_{\\bar s},K)\\longrightarrow H^i(X_{\\bar\\eta},K)\\longrightarrow H^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\\longrightarrow\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The vanishing complex \\(R\\Phi(K)\\) therefore expresses the difference between the cohomologies of the geometric fibers \\(X_{\\bar s}\\) and \\(X_{\\bar\\eta}\\) (with values in the inverse image of \\(K\\)). By (2.1.8.7), the variation \\(\\operatorname{Var}(\\sigma)\\) determines the action of the inertia group \\(I\\) on \\(H^i(X_{\\bar\\eta},K)\\). These facts are at the basis of all the applications of the method of vanishing cycles.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The properness hypothesis made above on \\(f\\) can be replaced by regularity conditions at infinity on \\(f\\) and \\(K\\). We have for example the following result (for \\(K\\in\\operatorname{Ob}D(X_\\eta,\\Lambda)\\)).</p>"
+    },
+    {
+     "id": "13.2.1.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.9\"><strong><u>Proposition 2.1.9.</u></strong> <u>Suppose that \\(f\\) admits a factorization \\(f=f_1k\\)</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX\\mathop{\\lhook\\joinrel\\longrightarrow}\\limits^kX_1\\mathop{\\longrightarrow}\\limits^{f_1}S,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>with \\(f_1\\) proper, and \\(k\\) the inclusion into \\(X_1\\) of the complement of a relative divisor with normal crossings \\(D\\) (by hypothesis, \\(f_1\\) is therefore smooth in a neighborhood of \\(D\\)). If, in a neighborhood \\(U\\) of \\(D\\), the \\(H^i(K)\\) are locally constant on \\(U-(D\\cup X_\\infty)\\), and tamely ramified along the divisor with normal crossings \\(D\\cup X_\\infty\\), then (2.1.8.1) and (2.1.8.2) are isomorphisms.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The hypercohomology spectral sequence of \\(K\\) shows that it suffices to treat the case where \\(K\\) is reduced to a sheaf \\(F_\\eta\\) in degree 0. Replacing \\(S\\) by its normalization in a finite extension (which is permissible, as one sees from the definitions), and applying Abhyankar's lemma, we may assume that \\(F_\\eta\\) is the restriction to \\(X_\\eta\\) of a sheaf \\(F\\) on \\(X\\), locally constant on \\(U\\cap X\\) and tamely ramified along \\(D\\). With the notations of 2.1.2, let \\(\\bar F\\) be the inverse image of \\(F\\) on \\(\\bar X\\) and \\(\\bar f:\\bar X\\longrightarrow\\bar S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove that (2.1.8.1) is an isomorphism, it suffices to prove that \\(R\\bar f_*(R\\bar j_*\\bar j^*\\bar F)\\) commutes with the base change \\(\\bar s\\longrightarrow\\bar S\\). In the triangle</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\longrightarrow\\bar F\\longrightarrow R\\bar j_*\\bar j^*\\bar F\\longrightarrow\\Delta\\longrightarrow\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the \\(H^i(\\Delta)\\) have support in \\(X_{\\bar s}\\) ; for \\(\\Delta\\), the base change result under consideration is trivial. It therefore suffices to prove that \\(R\\bar f_*(\\bar F)\\) commutes with the base change \\(\\bar s\\longrightarrow\\bar S\\), that is, in view of the base change theorem for \\(f_1\\), that \\(Rk_*(\\bar F)\\) commutes with the base change \\(X_{\\bar s}\\longrightarrow X_1\\) (2.1.10 below).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove that (2.1.8.2) is an isomorphism, it suffices to prove that, for the sheaf \\(F\\), the extension by 0 \\(k_!\\) commutes with the functor \\(R\\bar j_*\\), i.e. that, in a neighborhood of \\(D\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Phi(k_!F)=0\\quad\\text{on }X_{1\\bar s}\\qquad(2.1.11\\text{ below}).\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.2.1.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.10\"><strong><u>Lemma 2.1.10.</u></strong> <u>Let \\(f:X\\longrightarrow S\\) be a smooth morphism, \\(D\\subset X\\) a relative divisor with normal crossings, \\(U=X-D\\mathop{\\lhook\\joinrel\\longrightarrow}\\limits^jX\\) and \\(F\\) a sheaf of \\(\\Lambda\\)-modules on \\(U\\), locally constant and tamely ramified along \\(D\\). The formation of \\(Rj_*F\\) commutes with every base change \\(T\\longrightarrow S\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The question is local (for the étale topology) on \\(X\\). We may therefore assume that there exists \\(g:X'\\longrightarrow X\\), the normalization of \\(X\\) in a finite étale surjective covering \\(g':U'\\longrightarrow U\\) tamely ramified along \\(D\\), such that \\(g'^*F\\) is constant on \\(U'\\). Using Abhyankar's lemma, we may assume that moreover \\(X'\\) is smooth over \\(S\\) and that \\(U'\\) is the complement of a relative divisor with normal crossings \\(D'\\) in \\(X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(F\\) injects into \\(g'_*g'^*F\\) and the cokernel still satisfies the hypotheses of 2.1.10. Iterating the construction (the same \\(g\\) moreover continues to work), we obtain a resolution of \\(F\\) by sheaves of the form \\(g'_*G\\) with \\(G\\) constant and \\(g'\\) as above, so it suffices to prove 2.1.10 for such a sheaf, i.e. to prove 2.1.10 for \\((X'/S,D',G\\text{ constant on }U')\\) ; this is a particular case of SGA5 II 4.4.</p>"
+    },
+    {
+     "id": "13.2.1.11",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.11\"><strong><u>Lemma 2.1.11.</u></strong> <u>Let \\(S\\) be a henselian trait, \\(f:X\\longrightarrow S\\) a smooth morphism, \\(D\\subset X\\) a relative divisor with normal crossings, \\(U=X-D\\mathop{\\lhook\\joinrel\\longrightarrow}\\limits^jX\\) and \\(F\\) a sheaf of \\(\\Lambda\\)-modules on \\(U\\), locally constant and tamely ramified along \\(D\\). We have</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Phi(j_!F)=0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The dévissage used in 2.1.11 reduces us to the case where \\(F\\) is constant, with value \\(G\\). We may assume \\(D\\) is a union of smooth divisors \\((D_i)_{i\\in I}\\). For \\(J\\subset I\\), let \\(D_J\\) be the intersection of the \\(D_i\\) for \\(i\\in J\\). The sheaf \\(F\\) admits a resolution \\(F^\\bullet\\), whose components are sums of sheaves \\(G_J\\), constant on \\(D_J\\) and extended by 0 on \\(X\\). It therefore suffices to prove 2.1.11 for such a sheaf, which follows from (2.1.5) applied to the \\(D_J/S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>I conjecture that 2.1.7.5 is an isomorphism if \\(S\\) and \\(S'\\) are excellent. Here is a partial result (see also 2.4.2).</p>"
+    },
+    {
+     "id": "13.2.1.12",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.12\"><strong><u>Proposition 2.1.12.</u></strong> <u>The morphism 2.1.7.5 is an isomorphism in the following cases</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>\\(a\\) \\(S\\) is excellent, with completion \\(S'\\) ;</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>\\(b\\) \\(S\\) and \\(S'\\) are of equal characteristic 0.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In case \\(b\\), we reduce to assuming \\(S\\) and \\(S'\\) strictly local, and that a uniformizer for \\(S\\) is still a uniformizer for \\(S'\\) (extend the scalars without changing \\(\\bar S'\\longrightarrow\\bar S\\)). In cases \\(a\\) and \\(b\\), denoting by \\(\\bar{\\ }\\) the normalization in a separable closure of the fraction field, we then have \\(\\bar S'\\simeq S'\\mathop{\\times}\\limits_S\\bar S\\), and, going back to the definitions, one finds that it suffices to prove that \\(S'\\longrightarrow S\\) is universally locally acyclic (apply SGA4 XVI 1.1). This follows from I 0.5.1 (based on Néron desingularization in the manner of Artin) and from SGA4 XV 2.1 (local acyclicity theorem for smooth morphisms).</p>"
+    },
+    {
+     "id": "13.2.1.13",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.1.13\"><strong>2.1.13.</strong> Suppose \\(f:X\\longrightarrow S\\) of finite type. The cohomological dimension (SGA4 XVII 1.2.9) of \\(R\\Psi_\\eta\\) is then at most equal to \\(\\dim(X)\\), as follows from 2.1.4 and from SGA4 XIV 3.2 (cf. I 4.2.(i)). This makes it possible to extend \\(R\\Psi\\) to the entire derived category</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Psi:D(X,\\Lambda)\\longrightarrow D(X_s\\mathop{\\times}\\limits_sS,\\Lambda),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and \\(R\\Psi\\) transforms \\(D^-\\) into \\(D^-\\). Let \\(L\\in\\operatorname{Ob}D^-(\\Lambda)\\) be a complex, bounded above, of right \\(\\Lambda\\)-modules, and \\(K\\in\\operatorname{Ob}D^-(X,\\Lambda)\\). We then have at our disposal</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{2.1.13.1}L\\mathop{\\otimes}\\limits^L_\\Lambda R\\Psi(K)\\mathop{\\longrightarrow}\\limits^\\sim R\\Psi(L\\mathop{\\otimes}\\limits^L_\\Lambda K).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To verify that 2.1.13.1 is an isomorphism, one first replaces \\(L\\) by a complex of free \\(\\Lambda\\)-modules, and one notes that it suffices, since \\(R\\Psi\\) is triangulated of finite cohomological dimension, to verify it after having replaced \\(L\\) by one of its components. By passage to the inductive limit, we reduce to the case where \\(L\\) is a free module of finite type, then to the trivial case where \\(L=\\Lambda\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From (2.1.13.1) one deduces by a familiar argument (cf. SGA4 XVII 5.2.11) that if \\(K\\in\\operatorname{Ob}D(X_\\eta,\\Lambda)\\) is of finite Tor dimension \\(\\leq d\\) (\\(d\\in\\mathbb Z\\)) (SGA4 XVII 4.1.9), then \\(R\\Psi_\\eta(K)\\) is likewise of Tor-dimension \\(\\leq d\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-2-2",
+   "title": "2.2. A compatibility (trace morphisms).",
+   "blocks": [
+    {
+     "id": "13.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"13.2.2\">2.2. A compatibility (trace morphisms).</h2>"
+    },
+    {
+     "id": "13.2.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.1\"><strong>2.2.1.</strong> Let \\(S\\) be a henselian trait and \\(u:X_s\\to Y_s\\) a quasi-finite flat separated morphism of finite presentation of \\(s\\)-schemes. For every abelian sheaf \\(F\\) on \\(Y_s\\), a trace morphism \\(\\operatorname{Tr}_u:u_!u^*F\\to F\\) is defined (SGA4 XVII 6.2.3). For \\(F\\) an abelian sheaf on \\(Y_s\\times_sS\\) or \\(Y_s\\times_s\\eta\\), one deduces an analogous morphism \\(\\operatorname{Tr}_u:u_!u^*F\\to F\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(u:X\\to Y\\) be a quasi-finite flat separated morphism of finite presentation of \\(S\\)-schemes. We will again denote by \\(u\\) the induced morphism \\(X_s\\times_sS\\to Y_s\\times_sS\\) and we will denote by \\(\\Psi\\) the functors 1.3.3 for \\(X\\) and for \\(Y\\).</p>"
+    },
+    {
+     "id": "13.2.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.2\"><strong><u>Proposition 2.2.2.</u></strong> <u>For every abelian sheaf \\(F\\) on \\(Y\\), the following diagram is commutative</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=4em{u_!u^*\\Psi F\\ar[r]^{(1.3.7.1)}\\ar[d]_{\\operatorname{Tr}_u}&amp;u_!\\Psi u^*F\\ar[r]^{(1.3.8.1)}&amp;\\Psi u_!u^*F\\ar[d]^{\\operatorname{Tr}_u}\\\\\\Psi F\\ar[rr]^{=}&amp; &amp;\\Psi F.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The verification is left to the reader. There is a variant for \\(\\Psi_\\eta\\) and \\(F\\) on \\(Y_\\eta\\).</p>"
+    },
+    {
+     "id": "13.2.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.3\"><strong>2.2.3.</strong> Let \\(\\Lambda\\) be as in 2.2.1 and \\(u:X\\to Y\\) a quasi-finite and flat morphism of \\(S\\)-schemes separated of finite type and flat</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=4em@R=3em{X\\ar[rr]^u\\ar[dr]_f&amp;&amp;Y\\ar[dl]^g\\\\&amp;S&amp;}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We again denote by \\(f\\) and \\(g\\) the morphisms \\(X_s\\times_sS\\to S\\) and \\(Y_s\\times_sS\\to S\\). We assume that \\(\\dim Y_\\eta\\leq n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every \\(K\\in\\operatorname{Ob}D(S,\\Lambda)\\), a trace morphism has been defined (SGA4 XVIII 2.9)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}_f:Rf_!f^*K(n)[2n]\\longrightarrow K.\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.2.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.4\"><strong><u>Corollary 2.2.4.</u></strong> <u>The following diagram is commutative</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=2.5em@R=3em{Rg_!u_!u^*R\\Psi g^*K(n)[2n]\\ar[r]^{(1.3.7.1)}\\ar[d]_{\\operatorname{Tr}_u}&amp;Rf_!R\\Psi f^*K(n)[2n]\\ar[r]^{(2.1.10.1)}&amp;Rf_!f^*K(n)[2n]\\ar[d]^{\\operatorname{Tr}_f}\\\\Rg_!R\\Psi g^*K(n)[2n]\\ar[r]^{(2.1.10.1)}&amp;Rg_!g^*K(n)[2n]\\ar[r]^{\\operatorname{Tr}_g}&amp;K.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>If \\(u\\) is étale, (1.3.7.1) is an isomorphism.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The diagram (2.2.4) unfolds into the following one, where the arguments are omitted</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=2em@R=3em{Rg_!u_!u^*R\\Psi g^*\\ar[r]\\ar[d]_{\\operatorname{Tr}_u}&amp;Rg_!R\\Psi u_!u^*g^*\\ar[r]\\ar[d]_{\\operatorname{Tr}_u}&amp;Rg_!u_!u^*g^*\\ar[r]^\\sim\\ar[d]_{\\operatorname{Tr}_u}&amp;Rf_!f^*\\ar[d]^{\\operatorname{Tr}_f}\\\\Rg_!R\\Psi g^*\\ar[r]^{=}&amp;Rg_!R\\Psi g^*\\ar[r]&amp;Rg_!g^*\\ar[r]^{\\operatorname{Tr}_g}&amp;K.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>That (1) is commutative follows from 2.2.2. That (2) is so is the functoriality of (2.1.10.2). That (3) is so is the transitivity of the trace SGA4 XVIII 2.9. Var. 3.</p>"
+    },
+    {
+     "id": "13.2.2.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.4.1\"><strong>2.2.4.1.</strong> There is an analogous result for \\(\\Psi_\\eta\\) and \\(K\\in\\operatorname{Ob}D(\\eta,\\Lambda)\\).</p>"
+    },
+    {
+     "id": "13.2.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.5\"><strong>2.2.5.</strong> Let \\(\\Phi\\) be a subset of \\(Y_s\\) proper over \\(s\\), and let us denote by \\(Rg_\\Phi\\) the functor «direct image with support in \\(\\Phi\\)». Let us denote by \\(\\operatorname{Tr}_g\\) the composite morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.5.1}\\operatorname{Tr}_g:Rf_!R\\Psi g^*K(n)[2n]\\to Rg_!R\\Psi g^*K(n)[2n]\\to Rg_!g^*K(n)[2n]\\to K,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and its analogue for \\(\\Psi_\\eta\\) and \\(K\\in D(\\eta,\\Lambda)\\). If \\(\\Phi\\) is a finite set of closed points, we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nRg_\\Phi\\circ u_!=Rf_{u^{-1}\\Phi},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whence a trace morphism \\(\\operatorname{Tr}_u:Rf_{u^{-1}\\Phi}u^*=Rg_\\Phi\\,u_!u^*\\to Rg_\\Phi\\). By 2.2.4, the following diagram is commutative.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=3em@R=3em{Rf_{u^{-1}\\Phi}u^*R\\Psi g^*K(n)[2n]\\ar[r]\\ar[d]_{\\operatorname{Tr}_u}&amp;Rf_{u^{-1}\\Phi}R\\Psi f^*K(n)[2n]\\ar[r]^{\\operatorname{Tr}_f}&amp;K\\ar@{=}[d]\\\\Rg_\\Phi R\\Psi g^*K(n)[2n]\\ar[rr]^{\\operatorname{Tr}_g}&amp;&amp;K.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose \\(u\\) étale, let \\(x\\in X_s\\) and suppose that \\(x\\) and \\(y=u(x)\\) have the same residue field. We then have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nRf_{\\{x\\}}\\mathop{\\longrightarrow}\\limits^\\sim Rg_{\\{x\\}};\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>this isomorphism, given by \\(\\operatorname{Tr}_u\\), expresses the local nature, for étale cohomology, of cohomology with support in \\(x\\). The diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.5.2}\\xymatrix@C=5em@R=3em{Rf_{\\{x\\}}R\\Psi f^*K(n)[2n]\\ar[r]^{\\operatorname{Tr}_f}\\ar@{=}[d]&amp;K\\ar@{=}[d]\\\\Rg_{\\{y\\}}R\\Psi g^*K(n)[2n]\\ar[r]^{\\operatorname{Tr}_g}&amp;K}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is commutative.</p>"
+    },
+    {
+     "id": "13.2.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.2.6\"><strong><u>Scholium 2.2.6.</u></strong> The compatibility 2.3.5.2 expresses that the trace morphism (2.2.5.1) for \\(\\Phi=\\{x\\}\\) is a local invariant : it depends only on the henselized \\(S\\)-scheme of \\(X\\) at \\(x\\). Similarly for \\(R\\Psi_\\eta\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-2-3",
+   "title": "2.3. Finiteness theorem (in equal characteristic zero).",
+   "blocks": [
+    {
+     "id": "13.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"13.2.3\">2.3. Finiteness theorem (in equal characteristic zero).</h2>"
+    },
+    {
+     "id": "13.2.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.3.1\"><strong><u>Theorem 2.3.1.</u></strong> <u>Let \\(S\\) be a henselian trait as in 0.2.5, \\(\\Lambda\\) a noetherian torsion ring and \\(f:X\\to S\\) a morphism of finite type. We assume that \\(S\\) is of equal characteristic zero. Then, for every constructible sheaf of \\(\\Lambda\\)-modules \\(F\\) on \\(X_\\eta\\), the sheaves \\(R^i\\Psi_\\eta(F)\\) on \\(X_s\\) are constructible.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We begin by copying the beginning of the proof of SGA4 XIV 1.10 : let us apply SGA4 IX 2.14 (ii). There exists a resolution \\(F^\\bullet\\) of \\(F\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{&amp;F\\ar[d]\\\\0\\ar[r]&amp;F^0\\ar[r]&amp;F^1\\ar[r]&amp;\\cdots}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>by sheaves of the form \\(\\bigoplus_i p'_{i*}G_i\\), where \\(p'_i:Y_{i\\eta}\\to X_\\eta\\) is finite and where \\(G_i\\) is a constant constructible sheaf. We may assume \\(Y_{i\\eta}\\) reduced ; let \\(p_i:Y_i\\to X\\) be the normalization of \\(X\\) in \\(Y_{i\\eta}\\). Let us use the spectral sequence of the resolution \\(F^\\bullet\\) and apply 2.1.7.1 in the trivial case of the finite morphism \\(p_i\\) ; one finds that it suffices to prove 2.3.1 for \\((Y_i,G_i)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove 2.3.1 for \\(F\\) constant defined by a \\(\\Lambda\\)-module \\(M\\). Recall that \\(\\Lambda\\) is a \\(\\mathbb Z/n\\)-algebra for a suitable \\(n\\). The module \\(M\\) therefore dévisses into modules \\(M_i\\) over \\(\\Lambda/\\ell_i\\Lambda\\), with \\(\\ell_i\\mid n\\) a suitable prime. This reduces us to the case where \\(\\Lambda\\) is a \\(\\mathbb Z/\\ell\\)-algebra, \\(\\ell\\) prime. We then have (2.1.13.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nM\\otimes R^i\\Psi_\\eta(\\mathbb Z/\\ell)\\mathop{\\longrightarrow}\\limits^\\sim R^i\\Psi_\\eta(M);\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>it remains to treat the case where \\(F\\) is the constant sheaf \\(\\mathbb Z/\\ell\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X_\\eta=X'_0\\supset\\cdots\\supset X'_n\\) be a sequence of closed subsets of \\(X_\\eta\\) such that \\((X'_i-X'_{i+1})_{\\mathrm{red}}\\) is smooth over \\(\\eta\\). Let \\(X_i=\\overline{X'_i}\\). The sheaf \\(\\mathbb Z/\\ell\\) dévisses into the sheaves \\(\\mathbb Z/\\ell\\) on \\((X'_i-X'_{i+1})\\), extended by 0. From this we obtain the</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong><u>Reduction 1</u></strong> It suffices to prove 2.3.1 for a sheaf \\(j_!\\mathbb Z/\\ell\\), with \\(j:U\\lhook\\joinrel\\longrightarrow X_\\eta\\) the inclusion of a smooth open subscheme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By resolution of singularities, there exists \\(g:X_1\\to X\\) such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(a\\) \\(g\\) is proper, and induces an isomorphism \\(g^{-1}(U)\\mathop{\\longrightarrow}\\limits^\\sim U\\) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(b\\) \\(X_1\\) is regular and \\(X_1-g^{-1}(U)\\) a divisor with normal crossings in \\(X_1\\), a union of regular divisors \\(D_\\alpha\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(j_1:g^{-1}(U)\\lhook\\joinrel\\longrightarrow X_1\\). We have \\(Rg_*j_{1!}\\mathbb Z/\\ell=j_!\\mathbb Z/\\ell\\). Let us apply 2.1.7.1 and the finiteness theorem SGA4 XIV 1.1 ; one finds that it suffices to prove (2.3.1) for \\((X_1,j_{1!}\\mathbb Z/\\ell)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have a resolution</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow j_{1!}\\mathbb Z/\\ell\\longrightarrow\\mathbb Z/\\ell\\longrightarrow\\bigoplus_\\alpha(\\mathbb Z/\\ell)_{D_\\alpha}\\longrightarrow\\bigoplus_{\\alpha,\\beta}(\\mathbb Z/\\ell)_{D_\\alpha\\cap D_\\beta}\\longrightarrow\\cdots,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whence the</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong><u>Reduction 2</u></strong> It suffices to prove 2.3.1 for the constant sheaf \\(\\mathbb Z/\\ell\\) and a regular \\(S\\)-scheme \\(X\\) such that \\(X_s\\) is a divisor with normal crossings in \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the case to which we have reduced, one uses the explicit computation I 3.3 (which uses the purity theorem SGA4 XIX 3.2 and characteristic 0).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-2-4",
+   "title": "2.4. Isolated singularities.",
+   "blocks": [
+    {
+     "id": "13.2.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"13.2.4\">2.4. Isolated singularities.</h2>"
+    },
+    {
+     "id": "13.2.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.1\"><strong>2.4.1.</strong> In this section, we assume for simplicity that \\(S\\) is a strictly henselian trait. Let \\(\\Lambda\\) be a noetherian torsion ring prime to the residue characteristic of \\(S\\), \\(f:X\\to S\\) a morphism of finite type and \\(F\\) a constructible sheaf of \\(\\Lambda\\)-modules on \\(X\\). We say that \\(x\\in X\\) is a point of smoothness of \\((X,F)\\) if \\(f\\) is smooth at \\(x\\) and \\(F\\) is locally constant in a neighborhood of \\(x\\). We denote by \\(\\Sigma\\) the set of points of non-smoothness of \\((X,F)\\), and by \\(\\Sigma_s\\) the special fiber of \\(\\Sigma\\). We know that \\(R\\Phi(F)=0\\) outside \\(\\Sigma_s\\).</p>"
+    },
+    {
+     "id": "13.2.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.2\"><strong><u>Theorem 2.4.2.</u></strong> <u>At every isolated point \\(x\\) of \\(\\Sigma_s\\), the \\(R^i\\Phi_{\\bar\\eta}(F)_x\\) are \\(\\Lambda\\)-modules of finite type, invariant under change of trait (via 2.1.7.1).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In equal characteristic 0, these assertions were proved in 2.1.12 and 2.3.1, without assuming that \\(x\\) is isolated.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(x\\) be an isolated point of \\(\\Sigma_s\\). The theorem is of a local nature in a neighborhood of \\(x\\) ; we may therefore assume that \\(f\\) is proper. We then have the long exact sequence (2.1.8.9)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\cdots\\longrightarrow H^i(X_s,F)\\longrightarrow H^i(X_{\\bar\\eta},F)\\longrightarrow H^i(X_s,R\\Phi_{\\bar\\eta}(F))\\longrightarrow\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this sequence, \\(H^i(X_s,F)\\) and \\(H^i(X_{\\bar\\eta},F)\\) are invariant under change of trait and are \\(\\Lambda\\)-modules of finite type (SGA4 XIV 1.1) ; the \\(H^i(X_s,R\\Phi_{\\bar\\eta}(F))\\) therefore share these properties. Let us recall the</p>"
+    },
+    {
+     "id": "13.2.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.3\"><strong><u>Lemma 2.4.3.</u></strong> <u>Let \\((T,\\Lambda)\\) be a ringed topos and \\(F\\) a closed subset of \\(T\\). Let \\(i\\) be the inclusion of \\(F\\). Then, \\(i_*:D(F,\\Lambda)\\to D(T,\\Lambda)\\) is an equivalence of categories of \\(D(F,\\Lambda)\\) with the subcategory of \\(D(T,\\Lambda)\\) formed of the \\(K\\) such that \\(H^i(K)\\) has support in \\(F\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, for such a complex \\(K\\), \\(K\\to i_*i^*K\\) is a quasi-isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We may therefore regard \\(R\\Phi_{\\bar\\eta}(F)\\) as an object of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nD^b(\\Sigma_s,\\Lambda)=D^b(\\Sigma_s-\\{x\\},\\Lambda)\\oplus D^b(\\{x\\},\\Lambda).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By passage to a direct factor, one therefore finds that \\(H^i(\\{x\\},R\\Phi_{\\bar\\eta}(F))=R^i\\Phi_{\\bar\\eta}(F)_x\\) satisfies 2.4.2, which completes the proof.</p>"
+    },
+    {
+     "id": "13.2.4.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.4\"><strong><u>Remark 2.4.4.</u></strong> With the same proof, one sees that, for \\(K\\) constructible in \\(D^+(X,\\Lambda)\\) and \\(x\\) isolated in the support of \\(R\\Phi_{\\bar\\eta}(K)\\), the \\(\\Lambda\\)-module \\(R\\Phi_{\\bar\\eta}(K)_x\\) is of finite type ; if, after a change of trait, \\(x\\) remains an isolated point of the support, this module is invariant under this change of trait.</p>"
+    },
+    {
+     "id": "13.2.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.5\"><strong>2.4.5.</strong> Let \\(x\\in X_s\\) be an isolated point of non-smoothness of \\((X,F)\\). More generally, let \\(K\\in\\operatorname{Ob}D^b(X,\\Lambda)\\) and let \\(x\\) be an isolated point of the support of \\(R\\Phi(K)\\). Let \\(i\\) be the inclusion of \\(x\\) into \\(X_s\\). The complex \\(i_*i^*R\\Phi(K)\\), isomorphic to \\(R\\Phi(K)\\) in a neighborhood of \\(x\\), is a direct factor of \\(R\\Phi(F)\\) (2.4.3). For \\(\\sigma\\in I\\), the variation morphism therefore induces</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Var}(\\sigma):i_*i^*R\\Phi_{\\bar\\eta}(K)\\longrightarrow R\\Psi_{\\bar\\eta}(K),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>that is</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.5.1}\\operatorname{Var}(\\sigma):(R\\Phi_{\\bar\\eta}(K))_x\\longrightarrow R\\Gamma_{\\{x\\}}(R\\Psi_{\\bar\\eta}(K)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.2.4.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.6\"><strong>2.4.6.</strong> Suppose that the support \\(\\Sigma\\) of \\(R\\Phi(K)\\) consists of a finite number of isolated points. For every \\(\\sigma\\in I\\), the endomorphism \\(\\sigma-1\\) of \\(R\\Psi_{\\bar\\eta}(K)\\) is then the composite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.1}\\xymatrix@C=4em@R=3em{R\\Psi_{\\bar\\eta}(K)\\ar[r]&amp;R\\Phi_{\\bar\\eta}(K)=\\displaystyle\\bigoplus_{x\\in\\Sigma}i_{x*}(R\\Phi_{\\bar\\eta}(K))_x\\ar[d]^{\\oplus i_{x*}\\operatorname{Var}(\\sigma)}\\\\R\\Psi_{\\bar\\eta}(K)\\ar[u]^{\\sigma-1}&amp;\\displaystyle\\bigoplus_{x\\in\\Sigma}i_{x*}R\\Gamma_{\\{x\\}}R\\Psi_{\\bar\\eta}(K).\\ar[l]}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(f\\) is proper, applying to (2.4.6.1) the functor \\(H^i\\), one finds that the endomorphism \\(\\sigma-1\\) of \\(H^i(X_{\\bar\\eta},K)\\) is the composite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.2}\\xymatrix@C=2.6em@R=3em{H^i(X_{\\bar\\eta},K)\\ar[r]^\\sim&amp;H^i(X_s,R\\Psi_{\\bar\\eta}(K))\\ar[r]&amp;H^i(X_s,R\\Phi_{\\bar\\eta}(K))=\\displaystyle\\bigoplus_{x\\in\\Sigma}R^i\\Phi_{\\bar\\eta}(K)_x\\ar[d]^{\\oplus\\operatorname{Var}(\\sigma)}\\\\H^i(X_{\\bar\\eta},K)\\ar[u]^{\\sigma-1}&amp;H^i(X_s,R\\Psi_{\\bar\\eta}(K))\\ar[l]_\\sim&amp;\\displaystyle\\bigoplus_{x\\in\\Sigma}H^i_{\\{x\\}}(X_s,R\\Psi_{\\bar\\eta}(K)).\\ar[l]}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This provides a description of the action of \\(I\\) on \\(H^i(X_{\\bar\\eta},K)\\) in which the essential ingredient is the variation morphisms (2.4.4.1), which are of a local nature on \\(X\\). We also have the long exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.3}\\longrightarrow H^i(X_s,K)\\longrightarrow H^i(X_{\\bar\\eta},K)\\longrightarrow\\bigoplus_{x\\in\\Sigma}R^i\\Phi_{\\bar\\eta}(K)_x\\longrightarrow\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The same argument holds for \\(f\\) not necessarily proper if \\((X,K)\\) satisfies 2.1.9. One defines by the diagram (2.4.6.5) below a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.4}\\operatorname{Var}(\\sigma):R\\Gamma(X_{\\bar\\eta},K)\\longrightarrow R\\Gamma_c(X_{\\bar\\eta},K),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that the endomorphism \\(\\sigma-1\\) of \\(R\\Gamma(X_{\\bar\\eta},K)\\) (resp. \\(R\\Gamma_c(X_{\\bar\\eta},K)\\)) is the composite \\(\\alpha\\operatorname{Var}(\\sigma)\\) (resp. \\(\\operatorname{Var}(\\sigma)\\alpha\\)) of \\(\\operatorname{Var}(\\sigma)\\) and \\(\\alpha:R\\Gamma_c(X_{\\bar\\eta},K)\\to R\\Gamma(X_{\\bar\\eta},K)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.5}\\xymatrix@C=3em@R=3em{R\\Gamma(X_{\\bar\\eta},K)\\ar[r]^\\sim\\ar[d]_{\\operatorname{Var}(\\sigma)}&amp;R\\Gamma(X_s,R\\Psi_{\\bar\\eta}(K))\\ar[r]&amp;\\displaystyle\\bigoplus_{x\\in\\Sigma}(R\\Phi_{\\bar\\eta}(K))_x\\ar[d]^{\\oplus}\\\\R\\Gamma_c(X_{\\bar\\eta},K)\\ar[r]^\\sim&amp;R\\Gamma_c(X_s,R\\Psi_{\\bar\\eta}(K))&amp;\\displaystyle\\bigoplus_{x\\in\\Sigma}R\\Gamma_{\\{x\\}}(X_s,R\\Psi_{\\bar\\eta}(K)).\\ar[l]}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We also have, in this case, the long exact sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.6}\\xymatrix@C=2em@R=3em{\\cdots\\ar[r]&amp;H_c^i(X_s,K)\\ar[r]\\ar[d]&amp;H_c^i(X_{\\bar\\eta},K)\\ar[r]\\ar[d]&amp;\\displaystyle\\bigoplus_{x\\in\\Sigma}(R^i\\Phi_{\\bar\\eta}(K))_x\\ar[r]\\ar@{=}[d]&amp;\\cdots\\\\\\cdots\\ar[r]&amp;H^i(X_s,K)\\ar[r]&amp;H^i(X_{\\bar\\eta},K)\\ar[r]&amp;\\displaystyle\\bigoplus_{x\\in\\Sigma}R^i\\Phi_{\\bar\\eta}(K)_x\\ar[r]&amp;\\cdots.}\n\\]\n\n</p>"
+    },
+    {
+     "id": "13.2.4.6.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"13.2.4.6.1\"><strong>2.4.6.</strong> Let \\(X_{s(x)}\\) be the henselization of \\(X_s\\) at \\(x\\) and \\(X^*_{s(x)}=X_{s(x)}-\\{x\\}\\). The long exact hypercohomology sequence of \\((X_{s(x)},\\{x\\})\\) with coefficients in \\(K_s\\), \\(R\\Psi_{\\bar\\eta}(K)\\) and \\(R\\Phi_{\\bar\\eta}(K)\\) provides long exact sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.4.6.1}\\xymatrix@C=2em@R=2.7em{&amp;0\\ar[r]&amp;R^{n-1}\\Phi_{\\bar\\eta}(K)_x\\ar[r]\\ar[d]&amp;R^{n-1}\\Phi_{\\bar\\eta}(K)_x\\ar[r]\\ar[d]&amp;0\\ar[d]\\\\{}\\ar[r]&amp;H^{n-1}(X^*_{s(x)},K)\\ar[r]^j\\ar@{=}[d]&amp;H^n_{\\{x\\}}(X_s,K)\\ar[r]\\ar[d]&amp;H^n(K)_x\\ar[r]\\ar[d]&amp;H^n(X^*_{s(x)},K)\\ar[r]\\ar@{=}[d]&amp;{}\\\\{}\\ar[r]&amp;H^{n-1}(X^*_{s(x)},K)\\ar[r]^j&amp;H^n_{\\{x\\}}(X_s,R\\Psi_{\\bar\\eta}(K))\\ar[r]\\ar[d]&amp;R^n\\Psi_{\\bar\\eta}(K)_x\\ar[r]\\ar[d]&amp;H^n(X^*_{s(x)},K)\\ar[r]&amp;{}\\\\&amp;0\\ar[r]&amp;R^n\\Phi_{\\bar\\eta}(K)_x\\ar[r]^{=}&amp;R^n\\Phi_{\\bar\\eta}(K)_x\\ar[r]&amp;0.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The image of the arrow \\(j\\) is contained in the invariants under the inertia.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "13-s8",
+   "title": "Bibliography",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>Bibliography</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] J. GIRAUD — Classifying topos, p. 43–56 in <em>Toposes, algebraic geometry and logic</em>, Lecture Notes in Mathematics 274, Springer Verlag 1971.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] M. NAGATA — A generalization of the imbedding problem. J. Math. Kyoto 3 1 (1963) p. 89–102.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

@@ -1,0 +1,3417 @@
+{
+ "chapter_id": "VI",
+ "title": "LE \\(K'\\) D'UN FIBRÉ PROJECTIF : CALCULS ET CONSÉQUENCES",
+ "number": "VI",
+ "pages": [
+  {
+   "id": "VI",
+   "title": "LE \\(K'\\) D'UN FIBRÉ PROJECTIF : CALCULS ET CONSÉQUENCES",
+   "blocks": [
+    {
+     "id": "VI",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"VI\">EXPOSÉ VI<br>LE \\(K'\\) D'UN FIBRÉ PROJECTIF :<br>CALCULS ET CONSÉQUENCES<span class=\"author\">par Pierre BERTHELOT</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VI-1",
+   "title": "1. Calcul du \\(K'\\) d'un fibré projectif : cas des faisceaux localement libres de type fini",
+   "blocks": [
+    {
+     "id": "VI.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.1\">1. Calcul du \\(K'\\) d'un fibré projectif : cas des faisceaux localement libres de type fini</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce paragraphe, la notation \\(K'(X)\\) désignera le groupe de Grothendieck des faisceaux localement libres de type fini sur un schéma \\(X\\). Le but du paragraphe est de démontrer le théorème suivant :</p>"
+    },
+    {
+     "id": "VI.1.1",
+     "type": "theorem",
+     "label": "1.1.",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"VI.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">1.1.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(r+1\\), \\(X=\\mathbf P(E)\\) le fibré projectif associé ; le morphisme structural \\(f:X\\longrightarrow S\\) définit un homomorphisme d'anneaux \\(f^*:K'(S)\\longrightarrow K'(X)\\) munissant \\(K'(X)\\) d'une structure de \\(K'(S)\\)-algèbre. Soit \\(\\xi\\in K'(X)\\) la classe du faisceau \\(\\mathcal O_X(1)\\). Alors \\(K'(X)\\) est un \\(K'(S)\\)-module libre admettant pour base \\(1,\\ldots,\\xi^r\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Plan de la démonstration</u> :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1°) Les puissances de \\(\\xi\\) engendrent \\(K'(X)\\) comme \\(K'(S)\\)-module. Pour le montrer, nous allons montrer les points suivants :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Si \\(F\\) est un \\(\\mathcal O_X\\)-Module localement libre de type fini, il existe un \\(S(E)\\)-Module module gradué \\(M\\) de présentation finie, plat sur \\(\\mathcal O_S\\), tel que \\(F=\\operatorname{Proj}_0(M)\\) (\\(S(E)\\) étant l'algèbre symétrique de \\(E\\) ; pour la notation \\(\\operatorname{Proj}_0\\), voir EGA II 8.12.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Il existe une résolution graduée finie de \\(M\\) par des \\(S(E)\\)-Modules gradués \\(L_i\\) localement libres de type fini : \\(0\\longrightarrow L_{r+1}\\longrightarrow\\cdots\\longrightarrow L_0\\longrightarrow M\\longrightarrow0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) Les \\(L_i\\) admettent une filtration finie dont les quotients sont du type \\(N_j\\otimes_{\\mathcal O_S}S(E)(j)\\), les \\(N_j\\) étant localement libres de type fini sur \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2°) \\(1,\\ldots,\\xi^{r+1}\\) sont linéairement dépendants sur \\(K'(S)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3°) \\(1,\\ldots,\\xi^r\\) sont linéairement indépendants sur \\(K'(S)\\).</p>"
+    },
+    {
+     "id": "VI.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.1.2\">1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour plus de commodité, nous allons rappeler ici quelques définitions et propriétés classiques des Modules gradués.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(S\\) un schéma, \\(B\\) une \\(\\mathcal O_S\\)-Algèbre graduée, \\(M\\) un \\(B\\)-Module gradué, pour tout \\(B\\)-Module gradué \\(N\\), on désigne comme d'habitude par \\(N(n)\\) le \\(B\\)-Module gradué défini par :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(N(n))_k=N_{n+k}\\quad\\text{pour tout }k.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que \\(M\\) est un \\(B\\)-Module gradué localement libre (resp. localement libre de type fini) si tout point de \\(S\\) possède un voisinage ouvert \\(U\\) tel que \\(M|U\\) soit isomorphe, en tant que \\(B\\)-Module gradué, à une somme directe de Modules de la forme \\(B(n)|U\\) (resp. une somme directe finie).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que \\(M\\) est un \\(B\\)-Module gradué de présentation finie si tout point de \\(S\\) possède un voisinage ouvert \\(U\\) tel qu'il existe une suite exacte \\(P\\longrightarrow Q\\longrightarrow M|U\\longrightarrow0\\), où \\(P\\) et \\(Q\\) sont des \\((B|U)\\)-Modules gradués libres de type fini, et les homomorphismes compatibles aux graduations.</p>"
+    },
+    {
+     "id": "VI.1.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.1.2.1\">1.2.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout entier \\(n\\), on peut définir un homomorphisme canonique de \\(B\\)-Modules gradués :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.2.1)\\qquad M_{-n}\\otimes_{\\mathcal O_S}B(-n)\\longrightarrow M,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en envoyant \\(x\\otimes a\\), où \\(x\\) est une section de \\(M_{-n}\\), et \\(a\\) une section de \\((B(-n))_k=B_{k-n}\\) sur l'élément \\(a.x\\) de \\(M_k\\).</p>"
+    },
+    {
+     "id": "VI.1.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.1.2.2\">1.2.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit qu'un \\(B\\)-Module gradué \\(M\\) est libre de type fini, et homogène de degré \\(n\\) s'il est isomorphe en tant que \\(B\\)-Module gradué à \\((B(-n))^k\\) pour un certain entier \\(k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(M\\) un \\(B\\)-Module gradué libre de type fini. D'après 1.2, on peut trouver un isomorphisme gradué :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.2.2)\\qquad M\\mathrel{\\widetilde\\longrightarrow}\\bigoplus_{n=n_0}^{n_1}(B(-n))^{k_n}.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient ainsi une décomposition de \\(M\\) en somme directe de \\(B\\)-Modules gradués libres de type fini et homogènes, soit :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M\\mathrel{\\widetilde\\longrightarrow}\\bigoplus_{n=n_0}^{n_1}M^{(n)},\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(M^{(n)}\\) est libre homogène de degré \\(n\\) et de rang \\(k_n\\).</p>"
+    },
+    {
+     "id": "VI.1.2.3",
+     "type": "proposition",
+     "label": "1.2.3.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VI.1.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2.3.</span></div>\n  <div class=\"thm-body\"><p>Les entiers \\(k_n\\) intervenant dans la décomposition (1.2.2) ne dépendent pas de la décomposition choisie.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons données deux décompositions, donc un isomorphisme gradué :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\bigoplus_{n=n_0}^{n_1}(B(-n))^{k_n}\\simeq\\bigoplus_{n=n'_0}^{n'_1}(B(-n))^{k'_n}.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration se fait par récurrence sur le nombre de facteurs directs libres homogènes non nuls intervenant dans la décomposition de gauche. Si c'est 0, alors \\(M=0\\), et la proposition est évidente. Supposons la démontrée pour \\(n_1-n_0=m\\), et montrons la pour \\(n_1-n_0=m+1\\). L'isomorphisme donné, étant compatible aux graduations, donne un isomorphisme sur les composantes homogènes des deux membres, et en particulier un isomorphisme des composantes homogènes de degré \\(&lt;n_0\\), ce qui montre que pour \\(n&lt;n_0\\), on a \\(k'_n=0\\), et sur les composantes homogènes de degré \\(n_0\\), ce qui montre qu'elles ont même rang, et par suite que \\(k_{n_0}=k'_{n_0}\\). L'isomorphisme donné induit donc un isomorphisme des facteurs directs libres homogènes de plus bas degré des deux décompositions et passe donc au quotient par ces facteurs directs ; on applique alors l'hypothèse de récurrence au Module quotient, d'où le résultat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte en particulier de 1.2.3 que pour tout Module gradué libre de type fini \\(M\\), le nombre d'éléments d'une base homogène de \\(M\\) ayant un degré donné ne dépend pas de la base choisie. En particulier, les entiers \\(n_0\\) et \\(n_1\\) intervenant dans la décomposition (1.2.2), définis par les conditions \\(k_{n_0}\\ne0\\), \\(k_{n_1}\\ne0\\), ne dépendent pas de la décomposition.</p>"
+    },
+    {
+     "id": "VI.1.3",
+     "type": "proposition",
+     "label": "1.3.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VI.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de type fini, \\(X\\) le fibré projectif associé. Soit \\(F\\) un \\(\\mathcal O_X\\)-Module de présentation finie, plat sur \\(S\\). Il existe un entier \\(n_0\\), tel que pour \\(n\\geq n_0\\), on ait :</p>\n  <p>i) \\(R^if_*(F(n))=0\\) pour \\(i\\geq1\\) ;</p>\n  <p>ii) \\(f_*(F(n))\\) est localement libre de type fini sur \\(S\\) ;</p>\n  <p>iii) \\(M=\\displaystyle\\bigoplus_{n\\geq n_0}f_*(F(n))\\) est un \\(S(E)\\)-Module gradué de présentation finie (1.2).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les propriétés cherchées sont de nature locale sur \\(S\\) ; comme \\(S\\) est quasi-compact, on peut, en prenant le plus grand des entiers trouvés, se ramener au cas où \\(S\\) est affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons d'abord \\(S\\) noethérien.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La propriété i) résulte alors du théorème de Serre.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La propriété ii) résulte de EGA III 7.9.10, \\(n_0\\) étant choisi tel que la propriété i) soit vérifiée.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après EGA II 3.4.5, il existe un \\(S(E)\\)-Module gradué quasi-cohérent \\(M'\\), de type fini, tel que \\(F=\\operatorname{Proj}_0(M')\\). Par ailleurs,</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\Gamma_*(F)=\\Gamma_*(\\operatorname{Proj}_0M')=\\bigoplus_{n\\in\\mathbb Z}f_*(F(n))\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est TN-isomorphe à \\(M'\\) d'après EGA III 2.3.1 ; donc il existe un entier \\(n_1\\) tel que \\(\\bigoplus_{n\\geq n_1}f_*(F(n))\\simeq\\bigoplus_{n\\geq n_1}M'_n\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc tel que \\(\\bigoplus_{n\\geq n_1}f_*(F(n))\\) soit un \\(S(E)\\)-Module de type fini, donc de présentation finie d'après les hypothèses noethériennes ; le résultat est d'ailleurs valable pour tout entier \\(n_1\\), les \\(f_*(F(n))\\) étant cohérents d'après le théorème de Serre.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition est donc montrée dans le cas où \\(S\\) est noethérien.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant qu'on ait un carré cartésien :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\xymatrix{\nX\\ar[r]^g\\ar[d]_f&amp;X_0\\ar[d]^{f_0}\\\\\nS\\ar[r]_{g_0}&amp;S_0,\n}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(S_0\\) noethérien, \\(X_0=\\mathbf P(E_0)\\) ; soit \\(F_0\\) un \\(\\mathcal O_{X_0}\\)-Module de présentation finie, plat sur \\(S_0\\), et soit \\(F=g^*(F_0)\\). D'après ce qui précède la proposition est vraie pour \\(F_0\\). D'après EGA III 7.7.5 et 7.8.5, le théorème de changement de base est vrai avec les hypothèses précédentes ; on en déduit aussitôt que le théorème est vrai pour \\(F\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit donc, pour achever la démonstration, de montrer que le cas général (avec \\(S\\) affine) peut être obtenu à partir du cas noethérien par changement de base.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(S\\) est affine, \\(S\\) est limite projective filtrante de schémas affines noethériens (si \\(S=\\operatorname{Spec}(A)\\), on écrit \\(A\\) comme limite inductive de ses sous-algèbres de type fini sur \\(\\mathbb Z\\)). Soit donc \\(S=\\varprojlim S_\\lambda\\). D'après EGA IV 8.5.2 et 8.5.5, il existe un indice \\(\\lambda\\) et un \\(\\mathcal O_{S_\\lambda}\\)-Module localement libre de type fini \\(E_\\lambda\\) tel que \\(E=u_\\lambda^*(E_\\lambda)\\) (en notant \\(u_\\lambda\\) le morphisme \\(S\\longrightarrow S_\\lambda\\), et \\(u_{\\lambda\\mu}\\) les morphismes de transition \\(S_\\mu\\longrightarrow S_\\lambda\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si on pose, pour \\(\\mu\\geq\\lambda\\), \\(E_\\mu=u_{\\lambda\\mu}^*(E_\\lambda)\\), et \\(X_\\mu=\\mathbf P(E_\\mu)\\), on a pour tout \\(\\mu\\), \\(X=X_\\mu\\times_{S_\\mu}S\\), et \\(X=\\varprojlim X_\\mu\\). Par suite, il existe un indice \\(\\lambda'\\geq\\lambda\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et un faisceau \\(F_{\\lambda'}\\) de présentation finie sur \\(X_{\\lambda'}\\), tel que \\(F=u_{\\lambda'}'^*(F_{\\lambda'})\\) (\\(u_{\\lambda'}'\\) étant le morphisme \\(X\\longrightarrow X_{\\lambda'}\\)). Comme les \\(X_\\mu\\) et les \\(F_\\mu\\) sont de présentation finie, on peut d'après EGA IV 11.2.6 trouver un indice \\(\\lambda''\\) tel que \\(F_{\\lambda''}\\) soit plat sur \\(S_{\\lambda''}\\). Toutes les hypothèses de 1.3 sont donc vérifiées, ce qui achève la démonstration.</p>"
+    },
+    {
+     "id": "VI.1.4",
+     "type": "corollaire",
+     "label": "1.4.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"VI.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.4.</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses de 1.3, il existe un \\(S(E)\\)-Module gradué \\(M\\), de présentation finie, et plat sur \\(\\mathcal O_S\\), tel que \\(F=\\operatorname{Proj}_0(M)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(n_0\\) un entier tel que les propriétés de 1.3 soient vérifiées.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(M=\\bigoplus_{n\\geq n_0}f_*(F(n))\\), on a vu que \\(M\\) est de présentation finie, et il est plat sur \\(S\\), puisque les \\(f_*(F(n))\\), pour \\(n\\geq n_0\\), sont localement libres sur \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par ailleurs, \\(F=\\operatorname{Proj}_0(M)\\) d'après EGA II 3.4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Passons à la partie b) de la démonstration.</p>"
+    },
+    {
+     "id": "VI.1.5.1",
+     "type": "lemme",
+     "label": "1.5.1.",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"VI.1.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.5.1.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(A\\) un anneau, \\(B\\) une \\(A\\)-algèbre graduée à degrés positifs telle que \\(B_0=A\\), \\(M\\) un \\(B\\)-module gradué. On suppose que \\(M\\) est projectif de type fini, en tant que \\(B\\)-module non gradué. Soient \\(\\widetilde B\\) le faisceau d'algèbres sur \\(\\operatorname{Spec}(A)\\) défini par \\(B\\), \\(\\widetilde M\\) le \\(\\widetilde B\\)-Module associé à \\(M\\) ; alors \\(\\widetilde M\\) est localement sur \\(\\operatorname{Spec}(A)\\) libre de type fini sur \\(\\widetilde B\\), comme \\(\\widetilde B\\)-Module gradué (1.2).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(M\\) est de type fini, il est à degrés bornés inférieurement. Par ailleurs, \\(M\\otimes_B A\\) est projectif de type fini sur \\(A\\), et par suite n'a qu'un nombre fini de composantes homogènes non nulles, elles-mêmes projectives de type fini sur \\(A\\) ; en localisant sur \\(\\operatorname{Spec}(A)\\), on peut donc supposer \\(M\\otimes_B A\\) libre de type fini sur \\(A\\). Enfin, \\(M\\) étant projectif, \\(\\operatorname{Tor}_1^B(M,A)=0\\). De ces propriétés résulte que \\(M\\) est libre de type fini sur \\(B\\) comme module gradué (voir Bourbaki, Alg. ch. II §11 prop. 7), donc \\(\\widetilde M\\) est libre de type fini sur \\(\\widetilde B\\), cqfd.</p>"
+    },
+    {
+     "id": "VI.1.5.2",
+     "type": "lemme",
+     "label": "1.5.2.",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"VI.1.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.5.2.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(A\\) un anneau, \\(B\\) une \\(A\\)-algèbre de présentation finie, \\(M\\) un \\(B\\)-module de présentation finie. On suppose \\(B\\) et \\(M\\) plats sur \\(A\\), et que pour tout corps résiduel \\(k\\) de \\(A\\), \\(M\\otimes_A k\\) est de dimension projective \\(\\leq n\\) sur \\(B\\otimes_A k\\) (ce qui est le cas si \\(B=A[t_0,\\ldots,t_r]\\)). Sous ces conditions, \\(M\\) admet une résolution de longueur \\(n\\) par des \\(B\\)-modules projectifs de type fini :</p>\n  <div class=\"display-formula\">\\[0\\longrightarrow L_n\\longrightarrow\\cdots\\longrightarrow L_0\\longrightarrow M\\longrightarrow0.\\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce lemme résulte immédiatement de EGA IV 12.3.2.</p>"
+    },
+    {
+     "id": "VI.1.6",
+     "type": "proposition",
+     "label": "1.6.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VI.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.6.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(r+1\\), \\(B\\) son algèbre symétrique, avec sa graduation habituelle, \\(M\\) un \\(B\\)-Module gradué de présentation finie, plat sur \\(S\\). Alors il existe une résolution graduée :</p>\n  <div class=\"display-formula\">\\[0\\longrightarrow L_{r+1}\\longrightarrow\\cdots\\longrightarrow L_0\\longrightarrow M\\longrightarrow0,\\]</div>\n  <p>les \\(L_i\\) étant des \\(B\\)-Modules gradués qui sont localement libres de type fini (en tant que \\(B\\)-Modules gradués).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Montrons d'abord que pour tout \\(B\\)-Module gradué \\(M\\), satisfaisant aux conditions de la proposition, il existe un homomorphisme gradué surjectif : \\(L\\longrightarrow M\\), où \\(L\\) est un \\(B\\)-Module localement libre de type fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(M\\) est de type fini, il existe un entier \\(N\\) tel que \\(M\\) soit engendré sur \\(B\\) par ses composantes de degré \\(\\leq N\\). On pose alors :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[L=\\bigoplus_{i\\leq N}M_i\\otimes_{\\mathcal O_S}B(-i)\\ ;\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l'homomorphisme de \\(L\\) dans \\(M\\) se définit grâce à (1.2.1), et il est clair qu'il est surjectif.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après 1.5.2, \\(M\\) admet une résolution (non graduée) par des \\(B\\)-Modules localement libres de type fini sur chaque ouvert affine. Par suite, si</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(M\\) a une résolution partielle globale :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[L_i\\longrightarrow L_{i-1}\\longrightarrow\\cdots\\longrightarrow L_0\\longrightarrow M\\longrightarrow0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par des \\(B\\)-Modules localement libres de type fini, le noyau \\(Z_i\\) de \\(L_i\\longrightarrow L_{i-1}\\) est encore un \\(B\\)-Module de type fini (I. 2.11). Il est même de présentation finie (en faisant le même raisonnement avec \\(i+1\\) au lieu de \\(i\\)). Enfin, il est plat sur \\(S\\). Il vérifie donc les mêmes hypothèses que \\(M\\), ce qui permet de construire de proche en proche une résolution globale graduée de \\(M\\) par des \\(B\\)-Modules gradués localement libres de type fini, d'après la remarque initiale. Pour \\(i\\geq r+1\\), \\(Z_i\\) est un \\(B\\)-Module projectif sur tout ouvert affine (1.5.2) et par suite est localement libre en tant que \\(B\\)-Module gradué, d'après 1.5.1. On peut alors, dans la résolution graduée construite, remplacer \\(L_{r+1}\\) par \\(Z_{r+1}\\), et les termes suivants par 0, d'où la résolution annoncée.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Montrons enfin le point c) de la démonstration.</p>"
+    },
+    {
+     "id": "VI.1.7",
+     "type": "proposition",
+     "label": "1.7.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VI.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.7.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de type fini, \\(B=S(E)\\), et \\(L\\) un \\(B\\)-Module gradué, localement libre de type fini (1.2). Alors il existe une filtration décroissante de \\(L\\) par des sous-\\(B\\)-Modules gradués \\(L^{(m)}\\), telle que :</p>\n  <p>i) \\(L^{(m)}=L\\) pour \\(m\\leq m_0\\) ;</p>\n  <p>ii) \\(L^{(m)}=0\\) pour \\(m\\geq m_1\\) ;</p>\n  <p>iii) pour tout \\(m\\), \\(\\operatorname{gr}^m(L)=L^{(m)}/L^{(m+1)}\\) est isomorphe comme \\(B\\)-Module gradué à un \\(B\\)-Module gradué de la forme \\(N_m\\otimes_{\\mathcal O_S}B(m)\\), où \\(N_m\\) est un \\(\\mathcal O_S\\)-Module localement libre de type fini.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(S\\) est quasi-compact, on peut trouver des entiers \\(n_0\\) et \\(n_1\\) tels qu'au voisinage de chaque point de \\(S\\), les éléments d'une base homogène</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de \\(L\\) aient des degrés compris entre \\(n_0\\) et \\(n_1\\). On procède alors par récurrence sur \\(N=n_1-n_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque \\(N=0\\), i.e. \\(n_1=n_0\\), soit \\(n\\) la valeur commune. L'homomorphisme canonique (1.2.1) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M_n\\otimes_{\\mathcal O_S}B(-n)\\longrightarrow M\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est alors un isomorphisme. En effet, la vérification est locale, et d'après (1.2.3), on peut alors supposer que \\(M\\simeq(B(-n))^k\\), et le résultat est trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas \\(N&gt;0\\), on considère encore l'homomorphisme (1.2.1) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M_{n_0}\\otimes_{\\mathcal O_S}B(-n_0)\\longrightarrow M.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On vérifie localement que cet homomorphisme est injectif, et que son conoyau \\(M'\\) est localement libre de type fini, à générateurs locaux de degré compris entre \\(n_0+1\\) et \\(n_1\\) : en effet, au voisinage de tout point de \\(S\\), \\(M_{n_0}\\) est soit nul, soit la composante homogène non nulle de \\(M\\) dont le degré est minimum ; utilisant une décomposition de \\(M\\) en facteurs directs du type (1.2.2), on voit dans ce dernier cas en utilisant (1.2.3) que \\(M_{n_0}\\otimes_{\\mathcal O_S}B(-n_0)\\) est isomorphe au facteur direct \\((B(-n_0))^{k_{n_0}}\\) de \\(M\\), d'où les propriétés annoncées. On applique alors l'hypothèse de récurrence à \\(M'\\), d'où aussitôt la conclusion voulue.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>1.8.</strong> Revenant à la démonstration du théorème 1.1, montrons que \\(K'(X)\\) est engendré comme \\(K'(S)\\)-module par les puissances de \\(\\xi\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(F\\) est un \\(\\mathcal O_X\\)-Module localement libre de type fini, il existe d'après 1.4 un \\(B\\)-Module gradué de présentation finie \\(M\\), plat sur \\(S\\), tel que \\(F=\\operatorname{Proj}_0(M)\\). D'après 1.6, \\(M\\) admet une résolution graduée par des \\(B\\)-Modules gradués localement libres de type fini. On en déduit une suite exacte :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow\\operatorname{Proj}_0(L_{r+1})\\longrightarrow\\cdots\\longrightarrow\\operatorname{Proj}_0(L_0)\\longrightarrow\\operatorname{Proj}_0(M)\\longrightarrow0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et l'égalité suivante dans \\(K'(X)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{cl}(F)=\\sum_i(-1)^i\\operatorname{cl}(\\operatorname{Proj}_0(L_i)).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En utilisant la filtration sur les \\(L_i\\) définie en 1.7, on trouve :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{cl}(\\operatorname{Proj}_0(L_i))=\\sum_j\\operatorname{cl}(\\operatorname{Proj}_0(N_{ij}\\otimes_{\\mathcal O_S}B(j))).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(\\operatorname{Proj}_0(N_{ij}\\otimes_{\\mathcal O_S}B(j))=f^*(N_{ij})(j)\\) ; on trouve donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{aligned}\n\\operatorname{cl}(\\operatorname{Proj}_0(L_i))&amp;=\\sum_j\\operatorname{cl}(f^*(N_{ij}))\\,\\xi^j\\\\\n&amp;=\\sum_j f^*(\\operatorname{cl}(N_{ij}))\\,\\xi^j.\n\\end{aligned}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc finalement exprimé \\(\\operatorname{cl}(F)\\) comme combinaison linéaire à coefficients dans \\(K'(S)\\) des puissances de \\(\\xi\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>1.9.</strong> Pour voir que \\(1,\\xi,\\ldots,\\xi^{r+1}\\) sont linéairement dépendants sur \\(K'(S)\\) on considère l'homomorphisme canonique surjectif : \\(f^*(E)\\longrightarrow\\mathcal O_X(1)\\), dont le noyau \\(F\\) est localement libre de rang \\(r\\). On peut donc écrire :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\lambda^{r+1}(f^*(E)-\\xi)=0,\\qquad\\text{avec }E=\\operatorname{cl}E,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>les opérations \\(\\lambda^i\\) sur \\(K'(X)\\) étant définies dans V 2.2. On obtient donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{i=0}^{r+1}\\lambda^i(f^*(E))\\,\\lambda^{r+1-i}(-\\xi)=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(\\mathcal O_X(1)\\) est un faisceau inversible, \\(\\lambda_t(\\xi)=1+\\xi t\\), et par suite, \\(\\lambda_t(-\\xi)=1/(1+\\xi t)\\), d'où finalement la relation :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.9.1)\\qquad\\sum_{i=0}^{r+1}(-1)^{r+1-i}\\xi^{r+1-i}\\lambda^i(E)=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Montrons enfin que \\(1,\\xi,\\ldots,\\xi^r\\) sont indépendants sur \\(K'(S)\\)<sup>(*)</sup>,</p>"
+    },
+    {
+     "id": "VI.1.10",
+     "type": "lemma",
+     "label": "1.10.",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"VI.1.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.10.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 1.1, soient \\(F\\) et \\(G\\) deux faisceaux localement libres de type fini sur \\(X\\), tels que :</p>\n  <div class=\"display-formula\">\\[\\operatorname{cl}_{K'(X)}(F)=\\operatorname{cl}_{K'(X)}(G)\\ ;\\]</div>\n  <p>alors il existe un entier \\(n_0\\), tel que pour \\(n\\geq n_0\\), on ait :</p>\n  <p>i) \\(f_*(F(n))\\), \\(f_*(G(n))\\) sont localement libres de type fini sur \\(S\\) ;</p>\n  <p>ii) \\(\\operatorname{cl}_{K'(S)}(f_*(F(n)))=\\operatorname{cl}_{K'(S)}(f_*(G(n)))\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(A\\) le groupe abélien libre engendré par les classes (à isomorphisme près) de faisceaux localement libres de type fini sur \\(X\\). Dire que, dans \\(K'(X)\\), \\(F\\) et \\(G\\) ont même classe, c'est dire, d'après la construction du \\(K'\\), qu'il existe des suites exactes de \\(\\mathcal O_X\\)-Modules localement libres de type fini :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow L_i\\longrightarrow M_i\\longrightarrow N_i\\longrightarrow0,\\qquad i=1,\\ldots,k,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et des entiers \\(n_i\\), tels que dans \\(A\\) on ait l'égalité :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(F)-(G)=\\sum_i n_i\\big((L_i)-(M_i)+(N_i)\\big).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(n\\), la tensorisation par \\(\\mathcal O_X(n)\\) définit un automorphisme de \\(A\\), d'où :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(F(n))-(G(n))=\\sum_i n_i\\big((L_i(n))-(M_i(n))+(N_i(n))\\big),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>les suites \\(0\\longrightarrow L_i(n)\\longrightarrow M_i(n)\\longrightarrow N_i(n)\\longrightarrow0\\) restant exactes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(B\\) le groupe abélien libre engendré par les classes (à isomorphisme près) de faisceaux quasi-cohérents sur \\(S\\), et \\(A'\\subset B\\) le sous-groupe engendré par les classes de faisceaux localement libres de type fini sur \\(S\\). Par image directe, on définit un homomorphisme \\(A\\longrightarrow B\\), et on a donc encore :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(f_*(F(n)))-(f_*(G(n)))=\\sum_i n_i\\big((f_*(L_i(n)))-(f_*(M_i(n)))+(f_*(N_i(n)))\\big).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après 1.2, pour \\(n\\) assez grand, les conditions suivantes seront remplies :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\forall k\\geq1,\\ \\forall i,\\quad R^k f_*(L_i(n))=0\\ ;\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour tout \\(i\\), \\(f_*(L_i(n))\\), \\(f_*(M_i(n))\\), \\(f_*(N_i(n))\\), \\(f_*(F(n))\\), \\(f_*(G(n))\\) sont localement libres de type fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte que pour \\(n\\) assez grand, ces éléments sont tous dans \\(A'\\), et vérifient la relation écrite plus haut, et que les suites :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow f_*(L_i(n))\\longrightarrow f_*(M_i(n))\\longrightarrow f_*(N_i(n))\\longrightarrow0\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont exactes. Cela entraîne que dans \\(K'(S)\\), \\(f_*(F(n))\\) et \\(f_*(G(n))\\) ont même classe.</p>"
+    },
+    {
+     "id": "VI.1.11",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.1.11\">1.11.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons donnée une équation de dépendance linéaire sur \\(K'(S)\\) entre \\(1,\\xi,\\ldots,\\xi^r\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.11.1)\\qquad f^*(x_0)+f^*(x_1)\\xi+\\cdots+f^*(x_r)\\xi^r=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut écrire chacun des \\(x_j\\) comme différence des classes de deux faisceaux, soit : \\(x_j=\\operatorname{cl}(E_j)-\\operatorname{cl}(E'_j)\\), \\(E_j\\) et \\(E'_j\\) étant localement libres de type fini sur \\(S\\). Posons</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[F=\\bigoplus_{j=0}^r f^*(E_j)(j),\\qquad F'=\\bigoplus_{j=0}^r f^*(E'_j)(j).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'égalité (1.11.1) s'écrit alors :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{cl}_{K'(X)}(F)=\\operatorname{cl}_{K'(X)}(F').\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après le lemme 1.10, on obtient pour \\(n\\) assez grand :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{cl}_{K'(S)}(f_*(F(n)))=\\operatorname{cl}_{K'(S)}(f_*(F'(n))).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{aligned}\nf_*(F(n))&amp;=\\bigoplus_j f_*\\big(f^*(E_j)\\otimes_{\\mathcal O_X}\\mathcal O_X(n+j)\\big)\\\\\n&amp;=\\bigoplus_j E_j\\otimes_{\\mathcal O_S}f_*(\\mathcal O_X(n+j)).\n\\end{aligned}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par ailleurs, \\(f_*(\\mathcal O_X(n+j))=S(E)^{n+j}\\) ; nous noterons \\(\\sigma_p\\) la classe dans \\(K'(S)\\) de \\(S(E)^p\\). La relation (1.11.1) donne donc finalement :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.11.2)\\qquad \\forall n\\geq n_0,\\qquad \\sum_{j=0}^r x_j\\sigma_{n+j}=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On considère alors le complexe :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow \\bigwedge^{r+1}(E)\\otimes_{\\mathcal O_S}S(E)\\longrightarrow \\bigwedge^r(E)\\otimes_{\\mathcal O_S}S(E)\\longrightarrow\\cdots\\longrightarrow E\\otimes_{\\mathcal O_S}S(E)\\longrightarrow S(E)\\longrightarrow0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont les flèches sont définies par :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(x_1\\wedge\\cdots\\wedge x_n)\\otimes(y_1\\otimes\\cdots\\otimes y_p)\\longmapsto\n\\sum(-1)^{i-1}(x_1\\wedge\\cdots\\wedge\\widehat{x_i}\\wedge\\cdots\\wedge x_n)\\otimes(x_i\\otimes y_1\\otimes\\cdots\\otimes y_p).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si on considère \\(\\bigwedge^n(E)\\) comme \\(\\mathcal O_S\\)-Module gradué réduit au degré \\(n\\), c'est un complexe de \\(S(E)\\)-Modules gradués, les morphismes étant eux-mêmes gradués.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce complexe est une résolution de \\(\\mathcal O_S\\) : sur un ouvert où \\(E\\) est libre, \\(S(E)\\) s'identifie à une Algèbre de polynomes \\(\\mathcal O_S[T_0,\\ldots,T_r]\\), et le complexe au complexe de Koszul défini par la suite \\(S(E)\\)-régulière \\(T_0,\\ldots,T_r\\) ; on sait que ce dernier est une résolution de \\(S(E)/(T_0,\\ldots,T_r)=\\mathcal O_S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En écrivant que chacune des composantes homogènes du complexe de degré \\(\\geq1\\) est acyclique, on obtient donc des relations dans \\(K'(S)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.11.3)\\qquad \\sum_{i=0}^{r+1}(-1)^i\\lambda^i(E)\\sigma_{p-i}=0\\qquad\\text{pour tout }p\\geq1,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(en posant \\(\\sigma_k=0\\) pour \\(k&lt;0\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons la relation (1.11.2) vraie pour \\(n\\geq n_0\\) ; nous allons montrer qu'elle est encore vraie pour \\(n_0-1\\), ce qui permettra de redescendre par récurrence jusqu'à \\(n_0=-r\\) (nous verrons plus loin que cela suffit à entraîner la nullité des \\(x_j\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après (1.11.3), on peut écrire</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{j=0}^r x_j\\left(\\sum_{i=0}^{r+1}(-1)^i\\lambda^i(E)\\sigma_{p(j)-i}\\right)=0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(p(j)\\geq1\\). On prend \\(p(j)=n_0+r+j\\), ce qui est bien \\(\\geq1\\) si \\(n_0&gt;-r\\). On obtient alors :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{j=0}^r x_j\\left(\\sum_{i=0}^{r+1}(-1)^i\\lambda^i(E)\\sigma_{n_0+r+j-i}\\right)\n=\\sum_{i=0}^{r+1}(-1)^i\\lambda^i(E)\\left(\\sum_{j=0}^r x_j\\sigma_{n_0+r+j-i}\\right).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(i\\neq r+1\\), \\(n_0+r-i\\geq n_0\\), donc d'après (1.11.2) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{j=0}^r x_j\\sigma_{n_0+r+j-i}=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par conséquent, la relation (1.11.4) se réduit à :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\lambda^{r+1}(E)\\left(\\sum_{j=0}^r x_j\\sigma_{n_0-1+j}\\right)=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(E\\) est de rang \\(r+1\\), donc \\(\\lambda^{r+1}(E)\\) est la classe d'un faisceau inversible, et est donc inversible dans \\(K'(S)\\). Par suite, la relation (1.11.4) se réduit à la relation (1.11.2) pour \\(n_0-1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc la relation (1.11.2) est vraie pour \\(n\\geq-r\\) ; pour \\(n=-r\\), elle donne :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[x_r\\sigma_0=0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(\\sigma_0=1\\), on obtient \\(x_r=0\\). On montre ainsi par récurrence descendante sur \\(j\\) que les \\(x_j\\) sont tous nuls, en utilisant les relations (1.11.2) pour \\(n\\) variant de \\(-r\\) à \\(0\\). Ceci montre que \\(1,\\ldots,\\xi^r\\) sont indépendants sur \\(K'(S)\\), et achève la démonstration du théorème 1.1.</p>"
+    },
+    {
+     "id": "VI.1.12",
+     "type": "remarque",
+     "label": "1.12.",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"VI.1.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.12.</span></div>\n  <div class=\"thm-body\"><p>Pour tout \\(\\mathcal O_S\\)-Module localement libre de type fini \\(E\\), soit \\(\\sigma_i(E)\\) la classe dans \\(K'(S)\\) de la \\(i\\)-ième puissance symétrique de \\(E\\) ; posons</p>\n  <div class=\"display-formula\">\\[\\sigma_t(E)=1+\\sum_{i\\geq1}\\sigma_i(E)t^i\\ ;\\]</div>\n  <p>les relations (1.11.3) peuvent encore s'écrire :</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.12.1)\\qquad \\lambda_t(E)\\cdot\\sigma_{-t}(E)=1.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette relation elle-même montre l'additivité de l'application \\(\\sigma_t\\), qui peut donc être prolongée en un homomorphisme de \\(K'(S)\\) dans \\(1+K'(S)[[t]]^+\\).</p>"
+    },
+    {
+     "id": "VI.1.13",
+     "type": "remarque",
+     "label": "1.13.",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"VI.1.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.13.</span></div>\n  <div class=\"thm-body\"><p>On peut prendre pour base de \\(K'(X)\\) sur \\(K'(S)\\) n'importe quelle suite de puissances de \\(\\xi\\) : \\(\\xi^k,\\ldots,\\xi^{k+r+1}\\), car \\(\\xi\\) est inversible, et une telle suite est donc composée d'éléments linéairement indépendants sur \\(K'(S)\\) ; par ailleurs, les autres puissances de \\(\\xi\\) peuvent s'exprimer explicitement comme combinaisons linéaires à coefficients dans \\(K'(S)\\) de celles-ci, d'après l'égalité (1.9.1), et l'inversibilité de \\(\\xi\\).</p>\n  <p>Posons \\(x=1-\\xi^{-1}\\) (\\(x\\) s'interprète comme « classe d'une section hyperplane »). On peut alors prendre pour base de \\(K'(X)\\) sur \\(K'(S)\\) les éléments \\(1,x,\\ldots,x^r\\). Pour obtenir l'équation de dépendance de \\(1,\\ldots,x^{r+1}\\) on considère la suite exacte :</p>\n  <div class=\"display-formula\">\\[0\\longrightarrow F\\longrightarrow f^*(E)\\longrightarrow\\mathcal O_X(1)\\longrightarrow0,\\]</div>\n  <p>et la suite exacte obtenue par passage aux duals :</p>\n  <div class=\"display-formula\">\\[0\\longrightarrow\\mathcal O_X(-1)\\longrightarrow f^*(\\check E)\\longrightarrow\\check F\\longrightarrow0.\\]</div>\n  <p>On remarque alors que \\(\\gamma_1^{r+1}(\\check F-r)=0\\), d'où l'on déduit :</p>\n  <div class=\"display-formula\">\\[\\gamma^{r+1}(\\check F-r)=\\gamma^{r+1}(\\check E-r-1+x)=0,\\]</div>\n  <p>soit :</p>\n  <div class=\"display-formula\">\\[(1.13.1)\\qquad \\sum_{k=0}^{r+1}\\gamma^{r+1-k}(\\check E-r-1)\\,x^k=0.\\]</div>\n  <p>On obtient un résultat analogue en introduisant \\(x'=\\xi-1\\).</p>\n  <p>Notons enfin que si \\(E=(\\mathcal O_S)^{r+1}\\), donc \\(X=\\mathbf P_S^r\\), on a \\(E=r+1\\), et l'égalité (1.13.1) se réduit à :</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(1.13.2)\\qquad x^{r+1}=0.\\]</div>"
+    },
+    {
+     "id": "VI.1.14",
+     "type": "remarque",
+     "label": "1.14.",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"VI.1.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.14.</span></div>\n  <div class=\"thm-body\"><p>En utilisant la notion de « schéma relatif » (cf [3]), on peut encore donner un sens à 1.1 en supposant que \\(S\\) est un topos localement annelé. Si on suppose que l'objet final du topos est quasi-compact, la démonstration donnée dans le cas des schémas se transpose sans difficultés, et le théorème reste donc valable.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VI-fn-x1",
+     "number": "(*)",
+     "html": "Cette démonstration est due à J. P. Jouanolou."
+    }
+   ]
+  },
+  {
+   "id": "VI-2",
+   "title": "2. Calcul du \\(K'\\) d'un fibré projectif : cas des complexes parfaits",
+   "blocks": [
+    {
+     "id": "VI.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.2\">2. Calcul du \\(K'\\) d'un fibré projectif : cas des complexes parfaits</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le présent paragraphe ne sera pas utilisé dans la suite du séminaire.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La notation \\(K'(X)\\) désignera dans ce paragraphe le groupe de Grothendieck des complexes parfaits sur \\(X\\) (IV 2.2). Nous nous proposons de prouver le théorème suivant, analogue de 1.1 :</p>"
+    },
+    {
+     "id": "VI.2.1",
+     "type": "theorem",
+     "label": "2.1.",
+     "title": "Théorème",
+     "html": "<div class=\"thm theorem\" id=\"VI.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.1.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(r+1\\), \\(X=\\mathbf P(E)\\) le fibré projectif associé ; soit \\(\\xi\\) la classe dans \\(K'(X)\\) du complexe égal à \\(\\mathcal O_X(1)\\) en degré nul, et nul pour les autres degrés. Alors \\(K'(X)\\), muni de sa structure naturelle de \\(K'(S)\\)-algèbre est un \\(K'(S)\\)-module libre admettant pour base \\(1,\\xi,\\ldots,\\xi^r\\).</p></div>\n</div>"
+    },
+    {
+     "id": "VI.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.2.2\">2.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Fixons les notations : \\(B\\) désignera l'algèbre symétrique de \\(E\\) ; on notera \\(\\mathcal A\\) la catégorie des \\(\\mathcal O_X\\)-Modules, \\(\\mathcal C\\) la catégorie des \\(B\\)-Modules gradués avec pour morphismes les morphismes gradués, \\(\\mathcal C_0\\) la sous-catégorie pleine de \\(\\mathcal C\\) dont les objets sont les \\(B\\)-Modules localement libres de type fini en tant que \\(B\\)-Modules gradués, \\(\\mathcal C'\\) la catégorie des \\(\\mathcal O_S\\)-Modules. Les catégories \\(\\mathcal A\\), \\(\\mathcal C\\), et \\(\\mathcal C'\\) sont abéliennes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(n\\), et tout complexe \\(L^\\bullet\\) de \\(D^+(\\mathcal A)\\), nous noterons \\(L^\\bullet(n)\\) le complexe \\(L^\\bullet\\otimes_{\\mathcal O_X}\\mathcal O_X(n)\\).</p>"
+    },
+    {
+     "id": "VI.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.2.3\">2.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous aurons besoin d'appliquer le foncteur \\(\\operatorname{Proj}_0\\) à des \\(B\\)-Modules gradués quelconques, et non seulement à des \\(B\\)-Modules gradués quasi-cohérents comme dans la construction de EGA II 3.2. Aussi allons nous indiquer rapidement comment cette construction peut s'effectuer dans le cas général.</p>"
+    },
+    {
+     "id": "VI.2.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VI.2.3.1\">2.3.1.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient d'abord \\(S\\) un schéma, \\(A\\) une \\(\\mathcal O_S\\)-algèbre quasi-cohérente, \\(Y=\\operatorname{Spec}(A)\\), et \\(f:Y\\to S\\) le morphisme structural. De l'isomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[A\\xrightarrow{\\sim}f_*(\\mathcal O_Y)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on déduit un homomorphisme canonique :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.3.1.1)\\qquad f^{-1}(A)\\longrightarrow\\mathcal O_Y\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(f^{-1}\\) désigne l'image inverse au sens des faisceaux d'ensembles ; en d'autres termes, on a un morphisme d'espaces annelés :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.3.1.2)\\qquad \\bar f:(Y,\\mathcal O_Y)\\longrightarrow(S,A)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On en déduit un foncteur « image inverse » \\(\\bar f^*\\) de la catégorie des \\(A\\)-Modules dans la catégorie des \\(\\mathcal O_Y\\)-Modules, adjoint à gauche du foncteur « image directe » \\(\\bar f_*\\) de la catégorie des \\(\\mathcal O_Y\\)-Modules dans la catégorie des \\(f_*(\\mathcal O_Y)\\)-Modules. On a donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.3.1.3)\\qquad \\bar f^*(M)=f^{-1}(M)\\otimes_{f^{-1}(A)}\\mathcal O_Y\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour tout \\(A\\)-Module \\(M\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme l'homomorphisme (2.3.1.1) est plat (car dans chaque fibre il correspond à une localisation), le foncteur \\(\\bar f^*\\) ainsi défini est un foncteur exact (cf [4], p. 164).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(M\\) est un \\(A\\)-Module quasi-cohérent, cette construction donne le Module \\(\\widetilde M\\) défini dans EGA II 1.4.3. En effet, l'isomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M\\xrightarrow{\\sim}f_*(\\widetilde M)=\\bar f_*(\\widetilde M)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donne par adjonction un homomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\bar f^*(M)\\longrightarrow\\widetilde M\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on vérifie immédiatement sur chaque fibre que c'est un isomorphisme.</p>"
+    },
+    {
+     "id": "VI.2.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VI.2.3.2\">2.3.2.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient maintenant \\(B\\) une \\(\\mathcal O_S\\)-Algèbre graduée quasi-cohérente, \\(M\\) un \\(B\\)-Module gradué, et \\(X=\\operatorname{Proj}(B)\\). Pour tout ouvert affine \\(U\\) de \\(S\\), et toute section \\(s\\) de \\(B\\) sur \\(U\\), homogène de degré \\(d&gt;0\\), on note \\(M_{(s),U}\\) la composante homogène de degré 0 du Module de fraction \\(M_s\\) ; on a donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M_{(s),U}=((M|U)\\otimes_{(B|U)}(B|U)_s)_0.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(V\\) est un ouvert affine de \\(U\\), alors \\(M_{(s),V}\\) est la restriction à \\(V\\) de \\(M_{(s),U}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On considère la base d'ouverts de \\(X\\) formée des ouverts affines :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[D_+(U,s)\\xrightarrow{\\sim}\\operatorname{Spec}((B|U)_{(s)}).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On note \\(f\\) le morphisme structural \\(X\\to S\\), et \\(f_{U,s}\\) le morphisme affine :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[f_{U,s}:D_+(U,s)\\longrightarrow U.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On pose alors :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{Proj}_0(M)|_{U,s}=\\bar f_{U,s}^{\\,*}(M_{(s),U}),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec les notations de 2.3.1. Nous allons montrer que les \\(\\operatorname{Proj}_0(M)_{U,s}\\) se recollent quand \\(U\\) et \\(s\\) varient, définissant ainsi un \\(\\mathcal O_X\\)-Module noté \\(\\operatorname{Proj}_0(M)\\). Le recollement pour \\(U\\) variable et \\(s\\) fixe étant évident, on est ramené (cf. EGA II 2.5.2) à montrer que si \\(t\\) est une section de \\(B\\) sur \\(U\\), homogène de degré \\(e&gt;0\\), alors la restriction de \\(\\operatorname{Proj}_0(M)_{U,s}\\) à \\(D_+(U,st)\\) est canoniquement isomorphe à \\(\\operatorname{Proj}_0(M)_{U,st}\\). On considère :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{CD}\nD_+(st) @&gt;{i}&gt;&gt; D_+(s)\\\\\n@V{f_{U,st}}VV @VV{f_{U,s}}V\\\\\nU @= U.\n\\end{CD}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>il s'agit de montrer que les Modules \\(i^*\\circ\\bar f_{U,s}^{\\,*}(M_{(s),U})\\) et \\(\\bar f_{U,st}^{\\,*}(M_{(st),U})\\) sont canoniquement isomorphes. Or on a d'une part les isomorphismes canoniques :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{aligned}\ni^*\\circ\\bar f_{U,s}^{\\,*}(M_{(s),U})\n&amp;\\xrightarrow{\\sim}i^*\\left(f_{U,s}^{-1}(M_{(s),U})\\otimes_{f_{U,s}^{-1}((B|U)_{(s)})}\\mathcal O_{D_+(s)}\\right)\\\\\n&amp;\\xrightarrow{\\sim}i^{-1}\\left(f_{U,s}^{-1}(M_{(s),U})\\otimes_{f_{U,s}^{-1}((B|U)_{(s)})}\\mathcal O_{D_+(s)}\\right)\\otimes_{i^{-1}(\\mathcal O_{D_+(s)})}\\mathcal O_{D_+(st)}\\\\\n&amp;\\xrightarrow{\\sim}f_{U,st}^{-1}(M_{(s),U})\\otimes_{f_{U,st}^{-1}((B|U)_{(s)})}\\mathcal O_{D_+(st)}.\n\\end{aligned}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\bar f_{U,st}^{\\,*}(M_{(st),U})\\xrightarrow{\\sim}f_{U,st}^{-1}(M_{(st),U})\\otimes_{f_{U,st}^{-1}((B|U)_{(st)})}\\mathcal O_{D_+(st)}.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, il résulte de EGA II 2.2.2, traduit en termes de faisceaux, qu'on a les isomorphismes canoniques :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M_{(st),U}\\xrightarrow{\\sim}(M_{(s),U})_{t^d/s^e}\\xrightarrow{\\sim}M_{(s),U}\\otimes_{(B|U)_{(s)}}(B|U)_{(st)},\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où finalement l'isomorphisme cherché.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que si \\(M\\) est quasi-cohérent le Module \\(\\operatorname{Proj}_0(M)\\) ainsi construit est bien celui qui est défini dans EGA II.</p>"
+    },
+    {
+     "id": "VI.2.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VI.2.3.3\">2.3.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de 2.3.1 et 2.3.2 que le foncteur \\(\\operatorname{Proj}_0\\) est exact. Revenant aux notations de 2.2, on en déduit donc par passage aux catégories dérivées un foncteur encore noté \\(\\operatorname{Proj}_0\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{Proj}_0:D^+(\\mathcal C)\\longrightarrow D^+(\\mathcal A).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit également sur les constructions précédentes que le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\operatorname{Proj}_0\\) sur la catégorie des \\(B\\)-Modules gradués est compatible au produit tensoriel ; il en est encore de même du foncteur obtenu sur les catégories dérivées.</p>"
+    },
+    {
+     "id": "VI.2.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.2.4\">2.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout entier \\(k\\), et tout \\(\\mathcal O_X\\)-Module \\(L\\), posons :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.4.1)\\qquad F_k(L)=\\bigoplus_{n\\geq k}f_*(L(n)).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur \\(F_k:\\mathcal A\\to\\mathcal C\\) ainsi défini est exact à gauche. Comme la catégorie des \\(\\mathcal O_X\\)-Modules a assez d'injectifs, on peut définir un foncteur dérivé :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.4.2)\\qquad \\mathbf R F_k:D^+(\\mathcal A)\\longrightarrow D^+(\\mathcal C).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(L\\) est un \\(\\mathcal O_X\\)-Module localement libre de type fini, il existe un entier \\(k_0\\) tel que pour \\(k\\geq k_0\\), \\(L\\) soit \\(F_k\\)-acyclique. Il suffit pour le voir de montrer que, pour \\(n\\) assez grand, \\(L\\) est acyclique pour les foncteurs \\(L\\rightsquigarrow f_*(L(n))\\). Comme la tensorisation par \\(\\mathcal O_X(n)\\) est un foncteur exact, cela résulte immédiatement de la suite spectrale des foncteurs composés et de 1.3.</p>"
+    },
+    {
+     "id": "VI.2.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.2.5\">2.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On se propose de construire pour tout \\(\\mathcal O_X\\)-Module \\(F\\) un homomorphisme fonctoriel en \\(F\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.5.1)\\qquad \\beta:\\operatorname{Proj}_0(F_k(F))\\longrightarrow F.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour cela on définit la restriction de \\(\\beta\\) aux \\(D_+(U,s)\\) (2.3.2). Or par construction on a, en posant \\(M=F_k(F)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{Proj}_0(M)|_{D_+(U,s)}=\\bar f_{U,s}^{\\,*}(M_{(s),U}).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour définir un homomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\bar f_{U,s}^{\\,*}(M_{(s),U})\\longrightarrow F|_{D_+(U,s)},\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>il suffit, d'après la définition de \\(\\bar f_{U,s}^{\\,*}\\) comme adjoint à gauche du foncteur image directe, de définir un homomorphisme \\(f_{U,s*}(\\mathcal O_X)\\)-linéaire</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[M_{(s),U}\\longrightarrow f_{U,s*}(F|_{D_+(U,s)}).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour ce faire, il faut se donner pour tout ouvert \\(V\\) de \\(U\\) un homomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.5.2)\\qquad \\Gamma(V,M)_{(s)}\\longrightarrow\\Gamma(D_+(V,s),F)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>compatible aux restrictions aux ouverts de \\(U\\), et prendre l'homomorphisme correspondant sur les faisceaux associés. L'homomorphisme (2.5.2) est défini de la façon suivante : soit \\(z/s^n\\in\\Gamma(V,M)_{(s)}\\), où, \\(s\\) étant de degré \\(d\\), \\(z\\in\\Gamma(V,M_{nd})=\\Gamma(D_+(V,s),F(nd))\\) ; on associe alors à \\(z/s^n\\) la section \\(z.\\alpha_d(s^n)^{-1}\\) de \\(F\\) sur \\(D_+(V,s)\\), en notant \\(\\alpha_d\\) l'homomorphisme canonique \\(\\Gamma(V,B_d)\\longrightarrow\\Gamma(f^{-1}(V),\\mathcal O_X(d))\\) (cf. EGA II 2.6.3 et 2.6.4). On vérifie sans peine les compatibilités nécessaires, d'où par recollement l'homomorphisme (2.5.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que dans le cas où \\(F\\) est quasi-cohérent l'homomorphisme ainsi construit est celui de EGA II (3.3.4.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'homomorphisme de foncteur \\(\\operatorname{Proj}_0\\circ F_k\\longrightarrow\\operatorname{Id}\\) sur la catégorie des \\(\\mathcal O_X\\)-Modules donne par passage aux catégories dérivées un homomorphisme de foncteur sur \\(D^+(\\mathcal A)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.5.3)\\qquad \\operatorname{Proj}_0\\circ\\mathbf R F_k\\longrightarrow\\operatorname{Id}_{D^+(\\mathcal A)}.\\]</div>"
+    },
+    {
+     "id": "VI.2.6",
+     "type": "proposition",
+     "label": "2.6.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VI.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.6.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de type fini, \\(X=\\mathbf P(E)\\), et \\(L'\\) un complexe parfait sur \\(X\\). Alors il existe un entier \\(k_0\\) tel que pour \\(k\\geq k_0\\) les propriétés suivantes soient vérifiées :</p>\n\n<!-- Source PDF page 22 (printed page 386) -->\n<p>i) \\(\\mathbf R F_k(L')\\) est \\(\\mathcal C_0\\)-parfait ;</p>\n\n<p>ii) Le morphisme canonique (2.5.3) :</p>\n\n<div class=\"display-formula\">\\[\\operatorname{Proj}_0\\circ\\mathbf R F_k(L')\\longrightarrow L'\\]</div>\n\n<p>est un isomorphisme de \\(D^+(\\mathcal A)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La notion de complexe \\(\\mathcal C_0\\)-parfait envisagée ici est locale, c'est-à-dire qu'il s'agit de perfection relativement à la catégorie fibrée sur \\(S\\) définie par \\(\\mathcal C_0\\). Cette notion de perfection a bien un sens, car \\(\\mathcal C_0\\) vérifie les axiomes de (I 4.0) : seule la stabilité par noyau d'épimorphisme n'est pas immédiate ; elle résulte de 1.5.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(S\\) est quasi-compact, il suffit de vérifier les deux assertions de 2.6 localement sur \\(S\\), de sorte qu'on peut supposer \\(S\\) affine. Le faisceau inversible \\(\\mathcal O_X(1)\\) est alors ample, et on dispose de résolutions globales sur \\(X\\) (II 2.2.9). Il existe donc un complexe \\(L''\\) de \\(D_{\\mathrm{parf}}(\\mathcal A)\\), strictement parfait, et un isomorphisme dans \\(D_{\\mathrm{parf}}(\\mathcal A)\\) : \\(L'\\xrightarrow{\\sim}L''\\), ce qui permet de supposer \\(L'\\) strictement parfait. Or nous avons vu en 2.4 que, pour \\(k\\) assez grand, les \\(L'^i\\), qui sont tous nuls sauf un nombre fini, sont \\(F_k\\)-acycliques ; on a par conséquent :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\mathbf R F_k(L')=F_k(L')\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>si \\(k\\) est assez grand. Or d'après 1.3 et 1.6, on peut trouver \\(k_0\\) tel que pour \\(k\\geq k_0\\) la condition précédente soit remplie, et que les \\(F_k(L'^i)\\) soient des \\(B\\)-Modules \\(\\mathcal C_0\\)-parfaits pour tout \\(i\\). Le complexe \\(F_k(L')\\) est alors \\(\\mathcal C_0\\)-parfait, d'où le i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(k\\) est choisi tel que précédemment, l'homomorphisme (2.5.3) est alors l'homomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{Proj}_0(F_k(L'))\\longrightarrow L',\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et c'est un isomorphisme sur chaque composante puisque \\(L'\\) a été supposé strictement parfait, d'où le ii).</p>"
+    },
+    {
+     "id": "VI.2.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.2.7\">2.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sur \\(\\mathcal C\\), le foncteur qui à un \\(B\\)-Module gradué associe sa \\(n\\)-ième composante est un foncteur exact à valeurs dans \\(\\mathcal C'\\) ; il définit donc un foncteur :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.7.1)\\qquad \\operatorname{Comp}_n:D^+(\\mathcal C)\\longrightarrow D^+(\\mathcal C').\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut, pour tout \\(n\\), considérer le foncteur \\(\\mathcal C'\\longrightarrow\\mathcal C\\) défini par la tensorisation par \\(B(-n)\\). L'homomorphisme (1.2.1) définit un morphisme de foncteurs sur \\(\\mathcal C\\), d'où un morphisme pour les foncteurs correspondants entre catégories dérivées :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(2.7.2)\\qquad \\operatorname{Comp}_n\\otimes_{\\mathcal O_S}B(-n)\\longrightarrow\\operatorname{Id}_{D^+(\\mathcal C)}.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(M'\\) un complexe \\(\\mathcal C_0\\)-parfait. Nous allons montrer qu'il existe une suite de triangles distingués :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{array}{ccccccccc}\n&amp;P_1&amp;&amp;P_2&amp;&amp;\\cdots&amp;&amp;P_k\\\\\n&amp;\\swarrow\\ \\searrow&amp;&amp;\\swarrow\\ \\searrow&amp;&amp;&amp;\\swarrow\\ \\searrow\\\\\nN'_1&amp;\\longrightarrow&amp;M',&amp;N'_2&amp;\\longrightarrow&amp;P'_1,&amp;\\ldots,&amp;N'_k\\longrightarrow P'_{k-1},\n\\end{array}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(P'_k\\) est acyclique, et les \\(N'_i\\) du type \\(K'_i\\otimes_{\\mathcal O_S}B(d)\\), les \\(K'_i\\) étant des complexes parfaits au sens ordinaire sur \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(M'\\) est \\(\\mathcal C_0\\)-parfait, et que \\(S\\) est quasi-compact, il existe un recouvrement fini de \\(S\\), et un entier \\(d_0\\) tel que sur tout ouvert de ce recouvrement, \\(M'\\) soit isomorphe à un complexe borné à termes localement libres de type fini sur \\(B\\), soit \\(M''_U\\), tel que \\(\\operatorname{Comp}_d(M''_U)=0\\) pour \\(d&lt;d_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On considère alors le morphisme canonique (2.7.2) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[N'_1=\\operatorname{Comp}_{d_0}(M')\\otimes_{\\mathcal O_S}B(-d_0)\\longrightarrow M'\\ ;\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit \\(P'_1\\) le cône de ce morphisme. C'est encore un complexe \\(\\mathcal C_0\\)-parfait : en effet, pour tout \\(n\\), \\(\\operatorname{Comp}_n(M')\\) est un complexe parfait sur \\(S\\), car il en est ainsi quand \\(M'\\) est borné à termes localement libres de type fini sur \\(B\\) ; par suite, le complexe \\(\\operatorname{Comp}_n(M')\\otimes_{\\mathcal O_S}B(-d_0)\\) est \\(\\mathcal C_0\\)-parfait, et il en est donc de même pour le cône (I 4.10).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par ailleurs, on peut écrire sur tout ouvert \\(U\\) du recouvrement le diagramme commutatif :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{CD}\n\\operatorname{Comp}_{d_0}(M')\\otimes_{\\mathcal O_S}B(-d_0) @&gt;&gt;&gt; M'\\\\\n@V{\\wr}VV @VV{\\wr}V\\\\\n\\operatorname{Comp}_{d_0}(M''_U)\\otimes_{\\mathcal O_S}B(-d_0) @&gt;&gt;&gt; M''_U,\n\\end{CD}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui induit un isomorphisme entre les cônes ; or l'homomorphisme du bas est un isomorphisme en degré \\(d_0\\) ; donc \\(P'_1\\) est isomorphe sur \\(U\\) à un complexe borné à termes localement libres de type fini sur \\(B\\), dont les composantes \\(\\operatorname{Comp}_d\\) sont nulles pour \\(d&lt;d_0+1\\). Par suite, \\(P'_1\\) vérifie les mêmes propriétés que \\(M'\\), \\(d_0\\) étant remplacé par \\(d_0+1\\). On peut donc itérer le processus, et il suffit de voir qu'au bout d'un nombre fini d'opérations, le complexe \\(P'_k\\) obtenu est acyclique. Là encore la question est locale, si bien qu'il suffit de le voir pour \\(M''_U\\). Or pour chaque terme \\(M_U^{\\prime\\prime i}\\), les morphismes considérés plus haut sont ceux qui définissent la filtration de la proposition 1.7 ; cette filtration est finie, donc en un nombre fini d'opérations, on arrive à partir de \\(M''_U\\) au complexe nul, c'est-à-dire que le complexe \\(P'_k\\) correspondant est acyclique.</p>"
+    },
+    {
+     "id": "VI.2.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.2.8\">2.8.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(L'\\) un complexe parfait sur \\(X\\). Il existe un entier \\(k\\) tel que \\(M'=\\mathbf R F_k(L')\\) soit un complexe \\(\\mathcal C_0\\)-parfait, et que \\(L'\\) soit isomorphe à \\(\\operatorname{Proj}_0(\\mathbf R F_k(L'))\\). Si on applique 2.7 au complexe \\(M'\\), la suite des triangles distingués construite donne en appliquant le foncteur \\(\\operatorname{Proj}_0\\) une suite de triangles distingués de \\(D_{\\mathrm{parf}}(\\mathcal A)\\) (il est clair que \\(\\operatorname{Proj}_0\\) transforme complexe \\(\\mathcal C_0\\)-parfait en complexe parfait). Par ailleurs, on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{Proj}_0(K'\\otimes_{\\mathcal O_S}B(d))=f^*(K')(d)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(notons que \\(f^*=\\mathbf Lf^*\\) d'après la platitude de \\(f\\)) pour \\(K'\\) dans \\(D^+(\\mathcal C')\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient donc dans \\(K'(X)\\) l'égalité :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{cl}(L')=\\sum_i\\operatorname{cl}(f^*(K'_i))\\,\\xi^{d_i}=\\sum_i f^*(\\operatorname{cl}(K'_i))\\,\\xi^{d_i},\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où les \\(K'_i\\) sont les complexes parfaits sur \\(S\\) définis dans 2.7. Il en résulte que \\(K'(X)\\) est engendré comme \\(K'(S)\\)-module par les puissances de \\(\\xi\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour voir que \\(1,\\xi,\\ldots,\\xi^{r+1}\\) sont linéairement dépendants, on considère l'homomorphisme : \\(K'_{\\mathrm{naïf}}(X)\\longrightarrow K'_{\\mathrm{parf}}(X)\\) qui à la classe d'un faisceau localement libre de type fini \\(L\\) associe la classe du complexe égal à \\(L\\) en degré 0, et nul pour les autres degrés. L'équation (1.9.1) donne alors une relation de dépendance dans \\(K'_{\\mathrm{parf}}(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour voir que \\(1,\\xi,\\ldots,\\xi^r\\) sont linéairement indépendants, on peut utiliser le morphisme \\(K'(S)\\)-linéaire \\(f_*:K'(X)\\longrightarrow K'(S)\\) (IV 2.11.1). On a :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{aligned}\nf_*(1)&amp;=1,\\quad\\text{car }f_*(\\mathcal O_X)=\\mathcal O_S\\text{ et }R^i(f_*(\\mathcal O_X))=0\\text{ pour }i\\geq1\\ ;\\\\\nf_*(\\xi^n)&amp;=0\\quad\\text{pour }-r\\leq n&lt;0,\\quad\\text{car }R^i(f_*(\\mathcal O_X(n)))=0\\text{ pour }i\\geq0.\n\\end{aligned}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si on a une relation du type :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[f^*(x_0)+f^*(x_1)\\xi+\\cdots+f^*(x_r)\\xi^r=0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on la multiplie par \\(\\xi^{-r}\\), et on applique \\(f_*\\) ; on trouve alors \\(x_r=0\\) ; on</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>achève par récurrence, en notant que si \\(0\\leq s\\leq r\\), et si \\(x_j=0\\) pour \\(s&lt;j\\leq r\\), on aura :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{i=0}^{s}f^*(x_i)\\xi^i=0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{i=0}^{s}f^*(x_i)\\xi^{i+r-s}=0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où \\(x_s=0\\) d'après ce qui précède.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VI-3",
+   "title": "3. Conséquences du théorème de structure pour le \\(K'\\) d'un fibré projectif",
+   "blocks": [
+    {
+     "id": "VI.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.3\">3. Conséquences du théorème de structure pour le \\(K'\\) d'un fibré projectif</h2>"
+    },
+    {
+     "id": "VI.3.1",
+     "type": "proposition",
+     "label": "3.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.1.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E_1,\\ldots,E_n\\) des \\(\\mathcal O_S\\)-Modules localement libres de type fini, \\(D(E_i)\\) le schéma des drapeaux de \\(E_i\\),</p>\n  <div class=\"display-formula\">\\[X=D(E_1)\\mathbin{\\times_S}\\cdots\\mathbin{\\times_S}D(E_n).\\]</div>\n  <p>Alors l'homomorphisme canonique :</p>\n  <div class=\"display-formula\">\\[K'(S)\\longrightarrow K'(X)\\]</div>\n  <p>est injectif (\\(K'\\) étant défini, soit à partir des \\(\\mathcal O_S\\)-Modules localement libres de type fini, soit à partir des complexes parfaits).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On vérifie immédiatement en utilisant la propriété universelle des schémas de drapeaux que \\(X\\) peut être construit comme suit : on considère la suite de \\(S\\)-schémas \\(X_1,\\ldots,X_n\\), définis par récurrence en prenant pour \\(X_k\\) le schéma de drapeaux de l'image inverse de \\(E_k\\) sur \\(X_{k-1}\\) ; alors \\(X=X_n\\). On voit alors tout de suite que pour démontrer la proposition, il suffit de la montrer dans le cas où \\(n=1\\), le cas général s'en déduisant par récurrence. On peut donc supposer que \\(X\\) est le schéma des drapeaux d'un \\(\\mathcal O_S\\)-Module localement libre de type fini \\(E\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On sait que \\(X\\) peut alors être construit comme suit : on pose \\(E=E_0\\), \\(S=X_0\\), et on définit par récurrence des schémas \\(X_1,\\ldots,X_n\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour tout \\(i\\) un \\(\\mathcal O_{X_i}\\)-Module localement libre de type fini \\(E_i\\) en posant :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[X_k=\\mathbf P(E_{k-1})\\ ;\\qquad E_k=\\operatorname{Ker}(f_k^*(E_{k-1})\\longrightarrow\\mathcal O_{X_k}(1)),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(f_k\\) est le morphisme structural \\(X_k\\longrightarrow X_{k-1}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit alors qu'il suffit de montrer la proposition dans le cas où \\(X\\) est un fibré projectif sur \\(S\\), le cas d'un fibré de drapeaux s'en déduisant par récurrence. Or ce cas résulte immédiatement de 1.1 (resp. 2.1).</p>"
+    },
+    {
+     "id": "VI.3.2",
+     "type": "theorem",
+     "label": "3.2.",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"VI.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.2.</span></div>\n  <div class=\"thm-body\"><p>Soit \\(S\\) un schéma quasi-compact. Le pré-\\(\\lambda\\)-anneau \\(K'(S)\\), défini à partir des \\(\\mathcal O_S\\)-Modules localement libres de type fini, est un \\(\\lambda\\)-anneau (V 2.4).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'homomorphisme \\(\\lambda_t:K'(S)\\longrightarrow 1+\\widehat{K'(S)[[t]]}\\) étant additif, il suffit, pour vérifier que c'est un \\(\\lambda\\)-homomorphisme, de faire la vérification pour des éléments du type \\(\\operatorname{cl}(E)\\), où \\(E\\) est un \\(\\mathcal O_S\\)-Module localement libre de type fini. On est donc ramené à montrer que pour tout couple d'éléments \\(E,F\\) de \\(K'(S)\\), classes de \\(\\mathcal O_S\\)-Modules localement libres de type fini \\(E,F\\), les relations V 2.4.2 sont vérifiées :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{aligned}\n\\lambda^i(EF)&amp;=P_i(\\lambda^1(E),\\ldots,\\lambda^i(E);\\lambda^1(F),\\ldots,\\lambda^i(F))\\ ;\\\\\n\\lambda^j(\\lambda^i(E))&amp;=Q_{i,j}(\\lambda^1(E),\\ldots,\\lambda^{ij}(E)).\n\\end{aligned}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(S\\) est un quasi-compact, on peut trouver un recouvrement fini de \\(S\\) par des ouverts disjoints tel que sur chacun \\(E\\) et \\(F\\) soient de rang constant. Or le \\(K'\\) d'une somme directe finie d'ouverts est le produit des \\(K'\\) de ces ouverts. Il suffit donc de vérifier les relations V 2.4.2 dans chacun des \\(K'\\) des ouverts du recouvrement. On peut donc supposer \\(E\\) et \\(F\\) de rang constant sur \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit alors \\(X=D(E)\\mathbin{\\times_S}D(F)\\). Le \\(\\lambda\\)-homomorphisme \\(K'(S)\\longrightarrow K'(X)\\) est injectif d'après 3.1. Par conséquent, on peut, pour montrer les relations V 2.4.2, se placer dans \\(K'(X)\\). Comme dans \\(K'(X)\\) les éléments \\(E\\) et \\(F\\) se décomposent en somme de classe de faisceaux inversibles, il suffit, par additivité, de montrer ces mêmes relations pour des éléments \\(\\xi,\\eta\\), classes de faisceaux inversibles ; elles peuvent encore s'écrire :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[1+\\xi\\eta t=(1+\\xi t)\\circ(1+\\eta t)\\ ;\\qquad \\lambda_u(1+\\xi t)=1+\\{1+\\xi t\\}u,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en les mettant sous la forme V 2.4.1. Elles ne sont alors autres que les relations V 2.3.1 et 2.3.3 qui définissent la structure de \\(\\lambda\\)-anneau de \\(1+\\widehat{K'(S)[[t]]}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indiquons le résultat plus général suivant :</p>"
+    },
+    {
+     "id": "VI.3.3",
+     "type": "theorem",
+     "label": "3.3.",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"VI.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.3.</span></div>\n  <div class=\"thm-body\"><p>Soit \\((T,A)\\) un topos commutativement annelé ; on désigne par \\(K\\) le groupe de Grothendieck des \\(A\\)-Modules localement libres de rang borné sur \\(T\\). Alors, \\(K\\), muni de sa pré-\\(\\lambda\\)-structure canonique (V 2.2 b)), est un \\(\\lambda\\)-anneau.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour montrer que \\(K\\) est un \\(\\lambda\\)-anneau, il faut montrer les relations V 2.4.1, et par additivité, il suffit de les montrer pour des éléments \\(E,F\\) qui sont classes de \\(A\\)-Modules localement libres de rang borné. Comme les rangs de \\(E\\) et \\(F\\) sont bornés, on peut décomposer \\(T\\) en « somme disjointe » finie d'ouverts sur lesquels \\(E\\) et \\(F\\) sont de rang constant. En utilisant la commutation du \\(K'\\) aux sommes directes finies, et en mettant les relations V 2.4.1 sous la forme V 2.4.2, on voit qu'il suffit de montrer les relations V 2.4.2, dans chacun des \\(K'\\) des ouverts considérés, c'est-à-dire qu'il suffit de montrer les relations V 2.4.2 pour des éléments \\(E,F\\), classes de \\(A\\)-Modules \\(E,F\\) localement libres de rang constant.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(E\\) un \\(A\\)-Module localement libre de rang fini \\(n\\). Il existe un torseur \\(P\\) sous \\(\\operatorname{Gl}(n,A)\\) tel que \\(E=P\\mathbin{\\times_{\\operatorname{Gl}(n,A)}}(A)^n\\), où \\((A)^n\\) est considéré comme \\(\\operatorname{Gl}(n,A)\\)-Module par la représentation standard. On peut alors définir un \\(\\lambda\\)-homomorphisme de \\(R_{\\mathbf Z}(\\operatorname{Gl}(n))\\) dans \\(K\\), en associant à toute représentation \\(\\rho\\) de \\(\\operatorname{Gl}(n)\\) dans un \\(\\mathbf Z\\)-module libre de rang \\(p\\) la classe du \\(A\\)-Module localement libre \\(P\\mathbin{\\times_{\\operatorname{Gl}(n,A)}}(A)^p\\), où \\((A)^p\\) est considéré comme \\(\\operatorname{Gl}(n,A)\\)-module par la représentation \\(\\rho\\). Dans cet homomorphisme, la classe de \\(E\\) est donc l'image de la représentation standard. Pour vérifier une relation polynomiale entre les \\(\\lambda^i(E)\\), il suffit donc que cette relation soit vérifiée par la représentation standard dans \\(R_{\\mathbf Z}(\\operatorname{Gl}(n))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut faire un raisonnement analogue avec deux \\(A\\)-Modules localement libres \\(E,F\\) de rangs \\(n,p\\) ; on peut alors trouver un torseur \\(P\\) sous \\(\\operatorname{Gl}(n,A)\\times\\operatorname{Gl}(p,A)\\) tel que \\(E=P\\mathbin{\\times_{\\operatorname{Gl}(n,A)\\times\\operatorname{Gl}(p,A)}}(A)^n\\), où \\((A)^n\\) est considéré comme \\(\\operatorname{Gl}(n,A)\\times\\operatorname{Gl}(p,A)\\)-Module en faisant opérer \\(\\operatorname{Gl}(n,A)\\) par la représentation standard et \\(\\operatorname{Gl}(p,A)\\) par la représentation triviale, et réciproquement pour \\(F\\). On définit ensuite un \\(\\lambda\\)-homomorphisme de \\(R_{\\mathbf Z}(\\operatorname{Gl}(n)\\times\\operatorname{Gl}(p))\\) dans \\(K\\) de la même façon que plus haut, et on se ramène ainsi à vérifier les relations entre les \\(\\lambda^i(E)\\), \\(\\lambda^j(F)\\) pour les éléments correspondants de \\(R_{\\mathbf Z}(\\operatorname{Gl}(n)\\times\\operatorname{Gl}(p))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On est donc ramené à montrer que pour tout schéma en groupes \\(G\\) sur \\(\\operatorname{Spec}\\mathbf Z\\), produit fini de schémas en groupes linéaires, le pré-\\(\\lambda\\)-anneau \\(R_{\\mathbf Z}(G)\\) est un \\(\\lambda\\)-anneau. Pour ce faire, on peut référer à [5], où \\(R_{\\mathbf Z}(G)\\) est calculé explicitement. Si l'on ne veut pas utiliser ce résultat, on peut raisonner de façon analogue à 3.2, en utilisant 1.14.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VI-4",
+   "title": "4. Calcul du \\(K'\\) d'un fibré de drapeaux",
+   "blocks": [
+    {
+     "id": "VI.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.4\">4. Calcul du \\(K'\\) d'un fibré de drapeaux</h2>"
+    },
+    {
+     "id": "VI.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.4.1\">4.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(S\\) un schéma, et \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\pi=(p_1,\\ldots,p_k)\\) une suite d'entiers \\(\\geq1\\), telle que :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{i=1}^{k}p_i=n.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons qu'on appelle foncteur des drapeaux de type \\(\\pi\\) de \\(E\\) le foncteur sur la catégorie des \\(S\\)-schémas, à valeurs dans la catégorie des ensembles, qui à un \\(S\\)-schéma \\(X\\xrightarrow{f}S\\) associe l'ensemble des suites de quotients de \\(f^*(E)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(L_{k-1},\\ldots,L_1),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où, pour tout \\(i\\), \\(L_i\\) est un quotient de \\(L_{i+1}\\), localement libre de rang \\(p_1+\\cdots+p_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un tel foncteur est représentable par un \\(S\\)-schéma \\(D_\\pi(E)\\), qui est muni d'une suite de quotients canonique de l'image inverse de \\(E\\), localement libres de rang \\(p_1,p_1+p_2,\\ldots\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\pi=(1,n-1)\\), alors \\(D_\\pi(E)=\\mathbf P(E)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\pi=(r,n-r)\\), alors \\(D_\\pi(E)=G_{r,n}(E)\\), grassmannienne de type \\((r,n-r)\\) de \\(E\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si tous les \\(p_i\\) sont égaux à 1, on trouve le fibré en drapeau usuel de \\(E\\), noté \\(D(E)\\).</p>"
+    },
+    {
+     "id": "VI.4.2",
+     "type": "lemma",
+     "label": "4.2.",
+     "title": "Lemme",
+     "html": "<div class=\"thm lemma\" id=\"VI.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.2.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(n\\), \\(\\pi=(p_1,\\ldots,p_i,\\ldots,p_k)\\), avec \\(p_1+\\cdots+p_k=n\\) ; soient \\(p'\\), \\(p''\\) deux entiers \\(\\geq1\\), tels que \\(p'+p''=p_i\\) ; posons \\(\\pi'=(p_1,\\ldots,p_{i-1},p',p'',p_{i+1},\\ldots,p_k)\\), \\(\\pi''=(p',p'')\\). Soient \\(L_1,\\ldots,L_{k-1}\\) les quotients canoniques de l'image inverse de \\(E\\) sur \\(D_\\pi(E)\\), et soit \\(F\\) le noyau de \\(L_i\\longrightarrow L_{i-1}\\). Alors on a un \\(S\\)-isomorphisme canonique :</p>\n\n<!-- Source PDF page 31 (printed page 395) -->\n<div class=\"display-formula\">\\[D_{\\pi'}(E)\\simeq D_{\\pi''}(F).\\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration, immédiate sur la définition fonctorielle des schémas de drapeaux, est laissée au lecteur.</p>"
+    },
+    {
+     "id": "VI.4.3",
+     "type": "lemma",
+     "label": "4.3.",
+     "title": "Lemme",
+     "html": "<div class=\"thm lemma\" id=\"VI.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.3.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(A\\) un anneau commutatif avec unité, \\(n\\) un entier \\(&gt;0\\), \\((c_i)_{1\\leq i\\leq n}\\) une famille d'éléments de \\(A\\) ; soit \\(C\\) la \\(A\\)-algèbre engendrée par des générateurs \\(\\xi_i\\), \\(i=1,\\ldots,n\\), soumis aux relations :</p>\n  <div class=\"display-formula\">\\[\\sigma_i(\\xi_1,\\ldots,\\xi_n)=c_i,\\qquad i=1,\\ldots,n,\\]</div>\n  <p>où les \\(\\sigma_i\\) désignent les fonctions symétriques élémentaires. Soient \\(p_1,\\ldots,p_k\\) des entiers \\(\\geq1\\), de somme \\(n\\), et pour \\(1\\leq j\\leq k\\),</p>\n  <div class=\"display-formula\">\\[\\xi^{(j)}=(\\xi_1^{(j)},\\ldots,\\xi_{p_j}^{(j)}),\\]</div>\n  <p>avec</p>\n  <div class=\"display-formula\">\\[\\xi_i^{(j)}=\\xi_{\\sum_{\\alpha&lt;j}p_\\alpha+i}.\\]</div>\n  <p>Posons :</p>\n  <div class=\"display-formula\">\\[c_i^{(j)}=\\sigma_i(\\xi_1^{(j)},\\ldots,\\xi_{p_j}^{(j)}),\\qquad 1\\leq j\\leq k,\\quad 1\\leq i\\leq p_j,\\]</div>\n  <p>et soit \\(B\\) la sous-algèbre de \\(C\\) engendrée par les \\(c_i^{(j)}\\). Alors :</p>\n  <p>i) les éléments de la forme :</p>\n  <div class=\"display-formula\">\\[(\\xi^{(1)})^{\\alpha(1)}\\cdots(\\xi^{(k)})^{\\alpha(k)},\\]</div>\n  <p>où \\(\\alpha(j)=(\\alpha_1^{(j)},\\ldots,\\alpha_{p_j}^{(j)})\\), et \\(0\\leq\\alpha_i^{(j)}\\leq p_j-i\\), forment une base de \\(C\\) considéré comme \\(B\\)-module.</p>\n  <p>ii) les générateurs \\(c_i^{(j)}\\) de la \\(A\\)-algèbre \\(B\\) satisfont aux \\(n\\) relations isobares déduites de la relation :</p>\n  <div class=\"display-formula\">\\[\\sum_{i=1}^{n}c_i=\\prod_{j=1}^{k}\\left(\\sum_{i=1}^{p_j}c_i^{(j)}\\right)\\]</div>\n\n<!-- Source PDF page 32 (printed page 396) -->\n  <p>(\\(c_i\\) et \\(c_i^{(j)}\\) étant effectués du poids \\(i\\)), et ces \\(n\\) relations engendrent l'idéal des relations entre les \\(c_i^{(j)}\\).</p></div>\n</div>"
+    },
+    {
+     "id": "VI.4.4",
+     "type": "corollary",
+     "label": "4.4.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.4.</span></div>\n  <div class=\"thm-body\"><p>Les éléments de \\(C\\) de la forme :</p>\n  <div class=\"display-formula\">\\[\\xi_1^{\\alpha_1}\\cdots\\xi_{n-1}^{\\alpha_{n-1}},\\qquad 0\\leq\\alpha_i\\leq n-i,\\]</div>\n  <p>forment une base de \\(C\\) considéré comme module sur \\(A\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la démonstration du lemme et du corollaire, nous renvoyons à [2], exposé 4, pages 4, 19, auquel ils sont empruntés.</p>"
+    },
+    {
+     "id": "VI.4.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.4.5\">4.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(n\\), \\(\\pi=(p_1,\\ldots,p_k)\\) une suite d'entiers \\(\\geq1\\), de somme \\(n\\). Posons \\(X=D_\\pi(E)\\) ; \\(X\\) est muni d'une suite de quotients canonique \\(L_i\\) ; on pose \\(L_0=0\\), \\(L_k=f^*(E)\\), \\(f\\) étant le morphisme structural \\(X\\longrightarrow S\\). Pour \\(1\\leq i\\leq k\\) on note \\(F_i\\) le noyau de \\(L_i\\longrightarrow L_{i-1}\\). Soit \\(K'(X)\\) le groupe de Grothendieck des faisceaux localement libres de type fini sur \\(X\\) (resp. des complexes parfaits). On note \\(F_j\\) la classe de \\(F_j\\), et \\(\\lambda_i^{(j)}\\) la classe de \\(\\Lambda^i(F_j)\\). Dans le cas où \\(K'(X)\\) est défini en termes de complexes parfaits, on donne encore un sens évident aux séries \\(\\lambda_t(E)\\), \\(\\lambda_t(F_j)\\), où \\(E\\) est la classe de \\(E\\). Enfin, on remarque que :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sum_{j=1}^{k}F_j=E.\\]</div>"
+    },
+    {
+     "id": "VI.4.6",
+     "type": "theorem",
+     "label": "4.6.",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"VI.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.6.</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses et les notations de 4.5, la \\(K'(S)\\)-algèbre \\(K'(X)\\) est engendrée par les \\(\\lambda_i^{(j)}\\) ; l'idéal des relations entre les \\(\\lambda_i^{(j)}\\) est engendré par les relations déduites de :</p>\n  <div class=\"display-formula\">\\[\\lambda_t(E)=\\prod_{j=1}^{k}\\lambda_t(F_j).\\]</div>\n\n<!-- Source PDF page 33 (printed page 397) -->\n  <p>En d'autres termes, \\(K'(X)\\) est la \\(K'(S)\\)-\\(\\lambda\\)-algèbre engendrée par les générateurs \\(F_1,\\ldots,F_k\\) soumis aux relations (cf. V 4.6) :</p>\n  <p>i) \\(\\lambda^p(F_i)=0\\) pour \\(p&gt;p_i\\) ;</p>\n  <p>ii) \\(\\sum_iF_i=E\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On commence par le cas où tous les \\(p_i\\) sont égaux à 1 ; le théorème s'énonce alors :</p>"
+    },
+    {
+     "id": "VI.4.7",
+     "type": "corollary",
+     "label": "4.7.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.7.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement de rang \\(n\\), \\(X\\) le fibré en drapeaux de \\(E\\), \\(\\xi_1,\\ldots,\\xi_n\\) les classes des faisceaux inversibles \\(F_1,\\ldots,F_n\\) (notation de 3.5). Alors \\(K'(X)\\) est la \\(K'(S)\\)-algèbre engendrée par les \\(\\xi_i\\), soumis aux relations :</p>\n  <div class=\"display-formula\">\\[\\sigma_i(\\xi_1,\\ldots,\\xi_n)=\\lambda^i(E).\\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On procède par récurrence sur \\(n\\). Pour \\(n=1\\), le théorème est trivial. Supposons qu'il soit montré pour \\(n-1\\) ; on considère alors \\(\\mathbf P(E)\\), et sur \\(\\mathbf P(E)\\) la suite exacte :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow F\\longrightarrow g^*(E)\\longrightarrow \\mathcal O_{\\mathbf P(E)}(1)\\longrightarrow0,\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(g\\) étant le morphisme structural de \\(\\mathbf P(E)\\). D'après le lemme 4.2, \\(X\\) s'identifie au fibré en drapeaux usuel \\(D(F)\\) sur \\(\\mathbf P(E)\\), les faisceaux canoniques se correspondant dans cette identification. Le diagramme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\xymatrix{D(E)=D(F)\\ar[r]^h\\ar[dr]_f&amp;\\mathbf P(E)\\ar[d]^g\\\\&amp;S,}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>montre que \\(K'(S)\\longrightarrow K'(X)\\) se factorise par \\(K'(\\mathbf P(E))\\). D'après l'hypothèse de récurrence appliquée à \\(D(F)\\), et le corollaire 3.4, \\(K'(X)\\) admet pour base sur \\(K'(\\mathbf P(E))\\) les éléments de la forme :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\xi_2^{\\alpha_2}\\cdots\\xi_{n-1}^{\\alpha_{n-1}},\\qquad\\text{avec }0\\leq\\alpha_i\\leq n-i\\ ;\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par ailleurs, \\(K'(\\mathbf P(E))\\) admet pour base sur \\(K'(S)\\) les éléments \\(1,\\xi_1,\\ldots,\\xi_1^{n-1}\\) ; donc \\(K'(X)\\) admet pour base sur \\(K'(S)\\) les éléments :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\xi_1^{\\alpha_1}\\cdots\\xi_{n-1}^{\\alpha_{n-1}},\\qquad\\text{avec }0\\leq\\alpha_i\\leq n-i.\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De plus l'additivité de \\(\\lambda_t\\) entraîne que \\(\\prod(1+\\xi_it)=\\lambda_t(E)\\), et les relations du corollaire sont vérifiées.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(C\\) est la \\(K'(S)\\)-algèbre engendrée par des générateurs \\(\\xi_i\\), soumis aux relations :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\sigma_i(\\xi_1,\\ldots,\\xi_n)=\\lambda^i(E),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>il existe donc un homomorphisme surjectif de \\(C\\) sur \\(K'(X)\\). D'après 4.4, cet homomorphisme transforme une base de \\(C\\) en une base de \\(K'(X)\\), c'est donc un isomorphisme, ce qui achève la démonstration du corollaire.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Traitons le cas général d'un fibré en drapeaux de type \\(\\pi\\). Le fibré en drapeaux usuel \\(D(E)\\) peut s'obtenir à partir de \\(D_\\pi(E)\\) en construisant successivement les fibrés en drapeaux des \\(F_j\\) (4.2). Il en résulte que \\(K'(D(E))\\), considéré comme module sur \\(K'(X)\\), admet une base formée des éléments considérés dans 4.3.i), les \\(\\xi_i^{(j)}\\) étant les classes des faisceaux analogues aux \\(F_j\\) intervenant dans le scindage des images inverses des \\(F_j\\) sur \\(D(E)\\) (notations de 3.5 et 3.7). Donc \\(K'(X)\\) est un sous-anneau de \\(K'(D(E))\\) ; de plus, l'additivité de \\(\\lambda_t\\) entraîne que :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\lambda_i^{(j)}=\\sigma_i(\\xi_1^{(j)},\\ldots,\\xi_{p_j}^{(j)}),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et \\(K'(X)\\) contient la sous-\\(K'(S)\\)-algèbre de \\(K'(D(E))\\) engendrée par les \\(\\lambda_i^{(j)}\\). Soit \\(B\\) cette sous-algèbre ; d'après 4.3.i), et ce qui vient d'être dit, on a dans \\(K'(D(E))\\) une famille d'éléments qui forme une base à la fois pour la structure de \\(B\\)-module et pour la structure de \\(K'(X)\\)-module ; par suite, \\(K'(X)=B\\), ce qui montre que \\(K'(X)\\) est engendré par les \\(\\lambda_i^{(j)}\\). L'idéal des relations entre les \\(\\lambda_i^{(j)}\\) est alors donné par 4.3.ii), compte\n\n<!-- Source PDF page 35 (printed page 399) -->\ntenu de la structure de \\(K'(D(E))\\) sur \\(K'(S)\\), déterminée par 4.7, et du fait que les \\(\\xi_i^{(j)}\\) sont les classes des faisceaux intervenant dans le scindage de l'image inverse de \\(E\\) sur \\(D(E)\\). Cela achève la démonstration de la première forme de 4.6.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour en déduire la deuxième forme, on remarque que les éléments \\(F_i\\) de la \\(K'(S)\\)-\\(\\lambda\\)-algèbre \\(K'(X)\\) vérifient les relations i) et ii). Si \\(A\\) est la \\(K'(S)\\)-\\(\\lambda\\)-algèbre engendrée par des éléments \\(F'_i\\) satisfaisant i) et ii), il existe donc un \\(K'(S)\\)-\\(\\lambda\\)-homomorphisme de \\(A\\) dans \\(K'(X)\\) envoyant \\(F'_i\\) sur \\(F_i\\) (V 4.7). D'après 4.6, c'est homomorphisme est surjectif. Comme le \\(\\lambda\\)-idéal engendré par les relations i) et ii) dans \\(K'(S)[F_1,\\ldots,F_k]\\) contient l'idéal usuel engendré par les relations de 4.6, cet homomorphisme est aussi injectif, donc est un isomorphisme.</p>"
+    },
+    {
+     "id": "VI.4.8",
+     "type": "corollary",
+     "label": "4.8.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.8.</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses et les notations de 4.5, posons :</p>\n  <div class=\"display-formula\">\\[c_i^{(j)}=\\gamma^i(F_j-p_j),\\qquad 1\\leq i\\leq p_j\\ ;\\]</div>\n  <p>alors la \\(K'(S)\\)-algèbre \\(K'(X)\\) est engendrée par les \\(c_i^{(j)}\\) ; l'idéal des relations entre les \\(c_i^{(j)}\\) est engendré par les relations déduites de :</p>\n  <div class=\"display-formula\">\\[\\gamma_t(E-n)=\\prod_{j=1}^{k}\\gamma_t(F_j-p_j).\\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce n'est qu'un autre énoncé de 4.6. On peut en effet exprimer les \\(c_i^{(j)}\\) en fonction des \\(\\lambda_i^{(j)}\\), et réciproquement. De plus, la relation : \\(\\lambda_t(E)=\\prod\\lambda_t(F_j)\\) équivaut à la relation : \\(\\gamma_t(E-n)=\\prod\\gamma_t(F_j-p_j)\\).</p>"
+    },
+    {
+     "id": "VI.4.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.4.9\">4.9.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(S\\) un schéma ; notons \\(G_S^{n,r}\\) la grassmannienne de type \\((n,r-n)\\) de \\((\\mathcal O_S)^r\\), avec \\(r\\geq n\\). Pour \\(r\\) variable, les \\(G_S^{n,r}\\) forment un système inductif, le morphisme \\(G_S^{n,r}\\longrightarrow G_S^{n,r+1}\\) étant défini en considérant \\((\\mathcal O_{G_S^{n,r}})^r\\) comme\n\n<!-- Source PDF page 36 (printed page 400) -->\nquotient de \\((\\mathcal O_{G_S^{n,r}})^{r+1}\\) par le \\((r+1)\\)-ième facteur. Dans ce système de morphismes, les quotients canoniques se correspondent donc par image inverse. Le système inductif ainsi défini sera noté \\(G_S^{n,\\infty}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit son \\(K'\\) par la formule :</p>"
+    },
+    {
+     "id": "VI.4.9.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\" id=\"VI.4.9.1\">\\[\nK'(G_S^{n,\\infty})=\\varprojlim_r\\bigl(K'(G_S^{n,r})\\bigr). \\tag{4.9.1}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(F_1\\), \\(F_2\\) les faisceaux canoniques sur \\(G_S^{n,r}\\) (4.5), et \\(F_1\\), \\(F_2\\) leur classe dans \\(K'(G_S^{n,r})\\). Posons \\(c_i=\\gamma^i(F_1-n)\\). Si on fait varier \\(r\\), les \\(c_i\\) se correspondent par les morphismes de transition, et définissent par conséquent des éléments, encore notés \\(c_i\\), de \\(K'(G_S^{n,\\infty})\\).</p>"
+    },
+    {
+     "id": "VI.4.10",
+     "type": "proposition",
+     "label": "4.10.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.10.</span></div>\n  <div class=\"thm-body\"><p>Soit \\(S\\) un schéma quasi-compact. Alors, avec les notations de 4.9, on a un isomorphisme :</p>\n  <div class=\"display-formula\">\\[\n  K'(G_S^{n,\\infty})\\simeq K'(S)[[c_1,\\ldots,c_n]].\n  \\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après 4.8, \\(K'(G_S^{n,r})\\) est la \\(K'(S)\\)-algèbre engendrée par les \\(c_i=\\gamma^i(F_1-n)\\), \\(1\\leq i\\leq n\\), et les \\(\\gamma^j(F_2-r+n)\\), \\(1\\leq j\\leq r-n\\), soumis aux relations déduites de :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\gamma_t(F_1-n)\\cdot\\gamma_t(F_2-r+n)=\\gamma_t(r-r)=1,\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit encore :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\gamma_t(F_2-r+n)=1/\\gamma_t(F_1-n).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette relation permet d'exprimer les \\(\\gamma^j(F_2-r+n)\\) en fonction des \\(c_i\\), et donne une série de relations isobares entre les \\(c_i\\) (\\(c_i\\) étant supposé de poids \\(i\\)) en écrivant que les coefficients de \\(1/\\gamma_t(F_1-n)\\) sont nuls en degré \\(&gt;r-n\\) ; de plus, ces relations engendrent l'idéal des relations entre les \\(c_i\\). On peut donc écrire :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nK'(G_S^{n,r})=K'(S)[c_1,\\ldots,c_n]/I_r,\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(I_r\\) est un idéal homogène de \\(K'(S)[c_1,\\ldots,c_n]\\), de degré \\(&gt;r-n\\). Il résulte alors de la définition (4.9.1) que \\(K'(G_S^{n,\\infty})\\) est le séparé complété de \\(K'(S)[c_1,\\ldots,c_n]\\) pour la topologie définie par les \\(I_r\\). Cette topologie est plus fine que la topologie définie par le poids ; nous allons montrer qu'elle lui est équivalente, ce qui entraînera la proposition.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons \\(A=K'(S)[c_1,\\ldots,c_n]/I_r\\), et soit \\(C\\) la \\(A\\)-algèbre engendrée par des générateurs \\(x_1,\\ldots,x_n\\) soumis aux relations :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\sigma_j(x_1,\\ldots,x_n)=c_j,\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où les \\(\\sigma_j\\) désignent les fonctions symétriques élémentaires. D'après 4.4, l'homomorphisme canonique \\(A\\longrightarrow C\\) est injectif. On obtient :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\gamma_t(F_1-n)=1+c_1t+\\cdots+c_nt^n=\\prod_{i=1}^n(1+x_it).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(1/\\gamma_t(F_1-n)\\) est un polynôme, il en est de même pour \\(1/(1+x_it)\\) pour tout \\(i\\). Par suite, les \\(x_i\\) sont nilpotents, et il existe un entier \\(N\\) tel que tout polynôme de degré \\(&gt;N\\) par rapport aux \\(x_i\\), à coefficients dans \\(K'(S)\\), soit nul. Par conséquent, tout polynôme de \\(A\\), de poids \\(&gt;N\\), est nul, i.e. tout polynôme de \\(K'(S)[c_1,\\ldots,c_n]\\) de poids \\(&gt;N\\) appartient à \\(I_r\\). Il s'ensuit que les deux topologies considérées sont équivalentes, ce qui achève la démonstration.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VI-5",
+   "title": "5. Applications aux fibrés projectifs ; étude de \\(f_*\\)",
+   "blocks": [
+    {
+     "id": "VI.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.5\">5. Applications aux fibrés projectifs ; étude de \\(f_*\\)</h2>"
+    },
+    {
+     "id": "VI.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.5.1\">5.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce paragraphe, \\(S\\) est un schéma quasi-compact, \\(E\\) un \\(\\mathcal O_S\\)-Module localement libre de rang \\(r+1\\), \\(X\\) le fibré projectif associé à \\(E\\). Sur \\(X\\), on a la suite exacte canonique :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n0\\longrightarrow F\\longrightarrow f^*(E)\\longrightarrow\\mathcal O_X(1)\\longrightarrow0,\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(f\\) étant le morphisme structural \\(X\\longrightarrow S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les \\(K'\\) considérés seront ceux qui sont définis à l'aide des faisceaux localement libres de type fini. On notera \\(E\\), \\(F\\), \\(\\xi\\), les classes de \\(E\\), \\(F\\), \\(\\mathcal O_X(1)\\). On pose \\(x=1-\\xi^{-1}\\), \\(x'=\\xi-1=\\xi x\\), et on note \\(\\bar x\\), \\(\\bar x'\\) les classes de \\(x\\), \\(x'\\) dans \\(\\operatorname{Gr}^1K'(X)\\). Comme \\(\\xi-1\\) et \\(x\\) sont dans \\(\\operatorname{Fil}^1K'(X)\\), on a \\((\\xi-1)x\\in\\operatorname{Fil}^2K'(X)\\), i.e. \\(x=\\xi x=x'\\bmod\\operatorname{Fil}^2K'(X)\\), i.e. \\(\\bar x'=-\\bar x\\).</p>"
+    },
+    {
+     "id": "VI.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VI.5.2\">5.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(G\\) est un \\(\\mathcal O_X\\)-Module localement libre de type fini, les \\(R^if_*(G)\\) ne sont pas en général localement libres de type fini sur \\(S\\), si bien qu'on ne peut définir un homomorphisme \\(f_*:K'(X)\\longrightarrow K'(S)\\) comme on le fait pour les \\(K'\\) définis à l'aide des complexes parfaits. Le théorème 1.1 permet de tourner cette difficulté de la façon suivante : si \\(y\\in K'(X)\\), on peut, d'une seule manière, écrire :</p>"
+    },
+    {
+     "id": "VI.5.2.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\" id=\"VI.5.2.1\">\\[\ny=a_0+a_1\\xi^{-1}+\\cdots+a_r\\xi^{-r},\\qquad \\text{avec }a_i\\in K'(S) ; \\tag{5.2.1}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on pose alors :</p>"
+    },
+    {
+     "id": "VI.5.2.2",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\" id=\"VI.5.2.2\">\\[\nf_*(y)=a_0. \\tag{5.2.2}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que l'homomorphisme ainsi défini est additif, et vérifie la formule de projection, i.e. est \\(K'(S)\\)-linéaire.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On vérifie les relations suivantes :</p>"
+    },
+    {
+     "id": "VI.5.2.3",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\" id=\"VI.5.2.3\">\\[\nf_*(1)=1\\ ;\\quad f_*(\\xi^n)=0\\ \\text{ pour }-r\\leq n&lt;0\\ ;\\quad f_*(\\xi^n)=\\sigma_n,\\ 1\\leq n. \\tag{5.2.3}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour vérifier le dernier groupe de relations, on procède par récurrence sur \\(n\\). Supposons que pour \\(p\\leq n-1\\), \\(f_*(\\xi^p)=\\sigma_p\\) ; la relation (1.9.1), multipliée par une puissance convenable de \\(\\xi\\), donne :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\sum_{i=0}^{r+1}(-1)^i\\lambda^i(E)\\xi^{n-i}=0.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut lui appliquer \\(f_*\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\sum_{i=0}^{r+1}(-1)^i\\lambda^i(E)f_*(\\xi^{n-i})=0.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le résultat en découle aussitôt d'après la relation (1.11.3), et l'hypothèse de récurrence.</p>"
+    },
+    {
+     "id": "VI.5.3",
+     "type": "proposition",
+     "label": "5.3.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.3.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 4.1, on a pour tout \\(k\\geq0\\) une décomposition en somme directe de \\(K'(S)\\)-modules :</p>\n  <div class=\"display-formula\">\\[\n  \\operatorname{Fil}^kK'(X)=\\operatorname{Fil}^kK'(S)+\\operatorname{Fil}^{k-1}K'(S)\\,x+\\cdots+\\operatorname{Fil}^{k-r}K'(S)\\,x^r,\n  \\]</div>\n  <p>la filtration considérée étant la filtration de \\(\\lambda\\)-algèbre augmentée définie en V 3.9.1 et 3.10.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On remarque d'abord que \\(x\\) est d'augmentation nulle. Par ailleurs, on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\gamma_t(x)=\\lambda_{t/(1-t)}(1-\\xi^{-1})=\\frac{1+\\frac{t}{1-t}}{1+\\xi^{-1}\\frac{t}{1-t}}=\\frac1{1-tx}.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc \\(\\gamma^i(x)=x^i\\) pour tout \\(i\\). Par suite, \\(K'(X)\\) est un quotient de la \\(K'(S)\\)-\\(\\lambda\\)-algèbre engendrée par un générateur \\(X\\) soumis aux relations \\(\\gamma^i(X)=X^i\\) pour tout \\(i\\), et l'idéal par lequel on fait le quotient est engendré par la relation (1.13.1). On peut donc appliquer V 4.12 et V 4.13.ii), et on est ramené à montrer que pour tout \\(n\\geq0\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nx^n\\in\\operatorname{Fil}^nK'(S)+\\operatorname{Fil}^{n-1}K'(S)\\,x+\\cdots+\\operatorname{Fil}^{n-r}K'(S)\\,x^r.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C'est évident pour \\(n\\leq r\\) ; on poursuit par récurrence. La relation (1.13.1) donne :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nx^n=-\\sum_{i=0}^r\\gamma^{r+1-i}(\\check E-r-1)\\,x^{n-r-1+i},\\qquad\\text{avec }n\\geq r+1 ;\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>appliquant l'hypothèse de récurrence aux \\(x^{n-r-1+i}\\), on en déduit le résultat cherché, la somme étant directe puisque \\(1,\\ldots,x^r\\) sont indépendants sur \\(K'(S)\\).</p>"
+    },
+    {
+     "id": "VI.5.4",
+     "type": "corollary",
+     "label": "5.4.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.4.</span></div>\n  <div class=\"thm-body\"><p>La filtration induite par \\(K'(X)\\) sur \\(K'(S)\\) est identique à la filtration de \\(K'(S)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "VI.5.5",
+     "type": "corollary",
+     "label": "5.5.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.5.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(S\\) un schéma quasi-compact, \\(E_1,\\ldots,E_n\\) des \\(\\mathcal O_S\\)-Modules localement libres de type fini, \\(D(E_i)\\) le schéma de drapeaux de \\(E_i\\), \\(X=D(E_1)\\times_S\\cdots\\times_SD(E_n)\\). Alors l'homomorphisme canonique :</p>\n  <div class=\"display-formula\">\\[\n  \\operatorname{Gr}K'(S)\\longrightarrow\\operatorname{Gr}K'(X)\n  \\]</div>\n  <p>est injectif.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le raisonnement de 3.1 permet de se ramener à montrer la même propriété quand \\(X\\) est un fibré projectif sur \\(S\\). Ce cas résulte alors immédiatement de 5.4.</p>"
+    },
+    {
+     "id": "VI.5.6",
+     "type": "corollary",
+     "label": "5.6.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.6.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 5.1, \\(\\operatorname{Gr}K'(X)\\) est un \\(\\operatorname{Gr}K'(S)\\)-module libre, admettant pour base \\(1,\\bar x,\\ldots,\\bar x^r\\). Pour tout \\(k\\), on a :</p>\n  <div class=\"display-formula\">\\[\n  \\operatorname{Gr}^kK'(X)=\\operatorname{Gr}^kK'(S)\\oplus\\operatorname{Gr}^{k-1}K'(S)\\,\\bar x\\oplus\\cdots\\oplus\\operatorname{Gr}^{k-r}K'(S)\\,\\bar x^r.\n  \\]</div>\n  <p>Enfin, les éléments \\(1,\\bar x,\\ldots,\\bar x^{r+1}\\) sont liés par la relation :</p>\n  <div class=\"display-formula\">\\[\n  \\sum_{i=0}^{r+1}c^{r+1-i}(\\check E)\\bar x^i=0,\n  \\]</div>\n  <p>où \\(c^k(\\check E)\\) est la \\(k\\)-ième classe de Chern de \\(\\check E\\) (V 6.7).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conséquence immédiate de 1.1, 5.3, et (1.13.1).</p>"
+    },
+    {
+     "id": "VI.5.7",
+     "type": "corollary",
+     "label": "5.7.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.5.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.7.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 4.5, la \\(\\operatorname{Gr}K'(S)\\)-algèbre \\(\\operatorname{Gr}K'(X)\\) est engendrée par les \\(\\bar c_i^{(j)}\\), où \\(\\bar c_i^{(j)}\\) est la classe dans \\(\\operatorname{Gr}^iK'(X)\\) de \\(\\gamma^i(F_j-p_j)\\). L'idéal des relations entre les \\(\\bar c_i^{(j)}\\) est engendré par les relations déduites de :</p>\n  <div class=\"display-formula\">\\[\n  c(E-n)=\\prod_{j=1}^k c(F_j-p_j),\n  \\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(c\\) est la classe de Chern totale (V 6.7).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce résultat se montre en recopiant la démonstration de 4.6, et en utilisant 5.6 (comparer [2], Exp 4).</p>"
+    },
+    {
+     "id": "VI.5.8",
+     "type": "corollary",
+     "label": "5.8.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.8.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 5.1, on a pour tout \\(k\\) :</p>\n  <div class=\"display-formula\">\\[\n  f_*(\\operatorname{Fil}^kK'(X))\\subset\\operatorname{Fil}^{k-r}K'(S).\n  \\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conséquence immédiate de 5.3 et de la formule de projection.</p>"
+    },
+    {
+     "id": "VI.5.9",
+     "type": "proposition",
+     "label": "5.9.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.5.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.9.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 5.1, on a pour tout \\(i\\geq1\\) :</p>\n  <div class=\"display-formula\">\\[\n  f_*(\\lambda^i(F))=0\\qquad\\text{(d'où \\(f_*(\\gamma^i(F))=0\\)).}\n  \\]</div>\n  <p>En particulier, si on pose \\(\\lambda_{-1}(F)=\\sum_{i=0}^r(-1)^i\\lambda^i(F)\\), on obtient :</p>\n  <div class=\"display-formula\">\\[\n  f_*(\\lambda_{-1}(F))=1.\n  \\]</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit une application</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\bar f_*:1+K'(X)[[t]]^+\\longrightarrow1+K'(S)[[t]]^+\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en posant :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\bar f_*\\left(\\sum_{i\\geq0}a_it^i\\right)=\\sum_{i\\geq0}f_*(a_i)t^i.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce n'est pas en général un homomorphisme de groupes ; néanmoins, la relation suivante est vérifiée pour \\(\\varphi\\in1+K'(X)[[t]]^+\\), \\(\\psi\\in1+K'(S)[[t]]^+\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\bar f_*\\bigl(\\varphi\\,\\widehat G(f^*)(\\psi)\\bigr)=\\psi\\,\\bar f_*(\\varphi).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, elle se vérifie coefficient par coefficient, et résulte immédiatement de la formule de projection.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De la relation \\(E=F+\\xi\\), on déduit donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\bar f_*(\\lambda_t(F))=\\bar f_*(\\lambda_t(E)\\lambda_t(-\\xi))\n=\\lambda_t(E)\\bar f_*(\\lambda_t(-\\xi)).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(\\bar f_*(\\lambda_t(-\\xi))=\\sum_{i\\geq0}(-1)^if_*(\\xi^i)t^i=\\sigma_{-t}(E)\\) d'après (4.2.3). Utilisant la relation (1.12.1), on obtient finalement :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\bar f_*(\\lambda_t(F))=1\\ ;\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où les relations cherchées.</p>"
+    },
+    {
+     "id": "VI.5.10",
+     "type": "proposition",
+     "label": "5.10.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.5.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.10.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 5.1, soit \\(z\\in K'(X)\\). Pour que \\(z(1-\\xi)=0\\), il faut et il suffit qu'il existe \\(y\\in K'(S)\\), tel que :</p>\n  <p>i) \\(z=y\\lambda_{-1}(F)\\) ;</p>\n  <p>ii) \\(y\\lambda_{-1}(E)=0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De \\(E=F+\\xi\\), on déduit \\(\\lambda_{-1}(E)=\\lambda_{-1}(F)\\lambda_{-1}(\\xi)=\\lambda_{-1}(F)(1-\\xi)\\). La condition est donc suffisante.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(z\\) tel que \\(z(1-\\xi)=0\\), soit \\(zx'=0\\). D'après la remarque 1.13, on peut, de façon unique, trouver des \\(a_i\\in K'(S)\\) tels que :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nz=\\sum_{i=0}^r a_ix'^i.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par ailleurs, les \\(x'^i\\) vérifient une équation de dépendance :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\sum_{i=0}^r c_ix'^i+x'^{r+1}=0,\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(c_i=(-1)^{r+i+1}\\gamma^{r+1-i}(E-r-1)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(zx'=0\\), on obtient :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\na_rx'^{r+1}=-\\sum_{i=1}^r a_{i-1}x'^i=-\\sum_{i=0}^r a_rc_ix'^i.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisant l'indépendance de \\(1,\\ldots,x'^r\\), on trouve :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\na_rc_0=0\\ ;\\quad\\text{pour \\(0\\leq i&lt;r\\),}\\quad a_i=a_rc_{i+1}.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nz=a_r\\left(\\sum_{i=0}^{r-1}c_{i+1}x'^i+x'^r\\right).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{aligned}\n\\sum_{i=0}^{r-1}c_{i+1}x'^i+x'^r\n&amp;=(-1)^r\\left(\\sum_{i=0}^{r-1}\\gamma^{r-i}(E-r-1)(-1)^ix'^i+(-1)^rx'^r\\right)\\\\\n&amp;=(-1)^r\\left(\\sum_{i=0}^r\\gamma^{r-i}(E-r-1)\\gamma^i(-x')\\right)\\\\\n&amp;=(-1)^r\\gamma^r(E-r-1-x')=(-1)^r\\gamma^r(F-r)\\\\\n&amp;=(-1)^r\\lambda^r(F-1)=\\lambda_{-1}(F).\n\\end{aligned}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si on pose \\(a_r=y\\), on obtient donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nz=y\\lambda_{-1}(F).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par ailleurs, \\(y c_0=0\\) ; or \\(c_0=(-1)^{r+1}\\gamma^{r+1}(E-r-1)=\\lambda_{-1}(E)\\) ; donc \\(y\\lambda_{-1}(E)=0\\).</p>"
+    },
+    {
+     "id": "VI.5.11",
+     "type": "proposition",
+     "label": "5.11.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.5.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.11.</span></div>\n  <div class=\"thm-body\"><p>Avec les notations et les hypothèses de 5.1, soit \\(z\\in\\operatorname{Gr}K'(X)\\). Pour que \\(z\\bar x'=0\\), il faut et il suffit qu'il existe \\(y\\in\\operatorname{Gr}K'(S)\\) tel que :</p>\n  <p>i) \\(z=y\\,c^r(F)\\) ;</p>\n  <p>ii) \\(y\\,c^{r+1}(E)=0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est identique à celle de 5.10, en se plaçant dans les gradués, et en utilisant 5.6.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VI-6",
+   "title": "6. Étude de la filtration de \\(K'(X)\\), \\(X\\) ayant un faisceau ample",
+   "blocks": [
+    {
+     "id": "VI.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.6\">6. Étude de la filtration de \\(K'(X)\\), \\(X\\) ayant un faisceau ample</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce paragraphe, \\(X\\) est un schéma ayant un faisceau ample \\(L\\). On rappelle que dans ce cas les \\(K'\\) définis en termes de faisceaux localement libres de type fini, ou de complexes parfaits, sont égaux (IV,2.9). On note</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\varepsilon\\) l'homomorphisme d'augmentation : \\(K'(X)\\longrightarrow H^0(X,\\mathbf Z)\\).</p>"
+    },
+    {
+     "id": "VI.6.1",
+     "type": "proposition",
+     "label": "6.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.1.</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) un schéma quasi-compact ayant un faisceau ample \\(L\\). Alors \\(\\operatorname{Fil}^1K'(X)\\) est un nilidéal.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(\\operatorname{Fil}^1K'(X)\\) est engendré par les éléments du type \\(E-\\varepsilon(E)\\), où \\(E\\) est la classe d'un \\(\\mathcal O_X\\)-Module localement libre de type fini \\(\\underline E\\), et \\(\\varepsilon:K'(X)\\longrightarrow H^0(X,\\mathbf Z)\\) l'augmentation de \\(K'(X)\\), il suffit de montrer qu'un tel élément est nilpotent. La quasi-compacité de \\(X\\), et la commutation du \\(K'\\) aux sommes directes finies permet de se ramener au cas où \\(\\underline E\\) est de rang constant. Enfin, en passant au fibré de drapeaux de \\(\\underline E\\), ce qui donne une injection sur les \\(K'\\) (3.1), et conserve l'hypothèse d'existence d'un faisceau ample, on peut supposer \\(\\underline E\\) inversible.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\underline E^*\\) le dual de \\(\\underline E\\). Pour \\(n\\) assez grand, \\(\\underline E^*(n)=\\underline E^*\\otimes_{\\mathcal O_X}\\underline L^{\\otimes n}\\) est engendré par ses sections globales ; on peut donc trouver un entier \\(m\\), et un homomorphisme surjectif : \\((\\mathcal O_X)^m\\longrightarrow\\underline E^*(n)\\), donc (tensorisant par \\(\\underline E(-n)\\)) un homomorphisme surjectif : \\((\\underline E(-n))^m\\longrightarrow\\mathcal O_X\\). Le noyau de cet homomorphisme est localement libre de rang \\(m-1\\). On obtient donc, en notant \\(L\\) la classe de \\(\\underline L\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\lambda^m(mEL^{-n}-1)=0.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(\\lambda^m(mEL^{-n}-1)=(-1)^m\\lambda_{-1}(mEL^{-n})=(-1)^m\\lambda_{-1}(EL^{-n})^m=(-1)^m(1-EL^{-n})^m\\). Par conséquent, pour tout faisceau inversible \\(\\underline E\\), l'élément \\(1-EL^{-n}\\) est nilpotent pour \\(n\\) assez grand, ou encore son produit \\(L^n-E\\) par \\(L^n\\) est nilpotent.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut alors écrire :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nE-1=(L^n-1)-(L^n-E)\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et d'après ce qui précède, \\(L^n-E\\) et \\(L^n-1\\) sont nilpotents si on choisit \\(n\\) assez grand. Donc \\(E-1\\) est nilpotent.</p>"
+    },
+    {
+     "id": "VI.6.2",
+     "type": "corollary",
+     "label": "6.2.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.2.</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses de 6.1, soit \\(R\\subset K'(X)\\) un sous-\\(\\lambda\\)-anneau engendré par les classes d'un nombre fini de faisceaux. Alors la filtration de \\(\\lambda\\)-anneau de \\(R\\) est discrète, et \\(R\\cap\\operatorname{Fil}^1K'(X)\\) est nilpotent. De plus, \\(R\\) est un module de type fini sur \\(R\\cap H^0(X,\\mathbf Z)\\) (V 3.9.1).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(X\\) est quasi-compact, on peut trouver un recouvrement fini de \\(X\\) par des ensembles ouverts disjoints, tel que sur chacun des ouverts de ce recouvrement les faisceaux dont les classes engendrent \\(R\\) soient tous de rang constant. L'argument standard permet alors de se ramener au cas où ces faisceaux sont de rang constant sur \\(X\\) ; \\(R\\) est alors augmenté vers \\(\\mathbf Z\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\underline E_i\\), \\(i=1,\\ldots,k\\), les faisceaux dont les classes engendrent \\(R\\), \\(E_i\\) leurs classes, \\(x_i=E_i-\\varepsilon(E_i)\\). On peut écrire \\(R\\) comme quotient du \\(\\lambda\\)-anneau engendré par les \\(x_i\\) soumis aux relations \\(\\gamma^j(x_i)=0\\) pour \\(j&gt;r_i=\\varepsilon(E_i)\\), c'est-à-dire</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\mathbf Z[x_i,\\gamma^j(x_i)]_{\\substack{1\\leq i\\leq k\\\\2\\leq j\\leq r_i}}\\ ;\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par suite, \\(R\\) est noethérien. Mais d'après la proposition 6.1, les \\(x_i\\), \\(\\gamma^j(x_i)\\) sont nilpotents. Donc l'idéal d'augmentation de \\(R\\) est nilpotent ; par ailleurs, il n'est autre que \\(R\\cap\\operatorname{Fil}^1K'(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Tout élément de \\(\\operatorname{Fil}^nR\\) s'écrit comme polynôme sans composantes de poids \\(&lt;n\\) par rapport aux \\(x_i,\\gamma^j(x_i)\\). Soit \\(m\\) le plus grand entier tel qu'il existe \\(i\\) tel que \\(\\gamma^{m-1}(x_i)\\neq0\\) ; soit \\(p\\) un entier tel que les puissances \\(p\\)-ièmes des \\(x_i,\\gamma^j(x_i)\\) soient toutes nulles. Pour \\(n&gt;kp(1+\\cdots+m)\\), on voit tout de suite que \\(\\operatorname{Fil}^nR=0\\) ; la filtration de \\(R\\) est donc discrète.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La filtration de \\(R\\) étant discrète, il n'y a qu'un nombre fini de monômes non nuls par rapport aux \\(x_i,\\gamma^j(x_i)\\). Ces monômes forment un système de générateurs de \\(R\\) comme \\(\\mathbf Z\\)-module, ce qui achève la démonstration.</p>"
+    },
+    {
+     "id": "VI.6.3",
+     "type": "corollary",
+     "label": "6.3.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.3.</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses de 6.1, soit \\(A\\) un anneau commutatif. Pour qu'un élément \\(y\\) de \\(K'(X)\\otimes_{\\mathbf Z}A=K'(X)_A\\) soit inversible, il faut et il suffit que \\(z=(\\varepsilon\\otimes\\operatorname{Id}_A)(y)\\) le soit. En particulier, si \\(E\\) est un faisceau localement libre de type fini sur \\(X\\), partout \\(\\neq0\\), alors sa classe dans \\(K'(X)_{\\mathbf Q}\\) est inversible.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'idéal d'augmentation de \\(K'(X)\\otimes_{\\mathbf Z}A\\) est \\(\\operatorname{Fil}^1K'(X)\\otimes_{\\mathbf Z}A\\), et est donc un nilidéal, d'après 6.1. Pour qu'un élément de \\(K'(X)\\otimes_{\\mathbf Z}A\\) soit inversible il est donc nécessaire et suffisant que son augmentation le soit.</p>"
+    },
+    {
+     "id": "VI.6.4",
+     "type": "corollary",
+     "label": "6.4.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"VI.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.4.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) un schéma quasi-compact, ayant un faisceau ample, et \\(f:X'\\longrightarrow X\\) un morphisme propre et parfait. On suppose de plus vérifiée l'une des deux conditions suivantes :</p>\n  <p style=\"margin-left:3em;\">i) \\(f\\) projectif,</p>\n  <p style=\"margin-left:3em;\">ii) \\(X\\) noethérien,</p>\n  <p>de façon que le « théorème de finitude » soit vrai (III 2.2). On se donne un anneau \\(A\\), et on considère l'homomorphisme « image directe » (IV 2.11) :</p>\n  <div class=\"display-formula\">\\[\n  f_*:K'(X')\\otimes_{\\mathbf Z}A\\longrightarrow K'(X)\\otimes_{\\mathbf Z}A.\n  \\]</div>\n  <p>On suppose enfin qu'il existe un élément \\(x'\\in K'(X')\\otimes_{\\mathbf Z}A\\) tel que \\(\\varepsilon(f_*(x'))\\in H^0(X,A)\\) soit inversible. Alors l'homomorphisme :</p>\n  <div class=\"display-formula\">\\[\n  f^*:K'(X)\\otimes_{\\mathbf Z}A\\longrightarrow K'(X')\\otimes_{\\mathbf Z}A\n  \\]</div>\n  <p>est injectif.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On écrit la formule de projection :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nf_*(f^*(x)x')=x f_*(x').\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(f_*(x')\\) est d'augmentation inversible, donc est inversible (6.3). Par suite, l'homomorphisme composé :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nx\\longmapsto f^*(x)\\longmapsto f^*(x)x'\\longmapsto f_*(f^*(x)x')\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est injectif, donc \\(f^*\\) l'est aussi.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>6.5.</strong> Soit \\(X\\) un schéma noethérien de dimension \\(d\\), ayant un faisceau ample \\(L\\). On munit \\(K'(X)\\) de la filtration définie comme suit (cf. [1]) : \\(x\\) appartient à \\(K'(X)_i\\) si et seulement si pour tout fermé \\(Y\\) de \\(X\\), il existe un complexe \\(M^\\bullet(Y)\\), parfait, tel que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:3em;\">i) \\(\\operatorname{cl}(M^\\bullet(Y))=x\\) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:3em;\">ii) \\(\\operatorname{Codim}(\\operatorname{Supp}(H^*(M^\\bullet(Y)))\\cap Y,Y)\\geq i\\), avec \\(H^*(M^\\bullet(Y))=\\displaystyle\\bigoplus_{l\\geq0}H^l(M^\\bullet(Y))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les \\(K'(X)_i\\) ainsi définis sont des sous-groupes additifs de \\(K'(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, soient \\(x,x'\\in K'(X)_i\\), et pour un fermé \\(Y\\) donné dans \\(X\\), \\(M^\\bullet\\) et \\(M'^\\bullet\\) les complexes correspondants ; alors \\(x+x'\\) est la classe du complexe \\(M^\\bullet\\oplus M'^\\bullet\\), et</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{aligned}\n\\operatorname{Supp}(H^*(M^\\bullet\\oplus M'^\\bullet))\n&amp;=\\operatorname{Supp}(H^*(M^\\bullet)\\oplus H^*(M'^\\bullet))\\\\\n&amp;=\\operatorname{Supp}(H^*(M^\\bullet))\\cup\\operatorname{Supp}(H^*(M'^\\bullet)) ;\n\\end{aligned}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>comme la codimension d'une réunion finie de fermés est la borne inférieure des codimensions des fermés, on a bien \\(x+x'\\in K'(X)_i\\).</p>"
+    },
+    {
+     "id": "VI.6.6",
+     "type": "proposition",
+     "label": "6.6.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"VI.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.6.</span></div>\n  <div class=\"thm-body\"><p>La filtration 5.5 de \\(K'(X)\\) est une filtration d'anneau et \\(K'(X)_{d+1}=0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(x\\in K'(X)_i\\), \\(x'\\in K'(X)_j\\), et \\(Y\\) un fermé de \\(X\\). Il existe un complexe \\(M^\\bullet\\) tel que \\(x=\\operatorname{cl}(M^\\bullet)\\), et \\(\\operatorname{codim}(\\operatorname{Supp}(H^*(M^\\bullet))\\cap Y,Y)\\geq i\\) ; il existe un complexe \\(M'^\\bullet\\) tel que \\(x'=\\operatorname{cl}(M'^\\bullet)\\), et :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\operatorname{codim}(\\operatorname{Supp}(H^*(M'^\\bullet))\\cap\\operatorname{Supp}(H^*(M^\\bullet))\\cap Y,\n\\operatorname{Supp}(H^*(M^\\bullet))\\cap Y)\\geq j.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a alors : \\(xx'=\\operatorname{cl}(M^\\bullet\\mathbin{\\mathop\\otimes^{\\mathbf L}}M'^\\bullet)\\), et :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\operatorname{codim}(\\operatorname{Supp}(H^*(M^\\bullet))\\cap\\operatorname{Supp}(H^*(M'^\\bullet))\\cap Y,Y)\\geq i+j\n\\qquad(\\mathrm{EGA}\\ 0_{\\mathrm{IV}}\\ 14.2.2.3).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit donc, pour achever la démonstration, de noter que :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\operatorname{Supp}(H^*(M^\\bullet\\mathbin{\\mathop\\otimes^{\\mathbf L}}M'^\\bullet))\n\\subset\\operatorname{Supp}(H^*(M^\\bullet))\\cap\\operatorname{Supp}(H^*(M'^\\bullet)).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour montrer que \\(K'(X)_{d+1}\\) est nul, on prend \\(x\\in K'(X)_{d+1}\\), et \\(Y=X\\) ; il existe alors \\(M^\\bullet\\) tel que \\(x=\\operatorname{cl}(M^\\bullet)\\), et \\(\\operatorname{codim}_X(\\operatorname{Supp}(H^*(M^\\bullet)))\\geq d+1\\) ; comme \\(X\\) est de dimension \\(d\\), cela entraîne \\(\\operatorname{Supp}(H^*(M^\\bullet))=\\varnothing\\), donc \\(M^\\bullet\\) est acyclique, et \\(x=0\\).</p>"
+    },
+    {
+     "id": "VI.6.7",
+     "type": "lemma",
+     "label": "6.7.",
+     "title": "Lemme",
+     "html": "<div class=\"thm lemma\" id=\"VI.6.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.7.</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X=\\operatorname{Spec}(A)\\) un schéma affine noethérien, \\(x_1,\\ldots,x_k\\) un nombre fini de points de \\(X\\), \\(E\\) un \\(\\mathcal O_X\\)-Module inversible. Alors, il existe une section \\(s\\in\\Gamma(X,E)\\) telle que pour tout \\(i\\), \\(s_{x_i}\\) soit une base de \\(E_{x_i}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons \\(M=\\Gamma(X,E)\\). Pour tout \\(i\\), soit \\(x'_i\\) un point fermé de \\(X\\) tel que \\(x'_i\\in\\overline{\\{x_i\\}}\\). Les \\(x'_i\\) correspondent à des idéaux maximaux \\(\\mathfrak m_i\\) de \\(A\\), qu'on peut supposer tous distincts, quitte à changer l'ensemble d'indices de façon que chacun des \\(\\mathfrak m_i\\) intervienne une fois et une seule dans la famille \\((\\mathfrak m_i)\\). Comme \\(E\\) est inversible, on a pour tout \\(i\\) un isomorphisme \\(M_{\\mathfrak m_i}\\simeq A_{\\mathfrak m_i}\\), d'où on déduit un isomorphisme \\(M/\\mathfrak m_iM\\simeq A/\\mathfrak m_i\\), puis \\(\\prod_i M/\\mathfrak m_iM\\simeq\\prod_i A/\\mathfrak m_i\\), soit encore \\(A/\\prod_i\\mathfrak m_i\\simeq M/(\\prod_i\\mathfrak m_i)M\\). En relevant ce dernier isomorphisme, on obtient un homomorphisme \\(A\\longrightarrow M\\) tel que l'homomorphisme \\(A_{\\mathfrak m_i}\\longrightarrow M_{\\mathfrak m_i}\\) correspondant soit pour tout \\(i\\) un isomorphisme modulo \\(\\mathfrak m_i\\), donc un isomorphisme d'après Nakayama. L'image de 1 par cet homomorphisme donne donc une section \\(s\\) de \\(E\\) qui est une base de \\(E_{x'_i}\\) pour tout \\(i\\). Comme l'ensemble des points où \\(s\\) est une base de \\(E\\) est un ouvert de \\(X\\), \\(s\\) est aussi une base de \\(E_{x_i}\\) pour \\(i=1,\\ldots,k\\).</p>"
+    },
+    {
+     "id": "VI.6.8",
+     "type": "lemma",
+     "label": "6.8.",
+     "title": "Lemme",
+     "html": "<div class=\"thm lemma\" id=\"VI.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.8.</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) un schéma noethérien ayant un faisceau ample \\(L\\), \\(E\\) un \\(\\mathcal O_X\\)-Module inversible, \\(x_1,\\ldots,x_k\\) des points de \\(X\\). Alors il existe un</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma continuation\">\n  <div class=\"thm-body\"><p>entier \\(n\\) tel que pour tout \\(k\\geq1\\), il existe une section \\(s\\in\\Gamma(X,E(kn))\\) qui soit une base de \\(E(kn)_{x_i}\\) pour tout \\(i\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut trouver un entier \\(n_0\\), et une section \\(f\\in\\Gamma(X,L^{\\otimes n_0})\\) telle que pour tout \\(i\\), \\(x_i\\in X_f\\), et que \\(X_f\\) soit un ouvert affine (EGA II 4.5.4). Sur \\(X_f\\), on peut trouver une section \\(t\\in\\Gamma(X_f,E)\\) satisfaisant les conditions du lemme 6.7 ; de plus, il existe un entier \\(n'_0\\) tel que la section \\(f^{\\otimes n'_0}\\otimes t\\in\\Gamma(X_f,E(n_0n'_0))\\) se prolonge à \\(X\\) tout entier. Posons \\(n=n_0n'_0\\) ; alors \\(f^{\\otimes n'_0}\\in\\Gamma(X,L^{\\otimes n})\\) ; en faisant le produit tensoriel de la section de \\(E(n)\\) obtenue plus haut et de \\(f^{\\otimes kn'_0}\\), on obtient donc une section de \\(E((k+1)n)\\) pour tout \\(k\\geq0\\). Comme pour tout \\(p\\), \\(X_{f^{\\otimes p}}=X_f\\), et que la section \\(t\\) est une base de \\(E_{x_i}\\) pour tout \\(i\\), les sections de \\(E(kn)\\) ainsi construites pour tout \\(k\\geq1\\) forment une base de \\(E(kn)_{x_i}\\) pour tout \\(i\\).</p>"
+    },
+    {
+     "id": "VI.6.9",
+     "type": "theorem",
+     "label": "6.9.",
+     "title": "Théorème",
+     "html": "<div class=\"thm theorem\" id=\"VI.6.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.9.</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) un schéma noethérien de dimension \\(d\\), ayant un faisceau ample \\(L\\). Alors \\(\\operatorname{Fil}^{d+1}K'(X)=0\\), et à fortiori \\((\\operatorname{Fil}^1K'(X))^{d+1}=0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(Cette dernière relation est due à J. P. Serre, dans le cas général envisagé ici).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons d'abord montrer que si \\(E,E'\\) sont deux faisceaux inversibles sur \\(X\\), de classes \\(E,E'\\), alors \\(E-E'\\in K'(X)_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(Y\\) un fermé de \\(X\\), \\(Y_1,\\ldots,Y_k\\) ses composantes irréductibles, et pour tout \\(i\\), soit \\(x_i\\) un point de \\(Y_i-\\bigcup_{j\\neq i}Y_j\\). D'après le lemme 6.8, il existe des entiers \\(n,n'\\), tels que, quels que soient les entiers \\(k,k'\\geq1\\), on puisse trouver des homomorphismes de \\(\\mathcal O_X\\) dans \\(E(kn)\\), \\(E'(k'n')\\) qui soient des isomorphismes aux points \\(x_i\\) ; on obtient donc des morphismes :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nL^{\\otimes-kn}\\xrightarrow{\\ s_k\\ }E,\\qquad\nL^{\\otimes-k'n'}\\xrightarrow{\\ s'_{k'}\\ }E',\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui sont des isomorphismes aux points \\(x_i\\). Considérons alors le complexe :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nN^\\bullet=\\quad\\cdots\\longrightarrow0\\longrightarrow\nL^{\\otimes-nn'}\\xrightarrow{(s'_{n},0)}\nE'\\oplus L^{\\otimes-nn'}\\xrightarrow{0+s_{n'}}E\\longrightarrow0\\longrightarrow\\cdots\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La classe de \\(N^\\bullet\\) est \\(E-E'\\) ; par ailleurs, \\(N^\\bullet\\) est acyclique aux points \\(x_i\\), donc \\(\\operatorname{Supp}(H^*(N^\\bullet))\\cap Y\\) ne contient aucune composante irréductible de \\(Y\\), et par conséquent est de codimension \\(\\geq1\\) dans \\(Y\\) ; ceci montre que \\(E-E'\\) est dans \\(K'(X)_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit maintenant \\(x\\) un élément de \\(\\operatorname{Fil}^{d+1}K'(X)\\) ; nous allons montrer que \\(x=0\\). On peut supposer que \\(x\\) s'écrit :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nx=\\gamma^{i_1}(E_1-F_1)\\cdots\\gamma^{i_k}(E_k-F_k),\n\\qquad\\text{avec }i_1+\\cdots+i_k\\geq d+1,\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>les \\(E_i,F_i\\) étant les classes de faisceaux localement libres de type fini, et, pour tout \\(i\\), \\(E_i\\) et \\(F_i\\) ayant même rang. De plus, quitte à décomposer \\(X\\) en somme d'un nombre fini d'ouverts, et à raisonner dans chaque ouvert, on peut supposer les \\(E_i,F_i\\) de rang constant. Soit alors \\(X'\\) le produit fibré sur \\(X\\) des schémas de drapeaux des \\(E_i,F_i\\). Dans \\(K'(X')\\), les images des \\(E_i,F_i\\) sont sommes de classes de faisceaux inversibles. Soient \\(\\xi,\\eta\\) les classes de deux \\(\\mathcal O_{X'}\\)-Modules inversibles ; on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\gamma_t(\\xi-\\eta)=\\gamma_t(\\xi-1)/\\gamma_t(\\eta-1)\n=\\frac{1+(\\xi-1)t}{1+(\\eta-1)t}.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc \\(\\gamma^i(\\xi-\\eta)=(-1)^{i-1}(\\xi-\\eta)(\\eta-1)^{i-1}\\). Or \\(X'\\) est noethérien et a un faisceau ample, donc, d'après ce qui précède et 6.6, \\(\\gamma^i(\\xi-\\eta)\\in K'(X')_i\\). Utilisant l'additivité de \\(\\gamma_t\\) et 6.6, on en déduit que \\(f^*(\\gamma^j(E_j-F_j))\\in K'(X')_j\\), et \\(f^*(x)\\in K'(X')_{d+1}\\), \\(f\\) étant le morphisme canonique \\(X'\\longrightarrow X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons en déduire que \\(f^*(x)=0\\). Soit \\(r\\) la dimension relative de \\(X'\\) sur \\(X\\). Il existe un élément \\(x'\\) de \\(K'(X')\\), appartenant à une base de \\(K'(X')\\) sur \\(K'(X)\\), tel que :</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nx'=\\prod_{i=0}^{r}(\\xi_i-1),\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>les \\(\\xi_i\\) étant les classes de faisceaux inversibles ; pour le montrer, on se ramène par le raisonnement de 3.1 au cas d'un fibré projectif sur \\(X\\). Or ce dernier cas est conséquence immédiate de 1.13. L'élément \\(x'\\) considéré est dans \\(K'(X')_r\\) d'après ce qui précède, et par conséquent \\(x'f^*(x)\\in K'(X')_{d+r+1}\\). Or \\(\\dim X'=d+r\\) ; donc d'après 6.6, \\(x'f^*(x)=0\\). Comme \\(x'\\) fait partie d'une base de \\(K'(X')\\) sur \\(K'(X)\\), ceci entraîne \\(f^*(x)=0\\). Comme \\(f^*\\) est injectif (3.1), on a finalement \\(x=0\\).</p>"
+    },
+    {
+     "id": "VI.6.10",
+     "type": "problem",
+     "label": "6.10.",
+     "title": "Problème",
+     "html": "<div class=\"thm thm-plain problem\" id=\"VI.6.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Problème</span> <span class=\"thm-num\">6.10.</span></div>\n  <div class=\"thm-body\"><p>Sous les hypothèses de 6.9, est-il vrai que pour tout \\(k\\) on ait : \\(\\operatorname{Fil}^k K'(X)\\subset K'(X)_k\\) ?</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VI-bibliographie",
+   "title": "BIBLIOGRAPHIE",
+   "blocks": [
+    {
+     "id": "VI.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VI.bibliographie\">BIBLIOGRAPHIE</h2>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"bibliography\">\n<p>[1] Bass H., <cite>K-Theory and stable algebra</cite>, Publ. Math. de l'IHES, n°22.</p>\n<p>[2] Chevalley C., <cite>Séminaire 1958 : Anneaux de Chow et applications</cite>.</p>\n<p>[3] Hakim M., <cite>Topos localement annelés et schémas relatifs</cite>, thèse (en préparation).</p>\n<p>[4] Hartshorne R., <cite>Residues and duality</cite>, Lectures notes in Mathematics n°20, Springer-Verlag.</p>\n<p>[5] Serre J.-P., <cite>Le groupe de Grothendieck des schémas en groupes réductifs</cite>, Publications Mathématiques de l'IHES, n°34.</p>\n</div>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par Pierre BERTHELOT"
+}

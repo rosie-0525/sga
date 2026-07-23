@@ -1,0 +1,1451 @@
+{
+ "chapter_id": "II",
+ "title": "FIBRÉS TANGENTS – ALGÈBRES DE LIE",
+ "number": "II",
+ "pages": [
+  {
+   "id": "II",
+   "title": "FIBRÉS TANGENTS – ALGÈBRES DE LIE",
+   "blocks": [
+    {
+     "id": "II",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"II\">EXPOSÉ II<br>FIBRÉS TANGENTS – ALGÈBRES DE LIE<span class=\"author\">par M. Demazure</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous nous proposons dans cet exposé de construire l'analogue en théorie des schémas des <em>fibrés tangents</em> et <em>algèbres de Lie</em> de la théorie classique. Il sera cependant utile de ne pas se restreindre aux schémas proprement dits, mais de s'intéresser aux foncteurs sur la catégorie des schémas qui ne sont pas nécessairement <em>représentables</em> (par exemple foncteurs \\(\\underline{\\mathrm{Hom}}\\), \\(\\underline{\\mathrm{Norm}}\\), etc…). Comme il a été annoncé dans l'exposé précédent <a class=\"ref\" href=\"#I.1.1\">I, 1.1</a>, nous identifierons un schéma avec le foncteur qui lui est associé.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'un autre côté, les constructions exposées ci-après dépassent le cadre de la théorie des schémas. Elles sont également valables, par exemple, en théorie des <em>espaces analytiques</em> avec éléments nilpotents, modulo quelques modifications de détail.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avant de commencer cette construction, il nous faut poser quelques définitions générales qui complètent celles de <a class=\"ref\" href=\"#I.1.7\">I, 1.7</a>.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-1",
+   "title": "1. Les foncteurs \\(\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)\\)",
+   "blocks": [
+    {
+     "id": "II.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.1\">1. Les foncteurs \\(\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)\\)</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Reprenons les notations de <a class=\"ref\" href=\"#I.1.1\">I, 1.1</a>. On identifie la catégorie \\(\\mathscr{C}\\) à une sous-catégorie pleine de \\(\\widehat{\\mathscr{C}} = \\mathrm{Hom}(\\mathscr{C}^{\\circ}, (\\mathrm{Ens}))\\) (en particulier on supprime les soulignements qui nous permettaient de distinguer graphiquement un objet de \\(\\widehat{\\mathscr{C}}\\) d'un objet de \\(\\mathscr{C}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons la situation suivante : quatre objets de \\(\\widehat{\\mathscr{C}}\\), notés S, X, Y, Z, le premier étant en fait un objet de \\(\\mathscr{C}\\), X et Y au-dessus de Z, Z au-dessus de S :\n\\[\n\\xymatrix{\nX \\ar[dr]_-{p_X} &amp; &amp; Y \\ar[dl]^-{p_Y} \\\\\n&amp; Z \\ar[d] &amp; \\\\\n&amp; S &amp;\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Définissons alors un objet de \\(\\mathscr{C}_{/S}\\), noté \\(\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)\\) par\n\\[\n\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)(S') = \\mathrm{Hom}_{Z_{S'}}(X_{S'}, Y_{S'}).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit aussitôt que \\(\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)\\) n'est autre que le sous-objet de \\(\\underline{\\mathrm{Hom}}_S(X,Y)\\) formé des morphismes compatibles avec \\(p_X\\) et \\(p_Y\\), c'est-à-dire le noyau du couple de morphismes\n\\[\n\\underline{\\mathrm{Hom}}_S(X,Y) \\rightrightarrows \\underline{\\mathrm{Hom}}_S(X,Z)\n\\]\ndéfinis, le premier par la composition avec \\(p_Y\\), le second comme étant le morphisme constant dont « l'image » est \\(p_X\\). Il résulte de la définition que l'on a des isomorphismes\n\\[\n\\mathrm{Hom}_S(S', \\underline{\\mathrm{Hom}}_{Z/S}(X,Y)) \\simeq \\mathrm{Hom}_Z(X\\times_S S', Y) \\simeq \\mathrm{Hom}_Z(Z\\times_S S', \\underline{\\mathrm{Hom}}_Z(X,Y)) \\simeq \\mathrm{Hom}_Z(X, \\underline{\\mathrm{Hom}}_Z(Z\\times_S S', Y)).\n\\]\nNotons en passant que les deux derniers isomorphismes se prolongent au cas où \\(S'\\) n'est plus dans \\(\\mathscr{C}\\) par le procédé indiqué en <a class=\"ref\" href=\"#I.1.7.1\">I, 1.7.1</a>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Signalons deux cas particuliers de la définition. Si \\(Z=S\\), on a\n\\[\n\\underline{\\mathrm{Hom}}_{S/S}(X,Y) = \\underline{\\mathrm{Hom}}_S(X,Y).\n\\]\nD'autre part, on pose\n\\[\n\\prod_{Z/S} Y = \\underline{\\mathrm{Hom}}_{Z/S}(Z,Y),\n\\]\non a donc par définition\n\\[\n\\Bigl(\\prod_{Z/S} Y\\Bigr)(S') \\simeq \\Gamma(Y_{S'}/Z_{S'}).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons également que l'on a un isomorphisme\n\\[\n\\underline{\\mathrm{Hom}}_{Z/S}(X,Y) \\simeq \\underline{\\mathrm{Hom}}_{X/S}(X, Y\\underset{Z}{\\times} X) = \\prod_{X/S} Y\\underset{Z}{\\times} X,\n\\]\nqui donne en particulier pour \\(Z=S\\) un isomorphisme\n\\[\n\\underline{\\mathrm{Hom}}_S(X,Y) \\simeq \\prod_{X/S} Y_X.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Une dernière remarque : le foncteur \\(Y \\rightsquigarrow \\underline{\\mathrm{Hom}}_{Z/S}(X,Y)\\) commute au produit au sens suivant : on a un isomorphisme fonctoriel\n\\[\n\\underline{\\mathrm{Hom}}_{Z/S}(X, Y\\underset{Z}{\\times} Y') \\simeq \\underline{\\mathrm{Hom}}_{Z/S}(X,Y) \\underset{S}{\\times} \\underline{\\mathrm{Hom}}_{Z/S}(X,Y').\n\\]\nIl en résulte que si Y est un Z-groupe, resp. un Z-anneau, …, alors \\(\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)\\) est un S-groupe, resp. un S-anneau, ….</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-2",
+   "title": "2. Les schémas \\(\\mathrm{I}_S(M)\\)",
+   "blocks": [
+    {
+     "id": "II.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.2\">2. Les schémas \\(\\mathrm{I}_S(M)\\)</h2>"
+    },
+    {
+     "id": "II.2.1",
+     "type": "definition",
+     "label": "2.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma et M un \\(\\mathscr{O}_S\\)-module quasi-cohérent. On note \\(\\mathrm{D}_{\\mathscr{O}_S}(M)\\) la \\(\\mathscr{O}_S\\)-algèbre quasi-cohérente \\(\\mathscr{O}_S \\oplus M\\) (où M est considéré comme un idéal de carré nul). On note \\(\\mathrm{I}_S(M)\\) le S-schéma \\(\\mathrm{Spec}\\, \\mathrm{D}_{\\mathscr{O}_S}(M)\\). En particulier on note \\(\\mathrm{D}_{\\mathscr{O}_S} = \\mathrm{D}_{\\mathscr{O}_S}(\\mathscr{O}_S)\\), \\(\\mathrm{I}_S = \\mathrm{I}_S(\\mathscr{O}_S)\\) et on les nomme respectivement <em>algèbre des nombres duaux</em> sur S et <em>schéma des nombres duaux</em> sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Alors \\(M \\mapsto \\mathrm{I}_S(M)\\) est un foncteur contravariant de la catégorie des \\(\\mathscr{O}_S\\)-modules quasi-cohérents dans celle des S-schémas. En particulier les morphismes \\(0 \\to M\\) et \\(M \\to 0\\) définissent respectivement le morphisme structural \\(\\rho : \\mathrm{I}_S(M) \\to \\mathrm{I}_S(0) = S\\) et une section \\(\\varepsilon_M\\) de celui-ci que l'on appelle <em>section zéro</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part \\(\\mathbf{O}(S) = \\Gamma(S, \\mathscr{O}_S)\\) est un ensemble d'opérateurs du module M, donc du S-schéma \\(\\mathrm{I}_S(M)\\) et les opérations de \\(\\mathbf{O}(S)\\) commutent aux S-morphismes \\(\\mathrm{I}_S(M) \\to \\mathrm{I}_S(M')\\) provenant de morphismes \\(M' \\to M\\) par la fonctorialité précédente ; en particulier ces opérations conservent la section zéro de \\(\\mathrm{I}_S(M)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La formation des \\(\\mathrm{I}_S(M)\\) commute à l'extension de la base : on a des isomorphismes canoniques\n\\[\n(\\mathrm{I}_S(M))_{S'} \\simeq \\mathrm{I}_{S'}(M \\otimes_{\\mathscr{O}_S} \\mathscr{O}_{S'}).\n\\]\nSoient maintenant M et N deux \\(\\mathscr{O}_S\\)-modules quasi-cohérents. Le diagramme commutatif\n\\[\n\\xymatrix{\n&amp; M\\oplus N \\ar[dl] \\ar[dr] &amp; \\\\\nM \\ar[dr] &amp; &amp; N \\ar[dl] \\\\\n&amp; 0 &amp;\n}\n\\]\ndéfinit un diagramme commutatif de S-schémas\n\\[\n(*) \\qquad\n\\xymatrix{\n&amp; \\mathrm{I}_S(M\\oplus N) \\ar[dl] \\ar[dr] &amp; \\\\\n\\mathrm{I}_S(M) \\ar[dr]_-{\\varepsilon_M} &amp; &amp; \\mathrm{I}_S(N) \\ar[dl]^-{\\varepsilon_N} \\\\\n&amp; S &amp;\n}\n\\]</p>"
+    },
+    {
+     "id": "II.2.2",
+     "type": "proposition",
+     "label": "2.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Pour tout S-schéma X, le diagramme de foncteurs au-dessus de S obtenu en appliquant le foncteur \\(\\underline{\\mathrm{Hom}}_S(-,X)\\) au diagramme (\\(*\\)) est cartésien :\n  \\[\n  \\xymatrix{\n  &amp; \\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S(M\\oplus N), X) \\ar[dl] \\ar[dr] &amp; \\\\\n  \\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S(M), X) \\ar[dr] &amp; &amp; \\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S(N), X) \\ar[dl] \\\\\n  &amp; \\underline{\\mathrm{Hom}}_S(S,X) = X &amp;\n  }\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il faut vérifier que pour tout \\(S' \\to S\\), le diagramme d'ensembles obtenu en prenant la valeur des foncteurs sur \\(S'\\) est cartésien. Comme la formation de \\(\\mathrm{I}_S(P)\\) commute à</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l'extension de la base au sens explicité plus haut, il suffit de le faire pour \\(S'=S\\), donc de vérifier que le diagramme d'ensembles suivant est cartésien :\n\\[\n\\xymatrix{\n&amp; X(\\mathrm{I}_S(M\\oplus N)) \\ar[dl] \\ar[dr] &amp; \\\\\nX(\\mathrm{I}_S(M)) \\ar[dr]_-{X(\\varepsilon_M)} &amp; &amp; X(\\mathrm{I}_S(N)) \\ar[dl]^-{X(\\varepsilon_N)} \\\\\n&amp; X(S) &amp;\n}\n\\]\nOr, si \\(x \\in X(S)\\), il résulte de (SGA 1, III 5.1) que \\(X(\\varepsilon_M)^{-1}(x)\\) est isomorphe, fonctoriellement en M, à \\(\\mathrm{Hom}_{\\mathscr{O}_S}(x^*(\\Omega^1_{X/S}), M)\\), où \\(\\Omega^1_{X/S}\\) désigne le faisceau des différentielles relatives de X par rapport à S. Or ce dernier foncteur (en M) transforme évidemment une somme directe de \\(\\mathscr{O}_S\\)-modules en le produit des ensembles correspondant, d'où le résultat.</p>"
+    },
+    {
+     "id": "II.2.2.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.2.2.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>Si M est libre de type fini, le foncteur \\(\\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S(M), X)\\) est isomorphe (comme foncteur au-dessus de X) à un produit fini (au-dessus de X) de copies de \\(\\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S, X)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.2.nota",
+     "type": "remarque",
+     "label": null,
+     "title": "Nota",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.2.2.nota\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Nota</span></div>\n  <div class=\"thm-body\"><p>Il résulte de la démonstration de la proposition que \\(\\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S, X)\\) est isomorphe comme X-foncteur à \\(\\mathbf{V}(\\Omega^1_{X/S})\\) (<a class=\"ref\" href=\"#I.4.6.1\">I, 4.6.1</a>) donc <em>représentable</em> par le fibré vectoriel \\(\\mathbf{V}(\\Omega^1_{X/S})\\).</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-3",
+   "title": "3. Le fibré tangent, la condition (E)",
+   "blocks": [
+    {
+     "id": "II.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.3\">3. Le fibré tangent, la condition (E)</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce paragraphe, sauf notification contraire, les lettres M, \\(M'\\), N … désigneront toujours des \\(\\mathscr{O}_S\\)-modules libres de type fini (c'est-à-dire isomorphes à une somme directe finie de copies de \\(\\mathscr{O}_S\\)). Nous utiliserons systématiquement les identifications justifiées dans l'exposé I ; c'est ainsi que nous dirons « foncteur au-dessus de S » pour désigner indifféremment un foncteur muni d'un morphisme dans S (\\(= h_S\\)) ou un foncteur sur la catégorie des objets au-dessus de S. On dira de même « foncteur en groupes au-dessus de S » …</p>"
+    },
+    {
+     "id": "II.3.1",
+     "type": "definition",
+     "label": "3.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma et M un \\(\\mathscr{O}_S\\)-module libre de type fini. Soit X un foncteur au-dessus de S. On appelle <em>fibré tangent</em> à X au-dessus de S relativement au \\(\\mathscr{O}_S\\)-module M et on note \\(\\mathrm{T}_{X/S}(M)\\) le S-foncteur\n  \\[\n  \\mathrm{T}_{X/S}(M) = \\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S(M), X).\n  \\]\n  En particulier, on appelle <em>fibré tangent</em> à X au-dessus de S et on note \\(\\mathrm{T}_{X/S}\\) le foncteur \\(\\mathrm{T}_{X/S} = \\mathrm{T}_{X/S}(\\mathscr{O}_S) = \\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S, X)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Alors \\(M \\mapsto \\mathrm{T}_{X/S}(M)\\) est un foncteur covariant de la catégorie des \\(\\mathscr{O}_S\\)-modules libres de type fini dans la catégorie des S-foncteurs. En particulier les morphismes \\(0 \\to M\\) et \\(M \\to 0\\) définissent respectivement un S-morphisme \n\\[\n\\mathrm{T}_{X/S}(M) \\longrightarrow \\mathrm{T}_{X/S}(0) \\simeq X\n\\]\net une section de celui-ci appelée <em>section zéro</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de ceci que \\(M \\mapsto \\mathrm{T}_{X/S}(M)\\) est un foncteur covariant de la catégorie des \\(\\mathscr{O}_S\\)-modules libres de type fini dans celle des foncteurs au-dessus de X. En particulier \\(\\mathbf{O}(S)\\) est un ensemble d'opérateurs du X-foncteur \\(\\mathrm{T}_{X/S}(M)\\) qui respecte « la fonctorialité en M ».</p>"
+    },
+    {
+     "id": "II.3.2",
+     "type": "definition",
+     "label": "3.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u \\in X(S) = \\mathrm{Hom}_S(S,X) = \\Gamma(X/S)\\). On appelle <em>espace tangent</em> à X au-dessus de S au point u relativement à M, et on note \\(\\mathrm{L}^u_{X/S}(M)\\), le S-foncteur obtenu à partir du X-foncteur \\(\\mathrm{T}_{X/S}(M)\\) par image réciproque par le morphisme \\(u : S \\to X\\) :\n  \\[\n  \\xymatrix{\n  \\mathrm{L}^u_{X/S}(M) \\ar[r] \\ar[d] &amp; \\mathrm{T}_{X/S}(M) \\ar[d] \\\\\n  S \\ar[r]_-{u} &amp; X\n  }\n  \\]\n  En particulier \\(\\mathrm{L}^u_{X/S}(\\mathscr{O}_S)\\) est noté \\(\\mathrm{L}^u_{X/S}\\). C'est l'<em>espace tangent</em> à X au-dessus de S au point u.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons immédiatement la</p>"
+    },
+    {
+     "id": "II.3.3",
+     "type": "proposition",
+     "label": "3.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>Si X est représentable par un S-schéma noté \\(\\widetilde{X}\\), alors \\(\\mathrm{T}_{X/S}(M)\\) et \\(\\mathrm{L}^u_{X/S}(M)\\) sont représentables. En particulier \\(\\mathrm{T}_{X/S}\\) et \\(\\mathrm{L}^u_{X/S}\\) sont représentables par des fibrés vectoriels sur \\(\\widetilde{X}\\) et sur S qui sont respectivement \\(\\mathbf{V}(\\Omega^1_{\\widetilde{X}/S})\\) et \\(\\mathbf{V}(u^*(\\Omega^1_{\\widetilde{X}/S}))\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit évidemment de démontrer la proposition pour \\(\\mathrm{T}_{X/S}(M)\\), les résultats analogues pour \\(\\mathrm{L}^u_{X/S}(M)\\) s'en déduisant par image réciproque. D'après <a class=\"ref\" href=\"#II.2.2\">2.2, corollaire</a>, il suffit même de le faire pour \\(\\mathrm{T}_{X/S}\\), et en ce cas, elle n'est autre que la remarque signalée en note après 2.2. Il résulte de cette proposition une description particulièrement simple du fibré vectoriel représentant \\(\\mathrm{L}^u_{X/S}\\) : l'image de la section u de X sur S est localement fermée, donc définie par un idéal quasi-cohérent \\(\\mathfrak{m}\\) d'un schéma induit sur un ouvert de X. Le quotient \\(\\mathfrak{m}/\\mathfrak{m}^2\\) peut être considéré comme un module quasi-cohérent sur S. C'est celui-ci qui définit le fibré vectoriel cherché.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit par exemple X un schéma algébrique sur un corps k et u un point de X rationnel sur k. Alors \\(\\mathrm{L}^u_{X/k} = \\mathbf{V}(\\mathfrak{t})\\) où \\(\\mathfrak{t}\\) est le k-espace vectoriel tangent de Zariski de l'anneau local \\(\\mathscr{O}_{X,u}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette parenthèse fermée, revenons à la situation générale. Remarquons d'abord que \\(\\mathrm{L}^u_{X/S}(M)\\) est un foncteur covariant de la catégorie des \\(\\mathscr{O}_S\\)-modules libres de type</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>fini dans celle des foncteurs au-dessus de S. En particulier \\(\\mathbf{O}(S)\\) est un ensemble d'opérateurs du S-foncteur \\(\\mathrm{L}^u_{X/S}(M)\\) qui respecte la fonctorialité en M.</p>"
+    },
+    {
+     "id": "II.3.4",
+     "type": "proposition",
+     "label": "3.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>La formation de \\(\\mathrm{T}_{X/S}(M)\\) et \\(\\mathrm{L}_{X/S}(M)\\) commute à l'extension de la base : soit \\(S'\\) un schéma au-dessus de S, on a des isomorphismes fonctoriels en M\n  \\[\n  \\mathrm{T}_{X_{S'}/S'}(M\\otimes\\mathscr{O}_{S'}) \\xrightarrow{\\ \\sim\\ } (\\mathrm{T}_{X/S}(M))_{S'}, \\qquad \\mathrm{L}^{u'}_{X_{S'}/S'}(M\\otimes\\mathscr{O}_{S'}) \\xrightarrow{\\ \\sim\\ } (\\mathrm{L}^u_{X/S}(M))_{S'}, \\qquad u' = (u)_{S'}.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte immédiatement du fait que les \\(\\underline{\\mathrm{Hom}}\\) commutent à l'extension de la base.</p>"
+    },
+    {
+     "id": "II.3.4.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.4.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>Le X-foncteur \\(\\mathrm{T}_{X/S}(M)\\) (resp. le S-foncteur \\(\\mathrm{L}^u_{X/S}(M)\\)) est muni naturellement d'une structure d'objet à opérateurs \\(\\mathscr{O}_X\\) (resp. \\(\\mathscr{O}_S\\)), cette structure étant fonctorielle en M.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Montrons-le d'abord pour \\(\\mathrm{L}^u_{X/S}(M)\\). Pour chaque \\(S'\\) au-dessus de S, \\(\\mathbf{O}(S')\\) opère sur \\(M\\otimes\\mathscr{O}_{S'}\\) donc sur \\(\\mathrm{L}^{u'}_{X_{S'}/S'}(M\\otimes\\mathscr{O}_{S'}) = \\mathrm{L}^u_{X/S}(M)_{S'}\\) ; or on vérifie que cette opération est fonctorielle en \\(S'\\) ; elle munit donc comme annoncé \\(\\mathrm{L}^u_{X/S}(M)\\) d'une structure de foncteur à opérateurs \\(\\mathscr{O}_S\\). </p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(\\mathrm{T}_{X/S}(M)\\) c'est un peu plus compliqué. Il faut munir chaque \\((\\mathrm{T}_{X/S}(M))_{X'}(X')\\) (\\(X'\\) au-dessus de X) d'une structure d'ensemble à ensemble d'opérateurs \\(\\mathbf{O}(X')\\) de manière fonctorielle en \\(X'\\). Pour cela on construit le diagramme\n\\[\n\\xymatrix{\n&amp; \\mathrm{T}_{X_{X'}/X'}(M) \\ar[dl] \\ar[dr] &amp; \\\\\n\\mathrm{T}_{X/S}(M) &amp; &amp; (\\mathrm{T}_{X/S}(M))_{X'} \\ar[ll] \\ar[dl] \\\\\n&amp; X_{X'} \\ar[dl] &amp; \\\\\nX \\ar[dr] &amp; &amp; X' \\ar[ul]_-{f'} \\ar[ll]^-{f} \\ar[dl] \\\\\n&amp; S &amp;\n}\n\\]\noù \\(X_{X'}\\) dénote \\(X\\times_S X'\\) et \\(f'\\) la section de \\(X_{X'}\\) sur \\(X'\\) définie par \\(f : X' \\to X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce diagramme montre que \\((\\mathrm{T}_{X/S}(M))_{X'}(X')\\) s'identifie à \\(\\mathrm{L}^{f'}_{X_{X'}/X'}(X')\\) où opère \\(\\mathbf{O}(X')\\). Il ne reste plus qu'à vérifier que cette construction est fonctorielle en \\(X'\\), ce qui se fait sans difficulté. Les isomorphismes de la proposition précédente sont alors par construction des isomorphismes pour les structures de \\(\\mathscr{O}_{X_{S'}}\\)-objets, resp. \\(\\mathscr{O}_{S'}\\)-objets.</p>"
+    },
+    {
+     "id": "II.3.5",
+     "type": "definition",
+     "label": "3.5",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma et X un S-foncteur. On dit que X vérifie la <em>condition (E)</em> relativement à S si, pour tout \\(S'\\) au-dessus de S et tous \\(\\mathscr{O}_{S'}\\)-Modules libres de type fini M et N, le diagramme d'ensembles\n  \\[\n  \\xymatrix{\n  &amp; X(\\mathrm{I}_{S'}(M\\oplus N)) \\ar[dl] \\ar[dr] &amp; \\\\\n  X(\\mathrm{I}_{S'}(M)) &amp; &amp; X(\\mathrm{I}_{S'}(N)) \\\\\n  &amp; X(S') \\ar[ul] \\ar[ur] &amp;\n  }\n  \\]\n  obtenu en appliquant X au diagramme (\\(*\\)) défini dans <a class=\"ref\" href=\"#II.2.1\">2.1</a>, est cartésien. </p></div>\n</div>"
+    },
+    {
+     "id": "II.3.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.3.5.1\">3.5.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il revient au même de dire que <em>le foncteur \\(M \\mapsto \\mathrm{T}_{X/S}(M)\\) transforme sommes directes de \\(\\mathscr{O}_S\\)-modules libres de type fini en produits de X-foncteurs</em>. La proposition <a class=\"ref\" href=\"#II.2.2\">2.2</a> montre que tout foncteur représentable vérifie la condition (E). Si X vérifie la condition (E) par rapport à S, le foncteur \\(M \\mapsto \\mathrm{T}_{X/S}(M)\\) commutant au produit transforme groupes en groupes. En particulier \\(\\mathrm{T}_{X/S}(M)\\) est un X-groupe commutatif. Pour la même raison, \\(\\mathrm{L}^u_{X/S}(M)\\) est un S-groupe commutatif.</p>"
+    },
+    {
+     "id": "II.3.6",
+     "type": "proposition",
+     "label": "3.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>Si X/S vérifie (E), la structure de groupe abélien sur \\(\\mathrm{T}_{X/S}(M)\\) (resp. \\(\\mathrm{L}^u_{X/S}(M)\\)) et l'opération de \\(\\mathscr{O}_X\\) (resp. \\(\\mathscr{O}_S\\)) munissent \\(\\mathrm{T}_{X/S}(M)\\) (resp. \\(\\mathrm{L}^u_{X/S}(M)\\)) d'une structure de \\(\\mathscr{O}_X\\)-module (resp. \\(\\mathscr{O}_S\\)-module).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'opération de \\(\\mathscr{O}_X\\) (resp. \\(\\mathscr{O}_S\\)) est fonctorielle en M ; elle respecte donc la structure de groupe abélien qui est déduite par fonctorialité de celle de M.</p>"
+    },
+    {
+     "id": "II.3.6.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.3.6.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>Si X est représentable, auquel cas, d'une part il vérifie (E), d'autre part \\(\\mathrm{T}_{X/S}\\) et \\(\\mathrm{L}^u_{X/S}\\) sont représentables par des fibrés vectoriels, les lois précédentes sont les mêmes que celles qui se déduisent des structures de fibré vectoriel (cf. <a class=\"ref\" href=\"#I.4.6\">I, 4.6</a>).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.4bis",
+     "type": "proposition",
+     "label": "3.4 bis",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.4 bis</span></div>\n  <div class=\"thm-body\"><p>Si X vérifie la condition (E) par rapport à S, alors \\(X_{S'}\\) vérifie la condition (E) par rapport à \\(S'\\) et les isomorphismes de 3.4 respectent les structures de \\(\\mathscr{O}_{X_{S'}}\\)-modules, resp. de \\(\\mathscr{O}_{S'}\\)-modules.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sans commentaires.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Abréviation</em> : au lieu de dire « X <em>vérifie la condition (E) par rapport à S</em> », on dira parfois « X/S <em>vérifie la condition (E)</em> ». </p>"
+    },
+    {
+     "id": "II.3.7",
+     "type": "proposition",
+     "label": "3.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>Les foncteurs \\(\\mathrm{T}_{X/S}(M)\\) et \\(\\mathrm{L}^u_{X/S}(M)\\) sont fonctoriels en X : si \\(f : X \\to X'\\) est un S-morphisme, on a des diagrammes commutatifs :\n  \\[\n  \\xymatrix{\n  \\mathrm{T}_{X/S}(M) \\ar[r]^-{\\mathrm{T}(f)} \\ar[d] &amp; \\mathrm{T}_{X'/S}(M) \\ar[d] \\\\\n  X \\ar[r]_-{f} &amp; X'\n  }\n  \\qquad\n  \\xymatrix{\n  \\mathrm{L}^u_{X/S}(M) \\ar[rr]^-{\\mathrm{L}(f)} &amp; &amp; \\mathrm{L}^{f\\circ u}_{X'/S}(M) \\\\\n  &amp; S \\ar[ul] \\ar[ur] &amp;\n  }\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les morphismes \\(\\mathrm{T}(f)\\) et \\(\\mathrm{L}(f)\\) se déduisent immédiatement des définitions. La commutativité des diagrammes résulte alors de la fonctorialité de ces morphismes par rapport à M et du fait que \\(\\mathrm{T}_{X/S}(0) = X\\).</p>"
+    },
+    {
+     "id": "II.3.7.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.3.7.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>Le carré ci-dessus est cartésien lorsque \\(f\\) est une immersion ouverte, plus généralement lorsque \\(f\\) est <em>étale</em>. Il définit en général un morphisme de X-foncteurs :\n  \\[\n  \\xymatrix{\n  \\mathrm{T}_{X/S}(M) \\ar[rr] \\ar[dr] &amp; &amp; (\\mathrm{T}_{X'/S}(M))_X \\ar[dl] \\\\\n  &amp; X &amp;\n  }\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.7bis",
+     "type": "proposition",
+     "label": "3.7 bis",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.7bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.7 bis</span></div>\n  <div class=\"thm-body\"><p>Si X et \\(X'\\) vérifient (E) par rapport à S, alors \\(\\mathrm{T}_{X/S}(M) \\to (\\mathrm{T}_{X'/S}(M))_X\\) (resp. \\(\\mathrm{L}^u_{X/S}(M) \\to \\mathrm{L}^{f\\circ u}_{X'/S}(M)\\)) est un morphisme de \\(\\mathscr{O}_X\\)-modules (resp. de \\(\\mathscr{O}_S\\)-modules).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Résulte de la proposition 3.7 par fonctorialité en M.</p>"
+    },
+    {
+     "id": "II.3.8",
+     "type": "proposition",
+     "label": "3.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p>Soient X et Y deux foncteurs au-dessus de S. On a des isomorphismes fonctoriels en M :\n  \\[\n  \\mathrm{T}_{X\\times_S Y/S}(M) \\xrightarrow{\\ \\sim\\ } \\mathrm{T}_{X/S}(M) \\times_S \\mathrm{T}_{Y/S}(M),\n  \\]\n  \\[\n  \\mathrm{L}^{(u,v)}_{X\\times_S Y/S}(M) \\xrightarrow{\\ \\sim\\ } \\mathrm{L}^u_{X/S}(M) \\times_S \\mathrm{L}^v_{Y/S}(M).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Evident sur les définitions.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons que le premier isomorphisme peut aussi s'interpréter comme un isomorphisme de X × Y-foncteurs\n\\[\n\\mathrm{T}_{X\\times Y/S}(M) \\xrightarrow{\\ \\sim\\ } \\bigl(\\mathrm{T}_{X/S}(M)\\underset{X}{\\times}(X\\times Y)\\bigr) \\underset{X\\times Y}{\\times} \\bigl(\\mathrm{T}_{Y/S}(M)\\underset{Y}{\\times}(X\\times Y)\\bigr).\n\\]</p>"
+    },
+    {
+     "id": "II.3.8.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.8.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>Si X/S est muni d'une structure algébrique définie par produits cartésiens finis, alors \\(\\mathrm{T}_{X/S}(M)\\) est muni d'une structure de même espèce et la projection \\(\\mathrm{T}_{X/S}(M) \\to X\\) est un morphisme de cette espèce de structure.</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.8bis",
+     "type": "proposition",
+     "label": "3.8 bis",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.8bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.8 bis</span></div>\n  <div class=\"thm-body\"><p>Si X et Y satisfont à la condition (E) par rapport à S, alors \\(X\\times_S Y\\) y satisfait aussi et les isomorphismes de 3.8 respectent les structures de modules.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour énoncer commodément les propriétés qui vont suivre, introduisons la terminologie suivante : un H-<em>ensemble</em> est un ensemble muni d'une loi de composition à unité bilatère ; un H-<em>objet</em> dans une catégorie \\(\\mathscr{C}\\) se définit de la manière habituelle : c'est donc un objet X de \\(\\mathscr{C}\\), muni d'un morphisme \\(X\\times X \\to X\\) tel qu'il existe une section de X (au-dessus de l'objet final) possédant les propriétés d'une unité bilatère. Tout \\(\\mathscr{C}\\)-monoïde, en particulier tout \\(\\mathscr{C}\\)-groupe est donc un \\(\\mathscr{C}\\)-H-objet. En particulier, un H-objet de la catégorie des foncteurs au-dessus du schéma S sera appelé S-H-<em>foncteur</em>. Si X est un S-H-foncteur, alors \\(\\mathrm{T}_{X/S}(M)\\) est un S-H-foncteur, et si on note\n\\[\n\\underline{\\mathrm{Lie}}(X/S,M) = \\mathrm{L}^e_{X/S}(M), \\qquad \\underline{\\mathrm{Lie}}(X/S) = \\underline{\\mathrm{Lie}}(X/S,\\mathscr{O}_S),\n\\]\noù e désigne la section unité de X, alors \\(\\underline{\\mathrm{Lie}}(X/S,M)\\) est lui aussi un S-H-foncteur. </p>"
+    },
+    {
+     "id": "II.3.9",
+     "type": "proposition",
+     "label": "3.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.9</span></div>\n  <div class=\"thm-body\"><p>Soit X un S-H-foncteur vérifiant (E) par rapport à S. La structure de S-H-foncteur de \\(\\underline{\\mathrm{Lie}}(X/S,M)\\) provenant de celle de X coïncide avec la structure de S-groupe définie en <a class=\"ref\" href=\"#II.3.5.1\">3.5.1</a>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de ce qu'on a dit plus haut que \\(\\underline{\\mathrm{Lie}}(X/S,M)\\) est un H-objet dans la catégorie des \\(\\mathscr{O}_S\\)-modules. La proposition résultera alors du lemme suivant :</p>"
+    },
+    {
+     "id": "II.3.10",
+     "type": "lemme",
+     "label": "3.10",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"II.3.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.10</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathscr{C}\\) une catégorie. Soit G un H-objet dans la catégorie des \\(\\mathscr{C}\\)-H-objets ; G est donc un \\(\\mathscr{C}\\)-H-objet (dont nous noterons la loi de composition \\(f : G\\times G \\to G\\)) muni d'un morphisme de \\(\\mathscr{C}\\)-H-objets \\(h : G\\times G \\to G\\). Alors \\(f=h\\) et f est commutative.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En prenant les valeurs des foncteurs sur un argument variable, on se ramène à la manière habituelle à vérifier le lemme lorsque \\(\\mathscr{C}\\) est la catégorie des ensembles. On a donc un ensemble G et deux applications \\(f, h : G\\times G \\to G\\) telles que \\(h(f(x,y),f(z,t)) = f(h(x,z),h(y,t))\\). On a d'autre part deux éléments de G, soient e et u, avec \\(f(e,x) = f(x,e) = x\\), \\(h(u,x) = h(x,u) = x\\). On voit d'abord que \\(h(f(u,y),f(x,u)) = h(f(x,u),f(u,y)) = f(x,y)\\). En particulier, pour \\(y=e\\), on obtient\n\\[\nx = f(x,e) = h(f(u,e),f(x,u)) = h(u,f(x,u)) = f(x,u),\n\\]\nd'où en reportant dans l'égalité originelle\n\\[\nf(x,y) = h(x,y) = h(y,x).\n\\]</p>"
+    },
+    {
+     "id": "II.3.10.cor1",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 1",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.10.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1</span></div>\n  <div class=\"thm-body\"><p>Si X est un S-H-foncteur vérifiant (E) par rapport à S, tout élément de \\(X(\\mathrm{I}_S(M))\\) qui se projette sur l'élément unité de X(S) est inversible.</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.10.cor2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 2",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.10.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 2</span></div>\n  <div class=\"thm-body\"><p>Si X est un S-monoïde vérifiant (E) par rapport à S, un élément de \\(X(\\mathrm{I}_S(M))\\) est inversible si et seulement si son image dans X(S) l'est.</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.10.cor3",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 3",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.10.cor3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 3</span></div>\n  <div class=\"thm-body\"><p>Si X est un S-groupe vérifiant (E) par rapport à S, les deux lois de S-groupe sur \\(\\underline{\\mathrm{Lie}}(X/S,M)\\) coïncident.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avant de tirer d'autres conséquences de la proposition précédente, démontrons un autre résultat de fonctorialité :</p>"
+    },
+    {
+     "id": "II.3.11",
+     "type": "proposition",
+     "label": "3.11",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.11</span></div>\n  <div class=\"thm-body\"><p>Dans la situation du paragraphe <a class=\"ref\" href=\"#II.1\">1</a>, on a un isomorphisme fonctoriel en M\n  \\[\n  \\mathrm{T}_{\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{Z/S}(X, \\mathrm{T}_{Y/Z}(M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte immédiatement des définitions, compte tenu de l'isomorphisme\n\\[\n\\mathrm{Hom}_S(T, \\underline{\\mathrm{Hom}}_{Z/S}(X,Y)) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{Z/S}(X, \\underline{\\mathrm{Hom}}_Z(Z\\times_S T, Y)).\n\\]</p>"
+    },
+    {
+     "id": "II.3.11.cor1",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 1",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.11.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1</span></div>\n  <div class=\"thm-body\"><p>Si Y/Z vérifie (E), alors \\(\\underline{\\mathrm{Hom}}_{Z/S}(X,Y)/S\\) vérifie (E) et l'isomorphisme de 3.11 respecte les structures de modules.</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.11.cor2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 2",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.11.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 2</span></div>\n  <div class=\"thm-body\"><p>On a un isomorphisme fonctoriel en M\n  \\[\n  \\mathrm{T}_{\\underline{\\mathrm{Hom}}_S(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_S(X, \\mathrm{T}_{Y/S}(M))\\text{;}\n  \\]\n  si Y/S vérifie (E), alors \\(\\underline{\\mathrm{Hom}}_S(X,Y)/S\\) vérifie (E) et l'isomorphisme précédent respecte les structures de \\(\\mathbf{O}\\)-modules au-dessus de \\(\\underline{\\mathrm{Hom}}_S(X,Y)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.11.cor3",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 3",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.11.cor3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 3</span></div>\n  <div class=\"thm-body\"><p>On a un isomorphisme fonctoriel en M\n  \\[\n  \\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_S(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{Y/S}(X, \\mathrm{T}_{Y/S}(M)),\n  \\]\n  où X est considéré comme foncteur au-dessus de Y par l'intermédiaire de \\(u : X \\to Y\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.11.cor4",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 4",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.11.cor4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 4</span></div>\n  <div class=\"thm-body\"><p>On a un isomorphisme fonctoriel en M\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{End}}_S(X)/S, M) \\xrightarrow{\\ \\sim\\ } \\prod_{X/S} \\mathrm{T}_{X/S}(M).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons maintenant interpréter géométriquement la définition du fibré tangent. Soit T un schéma au-dessus de S ; on a des isomorphismes fonctoriels en M\n\\[\n\\mathrm{T}_{X/S}(M)(T) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_S(T, \\mathrm{T}_{X/S}(M)) = \\mathrm{Hom}_S(T, \\underline{\\mathrm{Hom}}_S(\\mathrm{I}_S(M), X))\n\\]\n\\[\n\\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_S(\\mathrm{I}_S(M), \\underline{\\mathrm{Hom}}(T,X)) = \\mathrm{T}_{\\underline{\\mathrm{Hom}}_S(T,X)/S}(M)(S)\n\\]\n\\[\n\\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\mathrm{I}_S(M)}(T_{\\mathrm{I}_S(M)}, X_{\\mathrm{I}_S(M)}).\n\\]\nEn particulier le morphisme \\(M \\to 0\\) donne un diagramme commutatif\n\\[\n\\xymatrix{\n\\mathrm{Hom}_S(T, \\mathrm{T}_{X/S}(M)) \\ar[d] \\ar[r]^-{\\sim} &amp; \\mathrm{Hom}_{\\mathrm{I}_S(M)}(T_{\\mathrm{I}_S(M)}, X_{\\mathrm{I}_S(M)}) \\ar[d] \\\\\n\\mathrm{Hom}_S(T,X) \\ar[r]_-{\\text{identité}} &amp; \\mathrm{Hom}_S(T,X)\n}\n\\]\noù la première flèche verticale est obtenue par la projection \\(\\mathrm{T}_{X/S}(M) \\to X\\), la seconde par le changement de base \\(S \\to \\mathrm{I}_S(M)\\). En conséquence :</p>"
+    },
+    {
+     "id": "II.3.12",
+     "type": "proposition",
+     "label": "3.12",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.12</span></div>\n  <div class=\"thm-body\"><p>Soit T au-dessus de X par \\(h_0 : T \\to X\\). L'ensemble \\(\\mathrm{Hom}_X(T, \\mathrm{T}_{X/S}(M))\\) s'identifie à l'ensemble des \\(\\mathrm{I}_S(M)\\)-morphismes de \\(T_{\\mathrm{I}_S(M)}\\) dans \\(X_{\\mathrm{I}_S(M)}\\) qui se restreignent à \\(h_0\\) sur \\(S \\subset \\mathrm{I}_S(M)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.12.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.12.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>L'ensemble \\(\\Gamma(\\mathrm{T}_{X/S}(M)/X)\\) s'identifie à l'ensemble des \\(\\mathrm{I}_S(M)\\)-endomorphismes de \\(X_{\\mathrm{I}_S(M)}\\) qui induisent l'identité sur X.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons maintenant que ce dernier ensemble s'identifie également par les isomorphismes précédents à \\(\\underline{\\mathrm{Lie}}(\\underline{\\mathrm{End}}_S(X)/S, M)(S)\\). Si X/S vérifie (E), alors \\(\\underline{\\mathrm{End}}_S(X)/S\\) vérifie (E) (prop. 3.11, cor. 2). Appliquant 3.10, cor. 2 et 3.9, on en déduit la</p>"
+    },
+    {
+     "id": "II.3.13",
+     "type": "proposition",
+     "label": "3.13",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.13</span></div>\n  <div class=\"thm-body\"><p>Si X/S vérifie (E), tout \\(\\mathrm{I}_S(M)\\)-endomorphisme de \\(X_{\\mathrm{I}_S(M)}\\) qui induit l'identité sur X est un automorphisme. Le groupe \\(\\Gamma(\\mathrm{T}_{X/S}(M)/X)\\) s'identifie au groupe de ces automorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.13.cor1",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 1",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.13.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : X\\to Y\\) un S-isomorphisme, Y/S vérifiant (E). Tout \\(\\mathrm{I}_S(M)\\)-morphisme de \\(X_{\\mathrm{I}_S(M)}\\) dans \\(Y_{\\mathrm{I}_S(M)}\\) qui prolonge u est un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.13.cor2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 2",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.13.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 2</span></div>\n  <div class=\"thm-body\"><p>Si Y/S vérifie (E), le monomorphisme \\(\\underline{\\mathrm{Isom}}_S(X,Y) \\to \\underline{\\mathrm{Hom}}_S(X,Y)\\) induit, pour tout \\(u\\in \\mathrm{Isom}_S(X,Y)\\), un isomorphisme\n  \\[\n  \\mathrm{L}^u_{\\underline{\\mathrm{Isom}}_S(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_S(X,Y)/S}(M).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.13.cor3",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 3",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.3.13.cor3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 3</span></div>\n  <div class=\"thm-body\"><p>Si X/S vérifie (E), le monomorphisme \\(\\underline{\\mathrm{Aut}}_S(X) \\to \\underline{\\mathrm{End}}_S(X)\\) induit, pour tout \\(u \\in \\mathrm{Aut}_S(X)\\), un isomorphisme \\(\\mathrm{L}^u_{\\underline{\\mathrm{Aut}}_S(X)/S}(M) \\xrightarrow{\\ \\sim\\ } \\mathrm{L}^u_{\\underline{\\mathrm{End}}_S(X)/S}(M)\\). En particulier, on a\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_S(X)/S, M)(S) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{End}}_S(X)/S, M)(S) \\xrightarrow{\\ \\sim\\ } \\prod_{X/S} \\mathrm{T}_{X/S}(M).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.14",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.3.14\">3.14.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons pour terminer X représentable. On a vu qu'une section de \\(\\mathrm{T}_{X/S}\\) au-dessus de X s'identifie à un \\(\\mathrm{I}_S\\)-automorphisme de \\(X_{\\mathrm{I}_S}\\) induisant l'identité sur X. Or \\(X_{\\mathrm{I}_S}\\) et X ont le même espace topologique sous-jacent, les faisceaux d'anneaux correspondants étant \\(\\mathrm{D}_{\\mathscr{O}_X}\\) et \\(\\mathscr{O}_X\\). Il en résulte aussitôt qu'un automorphisme infinitésimal de X s'identifie à une dérivation du faisceau d'anneaux \\(\\mathscr{O}_X\\) au-dessus du faisceau \\(\\mathscr{O}_S\\). On a donc fabriqué un isomorphisme\n\\[\n\\Gamma(\\mathrm{T}_{X/S}/X) \\xrightarrow{\\ \\sim\\ } \\mathrm{D\\acute{e}r}_{\\mathscr{O}_S}(\\mathscr{O}_X)\n\\]\nqui, en vertu de 3.13, respecte les structures de groupes (et même de \\(\\mathbf{O}(S)\\)-modules) ce qui redonne l'interprétation classique des champs de vecteurs tangents en termes de dérivations du faisceau structural. Remarquons d'ailleurs que \\(\\Gamma(\\mathrm{T}_{X/S}/X)\\) est égal à \\(\\mathrm{H}^0(X, \\mathfrak{g}_{X/S})\\) où \\(\\mathfrak{g}_{X/S}\\) est le dual de \\(\\Omega^1_{X/S}\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-4",
+   "title": "4. Espace tangent à un groupe – Algèbres de Lie",
+   "blocks": [
+    {
+     "id": "II.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.4\">4. Espace tangent à un groupe – Algèbres de Lie</h2>"
+    },
+    {
+     "id": "II.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.1\">4.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un foncteur en groupes au-dessus de S. On a vu que \\(\\mathrm{T}_{G/S}(M)\\) et \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) sont dès lors munis de structures de groupes au-dessus de S. On a des morphismes de groupes (3.1)\n\\[\n\\xymatrix{\n\\underline{\\mathrm{Lie}}(G/S,M) \\ar[r]^-{i} &amp; \\mathrm{T}_{G/S}(M) \\ar@&lt;.6ex&gt;[r]^-{p} &amp; G \\ar@&lt;.6ex&gt;[l]^-{s}\n}\n\\]\npar définition i est un isomorphisme de \\(\\underline{\\mathrm{Lie}}(G/S)\\) sur le noyau de p et s est une section de p. Il résulte alors de <a class=\"ref\" href=\"#I.2.3.7\">I, 2.3.7</a> que cette suite de morphismes permet d'identifier \\(\\mathrm{T}_{G/S}(M)\\) au produit semi-direct de G par \\(\\underline{\\mathrm{Lie}}(G/S,M)\\). L'opération correspondante </p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de G sur \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) est notée Ad et appelée <em>représentation adjointe</em> de G ; on a donc par définition\n\\[\n\\mathrm{Ad}(x)X = i^{-1}(s(x)i(X)s(x)^{-1}), \\qquad x \\in G(S'),\\ X \\in \\underline{\\mathrm{Lie}}(G/S,M)(S').\n\\]\nSi G est commutatif, alors \\(\\mathrm{T}_{G/S}(M)\\) l'est aussi et \\(\\mathrm{Ad}(x)X = X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si G et H sont deux foncteurs en groupes au-dessus de S et si \\(f : G \\to H\\) est un morphisme de groupes, il s'en déduit par fonctorialité un morphisme de suites exactes compatible avec les sections canoniques :\n\\[\n\\xymatrix{\n1 \\ar[r] &amp; \\underline{\\mathrm{Lie}}(G/S,M) \\ar[r] \\ar[d]_-{\\mathrm{L}(f)} &amp; \\mathrm{T}_{G/S}(M) \\ar[r] \\ar[d]_-{\\mathrm{T}(f)} &amp; G \\ar[r] \\ar[d]^-{f} &amp; 1 \\\\\n1 \\ar[r] &amp; \\underline{\\mathrm{Lie}}(H/S,M) \\ar[r] &amp; \\mathrm{T}_{H/S}(M) \\ar[r] &amp; H \\ar[r] &amp; 1\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\mathrm{L}(f)\\) que l'on notera également \\(\\underline{\\mathrm{Lie}}(f)\\) est le <em>morphisme dérivé</em> de f. </p>"
+    },
+    {
+     "id": "II.4.1.1",
+     "type": "proposition",
+     "label": "4.1.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.1.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(g \\in G(S)\\). Alors \\(\\mathrm{Ad}(g) : \\underline{\\mathrm{Lie}}(G/S,M) \\to \\underline{\\mathrm{Lie}}(G/S,M)\\) est le morphisme dérivé de \\(\\mathrm{Int}(g) : G \\to G\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet \\(\\mathrm{Ad}(g)X = i^{-1}(\\mathrm{Int}(g)i(X))\\), ce qui n'est autre que \\(\\mathrm{L}(\\mathrm{Int}(g))(X)\\) par la définition même du morphisme dérivé.</p>"
+    },
+    {
+     "id": "II.4.1.1.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.1.1.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>Supposons que G/S vérifie (E). Alors on sait (3.10 cor.1) que la structure de groupe de \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) définie comme plus haut n'est autre que la structure induite par sa structure de \\(\\mathscr{O}_S\\)-module (définie grâce à (E)). Il résulte de la proposition précédente que les \\(\\mathrm{Ad}(g)\\) respectent la structure de \\(\\mathscr{O}_S\\)-module de \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) :\n  \\[\n  \\mathrm{Ad} : G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(\\underline{\\mathrm{Lie}}(G/S,M))\n  \\]\n  autrement dit que Ad est une représentation linéaire de G dans le \\(\\mathscr{O}_S\\)-module \\(\\underline{\\mathrm{Lie}}(G/S,M)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.1.1.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.4.1.1.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span></div>\n  <div class=\"thm-body\">\n  <p>1) Pour que G/S vérifie (E), il faut et il suffit que pour tout couple (M, N) de \\(\\mathscr{O}_S\\)-modules libres de type fini, le diagramme\n  \\[\n  \\xymatrix{\n  &amp; \\underline{\\mathrm{Lie}}(G/S,M\\oplus N) \\ar[dl] \\ar[dr] &amp; \\\\\n  \\underline{\\mathrm{Lie}}(G/S,M) \\ar[dr] &amp; &amp; \\underline{\\mathrm{Lie}}(G/S,N) \\ar[dl] \\\\\n  &amp; \\underline{\\mathrm{Lie}}(G/S,0) = S &amp;\n  }\n  \\]\n  obtenu en appliquant le foncteur \\(\\underline{\\mathrm{Lie}}(G/S,\\ )\\) au diagramme (\\(*\\)) de <a class=\"ref\" href=\"#II.2.1\">2.1</a>, soit cartésien.</p>\n  <p>2) Si G/S vérifie (E), le morphisme dérivé de la loi de groupe \\(\\pi : G\\times_S G \\to G\\) n'est autre que la loi d'addition dans \\(\\underline{\\mathrm{Lie}}(G/S,M)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "II.4.1.1.nota",
+     "type": "remarque",
+     "label": null,
+     "title": "Nota",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.4.1.1.nota\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Nota</span></div>\n  <div class=\"thm-body\"><p>\\(\\pi\\) n'est pas un morphisme de groupes, mais \\(\\pi(e,e) = e\\), ce qui suffit pour définir \\(\\mathrm{L}(\\pi)\\) (cf. 3.7).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Etudions maintenant l'ensemble \\(\\Gamma(\\mathrm{T}_{G/S}(M)/G)\\). Notons d'abord que l'on a un isomorphisme\n\\[\n\\mathrm{Hom}(G, \\underline{\\mathrm{Lie}}(G/S,M)) \\xrightarrow{\\ \\sim\\ } \\Gamma(\\mathrm{T}_{G/S}(M)/G)\n\\]\ndéfini de la manière suivante : à \\(f : G \\to \\underline{\\mathrm{Lie}}(G/S,M)\\), on associe la section \\(s_f : G \\to \\mathrm{T}_{G/S}(M)\\) telle que\n\\[\ns_f(g) = i(f(g))s(g), \\qquad g \\in G(S'),\\ S' \\to S.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit h un automorphisme du foncteur G au-dessus de S, ne respectant pas nécessairement la structure de groupe. A toute section t de \\(\\mathrm{T}_{G/S}(M)\\), on peut associer h(t) définie par transport de structure : c'est par exemple la seule section de \\(\\mathrm{T}_{G/S}(M)\\) rendant commutatif le diagramme\n\\[\n\\xymatrix{\nG \\ar[r]^-{t} \\ar[d]_-{h} &amp; \\mathrm{T}_{G/S}(M) \\ar[d]^-{\\mathrm{T}(h)} \\\\\nG \\ar[r]_-{h(t)} &amp; \\mathrm{T}_{G/S}(M)\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, prenons pour h la translation à droite par un élément x de G(S).\n\\[\nh(g) = t_x(g) = g\\cdot x, \\qquad g \\in G(S'),\\ S' \\to S.\n\\]\nOn a immédiatement\n\\[\nt_x(s_f) = s_{t_x(f)}\n\\]\noù \\(t_x(f)\\) désigne le morphisme de G dans \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) défini par\n\\[\nt_x(f)(g) = f(g\\cdot x^{-1}), \\qquad g \\in G(S'),\\ S' \\to S.\n\\]\nIl en résulte que si l'on fait opérer G par translations à droite dans \\(\\Gamma(\\mathrm{T}_{G/S}(M)/G)\\) et \\(\\mathrm{Hom}(G, \\underline{\\mathrm{Lie}}(G/S,M))\\), l'isomorphisme défini plus haut respecte les opérations de G. En particulier les sections de \\(\\mathrm{T}_{G/S}(M)\\) invariantes par translation à droite correspondent dans cet isomorphisme aux morphismes constants de G dans \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) (i.e. se factorisant par la projection \\(G \\to S\\)) ou encore aux éléments de \\(\\underline{\\mathrm{Lie}}(G/S,M)(S)\\). En d'autres termes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "II.4.1.2",
+     "type": "proposition",
+     "label": "4.1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.1.2</span> <sup>(*)</sup></div>\n  <div class=\"thm-body\"><p>L'application \\(\\underline{\\mathrm{Lie}}(G/S,M)(S) \\to \\Gamma(\\mathrm{T}_{G/S}(M)/G)\\) qui associe à \\(X \\in \\underline{\\mathrm{Lie}}(G/S,M)(S)\\) la section \\(x \\mapsto X\\cdot x\\) est un isomorphisme de \\(\\underline{\\mathrm{Lie}}(G/S,M)(S)\\) sur la partie de \\(\\Gamma(\\mathrm{T}_{G/S}(M)/G)\\) formée des sections invariantes par translation à droite.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de <a class=\"ref\" href=\"#II.3.12\">3.12, corollaire</a>, on obtient :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><small><sup>(*)</sup> Les énoncés 4.1.2, 4.1.3 et 4.1.4 s'obtiennent plus simplement en remarquant que les automorphismes de G invariants par translations à droite sont les translations à gauche.</small></p>"
+    },
+    {
+     "id": "II.4.1.3",
+     "type": "proposition",
+     "label": "4.1.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.1.3</span> <sup>(*)</sup></div>\n  <div class=\"thm-body\"><p>Il existe un isomorphisme fonctoriel en G entre l'ensemble \\(\\underline{\\mathrm{Lie}}(G/S,M)(S)\\) et l'ensemble des \\(\\mathrm{I}_S(M)\\)-endomorphismes de \\(G_{\\mathrm{I}_S(M)}\\) induisant l'identité sur G et commutant aux translations à droite de G.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Tenant maintenant compte de 3.13 :</p>"
+    },
+    {
+     "id": "II.4.1.4",
+     "type": "theoreme",
+     "label": "4.1.4",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.4.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.1.4</span> <sup>(*)</sup></div>\n  <div class=\"thm-body\"><p>Soit G un foncteur en groupes sur S vérifiant (E) par rapport à S. Le groupe \\(\\underline{\\mathrm{Lie}}(G/S,M)(S)\\) s'identifie, fonctoriellement en G, au groupe des \\(\\mathrm{I}_S(M)\\)-automorphismes de \\(G_{\\mathrm{I}_S(M)}\\) induisant l'identité sur G et commutant aux translations à droite.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On retrouve ainsi (dans le cas \\(M = \\mathscr{O}_S\\)) une des définitions classiques de l'algèbre de Lie d'un groupe.</p>"
+    },
+    {
+     "id": "II.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.2\">4.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avant d'aller plus loin, établissons de nouveaux corollaires à 3.11. On a vu en loc. cit. que l'on a un isomorphisme canonique :\n\\[\n\\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_S(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{Y/S}(X, \\mathrm{T}_{Y/S}(M));\n\\]\nsupposons que Y soit un groupe ; on a alors \\(\\mathrm{T}_{Y/S}(M) = \\underline{\\mathrm{Lie}}(Y/S,M)\\cdot Y = \\underline{\\mathrm{Lie}}(Y/S,M)_Y\\) ; il en résulte un isomorphisme\n\\[\n\\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_S(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_S(X, \\underline{\\mathrm{Lie}}(Y/S,M)).\n\\]</p>"
+    },
+    {
+     "id": "II.4.2.prop",
+     "type": "proposition",
+     "label": "4.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.2.prop\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : X \\to Y\\) un morphisme de S-groupes. On a un isomorphisme fonctoriel\n  \\[\n  \\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_{S\\text{-gr.}}(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\mathrm{Z}^1_S(X, \\underline{\\mathrm{Lie}}(Y/S,M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(\\(\\mathrm{Z}^1_S\\) désigne le « foncteur des homomorphismes croisés » défini de manière analogue au foncteur \\(\\underline{\\mathrm{Hom}}\\). On fait opérer X sur \\(\\underline{\\mathrm{Lie}}(Y/S,M)\\) par le morphisme\n\\[\nX \\xrightarrow{\\ u\\ } Y \\xrightarrow{\\ \\mathrm{Ad}\\ } \\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(\\underline{\\mathrm{Lie}}(Y/S,M)).)\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci résulte de l'isomorphisme\n\\[\n\\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_{S\\text{-gr.}}(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{(Y/S)\\text{-gr.}}(X, \\underline{\\mathrm{Lie}}(Y/S,M)\\cdot Y)\n\\]\net de l'identification bien connue des sections d'un produit semi-direct aux cocycles du quotient dans le noyau (voir par exemple <a class=\"ref\" href=\"#III.1.2.2\">III, 1.2.2</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Appliquant 3.10, Corollaire 1, on en déduit :</p>"
+    },
+    {
+     "id": "II.4.2.cor1",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 1",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.2.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1</span></div>\n  <div class=\"thm-body\"><p>Si Y/S vérifie (E), on a des isomorphismes fonctoriels :\n  \\[\n  \\mathrm{L}^u_{\\underline{\\mathrm{Isom}}_{S\\text{-gr.}}(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\mathrm{Z}^1_S(X, \\underline{\\mathrm{Lie}}(Y/S,M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.2.cor2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 2",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.2.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 2</span></div>\n  <div class=\"thm-body\"><p>Si X/S vérifie (E), on a des isomorphismes fonctoriels\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(X)/S, M) \\xrightarrow{\\ \\sim\\ } \\mathrm{Z}^1_S(X, \\underline{\\mathrm{Lie}}(X/S,M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.2.cor3",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 3",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.2.cor3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 3</span></div>\n  <div class=\"thm-body\"><p>Si Y est commutatif, on a un isomorphisme fonctoriel\n  \\[\n  \\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_{S\\text{-gr.}}(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{S\\text{-gr.}}(X, \\underline{\\mathrm{Lie}}(Y/S,M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.3\">4.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons maintenant le cas où X et Y sont des \\(\\mathscr{O}_S\\)-modules. Si Y est un \\(\\mathscr{O}_S\\)-module, le foncteur \\(\\underline{\\mathrm{Lie}}(Y/S,M)\\) est muni d'une structure de \\(\\mathscr{O}_S\\)-module déduite de celle de Y. Muni de cette structure, on le notera provisoirement \\(\\underline{\\mathrm{Lie}}'(Y/S,M)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque Y/S vérifie (E), on notera toujours \\(\\underline{\\mathrm{Lie}}(Y/S,M)\\) le foncteur \\(\\underline{\\mathrm{Lie}}(Y/S,M)\\) muni de la structure de \\(\\mathscr{O}_S\\)-module définie pour tout foncteur vérifiant (E). Nous savons que les structures de groupes abéliens de \\(\\underline{\\mathrm{Lie}}(Y/S,M)\\) et \\(\\underline{\\mathrm{Lie}}'(Y/S,M)\\) coïncident, mais il n'en est pas de même a priori pour celles de module (voir un contre-exemple au paragraphe <a class=\"ref\" href=\"#II.6\">6</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a comme conséquence immédiate du corollaire précédent :</p>"
+    },
+    {
+     "id": "II.4.3.prop",
+     "type": "proposition",
+     "label": "4.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.3.prop\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>On a un isomorphisme fonctoriel :\n  \\[\n  \\mathrm{L}^u_{\\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(X,Y)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(X, \\underline{\\mathrm{Lie}}'(Y/S,M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.3.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.3.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>Si X/S vérifie (E), on a des isomorphismes fonctoriels :\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(X)/S, M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(X, \\underline{\\mathrm{Lie}}'(X/S,M)).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avant de continuer dans cette direction, examinons de plus près les relations entre Y, \\(\\underline{\\mathrm{Lie}}(Y/S)\\) et \\(\\underline{\\mathrm{Lie}}'(Y/S)\\). Remarquons d'abord que \\(\\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S,M) = \\underline{\\mathrm{Lie}}'(\\mathscr{O}_S/S,M) = \\mathbf{W}(M)\\) (<a class=\"ref\" href=\"#I.4.6\">I, 4.6</a>) et que l'on a donc un isomorphisme canonique\n\\[\nd : \\mathscr{O}_S \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S).\n\\]\nSoit maintenant F un \\(\\mathscr{O}_S\\)-module. Pour tout \\(S'\\) au-dessus de S, on a un dihomomorphisme,\n\\[\nF(S) \\longrightarrow F(S') \\qquad \\mathbf{O}(S) \\longrightarrow \\mathbf{O}(S'),\n\\]\nd'où un morphisme de \\(\\mathbf{O}(S')\\)-modules\n\\[\nF(S) \\otimes_{\\mathbf{O}(S)} \\mathbf{O}(S') \\longrightarrow F(S').\n\\]\nEn particulier, pour \\(S' = \\mathrm{I}_S(M)\\), on en déduit des morphismes fonctoriels en M\n\\[\nF(S) \\otimes_{\\mathbf{O}(S)} \\mathrm{T}_{\\mathscr{O}_S/S}(M)(S) \\longrightarrow \\mathrm{T}_{F/S}(M)(S),\n\\]\nce qu'en faisant varier S on pourra noter\n\\[\nF \\otimes_{\\mathscr{O}_S} \\mathrm{T}_{\\mathscr{O}_S/S}(M) \\longrightarrow \\mathrm{T}_{F/S}(M).\n\\]\nCes morphismes sont fonctoriels en M, donc compatibles avec les projections des fibrés tangents sur leurs bases. Ils définissent alors des morphismes\n\\[\nF \\otimes_{\\mathscr{O}_S} \\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S,M) \\longrightarrow \\underline{\\mathrm{Lie}}(F/S,M).\n\\]\nRemarquons que ces derniers morphismes sont fonctoriels en F, et par construction respectent les structures de modules déduites de celle de F (ce que nous avons appelé \\(\\underline{\\mathrm{Lie}}'(F/S,M)\\) au second membre). Si F/S vérifie (E), comme ces morphismes sont également fonctoriels en M, ils respectent également les structures de modules déduites de celle de M à l'aide de la condition (E), c'est-à-dire celles notées \\(\\underline{\\mathrm{Lie}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons enfin que par tensorisation avec \\(d : \\mathscr{O}_S \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S)\\), on déduit un </p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>morphisme\n\\[\nF \\xrightarrow{\\ \\sim\\ } F\\otimes_{\\mathscr{O}_S}\\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S) \\longrightarrow \\underline{\\mathrm{Lie}}(F/S)\n\\]\nnoté également \\(d : F \\to \\underline{\\mathrm{Lie}}(F/S)\\).</p>"
+    },
+    {
+     "id": "II.4.4",
+     "type": "definition",
+     "label": "4.4",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>On dit que F est un <em>bon</em> \\(\\mathscr{O}_S\\)-module si les morphismes\n  \\[\n  F\\otimes \\mathrm{T}_{\\mathscr{O}_S/S}(M) \\longrightarrow \\mathrm{T}_{F/S}(M)\n  \\]\n  sont des isomorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.4.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.4.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\">\n  <p>Si F est bon, alors : (i) F/S vérifie (E), (ii) \\(\\underline{\\mathrm{Lie}}(F/S,M) = \\underline{\\mathrm{Lie}}'(F/S,M)\\), (iii) \\(d : F \\to \\underline{\\mathrm{Lie}}(F/S)\\) est un isomorphisme de \\(\\mathscr{O}_S\\)-modules.</p>\n  <p>En effet :</p>\n  <p>(i) Il suffit de vérifier que \\(\\underline{\\mathrm{Lie}}(F/S,M\\oplus N) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(F/S,M)\\times_S \\underline{\\mathrm{Lie}}(F/S,N)\\). Or si F est bon, \\(F\\otimes \\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S,M) \\to \\underline{\\mathrm{Lie}}(F/S,M)\\) est un isomorphisme. Il n'y a plus qu'à remarquer que la propriété à démontrer est vraie pour \\(\\mathscr{O}_S\\) et que \\(\\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S,M)\\) est isomorphe au produit d'un nombre fini de copies de \\(\\mathscr{O}_S\\), donc \\(F\\otimes \\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S,M)\\) isomorphe au produit correspondant de copies de F.</p>\n  <p>(ii) L'isomorphisme \\(F\\otimes \\underline{\\mathrm{Lie}}(\\mathscr{O}_S/S,M) \\to \\underline{\\mathrm{Lie}}(F/S,M)\\) respecte les deux structures de modules définies plus haut, or ce sont les mêmes au premier membre.</p>\n  <p>(iii) d est composé de deux isomorphismes.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Exemples</em> de bons \\(\\mathscr{O}_S\\)-modules : pour tout \\(\\mathscr{O}_S\\)-Module quasi-cohérent \\(\\mathscr{E}\\), les \\(\\mathscr{O}_S\\)-modules \\(\\mathbf{V}(\\mathscr{E})\\) et \\(\\mathbf{W}(\\mathscr{E})\\) définis en <a class=\"ref\" href=\"#I.4.6\">I, 4.6</a> sont bons.</p>"
+    },
+    {
+     "id": "II.4.5",
+     "type": "proposition",
+     "label": "4.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>Soit F un bon \\(\\mathscr{O}_S\\)-module. On a un isomorphisme fonctoriel\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)/S, M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(F, \\underline{\\mathrm{Lie}}(F/S,M))\n  \\]\n  qui respecte les structures de \\(\\mathscr{O}_S\\)-modules. En particulier, on a un isomorphisme de \\(\\mathscr{O}_S\\)-modules\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)/S) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(F).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte immédiatement de 4.3 et de (i), (ii), (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons alors la définition suivante :</p>"
+    },
+    {
+     "id": "II.4.6",
+     "type": "definition",
+     "label": "4.6",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\"><p>On dit que le foncteur en groupes G au-dessus de S est <em>bon</em> si G vérifie la condition (E) par rapport à S et si \\(\\underline{\\mathrm{Lie}}(G/S)\\) est un bon \\(\\mathscr{O}_S\\)-module.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Exemple</em>. — Si G est représentable, il est bon : G vérifie (E) et \\(\\underline{\\mathrm{Lie}}(G/S)\\) est de la forme \\(\\mathbf{V}(\\mathscr{E})\\) donc bon.</p>"
+    },
+    {
+     "id": "II.4.7",
+     "type": "theoreme",
+     "label": "4.7",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\"><p>Si F est un bon \\(\\mathscr{O}_S\\)-module, le S-groupe \\(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)\\) est bon.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a de toutes façons un isomorphisme\n\\[\n\\mathrm{T}_{\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)/S}(M) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(F, \\mathrm{T}_{F/S}(M))\n\\]\nsi F/S vérifie (E) et si on munit \\(\\mathrm{T}_{F/S}(M)\\) de la structure de \\(\\mathscr{O}_S\\)-module déduite de celle de F. Si F est bon, alors il vérifie (E) et on a des isomorphismes \n\\[\n\\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(F, \\mathrm{T}_{F/S}(M)) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Hom}}_{\\mathscr{O}_S\\text{-mod.}}(F, F\\otimes \\mathrm{T}_{\\mathscr{O}_S/S}(M)).\n\\]\nIl en résulte d'abord que \\(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)\\) vérifie (E) par rapport à S. On a d'autre part\n\\[\n\\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)/S) \\simeq \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(F)\n\\]\net ce dernier module est bon si F est bon (car \\(\\mathrm{T}_{\\mathscr{O}_S/S}(M)\\) est « libre de type fini » sur \\(\\mathscr{O}_S\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit maintenant G un S-groupe et F un <em>bon</em> \\(\\mathscr{O}_S\\)-module. Supposons donnée une représentation linéaire de G dans F, c'est-à-dire (<a class=\"ref\" href=\"#I.4.7.1\">I, 4.7.1</a>), un morphisme de S-groupes\n\\[\n\\rho : G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F).\n\\]\nOn en déduit par 4.5 un morphisme\n\\[\n\\rho' : \\underline{\\mathrm{Lie}}(G/S) \\longrightarrow \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(F)\n\\]\nqui (si G/S vérifie (E)) est un morphisme de \\(\\mathscr{O}_S\\)-modules.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit en particulier G un <em>bon</em> S-groupe. Alors \\(\\underline{\\mathrm{Lie}}(G/S)\\) est un bon \\(\\mathscr{O}_S\\)-module, et on a un morphisme de S-groupes\n\\[\n\\mathrm{Ad} : G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(\\underline{\\mathrm{Lie}}(G/S)).\n\\]\nOn en déduit par la construction précédente un morphisme de \\(\\mathscr{O}_S\\)-modules\n\\[\n\\mathrm{ad} : \\underline{\\mathrm{Lie}}(G/S) \\longrightarrow \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(\\underline{\\mathrm{Lie}}(G/S)),\n\\]\noù, ce qui revient au même, un morphisme bilinéaire :\n\\[\n\\underline{\\mathrm{Lie}}(G/S) \\times_S \\underline{\\mathrm{Lie}}(G/S) \\longrightarrow \\underline{\\mathrm{Lie}}(G/S),\n\\]\nque l'on notera \\((x,y) \\mapsto [x,y] = \\mathrm{ad}(x)\\cdot y\\) (où x et y désignent deux éléments arbitraires de \\(\\underline{\\mathrm{Lie}}(G/S)(S') = \\underline{\\mathrm{Lie}}(G_{S'}/S')(S')\\)). Si G est commutatif, alors \\([x,y]=0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut donner du crochet une définition équivalente comme suit : remarquons d'abord qu'il suffit de le faire pour \\(x,y \\in \\underline{\\mathrm{Lie}}(G/S)(S)\\). Remarquons ensuite qu'il y a un isomorphisme canonique \\(\\mathrm{I}_S\\times_S \\mathrm{I}_S \\simeq \\mathrm{I}_{\\mathrm{I}_S}\\) ; pour éviter des confusions, notons I et \\(I'\\) deux exemplaires de \\(\\mathrm{I}_S\\). On a alors un diagramme commutatif\n\\[\n\\xymatrix{\nI\\times I' \\ar[r] \\ar[d] &amp; I \\ar[d] \\\\\nI' \\ar[r] &amp; S\n}\n\\]\nles deux flèches partant de \\(I\\times I'\\) identifiant celui-ci au schéma des nombres duaux sur I ou sur \\(I'\\). Il en résulte un diagramme commutatif de groupes (où on note \\(\\mathrm{L} = \\underline{\\mathrm{Lie}}(G/S)\\)) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n&amp; &amp; 1 \\ar[d] &amp; 1 \\ar[d] &amp; \\\\\n&amp; &amp; \\mathrm{L}(I) \\ar[d] &amp; \\mathrm{L}(S) \\ar[d] &amp; \\\\\n1 \\ar[r] &amp; \\mathrm{L}(I') \\ar[r] &amp; G(I\\times I') \\ar[r] \\ar[d] &amp; G(I') \\ar[r] \\ar[d] &amp; 1 \\\\\n1 \\ar[r] &amp; \\mathrm{L}(S) \\ar[r] &amp; G(I) \\ar[r] \\ar[d] &amp; G(S) \\ar[r] \\ar[d] &amp; 1 \\\\\n&amp; &amp; 1 &amp; 1 &amp;\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La neuvième pièce du puzzle n'est autre que \\(\\underline{\\mathrm{Lie}}(\\mathrm{L}/S)(S)\\). Si G est <em>bon</em>, c'est \\(\\mathrm{L}(S)\\) et on a donc un diagramme commutatif où les lignes et les colonnes sont des suites exactes de groupes et où les cinq \\(\\mathrm{L}(\\ )\\) sont commutatifs :\n\\[\n\\xymatrix{\nz\\in \\mathrm{L}(S) \\ar[r] \\ar[d] &amp; \\mathrm{L}(I) \\ar[r] \\ar[d] &amp; \\mathrm{L}(S) \\ni x \\ar[d] \\\\\n\\mathrm{L}(I') \\ar[r] \\ar[d] &amp; G(I\\times I') \\ar[r] \\ar[d] &amp; G(I') \\ar[d] \\\\\ny\\in \\mathrm{L}(S) \\ar[r] &amp; G(I) \\ar[r] &amp; G(S)\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or dans un tel diagramme, si on prend deux éléments x et y comme noté, et qu'on les relève arbitrairement en \\(x'\\) et \\(y'\\) dans \\(G(I\\times I')\\), le commutateur \\(x'y'x'^{-1}y'^{-1}\\) des deux éléments obtenus ne dépend pas des relèvements choisis et est l'image d'un élément z comme noté. Le lecteur vérifiera que l'on a \\(z = [x,y]\\) <sup>(*)</sup>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><small><sup>(*)</sup> Le rédacteur reconnaît, à la demande de Gabriel, que l'exercice n'est pas immédiat ; c'est d'ailleurs la raison pour laquelle il n'est pas dans le texte.</small></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sur cette construction apparaissent les deux propriétés suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) le crochet est « fonctoriel en G » : de manière précise, \\(G \\mapsto \\underline{\\mathrm{Lie}}(G/S)\\) est un foncteur de la catégorie des bons S-groupes dans la catégorie des bons \\(\\mathscr{O}_S\\)-modules munis d'une loi de composition bilinéaire.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) On a \\([x,y]+[y,x] = 0\\) : en effet le diagramme est symétrique par rapport à la première diagonale.</p>"
+    },
+    {
+     "id": "II.4.8",
+     "type": "proposition",
+     "label": "4.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\"><p>Soit F un bon \\(\\mathscr{O}_S\\)-module. Dans l'identification\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)/S) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(F)\n  \\]</p>\n\n  <p>\\(\\mathrm{Ad}(x)\\cdot X\\) est transformé en \\(x\\circ X\\circ x^{-1}\\) et \\([X,Y]\\) en \\(X\\circ Y - Y\\circ X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons d'abord \\(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_{\\mathrm{I}_S}\\text{-mod.}}(F_{\\mathrm{I}_S})\\). Un élément x de ce groupe est, par définition du changement de base pour les foncteurs, la donnée pour tout \\(S' \\to \\mathrm{I}_S\\) d'un \\(\\mathbf{O}(S')\\)-automorphisme de \\(F(S')\\), soit \\(x_{S'}\\). Or, remarquons que se donner un \\(S' \\to \\mathrm{I}_S\\) est équivalent à se donner un \\(S' \\to S\\) muni d'une section \\(s : S' \\to \\mathrm{I}_{S'}\\). On voit alors aussitôt que \\(x_{S'}\\) est déterminé par \\(x_{\\mathrm{I}_{S'}}\\) et que donc il suffit pour vérifier les formules exigées de les vérifier sur les \\(F(\\mathrm{I}_{S'})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(F(\\mathrm{I}_{S'}) = F(S')\\cdot \\underline{\\mathrm{Lie}}(F/S)(S') = F(S')\\cdot F(S')\\) puisque F est bon. Notons \\(\\mathbf{O}(\\mathrm{I}_{S'}) = \\mathbf{O}(S')[\\varepsilon]\\), \\(\\varepsilon^2=0\\). Il est immédiat de voir que l'endomorphisme X de F correspond par l'identification donnée à l'automorphisme \\(\\mathrm{I}+\\varepsilon X\\) de \\(F(\\mathrm{I}_{S'})\\). Il n'y a plus qu'à traduire les définitions pour ramener les formules annoncées à \n\\[\nx\\circ(\\mathrm{I}+\\varepsilon X)\\circ x^{-1} = \\mathrm{I} + \\varepsilon(x\\circ X\\circ x^{-1})\n\\]\net\n\\[\n(\\mathrm{I}+\\varepsilon X)\\circ(\\mathrm{I}+\\varepsilon' Y)\\circ(\\mathrm{I}+\\varepsilon X)^{-1}\\circ(\\mathrm{I}+\\varepsilon' Y)^{-1} = \\mathrm{I} + \\varepsilon\\varepsilon'(X\\circ Y - Y\\circ X)\n\\]\nlorsque \\(\\varepsilon^2 = \\varepsilon'^2 = 0\\).</p>"
+    },
+    {
+     "id": "II.4.8.cor1",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 1",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.8.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1</span></div>\n  <div class=\"thm-body\"><p>Soient G un bon S-groupe et \\(x,y,z \\in \\underline{\\mathrm{Lie}}(G/S)(S')\\). On a :\n  \\[\n  [x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, si G est bon, alors \\(\\underline{\\mathrm{Lie}}(G/S)\\) est un bon \\(\\mathscr{O}_S\\)-module et le morphisme de S-groupes \\(\\mathrm{Ad} : G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(\\underline{\\mathrm{Lie}}(G/S))\\) donne par fonctorialité\n\\[\n[\\mathrm{ad}\\,x, \\mathrm{ad}\\,y] = \\mathrm{ad}\\,x\\circ \\mathrm{ad}\\,y - \\mathrm{ad}\\,y\\circ \\mathrm{ad}\\,x = \\mathrm{ad}[x,y],\n\\]\nce qui, appliqué à un élément z, donne la relation de Jacobi.</p>"
+    },
+    {
+     "id": "II.4.8.cor2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 2",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.4.8.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 2</span></div>\n  <div class=\"thm-body\"><p>Soit G un bon S-groupe opérant linéairement sur un bon \\(\\mathscr{O}_S\\)-module F (i.e. soit F un G-\\(\\mathscr{O}_S\\)-module, G et F bons). Alors l'application linéaire \\(\\rho' : \\underline{\\mathrm{Lie}}(G/S) \\to \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(F)\\) est une représentation, c'est-à-dire que l'on a\n  \\[\n  \\rho'([x,y]) = \\rho'(x)\\circ \\rho'(y) - \\rho'(y)\\circ \\rho'(x).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "II.4.9",
+     "type": "scholie",
+     "label": "4.9",
+     "title": "Scholie",
+     "html": "<div class=\"thm thm-remark scholie\" id=\"II.4.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Scholie</span> <span class=\"thm-num\">4.9</span></div>\n  <div class=\"thm-body\"><p>A tout bon S-groupe (par exemple représentable), on a associé un bon \\(\\mathscr{O}_S\\)-module \\(\\underline{\\mathrm{Lie}}(G/S)\\) muni fonctoriellement d'une application bilinéaire vérifiant\n  \\[\n  [x,y]+[y,x]=0, \\qquad [x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0.\n  \\]\n  Nous appellerons \\(\\underline{\\mathrm{Lie}}(G/S)\\) muni de cette structure l'« algèbre de Lie » de G sur S (les guillemets étant justifiés par le fait que \\(\\underline{\\mathrm{Lie}}(G/S)\\) n'est pas à strictement parler une \\(\\mathscr{O}_S\\)-algèbre de Lie). À toute représentation linéaire de G dans un bon \\(\\mathscr{O}_S\\)-module F est associée une représentation de son « algèbre de Lie ». En particulier, à la représentation adjointe de G est associée la représentation adjointe de son « algèbre de Lie ».</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.10",
+     "type": "definition",
+     "label": "4.10",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.10</span></div>\n  <div class=\"thm-body\"><p>Un foncteur en groupes G au-dessus de S est dit <em>très bon</em> s'il est bon et si \\(\\underline{\\mathrm{Lie}}(G/S)\\) est une \\(\\mathscr{O}_S\\)-algèbre de Lie (c'est-à-dire si on a identiquement \\([x,x]=0\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Exemples de très bons S-groupes.</em> Le groupe \\(\\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F)\\) pour tout bon \\(\\mathscr{O}_S\\)-module F. Tout groupe représentable (voir ci-après). Tout bon S-groupe admettant un monomorphisme dans un très bon S-groupe, par exemple tout bon sous-foncteur en groupes d'un groupe représentable, ou tout bon S-groupe admettant une représentation linéaire fidèle dans un bon \\(\\mathscr{O}_S\\)-module, par exemple tout bon S-groupe tel que Ad soit un monomorphisme…</p>"
+    },
+    {
+     "id": "II.4.11",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.11\">4.11.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant que G soit un <em>schéma en groupes</em> sur S. D'après 4.1.4, \\(\\underline{\\mathrm{Lie}}(G/S)(S)\\) s'identifie au groupe des automorphismes infinitésimaux de G/S invariants à droite, c'est-à-dire par 3.14 au groupe des <em>dérivations de \\(\\mathscr{O}_G\\) au-dessus de \\(\\mathscr{O}_S\\) invariantes par translation à droite</em>. De plus cette identification respecte la structure de module et même d'algèbre de Lie, le crochet dans \\(\\underline{\\mathrm{Lie}}(G/S)(S)\\) correspondant au crochet des dérivations, comme on le voit en raisonnant comme dans la proposition 4.8 : il faut calculer le commutateur des automorphismes u et v de \\(\\mathscr{O}_{X_{\\mathrm{I}_S\\times \\mathrm{I}_S}}\\) définis par\n\\[\nu = \\mathrm{I}+\\varepsilon d, \\qquad v = \\mathrm{I}+\\varepsilon' d'; \\qquad \\varepsilon^2 = \\varepsilon'^2 = 0.\n\\]\nOn trouve immédiatement \\(uvu^{-1}v^{-1} = \\mathrm{I}+\\varepsilon\\varepsilon'(dd'-d'd)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On retrouve alors la définition classique : \\(\\underline{\\mathrm{Lie}}(G/S)\\) est le foncteur qui à tout \\(S'\\) au-dessus de S, associe la \\(\\mathbf{O}(S')\\)-algèbre de Lie des dérivations de \\(G_{S'}\\) par rapport à \\(S'\\) invariantes par translation à droite. Il en résulte en particulier que <em>tout groupe représentable est très bon</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons d'autre part (3.3) que \\(\\underline{\\mathrm{Lie}}(G/S)\\) est représentable par le fibré vectoriel \\(\\mathbf{V}(\\omega^1_{G/S})\\), où \\(\\omega^1_{G/S}\\) est l'image réciproque par la section unité de G du faisceau \\(\\Omega^1_{G/S}\\) des différentielles relatives de G par rapport à S. Les propriétés qui précèdent montrent que le \\(\\mathscr{O}_S\\)-module \\(\\omega^1_{G/S}\\) s'identifie au faisceau des différentielles de G par rapport à S invariantes à droite, c'est-à-dire au faisceau dont les sections sur un ouvert U de S sont les sections de \\(\\Omega^1_{G/S}\\) sur l'image réciproque de U invariantes par translation à droite.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons enfin qu'il résulte de la décomposition du fibré tangent en produit semi-direct que le \\(\\mathscr{O}_G\\)-Module \\(\\Omega^1_{G/S}\\) est l'image réciproque par la projection \\(G\\to S\\) du \\(\\mathscr{O}_S\\)-Module \\(\\omega^1_{G/S}\\). Il en résulte par exemple que \\(\\Omega^1_{G/S}\\) est localement libre (resp. localement libre de type fini) si \\(\\omega^1_{G/S}\\) l'est, ce qui est en particulier le cas <em>si S est le spectre d'un corps</em> (resp. si S est le spectre d'un corps et G localement de type fini sur S).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc associé fonctoriellement à tout S-<em>schéma en groupes</em> G sur S un fibré vectoriel \\(\\underline{\\mathrm{Lie}}(G/S)\\) sur S muni d'une structure de S-schéma en algèbres de Lie sur le S-schéma d'anneaux \\(\\mathscr{O}_S\\). Rappelons (3.4 et 3.8) que cette construction <em>commute aux produits finis et à l'extension de la base</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathscr{L}ie(G/S)\\) le faisceau des sections de ce fibré vectoriel (EGA II 1.7.9). Il est muni d'une structure de \\(\\mathscr{O}_S\\)-Algèbre de Lie. Comme cette construction ne commute pas à l'extension de la base (en général), la structure d'Algèbre de Lie sur ce Module ne permet pas de reconstituer la structure de schéma en algèbres de Lie sur \\(\\underline{\\mathrm{Lie}}(G/S)\\). Il en est cependant ainsi lorsque \\(\\omega^1_{G/S}\\) est localement libre de type fini (ce qui se produit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en particulier si G est lisse sur S ou si S est le spectre d'un corps et G localement de type fini sur S), car on a alors\n\\[\n\\underline{\\mathrm{Lie}}(G/S) = \\mathbf{V}(\\omega^1_{G/S}) = \\mathbf{W}(\\mathscr{L}ie(G/S)). \\qquad (\\text{I, 4.6.5, Cor.})\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons enfin que si \\(G\\to H\\) est un monomorphisme de foncteurs en groupes, alors \\(\\underline{\\mathrm{Lie}}(G/S)\\to \\underline{\\mathrm{Lie}}(H/S)\\) est également un monomorphisme. Si G et H sont représentables, alors \\(\\omega^1_{H/S}\\to \\omega^1_{G/S}\\) est un épimorphisme et \\(\\underline{\\mathrm{Lie}}(G/S)\\to \\underline{\\mathrm{Lie}}(H/S)\\) est une immersion fermée ; en effet un monomorphisme vectoriel de fibrés vectoriels est une immersion fermée. On a en particulier le résultat suivant : soit \\(G\\to H\\) un <em>monomorphisme de schémas en groupes sur S</em> ; si \\(\\omega^1_{G/S}\\) est localement libre de type fini, alors le morphisme correspondant \\(\\underline{\\mathrm{Lie}}(G/S)\\to \\underline{\\mathrm{Lie}}(H/S)\\) est un isomorphisme de \\(\\underline{\\mathrm{Lie}}(G/S)\\) sur un sous-module de \\(\\underline{\\mathrm{Lie}}(H/S)\\) <em>localement facteur direct</em>.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-5",
+   "title": "5. Calcul de quelques algèbres de Lie",
+   "blocks": [
+    {
+     "id": "II.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.5\">5. Calcul de quelques algèbres de Lie</h2>"
+    },
+    {
+     "id": "II.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.1\">5.1. Exemples d'algèbres de Lie : les groupes diagonalisables.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(G = \\mathbf{D}_S(M)\\) un groupe diagonalisable sur S (<a class=\"ref\" href=\"#I.4.4\">I, 4.4</a>). La formation de \\(\\underline{\\mathrm{Lie}}(G/S)\\) commutant à l'extension de la base, il suffit de faire la construction pour \\(G=\\mathbf{D}(M)\\). On a alors :\n\\[\nG(\\mathrm{I}_S) = \\mathrm{Hom}_{\\mathrm{gr.}}(M,\\Gamma(\\mathrm{I}_S,\\mathscr{O}_{\\mathrm{I}_S})^{\\times}) = \\mathrm{Hom}_{\\mathrm{gr.}}(M,\\Gamma(S,\\mathrm{D}_{\\mathscr{O}_S})^{\\times}).\n\\]\nOr on a une suite exacte scindée\n\\[\n1 \\longrightarrow \\Gamma(S,\\mathscr{O}_S) \\longrightarrow \\Gamma(S,\\mathrm{D}_{\\mathscr{O}_S})^{\\times} \\longrightarrow \\Gamma(S,\\mathscr{O}_S)^{\\times} \\longrightarrow 1,\n\\]\nce qui donne \n\\[\n\\underline{\\mathrm{Lie}}(G)(S) \\simeq \\mathrm{Hom}_{\\mathrm{gr.}}(M,\\mathbf{O}(S))\n\\]\nmuni de sa structure de \\(\\mathbf{O}(S)\\)-module évidente. On obtient donc après changement de base :</p>"
+    },
+    {
+     "id": "II.5.1.prop",
+     "type": "proposition",
+     "label": "5.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.1.prop\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\"><p>On a des isomorphismes\n  \\[\n  \\underline{\\mathrm{Hom}}_{S\\text{-gr.}}(M_S,\\mathscr{O}_S) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\mathbf{D}_S(M)/S) \\qquad \\text{et} \\qquad \\mathscr{H}om(\\underline{M}_S,\\mathscr{O}_S) \\xrightarrow{\\ \\sim\\ } \\mathscr{L}ie(\\mathbf{D}_S(M)/S),\n  \\]\n  (où, dans le second isomorphisme, \\(\\underline{M}_S\\) désigne le faisceau de groupes constant sur S défini par M, et \\(\\mathscr{H}om\\) le faisceau des homomorphismes de faisceaux de groupes).</p></div>\n</div>"
+    },
+    {
+     "id": "II.5.1.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.5.1.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>Si M est libre de type fini (ou, comme nous dirons plus tard, si \\(\\mathbf{D}_S(M)\\) est un tore déployé) alors\n  \\[\n  \\mathbf{W}(\\mathscr{L}ie(\\mathbf{D}_S(M)/S)) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\mathbf{D}_S(M)/S) \\quad \\text{(voir I, 4.6.5),} \\qquad M^{\\vee}_S \\otimes_{\\mathbb{Z}} \\mathscr{O}_S \\xrightarrow{\\ \\sim\\ } \\mathscr{L}ie(\\mathbf{D}_S(M)/S),\n  \\]\n  où \\(M^{\\vee}\\) désigne le dual du groupe abélien M. En particulier\n  \\[\n  \\mathscr{O}_S \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\mathbb{G}_{m,S}/S) \\qquad \\text{et} \\qquad \\mathscr{O}_S \\xrightarrow{\\ \\sim\\ } \\mathscr{L}ie(\\mathbb{G}_{m,S}/S).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.2\">5.2. Normalisateurs et centralisateurs.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons d'abord quelques lemmes sur les \\(\\mathscr{O}_S\\)-modules.</p>"
+    },
+    {
+     "id": "II.5.2.1",
+     "type": "lemme",
+     "label": "5.2.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"II.5.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.2.1</span></div>\n  <div class=\"thm-body\">\n  <p>Une suite \\(0\\to F'\\to F\\to F''\\to 0\\) de \\(\\mathscr{O}_S\\)-modules est exacte si et seulement si pour tout \\(S'\\) au-dessus de S la suite \\(0\\to F'(S')\\to F(S')\\to F''(S')\\to 0\\) de \\(\\mathbf{O}(S')\\)-modules est exacte.</p>\n  <p>Les suites \\(0\\to \\mathrm{T}_{F'/S}(M)\\to \\mathrm{T}_{F/S}(M)\\to \\mathrm{T}_{F''/S}(M)\\to 0\\) et \\(0\\to \\underline{\\mathrm{Lie}}(F'/S,M)\\to \\underline{\\mathrm{Lie}}(F/S,M)\\to \\underline{\\mathrm{Lie}}(F''/S,M)\\to 0\\) sont alors exactes. Si deux des modules en cause sont bons, le troisième l'est aussi. Si les suites \\(0\\to F'\\to F\\to F''\\to 0\\) et \\(0\\to H'\\to H\\to H''\\to 0\\) sont exactes, alors la suite \\(0\\to F'\\times_S H'\\to F\\times_S H\\to F''\\times_S H''\\to 0\\) l'est aussi.</p>\n  <p>Les démonstrations (immédiates) sont laissées au lecteur (pour l'avant-dernière assertion, utiliser le lemme des cinq et le fait que \\(\\mathrm{T}_{\\mathscr{O}_S/S}(M)\\) est libre).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.5.2.2",
+     "type": "lemme",
+     "label": "5.2.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"II.5.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.2.2</span></div>\n  <div class=\"thm-body\"><p>Soient F et H deux G-\\(\\mathscr{O}_S\\)-modules. L'homomorphisme canonique \\(F^G\\times_S H^G \\to (F\\times_S H)^G\\) est un isomorphisme. Si F est bon, \\(F^G\\) l'est aussi.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons la seconde assertion. On a un diagramme commutatif\n\\[\n\\xymatrix{\nF^G(\\mathrm{I}_S(M)) \\ar[r] &amp; F(\\mathrm{I}_S(M)) \\\\\nF^G(S)\\otimes_{\\mathbf{O}(S)} \\mathbf{O}(\\mathrm{I}_S(M)) \\ar[r] \\ar[u]^-{f} &amp; F(S)\\otimes_{\\mathbf{O}(S)} \\mathbf{O}(\\mathrm{I}_S(M)) \\ar[u]_-{\\simeq,\\,f_1}\n}\n\\]\net l'on doit démontrer que f est bijectif ; or il est évidemment injectif ; montrons qu'il est surjectif. Soit donc \\(u\\in F(S)\\otimes \\mathbf{O}(\\mathrm{I}_S(M))\\) tel que \\(f_1(u)\\) soit invariant par \\(G(\\mathrm{I}_S(M))\\). Considérons S comme au-dessus de \\(\\mathrm{I}_S(M)\\) par la section zéro. Si \\(S'\\) est au-dessus de S, alors \\(u\\in F(S)^{G(S')}\\otimes \\mathbf{O}(\\mathrm{I}_S(M))\\), \\(\\mathbf{O}(\\mathrm{I}_S(M))\\) étant libre sur \\(\\mathbf{O}(S)\\). Faisant varier \\(S'\\), on en déduit que \\(u\\in F^G(S)\\otimes \\mathbf{O}(\\mathrm{I}_S(M))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "II.5.2.3",
+     "type": "theoreme",
+     "label": "5.2.3",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.5.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.2.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient G un S-groupe et K un sous-S-groupe de G. Notons \\(\\underline{\\mathrm{Norm}}_G(K) = N\\), \\(\\underline{\\mathrm{Centr}}_G(K) = Z\\) (<a class=\"ref\" href=\"#I.2.3.3\">I, 2.3.3</a>). Faisons opérer K sur \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) par l'intermédiaire de la représentation adjointe de G.</p>\n  <p>(i) Si la loi de groupe de \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) est commutative <sup>(*)</sup> alors\n  \\[\n  \\underline{\\mathrm{Lie}}(N/S,M)\\big/\\underline{\\mathrm{Lie}}(K/S,M) = \\bigl(\\underline{\\mathrm{Lie}}(G/S,M)\\big/\\underline{\\mathrm{Lie}}(K/S,M)\\bigr)^K\n  \\]\n  (si E et F sont deux S-groupes commutatifs, on note E/F le S-groupe commutatif défini par \\((E/F)(S') = E(S')/F(S')\\)).</p>\n  <p>(ii) Si la loi de groupe de \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) est commutative <sup>(*)</sup>, alors\n  \\[\n  \\underline{\\mathrm{Lie}}(Z/S,M) = \\underline{\\mathrm{Lie}}(G/S,M)^K.\n  \\]</p>\n    <p>(iii) Si G vérifie (E) (resp. si G et K vérifient (E)), alors Z vérifie (E) (resp. N vérifie (E)).</p>\n  <p>(iv) Si G est bon (resp. si G et K sont bons), alors Z est bon (resp. N est bon). Si de plus G est très bon, alors Z (resp. N) est très bon.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><small><sup>(*)</sup> Condition automatiquement vérifiée si G vérifie (E) (cf. 3.9) par exemple si G est représentable.</small></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons (i) et (ii). Soit H = N (resp. Z). On a\n\\[\n\\underline{\\mathrm{Lie}}(H/S,M)(S) = \\{X\\in \\underline{\\mathrm{Lie}}(G/S,M)(S)\\subset G(\\mathrm{I}_S(M)) \\mid X\\cdot u\\cdot X^{-1}\\cdot u^{-1}\\in K(S')\\ (\\text{resp.}\\ =1)\\text{ pour tout } u\\in K(S'),\\ S'\\longrightarrow \\mathrm{I}_S(M)\\}.\n\\]\nSoit \\(X\\in \\underline{\\mathrm{Lie}}(G/S,M)(S)\\). Pour que X appartienne à \\(\\underline{\\mathrm{Lie}}(H/S,M)(S)\\), il suffit de vérifier la condition précédente pour tous les \\(S'\\) de la forme \\(\\mathrm{I}_{S_1}(M)\\), le morphisme structural provenant par extension de la base d'un morphisme \\(S_1\\to S\\). On a en effet un diagramme commutatif\n\\[\n\\xymatrix{\n&amp; \\mathrm{I}_{S'}(M) \\ar[d]^-{h} \\\\\n\\mathrm{I}_S(M) \\ar[ur] \\ar[d] &amp; S' \\ar[dl] \\\\\nS &amp;\n}\n\\]\nqui montre que se donner un \\(S'\\) au-dessus de \\(\\mathrm{I}_S(M)\\) est équivalent à se donner un \\(S'\\) au-dessus de S muni d'une section h de \\(\\mathrm{I}_{S'}(M)\\) au-dessus de \\(S'\\) ; Or si la propriété exigée est vraie pour tout u de \\(K(\\mathrm{I}_{S'}(M))\\), elle le sera aussi pour tout \\(u\\in K(S')\\) car \\(K(h) : K(\\mathrm{I}_{S'}(M)) \\to K(S')\\) est surjectif.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or tout \\(u\\in K(\\mathrm{I}_{S'}(M))\\) s'écrit de manière unique \\(Y\\cdot k\\) où \\(k\\in K(S')\\) et \\(Y\\in \\underline{\\mathrm{Lie}}(K/S,M)(S')\\). L'expression \\(X\\cdot u\\cdot X^{-1}\\cdot u^{-1}\\) devient alors \\(XYkX^{-1}k^{-1}Y^{-1}\\) qui, si \\(\\underline{\\mathrm{Lie}}(G/S,M)\\) est commutatif, s'écrit \\(X\\,\\mathrm{Ad}(k)(X^{-1})\\). Mais celui-ci est a priori dans \\(\\underline{\\mathrm{Lie}}(G/S,M)(S')\\). La condition sur X s'écrit donc \\(X\\,\\mathrm{Ad}(k)(X^{-1})\\in \\underline{\\mathrm{Lie}}(K/S,M)(S')\\) (resp. \\(=1\\)) pour tout \\(k\\in K(S')\\). Ceci prouve (ii). Dans le cas où \\(H=N\\), si on note \\(\\dot{X}\\) l'image de X dans F(S) (où on pose \\(\\underline{\\mathrm{Lie}}(G/S,M)/\\underline{\\mathrm{Lie}}(K/S,M) = F\\)), la condition s'écrit \\(\\mathrm{Ad}(k)(\\overline{X}^{-1}) = \\overline{X}^{-1}\\) où \\(\\overline{X}\\) est l'image de X dans \\(F(S')\\), ce qui démontre (i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) se prouve alors immédiatement. (iv) résulte des lemmes 5.2.1 et 5.2.2.</p>"
+    },
+    {
+     "id": "II.5.2.3.cor1",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 1",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.5.2.3.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1</span></div>\n  <div class=\"thm-body\"><p>On a \\(\\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Centr}}(G)/S) = \\underline{\\mathrm{Lie}}(G/S)^G\\) si la loi de groupe de \\(\\underline{\\mathrm{Lie}}(G/S)\\) est commutative.</p></div>\n</div>"
+    },
+    {
+     "id": "II.5.2.3.cor2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire 2",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"II.5.2.3.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 2</span></div>\n  <div class=\"thm-body\"><p>Si la loi de groupe de \\(\\underline{\\mathrm{Lie}}(G/S)\\) est commutative et si K est un sous-groupe invariant de G, alors\n  \\[\n  \\bigl(\\underline{\\mathrm{Lie}}(G/S)\\big/\\underline{\\mathrm{Lie}}(K/S)\\bigr)^K = \\underline{\\mathrm{Lie}}(G/S)\\big/\\underline{\\mathrm{Lie}}(K/S).\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "II.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.3\">5.3. Représentations linéaires.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un bon S-groupe opérant linéairement sur un bon \\(\\mathscr{O}_S\\)-module F\n\\[\n\\rho : G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathscr{O}_S\\text{-mod.}}(F).\n\\]\nOn a défini (4.8, cor. 2) une représentation linéaire correspondante\n\\[\n\\rho' : \\underline{\\mathrm{Lie}}(G/S) \\longrightarrow \\underline{\\mathrm{End}}_{\\mathscr{O}_S\\text{-mod.}}(F).\n\\]\nLes sous-S-groupes \\(\\underline{\\mathrm{Norm}}_G(E)\\) et \\(\\underline{\\mathrm{Centr}}_G(E)\\) sont définis pour toute partie E de F, par exemple pour tout sous-\\(\\mathscr{O}_S\\)-module E de F. On posera de manière analogue\n\\[\n\\underline{\\mathrm{Norm}}_{\\underline{\\mathrm{Lie}}(G/S)}(E)(S') = \\{X\\in \\underline{\\mathrm{Lie}}(G/S)(S'),\\ \\rho'(X)E_{S'}\\subset E_{S'}\\}.\n\\]\n\\[\n\\underline{\\mathrm{Centr}}_{\\underline{\\mathrm{Lie}}(G/S)}(E)(S') = \\{X\\in \\underline{\\mathrm{Lie}}(G/S)(S'),\\ \\rho'(X)E_{S'} = 0\\}.\n\\]\n(Notons que cette construction se fait pour toute représentation linéaire d'une \\(\\mathscr{O}_S\\)-« algèbre de Lie » et que les deux sous-objets construits sont des sous-\\(\\mathscr{O}_S\\)-modules stables par le crochet).</p>"
+    },
+    {
+     "id": "II.5.3.1",
+     "type": "theoreme",
+     "label": "5.3.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"II.5.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.3.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient G un bon S-groupe opérant linéairement sur un bon \\(\\mathscr{O}_S\\)-module F et E un sous-\\(\\mathscr{O}_S\\)-module de F.</p>\n  <p>(i) On a\n  \\[\n  \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Norm}}_G(E)/S) = \\underline{\\mathrm{Norm}}_{\\underline{\\mathrm{Lie}}(G/S)}(E), \\qquad \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Centr}}_G(E)/S) = \\underline{\\mathrm{Centr}}_{\\underline{\\mathrm{Lie}}(G/S)}(E).\n  \\]</p>\n  <p>(ii) \\(\\underline{\\mathrm{Centr}}_G(E)\\) est bon ; si E est bon, alors \\(\\underline{\\mathrm{Norm}}_G(E)\\) est bon. Si de plus G est très bon, alors \\(\\underline{\\mathrm{Centr}}_G(E)\\) et \\(\\underline{\\mathrm{Norm}}_G(E)\\) sont très bons.</p>\n  <p>La démonstration est facile et laissée au lecteur.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.5.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.3.2\">5.3.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci s'applique en particulier au cas où on prend pour \\(\\rho\\) la représentation adjointe de G. A tout sous-module E de \\(\\underline{\\mathrm{Lie}}(G/S)\\) on associe donc deux sous-groupes de G, son centralisateur et son normalisateur, dont les algèbres de Lie sont respectivement le centralisateur et le normalisateur de E dans \\(\\underline{\\mathrm{Lie}}(G/S)\\) calculés comme d'habitude à l'aide du crochet :\n\\[\n\\underline{\\mathrm{Norm}}_{\\underline{\\mathrm{Lie}}(G/S)}(E)(S') = \\{X\\in \\underline{\\mathrm{Lie}}(G/S)(S'),\\ [X,E_{S'}]\\subset E_{S'}\\}.\n\\]\n\\[\n\\underline{\\mathrm{Centr}}_{\\underline{\\mathrm{Lie}}(G/S)}(E)(S') = \\{X\\in \\underline{\\mathrm{Lie}}(G/S)(S'),\\ [X,E_{S'}] = 0\\}.\n\\]</p>"
+    },
+    {
+     "id": "II.5.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.3.3\">5.3.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit alors K un sous-S-groupe de G. Alors \\(\\underline{\\mathrm{Lie}}(K/S)\\) est un sous-\\(\\mathscr{O}_S\\)-module de \\(\\underline{\\mathrm{Lie}}(G/S)\\) et on a évidemment\n\\[\n\\underline{\\mathrm{Norm}}_G(K) \\subset \\underline{\\mathrm{Norm}}_G(\\underline{\\mathrm{Lie}}(K/S)) \\qquad \\underline{\\mathrm{Centr}}_G(K) \\subset \\underline{\\mathrm{Centr}}_G(\\underline{\\mathrm{Lie}}(K/S)),\n\\]\nd'où\n\\[\n\\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Norm}}_G(K)/S) \\subset \\underline{\\mathrm{Norm}}_{\\underline{\\mathrm{Lie}}(G/S)}(\\underline{\\mathrm{Lie}}(K/S)) \\qquad \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Centr}}_G(K)/S) \\subset \\underline{\\mathrm{Centr}}_{\\underline{\\mathrm{Lie}}(G/S)}(\\underline{\\mathrm{Lie}}(K/S)),\n\\]\nmais aucune de ces quatre inclusions n'est a priori une identité ; nous en verrons par la suite bien des exemples.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte en particulier de ces inclusions que si K est un sous-groupe invariant de G, alors \\(\\underline{\\mathrm{Lie}}(K/S)\\) est un idéal de \\(\\underline{\\mathrm{Lie}}(G/S)\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-6",
+   "title": "6. Remarques diverses",
+   "blocks": [
+    {
+     "id": "II.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.6\">6. Remarques diverses</h2>"
+    },
+    {
+     "id": "II.6.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.1\">6.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut définir le crochet de deux automorphismes infinitésimaux pour un S-foncteur X qui ne soit pas nécessairement un groupe. Il suffit d'appliquer les résultats de cet exposé au groupe \\(\\underline{\\mathrm{Aut}}_S(X)\\). Pour pouvoir aboutir à un formalisme agréable, on est conduit à supposer X <em>bon</em>, c'est-à-dire à supposer que le \\(\\mathscr{O}_X\\)-module \\(\\mathrm{T}_{X/S}\\) est bon (si X est un S-groupe, cette définition coïncide évidemment avec la définition 4.6).</p>"
+    },
+    {
+     "id": "II.6.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.2\">6.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il existe des foncteurs possédant des endomorphismes infinitésimaux qui ne soient pas des automorphismes, donc a fortiori ne vérifiant pas la condition (E). Prenons par exemple pour X(S) le monoïde abélien libre engendré par les éléments de \\(\\mathbf{O}(S)\\). Chaque morphisme \\(S\\to \\mathrm{I}_{\\mathbb{Z}}\\) définit un élément de carré nul de \\(\\mathbf{O}(S)\\), soit u, donc un endomorphisme de X(S) par \\(x\\mapsto x+u\\) (somme dans le monoïde libre). Il est immédiat que l'on a construit ainsi un endomorphisme de \\(X_{\\mathrm{I}_{\\mathbb{Z}}}\\). Si \\(S\\to \\mathrm{I}_{\\mathbb{Z}}\\) se factorise par la section zéro de \\(\\mathrm{I}_{\\mathbb{Z}}\\), alors cet endomorphisme est l'identité. C'est donc un endomorphisme infinitésimal de X qui n'est évidemment pas un automorphisme.</p>"
+    },
+    {
+     "id": "II.6.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3\">6.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il existe des modules qui ne sont pas bons. On peut par exemple modifier légèrement le contre-exemple précédent, mais on peut aussi en donner un comme suit : soit \\(S = \\mathrm{Spec}(k)\\), k corps de caractéristique p, et soit E un espace vectoriel sur k de dimension finie. Considérons le fibré vectoriel \\(\\mathbf{W}(E)\\) et munissons-le de la structure de \\(\\mathbf{O}(S)\\)-module obtenue en faisant opérer les scalaires par l'intermédiaire de la puissance p-ième. Notons F le \\(\\mathbf{O}(S)\\)-module obtenu. Il est représentable, donc vérifie (E). Son algèbre de Lie est évidemment \\(\\mathbf{W}(E)\\) et le morphisme canonique \\(\\underline{\\mathrm{Lie}}(F/S)\\to F\\) respecte bien la structure de groupe abélien (il aurait du mal à faire autrement) mais pas la structure de module. Le \\(\\mathscr{O}_S\\)-module F n'est donc pas bon, bien qu'il soit représentable.</p>"
+    },
+    {
+     "id": "II.6.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.4\">6.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un foncteur en groupes sur S. On a par définition les implications suivantes\n\\[\n(\\text{G/S vérifie (E)}) \\Longleftarrow (\\text{G est bon}) \\Longleftarrow (\\text{G est très bon}).\n\\]\nIl serait intéressant de démontrer ou de contre-exempler les implications en sens inverse.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par M. Demazure"
+}

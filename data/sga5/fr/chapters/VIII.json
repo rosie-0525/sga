@@ -1,0 +1,1584 @@
+{
+ "chapter_id": "VIII",
+ "title": "GROUPES DE CLASSES DES CATÉGORIES ABÉLIENNES ET TRIANGULÉES. COMPLEXES PARFAITS.",
+ "number": "VIII",
+ "pages": [
+  {
+   "id": "VIII",
+   "title": "GROUPES DE CLASSES DES CATÉGORIES ABÉLIENNES ET TRIANGULÉES. COMPLEXES PARFAITS.",
+   "blocks": [
+    {
+     "id": "VIII",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"VIII\">EXPOSÉ VIII<br>GROUPES DE CLASSES DES CATÉGORIES ABÉLIENNES<br>ET TRIANGULÉES. COMPLEXES PARFAITS.<span class=\"author\">par A. Grothendieck, rédigé par I. Bucur</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le présent exposé, nous esquissons rapidement les notions et résultats qui nous seront indispensables dans les exposés suivants, concernant notamment les complexes pseudo-cohérents et parfaits. Un exposé plus complet de ces derniers, avec des démonstrations plus détaillées, figurera dans les premiers exposés du séminaire sur le théorème de Riemann-Roch pour les schémas, qui feront suite au présent séminaire.<sup><a href=\"#VIII-fn1\" id=\"VIII-fn1ref\">(*)</a></sup></p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VIII-fn1",
+     "number": "(*)",
+     "html": "SGA 6 I"
+    }
+   ]
+  },
+  {
+   "id": "VIII-1",
+   "title": "1. Cas des catégories abéliennes.",
+   "blocks": [
+    {
+     "id": "VIII.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.1\">1. <u>Cas des catégories abéliennes.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) une catégorie abélienne et soit \\(D\\) une sous-catégorie pleine de \\(C\\). On dit qu'une fonction \\(f\\) de \\(D\\) dans un groupe abélien \\(G\\) est <u>additive</u> si, pour toute suite exacte de \\(C\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow E'\\longrightarrow E\\longrightarrow E''\\longrightarrow0,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>telles que \\(E'\\), \\(E''\\), \\(E\\) soient des objets de \\(D\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f(E)=f(E')+f(E'').\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f\\) une fonction additive de \\(D\\) dans un groupe abélien \\(G\\). Les propriétés suivantes sont des conséquences faciles de la définition :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>α) \\(f(0)=0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>β) \\(f(X)=f(Y)\\) si \\(X\\) et \\(Y\\) sont isomorphes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>γ) \\(f(X\\oplus Y)=f(X)+f(Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>δ) Soit \\(E=(E^i,d^i)\\) un complexe fini de \\(D\\) tel que les objets\n\\(B^{i+1}=\\operatorname{Im}(d^i)\\), \\(Z^i=\\operatorname{Ker}(d^i)\\) et\n\\(H^i(E)=Z^i/B^i\\) sont dans \\(D\\). Alors on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\sum_i(-1)^if(E^i)=\\sum_i(-1)^if(H^i(E)).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ε) Si \\(F\\in\\operatorname{Ob}D\\) a une filtration finie,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0=F_0\\subset F_1\\subset\\cdots\\subset F_n=F,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et si l'on suppose que pour \\(0&lt;i\\leq n\\), \\(F_i\\) et \\(F_i/F_{i-1}\\)\nsont des objets de \\(D\\), alors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f(F)=\\sum_{i=1}^n f(F_i/F_{i-1}).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>φ) Si \\(D\\) est stable pour les sommes directes infinies, alors \\(f=0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour démontrer δ) on utilise les suites exactes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow Z^i\\longrightarrow E^i\\longrightarrow B^{i+1}\\longrightarrow0\\]\n\\[0\\longrightarrow B^i\\longrightarrow Z^i\\longrightarrow H^i(E)\\longrightarrow0.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de ε) se fait par récurrence sur \\(n\\) en utilisant la\nsuite exacte \\(0\\longrightarrow F_{n-1}\\longrightarrow F\\longrightarrow\nF/F_{n-1}\\longrightarrow0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour démontrer φ) soient \\(E\\in\\operatorname{Ob}D\\) et\n\\(F=\\bigoplus_{n\\in\\mathbb Z^+}E_n\\), \\(E_n=E\\), \\(n\\in\\mathbb Z^+\\). Alors\n\\(E\\oplus F\\simeq F\\) et en appliquant γ) on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f(F)=f(F)+f(E)\\quad\\text{donc}\\quad f(E)=0.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si l'on considère, pour tout groupe abélien \\(G\\), le groupe abélien\n\\(A_D(G)\\) des fonctions additives de \\(D\\) dans \\(G\\), on obtient de manière\névidente un foncteur covariant \\(A_D:\\mathbf{Ab}\\longrightarrow\\mathbf{Ab}\\).\nLe foncteur \\(A_D\\) est représentable. Un couple de représentation\n\\((K_D(C),\\varphi)\\) peut être obtenu de la manière suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignant par \\(L\\) le groupe abélien libre engendré par les objets de\n\\(D\\), soit \\(R\\) le sous-groupe de \\(L\\) engendré par les éléments de la forme\n\\(E-E'-E''\\) pour chaque suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow E'\\longrightarrow E\\longrightarrow E''\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de \\(C\\). On pose \\(K_D(C)=L/R\\). L'application \\(\\varphi\\) s'obtient en\ncomposant les deux applications canoniques\n\\(\\operatorname{Ob}D\\longrightarrow L\\longrightarrow L/R\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Quand il n'y aura aucun danger de confusion, on peut abréger la notation :\n\\(K_D(C)=K(D)\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-2",
+   "title": "2. Cas des catégories triangulées.",
+   "blocks": [
+    {
+     "id": "VIII.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.2\">2. <u>Cas des catégories triangulées.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) une catégorie triangulée et \\(G\\) un groupe abélien. On dit\nqu'une fonction \\(f\\) de \\(C\\) dans \\(G\\) est additive si pour tout triangle\ndistingué</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{&amp;Z\\ar[dl]_w\\\\X\\ar[rr]_u&amp;&amp;Y\\ar[ul]_v}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a \\(f(Y)=f(X)+f(Z)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Étant donnée une fonction additive \\(f\\), les relations suivantes sont des\nconséquences immédiates de la définition :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">a) \\(f(0)=0\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">b) \\(f(X[n])=(-1)^nf(X)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">c) \\(f(X)=f(Y)\\) si \\(X\\) et \\(Y\\) sont isomorphes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">d) \\(f(X\\oplus Y)=f(X)+f(Y)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet les triangles suivants sont distingués</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix@C=2.5em{&amp;0\\ar[dl]\\\\X\\ar[rr]_{1_X}&amp;&amp;X\\ar[ul]},\\qquad\n\\xymatrix@C=2.5em{&amp;X[1]\\ar[dl]\\\\X\\ar[rr]&amp;&amp;0\\ar[ul]},\\qquad\n\\xymatrix@C=2.5em{&amp;0\\ar[dl]\\\\X\\ar[rr]^u&amp;&amp;Y\\ar[ul]},\\qquad\n\\xymatrix@C=2.5em{&amp;Y[1]\\ar[dl]\\\\X\\oplus Y\\ar[rr]&amp;&amp;X\\ar[ul]}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(\\(u\\) isomorphisme). Pour former le dernier triangle, nous avons utilisé le\nfait que la somme de deux triangles distingués est distinguée. Comme dans le\ncas des catégories abéliennes, on obtient de la manière évidente un foncteur\n\\(A:\\mathbf{Ab}\\longrightarrow\\mathbf{Ab}\\), qui associe à chaque groupe\nabélien \\(G\\) le groupe abélien \\(A(G)\\) des fonctions additives sur \\(C\\) à\nvaleurs dans \\(G\\). Ce foncteur est représentable et il est facile de construire\nun couple de représentation \\((K(C),\\operatorname{cl}_C)\\). En effet, on\nconsidère tout d'abord le groupe abélien libre\n\\(\\mathbb Z^{(\\operatorname{Ob}C)}\\) engendré par les objets de \\(C\\) et puis le\nsous-groupe \\(R\\) engendré par les éléments de la forme \\(X-Y-Z\\), où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{&amp;Z\\ar[dl]\\\\Y\\ar[rr]&amp;&amp;X\\ar[ul]}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un triangle distingué. Le groupe quotient\n\\(\\mathbb Z^{(\\operatorname{Ob}C)}/R\\) sera \\(K(C)\\) et\n\\(\\operatorname{cl}_C\\) s'obtient en composant les deux applications canoniques :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Ob}C\\longrightarrow\\mathbb Z^{(\\operatorname{Ob}C)}\n\\longrightarrow K(C).\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-3",
+   "title": "3. Caractère fonctoriel.",
+   "blocks": [
+    {
+     "id": "VIII.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.3\">3. <u>Caractère fonctoriel.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(C\\) et \\(C'\\) étant deux catégories triangulées, soit\n\\(T:C\\longrightarrow C'\\) un foncteur exact de \\(C\\) dans \\(C'\\), c'est-à-dire\nun foncteur additif, « gradué » et transformant les triangles</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>distingués en triangles distingués. Désignons comme plus haut par\n\\(A,A':\\mathbf{Ab}\\longrightarrow\\mathbf{Ab}\\) les foncteurs associés aux\ncatégories \\(C\\) et \\(C'\\). Il en résulte un morphisme fonctoriel\n\\(A'\\longrightarrow A\\) de « composition avec \\(T\\) » donc un homomorphisme\n\\(K(T):K(C)\\longrightarrow K(C')\\) unique tel que le diagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{{\\operatorname{Ob}C}\\ar[r]^T\\ar[d]_{\\operatorname{cl}_C}&amp;\n{\\operatorname{Ob}C'}\\ar[d]^{\\operatorname{cl}_{C'}}\\\\\nK(C)\\ar[r]_{K(T)}&amp;K(C')}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit commutatif. Il en résulte que si les foncteurs\n\\(T,T_1:C\\longrightarrow C'\\) sont isomorphes, alors \\(K(T)=K(T_1)\\). En\nparticulier si le foncteur \\(T\\) est une équivalence de catégories, alors\n\\(K(T)\\) est un isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(C''\\) est une troisième catégorie triangulée et\n\\(F:C\\times C'\\longrightarrow C''\\) un bifoncteur exact en chaque variable,\nalors il est clair qu'il en résulte une application bilinéaire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K(F):K(C)\\times K(C')\\longrightarrow K(C''),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>telle que la relation suivante soit vraie :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K(F)(\\operatorname{cl}_C(X),\\operatorname{cl}_{C'}(X'))\n=\\operatorname{cl}_{C''}(F(X,X')).\\]\n\n</p>"
+    },
+    {
+     "id": "VIII.3.1",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 3.1.",
+     "html": "<div class=\"thm proposition\" id=\"VIII.3.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 3.1.</u></span></div><div class=\"thm-body\">\n<p>Soit \\(A\\) une catégorie triangulée, \\(B\\) une sous-catégorie triangulée\népaisse de \\(A\\), \\(A/B\\) la catégorie quotient de \\(A\\) par \\(B\\),\n\\(Q:A\\longrightarrow A/B\\) le foncteur canonique de passage au quotient,\n\\(i:B\\longrightarrow A\\) le foncteur d'inclusion. Alors la suite suivante est\nexacte :</p>\n\n<!-- Source PDF page 6 (printed page 356) -->\n\\[K(B)\\xrightarrow{K(i)}K(A)\\xrightarrow{K(Q)}K(A/B)\\longrightarrow0.\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Il est clair qu'il existe un homomorphisme naturel</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Coker}(K(i))\\xrightarrow{\\alpha}K(A/B).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part il existe une application évidente</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Ob}(A/B)\\xrightarrow{\\gamma}\\operatorname{Coker}(K(i)),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>puisque \\(\\operatorname{Ob}(A/B)=\\operatorname{Ob}(A)\\). Soient\n\\(X,Y\\in\\operatorname{Ob}(A/B)\\) et supposons qu'ils sont isomorphes. Nous\nvoulons démontrer que \\(\\gamma(X)=\\gamma(Y)\\). La catégorie \\(A/B\\) s'obtient\npar un calcul de fractions à droite ou à gauche, le système multiplicatif\n\\(S\\) étant constitué par l'ensemble des morphismes \\(f\\) qui sont contenus\ndans un triangle distingué \\((X',Y',Z',f,g,h)\\), où \\(Z'\\) est un objet de\n\\(B\\) (\\(S\\) est un système multiplicatif saturé). Il en résulte alors qu'il\nexiste \\(X_1\\) et \\(X_1\\xrightarrow{s}X\\), \\(X_1\\xrightarrow{t}Y\\) tel que\n\\(s,t\\in S\\). Il nous suffit donc de démontrer que\n\\(\\gamma(X)=\\gamma(X_1)\\), ce qui résulte du fait qu'il existe un triangle\ndistingué de la forme \\((X_1,X,Z,s,\\ldots)\\) avec \\(Z\\in\\operatorname{Ob}B\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'application \\(\\gamma\\) est une fonction additive. En effet,\n\\((X,Y,Z,f,g,h)\\) étant un triangle distingué de \\(A/B\\), il faut démontrer\nque \\(\\gamma(X)+\\gamma(Z)=\\gamma(Y)\\). Mais la relation s'ensuit maintenant,\nparce que le triangle \\((X,Y,Z,f,g,h)\\) est isomorphe à un triangle distingué\nde \\(A\\). Par conséquent, on obtient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\beta:K(A/B)\\longrightarrow\\operatorname{Coker}(K(i)),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et il est immédiat de vérifier que \\(\\beta\\) est inverse de \\(\\alpha\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-4",
+   "title": "4. Comparaison avec le cas des catégories abéliennes.",
+   "blocks": [
+    {
+     "id": "VIII.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.4\">4. <u>Comparaison avec le cas des catégories abéliennes.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(C\\) étant une catégorie abélienne, \\(D(C)\\) la catégorie dérivée de\n\\(C\\), on désigne comme d'habitude par \\(D^b(C)\\) la sous-catégorie pleine de\n\\(D(C)\\) engendrée par les complexes bornés. Si l'on associe à chaque objet\n\\(X\\) de \\(C\\) le complexe dont toutes les composantes sont nulles, sauf\ncelle en dimension zéro qui est égale à \\(X\\), on obtient un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K(C)\\xrightarrow{\\mu}K(D^b(C)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cet homomorphisme est en fait un isomorphisme. En effet, nous pouvons\nutiliser la proposition 3.1 pour construire un inverse de \\(\\mu\\), en tenant\ncompte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D^b(C)\\simeq K^{b,b}(C)/K^{b,\\varnothing}(C),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(K^{b,\\varnothing}(C)\\) étant la sous-catégorie épaisse de\n\\(K^{b,b}(C)\\) des complexes acycliques. Soit\n\\(X^\\bullet=(X_i)\\in\\operatorname{Ob}(K^{b,b}(C))\\). Si l'on pose</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f(X^\\bullet)=\\sum_i(-1)^i\\operatorname{cl}_C(X_i),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on obtient une fonction additive de \\(K^{b,b}(C)\\) à valeurs dans\n\\(K(C)\\). En effet, on observe tout d'abord que si \\(X^\\bullet\\) et\n\\(Y^\\bullet\\) sont homotopes, alors \\(f(X^\\bullet)=f(Y^\\bullet)\\), puisque\n\\(f(X^\\bullet)=f(H(X^\\bullet))\\). Il en résulte donc un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K(D^b(C))\\xrightarrow{\\lambda}K(C)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et il est immédiat de vérifier qu'il est l'inverse de \\(\\mu\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'invariant \\(K(C)\\) étant souvent sans intérêt lorsque \\(C\\) est « trop\ngrosse », il y a l'intérêt de le relativiser par rapport à une sous-catégorie\n\\(C_0\\) de \\(C\\). Soit donc \\(C_0\\) une sous-catégorie pleine de \\(C\\). Nous\npouvons définir d'une part le groupe \\(K_0(C)=K_{C_0}(C)\\). Supposons d'autre\npart que la condition suivante soit remplie :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">(A) \\(C_0\\) est stable pour les sommes directes\nfinies.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est alors facile de définir la catégorie triangulée \\(D_0^b(C)\\) en\nutilisant les complexes (à cohomologie bornée) de \\(C\\) ayant comme\ncomposantes des objets de la sous-catégorie \\(C_0\\), et passant au</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>quotient par les quasi-isomorphismes de tels complexes. Il en résulte comme\nplus haut un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(*)\\qquad K_0(C)\\longrightarrow K(D_0^b(C)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que la sous-catégorie \\(C_0\\) satisfasse en plus à la condition\n(B) suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">(B) Si \\(X,Y\\in\\operatorname{Ob}C_0\\) et\n\\(X\\xrightarrow{u}Y\\) est un épimorphisme (dans \\(C\\) bien entendu), alors\n\\(\\operatorname{Ker}u\\in\\operatorname{Ob}C_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En raisonnant comme plus haut, on peut montrer que l'homomorphisme (*) est\nun isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur canonique d'inclusion \\(D_0^b(C)\\longrightarrow D^b(C)\\)\nn'est pas en général pleinement fidèle. Cependant :</p>"
+    },
+    {
+     "id": "VIII.4.1",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 4.1.",
+     "html": "<div class=\"thm proposition\" id=\"VIII.4.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 4.1.</u></span></div><div class=\"thm-body\">\n<p>Supposons que la sous-catégorie \\(C_0\\) satisfasse aux conditions (A), (B)\nainsi qu'à la condition (C) suivante :</p>\n<p style=\"margin-left:4em;\">(C) Tout diagramme</p>\n\\[\\xymatrix{A\\ar[r]^u&amp;B&amp;L\\ar[l]^v}\\]\n<p>où \\(u\\) est un épimorphisme et \\(L\\in\\operatorname{Ob}C_0\\), peut être\ncomplété en un diagramme commutatif :</p>\n\\[\\xymatrix{A\\ar[r]^u&amp;B\\\\L_1\\ar[u]\\ar[r]_w&amp;L\\ar[u]_v}\\]\n<p>tel que \\(L_1\\in\\operatorname{Ob}C_0\\) et que \\(w\\) est un\népimorphisme.</p>\n\n<!-- Source PDF page 9 (printed page 359) -->\n<p>Dans ces conditions, les foncteurs canoniques</p>\n\\[D_0^b(C)\\longrightarrow D^b(C)\\]\n\\[D_0^-(C)\\longrightarrow D^-(C)\\]\n<p>sont pleinement fidèles. En plus, l'image essentielle de \\(D_0^b(C)\\)\n(resp. \\(D_0^-(C)\\)) est stable par facteurs directs.</p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de cette proposition utilise essentiellement un critère\nde Verdier ([2], 4-2 Théorème) et sera donnée dans le premier exposé du\nséminaire sur Riemann-Roch (SGA 6 I 2.7).</p>"
+    },
+    {
+     "id": "VIII.4.1.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire.",
+     "html": "<div class=\"thm corollary\" id=\"VIII.4.1.cor\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire.</u></span></div><div class=\"thm-body\">\n<p>Supposons de plus que la sous-catégorie \\(C_0\\) est stable par Ker et\nCoker, donc une catégorie abélienne, et désignons par \\(D^b(C)_0\\) la\nsous-catégorie triangulée pleine de \\(D^b(C)\\) engendrée par les complexes de\n\\(D^b(C)\\) à objets de cohomologie isomorphes à des objets de \\(C_0\\). Alors\nle foncteur d'inclusion</p>\n\\[D^b(C_0)\\longrightarrow D^b(C)_0\\]\n<p>est une équivalence entre les deux catégories, et par conséquent on obtient\nla suite d'isomorphismes</p>\n\\[K(C_0)\\simeq K_0(C)\\simeq K(D_0^b(C))\\simeq K(D^b(C)_0).\\]\n<p style=\"text-align:right;\"><sup><a href=\"#VIII-fn2\" id=\"VIII-fn2ref\">(*)</a></sup></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Observation.</u> Supposons que la sous-catégorie \\(C_0\\) satisfasse aux\nconditions (A) et (B) et que chaque objet de \\(C\\) admette une résolution\nfinie à gauche par des éléments de \\(C_0\\). Dans ce cas, \\(C_0\\) satisfait\naussi à la condition (C) et le foncteur canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D_0^b(C)\\longrightarrow D^b(C)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est en fait une équivalence de catégories. Par conséquent, on a\nl'isomorphisme \\(K_{C_0}(C)\\simeq K(C)\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VIII-fn2",
+     "number": "(*)",
+     "html": "cf. (SGA 6 IV 1.6)."
+    }
+   ]
+  },
+  {
+   "id": "VIII-5",
+   "title": "5. Complexes pseudo-cohérents.",
+   "blocks": [
+    {
+     "id": "VIII.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.5\">5. <u>Complexes pseudo-cohérents.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C\\) une catégorie abélienne et \\(C_0\\) une sous-catégorie pleine\nde \\(C\\) satisfaisant aux conditions (A), (B), (C). Nous désignerons par\n\\(D_0^-(C)_{\\mathrm{coh}}\\) l'image essentielle de \\(D_0^-(C)\\) par le\nfoncteur canonique \\(D_0^-(C)\\longrightarrow D(C)\\). Les objets de\n\\(D_0^-(C)_{\\mathrm{coh}}\\) seront appelés des complexes\n\\(C_0\\)-<u>pseudo-cohérents</u>. Donc un complexe de \\(C\\) est\n\\(C_0\\)-pseudo-cohérent s'il est isomorphe dans \\(D(C)\\) à un complexe borné\nsupérieurement et dont les composantes sont des objets de \\(C_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La catégorie \\(D_0^-(C)_{\\mathrm{coh}}\\) est une sous-catégorie triangulée\nde \\(D(C)\\), dans le sens que tout triangle distingué de \\(D(C)\\) dont deux\ndes sommets sont des objets de la sous-catégorie\n\\(D_0^-(C)_{\\mathrm{coh}}\\), est isomorphe à un triangle dont les trois objets\nsont des objets de la sous-catégorie \\(D_0^-(C)_{\\mathrm{coh}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Tout d'abord, il est clair que la sous-catégorie\n\\(D_0^-(C)_{\\mathrm{coh}}\\) est stable par l'automorphisme de translation\n\\(T:D(C)\\longrightarrow D(C)\\). Pour démontrer donc que\n\\(D_0^-(C)_{\\mathrm{coh}}\\) est une sous-catégorie triangulée de \\(D(C)\\), il\nsuffit de vérifier que si \\(U^\\bullet\\), \\(V^\\bullet\\) sont des objets de\n\\(D_0^-(C)_{\\mathrm{coh}}\\) et si le triangle :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{&amp;W^\\bullet\\ar[dl]_w\\\\U^\\bullet\\ar[rr]_u&amp;&amp;V^\\bullet\\ar[ul]_v}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est distingué (pour la structure de catégorie triangulée de \\(D(C)\\)),\nalors \\(W^\\bullet\\) est aussi un objet de \\(D_0^-(C)_{\\mathrm{coh}}\\). Par\nhypothèse, il existe des complexes \\(X^\\bullet\\), \\(Y^\\bullet\\), isomorphes\ndans \\(D(C)\\) à \\(U^\\bullet\\) resp. \\(V^\\bullet\\), dont les composantes sont\ndes objets de \\(C_0\\). On obtient le carré</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>commutatif (dans \\(D(C)\\)) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{U^\\bullet\\ar[r]^u\\ar[d]_{\\sim}&amp;V^\\bullet\\ar[d]^{\\sim}\\\\X^\\bullet\\ar[r]_f&amp;Y^\\bullet}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais, quitte à remplacer \\(X^\\bullet\\) par un autre isomorphe, nous\npouvons supposer, grâce au fait que le foncteur d'inclusion\n\\(D_0^-(C)\\longrightarrow D^-(C)\\) est pleinement fidèle (prop. 4.1), que\n\\(f\\) est un véritable morphisme de complexes. Soit \\(Z^\\bullet\\) le\n« mapping cylinder » de \\(f\\) et \\(g:Y^\\bullet\\longrightarrow Z^\\bullet\\) le\nmorphisme canonique. Par la construction même, les composantes de\n\\(Z^\\bullet\\) sont des objets de \\(C_0\\) (condition (A)). D'autre part</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{&amp;Z^\\bullet\\ar[dl]_h\\\\X^\\bullet\\ar[rr]_f&amp;&amp;Y^\\bullet\\ar[ul]_g}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>étant un triangle distingué dans \\(D(C)\\), il en résulte que\n\\(Z^\\bullet\\) est isomorphe à \\(W^\\bullet\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La catégorie \\(D_0^-(C)_{\\mathrm{coh}}\\) est munie donc d'une structure de\ncatégorie triangulée : un triangle dans \\(D_0^-(C)_{\\mathrm{coh}}\\) sera\ndistingué si et seulement s'il est distingué dans la catégorie triangulée\n\\(D(C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'intersection de \\(D_0^-(C)_{\\mathrm{coh}}\\) avec\n\\(D^b(C)_{\\mathrm{coh}}\\) sera notée \\(D_0^b(C)_{\\mathrm{coh}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un objet \\(M\\) de \\(C\\) sera appelé <u>pseudo-cohérent</u> s'il l'est comme\ncomplexe réduit au degré zéro ; on prouve qu'il faut et suffit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour cela qu'il admette une résolution à gauche dont les composantes sont\ndes objets de \\(C_0\\).</p>"
+    },
+    {
+     "id": "VIII.5.1",
+     "type": "proposition",
+     "label": "5.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIII.5.1\">\n<div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.1.</span></div>\n<div class=\"thm-body\"><p>Un complexe \\(X\\) est \\(C_0\\)-pseudo-cohérent si et\nseulement s'il est isomorphe à un complexe qui est limité à droite et dont\nles composantes sont \\(C_0\\)-pseudo-cohérentes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de cette proposition figurera dans le premier exposé du\nséminaire sur Riemann-Roch (SGA 6 I 2.7).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-6",
+   "title": "6. Complexes parfaits.",
+   "blocks": [
+    {
+     "id": "VIII.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.6\">6. <u>Complexes parfaits.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un objet de la catégorie \\(D(C)\\) sera appelé un complexe\n\\(C_0\\)-<u>parfait</u> s'il est isomorphe à un objet de \\(D_0^b(C)\\),\nc'est-à-dire à un complexe borné dont tous les composants sont dans \\(C_0\\).\nNous désignerons par \\(D_0(C)_{\\mathrm{parf}}\\) la sous-catégorie pleine de\n\\(D(C)\\) engendrée par les complexes parfaits.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La catégorie \\(D_0(C)_{\\mathrm{parf}}\\) n'est donc pas autre chose que\nl'image essentielle de \\(D_0^b(C)\\) par le foncteur d'inclusion\n\\(D_0^b(C)\\longrightarrow D(C)\\). Il est facile de voir que\n\\(D_0(C)_{\\mathrm{parf}}\\) est une sous-catégorie triangulée de \\(D(C)\\), et\nest munie par conséquent d'une structure de catégorie triangulée.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-7",
+   "title": "7. Cas particulier important.",
+   "blocks": [
+    {
+     "id": "VIII.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.7\">7. <u>Cas particulier important.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(A\\) un anneau et \\(C\\) la catégorie des \\(A\\)-modules (à gauche par\nexemple). Désignons par \\(C_0\\) la sous-catégorie pleine de \\(C\\) engendrée\npar les \\(A\\)-modules projectifs de type fini. La sous-catégorie \\(C_0\\)\nsatisfait les conditions (A), (B),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(C). Nous utilisons dans ce cas les notations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\nD^-(A)_{\\mathrm{coh}}&amp;=D_0^-(C)_{\\mathrm{coh}},\\\\\nD^b(A)_{\\mathrm{coh}}&amp;=D_0^b(C)_{\\mathrm{coh}},\\\\\nD(A)_{\\mathrm{parf}}&amp;=D_0(C)_{\\mathrm{parf}}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les complexes de \\(D(C)\\) qui sont \\(C_0\\)-pseudo-cohérents (resp.\n\\(C_0\\)-parfaits) seront appelés simplement des <u>complexes\npseudo-cohérents</u> (resp. <u>parfaits</u>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il sera intéressant de considérer les groupes suivants :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nK_\\bullet(A)=K\\bigl(D^b(A)_{\\mathrm{coh}}\\bigr),\n\\qquad K^\\bullet(A)=K\\bigl(D(A)_{\\mathrm{parf}}\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En ce qui concerne le groupe \\(K^\\bullet(A)\\), nous avons (prop. 4.1,\ncorollaire) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nK^\\bullet(A)=K\\bigl(D(A)_{\\mathrm{parf}}\\bigr)\\simeq K(D_0^b(C))\\simeq\nK_{C_0}(C),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui montre qu'il est donc aussi le classique « groupe des classes de\nmodules projectifs de type fini » de \\(A\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas particulier d'un anneau \\(A\\) noethérien, le groupe\n\\(K_\\bullet(A)\\) admet aussi une description classique. Soit pour cela\n\\(C_1\\) la catégorie abélienne des modules de type fini. On a alors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K_\\bullet(A)\\simeq K(C_1).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, en utilisant la proposition 4.1, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K(C_1)\\simeq K(D^b(C_1))\\simeq K(D_{C_1}^b(C))\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>car on a aussitôt \\(D^b(C_1)\\simeq D_{C_1}^b(C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En fait, si \\(A\\) est noethérien et \\(L^\\bullet\\in D^-(A)\\), alors il\nrésulte de la proposition 5.1 que \\(L^\\bullet\\) est pseudo-cohérent si et\nseulement si les \\(H^i(L^\\bullet)\\) sont de type fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour un anneau \\(A\\) quelconque, on a un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^\\bullet(A)\\xrightarrow{\\gamma_A}K_\\bullet(A),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui provient du foncteur d'inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(*)\\qquad D(A)_{\\mathrm{parf}}\\longrightarrow D^b(A)_{\\mathrm{coh}}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En général, l'homomorphisme \\(\\gamma_A\\) n'est ni injectif, ni surjectif.\nDans le cas particulier d'un anneau \\(A\\) régulier, tout \\(A\\)-module \\(M\\)\nde type fini a une dimension projective finie et il en résulte, grâce à 5.1,\nque le foncteur d'inclusion (*) est en fait une équivalence entre les deux\ncatégories. Dans ce cas, l'homomorphisme \\(\\gamma_A\\) est donc un\nisomorphisme.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-8",
+   "title": "8. Tor de complexes.",
+   "blocks": [
+    {
+     "id": "VIII.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.8\">8. <u>Tor de complexes.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(A\\) un anneau (non nécessairement commutatif) et \\({}_AC\\) (resp.\n\\(C_A\\)) la catégorie abélienne des \\(A\\)-modules à gauche (resp. à droite).\nPar \\(K^-({}_AC)\\) nous désignerons la catégorie triangulée des complexes de\n\\({}_AC\\) bornés supérieurement et par \\({}_AD\\) la sous-catégorie triangulée\npleine de \\(K^-({}_AC)\\) des complexes dont les composantes sont des\n\\(A\\)-modules (à gauche) plats.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X^\\bullet\\) un objet de \\(K^-(C_A)\\), et considérons le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\Phi_{X^\\bullet}=X^\\bullet\\otimes_A\\mathord{:}K^-({}_AC)\n\\longrightarrow K^-(\\mathrm{Ab}).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ces conditions, les pro-</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>positions suivantes sont vraies :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) Tout objet acyclique de \\({}_AD\\) est transformé par\n\\(\\Phi_{X^\\bullet}\\) en un objet acyclique de \\(K^-(\\mathrm{Ab})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, \\(N^\\bullet\\) étant un objet de \\({}_AD\\) tel que\n\\(Z^i(N^\\bullet)\\), \\(B^i(N^\\bullet)\\), \\(H^i(N^\\bullet)\\) sont plats, on a\nl'isomorphisme classique :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\bigoplus_{p+q=n}H_p(X^\\bullet)\\otimes H_q(N^\\bullet)\n\\longrightarrow H_n(X^\\bullet\\otimes_A N^\\bullet).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Tout objet \\(Y^\\bullet\\) de \\(K^-({}_AC)\\) est le but d'un\nquasi-isomorphisme dont la source est un objet de \\({}_AD\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit pour cela de prendre une résolution de Cartan-Eilenberg. Nous\npouvons donc appliquer le théorème 2 du §2, n°2 de [2] pour conclure que\n\\(\\Phi_{X^\\bullet}\\) admet un foncteur dérivé à gauche :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[L\\Phi_{X^\\bullet}:D^-({}_AC)\\longrightarrow D^-(\\mathrm{Ab}).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'objet \\(L\\Phi_{X^\\bullet}(Y)\\) peut être obtenu, à un isomorphisme près,\nde la manière suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(P^\\bullet\\) un objet de \\({}_AD\\) et\n\\(P^\\bullet\\longrightarrow Y^\\bullet\\) un quasi-isomorphisme. Alors\n\\(L\\Phi_{X^\\bullet}(Y^\\bullet)\\) est isomorphe à\n\\(Q(X^\\bullet\\otimes P^\\bullet)\\), où nous avons désigné comme d'habitude\npar \\(Q\\) le foncteur canonique \\(K^-(\\mathrm{Ab})\\longrightarrow\nD^-(\\mathrm{Ab})\\). Il en résulte donc que pour chaque objet \\(Y^\\bullet\\) de\n\\(D^-({}_AC)\\) le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccc}\nK^-(C_A)&amp;\\longrightarrow&amp;D^-(\\mathrm{Ab})\\\\\nX^\\bullet&amp;\\longmapsto&amp;L\\Phi_{X^\\bullet}(Y^\\bullet)\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est exact et s'annule sur les complexes acycliques, d'où un bifonc-</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>teur exact</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccc}\nD^-(C_A)\\times D^-({}_AC)&amp;\\longrightarrow&amp;D^-(\\mathrm{Ab})\\\\\n(X^\\bullet,Y^\\bullet)&amp;\\longmapsto&amp;X^\\bullet\\mathbin{\\overset L\\otimes}_A Y^\\bullet.\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En passant à l'homologie, on définit les \\(\\operatorname{Tor}_i^A(X^\\bullet,Y^\\bullet)\\)\n(cf aussi [1], 6.3). Dans le cas particulier d'un anneau \\(A\\) commutatif on\nobtient en fait un bi-foncteur exact</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D^-(C)\\times D^-(C)\\longrightarrow D^-(C),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le produit tensoriel au sens des catégories dérivées\n\\((C=C_A={}_AC)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "definition",
+     "label": null,
+     "title": "Définition.",
+     "html": "<div class=\"thm definition\">\n<div class=\"thm-head\"><span class=\"thm-name\">Définition.</span></div>\n<div class=\"thm-body\"><p>Nous dirons que le complexe \\(X\\) de \\(D(C_A)\\) est\n<u>de tor-dimension finie</u> s'il est dans \\(D^-\\) et s'il existe\n\\(n_0\\in\\mathbb Z^+\\) tel que \\(\\operatorname{Tor}_n^A(X,Y)=0\\) quelque soit\n\\(Y\\in\\operatorname{Ob}({}_AC)\\) et \\(n&gt;n_0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons la notion de tor-dimension pour obtenir une\ncaractérisation des complexes parfaits :</p>"
+    },
+    {
+     "id": "VIII.8.1",
+     "type": "proposition",
+     "label": "8.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIII.8.1\">\n<div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">8.1.</span></div>\n<div class=\"thm-body\"><p>Soit \\(A\\) un anneau (non nécessairement commutatif)\net \\(L^\\bullet\\) un complexe de \\(A\\)-modules. Les conditions suivantes sont\néquivalentes :</p>\n<p>a) \\(L^\\bullet\\) est parfait.</p>\n<p>b) \\(L^\\bullet\\) est pseudo-cohérent, à cohomologie bornée, et de\ntor-dimension finie.<sup><a href=\"#VIII-fn3\" id=\"VIII-fn3ref\">(*)</a></sup></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour faire la démonstration, on utilise le lemme suivant :</p>"
+    },
+    {
+     "id": null,
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme.",
+     "html": "<div class=\"thm thm-plain lemma\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme.</u></span> (Bourbaki, Alg. Comm. I, §2, ex. 15).</div>\n<div class=\"thm-body\"><p>Tout \\(A\\)-module \\(E\\) qui est plat et de présentation finie est projectif.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration du lemme.</u> Soit \\(u:F\\longrightarrow F'\\) un épimorphisme. Il faut démontrer que\n\\(\\operatorname{Hom}_A(E,F)\\longrightarrow\\operatorname{Hom}_A(E,F')\\) est un épimorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il nous suffit de démontrer que pour tout groupe divisible \\(G\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Hom}_{\\mathbb Z}(\\operatorname{Hom}_A(E,F'),G)\\longrightarrow\n\\operatorname{Hom}_{\\mathbb Z}(\\operatorname{Hom}_A(E,F),G)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un monomorphisme. Or le diagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n\\operatorname{Hom}_{\\mathbb Z}(\\operatorname{Hom}_A(E,F'),G)\\ar[r]\\ar[d]_{\\sim}&amp;\n\\operatorname{Hom}_{\\mathbb Z}(\\operatorname{Hom}_A(E,F),G)\\ar[d]^{\\sim}\\\\\n\\operatorname{Hom}_{\\mathbb Z}(F',G)\\otimes_A E\\ar[r]&amp;\n\\operatorname{Hom}_{\\mathbb Z}(F,G)\\otimes_A E\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est commutatif, et les flèches verticales sont des isomorphismes, grâce à l'hypothèse faite sur \\(E\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration de la proposition 5.2.</u> L'implication a) \\(\\Rightarrow\\) b) est immédiate. Pour démontrer b) \\(\\Rightarrow\\) a), soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\cdots\\longrightarrow P_n\\xrightarrow{d_n}\\cdots\\longrightarrow P_i\\longrightarrow0\\longrightarrow\\cdots\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>un complexe isomorphe à \\(L^\\bullet\\) dans \\(D(C)\\), les \\(P_j\\) étant des \\(A\\)-modules projectifs de type fini. Le complexe \\(L^\\bullet\\) étant de tor-dimension finie et sa cohomologie étant bornée, il en résulte qu'il existe \\(n_0\\in\\mathbb Z\\) tel que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>I) La suite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\cdots\\longrightarrow P_{n_0-p}\\xrightarrow{d_{n_0-p}}\\cdots\\longrightarrow P_{n_0}\\longrightarrow\n\\operatorname{Ker}d_{n_0+1}\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est exacte.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>II) \\(\\operatorname{Ker}d_{n_0+1}\\) est plat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>III) Le complexe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow\\operatorname{Ker}d_{n_0+1}\\longrightarrow P_{n_0+1}\\longrightarrow\\cdots\n\\longrightarrow P_i\\longrightarrow0\\longrightarrow\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est isomorphe à \\(L^\\bullet\\) dans \\(D(C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(\\operatorname{Ker}d_{n_0+1}\\) est de présentation finie, donc projectif de type fini grâce au lemme, ce qui prouve 8.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(A\\) est un anneau <u>commutatif</u>, et si \\(X^\\bullet,Y^\\bullet\\) sont deux complexes parfaits, alors leur produit tensoriel\n\\(X^\\bullet\\mathbin{\\overset L\\otimes}_A Y^\\bullet\\) (dans la catégorie dérivée) est encore un complexe parfait. On obtient un bifoncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D(A)_{\\mathrm{parf}}\\times D(A)_{\\mathrm{parf}}\\longrightarrow D(A)_{\\mathrm{parf}}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>exact en chaque variable. Par conséquent, on définit sur \\(K^\\bullet(A)\\) un produit, et il est facile de voir que \\(K^\\bullet(A)\\) est muni de cette façon d'une structure d'anneau commutatif, ayant un élément unité. En fait, \\(K^\\bullet(A)\\) peut être muni d'une structure de \\(\\lambda\\)-anneau (voir pour les détails le Séminaire sur Riemann-Roch faisant suite à celui-ci<sup><a href=\"#VIII-fn4\" id=\"VIII-fn4ref\">(*)</a></sup>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le produit tensoriel \\(X^\\bullet\\mathbin{\\overset L\\otimes}_A Y^\\bullet\\) d'un complexe parfait \\(X^\\bullet\\) et d'un complexe pseudo-cohérent borné \\(Y^\\bullet\\) est un complexe pseudo-cohérent borné (\\(A\\) toujours un anneau commutatif). Par conséquent, on peut introduire sur \\(K_\\bullet(A)\\) une structure de \\(K^\\bullet(A)\\)-module.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VIII-fn3",
+     "number": "(*)",
+     "html": "cf. (SGA 6 I 5.8.1)."
+    },
+    {
+     "id": "VIII-fn4",
+     "number": "(*)",
+     "html": "SGA 6 V 2."
+    }
+   ]
+  },
+  {
+   "id": "VIII-9",
+   "title": "9. Propriétés fonctorielles.",
+   "blocks": [
+    {
+     "id": "VIII.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.9\">9. <u>Propriétés fonctorielles.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Soient \\(A\\) et \\(B\\) deux anneaux (non nécessairement commutatifs) et \\(u:A\\longrightarrow B\\) un homomorphisme. Tout \\(B\\)-module à gauche (resp. à droite) \\(M\\) peut être muni d'une structure de \\(A\\)-module à gauche (resp. à droite) qui sera désigné par \\(M_{[u]}\\). En particulier \\(B_{[u]}\\) est un \\(A\\)-module à droite.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[E\\longmapsto B_{[u]}\\otimes_A E\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>permet de définir le foncteur exact</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D(A)_{\\mathrm{parf}}\\longrightarrow D(B)_{\\mathrm{parf}}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent l'homomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^\\bullet(A)\\xrightarrow{u^*}K^\\bullet(B).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient en fait un foncteur covariant de la catégorie des anneaux (resp. des anneaux commutatifs) dans la catégorie des groupes abéliens (resp. des anneaux commutatifs).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Supposons maintenant que le \\(A\\)-module à gauche \\(B_{[u]}\\) soit pseudo-cohérent. Il en résulte donc que le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[F\\longmapsto F_{[u]}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>transforme un \\(B\\)-module libre de type fini en un \\(A\\)-module pseudo-cohérent. On obtient en utilisant la proposition 5.1 un foncteur exact :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D^b(B)_{\\mathrm{coh}}\\longrightarrow D^b(A)_{\\mathrm{coh}}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent un homomorphisme canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K_\\bullet(B)\\xrightarrow{u_*}K_\\bullet(A).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les homomorphismes \\(u_*,u^*\\) vérifient l'identité suivante (\"<u>la formule de projection</u>\") :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[u_*\\bigl(u^*(\\alpha)\\cdot\\beta\\bigr)=\\alpha\\bigl(u_*(\\beta)\\bigr)\n\\quad\\text{pour }\\alpha\\in K^\\bullet(A),\\ \\beta\\in K_\\bullet(B).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette formule facile sera démontrée sous une forme plus générale dans les exposés du séminaire sur Riemann-Roch (SGA 6 IV 2.11.1.2).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIII-10",
+   "title": "10. Construction relative.(*)",
+   "blocks": [
+    {
+     "id": "VIII.10",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.10\">10. <u>Construction relative.</u><sup><a href=\"#VIII-fn5\" id=\"VIII-fn5ref\">(*)</a></sup></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(u:A\\longrightarrow B\\) un homomorphisme d'anneaux, et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D(B)\\longrightarrow D(A)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le foncteur exact associé. Nous pouvons considérer dans \\(D(B)\\) les complexes pseudo-cohérents relativement à \\(A\\), ceux de tor-dimension finie relativement à \\(A\\), et aussi les complexes parfaits relativement à \\(A\\). En spécial, il y a lieu de considérer les sous-catégories triangulées</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[D(B)_{A\\text{-}\\mathrm{parf}},\\quad D^b(B)_{A\\text{-}\\mathrm{coh}}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de \\(D(B)\\), engendrées par les complexes parfaits (resp. pseudo-cohérents et bornés relativement à \\(A\\). Ces deux catégories triangulées permettent de définir les groupes suivants :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^\\bullet(B\\mathrel{\\mathrm{rel}}A)=K(D(B)_{A\\text{-}\\mathrm{parf}})\\]\n\\[K_\\bullet(B\\mathrel{\\mathrm{rel}}A)=K(D^b(B)_{A\\text{-}\\mathrm{coh}}).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Exemples.</u> Soient \\(G\\) un groupe et \\(\\Lambda\\) un anneau commutatif. L'homomorphisme \\(\\Lambda\\xrightarrow{\\varepsilon}\\Lambda[G]\\) permet donc de définir les groupes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^\\bullet(\\Lambda[G]\\mathrel{\\mathrm{rel}}\\Lambda),\\quad K_\\bullet(\\Lambda[G]\\mathrel{\\mathrm{rel}}\\Lambda),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui seront désignés par \\(R^\\bullet_\\Lambda(G)\\), \\(R^\\Lambda_\\bullet(G)\\). En fait, \\(R^\\bullet_\\Lambda(G)\\) est un anneau commutatif et \\(R^\\Lambda_\\bullet(G)\\) un module sur ce dernier.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remarques.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">a) Si l'anneau \\(\\Lambda\\) n'est pas nécessairement commutatif, on peut poser par définition \\(\\Lambda[G]=\\Lambda\\otimes_{\\mathbb Z}\\mathbb ZG\\) et par conséquent, on obtient un homomorphisme \\(\\Lambda\\xrightarrow{\\varepsilon}\\Lambda[G]\\). De cette façon, on peut donner un sens aux groupes \\(R^\\bullet_\\Lambda(G)\\), \\(R^\\Lambda_\\bullet(G)\\) même dans le cas d'un anneau \\(\\Lambda\\) non-commutatif.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">b) La construction précédente peut être généralisée au cas d'un préschéma en groupes (ou d'un pro-préschéma en groupes) \\(G\\) sur \\(\\operatorname{Spec}\\Lambda\\), en partant de la catégorie abélienne des \\(\\Lambda\\)-modules sur lesquels \\(G\\) opère — qui ne s'explicite plus en termes de modules sur un anneau — et le foncteur naturel d'inclusion dans la catégorie des \\(\\Lambda\\)-modules. (Si \\(\\Lambda\\) est un corps, on peut l'expliciter en termes de modules sur un pro-anneau, et dans le cas général, en termes de comodules, du moins si \\(G\\) est affine sur \\(\\Lambda\\), cf SGA3 I 4.7.2).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VIII-fn5",
+     "number": "(*)",
+     "html": "cf. (SGA 6 III, IV)."
+    }
+   ]
+  },
+  {
+   "id": "VIII-bibliographie",
+   "title": "Bibliographie.",
+   "blocks": [
+    {
+     "id": "VIII.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIII.bibliographie\"><u>Bibliographie.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1]  A. Grothendieck et J. Dieudonné, Éléments de Géométrie Algébrique, Publ. Math. I.H.E.S. IV (Seconde Partie).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2]  J. L. Verdier, Catégories Dérivées, I.H.E.S., 1963.<sup><a href=\"#VIII-fn6\" id=\"VIII-fn6ref\">(*)</a></sup></p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VIII-fn6",
+     "number": "(*)",
+     "html": "publié dans (SGA 4<sup>1/2</sup>)."
+    }
+   ]
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. Grothendieck, rédigé par I. Bucur"
+}

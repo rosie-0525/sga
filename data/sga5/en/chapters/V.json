@@ -1,0 +1,3437 @@
+{
+ "chapter_id": "V",
+ "title": "EXPOSÉ V \\(\\ell\\)-ADIC PROJECTIVE SYSTEMS",
+ "number": "V",
+ "pages": [
+  {
+   "id": "V",
+   "title": "EXPOSÉ V \\(\\ell\\)-ADIC PROJECTIVE SYSTEMS",
+   "blocks": [
+    {
+     "id": "V",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"V\">EXPOSÉ V<br>\\(\\ell\\)-ADIC PROJECTIVE SYSTEMS<span class=\"author\">by<br>J. P. JOUANOLOU</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Throughout the exposé, the letter \\(A\\) denotes a ring with unit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The present exposé is intended to develop a formalism which will be used\nin the following exposé for the study of \\(\\ell\\)-adic cohomology.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-1",
+   "title": "1. Generalities on abelian \\(A\\)-categories.",
+   "blocks": [
+    {
+     "id": "V.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.1\">1. <u>Generalities on abelian \\(A\\)-categories.</u></h2>"
+    },
+    {
+     "id": "V.1.1",
+     "type": "definition",
+     "label": "1.1.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.1.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">1.1.</span> — <u>We call a\n\\(A\\)-category (resp. abelian \\(A\\)-category) a pair \\((C,\\rho)\\) formed\nof an additive (resp. abelian) category \\(C\\) and a ring\nhomomorphism:</u></div><div class=\"thm-body\">\n\\[\n\\rho:A\\longrightarrow\\operatorname{End}(\\operatorname{id}_C)\n\\]\n<p><u>from \\(A\\) into the ring of endomorphisms of the identity functor of \\(C\\)\ninto \\(C\\).</u></p>\n<p>Given two \\(A\\)-categories (resp. abelian \\(A\\)-categories)\n\\((C,\\rho)\\) and \\((C',\\rho')\\), we call a morphism of \\(A\\)-categories\n(resp. of abelian \\(A\\)-categories from \\((C,\\rho)\\) into \\((C',\\rho')\\))\nan additive (resp. exact) functor \\(F:C\\longrightarrow C'\\) such that for every\nobject \\(M\\) of \\(C\\) and every element \\(a\\) of \\(A\\) the equality below is\nsatisfied:</p>\n\\[\nF(\\rho(a)_M)=\\rho'(a)_{F(M)}.\n\\]\n</div></div>"
+    },
+    {
+     "id": "V.1.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.1.1.1\"><u>Example 1.1.1.</u> Let \\(C\\) be an additive\n(resp. abelian) category. Recall that we call the category of (left) \\((A,C)\\)-modules,\nand denote by \\((A,C)\\text{-}\\mathrm{mod}\\), the category described\nas follows:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) Its objects are the pairs \\((X,\\alpha)\\) formed of an object \\(X\\) of\n\\(C\\) and a ring morphism\n\\(\\alpha:A\\longrightarrow\\operatorname{Hom}_C(X,X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) A morphism \\((X,\\alpha)\\longrightarrow(Y,\\beta)\\) is a\n\\(C\\)-morphism \\(u:X\\longrightarrow Y\\) such that for every element \\(a\\) of\n\\(A\\) the diagram below is commutative:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nX\\ar[r]^u\\ar[d]_{\\alpha(a)}&amp;Y\\ar[d]^{\\beta(a)}\\\\\nX\\ar[r]^u&amp;Y.\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The category \\((A,C)\\text{-}\\mathrm{mod}\\) is obviously a\n\\(A^\\natural\\)-category (resp. abelian \\(A^\\natural\\)-category), where\n\\(A^\\natural\\) is the center of \\(A\\). Moreover, it satisfies the following\nproperties: \\(a\\) <u>The functor \\((A,C)\\text{-}\\mathrm{mod}\\longrightarrow C\\)\nobtained by forgetting the \\(A\\)-module structure commutes with inductive\nand projective limits.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(b\\) <u>Let \\(I\\) be a category. For the \\(I\\)-inductive limits\n(resp. projective limits) of \\((A,C)\\text{-}\\mathrm{mod}\\) to be representable,\nit suffices that this be so for the \\(I\\)-inductive (resp.\nprojective) limits of \\(C\\).</u></p>"
+    },
+    {
+     "id": "V.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.1.2\">1.2. <u>External tensor product.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\((C,\\rho)\\) be an abelian \\(A\\)-category. If \\(M\\) is a\nright \\(A\\)-module and \\(X\\) an object of \\(C\\), we call the <u>external\ntensor product of \\(X\\) by \\(M\\)</u>, and denote by \\(M\\otimes_A X\\), the\ncovariant functor from \\(C\\) into the category of sets, defined on the\nobjects \\(Y\\) of \\(C\\) by the equality below and in the obvious way on the\narrows:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(M\\otimes_A X)(Y)=\\operatorname{Hom}_A(M,\\operatorname{Hom}_C(X,Y)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where \\(\\operatorname{Hom}_C(X,Y)\\) is regarded as a right \\(A\\)-module\nthanks to the action of \\(A\\) on \\(X\\). Interpreting \\(M\\otimes_A X\\) and \\(Y\\)\nas objects of the category\n\\(\\widehat C=\\operatorname{Hom}(C,\\mathrm{Ens})^\\circ\\), the preceding equality\ntakes the more familiar form:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}_{\\widehat C}(M\\otimes_A X,Y)\n=\\operatorname{Hom}_A(M,\\operatorname{Hom}_C(X,Y)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If the functor \\(M\\otimes_A X\\) is representable, we shall denote and name in\nthe same way a representative.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(u:M\\longrightarrow M'\\) and \\(v:X\\longrightarrow X'\\) are two\nmorphisms of \\((A\\text{-}\\mathrm{mod})\\) and \\(C\\) respectively, one defines\nin the usual way a \\(C\\)-morphism\n\\(u\\otimes_A v:M\\otimes_A X\\longrightarrow M'\\otimes_A X'\\), which will\nallow us to speak of the (twice covariant) external tensor product\nbifunctor. Its properties are summarized in the following proposition.</p>"
+    },
+    {
+     "id": "V.1.2.1",
+     "type": "proposition",
+     "label": "1.2.1.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.1.2.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">1.2.1.</span> —\n<u>The tensor product bifunctor is additive and commutes with inductive\nlimits.</u></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof, classical in the case of modules over a ring, is\nimmediate.</p>"
+    },
+    {
+     "id": "V.1.2.2",
+     "type": "proposition",
+     "label": "1.2.2.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.1.2.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">1.2.2.</span>\n(<u>Representability criteria</u>).</div><div class=\"thm-body\">\n<p>\\(a\\) <u>For every object \\(X\\) of \\(C\\), \\(A\\otimes_A X\\) is represented by\n\\(X\\).</u></p>\n<p>\\(b\\) <u>For every \\(A\\)-module \\(M\\) of finite presentation and every object\n\\(X\\) of \\(C\\), the functor \\(M\\otimes_A X\\) is representable.</u></p>\n<p>\\(c\\) <u>If the category \\(C\\) possesses \"arbitrary\" direct sums,\nthe functor \\(M\\otimes_A X\\) is representable for \"every\" pair\n\\((M,X)\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Assertion \\(a\\) is clear. The two other assertions\nthen follow from the lemma below, whose proof is immediate.</p>"
+    },
+    {
+     "id": "V.1.2.3",
+     "type": "lemma",
+     "label": "1.2.3.",
+     "title": "LEMMA",
+     "html": "<div class=\"thm lemma\" id=\"V.1.2.3\"><div class=\"thm-head\">\n<span class=\"thm-name\">LEMMA</span> <span class=\"thm-num\">1.2.3.</span> — <u>Let\n\\(M\\longrightarrow N\\longrightarrow P\\longrightarrow0\\) be an exact sequence of\n\\(A\\)-modules and \\(X\\) an object of \\(C\\). If the functors \\(M\\otimes_A X\\)\nand \\(N\\otimes_A X\\) are represented by objects \\(Y\\) and \\(Z\\) of \\(C\\),\nthe functor \\(P\\otimes_A X\\) is represented by the cokernel of the morphism\n\\(Y\\longrightarrow Z\\) corresponding to\n\\(\\alpha\\otimes_A\\operatorname{id}_X\\).</u></div></div>"
+    },
+    {
+     "id": "V.1.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.1.2.4\"><u>Remark 1.2.4.</u> Let \\(\\mathfrak a\\) be an ideal of finite type\nof \\(A\\). For every object \\(X\\) of \\(C\\), the functor\n\\((A/\\mathfrak a)\\otimes_A X\\) is representable, and the arrow</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np_X:X\\longrightarrow(A/\\mathfrak a)\\otimes_A X\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>coming from the canonical epimorphism of \\(A\\) onto \\(A/\\mathfrak a\\) and from\npart \\(a\\) of 1.2.2 is an epimorphism. The same statement is valid when\nthe ideal \\(\\mathfrak a\\) is no longer assumed of finite type, but \\(C\\) possesses\n\"arbitrary\" direct sums. We set\n\\(\\mathfrak aX=\\ker(p_X)\\). When the category possesses filtered inductive\nlimits, it is clear that\n\\(\\mathfrak aX=\\sum_{a\\in\\mathfrak a}aX\\). If \\(u:X\\longrightarrow Y\\) is an\nepimorphism, \\(u\\) sends \\(\\mathfrak aX\\) epimorphically onto\n\\(\\mathfrak aY\\). Finally, for an object \\(X\\) to be killed by every element\nof \\(\\mathfrak a\\), it is necessary and sufficient that \\(\\mathfrak aX=0\\). Then every\nmorphism from an object \\(Z\\) into \\(X\\) factors by means of \\(p_Z\\)\nthrough a morphism from \\((A/\\mathfrak a)\\otimes_A Z\\) into \\(X\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-2",
+   "title": "2. Mittag-Leffler-Artin-Rees condition.",
+   "blocks": [
+    {
+     "id": "V.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.2\">2. <u>Mittag-Leffler-Artin-Rees condition.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Throughout this paragraph, the letter \\(C\\) denotes an abelian category and\nwe set \\(P=\\operatorname{Hom}(\\mathbb N^\\circ,C)\\), the category of projective systems\nindexed by the ordered set \\(\\mathbb N\\) of positive integers,\nwith values in \\(C\\).</p>"
+    },
+    {
+     "id": "V.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.2.1\">2.1. <u>Mittag-Leffler-Artin-Rees condition.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X=(X_n,u_n)_{n\\geq0}\\) be an object of the category \\(P\\). If \\(r\\)\ndenotes an integer \\(\\geq0\\), we agree to denote by \\(X[r]\\) the projective\nsystem \\((X_{n+r},u_{n+r})_{n\\geq0}\\). A morphism \\(h:X\\longrightarrow Y\\)\nof \\(P\\) defines in an obvious way a morphism denoted \\(h[r]\\) from \\(X[r]\\)\ninto \\(Y[r]\\), and this in a functorial way. If now \\(r\\) and \\(s\\)\nare two integers satisfying the inequalities \\(s\\geq r\\geq0\\), the\n\"transition morphisms\" \\(X_{n+s}\\longrightarrow X_{n+r}\\) \\((n\\geq0)\\)\ndefine a morphism \\(w_{sr}\\) from \\(X[s]\\) into \\(X[r]\\), and it is clear\nthat if \\(t\\) is a third integer with \\(t\\geq s\\geq r\\), the equality\nbelow is satisfied:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nw_{ts}\\circ w_{sr}=w_{tr}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In other words, we have thus associated to \\(X\\) an object \\(\\overline X\\) of the\ncategory \\(\\operatorname{Hom}(\\mathbb N^\\circ,P)\\). Moreover, if\n\\(h:X\\longrightarrow Y\\) is a morphism of \\(P\\), there corresponds to it in an\nobvious way a morphism \\(\\overline h\\) from \\(\\overline X\\) into\n\\(\\overline Y\\), and this in a functorial way.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, if\n\\(0\\longrightarrow X\\xrightarrow{u}Y\\xrightarrow{v}Z\\longrightarrow0\\) is\nan exact sequence of \\(P\\), the corresponding sequence below in\n\\(\\overline P=\\operatorname{Hom}(\\mathbb N^\\circ,P)\\) is exact:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow\\overline X\\xrightarrow{\\overline u}\\overline Y\n\\xrightarrow{\\overline v}\\overline Z\\longrightarrow0.\n\\]\n\n</p>"
+    },
+    {
+     "id": "V.2.1.1",
+     "type": "definition",
+     "label": "2.1.1.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.2.1.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">2.1.1.</span> —\n<u>Let there be an object of the category \\(P\\). We say that it satisfies the\nMittag-Leffler-Artin-Rees condition (abbreviated MLAR) if there exists an integer \\(r\\) such that\nfor every integer \\(s\\geq r\\) the equality below is satisfied:</u></div><div class=\"thm-body\">\n\\[\n\\operatorname{Im}(X[s]\\xrightarrow{w_{s0}}X)\n=\\operatorname{Im}(X[r]\\xrightarrow{w_{r0}}X).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It amounts to the same thing to say that for every integer \\(n\\geq0\\) the images of\n\\(X_{n+r}\\) and \\(X_{n+s}\\) in \\(X_n\\) under the \"transition morphisms\"\nare the same. Finally, a third interpretation consists in saying that the\nassociated projective system \\(\\overline X\\) satisfies the\nMittag-Leffler condition (abbreviated ML) (EGA \\(0_{\\mathrm{III}}\\) 13.1.2). From this we deduce\nthe following proposition thanks to (EGA \\(0_{\\mathrm{III}}\\) 13.2.1).</p>"
+    },
+    {
+     "id": "V.2.1.2",
+     "type": "proposition",
+     "label": "2.1.2.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.2.1.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">2.1.2.</span> —\n<u>Let \\(0\\longrightarrow X\\longrightarrow Y\\longrightarrow Z\\longrightarrow0\\)\nbe an exact sequence of \\(P\\).</u></div><div class=\"thm-body\">\n<p>(i) <u>If \\(Y\\) satisfies (MLAR), \\(Z\\) satisfies (MLAR).</u></p>\n<p>(ii) <u>If \\(X\\) and \\(Z\\) satisfy (MLAR), then \\(Y\\) satisfies\n(MLAR).</u></p>\n</div></div>"
+    },
+    {
+     "id": "V.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.2.2\">2.2. <u>AR-null projective systems.</u></h3>"
+    },
+    {
+     "id": "V.2.2.1",
+     "type": "definition",
+     "label": "2.2.1.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.2.2.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">2.2.1.</span> —\n<u>Let \\(X\\) be an object of the category \\(P\\). We say that \\(X\\) is AR-null\nif there exists an integer \\(r\\geq0\\) such that the canonical morphism\n\\(X[r]\\longrightarrow X\\) is null.</u></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is clear in particular that an AR-null projective system satisfies the\ncondition (MLAR).</p>"
+    },
+    {
+     "id": "V.2.2.2",
+     "type": "proposition",
+     "label": "2.2.2.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.2.2.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">2.2.2.</span> —\n<u>Let \\(0\\longrightarrow X\\longrightarrow Y\\longrightarrow Z\\longrightarrow0\\)\nbe an exact sequence of \\(P\\). The following assertions are equivalent:</u>\n</div><div class=\"thm-body\">\n<p>(i) <u>\\(Y\\) is AR-null,</u></p>\n<p>(ii) <u>\\(X\\) and \\(Z\\) are AR-null.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In other words, the full subcategory \\(P_0\\) of \\(P\\), whose objects\nare the AR-null projective systems, is thick in \\(P\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: It is clear that (i) implies (ii). Conversely, let\n\\(r\\) and \\(t\\) be integers satisfying the condition of definition\n(2.2.1) for \\(X\\) and \\(Z\\) respectively. One sees at once that the integer\n(s+t) meets the conditions of definition (2.2.1) for \\(Y\\).</p>"
+    },
+    {
+     "id": "V.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.2.3\">2.3. <u>Reminders on the calculus of fractions and applications.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(E\\) be a category and \\(S\\) a subset of\n\\(\\operatorname{Fl}(E)\\). We call a <u>category of fractions of \\(E\\) with respect to\n\\(S\\)</u> a pair \\((p,E(S^{-1}))\\) formed of a category \\(E(S^{-1})\\) and\na functor \\(p:E\\longrightarrow E(S^{-1})\\) satisfying the following universal\nproperty:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For a functor \\(u\\) from \\(E\\) into a category \\(F\\) to factor through\n\\(p\\), it is necessary and sufficient that it render invertible the arrows\nbelonging to \\(S\\), and then the factorization is unique.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The uniqueness of such a pair up to isomorphism is clear. We refer the\nreader to exposé I of the Séminaire Homotopique de Strasbourg for the\nproof of existence, as well as, moreover, for most of the\nresults stated without proof in the rest of the paragraph. (<b>See\nalso: P. Gabriel and M. Zisman, Calculus of fractions and homotopy theory,\nErg. der Math., 35, Springer-Verlag, 1967.</b>)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Certain properties of the multiplicative subset \\(S\\) ensure a\nsimple description of the category \\(E(S^{-1})\\):</p>"
+    },
+    {
+     "id": "V.2.3.1",
+     "type": "definition",
+     "label": "2.3.1.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.2.3.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">2.3.1.</span> —\n<u>We say that a subset \\(S\\) of \\(\\operatorname{Fl}(E)\\) permits a calculus of\nright fractions if the following conditions are realized:</u>\n</div><div class=\"thm-body\">\n<p>\\(a\\) <u>The identity arrows of \\(E\\) belong to \\(S\\).</u></p>\n<p>\\(b\\) <u>If \\(u:X\\longrightarrow Y\\) and \\(v:Y\\longrightarrow Z\\) belong\nto \\(S\\), the composite \\(v\\circ u\\) belongs to \\(S\\).</u></p>\n<p>\\(c\\) <u>Every diagram of type \\((D_1)\\) below, in which \\(t\\)\nbelongs to \\(S\\), can be completed into a diagram of type \\((D_2)\\), in\nwhich \\(s\\) belongs to \\(S\\).</u></p>\n\\[\n\\begin{array}{c@{\\qquad\\qquad}c}\n(D_1)\\quad\\xymatrix{X\\ar[r]^u&amp;Y&amp;Y'\\ar[l]_t}\n&amp;\n(D_2)\\quad\\xymatrix{X'\\ar[r]^{u'}\\ar[d]_s&amp;Y'\\ar[d]^t\\\\X\\ar[r]_u&amp;Y}\n\\end{array}\n\\]\n<p>\\(d\\) <u>For every commutative diagram:</u></p>\n\\[\n\\xymatrix{X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Y\\ar[r]^s&amp;Z,}\n\\]\n<p><u>in which \\(s\\) belongs to \\(S\\), there exists a commutative diagram</u></p>\n\\[\n\\xymatrix{T\\ar[r]^t&amp;X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Y}\n\\]\n<p><u>in which \\(t\\) belongs to \\(S\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dually one defines the following notion:</p>"
+    },
+    {
+     "id": "V.2.3.2",
+     "type": "definition",
+     "label": "2.3.2.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.2.3.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">2.3.2.</span> —\n<u>We say that a subset \\(S\\) of \\(\\operatorname{Fl}(E)\\) permits a calculus of\nleft fractions if the following conditions are realized:</u>\n</div><div class=\"thm-body\">\n<p>\\(a\\)' <u>The identity arrows of \\(E\\) belong to \\(S\\).</u></p>\n<p>\\(b\\)' <u>The composite of two arrows belonging to \\(S\\) belongs to\n\\(S\\).</u></p>\n<p>\\(c\\)' <u>Every diagram of type \\((D_1)'\\) below, in which \\(s\\)\nbelongs</u></p>\n\n<!-- Source PDF page 8 (printed page 211) -->\n<p><u>to \\(S\\), can be completed into a diagram of type \\((D_2)'\\), in\nwhich \\(t\\) belongs to \\(S\\):</u></p>\n\\[\n\\begin{array}{c@{\\qquad\\qquad}c}\n(D_1)'\\quad\\xymatrix{X'\\ar[r]^{u'}\\ar[d]_s&amp;Y'\\\\X}\n&amp;\n(D_2)'\\quad\\xymatrix{X'\\ar[r]^{u'}\\ar[d]_s&amp;Y'\\ar[d]^t\\\\X\\ar[r]_u&amp;Y}\n\\end{array}\n\\]\n<p>\\(d\\)' <u>For every commutative diagram (Delta) of the form below,\nin which \\(s\\) belongs to \\(S\\), there exists a morphism \\(t\\) with source\n\\(Y\\) and belonging to \\(S\\) such that \\(t\\circ f=t\\circ g\\).</u></p>\n\\[\n(\\Delta)\\quad\\xymatrix{X'\\ar[r]^s&amp;X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Y}\n\\]\n</div></div>"
+    },
+    {
+     "id": "V.2.3.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.2.3.3\">2.3.3. Suppose that \\(S\\) is a subset of\n\\(\\operatorname{Fl}(E)\\) permitting a calculus of right fractions. It\nthen follows from part \\(d\\) of (2.3.1) that for every object \\(X\\) of \\(E\\),\nthe category \\((S/X)^\\circ\\), opposite to the category of arrows over\n\\(X\\) belonging to \\(S\\), is filtered (SGA 4 I 2.7). Let us then consider the\ncategory \\(E_S\\) described as follows:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">– The objects of \\(E_S\\) are the objects of\n\\(E\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">– If \\(X\\) and \\(Y\\) are two objects of \\(E\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}_{E_S}(X,Y)=\n\\underset{(S/X)^\\circ}{\\operatorname{Lim}}\n\\operatorname{Hom}_E(\\operatorname{source}(\\mathord\\cdot),Y).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(p_S\\) denotes the obvious functor from \\(E\\) into \\(E_S\\), the pair\n\\((p_S,E_S)\\) is a solution of the universal problem described at the beginning of the\nparagraph. We shall agree in this case to denote by \\(E(S^{-1})\\) this\nparticular solution.</p>"
+    },
+    {
+     "id": "V.2.3.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.2.3.4\">2.3.4. Let now \\(S\\) be a subset of\n\\(\\operatorname{Fl}(E)\\) permitting a calculus of left fractions. Then the\nfunctor \\(p_S:E\\longrightarrow E(S^{-1})\\) <u>commutes with finite inductive\nlimits</u>. In particular, if \\(E\\) is additive, \\(E(S^{-1})\\) is additive\nand \\(p_S\\) is an additive functor.</p>"
+    },
+    {
+     "id": "V.2.3.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.2.3.5\">2.3.5. If the category \\(E\\) is abelian and if \\(S\\) is\na subset of \\(\\operatorname{Fl}(E)\\) permitting both a calculus of\nright fractions and a calculus of left fractions, the category\n\\(E(S^{-1})\\) is abelian and the functor \\(p_S\\) is exact. Moreover the pair\n\\((p_S,E(S^{-1}))\\) is a quotient of \\(E\\) by a thick abelian\nsubcategory \\(p_S^{-1}(0)\\).</p>"
+    },
+    {
+     "id": "V.2.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.2.4\">2.4. <u>The category\n\\(P_{AR}=\\operatorname{Hom}_{AR}(\\mathbb N^\\circ,C)\\).</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Resuming the notations of (2.1), let (AR) be the set of canonical\narrows (cf. 2.1) \\(v_{rX}:X[r]\\longrightarrow X\\), \\(X\\) running through\nthe set of objects of \\(P\\) and \\(r\\) the set of integers (geq0).</p>"
+    },
+    {
+     "id": "V.2.4.1",
+     "type": "proposition",
+     "label": "2.4.1.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.2.4.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">2.4.1.</span> —\n<u>The subset (AR) of \\(\\operatorname{Fl}(P)\\) permits both a calculus of\nright fractions and a calculus of left fractions.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Parts \\(a\\) ⇒ \\(a\\)' and \\(b\\) ⇒ \\(b\\)' of (2.3.1) and (2.3.2)\nare clear.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us show \\(c\\). Let then \\((D_1)\\) be the commutative diagram below, in\nwhich \\(v_{rY}\\) denotes the canonical arrow from (Y[r]) into \\(Y\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(D_1)\\quad\\xymatrix{&amp;Y[r]\\ar[d]^{v_{rY}}\\\\X\\ar[r]&amp;Y}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The diagram \\((D_2)\\) below is commutative and \\(v_{rX}\\), the canonical morphism\nfrom (X[r]) into \\(X\\), belongs to (AR), whence the assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(D_2)\\quad\\xymatrix{X[r]\\ar[r]^{u[r]}\\ar[d]_{v_{rX}}&amp;Y[r]\\ar[d]^{v_{rY}}\\\\X\\ar[r]_u&amp;Y}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us show \\(d\\). Let there be a commutative diagram:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Z[r]\\ar[r]^{v_{rZ}}&amp;Z.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Applying the \"translation\" by \\(r\\), we deduce from it a commutative\ndiagram:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r]\\ar@&lt;.5ex&gt;[r]^{f[r]}\\ar@&lt;-.5ex&gt;[r]_{g[r]}&amp;Z[2r]\\ar[r]^{v_{rZ}[r]}&amp;Z[r].}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is clear that the diagram below is commutative, so that\n\\(f\\circ v_{rX}=g\\circ v_{rX}\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r]\\ar@&lt;.5ex&gt;[r]^{f[r]}\\ar@&lt;-.5ex&gt;[r]_{g[r]}\\ar[d]_{v_{rX}}&amp;Z[2r]\\ar[d]^{v_{rZ}[r]}\\\\X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Z[r].}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us show \\(c'\\). Let us remark first of all that if \\(Y\\) denotes an object of\n\\(P\\) and \\(r\\) a positive integer, there exists an object \\(T\\) of \\(P\\) such that\n\\(Y=T[r]\\) and such that for every object \\(X\\) of \\(P\\), the homomorphism of\ntranslation by \\(r\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}_P(X,T)\\longrightarrow\\operatorname{Hom}_P(X[r],Y)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a bijection. The projective system \\((T_n,w_n')\\) defined as follows\nobviously works:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n&amp;\\text{If }Y=(Y_n,u_n)_{n\\geq0},\\quad T_n\\text{ is the zero object of }C\n\\text{ for }n\\geq r-1\\text{ and }Y_{n-r}\\text{ otherwise},\\\\\n&amp;w_n'=0\\text{ for }n\\geq r-1,\\quad w_n'=u_{n-r}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This said, suppose given a diagram of the type below, and let us show\nthat it can be completed as indicated in the statement of \\(c'\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\xymatrix{X[r]\\ar[r]^{u'}\\ar[d]_{v_{rX}}&amp;Y'\\\\X.}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For this, let \\(Y\\) be a projective system such that \\(Y'=Y[r]\\) and that\nthe canonical map\n\\(\\operatorname{Hom}_P(X,Y)\\longrightarrow\\operatorname{Hom}_P(X[r],Y')\\)\nis a bijection. Then it is clear that the diagram below is\ncommutative, \\(u\\) denoting the unique morphism from \\(X\\) into \\(Y\\) such that\n\\(u'=u[r]\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r]\\ar[r]^{u'}\\ar[d]_{v_{rX}}&amp;Y'=Y[r]\\ar[d]^{v_{rY}}\\\\\nX\\ar[r]^u&amp;Y.}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us show \\(d\\)'. Consider the diagram below, assumed commutative,\nand let us show that there exists a morphism \\(w\\) of \\(Y\\) such that\n\\(w\\circ f=w\\circ g\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r]\\ar[r]^{v_{rX}}&amp;X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Y.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is first of all clear that the diagram below is commutative:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r]\\ar@&lt;.5ex&gt;[r]^{f[r]}\\ar@&lt;-.5ex&gt;[r]_{g[r]}\\ar[d]_{v_{rX}}&amp;\nY[r]\\ar[d]^{v_{rY}}\\\\X\\ar@&lt;.5ex&gt;[r]^f\\ar@&lt;-.5ex&gt;[r]_g&amp;Y.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular \\(v_{rY}\\circ f[r]=v_{rY}\\circ g[r]\\). Let now\n\\(T\\) be the system associated to \\(Y\\) and \\(r\\) as at the beginning of the proof\nof \\(c\\)', so that in</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>particular \\(Y=T[r]\\). The translates by \\(r\\) of the morphisms\n\\(v_{rT}\\circ f\\) and \\(v_{rT}\\circ g\\) are equal respectively to\n\\(v_{rY}\\circ f\\) and \\(v_{rY}\\circ g[r]\\), hence equal. It then follows from the\nfact that the translation by \\(r\\) is an injection on the morphisms from\n\\(X\\) into \\(T\\) that the equality below is satisfied, whence the assertion:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nv_{rT}\\circ f=v_{rT}\\circ g.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>DEFINITION 2.4.2.</strong> Let \\(C\\) be an abelian category. We\ncall the <u>category of projective systems of \\(C\\) up to translations</u>,\nand denote by \\(\\operatorname{Hom}_{AR}(\\mathbf N^\\circ,C)\\), the category described\nbelow:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) The objects of\n\\(\\operatorname{Hom}_{AR}(\\mathbf N^\\circ,C)\\) are the objects of\n\\(\\operatorname{Hom}(\\mathbf N^\\circ,C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) If \\(X\\) and \\(Y\\) are two objects of\n\\(\\operatorname{Hom}(\\mathbf N^\\circ,C)\\), a morphism from \\(X\\) into \\(Y\\)\nin the category \\(\\operatorname{Hom}_{AR}(\\mathbf N^\\circ,C)\\) is an element\nof the set</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}_{AR}(X,Y)=\\underset{\\longrightarrow r}{\\lim}\n\\operatorname{Hom}(X[r],Y),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where, for every pair \\((r,s)\\) of integers with \\(s\\geq r\\), the map</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}(X[r],Y)\\longrightarrow\\operatorname{Hom}(X[s],Y)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>comes from the canonical morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX[s]\\longrightarrow X[r].\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The composition of morphisms is defined in the obvious way.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In what follows, the category \\(C\\) being fixed, we shall set for simplicity\n\\(P=\\operatorname{Hom}(\\mathbf N^\\circ,C)\\) and\n\\(P_{AR}=\\operatorname{Hom}_{AR}(\\mathbf N^\\circ,C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>2.4.3.</strong> We have seen (2.4.1) that the subset \\(AR\\) of\n\\(Fl(P)\\) permits a calculus of right fractions. This allows us (2.3.3) to\nconsider the category:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nP'_{AR}=P(AR^{-1})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which, we recall, has the same objects as \\(P\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) and \\(Y\\) be two objects of \\(P\\), and let us denote by\n\\(\\operatorname{Hom}'_{AR}(X,Y)\\) the set of isomorphisms from \\(X\\) into\n\\(Y\\) in \\(P'_{AR}\\). An element of \\(\\operatorname{Hom}_{AR}(X,Y)\\)\ndefines in an obvious way an element of \\(\\operatorname{Hom}'_{AR}(X,Y)\\).\nMore precisely, one defines in this way a functor</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nm:P_{AR}\\longrightarrow P'_{AR}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 2.4.3.</strong> <u>The functor \\(m\\) is an\nisomorphism of categories.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: It is a matter of seeing that for every pair \\((X,Y)\\) of objects\nof \\(P\\), the corresponding map</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nm_{XY}:\\operatorname{Hom}_{AR}(X,Y)\\longrightarrow\n\\operatorname{Hom}'_{AR}(X,Y)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a bijection. It is obviously a surjection. To see the injectivity,\none reduces immediately to seeing that for every commutative diagram of the type\nbelow, there exists an integer \\(t\\) greater than or equal to \\(r\\) and \\(s\\) such\nthat the composite of \\(\\rho\\) and the canonical morphism from \\(X[t]\\) into\n\\(X[s]\\) is the canonical morphism from \\(X[t]\\) into \\(X[r]\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r]&amp;X[s]\\ar[l]_\\rho\\\\&amp;X\\ar[ul]^{v_{rX}}\\ar[u]_{v_{sX}}}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now this follows from the commutativity of the diagram below, in which we\nhave designated by the letter \\(c\\) all the canonical morphisms coming into play.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{X[r+s]&amp;X[2s]\\ar[l]_{\\rho(s)}\\ar[d]^c\\\\\nX[r]\\ar[u]^c&amp;X[s]\\ar[l]^\\rho\\ar[u]_c}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 2.4.4.</strong></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) <u>The category \\(P_{AR}\\) is\nabelian.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) <u>The functor\n\\(P_{AR}:P\\longrightarrow P_{AR}\\) is exact.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(iii) <u>For an object \\(X\\) of \\(P\\) to be\nAR-null, it is necessary and sufficient that \\(P_{AR}(X)=0\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(iv) <u>The pair \\((P_{AR},P_{AR})\\) is a\nquotient of the abelian category \\(P\\) by the thick abelian subcategory\nof AR-null objects.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: If one admits (iii), the other assertions are a consequence\nof (2.3.5). It follows from (2.3.4) that for an object \\(X\\) of \\(P\\) to be\nAR-null, it is necessary and sufficient that \\(P_{AR}(\\operatorname{id}_X)=0\\), whence\n(iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>COROLLARY 2.4.5.</strong> <u>Let \\(u:X\\longrightarrow Y\\) be of the\ncategory \\(P\\). The following assertions are equivalent:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) \\(P_{AR}(u)\\) is an isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) The kernel and the cokernel of \\(u\\) are\nAR-null.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A morphism \\(u:X\\longrightarrow Y\\) of the category \\(P\\) of projective\nsystems, satisfying the equivalent conditions (i) and (ii), will be called an\n<u>AR-isomorphism</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>DEFINITION 2.4.6.</strong> <u>Two objects \\(X\\) and \\(Y\\) of the\ncategory \\(P\\) are said to be AR-isomorphic if \\(P_{AR}(X)\\) and \\(P_{AR}(Y)\\)\nare isomorphic in the category \\(P_{AR}\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X\\) and \\(Y\\) are two AR-isomorphic objects of the category \\(P\\),\nthere does not in general exist an AR-isomorphism \\(u\\) from \\(X\\) into \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3>2.5. Characterization of projective systems satisfying the\nMittag-Leffler-Artin-Rees condition.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 2.5.1.</strong> <u>The following assertions for an\nobject \\(X\\) of \\(P\\) are equivalent:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) <u>\\(X\\) satisfies (MLAR) (2.1.1).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) <u>There exist a strict projective system\n\\(Y\\) and an AR-isomorphism \\(u:Y\\longrightarrow X\\) (2.4.5).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(iii) <u>There exists a strict projective system\n\\(Y\\) such that \\(X\\) and \\(Y\\) are isomorphic in the category\n\\(P_{AR}\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(iv) <u>\\(X\\) satisfies the Mittag-Leffler\ncondition and, denoting by \\(X'\\) the projective system of universal\nimages of \\(X\\), the projective system \\(X/X'\\) is AR-null.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We are going to prove the chain of implications:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(i)\\Rightarrow(iv)\\Rightarrow(iii)\\Rightarrow(ii)\\Rightarrow(i).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((i)\\Rightarrow(iv)\\). There exists an integer \\(m\\) such that the canonical\nmorphism \\(w_{mX}\\) from \\(X[m]\\) to \\(X\\) factors through\nthe canonical inclusion \\(i\\) of \\(X'\\) into \\(X\\). It follows that\n\\(P_{AR}(i)\\) is a (direct) epimorphism, hence, since \\(P_{AR}\\) is exact,\nthat \\(P_{AR}(X/X')=0\\). We conclude by (2.4.4 (iii)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((iv)\\Rightarrow(iii)\\). The condition of (iv) means, with the preceding\nnotations, that \\(P_{AR}(i)\\) is an epimorphism. But because of\nthe exactness of \\(P_{AR}\\), it is even a monomorphism, hence an isomorphism.\nFor the object \\(Y\\) we take the projective system \\(X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((iii)\\Rightarrow(ii)\\). The \\(P_{AR}\\)-isomorphism from \\(Y\\) to \\(X\\)\nwhose existence is assumed is the image under \\(P_{AR}\\) of an \\(P\\)-morphism\n\\(Y[r]\\longrightarrow X\\), where \\(r\\) denotes a nonnegative integer. We\nconclude thanks to the fact that \\(Y[r]\\) is strict.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((ii)\\Rightarrow(i)\\). We may assume \\(Y\\) is contained in \\(X\\) and that\n\\(u\\) is the canonical injection. Let \\(T\\) be the cokernel of \\(u\\). The\nhypothesis made means that \\(T\\) is AR-null, so there exists an integer \\(r\\) such that\nfor every \\(s\\) greater than or equal to \\(r\\) the canonical morphism from \\(T[s]\\)\nto \\(T\\) is zero. We conclude that for \\(s\\geq r\\) the image of \\(X[s]\\)\nin \\(X\\) is contained in \\(Y\\); as on the other hand it obviously\ncontains the image, equal to \\(Y\\), of \\(Y[s]\\) in \\(Y\\), it is equal to\n\\(Y\\). We conclude that \\(Y\\) is the image of \\(X[s]\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for \\(s\\) sufficiently large, hence that \\(X\\) satisfies (MLAR) and that \\(Y\\)\nis the projective system of universal images of \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>COROLLARY 2.5.2.</strong> <u>Let\n\\(u:Y\\longrightarrow X\\) be an AR-isomorphism, with \\(Y\\) strict. Under these\nconditions, \\(X\\) satisfies condition (MLAR) and \\(u(Y)\\) is the projective\nsystem of universal images of \\(X\\).</u></p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-3",
+   "title": "3. \\(J\\)-adic and AR-\\(J\\)-adic projective systems.",
+   "blocks": [
+    {
+     "id": "V.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.3\">3. <u>\\(J\\)-adic and\nAR-\\(J\\)-adic projective systems.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(A\\) be a commutative ring with unit, \\(J\\) an ideal of \\(A\\),\n\\((C,\\rho)\\) an abelian \\(A\\)-category. We assume either that \\(J\\) is\nof finite type, or that \\(C\\) possesses infinite direct sums. The\nnotations are the same as in the preceding paragraph. In particular,\nthe symbols \\(P\\) and \\(P_{AR}\\) denote respectively the categories\n\\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\) and\n\\(\\operatorname{Hom}_{AR}(\\mathbb N^\\circ,C)\\).</p>"
+    },
+    {
+     "id": "V.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.3.1\">3.1. <u>\\(J\\)-adic projective systems.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>DEFINITION 3.1.1.</strong> <u>Let \\(X\\) be an object of \\(P\\). We say\nthat \\(X\\) is \\(J\\)-adic if it satisfies the following conditions:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) <u>For every integer \\(n\\geq0\\),\n\\(J^{n+1}X_n=0\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) <u>For every pair \\((m,n)\\) of integers\nwith \\(m\\geq n\\geq0\\), the morphism\n\\[\nA/J^{n+1}\\otimes_A X_m\\longrightarrow X_n\n\\]\ndeduced from the transition morphism \\(X_m\\longrightarrow X_n\\) is an\nisomorphism.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We denote by \\(J\\text{-}\\mathrm{ad}(C)\\) the full subcategory of \\(P\\)\ngenerated by the \\(J\\)-adic projective systems.</p>"
+    },
+    {
+     "id": "V.3.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.1.2\"><u>Remark 3.1.2.</u> Let \\(I\\) and \\(J\\) be two ideals of\n\\(A\\) and assume either that \\(I\\) and \\(J\\) are of finite type, or\nthat \\(C\\) admits infinite direct sums. Then one can show that if\n\\(I\\) and \\(J\\) define the same topology on \\(A\\), the categories\n\\(I\\text{-}\\mathrm{ad}(C)\\) and \\(J\\text{-}\\mathrm{ad}(C)\\) are\nequivalent.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 3.1.3.</strong> (<u>Stability under exact sequences</u>).\n<u>Let</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow X\\xrightarrow{u}Y\\xrightarrow{v}Z\\longrightarrow0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>be an exact sequence of \\(P\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) <u>If \\(X\\) is strict and \\(Y\\) is\n\\(J\\)-adic, then \\(Z\\) is \\(J\\)-adic.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) <u>If \\(Y\\) is strict and \\(Z\\) is\n\\(J\\)-adic, then \\(X\\) is strict.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(iii) <u>If \\(X\\) and \\(Z\\) are \\(J\\)-adic,\n\\(Y\\) is \\(J\\)-adic.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: If \\(m\\geq n\\), it is clear that the diagram \\(T\\)\nbelow, in which the vertical arrows denote the transition\nmorphisms, is commutative and exact:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{T}\n\\xymatrix{\nA/J^{n+1}\\otimes_A X_m\\ar[r]^{\\mathrm{id}\\otimes u_m}\\ar[d]_{f_{nm}}&amp;\nA/J^{n+1}\\otimes_A Y_m\\ar[r]^{\\mathrm{id}\\otimes v_m}\\ar[d]_{g_{nm}}&amp;\nA/J^{n+1}\\otimes_A Z_m\\ar[r]\\ar[d]_{h_{nm}}&amp;0\\\\\n0\\ar[r]&amp;X_n\\ar[r]&amp;Y_n\\ar[r]&amp;Z_n\\ar[r]&amp;0.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In case (i), \\(f_{nm}\\) is an epimorphism and \\(g_{nm}\\) an\nisomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In case (ii), \\(g_{nm}\\) is an epimorphism and \\(h_{nm}\\) an\nisomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In case (iii), \\(f_{nm}\\) and \\(h_{nm}\\) are isomorphisms. In\nall three cases, the snake lemma applied to the diagram \\(T\\) allows us to\nconclude.</p>"
+    },
+    {
+     "id": "V.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.3.2\">3.2. <u>AR-\\(J\\)-adic projective systems.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 3.2.1.</strong> <u>The following assertions, for an\nobject \\(X\\) of \\(P\\) such that \\(J^{n+1}X_n=0\\) for every \\(n\\geq0\\), are\nequivalent:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) <u>There exist a \\(J\\)-adic projective\nsystem \\(Y\\) and an AR-isomorphism \\(u:Y\\longrightarrow X\\)\n(2.4.5).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) <u>There exists a \\(J\\)-adic projective\nsystem \\(Y\\), isomorphic to \\(X\\) in the category \\(P_{AR}\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We must show that (ii) implies (i). An\n\\(P_{AR}\\)-isomorphism from \\(Y\\) to \\(X\\) is represented for some\ninteger \\(r\\) by an AR-isomorphism \\(v:Y[r]\\longrightarrow X\\). Since\n\\(J^{n+1}X_n=0\\) for every \\(n\\geq0\\) and \\(Y\\) is \\(J\\)-adic, \\(v\\) is the\ncomposite of an \\(P\\)-morphism \\(u:Y\\longrightarrow X\\) and the canonical\nmorphism from \\(Y[r]\\) to \\(Y\\). It is then clear that \\(u\\) is an\nAR-isomorphism, whence the assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>DEFINITION 3.2.2.</strong> <u>A projective system indexed by\n\\(\\mathbb N\\) with values in \\(C\\) is called AR-\\(J\\)-adic if:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">\\(a\\) <u>\\(J^{n+1}X_n=0\\) for every \\(n\\geq0\\),</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">\\(b\\) <u>it satisfies the equivalent conditions\n(i) and (ii) of proposition (3.2.1).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 3.2.3.</strong> <u>Let \\(X\\) be a projective system\nindexed by \\(\\mathbb N\\) with values in \\(C\\). We assume that\n\\(J^{n+1}X_n=0\\) for every \\(n\\geq0\\). Then for \\(X\\) to be\nAR-\\(J\\)-adic, it is necessary and sufficient that it satisfy property (MLAR) and\nthat, denoting by \\(X'\\) its projective system of universal images, there\nexist an integer \\(r\\geq0\\) such that, for every pair \\((m,n)\\) of integers\nwith \\(m\\geq n+r\\), the \"transition morphism\" below is an\nisomorphism:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX'_m/J^{n+1}X'_m\\longrightarrow X'_{n+r}/J^{n+1}X'_{n+r}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">\\(a\\) The conditions of the statement are sufficient:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X\\) satisfies (MLAR), it is AR-isomorphic to its projective system\nof universal images \\(X'\\). On the other hand, the hypothesis made on \\(X'\\)\nmeans that the projective system\n\\((X'_{n+r}/J^{n+1}X'_{n+r})_{n\\geq0}\\) (the transition morphisms being\nobvious) is \\(J\\)-adic. Now it is clear that this projective system is\nAR-isomorphic (2.4.6) to \\(X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">\\(b\\) The conditions of the statement are necessary:\nif \\(X\\) is AR-\\(J\\)-adic, it is AR-isomorphic to a strict projective\nsystem, hence satisfies (MLAR).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The projective system \\(X'\\) of universal images of \\(X\\) is\nAR-isomorphic to \\(X\\), hence AR-\\(J\\)-adic. To prove the second point,\nwe are thus reduced to seeing that if \\(X\\) is an AR-\\(J\\)-adic and strict\nprojective system, there exists an integer \\(r\\) such that the projective system\n\\(\\ell_r(X)\\) defined by\n\\[\n\\ell_r(X)_n=X_{n+r}/J^{n+1}X_{n+r}\n\\]\nis \\(J\\)-adic. For this, let \\(u:Y\\longrightarrow X\\) be an\nAR-isomorphism, with \\(Y\\) \\(J\\)-adic. The kernel \\(T\\) of \\(u\\) being\nAR-null, let \\(r\\) be an integer such that the canonical morphism\n\\(T[r]\\longrightarrow T\\) is zero. It is immediate that the canonical\nmorphism \\(\\ell_r(u):\\ell_r(Y)\\longrightarrow\\ell_r(X)\\) is an\nisomorphism, whence the assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>PROPOSITION 3.2.4.</strong> (<u>Stability under exact sequences</u>).\n<u>Let</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow X\\xrightarrow{u}Y\\xrightarrow{v}Z\\longrightarrow0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>be an exact sequence of \\(P\\), the projective systems \\(X,Y\\) and \\(Z\\)\nbeing such that</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nJ^{n+1}X_n=J^{n+1}Y_n=J^{n+1}Z_n=0\\qquad(n\\geq0).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) <u>If \\(X\\) satisfies (MLAR) and \\(Y\\) is\nAR-\\(J\\)-adic, \\(Z\\) is AR-\\(J\\)-adic.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) <u>If \\(Y\\) satisfies (MLAR) and \\(Z\\) is\nAR-\\(J\\)-adic, \\(X\\) satisfies (MLAR).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We freely use, for every projective system \\(X\\) and\nfor every integer \\(r\\), the notation \\(\\ell_r(X)\\) already made explicit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof of (i)</u>: If \\(X'\\) and \\(Y'\\) denote the projective systems\nof universal images of \\(X\\) and \\(Y\\), \\(u\\) sends \\(X'\\) into \\(Y'\\),\nwhence the commutative exact diagram below, in which the arrows are\nobvious:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n0\\ar[r]&amp;X'\\ar[r]\\ar[d]&amp;Y'\\ar[r]\\ar[d]&amp;\\widetilde Z'\\ar[r]\\ar[d]&amp;0\\\\\n0\\ar[r]&amp;X\\ar[r]&amp;Y\\ar[r]&amp;Z\\ar[r]&amp;0.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since the category \\(P_{AR}\\) is abelian and the functor</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nP_{AR}:P\\longrightarrow P_{AR}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is exact, it follows from this diagram, and from the fact that the inclusions of\n\\(X'\\) and \\(Y'\\) into \\(X\\) and \\(Y\\) respectively are\nAR-isomorphisms (2.5.1), that the morphism\n\\(\\widetilde Z\\longrightarrow Z\\) is an AR-isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This allows us to reduce to the case where \\(X\\) and \\(Y\\), hence \\(Z\\), are\nstrict. There then exists an integer \\(r\\) such that the projective system\n\\(\\ell_r(Y)\\) is \\(J\\)-adic. The functor \\(\\ell_r\\) is obviously\nright exact, whence an exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\ell_r(X)\\xrightarrow{\\ell_r(u)}\\ell_r(Y)\n\\xrightarrow{\\ell_r(v)}\\ell_r(Z)\\longrightarrow0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Replacing \\(\\ell_r(X)\\) if necessary by its image under \\(\\ell_r(u)\\), we\nare in the conditions of application of (3.1.3 (i)), which shows that\n\\(\\ell_r(Z)\\) is \\(J\\)-adic, whence the assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) Let \\(Y'\\) and \\(Z'\\) be the projective\nsystems of universal images of \\(Y\\) and \\(Z\\). Consider the\nobvious commutative exact diagram below, in which the two right-hand\nvertical arrows are the canonical inclusions:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n0\\ar[r]&amp;\\widetilde X\\ar[r]\\ar[d]&amp;Y'\\ar[r]\\ar[d]&amp;Z'\\ar[r]\\ar[d]&amp;0\\\\\n0\\ar[r]&amp;X\\ar[r]^u&amp;Y\\ar[r]^v&amp;Z\\ar[r]&amp;0.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It shows that the morphism \\(\\widetilde X\\longrightarrow X\\) is an\nAR-isomorphism, which allows us to reduce to the case where \\(Y\\) and \\(Z\\) are\nstrict. In this case, since \\(Z\\) is strict and AR-\\(J\\)-adic, it follows\nfrom (3.2.3) that there exists an integer \\(r\\) such that \\(\\ell_r(Z)\\) is\n\\(J\\)-adic. Consideration of the commutative exact diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n0\\ar[r]&amp;\\widetilde X\\ar[r]\\ar[d]&amp;\\ell_r(Y)\\ar[r]\\ar[d]&amp;\\ell_r(Z)\\ar[r]\\ar[d]&amp;0\\\\\n0\\ar[r]&amp;X\\ar[r]^u&amp;Y\\ar[r]^v&amp;Z\\ar[r]&amp;0,\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in which as before \\(\\widetilde X\\longrightarrow X\\) is\nan AR-isomorphism, allows us to reduce to the case where \\(Y\\) is strict and where\n\\(Z\\) is \\(J\\)-adic. Then</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(3.1.3 (ii)) allows us to conclude.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-4",
+   "title": "4. Filtrations and gradings.",
+   "blocks": [
+    {
+     "id": "V.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.4\">4. <u>Filtrations and gradings.</u></h2>"
+    },
+    {
+     "id": "V.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.4.1\">4.1. <u>Generalities.</u></h3>"
+    },
+    {
+     "id": "V.4.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.1.1\"><strong>4.1.1.</strong> Let \\(C\\) be an abelian\ncategory and \\(X=(X_n)_{n\\in\\mathbb Z}\\) a projective system indexed by\n\\(\\mathbb Z\\) with values in \\(C\\). We assume</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX_i=0\\quad(i&lt;0).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every element \\(p\\) of \\(\\mathbb Z\\), we define a subobject\n\\(F^pX\\) of \\(X\\) in the category\n\\(P_1=\\operatorname{Hom}(\\mathbb Z^o,C)\\) by setting:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(F^pX)_n=F^pX_n=\n\\begin{cases}\n\\operatorname{Ker}(X_n\\longrightarrow X_{p-1})&amp;\\text{if }n\\geq p-1,\\\\\n0&amp;\\text{if }n&lt;p-1,\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the transition morphisms being defined in the obvious way. We thus obtain\na decreasing filtration \\((F^pX)_{p\\in\\mathbb Z}\\) of \\(X\\)\nsatisfying:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 3em;\">\\(a\\) \\(F^pX=X\\quad\\) if \\(p\\leq0\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 3em;\">\\(b\\) \\((F^pX)_{p-1}=0\\quad\\) for every \\(p\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, the snake lemma applied to the commutative exact diagram\n\\(D\\) below proves that as soon as \\(n\\geq p\\), the canonical morphism:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF^pX_n/F^{p+1}X_n\\longrightarrow\n\\operatorname{Im}(X_n\\longrightarrow X_p)\\cap\n\\operatorname{Ker}(X_p\\longrightarrow X_{p-1})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is an isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n0\\ar[r]&amp;{\\operatorname{Ker}(X_n\\longrightarrow X_p)}\\ar[r]\\ar[d]&amp;X_n\\ar[r]\\ar[d]&amp;\n{\\operatorname{Im}(X_n\\longrightarrow X_p)}\\ar[r]\\ar[d]&amp;0\\\\\n0\\ar[r]&amp;0\\ar[r]&amp;X_{p-1}\\ar[r]^{\\sim}&amp;X_{p-1}\\ar[r]&amp;0\n}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If now \\(X\\) is a projective system indexed by \\(\\mathbb N\\) with\nvalues in \\(C\\), we extend it to a projective system indexed by\n\\(\\mathbb Z\\) by setting \\(X_n=0\\) (\\(n&lt;0\\)), with the obvious transition\nmorphisms, which allows us to apply to it the preceding\nconstructions.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This allows us to consider also the category</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nP=\\operatorname{Hom}(\\mathbb N^o,C)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>as a full subcategory of \\(P_1\\).</p>"
+    },
+    {
+     "id": "V.4.1.2",
+     "type": "definition",
+     "label": "4.1.2.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.4.1.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">4.1.2.</span> —\n<u>Let \\(X\\) be a projective system indexed by \\(\\mathbb Z\\). We say that\n\\(X\\) is essentially constant if there exists an integer \\(p\\) such that,\nfor every pair \\((r,s)\\) of integers greater than or equal to \\(p\\) and\nsatisfying the inequality \\(s\\geq r\\), the transition morphism</u>\n\\[\nX_s\\longrightarrow X_r\n\\]\n<u>is an isomorphism.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is clear that it suffices to require this when \\(r=p\\).</p>"
+    },
+    {
+     "id": "V.4.1.3",
+     "type": "proposition",
+     "label": "4.1.3.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.4.1.3\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">4.1.3.</span>\n(<u>Property (MLAR) and graded objects</u>). <u>The following assertions for an\nobject \\(X\\) of the category \\(P\\) are equivalent:</u>\n</div><div class=\"thm-body\">\n<p style=\"margin-left: 2em;\">(i) <u>\\(X\\) satisfies (MLAR).</u></p>\n<p style=\"margin-left: 2em;\">(ii) <u>The projective system with values in the\ncategory of objects graded by \\(\\mathbb N\\) of \\(C\\):</u></p>\n\\[\nr\\longmapsto(\\operatorname{gr}^{\\alpha}(X_{\\alpha+r}))_{\\alpha\\in\\mathbb N},\n\\]\n<p><u>where the transition morphisms are obvious, is essentially\nconstant.</u></p>\n<p style=\"margin-left: 2em;\">(iii) <u>The projective system with values in the\ncategory of objects graded by \\(\\mathbb N\\) of \\(C\\):</u></p>\n\\[\nn\\longmapsto(\\operatorname{gr}^{p}(X_n))_{p\\in\\mathbb N},\n\\]\n<p><u>where the transition morphisms are obvious, satisfies (MLAR).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: (i) \\(\\Rightarrow\\) (ii): follows from the expression for\n\\(F^pX_n/F^{p+1}X_n\\) given in (4.1.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) \\(\\Rightarrow\\) (iii): Let \\(r\\) be an\ninteger such that for every \\(s\\geq r\\) and every \\(p\\) the canonical morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}^{p}(X_{p+s})\\longrightarrow\n\\operatorname{gr}^{p}(X_{p+r})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is an isomorphism. We are going to see that for every pair \\((m,n)\\)\nof integers with \\(m\\geq n+r\\), the equality below holds for every\ninteger \\(p\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Im}(\\operatorname{gr}^{p}(X_m)\\longrightarrow\n\\operatorname{gr}^{p}(X_n))=\n\\operatorname{Im}(\\operatorname{gr}^{p}(X_{n+r})\\longrightarrow\n\\operatorname{gr}^{p}(X_n)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 3em;\">\\(a\\) If \\(p\\geq n+1\\),\n\\(\\operatorname{gr}^{p}(X_n)=0\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 3em;\">\\(b\\) if \\(p\\leq n\\), the chain of inequalities\n\\(m\\geq n+r\\geq p+r\\) shows that the canonical morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}^{p}(X_m)\\longrightarrow\n\\operatorname{gr}^{p}(X_{n+r})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is an isomorphism, whence the assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(iii) \\(\\Rightarrow\\) (i): Denoting by \\(Y\\) the\nprojective system of (iii), let \\(r\\) be an integer such that:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Im}(Y[s]\\longrightarrow Y)=\n\\operatorname{Im}(Y[r]\\longrightarrow Y)\\qquad(s\\geq r).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(n\\) and \\(\\ell\\) are two integers, with \\(\\ell\\geq n\\), the\nfiltration induced on \\(\\operatorname{Im}(X_\\ell\\longrightarrow X_n)\\) by\nthat of \\(X_n\\) is also the \"quotient\" filtration of that of\n\\(X_\\ell\\) and consequently, equipping \\(\\operatorname{Im}(X_\\ell\\longrightarrow\nX_n)\\) with this filtration, the equality below holds:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}^{p}(\\operatorname{Im}(X_\\ell\\longrightarrow X_n))=\n\\operatorname{Im}(\\operatorname{gr}^{p}(X_\\ell)\\longrightarrow\n\\operatorname{gr}^{p}(X_n)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular, condition (iii) can be expressed by saying that as soon as\n\\(\\ell\\geq n+r\\), the canonical monomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nj:\\operatorname{Im}(X_\\ell\\longrightarrow X_n)\\longrightarrow\n\\operatorname{Im}(X_{n+r}\\longrightarrow X_n)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>induces an isomorphism on the graded objects. The gradings being finite, we\ndeduce that \\(j\\) itself is an isomorphism, whence (i).</p>"
+    },
+    {
+     "id": "V.4.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.1.4\"><strong>4.1.4.</strong> If \\(X\\) is an object of \\(P\\)\nsatisfying (ML), it follows from the expression for the graded object recalled in (4.1.1) that\nfor every integer \\(p\\) the projective system:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}^{p}(X)=\\operatorname{gr}^{p}(X_n)_{n\\in\\mathbb N}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is essentially constant.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Its projective limit (which exists without any hypothesis on the abelian\ncategory \\(C\\)) will be called the \\(p\\)-th <u>component of the strict graded object of\n\\(X\\)</u> and denoted:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{grs}^{p}(X).\n\\]\n\n</p>"
+    },
+    {
+     "id": "V.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.4.2\">4.2. <u>Projective systems adapted to \\(J\\) and the\nArtin-Rees lemma.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We assume given a commutative ring \\(A\\), an ideal \\(J\\) of \\(A\\) and\nan abelian \\(A\\)-category.</p>"
+    },
+    {
+     "id": "V.4.2.1",
+     "type": "definition",
+     "label": "4.2.1.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.4.2.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">4.2.1.</span> —\n<u>An object \\(X\\) of the category\n\\(P=\\operatorname{Hom}(\\mathbb N^o,C)\\) is said to be adapted to \\(J\\) if its\nprojective-system filtration \\((F^pX)_{p\\in\\mathbb N}\\) (4.1.1) is\ncompatible with the \\(J\\)-adic filtration of \\(X\\), i.e. if for every\npair \\((p,q)\\) of nonnegative integers the inclusion below\nholds:</u>\n\\[\nJ^pF^q(X)\\subset F^{p+q}(X).\n\\]\n</div></div>"
+    },
+    {
+     "id": "V.4.2.2",
+     "type": "lemma",
+     "label": "4.2.2.",
+     "title": "LEMMA",
+     "html": "<div class=\"thm lemma\" id=\"V.4.2.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">LEMMA</span> <span class=\"thm-num\">4.2.2.</span> —\n<u>Let \\(X\\) be an object of the category \\(P\\). The following assertions\nare equivalent:</u>\n</div><div class=\"thm-body\">\n<p style=\"margin-left: 2em;\">(i) <u>\\(X\\) is adapted to \\(J\\).</u></p>\n<p style=\"margin-left: 2em;\">(ii) <u>For every pair \\((n,p)\\) of integers\nwith \\(p\\leq n+1\\), we have</u></p>\n\\[\nJ^pF^{n-p+1}(X_n)=0.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(i) \\(\\Rightarrow\\) (ii): then\n\\(J^pF^{n-p+1}(X_n)\\subset F^{n+1}(X_n)=0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">(ii) \\(\\Rightarrow\\) (i): If\n\\(n&lt;p+q\\), \\(F^{p+q}(X_n)=0\\) by definition.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, \\(J^pF^q(X_n)\\) is contained in\n\\(J^{n+1-q}F^q(X_n)\\) and the latter is zero by hypothesis.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(n\\geq p+q\\), the image of \\(J^pF^q(X_n)\\) in \\(X_{p+q-1}\\) under\nthe transition morphism is contained in \\(J^pF^q(X_{p+q-1})\\), which is equal\nto zero by hypothesis. The inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nJ^pF^q(X_n)\\subset F^{p+q}(X_n)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>follows by definition of the projective-system filtration.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It follows in particular from (4.2.2) that every projective subsystem\nof a projective system adapted to \\(J\\) is adapted to \\(J\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Examples</u>:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">a) A \\(J\\)-adic projective system is adapted\nto \\(J\\). It follows that every projective subsystem of a\n\\(J\\)-adic projective system is adapted to \\(J\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">b) If a projective system \\(X\\) satisfies\ncondition (ML) and is adapted to \\(J\\), its projective system of universal\nimages is also adapted to \\(J\\).</p>"
+    },
+    {
+     "id": "V.4.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.4.2.3\">4.2.3. <u>Graded object of a projective system adapted to\n\\(J\\).</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be a projective system adapted to \\(J\\). The filtration of \\(X\\)\nbeing compatible with \\(J\\), it is clear that the graded object</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}^p(X)_{p\\in\\mathbb N}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is canonically equipped with a structure of graded\n\\(\\operatorname{gr}_J(A)\\)-module. In particular, we deduce by\npassage to the limit that when \\(X\\) satisfies condition (ML), the graded\nobject</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{grs}(X)=(\\operatorname{grs}^p(X))_{p\\in\\mathbb N}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is canonically equipped with a structure of graded\n\\(\\operatorname{gr}_J(A)\\)-module.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us explain briefly how, when moreover \\(X\\) is strict, we\ndefine the corresponding morphisms:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\omega_{pq}:J^p/J^{p+1}\\otimes_A F^q(X_q)\\longrightarrow F^{p+q}(X_{p+q}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The projective system \\(X\\) being strict, we know (4.1.1 and 4.1.2)\nthat the canonical morphism below is an isomorphism:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi:F^q(X_{p+q})/F^{q+1}(X_{p+q})\\longrightarrow F^q(X_q).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, the fact that the filtration of \\(X\\) is adapted to \\(J\\)\nallows us to exhibit a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nJ^p\\otimes_A F^q(X_{p+q})\\longrightarrow F^{p+q}(X_{p+q})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which factors, given that\n\\(J^{p+1}F^q(X_{p+q})\\subset F^{p+q+1}(X_{p+q})=0\\), and\n\\(J^pF^{q+1}(X_{p+q})\\subset F^{p+q+1}(X_{p+q})=0\\), through</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(J^p/J^{p+1})\\otimes_A(F^q(X_{p+q})/F^{q+1}(X_{p+q}))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>into a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\beta:(J^p/J^{p+1})\\otimes_A(F^q(X_{p+q})/F^{q+1}(X_{p+q}))\n\\longrightarrow F^{p+q}(X_{p+q}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The morphism \\(\\omega_{pq}\\) is then given by the following expression:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\omega_{pq}=\\beta\\circ(\\operatorname{id}_{J^p/J^{p+1}}\\otimes_A\\varphi)^{-1}.\n\\]\n\n</p>"
+    },
+    {
+     "id": "V.4.2.4",
+     "type": "lemma",
+     "label": "4.2.4.",
+     "title": "LEMMA",
+     "html": "<div class=\"thm lemma\" id=\"V.4.2.4\"><div class=\"thm-head\">\n<span class=\"thm-name\">LEMMA</span> <span class=\"thm-num\">4.2.4.</span> —\n<u>Let \\(X\\) be a \\(J\\)-adic projective system. The canonical morphism,</u>\n\\[\n\\operatorname{gr}_J(A)\\otimes_A X_0\\longrightarrow\\operatorname{grs}(X),\n\\]\n<u>coming from the graded \\(\\operatorname{gr}_J(A)\\)-module structure of\n\\(\\operatorname{grs}(X)\\), is an epimorphism.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Follows immediately from the explanation of the morphisms\n\\(\\omega_{pq}\\) given in (4.2.3).</p>"
+    },
+    {
+     "id": "V.4.2.5",
+     "type": "proposition",
+     "label": "4.2.5.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.4.2.5\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">4.2.5.</span>\n(<u>Characterization of strict AR-\\(J\\)-adic projective systems by\nmeans of the associated graded objects</u>).</div><div class=\"thm-body\">\n\n<!-- Source PDF page 27 (printed page 230) -->\n<p><u>Let \\(X\\) be a strict projective system indexed by \\(\\mathbb N\\) with\nvalues in \\(C\\). We assume that for every integer \\(n\\), we have:</u></p>\n\\[\nJ^{n+1}X_n=0.\n\\]\n<p><u>The following assertions are equivalent:</u></p>\n<p style=\"margin-left: 2em;\">(i) <u>\\(X\\) is AR-\\(J\\)-adic.</u></p>\n<p style=\"margin-left: 2em;\">(ii) <u>There exists an integer \\(r&gt;0\\) such that\nfor every integer \\(n\\) the inclusion below holds:</u></p>\n\\[\nF^n(X_n)\\subset J^{n-r}X_n.\n\\]\n<p style=\"margin-left: 2em;\">(iii) <u>There exists an integer \\(r\\) such that,\nfor every integer \\(m\\), the canonical morphism below is an\nisomorphism as soon as \\(n\\geq m+r\\):</u></p>\n\\[\n\\operatorname{gr}^n(J^mX)\\longrightarrow\\operatorname{gr}^n(X).\n\\]\n<p><u>In the statement of (ii), we agree to set\n\\(J^{n-r}X_n=X_n\\) for \\(n&lt;r\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: The equivalence of (ii) and (iii) is clear, since \\(X\\) and\n\\(J^mX\\) are strict. Let us prove that of (i) and (ii). We know (3.2.3) that\n(i) is equivalent to the existence of an integer \\(r\\) such that for every pair\n\\((m,n)\\) of integers with \\(m\\geq n+r\\), the transition morphism\nbelow is an isomorphism:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX_{m+1}/J^{n+1}X_{m+1}\\longrightarrow X_m/J^{n+1}X_m.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider then the commutative exact diagram below.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n&amp;0\\ar[d]&amp;0\\ar[d]&amp;\\\\\n&amp;J^{n+1}X_{m+1}\\ar[r]\\ar[d]&amp;J^{n+1}X_m\\ar[r]\\ar[d]&amp;0\\\\\n0\\ar[r]&amp;F^{m+1}(X_{m+1})\\ar[r]&amp;X_{m+1}\\ar[r]\\ar[d]&amp;X_m\\ar[r]\\ar[d]&amp;0\\\\\n&amp;&amp;X_{m+1}/J^{n+1}X_{m+1}\\ar[r]\\ar[d]&amp;X_m/J^{n+1}X_m\\ar[r]\\ar[d]&amp;0\\\\\n&amp;&amp;0&amp;0\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It shows the existence of a canonical isomorphism between</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\ker(X_{m+1}/J^{n+1}X_{m+1}\\longrightarrow X_m/J^{n+1}X_m)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF^{m+1}(X_{m+1})/(F^{m+1}(X_{m+1})\\cap J^{n+1}X_{m+1}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular, for the transition morphism after reduction\nmodulo \\(J^{n+1}\\) to be an isomorphism, it is necessary and sufficient that\n\\(F^{m+1}(X_{m+1})\\) be contained in \\(J^{n+1}X_{m+1}\\), which is\nprecisely assertion (ii).</p>"
+    },
+    {
+     "id": "V.4.2.6",
+     "type": "theorem",
+     "label": "4.2.6.",
+     "title": "THEOREM",
+     "html": "<div class=\"thm theorem\" id=\"V.4.2.6\"><div class=\"thm-head\">\n<span class=\"thm-name\">THEOREM</span> <span class=\"thm-num\">4.2.6.</span>\n(<u>Artin-Rees lemma</u>). — <u>Let \\(X\\) be a projective system indexed by\n\\(\\mathbb N\\) with values in \\(C\\). We assume that:</u>\n</div><div class=\"thm-body\">\n<p style=\"margin-left: 2em;\">(i) <u>\\(X\\) satisfies (MLAR),</u></p>\n<p style=\"margin-left: 2em;\">(ii) <u>\\(X\\) is adapted to \\(J\\),</u></p>\n<p style=\"margin-left: 2em;\">(iii) <u>\\(\\operatorname{grs}(X)\\) is a\ngraded \\((\\operatorname{gr}_J(A),C)\\)-module of finite type, i.e. for every\nincreasing sequence \\((M_n)_{n\\in\\mathbb N}\\) of graded\nsub-\\(\\operatorname{gr}_J(A)\\)-modules of \\(\\operatorname{grs}(X)\\) of which \\(\\operatorname{grs}(X)\\) is\nthe union, there exists an integer \\(p\\) such that</u></p>\n\\[\n\\operatorname{grs}(X)=M_p.\n\\]\n<p><u>Then \\(X\\) is AR-\\(J\\)-adic.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Recall that if \\(X'\\) is the projective system of\nuniversal images of \\(X\\), we have set:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{grs}(X)=\\operatorname{gr}(X').\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, \\(X'\\) is adapted to \\(J\\), so that we are reduced to\nshowing that \\(X'\\) is AR-\\(J\\)-adic.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose the following lemma has been proved:</p>"
+    },
+    {
+     "id": "V.4.2.7",
+     "type": "lemma",
+     "label": "4.2.7.",
+     "title": "LEMMA",
+     "html": "<div class=\"thm lemma\" id=\"V.4.2.7\"><div class=\"thm-head\">\n<span class=\"thm-name\">LEMMA</span> <span class=\"thm-num\">4.2.7.</span> —\n<u>Let \\(X\\) be a strict projective system adapted to \\(J\\). For every integer\n\\(s\\), the graded subobject \\(((M_s)_n)_{n\\in\\mathbb N}\\) of\n\\(\\operatorname{grs}(X)\\) defined by the equalities below:</u>\n\n<!-- Source PDF page 29 (printed page 232) -->\n\\[\n(M_s)_n=J^{n-s}X_n\\cap F^n(X_n)\\qquad(J^i=A\\text{ if }i&lt;0),\n\\]\n<u>is a graded sub-\\(\\operatorname{gr}_J(A)\\)-module of\n\\(\\operatorname{grs}(X)\\).</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove the theorem, we may assume \\(X\\) strict. Then\n\\(\\operatorname{grs}(X)\\) is the union of the increasing sequence of the \\(M_s\\),\nhence equal to one of them. This means that there exists an integer \\(s_0\\) such\nthat</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF^n(X_n)\\subset J^{n-s_0}X_n\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for every integer \\(n\\). We conclude by (4.2.5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof of 4.2.7.</u> Let us take up again the notations of (4.2.3). It\nis a matter of seeing that the morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\omega_{pq}:J^p/J^{p+1}\\otimes_A F^q(X_q)\\longrightarrow F^{p+q}(X_{p+q})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sends\n\\(J^p/J^{p+1}\\otimes_A(J^{q-s}X_q\\cap F^q(X_q))\\) into\n\\(J^{p+q-s}X_{p+q}\\cap F^{p+q}(X_{p+q})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now, the canonical morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\rho:X_{p+q}/F^{q+1}(X_{p+q})\\longrightarrow X_q\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is an isomorphism and sends\n\\((J^{q-s}X_{p+q}+F^{q+1}(X_{p+q}))/F^{q+1}(X_{p+q})\\) onto\n\\(J^{q-s}X_q\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We deduce that the inverse image under\n\\(\\operatorname{id}(J^p/J^{p+1})\\otimes_A\\varphi\\) (4.2.3) of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nJ^p/J^{p+1}\\otimes_A(J^{q-s}X_q\\cap F^q(X_q))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nJ^p/J^{p+1}\\otimes_A\n[(J^{q-s}X_{p+q}\\cap F^q(X_{p+q}))+F^{q+1}(X_{p+q})]/F^{q+1}(X_{p+q}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is now clear that the image under \\(\\beta\\) (4.2.3) of this last\nobject is contained in\n\\(J^{p+q-s}X_{p+q}\\cap J^pF^q(X_{p+q})\\), hence a fortiori in</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nJ^{p+q-s}X_{p+q}\\cap F^{p+q}(X_{p+q}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Whence the lemma.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-s6",
+   "title": "5. Noetherian \\(J\\)-adic and AR-\\(J\\)-adic projective systems.",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>5. Noetherian \\(J\\)-adic and AR-\\(J\\)-adic projective systems.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Throughout this paragraph, we assume given a commutative noetherian\nring \\(A\\), an ideal \\(J\\) of \\(A\\) and an abelian \\(A\\)-category\n\\(C\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3>5.1. Generalities.</h3>"
+    },
+    {
+     "id": "V.5.1.1",
+     "type": "definition",
+     "label": "5.1.1.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.5.1.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">5.1.1.</span> —\n<u>An object \\(X\\) of the category \n\\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\) is said to be \\(J\\)-adic\nnoetherian (resp. artinian) if it is \\(J\\)-adic and if its components\nare noetherian (resp. artinian) objects of the category \\(C\\).</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We denote by \\(J\\text{-}\\operatorname{adn}(C)\\) (resp.\n\\(J\\text{-}\\operatorname{adf}(C)\\)) the full subcategory of\n\\(P=\\operatorname{Hom}(\\mathbb N^\\circ,C)\\) whose objects are the\nnoetherian (resp. artinian) \\(J\\)-adic projective systems. It is\nclear (3.1.3) that an extension of noetherian (resp. artinian) \\(J\\)-adic\nprojective systems is of the same type.</p>"
+    },
+    {
+     "id": "V.5.1.2",
+     "type": "proposition",
+     "label": "5.1.2.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.5.1.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">5.1.2.</span> —\n<u>Let \\(X\\) be an \\(J\\)-adic object of \\(P\\). For \\(X\\) to be\n\\(J\\)-adic noetherian (resp. artinian), it is necessary and sufficient that it be\n\\(J\\)-adic and that \\(X_0\\) be noetherian (resp. artinian).</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, let \\(X\\) be an \\(J\\)-adic projective system such that \\(X_0\\)\nis noetherian (resp. artinian). Consider then the canonical\nepimorphism (4.2.4):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}_J(A)\\otimes_A X_0\\longrightarrow \\operatorname{grs}(X).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(X_0\\) is noetherian (resp. artinian) and \\(J^n\\) of finite type\nfor every \\(n\\), the existence of this epimorphism shows that for every\ninteger \\(n\\), the kernel of the canonical morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX_n\\longrightarrow X_{n-1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is noetherian (resp. artinian). We deduce at once by induction\non \\(n\\) that the \\(X_n\\) are noetherian (resp. artinian).</p>"
+    },
+    {
+     "id": "V.5.1.3",
+     "type": "definition",
+     "label": "5.1.3.",
+     "title": "DEFINITION",
+     "html": "<div class=\"thm definition\" id=\"V.5.1.3\"><div class=\"thm-head\">\n<span class=\"thm-name\">DEFINITION</span> <span class=\"thm-num\">5.1.3.</span> —\n<u>Let \\(X\\) be a projective system indexed by \\(\\mathbb N\\) with values in\n\\(C\\). We say that it is AR-\\(J\\)-adic noetherian (resp. artinian) if it\nis AR-\\(J\\)-adic, and if its components are noetherian\n(resp. artinian) objects.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We denote by \\(\\operatorname{AR}\\text{-}J\\text{-}\\operatorname{adn}(C)\\)\n(resp. \\(\\operatorname{AR}\\text{-}J\\text{-}\\operatorname{adf}(C)\\)) the\nfull subcategory of\n\\(\\operatorname{Hom}_{\\mathrm{AR}}(\\mathbb N^\\circ,C)\\) (2.4) generated\nby the images of the noetherian (resp. artinian) AR-\\(J\\)-adic projective\nsystems.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is then clear that the canonical functors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nP_{\\mathrm{AR}}^n:J\\text{-}\\operatorname{adn}(C)\\longrightarrow\n\\operatorname{AR}\\text{-}J\\text{-}\\operatorname{adn}(C)\n\\]\n\\[\nP_{\\mathrm{AR}}^f:J\\text{-}\\operatorname{adf}(C)\\longrightarrow\n\\operatorname{AR}\\text{-}J\\text{-}\\operatorname{adf}(C)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>obtained by restriction of \\(P_{\\mathrm{AR}}\\) (2.4) are\nequivalences of categories.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us briefly recall the statement and proof of Hilbert's\ntheorem:</p>"
+    },
+    {
+     "id": "V.5.1.4",
+     "type": "theorem",
+     "label": "5.1.4.",
+     "title": "THEOREM",
+     "html": "<div class=\"thm theorem\" id=\"V.5.1.4\"><div class=\"thm-head\">\n<span class=\"thm-name\">THEOREM</span> <span class=\"thm-num\">5.1.4.</span>\n(<u>Hilbert's theorem</u>). — <u>Let \\(A\\) be a commutative ring,\n\\(C\\) an abelian \\(A\\)-category, \\(M\\) an object of finite type (resp.\nnoetherian) of \\(C\\).</u>\n</div><div class=\"thm-body\">\n<p><u>For every \\(A\\)-algebra of finite type \\(B\\) graded by \\(\\mathbb N\\),\nthe graded \\((B,C)\\)-module \\(B\\otimes_A M\\) is of finite type (resp.\nnoetherian).</u></p>\n<p>(N.B. <u>If \\(B=\\bigoplus_{n\\geq0}B_n\\), \\(B\\otimes_A M\\) denotes\nthe graded object \\((B_n\\otimes_A M)_{n\\in\\mathbb N}\\).</u>)</p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We reduce immediately to the case where \\(B\\) is the polynomial\nring (A[T]), equipped with its usual grading. The\n\\((B,C)\\)-module \\(A[T]\\otimes_A M=(M_n)_{n\\in\\mathbb N}\\) is then obtained\nby setting \\(M_n=M\\) for every \\(n\\), with \\(T\\) sending, for every integer\n\\(n\\), \\(M_n\\) into \\(M_{n+1}\\) by the identity of \\(M\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(N\\) be a graded sub-\\((A[T],C)\\)-module of\n\\(A[T]\\otimes_A M\\). The components \\((N_n)_{n\\in\\mathbb N}\\) of \\(N\\)\ndefine an increasing sequence:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nN_0\\subset N_1\\subset\\cdots\\subset N_n\\subset\\cdots\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>of subobjects of \\(M\\). Suppose now that \\(M\\) is\nnoetherian (resp. of finite type) and let</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nN^1\\subset N^2\\subset\\cdots\\subset N^p\\subset\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>be an increasing sequence of graded sub-\\((A[T],C)\\)-modules of\n\\(A[T]\\otimes_A M\\), which under the first hypothesis (when \\(M\\) is\nof finite type) has union \\(A[T]\\otimes_A M\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider then the double-entry table below:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccccccc}\nN_0^1&amp;\\subset&amp;N_0^2&amp;\\subset&amp;\\cdots\\subset N_0^p&amp;\\subset&amp;\\cdots\\\\\n\\cap&amp;&amp;\\cap&amp;&amp;\\cap\\\\\nN_1^1&amp;&amp;\\vdots&amp;&amp;\\vdots\\\\\n\\vdots&amp;&amp;\\vdots&amp;&amp;\\vdots\\\\\n\\cap&amp;&amp;\\cap&amp;&amp;\\cap\\\\\nN_n^1&amp;\\subset&amp;N_n^2&amp;\\subset&amp;\\cdots\\subset N_n^p&amp;&amp;\\cdots\\\\\n\\cap&amp;&amp;\\cap&amp;&amp;\\cap\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is clear by the hypothesis on \\(M\\) that there exists a pair\n\\((p_0,n_0)\\) such that \\(N_{n_0}^{p_0}\\) is maximal (resp. equal to \\(M\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(p_1\\) is an integer \\(geq p_0\\) such that the\n\\(N_n^{p_1}\\) \\((n\\leq n_0)\\) are the largest elements of the sequences\n\\((N_n^p)_{p\\in\\mathbb N}\\), it is clear that \\(N^p=N^{p_1}\\) as soon as\n\\(p\\geq p_1\\), which allows us to conclude in both cases.</p>"
+    },
+    {
+     "id": "V.5.1.5",
+     "type": "corollary",
+     "label": "5.1.5.",
+     "title": "COROLLARY",
+     "html": "<div class=\"thm corollary\" id=\"V.5.1.5\"><div class=\"thm-head\">\n<span class=\"thm-name\">COROLLARY</span> <span class=\"thm-num\">5.1.5.</span> —\n<u>Suppose in addition that the category \\(C\\) possesses countable direct\nsums. Then for every object \\(M\\) of finite type (resp. noetherian)\nof \\(C\\) and every \\(A\\)-algebra of finite type \\(B\\), the \\((B,C)\\)-module\n\\(B\\otimes_A M\\) is of finite type (resp. noetherian).</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We reduce to the case where \\(B=A[T]\\). Let \\(N\\) be a\nsub-\\((A[T],C)\\)-module of \\(A[T]\\otimes_A M\\) (considered as an object of\n\\(C\\)). We denote by \\(\\operatorname{gr}(N)\\) the graded object of \\(N\\) for the\nfiltration induced by the natural filtration of graded object of\n\\(A[T]\\otimes_A M\\): \\(\\operatorname{gr}(N)\\) is a graded sub-\\((A[T],C)\\)-module\nof the graded \\((A[T],C)\\)-module \\(A[T]\\otimes_A M\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nN^0\\subset N^1\\subset\\cdots\\subset N^p\\subset\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>be an increasing sequence of sub-\\((A[T],C)\\)-modules of\n\\(A[T]\\otimes_A M\\), with union \\(A[T]\\otimes_A M\\) under the first\nhypothesis. Under the first hypothesis (\\(M\\) of finite type), there exists an\ninteger (i) such that\n\\(\\operatorname{gr}(N^i)=A[T]\\otimes_A M\\), whence\n\\(N^i=A[T]\\otimes_A M\\). Under the second hypothesis \\((M) noethérien\\),\nthe sequence of the \\(\\operatorname{gr}(N^i)\\) is stationary, hence the sequence of the\n\\(N^i\\) as well.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In what follows, Hilbert's theorem will be useful to us mainly through\nthe following proposition.</p>"
+    },
+    {
+     "id": "V.5.1.6",
+     "type": "proposition",
+     "label": "5.1.6.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.5.1.6\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">5.1.6.</span> —\n<u>Let \\(A\\) be a commutative noetherian ring, \\(J\\) an ideal of \\(A\\),\n\\(C\\) an abelian \\(A\\)-category. For every noetherian \\(J\\)-adic\nprojective system (5.1.1) \\(X\\), the graded object \\(\\operatorname{grs}(X)\\)\nis a noetherian \\((\\operatorname{gr}_J(A),C)\\)-module.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Since \\(\\operatorname{gr}_J(A)\\) is an \\(A\\)-algebra of\nfinite type, it follows from Hilbert's theorem (5.1.4) that\n\\(\\operatorname{gr}_J(A)\\otimes_A X_0\\) is a\nnoetherian graded \\((\\operatorname{gr}_J(A),C)\\)-module. The assertion\nthen follows from the existence of the epimorphism (4.2.4):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{gr}_J(A)\\otimes_A X_0\\longrightarrow \\operatorname{grs}(X).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3>5.2. Structure of \\(J\\text{-}\\operatorname{adn}(C)\\) and\n\\(\\operatorname{AR}\\text{-}J\\text{-}\\operatorname{adn}(C)\\).</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this section, we shall denote by \\(\\mathcal E_C\\), or\n\\(\\mathcal E\\) if no confusion is possible, the full subcategory\nof \\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\) whose objects are\nthe noetherian AR-\\(J\\)-adic projective systems.</p>"
+    },
+    {
+     "id": "V.5.2.1",
+     "type": "proposition",
+     "label": "5.2.1.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.5.2.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">5.2.1.</span> —\n<u>The category \\(\\mathcal E_C\\) is stable under kernels and cokernels in\n\\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\). In other words, \\(\\mathcal E_C\\)\nis an abelian category and the inclusion functor:</u>\n\n<!-- Source PDF page 34 (printed page 237) -->\n\\[\n\\mathcal E_C\\longrightarrow \\operatorname{Hom}(\\mathbb N^\\circ,C)\n\\]\n<u>is exact.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Let \\(u:X\\longrightarrow Y\\) be a morphism of\n\\(\\mathcal E_C\\). We shall see successively that the cokernel, the image\nand the kernel of \\(u\\) are AR-\\(J\\)-adic noetherian. (Of course the\nproof of the fact that the image of \\(u\\) is AR-\\(J\\)-adic\nnoetherian is only a technical intermediate step.)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">a) \\(\\operatorname{Coker}(u)\\) is\nAR-\\(J\\)-adic noetherian. Since \\(X\\) satisfies (MLAR) and \\(Y\\) is\nAR-\\(J\\)-adic, \\(\\operatorname{Coker}(u)\\) is AR-\\(J\\)-adic\n(3.2.4 (i)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">b) \\(\\operatorname{Im}(u)\\) is\nAR-\\(J\\)-adic noetherian.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thanks to the exact sequence:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow \\operatorname{Im}(u)\\longrightarrow Y\\longrightarrow\n\\operatorname{Coker}(u)\\longrightarrow0,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the assertion will follow from lemma 5.2.1.1. below.</p>"
+    },
+    {
+     "id": "V.5.2.1.1",
+     "type": "lemma",
+     "label": "5.2.1.1.",
+     "title": "LEMMA",
+     "html": "<div class=\"thm lemma\" id=\"V.5.2.1.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">LEMMA</span> <span class=\"thm-num\">5.2.1.1.</span> —\n<u>Let</u>\n\\[\n0\\longrightarrow L\\longrightarrow M\\longrightarrow N\\longrightarrow0\n\\]\n<u>be an exact sequence in the category\n\\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\). If \\(M\\) and \\(N\\) are\nAR-\\(J\\)-adic noetherian, \\(L\\) is AR-\\(J\\)-adic noetherian.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It obviously suffices to see that it is AR-\\(J\\)-adic. We reduce,\nin the same way as in the proof of (3.2.4), to the case where \\(M\\)\nand \\(N\\) are strict, and even \\(J\\)-adic noetherian. In this case,\nit follows from 3.1.3 (ii) that \\(L\\) is strict. The projective system \\(L\\)\nis strict, adapted to \\(J\\), and its graded object, as a graded subobject of\n\\(\\operatorname{grs}(M)\\), is noetherian: \\(\\operatorname{grs}(M)\\),\na quotient of \\(\\operatorname{gr}_J(A)\\otimes_A M_0\\), is noetherian\n(5.1.6). The assertion then follows from the Artin-Rees lemma (4.2.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 2em;\">c) \\(\\operatorname{Ker}(u)\\) is\nAR-\\(J\\)-adic noetherian. It suffices to apply (5.2.1.1) to the obvious\nexact sequence below:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow \\operatorname{Ker}(u)\\longrightarrow X\\longrightarrow\n\\operatorname{Im}(u)\\longrightarrow0.\n\\]\n\n</p>"
+    },
+    {
+     "id": "V.5.2.2",
+     "type": "proposition",
+     "label": "5.2.2.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.5.2.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">5.2.2.</span> —\n<u>The objects of the abelian category \\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\)\nare noetherian.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We reduce immediately to seeing that if we have a noetherian\n\\(J\\)-adic object \\(X\\), a sequence of noetherian \\(J\\)-adic objects\n\\((Y^n)_{n\\in\\mathbb N}\\) and morphisms of\n\\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nv_n:Y^n\\longrightarrow X\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">(i) the \\(v_n\\) become monomorphisms in\n\\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">(ii) for every integer \\(n\\), \\(v_n\\) factors\nthrough \\(v_{n+1}\\) in \\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>then the \\(v_n\\) remain stationary, up to isomorphism, for \\(n\\)\nlarge enough, in \\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now, to say that \\(v_n\\) factors through \\(v_{n+1}\\) in\n\\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\) means that there exist an integer\n\\(r\\) and a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf:Y^n[r]\\longrightarrow Y^{n+1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that, \\(a\\) denoting the canonical morphism\n\\(Y^n[r]\\longrightarrow Y^n\\), the equality below holds:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nv_n\\circ a=v_{n+1}\\circ f.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since the morphism \\(a\\) is strict, we deduce in particular that\nthe image of \\(v_n\\) is contained in that of \\(v_{n+1}\\). Replacing if necessary\neach \\(Y^n\\) by \\(\\operatorname{Im}(v_n)\\), we are reduced to seeing that every\nincreasing sequence of strict projective subsystems of \\(X\\) is stationary.\nNow, if \\((Z^n)_{n\\in\\mathbb N}\\) is such a sequence, since\n\\(\\operatorname{grs}(X)\\) is noetherian, the increasing sequence of the\n\\(\\operatorname{grs}(Z^n)\\) is stationary, hence so is that of the \\(Z^n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us summarize:</p>"
+    },
+    {
+     "id": "V.5.2.3",
+     "type": "theorem",
+     "label": "5.2.3.",
+     "title": "THEOREM",
+     "html": "<div class=\"thm theorem\" id=\"V.5.2.3\"><div class=\"thm-head\">\n<span class=\"thm-name\">THEOREM</span> <span class=\"thm-num\">5.2.3.</span> —\n<u>The categories \\(J\\text{-}\\operatorname{adn}(C)\\) and\n\\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\) are abelian and noetherian.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As regards \\(AR\\text{-}J\\text{-}\\operatorname{adn}(C)\\), this is what\nwe have just seen. As for \\(J\\text{-}\\operatorname{adn}(C)\\), it is\nequivalent to it.</p>"
+    },
+    {
+     "id": "V.5.2.4",
+     "type": "proposition",
+     "label": "5.2.4.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.5.2.4\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">5.2.4.</span>\n(<u>stability under extension</u>). <u>Let</u>\n\\[\n0\\longrightarrow X\\longrightarrow Y\\longrightarrow Z\\longrightarrow0\n\\]\n<u>be an exact sequence of \\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\), with\n\\(J^{n+1}Y_n=0\\) for every \\(n\\). We assume that:</u>\n<p style=\"margin-left: 4em;\"><u>(i) \\(Z\\) is \\(AR\\text{-}J\\)-adic,</u></p>\n<p style=\"margin-left: 4em;\"><u>(ii) \\(X\\) is \\(AR\\text{-}J\\)-adic artinian.</u></p>\n<p><u>Then \\(Y\\) is \\(AR\\text{-}J\\)-adic.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We reduce as in the proof of (3.2.4) to the case\nwhere \\(Y\\) and \\(Z\\) are strict and \\(Z\\) is \\(J\\)-adic. Then (3.1.3 (ii))\n\\(X\\) is strict. There then exists an integer \\(r\\) such that the projective system\n\\((X_{n+r}/J^{n+1}X_{n+r})_{n\\in\\mathbb N}\\) is \\(J\\)-adic artinian.\nSince \\(X\\) is a quotient of it and is \\(AR\\)-isomorphic to it, we are reduced to\nproving the following lemma:</p>"
+    },
+    {
+     "id": "V.5.2.4.1",
+     "type": "lemma",
+     "label": "5.2.4.1.",
+     "title": "LEMMA",
+     "html": "<div class=\"thm lemma\" id=\"V.5.2.4.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">LEMMA</span> <span class=\"thm-num\">5.2.4.1.</span> — <u>Let</u>\n\\[\n0\\longrightarrow T\\longrightarrow X\\longrightarrow Y\\longrightarrow Z\n\\longrightarrow0\n\\]\n<u>be an exact sequence of \\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\), with\n\\(J^{n+1}Y_n=0\\) for every \\(n\\). If \\(X\\) is \\(J\\)-adic artinian,\n\\(Z\\) is \\(J\\)-adic and \\(T\\) is \\(AR\\)-null, then \\(Y\\) is\n\\(AR\\text{-}J\\)-adic.</u>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove the lemma, we shall first see that, for every integer \\(n\\), the\nobvious projective system\n\\((Y_{n+k}/J^{n+1}Y_{n+k})_{k\\in\\mathbb N}\\) is essentially constant.\nDenoting by \\(S_n^k\\) the kernel of the obvious morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX_{n+k}/J^{n+1}X_{n+k}\\longrightarrow Y_{n+k}/J^{n+1}Y_{n+k},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>consider the obvious commutative exact diagram below:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n0\\ar[r]&amp;S_n^k\\ar[r]\\ar[d]&amp;X_{n+k}/J^{n+1}X_{n+k}\\ar[r]\\ar[d]^{\\sim}&amp;\nY_{n+k}/J^{n+1}Y_{n+k}\\ar[r]\\ar[d]&amp;Z_{n+k}/J^{n+1}Z_{n+k}\\ar[r]\\ar[d]^{\\sim}&amp;0\\\\\n0\\ar[r]&amp;T_n\\ar[r]&amp;X_n\\ar[r]&amp;Y_n\\ar[r]&amp;Z_n\\ar[r]&amp;0.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The integer \\(n\\) being fixed, the objects \\(S_n^k\\) identify with\nsubobjects of \\(T_n\\) and form a decreasing sequence. Since \\(T_n\\) is\nartinian, there therefore exists an integer \\(k_0\\) such that \\(S_n^k=S_n^{k_0}\\) for\nevery integer \\(k\\geq k_0\\), whence it follows at once that the canonical\nmorphisms</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nY_{n+k}/J^{n+1}Y_{n+k}\\longrightarrow\nY_{n+k_0}/J^{n+1}Y_{n+k_0}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>are isomorphisms.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This said, let us denote by \\(Y'\\) the projective system defined by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nY'_n=\\varprojlim_r Y_{n+r}/J^{n+1}Y_{n+r}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for the objects, and in the obvious way for the morphisms. The projective\nsystem \\(Y'\\) is \\(J\\)-adic. Moreover, we obtain \"by passage to the\nlimit\" a commutative exact diagram of the type below:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n0\\ar[r]&amp;S\\ar[r]\\ar[d]&amp;X\\ar[r]\\ar[d]^{\\mathrm{id}}&amp;Y'\\ar[r]\\ar[d]&amp;Z\\ar[r]\\ar[d]^{\\mathrm{id}}&amp;0\\\\\n0\\ar[r]&amp;T\\ar[r]&amp;X\\ar[r]&amp;Y\\ar[r]&amp;Z\\ar[r]&amp;0.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(T\\) is \\(AR\\)-null, the snake lemma applied to this diagram\nshows that the obvious morphism \\(Y'\\longrightarrow Y\\) is a\n\\(AR\\)-isomorphism, whence the fact that \\(Y\\) is \\(AR\\text{-}J\\)-adic.</p>"
+    },
+    {
+     "id": "V.5.2.5",
+     "type": "corollary",
+     "label": "5.2.5.",
+     "title": "COROLLARY",
+     "html": "<div class=\"thm corollary\" id=\"V.5.2.5\"><div class=\"thm-head\">\n<span class=\"thm-name\">COROLLARY</span> <span class=\"thm-num\">5.2.5.</span> — <u>Let</u>\n\\[\n0\\longrightarrow X\\longrightarrow Y\\longrightarrow Z\\longrightarrow0\n\\]\n<u>be an exact sequence of \\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\), with\n\\(J^{n+1}Y_n=0\\) for every \\(n\\). We assume that:</u>\n<p style=\"margin-left: 4em;\"><u>(i) \\(X\\) is \\(AR\\text{-}J\\)-adic artinian\n(resp. artinian and noetherian),</u></p>\n<p style=\"margin-left: 4em;\"><u>(ii) \\(Z\\) is \\(AR\\text{-}J\\)-adic artinian\n(resp. noetherian).</u></p>\n<p><u>Then \\(Y\\) is \\(AR\\text{-}J\\)-adic artinian (resp. noetherian).</u></p>\n</div></div>"
+    },
+    {
+     "id": "V.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.5.3\">5.3. <u>Noetherian \\(AR\\text{-}J\\)-adic projective systems\nand \\(\\partial\\)-functors.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) and \\(D\\) be two abelian \\(A\\)-categories and\n\\(F:C\\longrightarrow D\\) an additive functor. The functor \\(F\\) extends\nin a clear way to a functor, still denoted \\(F\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF:\\operatorname{Hom}(\\mathbb N^\\circ,C)\\longrightarrow\n\\operatorname{Hom}(\\mathbb N^\\circ,D),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which is additive and \"commutes with translations\".</p>"
+    },
+    {
+     "id": "V.5.3.1",
+     "type": "proposition",
+     "label": "5.3.1.",
+     "title": "PROPOSITION",
+     "html": "<div class=\"thm proposition\" id=\"V.5.3.1\"><div class=\"thm-head\">\n<span class=\"thm-name\">PROPOSITION</span> <span class=\"thm-num\">5.3.1.</span> —\n<u>Let \\(C\\) and \\(D\\) be two abelian \\(A\\)-categories and</u>\n\\[\nT=(T^i)_{i\\in\\mathbb N}\n\\]\n<u>an exact \\(\\partial\\)-functor, \\(A\\)-linear, from \\(C\\) to \\(D\\).\nWe assume that:</u>\n<p style=\"margin-left: 4em;\"><u>(i) For every noetherian object \\(M\\) of \\(C\\)\nannihilated by a power of \\(J\\) and every integer \\(n\\), \\(T^n(M)\\) is\nnoetherian.</u></p>\n<p style=\"margin-left: 4em;\"><u>(ii) For every graded \\(A\\)-algebra of finite\ntype \\(B\\), annihilated by \\(J\\), and every noetherian graded \\((B,C)\\)-module\n\\(N\\), the graded \\((B,D)\\)-modules \\(T^n(N)\\) (\\(n\\in\\mathbb N\\)) are\nnoetherian.</u></p>\n<p><u>Then for every noetherian \\(AR\\text{-}J\\)-adic object \\(X\\) of\n\\(\\operatorname{Hom}(\\mathbb N^\\circ,C)\\), the \\(T^n(X)\\) are\n\\(AR\\text{-}J\\)-adic noetherian.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Since the functors \\(T^n\\) commute with translations, it\nsuffices to show the assertion when \\(X\\) is \\(J\\)-adic noetherian. In\nthis case, since \\(\\operatorname{grs}(X)\\) is a\nnoetherian graded \\(\\operatorname{gr}_J(A)\\)-module (5.1.6), it follows from\nhypothesis (ii) and from a variant of a corollary of the theorem of SHIH\n(cf. Appendix A.3) that for every integer \\(n\\) the following assertions are\nsatisfied:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">\\(a\\) \\(T^n(X)\\) satisfies (MLAR),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">\\(b\\) \\(\\operatorname{grs}T^n(X)\\) is a\nnoetherian graded \\((\\operatorname{gr}_J(A),D)\\)-module.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The \"Artin-Rees lemma\" (4.2.6) allows us to conclude.</p>"
+    },
+    {
+     "id": "V.5.3.2",
+     "type": "corollary",
+     "label": "5.3.2.",
+     "title": "COROLLARY",
+     "html": "<div class=\"thm corollary\" id=\"V.5.3.2\"><div class=\"thm-head\">\n<span class=\"thm-name\">COROLLARY</span> <span class=\"thm-num\">5.3.2.</span> —\n<u>The \\(\\partial\\)-functor</u>\n\\[\nT=(T^i)_{i\\in\\mathbb N}:\\operatorname{Hom}(\\mathbb N^\\circ,C)\n\\longrightarrow\\operatorname{Hom}(\\mathbb N^\\circ,D)\n\\]\n<u>induces an exact \\(\\partial\\)-functor, \\(A\\)-linear,</u>\n\\[\n\\mathcal E_C\\longrightarrow\\mathcal E_D,\n\\]\n<u>commuting with translations, hence by passage to the quotient a new\nexact \\(\\partial\\)-functor, \\(A\\)-linear, still denoted\n\\((T^i)_{i\\in\\mathbb N}\\),</u>\n\\[\nAR\\text{-}J\\text{-}\\operatorname{adn}(C)\\longrightarrow\nAR\\text{-}J\\text{-}\\operatorname{adn}(D).\n\\]\n</div></div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-A",
+   "title": "Appendix: The theorem of Shih.",
+   "blocks": [
+    {
+     "id": "V.A",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.A\"><u>Appendix: The theorem of Shih.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The aim of the present appendix is to give a proof of the theorem of\nShih in the form used in the proof of (5.3.1). This form being more\ngeneral than the one appearing in EGA \\(0_{\\mathrm{III}}\\), a direct proof,\nadapted from that of loc. cit., proved necessary.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Terminology</u>: Let \\(r_0\\) be an integer \\(\\geq1\\). The data, for every\ninteger \\(r\\geq r_0\\), of a bigraded object\n\\(E_r=(E_r^{pq})_{p\\in\\mathbb Z,q\\in\\mathbb Z}\\), equipped with a differential\n\\(d_r\\) of bidegree \\((r,1-r)\\), and for every \\(r\\) of an isomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH(E_r)\\mathbin{\\widetilde\\longrightarrow}E_{r+1},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>will be called in what follows a <u>spectral filter</u>. One defines in the\nobvious way the notion of morphism of spectral filters.</p>"
+    },
+    {
+     "id": "V.A.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.A.1\">A.1. <u>Reminders on the spectral sequences associated with\n\\(\\partial\\)-functors.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be an abelian category and \\(X\\) an object of \\(C\\), equipped with a\ndecreasing filtration \\((F^pX)_{p\\in\\mathbb Z}\\). For every\nexact \\(\\partial\\)-functor from \\(C\\) to an abelian category \\(A\\), the\nso-called \"exact couples\" method (cf. for ex. MacLane, Homology, p. 336)\nallows us to describe a spectral sequence:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE(X):\\quad E_1^{pq}=T^{p+q}(F^pX/F^{p+1}X)\\Rightarrow\nE^n=T^n(X),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for which the filtration of \\(E^n\\) is defined as follows:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF^p(E^n)=\\operatorname{Im}\\bigl(T^n(F^pX)\\longrightarrow T^n(X)\\bigr)\n=\\ker\\bigl(T^n(X)\\longrightarrow T^n(X/F^pX)\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, if the filtration of \\(X\\) is finite, the spectral sequence thus\nobtained is weakly convergent (EGA \\(0_{\\mathrm{III}}\\) 11.1.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Functoriality</u>. If \\(f:X\\longrightarrow Y\\) is a morphism of filtered objects\nof \\(C\\), one constructs functorially a morphism of spectral\nsequences:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE(f):E(X)\\longrightarrow E(Y),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>coinciding with \\(T^{p+q}(\\operatorname{gr}^pf)\\) (resp. \\(T^n(f)\\)) on\n\\(E_1^{pq}(X)\\) (resp. \\(E^n(X)\\)). In particular, if\n\\(u:X\\longrightarrow X\\) is an endomorphism of \\(X\\) such that\n\\(u(F^pX)\\subset F^{p+h}(X)\\), for an integer \\(h\\) independent of \\(p\\),\n\\(E(u)\\) is an endomorphism of bidegree \\((h,-h)\\) of the spectral filter\nassociated with \\(E(X)\\), commuting with the differentials.</p>"
+    },
+    {
+     "id": "V.A.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.A.2\">A.2. <u>The case of projective systems.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let \\(X=(X_n)_{n\\in\\mathbb Z}\\) be a projective system of objects\nof an abelian category \\(C\\), such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nX_i=0\\qquad(i&lt;0).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(T\\) denotes an exact \\(\\partial\\)-functor from \\(C\\) to an abelian\ncategory \\(A\\), \\(T\\) extends naturally to an\nexact \\(\\partial\\)-functor, still denoted \\(T\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}(\\mathbb Z^\\circ,C)\\longrightarrow\n\\operatorname{Hom}(\\mathbb Z^\\circ,A).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Whence, equipping \\(X\\) with its natural projective-system filtration\n(EGA \\(0_{\\mathrm{III}}\\) 13.4.1), a spectral sequence:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE(X)=\\bigl(E(X_n)\\bigr)_{n\\in\\mathbb Z},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where the \\(E(X_n)\\) denote the spectral sequences associated with \\(T\\) and with the\n\\(X_n\\) equipped with the induced filtration.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Properties of \\(E(X)\\)</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">a) For every integer \\(n\\), the filtration of\nthe abutment \\(E^n(X)\\) in the spectral sequence \\(E(X)\\) is identical to\nits natural projective-system filtration, when \\(X\\) is\n<u>strict</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, denoting by the letter \\(F\\) (as in A 1) the first</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and by the letter \\(\\Phi\\) the second, we have for every integer \\(\\alpha\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF^pE^n(X)_\\alpha\n=\\ker\\bigl(T^n(X_\\alpha)\\longrightarrow\nT^n(X_\\alpha/F^pX_\\alpha)\\bigr)\n=\\begin{cases}\n0&amp;\\text{if }\\alpha\\leq p-1,\\\\\n\\ker\\bigl(T^n(X_\\alpha)\\longrightarrow T^n(X_{p-1})\\bigr)\n&amp;\\text{if }\\alpha\\geq p-1.\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In both cases, we recognize the expression for \\(\\Phi^pE^n(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This shows in particular that, for \\(\\beta\\geq\\alpha\\geq p\\), the\ntransition morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccc}\nE_\\infty^{pq}(X_\\beta)&amp;\\longrightarrow&amp;E_\\infty^{pq}(X_\\alpha)\\\\\n\\Vert&amp;&amp;\\Vert\\\\\n\\operatorname{gr}^pT^{p+q}(X_\\beta)&amp;\\longrightarrow&amp;\n\\operatorname{gr}^pT^{p+q}(X_\\alpha)\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a monomorphism, by EGA \\(0_{\\mathrm{III}}\\) 13.4.1.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">b) Fixing \\(\\alpha\\in\\mathbb Z\\), it is clear\n(cf. the picture opposite) that, since \\(F^i(X_\\alpha)=0\\) for\n\\(i\\geq\\alpha+1\\), we have:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nB_r^{pq}(X_\\alpha)=B_{r+1}^{pq}(X_\\alpha)\\quad\\text{for }r&gt;p,\n\\]\n\\[\nZ_r^{pq}(X_\\alpha)=Z_{r+1}^{pq}(X_\\alpha)\\quad\\text{for }r&gt;\\alpha-p.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div style=\"text-align: center; margin: 1em 0;\">\n\\[\n\\begin{array}{c|c}\nq&amp; (p,q)\\\\[-2pt]\n1-r&amp;\\swarrow\\!\\!\\!\\longrightarrow^{\\ r}\\!\\!\\!\\searrow\\\\\n\\hline\n0&amp;\\phantom{(p,q)}\\alpha\\quad p\n\\end{array}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left: 4em;\">c) When \\(X\\) satisfies the Mittag-Leffler\ncondition, the various projective systems \\(\\operatorname{gr}^p(X)\\)\nare essentially constant (EGA \\(0_{\\mathrm{III}}\\) 13.4.3). It follows\nat once that, for \\(r&lt;+\\infty\\), the projective systems\n\\(E_r^{pq}(X)\\) are essentially constant. We denote by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal E_r^{pq}(X)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>their projective limits. The differential operators passing to the\nlimit, we thus obtain a spectral filter\n\\(\\mathcal E_r^{pq}(X)\\ (p,q\\in\\mathbb Z;\\ r\\geq1)\\). The objects</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal Z_r^{pq}(X),\\quad\\mathcal B_r^{pq}(X)\\qquad(r&lt;+\\infty)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>associated with this spectral filter are precisely the limits of the\nessentially constant projective systems \\(Z_r^{pq}(X)\\) and \\(B_r^{pq}(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From part b) it also follows that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nB_\\infty^{pq}(X)=B_{p+1}^{pq}(X),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which allows us to set</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal B_\\infty^{pq}(X)=\\mathcal B_{p+1}^{pq}(X).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Still assuming that \\(X\\) satisfies (ML), since, for every \\(\\alpha\\),\n\\(B_r^{pq}(X_\\alpha)=B_{r+1}^{pq}(X_\\alpha)\\) as soon as \\(r&gt;p\\) (cf. b)),\nwe have a sequence of canonical monomorphisms:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(S)\\qquad\\cdots\\subset\\mathcal E_r^{pq}(X)\\subset\\cdots\\subset\n\\mathcal E_{p+2}^{pq}(X)\\subset\\mathcal E_{p+1}^{pq}(X).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Assume from now on that \\(X\\) is <u>strict</u>. The following expressions for\n\\(Z_r^{pq}(X_n)\\) and \\(B_r^{pq}(X_n)\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nZ_r^{pq}(X_n)=\\operatorname{Im}\\left[\nT^{p+q-1}(F^{p-r+1}X_n/F^pX_n)\\mathbin{\\mathop{\\longrightarrow}^{\\partial}}\nT^{p+q}(F^pX_n/F^{p+1}X_n)\\right]\n\\]\n\\[\nB_r^{pq}(X_n)=\\operatorname{Im}\\left[\nT^{p+q}(F^pX_n/F^{p+r}X_n)\\longrightarrow\nT^{p+q}(F^pX_n/F^{p+1}X_n)\\right]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>show that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(d_1)\\quad\n\\left\\{\\begin{aligned}\nZ_r^{pq}(X_m)&amp;\\mathbin{\\widetilde\\longrightarrow}Z_r^{pq}(X_n)\n&amp;&amp;\\text{for }m\\geq n\\geq p,\\\\\nB_r^{pq}(X_m)&amp;\\mathbin{\\widetilde\\longrightarrow}B_r^{pq}(X_n)\n&amp;&amp;\\text{for }m\\geq n\\geq p+r-1\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(the canonical morphisms are isomorphisms). In particular, the\ncanonical morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal E_r^{pq}(X)\\longrightarrow E_r^{pq}(X_{p+r-1})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is an <u>isomorphism</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, it follows from b) that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(d_2)\\quad\n\\left\\{\\begin{aligned}\nZ_\\infty^{pq}(X_{p+r-1})&amp;=Z_r^{pq}(X_{p+r-1})&amp;&amp;(r\\geq1),\\\\\nB_\\infty^{pq}(X_{p+r-1})&amp;=B_r^{pq}(X_{p+r-1})&amp;&amp;(r&gt;p).\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This allows us to define, for every \\(r\\), a canonical <u>epimorphism</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\theta_r^{pq}:\\mathcal E_r^{pq}(X)\\longrightarrow\nE_\\infty^{pq}(X_{p+r-1})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which is an <u>isomorphism when \\(r&gt;p\\)</u>. Moreover, if \\(a\\) is an\ninteger such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal B_r^{pq}(X)=\\mathcal B_a^{pq}(X)\\qquad(r\\geq a),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(for example \\(a=p+1\\) works), so that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(S\\ \\mathrm{bis})\\qquad\\cdots\\lhook\\joinrel\\longrightarrow\n\\mathcal E_r^{pq}(X)\\lhook\\joinrel\\longrightarrow\\cdots\n\\lhook\\joinrel\\longrightarrow\\mathcal E_{a+1}^{pq}(X)\n\\lhook\\joinrel\\longrightarrow\\mathcal E_a^{pq}(X),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>then, for \\(s\\geq r\\geq a\\), the diagrams</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(d_3)\\qquad\n\\xymatrix{\n\\mathcal E_s^{pq}(X)\\ar[r]^{\\theta_s^{pq}}\\ar[d]&amp;\nE_\\infty^{pq}(X_{p+s-1})\\ar[d]^{\\mathrm{can}}\\\\\n\\mathcal E_r^{pq}(X)\\ar[r]_{\\theta_r^{pq}}&amp;\nE_\\infty^{pq}(X_{p+r-1})\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>are commutative.</p>"
+    },
+    {
+     "id": "V.A.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"V.A.3\">A.3. <u>A variant of the theorem of Shih.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose given a ring \\(S\\) filtered by ideals\n\\(F^i(S)\\ (i\\geq0)\\) and acting on \\(X\\) compatibly with its\nprojective-system filtration.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From the generalities of A 1 it follows that for every integer \\(i\\),\n\\(\\operatorname{gr}^i(S)\\) acts on the bigraded objects \\(E_r(X)\\) by\nmorphisms of bidegree \\((i,-i)\\). In particular for every integer \\(n\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE_r^{(n)}(X)=\\bigl(E_r^{p,q}(X)\\bigr)_{p+q=n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is canonically equipped with a structure of graded\n\\((\\operatorname{gr}(S),A)\\)-module. The same holds by passage to\nthe limit for:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal E_1^{(n)}(X)=\\bigl(\\mathcal E_1^{p,q}(X)\\bigr)_{p+q=n}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The ring \\(S\\), acting on \\(X\\) compatibly with its projective-system filtration, likewise acts on \\(T^n(X)\\) for every integer \\(n\\). Consequently the strict graded object \\(\\operatorname{gr}_S T(X)\\) is canonically equipped with a structure of graded \\((\\operatorname{gr}(S),C)\\)-module, and likewise, when \\(T^n(X)\\) satisfies \\((\\mathrm{ML})\\), the strict graded object \\(\\operatorname{gr}_S T^n(X)\\) is canonically equipped with a structure of graded \\((\\operatorname{gr}(S),A)\\)-module.</p>"
+    },
+    {
+     "id": "V.A.3.theorem",
+     "type": "theorem",
+     "label": null,
+     "title": "THEOREM A.3.",
+     "html": "<div class=\"thm theorem\" id=\"V.A.3.theorem\"><div class=\"thm-head\"><span class=\"thm-name\">THEOREM A.3.</span> — <u>Suppose that for some integer \\(n\\) the graded \\((\\operatorname{gr}(S),A)\\)-modules</u></div><div class=\"thm-body\">\n\\[\\mathcal E_1^{(n)}(X)=T^n(\\operatorname{gr}_S(X))\\quad\\text{and}\\quad \\mathcal E_1^{(n-1)}(X)=T^{n-1}(\\operatorname{gr}_S(X))\\]\n<p><u>are noetherian. Then:</u></p>\n<p style=\"margin-left:2em;\">(i) <u>\\(T^n(X)\\) satisfies \\((\\mathrm{MLAR})\\),</u><br>(ii) <u>\\(\\operatorname{gr}_S T^n(X)\\) is a noetherian \\((\\operatorname{gr}(S),A)\\)-module.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">i) For every pair \\((m,r)\\) of integers,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal B_r^{(m)}(X)=\\bigl(\\mathcal B_r^{p,m-p}(X)\\bigr)_{p\\in\\mathbb N}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a graded sub-\\((\\operatorname{gr}(S),A)\\)-module of \\(\\mathcal E_1^{(m)}(X)\\). In particular, for every integer \\(m\\), the \\(\\mathcal B_r^{(m)}(X)\\) form an increasing sequence indexed by \\(r\\) of graded sub-\\((\\operatorname{gr}(S),A)\\)-modules of \\(\\mathcal E_1^{(m)}(X)\\). Using the fact that \\(\\mathcal E_1^{(n)}(X)\\) and \\(\\mathcal E_1^{(n-1)}(X)\\) are noetherian graded \\((\\operatorname{gr}(S),A)\\)-modules, we deduce that the sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\bigl[\\mathcal B_r^{(n)}(X)\\bigr]_{r\\in\\mathbb N}\\quad\\text{and}\\quad \\bigl[\\mathcal B_r^{(n-1)}(X)\\bigr]_{r\\in\\mathbb N}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>are stationary.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There therefore exists an integer \\(a\\geq1\\) such that, for every \\((p,q)\\), with \\(p+q=n\\) or \\(n-1\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(\\mathrm{A}.3.1)\\qquad \\mathcal B_r^{pq}(X)=\\mathcal B_a^{pq}(X)\\quad(r\\geq a).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consequently, for \\(r\\geq a+1\\), the arrows \\(d_r\\) with source and target \\(\\mathcal E_r^{pq}(X)\\) (\\(p+q=n\\)) are zero. In other words the monomorphisms</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal E_s^{pq}(X)\\lhook\\joinrel\\longrightarrow\\mathcal E_r^{pq}(X)\\qquad(s\\geq r\\geq a+1)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>deduced from (A.3.1) with \\(p+q=n\\) are in fact <u>isomorphisms</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(s\\geq r\\geq a+1\\), the commutativity of the diagram \\((d_3)\\), with \\(p+q=n\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{\\mathcal E_s^{pq}(X)\\ar[r]^{\\theta_s^{pq}}_{\\text{epi}}\\ar[d]_{\\sim}&amp;E_\\infty^{pq}(X_{p+s-1})\\ar[d]\\\\ \\mathcal E_r^{pq}(X)\\ar[r]^{\\theta_r^{pq}}_{\\text{epi}}&amp;E_\\infty^{pq}(X_{p+r-1})}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>shows that the transition morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[E_\\infty^{pq}(X_{p+s-1})\\longrightarrow E_\\infty^{pq}(X_{p+r-1})\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which is in any case a monomorphism (cf. a)) is an epimorphism, hence an isomorphism. In other words, the projective system</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[r\\longmapsto\\left[\\bigoplus_p\\operatorname{gr}_S^pT^n(X_{p+r})\\right]_{r\\geq1}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is constant from \\(r=a\\) on, hence \\(T^n(X)\\) satisfies \\((\\mathrm{MLAR})\\) by (4.1.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">ii) Denoting by \\(\\mathcal E_\\infty^{(n)}(X)\\), \\(\\mathcal Z_\\infty^{(n)}(X)\\), \\(\\mathcal B_\\infty^{(n)}(X)\\) the \"limits\" of the various projective systems indexed by \\(r\\) under consideration, we see that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal E_\\infty^{(n)}(X)=\\mathcal Z_\\infty^{(n)}(X)/\\mathcal B_\\infty^{(n)}(X)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a noetherian \\((\\operatorname{gr}(S),A)\\)-module, since \\(\\mathcal Z_\\infty^{(n)}(X)\\) is contained in \\(\\mathcal E_1^{(n)}(X)\\). Moreover it follows from A.2. a) that:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal E_\\infty^{(n)}(X)=\\operatorname{gr}_S T^n(X).\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

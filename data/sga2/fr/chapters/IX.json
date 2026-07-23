@@ -1,0 +1,872 @@
+{
+ "chapter_id": "IX",
+ "title": "Géométrie algébrique et géométrie formelle",
+ "number": "IX",
+ "pages": [
+  {
+   "id": "IX",
+   "title": "Géométrie algébrique et géométrie formelle",
+   "html": "<h1 id=\"IX\">IX Géométrie algébrique et géométrie formelle</h1>\n<p>Le but de cet exposé est de généraliser au cas d'un morphisme qui n'est pas propre les théorèmes 3.4.2 et 4.1.5 de EGA III.</p>",
+   "blocks": [
+    {
+     "id": "IX",
+     "type": "heading",
+     "label": "IX",
+     "title": null,
+     "html": "<h1 id=\"IX\">IX Géométrie algébrique et géométrie formelle</h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le but de cet exposé est de généraliser au cas d'un morphisme qui n'est pas propre les théorèmes 3.4.2 et 4.1.5 de EGA III.</p>"
+    }
+   ],
+   "footnotes": [],
+   "bibliography": []
+  },
+  {
+   "id": "IX-1",
+   "title": "Le théorème de comparaison",
+   "html": "<h2 id=\"IX.1\">1 Le théorème de comparaison</h2>\n<p>Soit \\(f\\colon X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X'\\) un morphisme de préschémas, <em>séparé</em> et de <em>type fini</em>. Supposons que \\(X'\\) soit localement noethérien. Soit \\(Y'\\) une partie fermée de \\(X'\\) et soit \\(Y\\subset f^{-1}(Y')\\). Soient \\(\\widehat{X}\\) et \\(\\widehat{X'}\\) les complétés formels de \\(X\\) et de \\(X'\\) le long de \\(Y\\) et de \\(Y'\\). Soit \\(\\widehat{f}\\) le morphisme déduit de \\(f\\) par passage aux complétés.</p>\n<div class=\"equation\" id=\"eq:IX.1.1\">\n\\[\n\\tag{1.1}\n\\xymatrix{ X \\ar[d]_f &amp; Y \\ar[l] \\ar[d]&amp; &amp;\\widehat{X}\\ar[d]_{\\widehat{f}} \\ar[r]^j &amp; X\\ar[d]^f &amp;\\\\\nX^{\\prime} &amp; Y^{\\prime} \\ar[l] &amp;, &amp;\\widehat{X^{\\prime}} \\ar[r]^i &amp; X^{\\prime}.\n}\n\\]\n</div>\n<p>On désigne par \\(j\\) (resp. \\(i\\)) l'homomorphisme de \\(\\widehat{X}\\) dans \\(X\\) (resp. de \\(\\widehat{X'}\\) dans \\(X'\\)). On sait que \\(i\\) et \\(j\\) sont <em>plats</em>.</p>\n<p>Soit \\(\\mathscr{I} '\\) un idéal de définition de \\(Y'\\) et soit \\({\\mathscr{J}}=f^{*}(\\mathscr{I} '). \\mathscr{O}_X\\), c'est un idéal de définition de \\(Y\\). On a donc:</p>\n<div class=\"equation\" id=\"eq:IX.1.2\">\n\\[\n\\tag{1.2} {\\widehat{X'}=(Y', \\varprojlim_{k \\in \\mathbf{N}}\\mathscr{O}_{X'}/{{\\mathscr{I}'}^{k+1}})}, \\quad {\\widehat{X}=(Y, \\varprojlim_{k \\in \\mathbf{N}}\\mathscr{O}_X/{{\\mathscr{J}}^{k+1}})}.\n\\]\n</div>\n<p>Pour tout \\(k \\in \\mathbf{N}\\), posons:</p>\n<div class=\"equation\" id=\"eq:IX.1.3\">\n\\[\n\\tag{1.3} Y'_k=(Y', \\mathscr{O}_{X'}/{{\\mathscr{I}'}^{k+1}}), \\quad {Y_k}=(Y, \\mathscr{O}_X/{{\\mathscr{J}}^{k+1}}).\n\\]\n</div>\n<p>Soit \\(F\\) un \\(\\mathscr{O}_X\\)-Module <em>cohérent</em>. Pour tout \\(k \\in \\mathbf{N}\\), on pose:</p>\n<div class=\"equation\" id=\"eq:IX.1.4\">\n\\[\n\\tag{1.4} F_k=F/{\\mathscr{J}}^{k+1}F, \\qquad \\widehat{F}=j^*(F)\\simeq \\varprojlim F_k.\n\\]\n</div>\n<p>Si l'on pose:</p>\n<div class=\"equation\" id=\"eq:IX.1.5\">\n\\[\n\\tag{1.5} R^i f_*(F)^{\\wedge}=\\varprojlim_{k \\in \\mathbf{N}} (R^i f_*(F)^{\\wedge} \\otimes_{{\\mathscr{O}}_{X'}}{\\mathscr{O}}_{Y'_k}), \\quad i \\in \\mathbf{Z},\n\\]\n</div>\n<p>on a un homomorphisme naturel:</p>\n<div class=\"equation\" id=\"eq:IX.1.6\">\n\\[\n\\tag{1.6} r_i: i^*(R^if_*(F)) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^i f_*(F)^{\\wedge},\n\\]\n</div>\n<p>qui est un <em>isomorphisme</em> lorsque \\( R^i f_*(F)\\) est <em>cohérent</em>.</p>\n<p>Ainsi qu'il est expliqué dans EGA III 4.1.1, on a un diagramme commutatif:</p>\n<div class=\"equation\" id=\"eq:IX.1.7\">\n\\[\n\\tag{1.7}\n\\begin{array}{c}\n\\xymatrix{ i^*(R^i f_*(F)) \\ar[rr]^-{\\rho_i} \\ar[d]^{r_i} &amp; &amp;R^i\\widehat{f}_*(\\widehat{F}) \\ar[d]^{\\psi_i} \\\\\nR^i f_*(F)^{\\wedge}\\ar[rr]^-{\\varphi_i} &amp; &amp;\\varprojlim_{k \\in \\mathbf{N}} R^i f_*(F_k).\n}\n\\end{array}\n\\]\n</div>\n<p>Dans loc. cit. on trouve un diagramme commutatif, car on sait que \\( R^if_*(F)\\) est cohérent, et l'on identifie la source et le but de (<a class=\"eqref\" href=\"#eq:IX.1.6\">1.6</a>). Dans notre cas, \\( R^if_*(F)\\) ne sera cohérent que pour certaines valeurs de \\(i\\), pour lesquelles on étudiera (<a class=\"eqref\" href=\"#eq:IX.1.7\">1.7</a>).</p>\n<p>Considérons l'anneau gradué</p>\n<div class=\"equation\" id=\"eq:IX.1.8\">\n\\[\n\\tag{1.8}\n\\mathscr{S} = \\coprod_{k \\in \\mathbf{N}} \\mathscr{I}'^k,\n\\]\n</div>\n<p>et le \\(\\mathscr{S}\\)-Module gradué:</p>\n<div class=\"equation\" id=\"eq:IX.1.9\">\n\\[\n\\tag{1.9}\n\\mathscr{H}^i= \\coprod_{k \\in \\mathbf{N}} R^if_*({\\mathscr{J}}^k F), \\quad i \\in \\mathbf{Z},\n\\]\n</div>\n<p>dont la structure de \\(\\mathscr{S}\\)-Module est définie comme suit.</p>\n<p>Le faisceau \\(R^if_*({\\mathscr{J}}^k F)\\) est associé au préfaisceau qui, à tout ouvert <em>affine</em> \\(U\\) de \\(X'\\), associe:</p>\n<div class=\"equation\" id=\"eq:IX.1.10\">\n\\[\n\\tag{1.10}\nH^i(f^{-1}(U), {\\mathscr{J}}^k F{|f^{-1}(U)}).\n\\]\n</div>\n<p>Soit donc \\(U'\\) un ouvert affine de \\(X'\\), posons</p>\n<div class=\"displaymath\" id=\"disp-IX-1-1\">\n\\[\nU=f^{-1}(U'),\n\\]\n</div>\n<p>et soit \\(x\\in {\\mathscr{I}}^m(U')\\). Soit \\(x'\\) l'image de \\(x\\) dans \\({\\mathscr{J}}^{{k}} (U)\\). L'homothétie de rapport \\(x'\\) dans \\(F_{|U'}\\) applique \\({\\mathscr{J}}^kF{{|U'}}\\) dans \\({\\mathscr{J}}^{k+m}F{{|U'}}\\), d'où, par fonctorialité, un morphisme:</p>\n<div class=\"equation\" id=\"eq:IX.1.11\">\n\\[\n\\tag{1.11} \\mu^i_{x, k}(U):H^i(U', {\\mathscr{J}}^kF{{|U'}})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(U', {\\mathscr{J}}^{k+m}F{{|U'}}),\n\\]\n</div>\n<p>défini pour tout \\(i \\in \\mathbf{Z}\\) et tout \\(k \\in \\mathbf{N}\\), qui donne, par passage au faisceau associé, la structure de \\(\\mathscr{S}\\)-Module gradué de \\(\\mathscr{H}^i\\).</p>\n<div class=\"thm thm-plain theoreme\" id=\"IX.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.1\"></span> \nSoit \\(n\\) un entier. Supposons que le \\(\\mathscr{S}\\)-Module gradué \\(\\mathscr{H}^i\\) soit de type fini pour \\(i=n-1\\) et \\(i=n\\), alors:</p>\n<ol class=\"enumerate\">\n<li><p>\\(r_n\\) et \\(r_{n-1}\\) sont des isomorphismes et \\(R^i\\widehat{f}_*(\\widehat{F})\\) est cohérent pour \\(i=n-1\\);</p></li>\n<li><p>pour \\(i=n-1\\), \\(\\rho_i\\), \\(\\varphi_i\\) et \\(\\psi_i\\) sont des isomorphismes topologiques (en particulier la filtration définie sur \\(R^{n-1}f_*(F)\\) par les noyaux des homomorphismes</p>\n<div class=\"equation\" id=\"eq:IX.1.12\">\n\\[\n\\tag{1.12}\nR^{n-1}f_*(F) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^{n-1}f_*(F_k)\n\\]\n</div>\n<p>est \\(\\mathscr{I}'\\)-bonne);</p></li>\n<li><p>pour \\(i=n\\), \\(\\rho_i\\), \\(\\varphi_i\\) et \\(\\psi_i\\) sont des monomorphismes, de plus la filtration sur \\(R^n f_*(F)\\) est \\(\\mathscr{I}'\\)-bonne et \\(\\psi_n\\) est un isomorphisme;</p></li>\n<li><p>Le système projectif des \\(R^i f_*(F_k)\\) vérifie, pour \\(i=n-2, n-1\\), la condition de Mittag-Leffler uniforme, i.e. il existe un entier \\(k\\geqslant 0\\) <em>fixe</em> tel que, pour tout \\(p\\geqslant 0\\) et tout \\(p'\\geqslant p+k\\), on ait:</p>\n<div class=\"displaymath\" id=\"disp-IX-1-2\">\n\\[\n\\operatorname{Im}[R^i f_*(F_{p'})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^i f_*(F_p)]=\\operatorname{Im}[R^i f_*(F_{p+k})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^i f_*(F_p)].\n\\]\n</div></li>\n</ol></div>\n</div>\n<p>En procédant comme dans EGA III 4.1.8, il est facile de <em>se ramener au cas où</em> \\(X'\\) <em>est le spectre d'un anneau noethérien</em> \\(A\\). Dans ce cas, on sait que</p>\n<div class=\"equation\" id=\"eq:IX.1.13\">\n\\[\n\\tag{1.13} R^if_*(F)=H^i(X, F)^\\thicksim \\quad \\text{(cf. 1.10).}\n\\]\n</div>\n<p>Soit \\(I\\) l'idéal de \\(A\\) tel que \\(\\widetilde{I}=\\mathscr{I}'\\) et soit</p>\n<div class=\"equation\" id=\"eq:IX.1.14\">\n\\[\n\\tag{1.14}\nS=\\mathop{\\textstyle\\bigoplus}\\limits_{k \\in \\mathbf{N}}I^k,\n\\]\n</div>\n<div class=\"equation\" id=\"eq:IX.1.15\">\n\\[\n\\tag{1.15}\nH^i=\\mathop{\\textstyle\\bigoplus}\\limits_{k \\in \\mathbf{N}}H^i(X, {\\mathscr{J}}^k F), \\quad i \\in \\mathbf{Z},\n\\]\n</div>\n<p>où \\(H^i\\) est muni de la structure de \\(S\\)-module gradué définie par <a class=\"eqref\" href=\"#eq:IX.1.11\">1.11</a>, où l'on a pris \\(U=X'\\).</p>\n<p>La démonstration est calquée sur celle de EGA III 4.1.5, donnons un résumé.</p>\n<p>On travaille sur \\(\\varphi_i\\) et \\(\\psi_i\\), auxquels correspondent des homomorphismes de modules:</p>\n<div class=\"equation\" id=\"eq:IX.1.16\">\n\\[\n\\tag{1.16}\n\\begin{array}{c}\n\\xymatrix{ &amp; H^i(\\widehat{X}, \\widehat{F}) \\ar[d]^-{\\psi_i} \\\\\nH^i(X, F)^{\\wedge}\\ar[r]^-{\\varphi_i}&amp; \\varprojlim_k H^i(X, F_k).\n}\n\\end{array}\n\\]\n</div>\n<p><span class=\"upshape\">(a)</span> On suppose seulement que \\(H^i\\) est un \\(S\\)-module gradué de type fini. On en déduit que <em>la filtration définie sur</em> \\(H^i(X, F)\\) <em>par les modules</em>:</p>\n<div class=\"equation\" id=\"eq:IX.1.17\">\n\\[\n\\tag{1.17} R^i_k=\\ker(H^i(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k))\n\\]\n</div>\n<p><em>est</em> \\(I\\)-<em>bonne</em>. On utilise pour cela la suite exacte de cohomologie:</p>\n<div class=\"equation\" id=\"eq:IX.1.18\">\n\\[\n\\tag{1.18} H^i(X, {\\mathscr{J}}^{k+1}F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k),\n\\]\n</div>\n<p>qui prouve que <em>le</em> \\(S\\)-<em>module gradué</em> \\(\\coprod_{k \\in \\mathbf{N}} R_k^i\\) est <em>quotient</em> du sous-\\(S\\)-module gradué</p>\n<div class=\"displaymath\" id=\"disp-IX-1-3\">\n\\[\n\\coprod_{k \\in \\mathbf{N}}H^i(X, {\\mathscr{J}}^{k+1}F)\n\\]\n</div>\n<p>de \\(H^i\\), donc <em>est de type fini</em>, car \\(S\\) est noethérien. D'où ce premier point.</p>\n<p>Posons:</p>\n<div class=\"equation\" id=\"eq:IX.1.19\">\n\\[\n\\tag{1.19}\nM^i=H^i(X, F), \\quad H^i_k=H^i(X, F_k).\n\\]\n</div>\n<p>On a un diagramme commutatif:</p>\n<div class=\"equation\" id=\"eq:IX.1.20\">\n\\[\n\\tag{1.20}\n\\begin{array}{c}\n\\xymatrix@R=6mm{ H^i(X, F)^{\\wedge} \\ar[r]^-{s_i}\\ar[dr]_{\\varphi_i} &amp;\\varprojlim_{k}(M^i/R^i_k)\\ar[d]^{t_i} \\\\\n&amp;\\varprojlim_{k}H^i_k\\,,\n}\n\\end{array}\n\\]\n</div>\n<p>dans lequel \\(s_i\\) est un <em>isomorphisme</em>; en effet la filtration de \\(H^i(X, F)\\) est \\(I\\)-bonne. De plus \\(t_i\\) est un <em>monomorphisme</em>; en effet le foncteur \\(\\varprojlim\\) est exact à gauche, et, pour tout \\(k\\geqslant 0\\), le morphisme naturel \\(M^i/R^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i_k\\) est un monomorphisme, par définition de \\(R^i_k\\).</p>\n<p>Pour étudier la surjectivité de \\(t_i\\) on introduit:</p>\n<div class=\"equation\" id=\"eq:IX.1.21\">\n\\[\n\\tag{1.21} Q_k^i = \\operatorname{coker} (H^i(X, F) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k)),\n\\]\n</div>\n<p>d'où un système projectif de suites exactes:</p>\n<div class=\"equation\" id=\"eq:IX.1.22\">\n\\[\n\\tag{1.22} 0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} M^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Q_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0.\n\\]\n</div>\n<p>En utilisant la suite exacte de cohomologie:</p>\n<div class=\"equation\" id=\"eq:IX.1.23\">\n\\[\n\\tag{1.23}\nH^i(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^{i+1}(X, {\\mathscr{J}}^{k+1}F),\n\\]\n</div>\n<p>on voit que <em>le \\(S\\)-module gradué</em></p>\n<div class=\"equation\" id=\"eq:IX.1.24\">\n\\[\n\\tag{1.24}\nQ^i=\\coprod_{k \\in \\mathbf{N}}Q^i_k\n\\]\n</div>\n<p><em>est un sous-</em>\\(S\\)<em>-module gradué de</em> \\(H^{i+1}\\). De plus, pour tout \\(k\\geqslant 0\\), on a:</p>\n<div class=\"equation\" id=\"eq:IX.1.25\">\n\\[\n\\tag{1.25}\nI^{k+1}Q^i_k=0\n\\]\n</div>\n<p>car \\(Q_k^i\\) est l'image de \\(H^i_k\\).</p>\n<p><span class=\"upshape\">(b)</span> <span class=\"label-anchor\" id=\"stepb\"></span> On suppose seulement que \\(H^{i+1}\\) est de type fini et l'on s'intéresse à \\(t_i\\) (en oubliant \\(s_i\\)). Puisque \\(S\\) est noethérien, \\(Q^i\\) est de type fini; en appliquant un lemme classique, on trouve qu'il existe un entier \\(r\\geqslant 0\\) et un entier \\(k_0\\geqslant 0\\) tels que</p>\n<div class=\"equation\" id=\"eq:IX.1.26\">\n\\[\n\\tag{1.26}\nI^rQ_k^i=0 \\quad \\text{pour } k\\geqslant k_0.\n\\]\n</div>\n<p>Il en résulte que le <em>système projectif</em> \\((Q_k^i)_{k\\in \\mathbf{N}}\\) <em>est essentiellement nul</em>, donc que le <em>système projectif \\((H_k^i)_{k\\in \\mathbf{N}}\\) vérifie la condition de Mittag-Leffler uniforme</em>. De la suite exacte (<a class=\"eqref\" href=\"#eq:IX.1.22\">1.22</a>) on déduit la suite exacte</p>\n<div class=\"equation\" id=\"eq:IX.1.27\">\n\\[\n\\tag{1.27}\n0 \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} M^i/R_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Q_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0,\n\\]\n</div>\n<p>d'où la suite exacte:</p>\n<div class=\"equation\" id=\"eq:IX.1.28\">\n\\[\n\\tag{1.28}\n0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\varprojlim_{k}M^i/R_k^i \\xrightarrow{t_i} \\varprojlim_{k}H^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\varprojlim_{k} Q_k^i.\n\\]\n</div>\n<p>Or le système projectif \\((Q_k^i)_{k\\in \\mathbf{N}}\\) est essentiellement nul, donc \\(t_i\\) est un <em>isomorphisme</em>.</p>\n<p><span class=\"upshape\">(c)</span> Prouvons que, si \\(H^i\\) est de type fini, \\(\\psi_i\\) est un isomorphisme. Il suffit d'appliquer \\(\\mathrm{EGA}\\, 0_{\\textup{III}}\\) 13.3.1 en prenant pour base d'ouverts de \\(X\\) les ouverts affines. Ceci est licite; en effet, d'après (b), le système projectif \\((H_k^{i-1})_{k\\in \\mathbf{N}}\\) vérifie la condition de Mittag-Leffler.</p>\n<p>Le théorème résulte formellement de (a), (b) et (c). On remarquera qu'en fait la démonstration n'utilise, à chaque pas, la finitude de \\(H^i\\) que pour une seule valeur de \\(i\\).</p>\n<p>Donnons quelques exemples où l'hypothèse du théorème <a class=\"ref\" href=\"#IX.1.1\">1.1</a> est vérifiée.</p>\n<div class=\"thm thm-plain corollaire\" id=\"IX.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.2\"></span>\nSupposons que \\(\\mathscr{I}\\) soit engendré par une section \\(t'\\) de \\(\\mathscr{O}_{X'}\\), et notons \\(t\\) la section correspondante de \\(\\mathscr{O}_X\\). Soit \\(F\\) un \\(\\mathscr{O}_X\\)-module cohérent et soit \\(n\\) un entier.</p>\n<p>Supposons que:</p>\n<ol class=\"enumerate-i\" type=\"i\">\n<li><p>\\(t\\) soit \\(F\\)-régulier (i.e. l'homothétie \\(X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} tX\\) dans \\(F\\) est un monomorphisme).</p></li>\n<li><p>\\(R^if_*(F)\\) soit cohérent pour \\(i=n-1\\) et \\(i=n\\).</p></li>\n</ol>\n<p>Alors l'hypothèse du théorème <a class=\"ref\" href=\"#IX.1.1\">1.1</a> est vérifiée.</p></div>\n</div>\n<p>En effet, on remarque que définit un isomorphisme \\(\\mathscr{J}^kF\\simeq\\mathscr{J} F\\) et on en déduit que</p>\n<div class=\"equation\" id=\"eq:IX.1.29\">\n\\[\n\\tag{1.29}\n\\mathscr{H}^i \\simeq R^if_*(F)\\otimes_{\\mathscr{O}_{X'}}\\mathscr{O}_{X'}[T],\n\\]\n</div>\n<p>où \\(T\\) est une indéterminée. D'où la conclusion.</p>\n<p><span class=\"label-anchor\" id=\"IX.1.3\"></span></p>\n<div class=\"thm thm-plain enonce\" id=\"IX.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1.3</span></div>\n  <div class=\"thm-body\"><p>Supposons que \\(X'=\\operatorname{Spec}(A)\\), où \\(A\\) est un anneau noethérien séparé et complet pour la topologie \\(I\\)-adique. Supposons que le \\(S\\)-module \\(H^i\\) soit de type fini pour \\(i=n-1\\) et \\(i=n\\). (cf. <a class=\"eqref\" href=\"#eq:IX.1.14\">1.14</a> et <a class=\"eqref\" href=\"#eq:IX.1.15\">1.15</a>). Alors les hypothèses du théorème <a class=\"ref\" href=\"#IX.1.1\">1.1</a> sont vérifiées et on trouve un diagramme commutatif d'isomorphismes:</p>\n<div class=\"equation\" id=\"eq:IX.1.30\">\n\\[\n\\tag{1.1}\n\\begin{array}{c}\n\\xymatrix{ H^i(X, F)\\ar[rr]^{\\rho'_i}\\ar[dr]_{\\varphi'_i} &amp;&amp; H^i(\\widehat{X}, \\widehat{F}) \\ar[dl]^{\\psi_i}&amp; \\\\\n&amp;\\varprojlim_{k}H^i(X, F_k)&amp;&amp; \\text{pour } i=n-1.}\n\\end{array}\n\\]\n</div></div>\n</div>\n<p>On note simplement que \\(H^i(X, F)\\) est de type fini donc isomorphe\nà son complété. On obtient (<a class=\"eqref\" href=\"#eq:IX.1.30\">1.1</a>) en transcrivant dans\nla catégorie des \\(A\\)-modules le diagramme de Modules\n(<a class=\"eqref\" href=\"#eq:IX.1.7\">1.7</a>), et en remplaçant la verticale de gauche par\n\\(H^i(X, F)\\).</p>\n<div class=\"thm thm-plain proposition\" id=\"IX.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.4\"></span>\nSoit \\(A\\) un anneau noethérien. Soit \\(t\\in A\\) et supposons que \\(A\\) est séparé et complet pour la topologie \\((tA)\\)-adique. Posons:</p>\n<div class=\"equation\" id=\"eq:IX.1.31\">\n\\[\n\\tag{1.31}\nX'=\\operatorname{Spec} (A), \\quad Y'=V(t), \\quad I=(tA).\n\\]\n</div>\n<p>Soit \\(T\\) une partie fermée de \\(X'\\), posons</p>\n<div class=\"equation\" id=\"eq:IX.1.32\">\n\\[\n\\tag{1.32}\nX=X'-T, \\quad Y=Y'\\cap X=Y'-(Y'\\cap T).\n\\]\n</div>\n<p>Soit \\(F\\) un \\(\\mathscr{O}_X\\)-Module cohérent. Soit enfin</p>\n<div class=\"equation\" id=\"eq:IX.1.33\">\n\\[\n\\tag{1.33}\nT'= \\{ x\\in X' \\mid \\operatorname{codim}(\\{ \\overline{x}\\} \\cap T, \\{\\overline{x}\\})=1\\}.\n\\]\n</div>\n<p>Supposons que:</p>\n<ol class=\"enumerate-a\" type=\"a\">\n<li><p>\\(t\\) soit \\(F\\)-régulier,</p></li>\n<li><p>\\(\\operatorname{prof}_{T'}(F) \\geqslant n+1\\),</p></li>\n<li><p>\\(A\\) soit quotient d'un anneau noethérien régulier.</p></li>\n</ol>\n<p>Alors, dans le diagramme (<a class=\"eqref\" href=\"#eq:IX.1.30\">1.1</a>), les morphismes \\(\\rho'_i\\), \\(\\varphi'_i\\) et \\(\\psi_i\\) sont des isomorphismes pour \\(i&lt;n\\) et des monomorphismes pour \\(i=n\\). De plus \\(\\psi_n\\) est un isomorphisme.</p></div>\n</div>\n<p>En vertu de <a class=\"eqref\" href=\"#eq:IX.1.3\">1.3</a> et <a class=\"eqref\" href=\"#eq:IX.1.2\">1.2</a>, il suffit de prouver que \\(R^if_*(F)\\) est cohérent pour \\(i\\leqslant n\\), ce qui résulte du théorème de finitude <a class=\"ref\" href=\"#VIII.2.1\">2.1</a>.</p>\n<p>En particulier:</p>\n<div class=\"thm thm-remark exemple\" id=\"IX.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.5\"></span> On appliquera <a class=\"eqref\" href=\"#eq:IX.1.4\">1.4</a> lorsque \\(A\\) est un anneau <em>local</em> et que \\(t\\) appartient au radical \\(\\mathfrak{r}(A)\\) de \\(A\\). On prendra alors \\(T=\\{ \\mathfrak{r}(A)\\}\\). <em>Dans ce cas</em>, pour \\(n=1\\) on trouve l'énoncé suivant:</p>\n<p><em>Si \\(A\\) est séparé et complet pour la topologie \\(t\\)-adique et quotient d'un anneau régulier (par exemple si \\(A\\) est complet), si de plus \\(t\\) est \\(F\\)-régulier et si \\(\\operatorname{prof} F_x\\geqslant 2\\) pour tout \\(x\\in \\operatorname{Spec} (A)\\) tel que \\(\\dim A/x=1\\), alors l'homomorphisme naturel </em></p>\n<div class=\"displaymath\" id=\"disp-IX-1-4\">\n\\[\nF(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\Gamma(X, F)\n\\]\n</div>\n<p>est un isomorphisme.</p>\n<p>En effet, conservant les notations de <a class=\"eqref\" href=\"#eq:IX.1.4\">1.4</a>, on a \\(T=\\{ \\mathfrak{r}(A)\\}\\) et la formule (<a class=\"eqref\" href=\"#eq:IX.1.33\">1.33</a>) dit que</p>\n<div class=\"displaymath\" id=\"disp-IX-1-5\">\n\\[\nT'=\\{x\\in\\operatorname{Spec}(A)\\mid\\dim A/x=1\\}.\n\\]\n</div></div>\n</div>",
+   "blocks": [
+    {
+     "id": "IX.1",
+     "type": "heading",
+     "label": "1",
+     "title": null,
+     "html": "<h2 id=\"IX.1\">1 Le théorème de comparaison</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f\\colon X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X'\\) un morphisme de préschémas, <em>séparé</em> et de <em>type fini</em>. Supposons que \\(X'\\) soit localement noethérien. Soit \\(Y'\\) une partie fermée de \\(X'\\) et soit \\(Y\\subset f^{-1}(Y')\\). Soient \\(\\widehat{X}\\) et \\(\\widehat{X'}\\) les complétés formels de \\(X\\) et de \\(X'\\) le long de \\(Y\\) et de \\(Y'\\). Soit \\(\\widehat{f}\\) le morphisme déduit de \\(f\\) par passage aux complétés.</p>"
+    },
+    {
+     "id": "eq:IX.1.1",
+     "type": "equation",
+     "label": "1.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.1\">\n\\[\n\\tag{1.1}\n\\xymatrix{ X \\ar[d]_f &amp; Y \\ar[l] \\ar[d]&amp; &amp;\\widehat{X}\\ar[d]_{\\widehat{f}} \\ar[r]^j &amp; X\\ar[d]^f &amp;\\\\\nX^{\\prime} &amp; Y^{\\prime} \\ar[l] &amp;, &amp;\\widehat{X^{\\prime}} \\ar[r]^i &amp; X^{\\prime}.\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On désigne par \\(j\\) (resp. \\(i\\)) l'homomorphisme de \\(\\widehat{X}\\) dans \\(X\\) (resp. de \\(\\widehat{X'}\\) dans \\(X'\\)). On sait que \\(i\\) et \\(j\\) sont <em>plats</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathscr{I} '\\) un idéal de définition de \\(Y'\\) et soit \\({\\mathscr{J}}=f^{*}(\\mathscr{I} '). \\mathscr{O}_X\\), c'est un idéal de définition de \\(Y\\). On a donc:</p>"
+    },
+    {
+     "id": "eq:IX.1.2",
+     "type": "equation",
+     "label": "1.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.2\">\n\\[\n\\tag{1.2} {\\widehat{X'}=(Y', \\varprojlim_{k \\in \\mathbf{N}}\\mathscr{O}_{X'}/{{\\mathscr{I}'}^{k+1}})}, \\quad {\\widehat{X}=(Y, \\varprojlim_{k \\in \\mathbf{N}}\\mathscr{O}_X/{{\\mathscr{J}}^{k+1}})}.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(k \\in \\mathbf{N}\\), posons:</p>"
+    },
+    {
+     "id": "eq:IX.1.3",
+     "type": "equation",
+     "label": "1.3",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.3\">\n\\[\n\\tag{1.3} Y'_k=(Y', \\mathscr{O}_{X'}/{{\\mathscr{I}'}^{k+1}}), \\quad {Y_k}=(Y, \\mathscr{O}_X/{{\\mathscr{J}}^{k+1}}).\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un \\(\\mathscr{O}_X\\)-Module <em>cohérent</em>. Pour tout \\(k \\in \\mathbf{N}\\), on pose:</p>"
+    },
+    {
+     "id": "eq:IX.1.4",
+     "type": "equation",
+     "label": "1.4",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.4\">\n\\[\n\\tag{1.4} F_k=F/{\\mathscr{J}}^{k+1}F, \\qquad \\widehat{F}=j^*(F)\\simeq \\varprojlim F_k.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si l'on pose:</p>"
+    },
+    {
+     "id": "eq:IX.1.5",
+     "type": "equation",
+     "label": "1.5",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.5\">\n\\[\n\\tag{1.5} R^i f_*(F)^{\\wedge}=\\varprojlim_{k \\in \\mathbf{N}} (R^i f_*(F)^{\\wedge} \\otimes_{{\\mathscr{O}}_{X'}}{\\mathscr{O}}_{Y'_k}), \\quad i \\in \\mathbf{Z},\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a un homomorphisme naturel:</p>"
+    },
+    {
+     "id": "eq:IX.1.6",
+     "type": "equation",
+     "label": "1.6",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.6\">\n\\[\n\\tag{1.6} r_i: i^*(R^if_*(F)) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^i f_*(F)^{\\wedge},\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui est un <em>isomorphisme</em> lorsque \\( R^i f_*(F)\\) est <em>cohérent</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ainsi qu'il est expliqué dans EGA III 4.1.1, on a un diagramme commutatif:</p>"
+    },
+    {
+     "id": "eq:IX.1.7",
+     "type": "equation",
+     "label": "1.7",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.7\">\n\\[\n\\tag{1.7}\n\\begin{array}{c}\n\\xymatrix{ i^*(R^i f_*(F)) \\ar[rr]^-{\\rho_i} \\ar[d]^{r_i} &amp; &amp;R^i\\widehat{f}_*(\\widehat{F}) \\ar[d]^{\\psi_i} \\\\\nR^i f_*(F)^{\\wedge}\\ar[rr]^-{\\varphi_i} &amp; &amp;\\varprojlim_{k \\in \\mathbf{N}} R^i f_*(F_k).\n}\n\\end{array}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans loc. cit. on trouve un diagramme commutatif, car on sait que \\( R^if_*(F)\\) est cohérent, et l'on identifie la source et le but de (<a class=\"eqref\" href=\"#eq:IX.1.6\">1.6</a>). Dans notre cas, \\( R^if_*(F)\\) ne sera cohérent que pour certaines valeurs de \\(i\\), pour lesquelles on étudiera (<a class=\"eqref\" href=\"#eq:IX.1.7\">1.7</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons l'anneau gradué</p>"
+    },
+    {
+     "id": "eq:IX.1.8",
+     "type": "equation",
+     "label": "1.8",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.8\">\n\\[\n\\tag{1.8}\n\\mathscr{S} = \\coprod_{k \\in \\mathbf{N}} \\mathscr{I}'^k,\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et le \\(\\mathscr{S}\\)-Module gradué:</p>"
+    },
+    {
+     "id": "eq:IX.1.9",
+     "type": "equation",
+     "label": "1.9",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.9\">\n\\[\n\\tag{1.9}\n\\mathscr{H}^i= \\coprod_{k \\in \\mathbf{N}} R^if_*({\\mathscr{J}}^k F), \\quad i \\in \\mathbf{Z},\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont la structure de \\(\\mathscr{S}\\)-Module est définie comme suit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le faisceau \\(R^if_*({\\mathscr{J}}^k F)\\) est associé au préfaisceau qui, à tout ouvert <em>affine</em> \\(U\\) de \\(X'\\), associe:</p>"
+    },
+    {
+     "id": "eq:IX.1.10",
+     "type": "equation",
+     "label": "1.10",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.10\">\n\\[\n\\tag{1.10}\nH^i(f^{-1}(U), {\\mathscr{J}}^k F{|f^{-1}(U)}).\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit donc \\(U'\\) un ouvert affine de \\(X'\\), posons</p>"
+    },
+    {
+     "id": "disp-IX-1-1",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IX-1-1\">\n\\[\nU=f^{-1}(U'),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et soit \\(x\\in {\\mathscr{I}}^m(U')\\). Soit \\(x'\\) l'image de \\(x\\) dans \\({\\mathscr{J}}^{{k}} (U)\\). L'homothétie de rapport \\(x'\\) dans \\(F_{|U'}\\) applique \\({\\mathscr{J}}^kF{{|U'}}\\) dans \\({\\mathscr{J}}^{k+m}F{{|U'}}\\), d'où, par fonctorialité, un morphisme:</p>"
+    },
+    {
+     "id": "eq:IX.1.11",
+     "type": "equation",
+     "label": "1.11",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.11\">\n\\[\n\\tag{1.11} \\mu^i_{x, k}(U):H^i(U', {\\mathscr{J}}^kF{{|U'}})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(U', {\\mathscr{J}}^{k+m}F{{|U'}}),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>défini pour tout \\(i \\in \\mathbf{Z}\\) et tout \\(k \\in \\mathbf{N}\\), qui donne, par passage au faisceau associé, la structure de \\(\\mathscr{S}\\)-Module gradué de \\(\\mathscr{H}^i\\).</p>"
+    },
+    {
+     "id": "IX.1.1",
+     "type": "theoreme",
+     "label": "1.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.1\"></span> \nSoit \\(n\\) un entier. Supposons que le \\(\\mathscr{S}\\)-Module gradué \\(\\mathscr{H}^i\\) soit de type fini pour \\(i=n-1\\) et \\(i=n\\), alors:</p>\n<ol class=\"enumerate\">\n<li><p>\\(r_n\\) et \\(r_{n-1}\\) sont des isomorphismes et \\(R^i\\widehat{f}_*(\\widehat{F})\\) est cohérent pour \\(i=n-1\\);</p></li>\n<li><p>pour \\(i=n-1\\), \\(\\rho_i\\), \\(\\varphi_i\\) et \\(\\psi_i\\) sont des isomorphismes topologiques (en particulier la filtration définie sur \\(R^{n-1}f_*(F)\\) par les noyaux des homomorphismes</p>\n<div class=\"equation\" id=\"eq:IX.1.12\">\n\\[\n\\tag{1.12}\nR^{n-1}f_*(F) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^{n-1}f_*(F_k)\n\\]\n</div>\n<p>est \\(\\mathscr{I}'\\)-bonne);</p></li>\n<li><p>pour \\(i=n\\), \\(\\rho_i\\), \\(\\varphi_i\\) et \\(\\psi_i\\) sont des monomorphismes, de plus la filtration sur \\(R^n f_*(F)\\) est \\(\\mathscr{I}'\\)-bonne et \\(\\psi_n\\) est un isomorphisme;</p></li>\n<li><p>Le système projectif des \\(R^i f_*(F_k)\\) vérifie, pour \\(i=n-2, n-1\\), la condition de Mittag-Leffler uniforme, i.e. il existe un entier \\(k\\geqslant 0\\) <em>fixe</em> tel que, pour tout \\(p\\geqslant 0\\) et tout \\(p'\\geqslant p+k\\), on ait:</p>\n<div class=\"displaymath\" id=\"disp-IX-1-2\">\n\\[\n\\operatorname{Im}[R^i f_*(F_{p'})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^i f_*(F_p)]=\\operatorname{Im}[R^i f_*(F_{p+k})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R^i f_*(F_p)].\n\\]\n</div></li>\n</ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En procédant comme dans EGA III 4.1.8, il est facile de <em>se ramener au cas où</em> \\(X'\\) <em>est le spectre d'un anneau noethérien</em> \\(A\\). Dans ce cas, on sait que</p>"
+    },
+    {
+     "id": "eq:IX.1.13",
+     "type": "equation",
+     "label": "1.13",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.13\">\n\\[\n\\tag{1.13} R^if_*(F)=H^i(X, F)^\\thicksim \\quad \\text{(cf. 1.10).}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(I\\) l'idéal de \\(A\\) tel que \\(\\widetilde{I}=\\mathscr{I}'\\) et soit</p>"
+    },
+    {
+     "id": "eq:IX.1.14",
+     "type": "equation",
+     "label": "1.14",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.14\">\n\\[\n\\tag{1.14}\nS=\\mathop{\\textstyle\\bigoplus}\\limits_{k \\in \\mathbf{N}}I^k,\n\\]\n</div>"
+    },
+    {
+     "id": "eq:IX.1.15",
+     "type": "equation",
+     "label": "1.15",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.15\">\n\\[\n\\tag{1.15}\nH^i=\\mathop{\\textstyle\\bigoplus}\\limits_{k \\in \\mathbf{N}}H^i(X, {\\mathscr{J}}^k F), \\quad i \\in \\mathbf{Z},\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(H^i\\) est muni de la structure de \\(S\\)-module gradué définie par <a class=\"eqref\" href=\"#eq:IX.1.11\">1.11</a>, où l'on a pris \\(U=X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est calquée sur celle de EGA III 4.1.5, donnons un résumé.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On travaille sur \\(\\varphi_i\\) et \\(\\psi_i\\), auxquels correspondent des homomorphismes de modules:</p>"
+    },
+    {
+     "id": "eq:IX.1.16",
+     "type": "equation",
+     "label": "1.16",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.16\">\n\\[\n\\tag{1.16}\n\\begin{array}{c}\n\\xymatrix{ &amp; H^i(\\widehat{X}, \\widehat{F}) \\ar[d]^-{\\psi_i} \\\\\nH^i(X, F)^{\\wedge}\\ar[r]^-{\\varphi_i}&amp; \\varprojlim_k H^i(X, F_k).\n}\n\\end{array}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><span class=\"upshape\">(a)</span> On suppose seulement que \\(H^i\\) est un \\(S\\)-module gradué de type fini. On en déduit que <em>la filtration définie sur</em> \\(H^i(X, F)\\) <em>par les modules</em>:</p>"
+    },
+    {
+     "id": "eq:IX.1.17",
+     "type": "equation",
+     "label": "1.17",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.17\">\n\\[\n\\tag{1.17} R^i_k=\\ker(H^i(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k))\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>est</em> \\(I\\)-<em>bonne</em>. On utilise pour cela la suite exacte de cohomologie:</p>"
+    },
+    {
+     "id": "eq:IX.1.18",
+     "type": "equation",
+     "label": "1.18",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.18\">\n\\[\n\\tag{1.18} H^i(X, {\\mathscr{J}}^{k+1}F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui prouve que <em>le</em> \\(S\\)-<em>module gradué</em> \\(\\coprod_{k \\in \\mathbf{N}} R_k^i\\) est <em>quotient</em> du sous-\\(S\\)-module gradué</p>"
+    },
+    {
+     "id": "disp-IX-1-3",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IX-1-3\">\n\\[\n\\coprod_{k \\in \\mathbf{N}}H^i(X, {\\mathscr{J}}^{k+1}F)\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de \\(H^i\\), donc <em>est de type fini</em>, car \\(S\\) est noethérien. D'où ce premier point.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons:</p>"
+    },
+    {
+     "id": "eq:IX.1.19",
+     "type": "equation",
+     "label": "1.19",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.19\">\n\\[\n\\tag{1.19}\nM^i=H^i(X, F), \\quad H^i_k=H^i(X, F_k).\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a un diagramme commutatif:</p>"
+    },
+    {
+     "id": "eq:IX.1.20",
+     "type": "equation",
+     "label": "1.20",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.20\">\n\\[\n\\tag{1.20}\n\\begin{array}{c}\n\\xymatrix@R=6mm{ H^i(X, F)^{\\wedge} \\ar[r]^-{s_i}\\ar[dr]_{\\varphi_i} &amp;\\varprojlim_{k}(M^i/R^i_k)\\ar[d]^{t_i} \\\\\n&amp;\\varprojlim_{k}H^i_k\\,,\n}\n\\end{array}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dans lequel \\(s_i\\) est un <em>isomorphisme</em>; en effet la filtration de \\(H^i(X, F)\\) est \\(I\\)-bonne. De plus \\(t_i\\) est un <em>monomorphisme</em>; en effet le foncteur \\(\\varprojlim\\) est exact à gauche, et, pour tout \\(k\\geqslant 0\\), le morphisme naturel \\(M^i/R^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i_k\\) est un monomorphisme, par définition de \\(R^i_k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour étudier la surjectivité de \\(t_i\\) on introduit:</p>"
+    },
+    {
+     "id": "eq:IX.1.21",
+     "type": "equation",
+     "label": "1.21",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.21\">\n\\[\n\\tag{1.21} Q_k^i = \\operatorname{coker} (H^i(X, F) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k)),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où un système projectif de suites exactes:</p>"
+    },
+    {
+     "id": "eq:IX.1.22",
+     "type": "equation",
+     "label": "1.22",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.22\">\n\\[\n\\tag{1.22} 0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} R_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} M^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Q_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En utilisant la suite exacte de cohomologie:</p>"
+    },
+    {
+     "id": "eq:IX.1.23",
+     "type": "equation",
+     "label": "1.23",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.23\">\n\\[\n\\tag{1.23}\nH^i(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i(X, F_k)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^{i+1}(X, {\\mathscr{J}}^{k+1}F),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on voit que <em>le \\(S\\)-module gradué</em></p>"
+    },
+    {
+     "id": "eq:IX.1.24",
+     "type": "equation",
+     "label": "1.24",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.24\">\n\\[\n\\tag{1.24}\nQ^i=\\coprod_{k \\in \\mathbf{N}}Q^i_k\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>est un sous-</em>\\(S\\)<em>-module gradué de</em> \\(H^{i+1}\\). De plus, pour tout \\(k\\geqslant 0\\), on a:</p>"
+    },
+    {
+     "id": "eq:IX.1.25",
+     "type": "equation",
+     "label": "1.25",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.25\">\n\\[\n\\tag{1.25}\nI^{k+1}Q^i_k=0\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>car \\(Q_k^i\\) est l'image de \\(H^i_k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><span class=\"upshape\">(b)</span> <span class=\"label-anchor\" id=\"stepb\"></span> On suppose seulement que \\(H^{i+1}\\) est de type fini et l'on s'intéresse à \\(t_i\\) (en oubliant \\(s_i\\)). Puisque \\(S\\) est noethérien, \\(Q^i\\) est de type fini; en appliquant un lemme classique, on trouve qu'il existe un entier \\(r\\geqslant 0\\) et un entier \\(k_0\\geqslant 0\\) tels que</p>"
+    },
+    {
+     "id": "eq:IX.1.26",
+     "type": "equation",
+     "label": "1.26",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.26\">\n\\[\n\\tag{1.26}\nI^rQ_k^i=0 \\quad \\text{pour } k\\geqslant k_0.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte que le <em>système projectif</em> \\((Q_k^i)_{k\\in \\mathbf{N}}\\) <em>est essentiellement nul</em>, donc que le <em>système projectif \\((H_k^i)_{k\\in \\mathbf{N}}\\) vérifie la condition de Mittag-Leffler uniforme</em>. De la suite exacte (<a class=\"eqref\" href=\"#eq:IX.1.22\">1.22</a>) on déduit la suite exacte</p>"
+    },
+    {
+     "id": "eq:IX.1.27",
+     "type": "equation",
+     "label": "1.27",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.27\">\n\\[\n\\tag{1.27}\n0 \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} M^i/R_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} H^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Q_k^i \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0,\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où la suite exacte:</p>"
+    },
+    {
+     "id": "eq:IX.1.28",
+     "type": "equation",
+     "label": "1.28",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.28\">\n\\[\n\\tag{1.28}\n0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\varprojlim_{k}M^i/R_k^i \\xrightarrow{t_i} \\varprojlim_{k}H^i_k \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\varprojlim_{k} Q_k^i.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or le système projectif \\((Q_k^i)_{k\\in \\mathbf{N}}\\) est essentiellement nul, donc \\(t_i\\) est un <em>isomorphisme</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><span class=\"upshape\">(c)</span> Prouvons que, si \\(H^i\\) est de type fini, \\(\\psi_i\\) est un isomorphisme. Il suffit d'appliquer \\(\\mathrm{EGA}\\, 0_{\\textup{III}}\\) 13.3.1 en prenant pour base d'ouverts de \\(X\\) les ouverts affines. Ceci est licite; en effet, d'après (b), le système projectif \\((H_k^{i-1})_{k\\in \\mathbf{N}}\\) vérifie la condition de Mittag-Leffler.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le théorème résulte formellement de (a), (b) et (c). On remarquera qu'en fait la démonstration n'utilise, à chaque pas, la finitude de \\(H^i\\) que pour une seule valeur de \\(i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donnons quelques exemples où l'hypothèse du théorème <a class=\"ref\" href=\"#IX.1.1\">1.1</a> est vérifiée.</p>"
+    },
+    {
+     "id": "IX.1.2",
+     "type": "corollaire",
+     "label": "1.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.2\"></span>\nSupposons que \\(\\mathscr{I}\\) soit engendré par une section \\(t'\\) de \\(\\mathscr{O}_{X'}\\), et notons \\(t\\) la section correspondante de \\(\\mathscr{O}_X\\). Soit \\(F\\) un \\(\\mathscr{O}_X\\)-module cohérent et soit \\(n\\) un entier.</p>\n<p>Supposons que:</p>\n<ol class=\"enumerate-i\" type=\"i\">\n<li><p>\\(t\\) soit \\(F\\)-régulier (i.e. l'homothétie \\(X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} tX\\) dans \\(F\\) est un monomorphisme).</p></li>\n<li><p>\\(R^if_*(F)\\) soit cohérent pour \\(i=n-1\\) et \\(i=n\\).</p></li>\n</ol>\n<p>Alors l'hypothèse du théorème <a class=\"ref\" href=\"#IX.1.1\">1.1</a> est vérifiée.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on remarque que définit un isomorphisme \\(\\mathscr{J}^kF\\simeq\\mathscr{J} F\\) et on en déduit que</p>"
+    },
+    {
+     "id": "eq:IX.1.29",
+     "type": "equation",
+     "label": "1.29",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.1.29\">\n\\[\n\\tag{1.29}\n\\mathscr{H}^i \\simeq R^if_*(F)\\otimes_{\\mathscr{O}_{X'}}\\mathscr{O}_{X'}[T],\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(T\\) est une indéterminée. D'où la conclusion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><span class=\"label-anchor\" id=\"IX.1.3\"></span></p>"
+    },
+    {
+     "id": "IX.1.3",
+     "type": "enonce",
+     "label": "1.3",
+     "title": "Corollaire 1.3",
+     "html": "<div class=\"thm thm-plain enonce\" id=\"IX.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire 1.3</span></div>\n  <div class=\"thm-body\"><p>Supposons que \\(X'=\\operatorname{Spec}(A)\\), où \\(A\\) est un anneau noethérien séparé et complet pour la topologie \\(I\\)-adique. Supposons que le \\(S\\)-module \\(H^i\\) soit de type fini pour \\(i=n-1\\) et \\(i=n\\). (cf. <a class=\"eqref\" href=\"#eq:IX.1.14\">1.14</a> et <a class=\"eqref\" href=\"#eq:IX.1.15\">1.15</a>). Alors les hypothèses du théorème <a class=\"ref\" href=\"#IX.1.1\">1.1</a> sont vérifiées et on trouve un diagramme commutatif d'isomorphismes:</p>\n<div class=\"equation\" id=\"eq:IX.1.30\">\n\\[\n\\tag{1.1}\n\\begin{array}{c}\n\\xymatrix{ H^i(X, F)\\ar[rr]^{\\rho'_i}\\ar[dr]_{\\varphi'_i} &amp;&amp; H^i(\\widehat{X}, \\widehat{F}) \\ar[dl]^{\\psi_i}&amp; \\\\\n&amp;\\varprojlim_{k}H^i(X, F_k)&amp;&amp; \\text{pour } i=n-1.}\n\\end{array}\n\\]\n</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On note simplement que \\(H^i(X, F)\\) est de type fini donc isomorphe\nà son complété. On obtient (<a class=\"eqref\" href=\"#eq:IX.1.30\">1.1</a>) en transcrivant dans\nla catégorie des \\(A\\)-modules le diagramme de Modules\n(<a class=\"eqref\" href=\"#eq:IX.1.7\">1.7</a>), et en remplaçant la verticale de gauche par\n\\(H^i(X, F)\\).</p>"
+    },
+    {
+     "id": "IX.1.4",
+     "type": "proposition",
+     "label": "1.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IX.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.4\"></span>\nSoit \\(A\\) un anneau noethérien. Soit \\(t\\in A\\) et supposons que \\(A\\) est séparé et complet pour la topologie \\((tA)\\)-adique. Posons:</p>\n<div class=\"equation\" id=\"eq:IX.1.31\">\n\\[\n\\tag{1.31}\nX'=\\operatorname{Spec} (A), \\quad Y'=V(t), \\quad I=(tA).\n\\]\n</div>\n<p>Soit \\(T\\) une partie fermée de \\(X'\\), posons</p>\n<div class=\"equation\" id=\"eq:IX.1.32\">\n\\[\n\\tag{1.32}\nX=X'-T, \\quad Y=Y'\\cap X=Y'-(Y'\\cap T).\n\\]\n</div>\n<p>Soit \\(F\\) un \\(\\mathscr{O}_X\\)-Module cohérent. Soit enfin</p>\n<div class=\"equation\" id=\"eq:IX.1.33\">\n\\[\n\\tag{1.33}\nT'= \\{ x\\in X' \\mid \\operatorname{codim}(\\{ \\overline{x}\\} \\cap T, \\{\\overline{x}\\})=1\\}.\n\\]\n</div>\n<p>Supposons que:</p>\n<ol class=\"enumerate-a\" type=\"a\">\n<li><p>\\(t\\) soit \\(F\\)-régulier,</p></li>\n<li><p>\\(\\operatorname{prof}_{T'}(F) \\geqslant n+1\\),</p></li>\n<li><p>\\(A\\) soit quotient d'un anneau noethérien régulier.</p></li>\n</ol>\n<p>Alors, dans le diagramme (<a class=\"eqref\" href=\"#eq:IX.1.30\">1.1</a>), les morphismes \\(\\rho'_i\\), \\(\\varphi'_i\\) et \\(\\psi_i\\) sont des isomorphismes pour \\(i&lt;n\\) et des monomorphismes pour \\(i=n\\). De plus \\(\\psi_n\\) est un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu de <a class=\"eqref\" href=\"#eq:IX.1.3\">1.3</a> et <a class=\"eqref\" href=\"#eq:IX.1.2\">1.2</a>, il suffit de prouver que \\(R^if_*(F)\\) est cohérent pour \\(i\\leqslant n\\), ce qui résulte du théorème de finitude <a class=\"ref\" href=\"#VIII.2.1\">2.1</a>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier:</p>"
+    },
+    {
+     "id": "IX.1.5",
+     "type": "exemple",
+     "label": "1.5",
+     "title": "Exemple",
+     "html": "<div class=\"thm thm-remark exemple\" id=\"IX.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Exemple</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.1.5\"></span> On appliquera <a class=\"eqref\" href=\"#eq:IX.1.4\">1.4</a> lorsque \\(A\\) est un anneau <em>local</em> et que \\(t\\) appartient au radical \\(\\mathfrak{r}(A)\\) de \\(A\\). On prendra alors \\(T=\\{ \\mathfrak{r}(A)\\}\\). <em>Dans ce cas</em>, pour \\(n=1\\) on trouve l'énoncé suivant:</p>\n<p><em>Si \\(A\\) est séparé et complet pour la topologie \\(t\\)-adique et quotient d'un anneau régulier (par exemple si \\(A\\) est complet), si de plus \\(t\\) est \\(F\\)-régulier et si \\(\\operatorname{prof} F_x\\geqslant 2\\) pour tout \\(x\\in \\operatorname{Spec} (A)\\) tel que \\(\\dim A/x=1\\), alors l'homomorphisme naturel </em></p>\n<div class=\"displaymath\" id=\"disp-IX-1-4\">\n\\[\nF(X, F)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\Gamma(X, F)\n\\]\n</div>\n<p>est un isomorphisme.</p>\n<p>En effet, conservant les notations de <a class=\"eqref\" href=\"#eq:IX.1.4\">1.4</a>, on a \\(T=\\{ \\mathfrak{r}(A)\\}\\) et la formule (<a class=\"eqref\" href=\"#eq:IX.1.33\">1.33</a>) dit que</p>\n<div class=\"displaymath\" id=\"disp-IX-1-5\">\n\\[\nT'=\\{x\\in\\operatorname{Spec}(A)\\mid\\dim A/x=1\\}.\n\\]\n</div></div>\n</div>"
+    }
+   ],
+   "footnotes": [],
+   "bibliography": []
+  },
+  {
+   "id": "IX-s3",
+   "title": "Théorème d'existence",
+   "html": "<h2 id=\"IX-s3\">Théorème d'existence</h2>\n<p>Énonçons d'abord EGA III 3.4.2 sous une forme un peu plus\ngénérale.</p>\n<p>Soit \\(f:\\mathfrak{X} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathfrak{X}'\\) un morphisme adique<a class=\"footnote-ref\" id=\"fn-IX-s3-1ref\" href=\"#fn-IX-s3-1\"><sup>1</sup></a> de préschémas formels, avec \\(\\mathfrak{X}'\\) noethérien. Soit \\(\\mathscr{I}'\\) un idéal de définition de \\(\\mathfrak{X}'\\); puisque \\(f\\) est adique, \\(f^*\\mathscr{I}'=\\mathscr{J}\\) est un idéal de définition de \\(\\mathfrak{X}\\).</p>\n<p>Pour tout \\(n\\in \\mathbf{N}\\), posons <span class=\"label-anchor\" id=\"IX.2\"></span></p>\n<div class=\"equation\" id=\"eq:IX.2.1\">\n\\[\n\\tag{2.1}\n\\mathfrak{X}_n=(\\mathfrak{X}, \\mathscr{O}_\\mathfrak{X}/{\\mathscr{J}}^{n+1}),\n\\]\n</div>\n<p>c'est un préschéma ordinaire qui a même espace topologique sous-jacent que \\(\\mathfrak{X}\\).</p>\n<p>Soit \\(\\mathfrak{F}\\) un \\(\\mathscr{O}_\\mathfrak{X}\\)-Module <em>cohérent</em>. Pour tout \\(k\\in\\mathbf{N}\\), les \\(\\mathscr{O}_{\\mathfrak{X}_k}\\)-Modules</p>\n<div class=\"equation\" id=\"eq:IX.2.2\">\n\\[\n\\tag{2.2}\nF_k=\\mathfrak{F}/{\\mathscr{J}}^{k+1}\\mathfrak{F}\n\\]\n</div>\n<p>sont <em>cohérents</em>. Pour tout \\(i\\), on a un homomorphisme</p>\n<div class=\"equation\" id=\"eq:IX.2.3\">\n\\[\n\\tag{2.3} \\psi_i: R^if_*(\\mathfrak{F}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\varprojlim_k R^if_*(F_k),\n\\]\n</div>\n<p>déduit par fonctorialité de l'homomorphisme naturel:</p>\n<div class=\"equation\" id=\"eq:IX.2.4\">\n\\[\n\\tag{2.4} \\mathfrak{F} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} F_k.\n\\]\n</div>\n<p>Posons</p>\n<div class=\"equation\" id=\"eq:IX.2.5\">\n\\[\n\\tag{2.5}\n\\mathbf{S}= \\operatorname{gr}_{{\\mathscr{I}'}}\\mathscr{O}_{\\mathfrak{X}'}=\\coprod_{k \\in \\mathbf{N}} {\\mathscr{I}'}^k/{\\mathscr{I}'}^{k+1},\n\\]\n</div>\n<div class=\"equation\" id=\"eq:IX.2.6\">\n\\[\n\\tag{2.6} \\operatorname{gr}_{\\mathscr{J}'}(\\mathfrak{F})=\\coprod_{k \\in \\mathbf{N}} \\mathscr{J}'^k\\mathfrak{F}/\\mathscr{J}'^{k+1}\\mathfrak{F},\n\\]\n</div>\n<div class=\"equation\" id=\"eq:IX.2.7\">\n\\[\n\\tag{2.7} \\mathbf{K}^i=R^if_*(\\operatorname{gr}_{{\\mathscr{J}}}(\\mathfrak{F}))=\\coprod_{k \\in \\mathbf{N}}R^if_* ({\\mathscr{J}}^k \\mathfrak{F}/{\\mathscr{J}}^{k+1}\\mathfrak{F}\\;).\n\\]\n</div>\n<p>Il est clair que \\(\\mathbf{K}^i\\) est muni d'une structure de \\(\\mathbf{S}\\)-Module gradué.</p>\n<div class=\"thm thm-plain theoreme\" id=\"IX.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.2.1\"></span>\nSupposons que \\(\\mathbf{K}^i\\) soit un \\(\\mathbf{S}\\)-Module gradué <em>de type fini</em> pour \\(i=n-1\\), \\(i=n\\), \\(i=n+1\\), alors:</p>\n<ol class=\"enumerate-i\" type=\"i\">\n<li><p>\\(R^nf_*(\\mathfrak{F})\\) est cohérent.</p></li>\n<li><p>L'homomorphisme \\(\\psi_n\\) (<a class=\"eqref\" href=\"#eq:IX.2.3\">2.3</a>) est un isomorphisme topologique. La filtration naturelle du deuxième membre de (<a class=\"eqref\" href=\"#eq:IX.2.3\">2.3</a>) est \\({\\mathscr{J}}\\)-bonne.</p></li>\n<li><p>Le système projectif des \\(R^nf_*(F_k)\\) vérifie la condition de Mittag-Leffler uniforme.</p></li>\n</ol></div>\n</div>\n<p>La démonstration est très facile à partir de \\(\\mathrm{EGA}\\, 0_{\\textup{III}} 13.7.7\\) (cf. EGA III \\(3.4.2\\)), à condition de rectifier comme suit le texte page 78<a class=\"footnote-ref\" id=\"fn-IX-s3-2ref\" href=\"#fn-IX-s3-2\"><sup>2</sup></a></p>\n<p><em>Supprimer</em></p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">ligne 6</span> <p>« et \\((R^{n+1}T(A_k))_{k\\in \\mathbf{Z}}\\) »</p></li>\n<li><span class=\"item-label\">ligne 13</span> <p>« et \\(p+q=n+1\\) »</p></li>\n<li><span class=\"item-label\">ligne 23</span> <p>« et pour \\(n+1\\) ».</p></li>\n</ol>\n<p><span class=\"label-anchor\" id=\"IX.2.2\"></span></p>\n<div class=\"thm thm-plain enonce\" id=\"IX.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème 2.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau adique noethérien et soit \\(I\\) un idéal de définition de \\(A\\). Soit \\(T\\) une partie fermée de \\(X'=\\operatorname{Spec}(A)\\). Supposons que \\(I\\) soit engendré par un \\(t \\in A\\). Reprenons les notations <a class=\"eqref\" href=\"#eq:IX.1.31\">1.31</a>, <a class=\"eqref\" href=\"#eq:IX.1.32\">1.32</a> et <a class=\"eqref\" href=\"#eq:IX.1.33\">1.33</a>. Soit \\(\\mathfrak{F}\\) un \\(\\mathscr{O}_{\\widehat{X}}\\)-Module cohérent. Posons</p>\n<div class=\"equation\" id=\"eq:IX.2.8\">\n\\[\n\\tag{2.1}\nF_0=\\mathfrak{F} / {\\mathscr{J}} \\mathfrak{F},\n\\]\n</div>\n<p>où \\({\\mathscr{J}}=t \\mathscr{O}_{\\widehat{X}}\\) est un idéal de définition de \\(\\widehat{X}\\). <em>Supposons que</em> \\(A\\) soit quotient d'un anneau noethérien régulier et que:</p>\n<ol class=\"enumerate\">\n<li><p>\\(t\\) soit \\(\\mathfrak{F}\\)-régulier,</p></li>\n<li><p>\\(\\operatorname{prof}_{T'}\\mathfrak{F}_0\\geqslant 2\\).</p></li>\n</ol>\n<p>Alors il existe un \\(\\mathscr{O}_X\\)-Module cohérent \\(F\\) tel que \\(\\widehat{\\mathfrak{F}}\\simeq \\mathfrak{F}\\).</p></div>\n</div>\n<p>Il suffit de prouver que \\(\\widehat{f}_*(\\mathfrak{F})\\) est un \\(\\mathscr{O}_{\\widehat{X}}\\)-Module cohérent, où \\(\\widehat{f}: \\widehat{X} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\widehat{X'}\\) est le morphisme de préschémas formels déduit de l'injection de \\(X\\) dans \\(X'\\) par complétion par rapport à \\(t\\). En effet, \\(A\\) est séparé et complet pour la topologie \\(t\\)-adique, il existera donc un \\(A\\)-module \\(F'\\) dont le complété sera isomorphe à \\(\\widehat{f}_*(\\mathfrak{F})\\). Puisque \\(X\\) est un ouvert de \\(X'\\), on pourra prendre \\(F=\\widetilde{F'}_{|X}\\).</p>\n<p>Il reste à montrer que <a class=\"ref\" href=\"#IX.2.1\">2.1</a> est applicable au morphisme de préschémas formels \\(\\widehat{f}\\) et à \\(\\mathfrak{F}\\). Or, d'après l'hypothèse (1), pour tout \\(k\\in \\mathbf{N}\\) on a un isomorphisme:</p>\n<div class=\"displaymath\" id=\"disp-IX-s3-1\">\n\\[\n{\\mathscr{J}}^k \\mathfrak{F} /{\\mathscr{J}}^{k+1}\\mathfrak{F} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathfrak{F} / {\\mathscr{J}} \\mathfrak{F},\n\\]\n</div>\n<p>d'où il résulte que l'hypothèse de <a class=\"ref\" href=\"#IX.2.1\">2.1</a> sera vérifiée si l'on sait que</p>\n<div class=\"displaymath\" id=\"disp-IX-s3-2\">\n\\[\nR^if_*(F_0)\\text{ est cohérent pour }i \\leqslant 1.\n\\]\n</div>\n<p>Or ceci résulte de (2) et du théorème de finitude <a class=\"ref\" href=\"#VIII.2.1\">2.1</a>. D'où la conclusion.</p>\n<p>Il reste à spécialiser cet énoncé en supposant que \\(A\\) est un anneau local.</p>\n<div class=\"thm thm-plain corollaire\" id=\"IX.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.2.3\"></span>\nSoit \\(A\\) un anneau local noethérien et soit \\(t \\in \\mathfrak{r}(A)\\), un élément du radical de \\(A\\). Supposons que \\(A\\) est séparé et complet pour la topologie \\(t\\)-adique, et, de plus, quotient d'un anneau régulier (par exemple, supposons que \\(A\\) soit un anneau local noethérien complet). Posons</p>\n<div class=\"equation\" id=\"eq:IX.2.9\">\n\\[\n\\tag{2.9} X'=\\operatorname{Spec} A, \\quad T = \\{ \\mathfrak{r}(A) \\},\n\\]\n</div>\n<p>et reprenons les notations (<a class=\"eqref\" href=\"#eq:IX.1.31\">1.31</a>), (<a class=\"eqref\" href=\"#eq:IX.1.32\">1.32</a>) et (<a class=\"eqref\" href=\"#eq:IX.1.33\">1.33</a>). Soit \\(\\mathfrak{F}\\) un \\(\\mathscr{O}_{\\widehat{X}}\\)-Module. Supposons que:</p>\n<ol class=\"enumerate\">\n<li><p>\\(t\\) soit \\(\\mathfrak{F}\\)-régulier,</p></li>\n<li><p>\\(\\operatorname{prof}_{T'} \\mathfrak{F}_0 \\geqslant 2\\), avec \\(\\mathfrak{F}_0=\\mathfrak{F}/{\\mathscr{J}}\\mathfrak{F}\\) et \\({\\mathscr{J}}=t\\mathscr{O}_{\\widehat{X}}\\).</p>\n<p>Alors il existe un \\(\\mathscr{O}_X\\)-Module cohérent \\(F\\) tel que \\(\\widehat{F}\\simeq \\mathfrak{F}\\).</p></li>\n</ol></div>\n</div>\n<p>Remarquons qu'ici \\(T'\\) est l'ensemble des idéaux premiers \\(\\mathfrak{p}\\) de \\(A\\) tels que \\(\\dim A/\\mathfrak{p} =1\\).</p>",
+   "blocks": [
+    {
+     "id": "IX-s3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX-s3\">Théorème d'existence</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Énonçons d'abord EGA III 3.4.2 sous une forme un peu plus\ngénérale.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f:\\mathfrak{X} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathfrak{X}'\\) un morphisme adique<a class=\"footnote-ref\" id=\"fn-IX-s3-1ref\" href=\"#fn-IX-s3-1\"><sup>1</sup></a> de préschémas formels, avec \\(\\mathfrak{X}'\\) noethérien. Soit \\(\\mathscr{I}'\\) un idéal de définition de \\(\\mathfrak{X}'\\); puisque \\(f\\) est adique, \\(f^*\\mathscr{I}'=\\mathscr{J}\\) est un idéal de définition de \\(\\mathfrak{X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(n\\in \\mathbf{N}\\), posons <span class=\"label-anchor\" id=\"IX.2\"></span></p>"
+    },
+    {
+     "id": "eq:IX.2.1",
+     "type": "equation",
+     "label": "2.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.1\">\n\\[\n\\tag{2.1}\n\\mathfrak{X}_n=(\\mathfrak{X}, \\mathscr{O}_\\mathfrak{X}/{\\mathscr{J}}^{n+1}),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est un préschéma ordinaire qui a même espace topologique sous-jacent que \\(\\mathfrak{X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathfrak{F}\\) un \\(\\mathscr{O}_\\mathfrak{X}\\)-Module <em>cohérent</em>. Pour tout \\(k\\in\\mathbf{N}\\), les \\(\\mathscr{O}_{\\mathfrak{X}_k}\\)-Modules</p>"
+    },
+    {
+     "id": "eq:IX.2.2",
+     "type": "equation",
+     "label": "2.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.2\">\n\\[\n\\tag{2.2}\nF_k=\\mathfrak{F}/{\\mathscr{J}}^{k+1}\\mathfrak{F}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont <em>cohérents</em>. Pour tout \\(i\\), on a un homomorphisme</p>"
+    },
+    {
+     "id": "eq:IX.2.3",
+     "type": "equation",
+     "label": "2.3",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.3\">\n\\[\n\\tag{2.3} \\psi_i: R^if_*(\\mathfrak{F}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\varprojlim_k R^if_*(F_k),\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>déduit par fonctorialité de l'homomorphisme naturel:</p>"
+    },
+    {
+     "id": "eq:IX.2.4",
+     "type": "equation",
+     "label": "2.4",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.4\">\n\\[\n\\tag{2.4} \\mathfrak{F} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} F_k.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons</p>"
+    },
+    {
+     "id": "eq:IX.2.5",
+     "type": "equation",
+     "label": "2.5",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.5\">\n\\[\n\\tag{2.5}\n\\mathbf{S}= \\operatorname{gr}_{{\\mathscr{I}'}}\\mathscr{O}_{\\mathfrak{X}'}=\\coprod_{k \\in \\mathbf{N}} {\\mathscr{I}'}^k/{\\mathscr{I}'}^{k+1},\n\\]\n</div>"
+    },
+    {
+     "id": "eq:IX.2.6",
+     "type": "equation",
+     "label": "2.6",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.6\">\n\\[\n\\tag{2.6} \\operatorname{gr}_{\\mathscr{J}'}(\\mathfrak{F})=\\coprod_{k \\in \\mathbf{N}} \\mathscr{J}'^k\\mathfrak{F}/\\mathscr{J}'^{k+1}\\mathfrak{F},\n\\]\n</div>"
+    },
+    {
+     "id": "eq:IX.2.7",
+     "type": "equation",
+     "label": "2.7",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"eq:IX.2.7\">\n\\[\n\\tag{2.7} \\mathbf{K}^i=R^if_*(\\operatorname{gr}_{{\\mathscr{J}}}(\\mathfrak{F}))=\\coprod_{k \\in \\mathbf{N}}R^if_* ({\\mathscr{J}}^k \\mathfrak{F}/{\\mathscr{J}}^{k+1}\\mathfrak{F}\\;).\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que \\(\\mathbf{K}^i\\) est muni d'une structure de \\(\\mathbf{S}\\)-Module gradué.</p>"
+    },
+    {
+     "id": "IX.2.1",
+     "type": "theoreme",
+     "label": "2.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"IX.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.2.1\"></span>\nSupposons que \\(\\mathbf{K}^i\\) soit un \\(\\mathbf{S}\\)-Module gradué <em>de type fini</em> pour \\(i=n-1\\), \\(i=n\\), \\(i=n+1\\), alors:</p>\n<ol class=\"enumerate-i\" type=\"i\">\n<li><p>\\(R^nf_*(\\mathfrak{F})\\) est cohérent.</p></li>\n<li><p>L'homomorphisme \\(\\psi_n\\) (<a class=\"eqref\" href=\"#eq:IX.2.3\">2.3</a>) est un isomorphisme topologique. La filtration naturelle du deuxième membre de (<a class=\"eqref\" href=\"#eq:IX.2.3\">2.3</a>) est \\({\\mathscr{J}}\\)-bonne.</p></li>\n<li><p>Le système projectif des \\(R^nf_*(F_k)\\) vérifie la condition de Mittag-Leffler uniforme.</p></li>\n</ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est très facile à partir de \\(\\mathrm{EGA}\\, 0_{\\textup{III}} 13.7.7\\) (cf. EGA III \\(3.4.2\\)), à condition de rectifier comme suit le texte page 78<a class=\"footnote-ref\" id=\"fn-IX-s3-2ref\" href=\"#fn-IX-s3-2\"><sup>2</sup></a></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Supprimer</em></p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">ligne 6</span> <p>« et \\((R^{n+1}T(A_k))_{k\\in \\mathbf{Z}}\\) »</p></li>\n<li><span class=\"item-label\">ligne 13</span> <p>« et \\(p+q=n+1\\) »</p></li>\n<li><span class=\"item-label\">ligne 23</span> <p>« et pour \\(n+1\\) ».</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><span class=\"label-anchor\" id=\"IX.2.2\"></span></p>"
+    },
+    {
+     "id": "IX.2.2",
+     "type": "enonce",
+     "label": "2.2",
+     "title": "Théorème 2.2",
+     "html": "<div class=\"thm thm-plain enonce\" id=\"IX.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème 2.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau adique noethérien et soit \\(I\\) un idéal de définition de \\(A\\). Soit \\(T\\) une partie fermée de \\(X'=\\operatorname{Spec}(A)\\). Supposons que \\(I\\) soit engendré par un \\(t \\in A\\). Reprenons les notations <a class=\"eqref\" href=\"#eq:IX.1.31\">1.31</a>, <a class=\"eqref\" href=\"#eq:IX.1.32\">1.32</a> et <a class=\"eqref\" href=\"#eq:IX.1.33\">1.33</a>. Soit \\(\\mathfrak{F}\\) un \\(\\mathscr{O}_{\\widehat{X}}\\)-Module cohérent. Posons</p>\n<div class=\"equation\" id=\"eq:IX.2.8\">\n\\[\n\\tag{2.1}\nF_0=\\mathfrak{F} / {\\mathscr{J}} \\mathfrak{F},\n\\]\n</div>\n<p>où \\({\\mathscr{J}}=t \\mathscr{O}_{\\widehat{X}}\\) est un idéal de définition de \\(\\widehat{X}\\). <em>Supposons que</em> \\(A\\) soit quotient d'un anneau noethérien régulier et que:</p>\n<ol class=\"enumerate\">\n<li><p>\\(t\\) soit \\(\\mathfrak{F}\\)-régulier,</p></li>\n<li><p>\\(\\operatorname{prof}_{T'}\\mathfrak{F}_0\\geqslant 2\\).</p></li>\n</ol>\n<p>Alors il existe un \\(\\mathscr{O}_X\\)-Module cohérent \\(F\\) tel que \\(\\widehat{\\mathfrak{F}}\\simeq \\mathfrak{F}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit de prouver que \\(\\widehat{f}_*(\\mathfrak{F})\\) est un \\(\\mathscr{O}_{\\widehat{X}}\\)-Module cohérent, où \\(\\widehat{f}: \\widehat{X} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\widehat{X'}\\) est le morphisme de préschémas formels déduit de l'injection de \\(X\\) dans \\(X'\\) par complétion par rapport à \\(t\\). En effet, \\(A\\) est séparé et complet pour la topologie \\(t\\)-adique, il existera donc un \\(A\\)-module \\(F'\\) dont le complété sera isomorphe à \\(\\widehat{f}_*(\\mathfrak{F})\\). Puisque \\(X\\) est un ouvert de \\(X'\\), on pourra prendre \\(F=\\widetilde{F'}_{|X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à montrer que <a class=\"ref\" href=\"#IX.2.1\">2.1</a> est applicable au morphisme de préschémas formels \\(\\widehat{f}\\) et à \\(\\mathfrak{F}\\). Or, d'après l'hypothèse (1), pour tout \\(k\\in \\mathbf{N}\\) on a un isomorphisme:</p>"
+    },
+    {
+     "id": "disp-IX-s3-1",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IX-s3-1\">\n\\[\n{\\mathscr{J}}^k \\mathfrak{F} /{\\mathscr{J}}^{k+1}\\mathfrak{F} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathfrak{F} / {\\mathscr{J}} \\mathfrak{F},\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où il résulte que l'hypothèse de <a class=\"ref\" href=\"#IX.2.1\">2.1</a> sera vérifiée si l'on sait que</p>"
+    },
+    {
+     "id": "disp-IX-s3-2",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IX-s3-2\">\n\\[\nR^if_*(F_0)\\text{ est cohérent pour }i \\leqslant 1.\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or ceci résulte de (2) et du théorème de finitude <a class=\"ref\" href=\"#VIII.2.1\">2.1</a>. D'où la conclusion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à spécialiser cet énoncé en supposant que \\(A\\) est un anneau local.</p>"
+    },
+    {
+     "id": "IX.2.3",
+     "type": "corollaire",
+     "label": "2.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"IX.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IX.2.3\"></span>\nSoit \\(A\\) un anneau local noethérien et soit \\(t \\in \\mathfrak{r}(A)\\), un élément du radical de \\(A\\). Supposons que \\(A\\) est séparé et complet pour la topologie \\(t\\)-adique, et, de plus, quotient d'un anneau régulier (par exemple, supposons que \\(A\\) soit un anneau local noethérien complet). Posons</p>\n<div class=\"equation\" id=\"eq:IX.2.9\">\n\\[\n\\tag{2.9} X'=\\operatorname{Spec} A, \\quad T = \\{ \\mathfrak{r}(A) \\},\n\\]\n</div>\n<p>et reprenons les notations (<a class=\"eqref\" href=\"#eq:IX.1.31\">1.31</a>), (<a class=\"eqref\" href=\"#eq:IX.1.32\">1.32</a>) et (<a class=\"eqref\" href=\"#eq:IX.1.33\">1.33</a>). Soit \\(\\mathfrak{F}\\) un \\(\\mathscr{O}_{\\widehat{X}}\\)-Module. Supposons que:</p>\n<ol class=\"enumerate\">\n<li><p>\\(t\\) soit \\(\\mathfrak{F}\\)-régulier,</p></li>\n<li><p>\\(\\operatorname{prof}_{T'} \\mathfrak{F}_0 \\geqslant 2\\), avec \\(\\mathfrak{F}_0=\\mathfrak{F}/{\\mathscr{J}}\\mathfrak{F}\\) et \\({\\mathscr{J}}=t\\mathscr{O}_{\\widehat{X}}\\).</p>\n<p>Alors il existe un \\(\\mathscr{O}_X\\)-Module cohérent \\(F\\) tel que \\(\\widehat{F}\\simeq \\mathfrak{F}\\).</p></li>\n</ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons qu'ici \\(T'\\) est l'ensemble des idéaux premiers \\(\\mathfrak{p}\\) de \\(A\\) tels que \\(\\dim A/\\mathfrak{p} =1\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "fn-IX-s3-1",
+     "number": "1",
+     "html": "Cette hypothèse n'est pas essentielle, cf. <a class=\"ref\" href=\"#XII\">XII</a>, p. ."
+    },
+    {
+     "id": "fn-IX-s3-2",
+     "number": "2",
+     "html": "Comme indiqué dans (EGA, \\(\\rm{Err}_{\\rm{III}}24\\))."
+    }
+   ],
+   "bibliography": []
+  }
+ ],
+ "alias": "EXPOSÉ"
+}

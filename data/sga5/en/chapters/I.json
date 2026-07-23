@@ -1,0 +1,2166 @@
+{
+ "chapter_id": "I",
+ "title": "EXPOSÉ I DUALIZING COMPLEXES",
+ "number": "I",
+ "pages": [
+  {
+   "id": "I",
+   "title": "EXPOSÉ I DUALIZING COMPLEXES",
+   "blocks": [
+    {
+     "id": "I",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"I\">EXPOSÉ I<br>DUALIZING COMPLEXES<span class=\"author\">by A. Grothendieck<br>(written up by L. Illusie)</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-introduction",
+   "title": "Introduction",
+   "blocks": [
+    {
+     "id": "I.introduction",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.introduction\">Introduction</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This exposé is devoted to the biduality theorem in étale cohomology.\nThe theory developed here and in SGA A XVIII (SGA A = SGA 4), for the\nétale topology and constructible torsion sheaves on\npreschemes, is formally very analogous to the one developed in HARTSHORNE\n[H] for the Zariski topology and coherent sheaves: the latter has,\nto a very large extent, served as its model. But, whereas in the\ncase of \"continuous\" coefficients the existence of dualizing complexes\npresents no difficulties, in the case of \"discrete\" coefficients, on the\nother hand, it is much more delicate to prove, and it seems that it\nrequires in an essential way the resolution of singularities. See however\nthe biduality theorem of Deligne (SGA 4<sup>1/2</sup> Th. finitude 4.3.).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Paragraph 1 contains the definition of dualizing complexes and the\nformal properties which follow from it, notably the interpretation of\ndualizing functors as \"exchangers of functors\".</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In paragraph 2, we show that, on a connected locally noetherian\nprescheme, a dualizing complex is determined uniquely, up to translation\nof degrees and tensoring by an invertible sheaf.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In paragraph 3, we come to the central theorem of the exposé (3.4.1.),\nwhich ensures that, on a \"good\" regular prescheme \\(X\\), for example an excellent\nnoetherian regular prescheme of characteristic zero<sup class=\"footnote-ref\"><a id=\"I-fn1ref\" href=\"#I-fn1\">(1)</a></sup>,\nthe complex \\((\\mathbb{Z}/n\\mathbb{Z})_X\\) is dualizing.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Paragraph 4 gives the applications of the theory to the local duality\ntheorem. The latter expresses that we have, on a \"good\" prescheme \\(X\\) equipped with a\nclosed point \\(x\\) with separably closed residue field, and for a constructible\nsheaf \\(F\\), a perfect pairing between\n\\(\\underline{H}^{\\,i}(F')_x\\) and \\(\\underline{H}^{-i}_x(F)\\), where \\(F'\\) is the dual of\n\\(F\\), i.e. \\(F'=R\\underline{\\operatorname{Hom}}(F,K_X)\\), where \\(K_X\\) is a dualizing\ncomplex.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, in paragraph 5, we prove directly that on a regular prescheme\nof dimension 1 the complex \\((\\mathbb{Z}/n\\mathbb{Z})_X\\) is dualizing\n(\\(n\\) prime to the residue characteristics).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "I-fn1",
+     "number": "(1)",
+     "html": "This last restriction will\nbecome unnecessary once one has resolution of singularities à la\nHironaka for the latter, and the \"purity theorem\"."
+    }
+   ]
+  },
+  {
+   "id": "I-1",
+   "title": "1. Definition and formal properties of dualizing complexes",
+   "blocks": [
+    {
+     "id": "I.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.1\">1. Definition and formal properties of dualizing complexes</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We fix a coefficient ring \\(A=\\mathbb{Z}/n\\mathbb{Z}\\). If \\(X\\) is\na prescheme, we denote by \\(A_X\\) the constant sheaf on \\(X_{\\mathrm{\\acute et}}\\) with\nvalue \\(A\\), and by \\(D(X)\\) the derived category of that of \\(A_X\\)-Modules. On\nthe other hand we denote by \\(D_c(X)\\) the full triangulated subcategory of \\(D(X)\\)\nformed of the complexes \\(F\\) such that \\(\\underline{H}^{\\,i}(F)\\) is a\nconstructible \\(A_X\\)-Module for every \\(i\\). We set\n\\[D_c^*(X)=D^*(X)\\cap D_c(X),\\quad\\text{where }*=\\varnothing,+,-,\\text{ or }b.\\]</p>"
+    },
+    {
+     "id": "I.1.1",
+     "type": "definition",
+     "label": "1.1.",
+     "title": "Definition",
+     "html": "<div class=\"thm definition\" id=\"I.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.1.</span></div>\n  <div class=\"thm-body\"><p>We say that a \\(A_X\\)-Module \\(I\\) is quasi-injective if we have\n  \\[\\underline{\\operatorname{Ext}}^{\\,i}(F,I)=0\\]\n  for every constructible \\(A_X\\)-Module \\(F\\) and every \\(i&gt;0\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.1.2\"><u>Remarks 1.2.</u> a) Contrary to what happens in the case\nof \"continuous\" coefficients (cf. [H] II.7.17), a quasi-injective sheaf\nis not in general injective. Take for example \\(X=\\operatorname{Spec}(\\mathbb{R})\\),\n\\(A=\\mathbb{Z}/2\\mathbb{Z}\\): the sheaf \\(A_X\\) is quasi-injective, but is not\ninjective, nor even of finite injective dimension, since\n\\[H^*(X;A_X)=H^*(\\mathbb{Z}/2\\mathbb{Z};\\mathbb{Z}/2\\mathbb{Z})\\]\nis a polynomial algebra on one generator of dimension 1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Let \\(I\\) be a quasi-injective \\(A_X\\)-Module. It is false in general that the\nrelation \\(\\underline{\\operatorname{Ext}}^{\\,i}(F,I)=0\\) for \\(i&gt;0\\), valid for\n\\(F\\) constructible, holds for every \\(F\\). Indeed, take\n\\(A=\\mathbb{F}_\\ell\\). Let \\(k\\) be a field, \\(\\bar{k}\\) a separable closure of\n\\(k\\), \\(f:\\bar{X}=\\operatorname{Spec}(\\bar{k})\\longrightarrow\nX=\\operatorname{Spec}(k)\\) the canonical morphism, and suppose that, for every\nconnected étale covering \\(X'\\longrightarrow X\\), there exists a connected étale\ncovering \\(X''\\longrightarrow X'\\) such that \\([X'':X']\\) is divisible by \\(\\ell\\)\n(take for example \\(k=\\mathbb{Q}\\)). Consider the exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[0\\longrightarrow A_X\\xrightarrow{\\ \\xi\\ }f_*f^*A_X\\longrightarrow F\\longrightarrow0 \\tag{*}\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>defined by the adjunction arrow \\(\\xi\\). In view of the hypothesis, the section of\n\\(\\underline{\\operatorname{Ext}}^{\\,1}(F,A_X)\\) defined by (*) does not vanish above\nany \\(U\\) étale over \\(X\\), hence\n\\(\\underline{\\operatorname{Ext}}^{\\,1}(F,A_X)_{\\bar{x}}\\ne0\\). Now one verifies\ntrivially that \\(A_X\\) is quasi-injective.</p>"
+    },
+    {
+     "id": "I.1.3",
+     "type": "proposition",
+     "label": "1.3.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3.</span> (Cf. [H] 1.7.6)</div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme and \\(N\\in\\mathbb{Z}\\). The following\n  conditions on \\(K\\in\\operatorname{ob}D^+(X)\\) are equivalent:</p>\n  <p>(i) \\(K\\) is isomorphic, in \\(D(X)\\), to a complex \\(I\\) with bounded degrees\n  such that \\(I^i\\) is quasi-injective for every \\(i\\) and zero for \\(i&gt;N\\);</p>\n  <p>(ii) for every \\(F\\in\\operatorname{ob}D_c^b(X)\\) such that\n  \\(\\underline{H}^{\\,i}(F)=0\\) for \\(i&lt;0\\), we have\n  \\(\\underline{\\operatorname{Ext}}^{\\,i}(F,K)=0\\) for \\(i&gt;N\\);</p>\n  <p>(iii) for every constructible \\(A_X\\)-Module \\(F\\), we have\n  \\(\\underline{\\operatorname{Ext}}^{\\,i}(F,K)=0\\) for \\(i&gt;N\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: (i) \\(\\Longrightarrow\\) (ii) Let\n\\(F\\in\\operatorname{ob}D_c^b(X)\\) be such that \\(\\underline{H}^{\\,i}(F)=0\\) for\n\\(i&lt;0\\), and let \\(I\\in\\operatorname{ob}D^+(X)\\) be with bounded degrees and such that \\(I^i\\)\nis quasi-injective for every \\(i\\) and zero for \\(i&gt;N\\); let us show that\n\\(\\underline{\\operatorname{Ext}}^{\\,i}(F,I)=0\\) for \\(i&gt;N\\). Arguing by\ninduction on the number of indices \\(i\\) such that \\(I^i\\ne0\\), we reduce,\nby dévissage, to the case where \\(N=0\\) and \\(I\\) is concentrated in degree 0. We then have\na biregular spectral sequence\n\\[E_2^{pq}=\\underline{\\operatorname{Ext}}^{\\,p}(\\underline{H}^{-q}(F),I)\n\\;\\Longrightarrow\\;\\underline{\\operatorname{Ext}}^{\\,p+q}(F,I).\\]\nSince \\(I\\) is quasi-injective, \\(E_2^{pq}=0\\) for \\(p&gt;0\\) and every \\(q\\), hence\nwe have\n\\[E_2^{0i}=\\underline{\\operatorname{Hom}}(\\underline{H}^{-i}(F),I)\n\\;\\xrightarrow{\\sim}\\;\\underline{\\operatorname{Ext}}^{\\,i}(F,I),\\]\nwhence the conclusion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) \\(\\Longrightarrow\\) (iii) is trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) \\(\\Longrightarrow\\) (i) We may assume \\(K\\) with degrees bounded\nbelow and with injective components. The hypothesis, applied to\n\\(F=A_X\\), implies that \\(\\underline{H}^{\\,i}(K)=0\\) for \\(i&gt;N\\). We may therefore\nreplace \\(K\\) by an isomorphic complex \\(K'\\), with bounded degrees and such that\n\\(K'^i\\) is injective for \\(i&lt;N\\) and zero for \\(i&gt;N\\). One then observes that\n\\(K'^N\\) is quasi-injective, which completes the proof.</p>"
+    },
+    {
+     "id": "I.1.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.1.3.1\"><u>Remark 1.3.1.</u> The writer does not know whether (1.3) is still true\nwhen, in condition (ii), the hypothesis\n\"\\(F\\in\\operatorname{ob}D_c^b(X)\\)\" is replaced by\n\"\\(F\\in\\operatorname{ob}D_c^+(X)\\)\".</p>"
+    },
+    {
+     "id": "I.1.4",
+     "type": "definition",
+     "label": "1.4.",
+     "title": "Definition",
+     "html": "<div class=\"thm definition\" id=\"I.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.4.</span></div>\n  <div class=\"thm-body\"><p>We shall call <u>quasi-injective dimension of \\(K\\)</u>,\n  and denote by \\(\\dim.\\mathrm{q.inj}(K)\\), the lower bound (in\n  \\(\\overline{\\mathbb{R}}\\)) of the integers \\(N\\) satisfying the equivalent conditions\n  of (1.3).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(K\\) is of finite quasi-injective dimension, the functor\n\\[R\\underline{\\operatorname{Hom}}(\\ ,K):D(X)\\longrightarrow D(X)\\]\ninduces a functor \\(D_c^b(X)\\longrightarrow D_c^b(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall see below that if \\(X\\) is smooth of dimension \\(d\\) over a field\n\\(k\\) and \\(n\\) is prime to the characteristic of \\(k\\),\n\\(\\dim.\\mathrm{q.inj}(A_X)=2d\\). The example of (1.2 a)) shows that a complex\nof finite quasi-injective dimension is not necessarily of finite injective\ndimension. We have however:</p>"
+    },
+    {
+     "id": "I.1.5",
+     "type": "proposition",
+     "label": "1.5.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.5.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a locally noetherian prescheme and\n  \\(K\\in\\operatorname{ob}D^+(X)\\). We suppose that there exists an integer \\(N\\) such that\n  \\(\\operatorname{cd}_{\\ell}(X)\\leq N\\), where \\(\\ell\\) is the set of prime divisors\n  of \\(n\\) (notation of SGA A X 1). Then, for \\(N'\\in\\mathbb{Z}\\), we have\n  \\[\\dim.\\mathrm{q.inj}(K)\\leq N'\\quad\\Longrightarrow\\quad\n  \\dim.\\mathrm{inj}(K)\\leq N+N'.\\]</p></div>\n</div>"
+    },
+    {
+     "id": "I.1.5.1",
+     "type": "lemma",
+     "label": "1.5.1.",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.1.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.5.1.</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be an abelian category satisfying\n  (AB5) and possessing a family of generators \\((U_i)_{i\\in I}\\). Let\n  \\(K\\in\\operatorname{ob}D^+(C)\\) and \\(N\\in\\mathbb{Z}\\). The following conditions are equivalent:</p>\n  <p>(i) \\(\\dim.\\mathrm{inj}(K)\\leq N\\);</p>\n  <p>(ii) for every \\(i\\in I\\) and every quotient \\(F\\) of \\(U_i\\), we have\n  \\[\\operatorname{Ext}^n(F,K)=0\\quad\\text{for }n&gt;N.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: It suffices to prove (ii) \\(\\Longrightarrow\\) (i). By a\nwell-known argument (cf. for example [H] 1.7.6), we are reduced to showing that\nif \\(K'\\in\\operatorname{ob}(C)\\) is such that \\(\\operatorname{Ext}^1(F,K')=0\\) whenever\n\\(F\\) is a quotient of some \\(U_i\\), then \\(K'\\) is injective. In other\nwords, it is a matter of proving that, if every morphism from a subobject \\(V\\)\nof some \\(U_i\\) into \\(K'\\) extends to \\(U_i\\), then \\(K'\\) is injective. But\nthis follows at once from the proof of Lemma 1 p. 136 of (Tohoku).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof of (1.5)</u>: Suppose \\(\\dim.\\mathrm{q.inj}(K)\\leq N'\\) and\nlet us prove \\(\\dim.\\mathrm{inj}(K)\\leq N+N'\\). Since the category of\n\\(A_X\\)-Modules admits as generators the \\(A_{U,X}\\) where \\(U\\) is étale of\nfinite type over \\(X\\), it suffices, by virtue of (1.5.1), to prove that\n\\(\\operatorname{Ext}^i(X;F,K)=0\\) for \\(i&gt;N+N'\\) when \\(F\\) is a quotient\nof such an \\(A_{U,X}\\), hence constructible (SGA A IX 2.9). Consider the spectral\nsequence\n\\[E_2^{pq}=H^p(X;\\underline{\\operatorname{Ext}}^{\\,q}(F,K))\n\\;\\Longrightarrow\\;\\operatorname{Ext}^{p+q}(X;F,K).\\]\nThe hypothesis \\(\\operatorname{cd}_{\\ell}(X)\\leq N\\) (resp.\n\\(\\dim.\\mathrm{q.inj}(K)\\leq N'\\)) implies \\(E_2^{pq}=0\\) for \\(p&gt;N\\)\n(resp. \\(q&gt;N'\\)). Hence \\(E_2^{pq}=0\\) for \\(p+q&gt;N+N'\\), whence the\nconclusion.</p>"
+    },
+    {
+     "id": "I.1.5.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.1.5.2\"><u>Remark 1.5.2.</u> The hypothesis of (1.5) is satisfied\n(with \\(N=2d\\)) if \\(X\\) is a prescheme of finite type and of dimension \\(d\\)\nover a separably closed field \\(k\\), \\(n\\) being prime to\n\\(\\operatorname{car}(k)\\) (SGA A X 4).</p>"
+    },
+    {
+     "id": "I.1.6",
+     "type": "proposition",
+     "label": "1.6.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.6.</span></div>\n  <div class=\"thm-body\"><p>Let \\(f:X\\longrightarrow Y\\) be a separated quasi-finite\n  morphism of noetherian preschemes, and \\(K\\in\\operatorname{ob}D^+(Y)\\). Then,\n  for \\(N\\in\\mathbb{Z}\\), we have\n  \\[\\dim.\\mathrm{q.inj}(K)\\leq N\\quad\\Longrightarrow\\quad\n  \\dim.\\mathrm{q.inj}(R^!f(K))\\leq N.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: By the \"Main theorem\" (EGA IV 8.12.6), there exists a\nfactorization of \\(f\\) as \\(f=uf'\\), where \\(f'\\) is an open immersion and\n\\(u\\) a finite morphism. We have \\(R^!f=R^!f'R^!u\\), which reduces us to examining\nseparately the case of an open immersion and of a finite morphism. If \\(f\\)\nis an open immersion, the assertion is trivial (since every constructible\nsheaf on \\(X\\) is then induced by a constructible sheaf on\n\\(Y\\)). Suppose therefore that \\(f\\) is a finite morphism, and let \\(F\\) be a\nconstructible \\(A_X\\)-Module. We then have the duality isomorphisms\n(SGA A XVIII 3.1.9.6)\n\\[f_*\\underline{\\operatorname{Ext}}^{\\,i}(F,R^!f(K))\n\\xrightarrow{\\sim}\\underline{\\operatorname{Ext}}^{\\,i}(f_*F,K).\\]\nSince \\(f_*(F)\\) is constructible (SGA A IX 2.14), it follows that, if\n\\(\\dim.\\mathrm{q.inj}(K)\\leq N\\), we have\n\\(f_*\\underline{\\operatorname{Ext}}^{\\,i}(F,R^!f(K))=0\\) for \\(i&gt;N\\), hence\n\\(\\underline{\\operatorname{Ext}}^{\\,i}(F,R^!f(K))=0\\) for \\(i&gt;N\\)\n(SGA A VIII 5.5), qed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let \\(X\\) be a prescheme, and \\(K\\in\\operatorname{ob}D^+(X)\\).\nDenote by \\(D_K\\) the functor \\(R\\underline{\\operatorname{Hom}}(\\ ,K)\\). We\nshall define, for \\(F\\in\\operatorname{ob}D(X)\\), a functorial homomorphism\n\\(F\\longrightarrow D_KD_KF\\) (cf. [H] V.1.2). The construction which follows\nwould be valid more generally over a ringed topos. We may first assume\n\\(K\\) to consist of injectives, which allows us to omit the \\(R\\). The identity morphism\n\\(\\underline{\\operatorname{Hom}}(F,K)\\longrightarrow\n\\underline{\\operatorname{Hom}}(F,K)\\) defines, by the formula dear to Cartan,\na homomorphism\n\\[F\\otimes\\underline{\\operatorname{Hom}}(F,K)\\longrightarrow K,\\]\nwhence, by a second application of the same, a homomorphism\n\\[F\\longrightarrow\n\\underline{\\operatorname{Hom}}(\\underline{\\operatorname{Hom}}(F,K),K),\\]\nwhich is the announced homomorphism, and which we christen the canonical homomorphism.\nWe say that the pair \\((F,K)\\) is <u>bidualizing</u>, or <u>satisfies\nbiduality</u>, or again that \\(F\\) is <u>reflexive relative to \\(K\\)</u>, if\nthe canonical homomorphism \\(F\\longrightarrow D_KD_KF\\) is an\nisomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>From now on, all preschemes considered will, unless\nexpressly stated otherwise, be assumed locally noetherian.</u></p>"
+    },
+    {
+     "id": "I.1.7",
+     "type": "definition",
+     "label": "1.7.",
+     "title": "Definition",
+     "html": "<div class=\"thm definition\" id=\"I.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.7.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme. We say that a complex\n  \\(K\\in\\operatorname{ob}D^+(X)\\) is dualizing if the following conditions are\n  satisfied:</p>\n  <p>(i) \\(K\\) is of finite quasi-injective dimension;</p>\n  <p>(ii) for every \\(F\\in\\operatorname{ob}D_c^-(X)\\), we have\n  \\(D_K(F)\\in\\operatorname{ob}D_c^+(X)\\);</p>\n  <p>(iii) every \\(F\\in\\operatorname{ob}D_c^b(X)\\) is reflexive relative to\n  \\(K\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.1.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.1.8\"><u>Remarks 1.8.</u> a) By a standard dévissage (truncate \\(F\\)\nand use the fact that \\(D_c(X)\\) is triangulated), one sees that condition\n(ii) is equivalent to</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii bis): for every constructible \\(A_X\\)-Module \\(F\\) and every\n\\(i\\in\\mathbb{Z}\\), \\(\\underline{\\operatorname{Ext}}^{\\,i}(F,K)\\) is\nconstructible.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Condition (ii bis) implies \\(K\\in\\operatorname{ob}D_c^+(X)\\).\nContrary to the example of coherent sheaves (EGA 0<sub>III</sub>\n12.3.3), the converse is perhaps not automatically satisfied. It is,\nhowever (see n° 3), in the \"good\" cases, for example when one\nhas on \\(X\\) resolution of singularities and purity (in\nparticular if \\(X\\) is an excellent prescheme of characteristic zero).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) By dévissage on \\(F\\), one sees that condition (iii) is equivalent to\n(iii bis): every constructible \\(A_X\\)-Module \\(F\\) is reflexive relative\nto \\(K\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d) If \\(K\\in\\operatorname{ob}D^+(X)\\) satisfies (i) and (ii) (resp. is\ndualizing), the functor \\(D_K\\) induces a functor (resp. an equivalence of\ncategories)\n\\[(D_c^b(X))^\\circ\\longrightarrow D_c^b(X).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>e) If \\(K\\in\\operatorname{ob}D^+(X)\\) is of finite <u>injective</u>\ndimension (cf. 1.5.2) and satisfies (ii), then, for every\n\\(F\\in\\operatorname{ob}D_c(X)\\), we have \\(D_K(F)\\in D_c(X)\\), and \\(D_K\\) induces\na functor\n\\[(D_c^+(X))^\\circ\\longrightarrow D_c^-(X).\\]\nIf moreover \\(K\\) is dualizing, every \\(F\\in\\operatorname{ob}D_c(X)\\) is\nreflexive relative to \\(K\\), and \\(D_K\\) induces equivalences of\ncategories\n\\[(D_c(X))^\\circ\\xrightarrow{\\sim}D_c(X),\\quad\n(D_c^-(X))^\\circ\\xrightarrow{\\sim}D_c^+(X),\\quad\n(D_c^+(X))^\\circ\\xrightarrow{\\sim}D_c^-(X).\\]\nWe do not know whether this conclusion remains valid without the restriction that \\(K\\)\nbe of finite injective dimension.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now turn to the \"<u>exchange formulas</u>\".</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall not return to the notion of tor-dimension of a complex\n(SGA A XVII 4.1.9)<sup class=\"footnote-ref\"><a id=\"I-fn2ref\" href=\"#I-fn2\">(*)</a></sup>.\nLet us only note that if \\(X\\) is a prescheme and\n\\(G\\in\\operatorname{ob}D^-(X)\\), the relation\n\\(\\operatorname{Tor}_i(F,G)=0\\) for \\(i&gt;N\\) and every \\(A_X\\)-Module \\(F\\)\nis equivalent to the same with \\(F\\) constructible (thanks to SGA A IX 2.9 and to the\ncommutation of \\(\\mathbin{\\overset{L}{\\otimes}}\\) with inductive limits),\nso that there is no need to introduce a notion of \"quasi-tor-dimension\"!</p>"
+    },
+    {
+     "id": "I.1.9",
+     "type": "lemma",
+     "label": "1.9",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.1.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.9</span> (cf. [H] II 4.3)</div>\n  <div class=\"thm-body\"><p>a) Let \\(X\\) be a prescheme,\n  \\(F\\in\\operatorname{ob}D_c(X)\\), \\(G\\in\\operatorname{ob}D^-(X)\\). We have\n  \\(F\\mathbin{\\overset{L}{\\otimes}}G\\in\\operatorname{ob}D_c(X)\\) if\n  \\(F\\in\\operatorname{ob}D_c^-(X)\\) or if \\(G\\) is of finite tor-dimension.</p>\n  <p>b) Let \\(f:X\\longrightarrow Y\\) be a morphism of preschemes, and\n  \\(G\\in\\operatorname{ob}D_c(Y)\\). Then,\n  \\(f^*(G)\\in\\operatorname{ob}D_c(X)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Assertion b) follows trivially from (SGA A IX 2.4).\nLet us prove a). Either of the hypotheses on \\((F,G)\\) implies that the\nspectral sequence\n\\[E_2^{pq}=\\sum_{q_1+q_2=q}\n\\operatorname{Tor}_{-p}(\\underline{H}^{\\,q_1}(F),\\underline{H}^{\\,q_2}(G))\n\\;\\Longrightarrow\\;\n\\underline{H}^{\\,p+q}(F\\mathbin{\\overset{L}{\\otimes}}G)\\]\nis biregular. We are therefore reduced to proving a) when \\(F\\) and \\(G\\) are\nconcentrated in degree 0, i.e. are constructible \\(A_X\\)-Modules. The question\nbeing local, we may assume \\(X\\) noetherian. Then \\(F\\) admits (SGA A IX\n2.7) a left resolution \\(F'\\), where the \\(F'^{-i}\\) are of the form\n\\(A_{U,X}\\), with \\(U\\) étale and of finite type over \\(X\\). Now\n\\(F\\mathbin{\\overset{L}{\\otimes}}G\\simeq F'\\otimes G\\), and we are done because the\n\\(A_{U,X}\\otimes G\\) are constructible.</p>"
+    },
+    {
+     "id": "I.1.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.1.10\"><u>Notation 1.10.</u> If \\(X\\) is a prescheme, we shall denote\nby \\(D^b(X)_{\\mathrm{torf}}\\) (resp. \\(D^b(X)_{\\mathrm{qinjf}}\\)) the\nfull subcategory of \\(D(X)\\) formed of the objects of finite tor-dimension\n(resp. of finite quasi-injective dimension).</p>"
+    },
+    {
+     "id": "I.1.11",
+     "type": "proposition",
+     "label": "1.11",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.11</span> (cf. [H] V 2.6)</div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme and\n  \\(K\\in\\operatorname{ob}D^+(X)\\).</p>\n  <p>a) For \\(F\\in\\operatorname{ob}D^-(X)\\) and\n  \\(G\\in\\operatorname{ob}D^-(X)\\) (resp. \\(F\\in\\operatorname{ob}D(X)\\) and\n  \\(G\\in\\operatorname{ob}D^b(X)_{\\mathrm{torf}}\\)), there exists a functorial\n  isomorphism\n  \\[D_K(F\\mathbin{\\overset{L}{\\otimes}}G)\n  \\xrightarrow{\\sim}R\\underline{\\operatorname{Hom}}(F,D_K(G)).\\]</p>\n  <p>b) If \\(K\\) satisfies conditions (i) and (ii) of (1.7), we have\n  the implication\n  \\[G\\in\\operatorname{ob}D_c^b(X)_{\\mathrm{torf}}\n  \\Longrightarrow D_K(G)\\in\\operatorname{ob}D_c^b(X)_{\\mathrm{qinjf}}\\]\n  and \\(D_K(G)\\) satisfies (1.7. (ii)).</p>\n  <p>c) If \\(K\\) is dualizing, there exists, for\n  \\(F\\in\\operatorname{ob}D_c^-(X)\\) and \\(G\\in\\operatorname{ob}D_c^b(X)\\)\n  (resp. \\(F\\in\\operatorname{ob}D(X)\\), \\(G\\in\\operatorname{ob}D_c^b(X)\\)\n  and \\(D_K(G)\\in\\operatorname{ob}D^b(X)_{\\mathrm{torf}}\\)), a functorial\n  isomorphism\n  \\[D_K(F\\mathbin{\\overset{L}{\\otimes}}D_K(G))\n  \\xrightarrow{\\sim}R\\underline{\\operatorname{Hom}}(F,G).\\]\n  We have moreover the implication\n  \\[D_K(G)\\in\\operatorname{ob}D_c^b(X)_{\\mathrm{torf}}\n  \\Longrightarrow G\\in\\operatorname{ob}D_c^b(X)_{\\mathrm{qinjf}}\\]\n  and \\(G\\) satisfies (1.7. (ii)).</p>\n  <p>d) If \\(K\\) is dualizing and of finite injective dimension, the implications\n  of b) and c) are equivalences.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: a) is none other than the adjunction formula dear to Cartan\n(SGA 6 I 7.4).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Let \\(G\\in\\operatorname{ob}D_c^b(X)_{\\mathrm{torf}}\\). If \\(F\\) is a\nvariable constructible \\(A_X\\)-Module, the cohomology objects of\n\\(F\\mathbin{\\overset{L}{\\otimes}}G\\) are constructible (1.9), and vanish\noutside two fixed bounds independent of \\(F\\). Hence the same is true\nof the cohomology objects of\n\\(D_K(F\\mathbin{\\overset{L}{\\otimes}}G)\\), and we are done thanks to a).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) The first assertion follows from formula a) applied to \\(D_K(G)\\)\ninstead of \\(G\\), and from the reflexivity of \\(G\\). The second is deduced from it by\nan argument analogous to b).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d) Let us prove for example the converse implication of b). Suppose that\n\\(D_K(G)\\in\\operatorname{ob}D_c^b(X)_{\\mathrm{qinjf}}\\) and that \\(D_K(G)\\)\nsatisfies (1.7.(ii)). Then, for variable constructible \\(F\\), the cohomology\nobjects of\n\\(D_K(F\\mathbin{\\overset{L}{\\otimes}}G)\\) are constructible and vanish\noutside two fixed bounds. Hence the same is true of the cohomology objects\nof \\(D_KD_K(F\\mathbin{\\overset{L}{\\otimes}}G)\\), but\n\\[F\\mathbin{\\overset{L}{\\otimes}}G\n\\xrightarrow{\\sim}D_KD_K(F\\mathbin{\\overset{L}{\\otimes}}G)\\]\nsince \\(K\\) is dualizing and of finite injective dimension (1.8 d)), hence\n\\(G\\) is of finite tor-dimension. The converse implication of c) is proved\nin an analogous way.</p>"
+    },
+    {
+     "id": "I.1.11.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.1.11.1\"><u>Remarks 1.11.1.</u> a) The writer does not know whether assertion\nd) of (1.11) holds under the sole hypothesis that \\(K\\) be dualizing.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) One expresses the preceding proposition in a picturesque way by saying that\nthe dualizing functor \\(D_K\\) exchanges the functors\n\\(\\mathbin{\\overset{L}{\\otimes}}\\) and \\(R\\underline{\\operatorname{Hom}}\\),\nas well as the notions of finite tor-dimension and finite quasi-injective\ndimension, (the exchange being moreover fully satisfactory only when\n\\(K\\) is of finite injective dimension).</p>"
+    },
+    {
+     "id": "I.1.12",
+     "type": "proposition",
+     "label": "1.12",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.12</span></div>\n  <div class=\"thm-body\"><p>Let \\(Y\\) be a noetherian prescheme,\n  \\(f:X\\longrightarrow Y\\) a morphism of finite type,\n  \\(K_Y\\in\\operatorname{ob}D^+(Y)\\). Suppose \\(n\\) prime to the\n  residue characteristics of \\(Y\\), and set\n  \\(K_X=R^!f(K_Y)\\) (SGA A XVIII 3.1),\n  \\(D_X=D_{K_X}\\), \\(D_Y=D_{K_Y}\\).</p>\n  <p>a) There exists, for \\(F\\in\\operatorname{ob}D^-(X)\\), a functorial\n  isomorphism\n  \\[\\tag{i} Rf_*D_X(F)\\xrightarrow{\\sim}D_YR_!f(F).\\]</p>\n  <p>If moreover \\(K_X\\) and \\(K_Y\\) are dualizing<sup class=\"footnote-ref\"><a id=\"I-fn3ref\" href=\"#I-fn3\">(1)</a></sup>,\n  there exists, for \\(F\\in\\operatorname{ob}D_c^b(X)\\), a functorial isomorphism\n  \\[\\tag{ii} R_!fD_X(F)\\xrightarrow{\\sim}D_YRf_*(F).\\]</p>\n  <p>b) There exists, for \\(F\\in\\operatorname{ob}D_c^-(Y)\\), a functorial\n  isomorphism<sup class=\"footnote-ref\"><a id=\"I-fn4ref\" href=\"#I-fn4\">(2)</a></sup>\n  \\[\\tag{i} R^!fD_Y(F)\\xrightarrow{\\sim}D_Xf^*(F).\\]</p>\n  <p>If moreover \\(K_X\\) and \\(K_Y\\) are dualizing<sup class=\"footnote-ref\"><a href=\"#I-fn3\" id=\"I-fn3ref\">(1)</a></sup>,\n  there exists, for \\(F\\in\\operatorname{ob}D_c^b(Y)\\), a functorial isomorphism\n  \\[\\tag{ii} f^*D_YF\\xrightarrow{\\sim}D_XR^!fF.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: a) (i) is none other than the duality isomorphism\n(SGA A XVIII 3.1.9.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) (ii) is obtained by applying \\(D_Y\\) to both sides of a) (i) written\nfor the argument \\(D_XF\\), and using the \"finiteness th.\" (SGA A XVII\n5.3.6), which ensures that \\(R_!f(D_X(F))\\in\\operatorname{ob}D_c(Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) (i) is none other than the \"induction formula\" (SGA A XVIII 3.1.12.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) (ii) is obtained by applying \\(D_X\\) to both sides of b) (i) written\nfor the argument \\(D_YF\\), and using (1.9. b)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Scholium</u>: We may say, in a picturesque way, that the dualizing\nfunctors \\(D_X\\) and \\(D_Y\\) exchange the notions of usual and unusual direct (resp.\ninverse) image: \\(Rf_*\\) and \\(R_!f\\) (resp. \\(f^*\\)\nand \\(R^!f\\)).</p>"
+    },
+    {
+     "id": "I.1.13",
+     "type": "corollary",
+     "label": "1.13",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"I.1.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.13</span></div>\n  <div class=\"thm-body\"><p>Under the hypotheses of 1.12, suppose moreover \\(f\\)\n  proper, and let \\(F\\in\\operatorname{ob}D^-(X)\\). If \\((F,K_X)\\) is\n  bidualizing, \\((Rf_*F,K_Y)\\) is bidualizing. Conversely, if \\(f\\) is finite,\n  and if \\((Rf_*F,K_Y)\\) is bidualizing, \\((F,K_X)\\) is bidualizing.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Suppose \\((F,K_X)\\) bidualizing. Applying \\(Rf_*\\) to\nthe canonical isomorphism \\(F\\xrightarrow{\\sim}D_X^2F\\), we get:\n\\[\\begin{aligned}\nRf_*F &amp;\\xrightarrow{\\sim} Rf_*D_XD_XF\\\\\n&amp;\\xrightarrow{\\sim}D_YRf_*D_XF &amp;&amp;\\text{(by a) (ii))}\\\\\n&amp;\\xrightarrow{\\sim}D_YD_YRf_*F &amp;&amp;\\text{(by a) (i)).}\n\\end{aligned}\\]\nThe courageous reader will convince himself that the isomorphism obtained is the\ncanonical one, which proves (or will prove) the first assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose now \\(f\\) finite, and \\((f_*F,K_Y)\\) bidualizing\n(\\(Rf_*=f_*\\), \\(f\\) being finite), and let us prove that the canonical morphism\n\\(F\\longrightarrow D_X^2F\\) is an isomorphism. By lemma 1.14 a)\nbelow, it suffices to show that the morphism deduced from it\n\\(f_*F\\longrightarrow f_*D_X^2F\\) is an isomorphism. But, by a double\napplication of a) (i), \"one convinces oneself\" that the latter is none other than\nthe canonical isomorphism \\(f_*F\\longrightarrow D_Y^2f_*F\\), which completes\nthe proof.</p>"
+    },
+    {
+     "id": "I.1.14",
+     "type": "lemma",
+     "label": "1.14",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.1.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.14</span></div>\n  <div class=\"thm-body\"><p>Let \\(f:X\\longrightarrow Y\\) be a finite morphism of\n  preschemes.</p>\n  <p>a) Let \\(u:F\\longrightarrow G\\) be an arrow of \\(D(X)\\). For \\(u\\)\n  to be an isomorphism, it is necessary and sufficient that \\(f_*u\\) be one.</p>\n  <p>b) Let \\(F\\in\\operatorname{ob}D(X)\\). For\n  \\(F\\in\\operatorname{ob}D_c(X)\\), it is necessary and sufficient that\n  \\(f_*F\\in\\operatorname{ob}D_c(Y)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: a) The functor \\(f_*\\) being exact, we may restrict to the\ncase where \\(F\\) and \\(G\\) are concentrated in degree zero. The assertion then follows\nat once from the computation of the stalks of \\(f_*F\\) (resp. \\(f_*G\\)) (SGA A VIII 5.5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) We may likewise restrict to the case where \\(F\\) is concentrated in degree zero.\nThe necessity is known (SGA A IX 2.14); let us prove the sufficiency, i.e. show\nthat \\(f_*F\\) constructible implies \\(F\\) constructible. The question being\nlocal (upstairs, hence a fortiori downstairs), we may assume \\(Y\\) (hence \\(X\\))\naffine. There then exists (EGA IV 17.16.6) a finite family \\((Y_i)\\) of\naffine subpreschemes of \\(Y\\), pairwise disjoint and with union \\(Y\\),\nsuch that, if \\(X_i=X\\times_Y Y_i\\), the induced morphism\n\\(f_i:X_i\\longrightarrow Y_i\\) decomposes as\n\\[X_i\\xrightarrow{u_i}X'_i\\xrightarrow{v_i}Y_i,\\]\nwhere \\(u_i\\) is a finite radicial surjective morphism, and \\(v_i\\) a finite\nétale morphism. Set \\(F|X_i=F_i\\). By the base change theorem for\na finite morphism (SGA A VIII 5.5), we have\n\\[f_{i*}(F_i)\\xrightarrow{\\sim}(f_*F)|Y_i,\\]\nand we are reduced (SGA A IX 2.8) to proving the assertion for \\((f_i,F_i)\\).\nSet \\(F'_i=u_{i*}(F_i)\\), so \\(f_{i*}(F_i)=v_{i*}(F'_i)\\). It is clear\nfrom the definition of constructibility (resp. follows from SGA A VIII 1.1)\nthat \\(F_i\\) (resp. \\(F'_i\\)) is constructible if and only if \\(F'_i\\)\n(resp. \\(v_{i*}(F'_i)\\)) is, whence the desired conclusion.</p>"
+    },
+    {
+     "id": "I.1.15",
+     "type": "corollary",
+     "label": "1.15",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"I.1.15\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.15</span></div>\n  <div class=\"thm-body\"><p>Let \\(f:X\\longrightarrow Y\\) be a separated quasi-finite\n  morphism of noetherian preschemes. Let \\(K_Y\\in\\operatorname{ob}D^+(Y)\\),\n  and set, as in 1.12, \\(K_X=R^!f(K_Y)\\), \\(D_X=D_{K_X}\\),\n  \\(D_Y=D_{K_Y}\\). Then, if \\(K_Y\\) is dualizing, \\(K_X\\) is dualizing.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We already know (1.5) that if \\(K_Y\\) is of finite\nquasi-injective dimension, the same is true of \\(K_X\\). Let us show that if \\(K_Y\\)\nsatisfies condition (ii) (resp. (iii)) of (1.7), \\(K_X\\) satisfies it\nas well. By the \"Main theorem\" (EGA IV 8.12.6), \\(f\\) factors as\n\\(f=f'i\\), where \\(i\\) is an open immersion and \\(f'\\) a finite morphism.\nSince \\(R^!f\\simeq R^!i\\,R^!f'\\), we must therefore look separately at the case\nof an open immersion and of a finite morphism. If \\(f\\) is an open\nimmersion, the assertion is trivial, seeing that a constructible sheaf on \\(X\\)\nis induced by a constructible sheaf on \\(Y\\), and that the formation of the\n\\(R\\underline{\\operatorname{Hom}}\\) commutes with restriction to an open subset.\nSuppose therefore \\(f\\) finite. We then know (1.13) that if \\(K_Y\\) satisfies\n(iii), so does \\(K_X\\) (taking into account the finiteness theorem SGA A IX 2.14).\nIt remains to prove that if \\(K_Y\\) satisfies (ii), so does \\(K_X\\). Let\n\\(F\\in\\operatorname{ob}D_c^-(X)\\); let us show that\n\\(D_X(F)\\in\\operatorname{ob}D_c^+(X)\\). By the finiteness theorem, we have\n\\(f_*(F)\\in\\operatorname{ob}D_c^-(Y)\\), hence, by hypothesis,\n\\(D_Yf_*(F)\\in\\operatorname{ob}D_c^+(Y)\\). But\n\\(D_Yf_*(F)\\xrightarrow{\\sim}f_*D_X(F)\\) (1.12 a)(i)), and we are done thanks\nto (1.14 b)).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "I-fn2",
+     "number": "(*)",
+     "html": "See also (SGA 6 I 5)."
+    },
+    {
+     "id": "I-fn3",
+     "number": "(1)",
+     "html": "We shall see below that, under fairly general\nconditions, \\(K_Y\\) dualizing implies \\(K_X\\)\ndualizing."
+    },
+    {
+     "id": "I-fn4",
+     "number": "(2)",
+     "html": "If the functor \\(R^!f\\) is of\nfinite cohomological dimension, which is the case for example when\n\\(Y\\) is of finite type over a field (SGA X 4.3 and XVIII 3.1.7),\nthe isomorphism b)(i) is valid for\n\\(F\\in\\operatorname{ob}D_c(Y)\\)."
+    }
+   ]
+  },
+  {
+   "id": "I-2",
+   "title": "2. Uniqueness of the dualizing complex",
+   "blocks": [
+    {
+     "id": "I.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.2\">2. Uniqueness of the dualizing complex</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this section, we assume \\(A\\) local, i.e. that\n\\(A=\\mathbb{Z}/\\ell^\\nu\\mathbb{Z}\\), \\(\\ell\\) prime.</p>"
+    },
+    {
+     "id": "I.2.1",
+     "type": "theorem",
+     "label": "2.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"I.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.1</span> (cf. [H] V 3.1)</div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a connected (locally noetherian)\n  prescheme, and let \\(K\\) be a dualizing complex on \\(X\\) (1.6). Let on the\n  other hand \\(K'\\in\\operatorname{ob}D_c^+(X)\\). For \\(K'\\) to be dualizing, it\n  is necessary and sufficient that there exist an invertible \\(A_X\\)-Module \\(L\\) and an\n  integer \\(r\\) (which are then determined up to unique isomorphism) such that:\n  \\[K'\\simeq K\\mathbin{\\overset{L}{\\otimes}}L[r].\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Let \\(L\\) be an invertible \\(A_X\\)-Module, \\(r\\) an integer,\nand set \\(L^\\vee=\\underline{\\operatorname{Hom}}(L,A_X)\\). There exist, for\n\\(F\\in\\operatorname{ob}D(X)\\) and \\(G\\in\\operatorname{ob}D^+(X)\\), canonical\nisomorphisms:\n\\[\\tag{*}\nR\\underline{\\operatorname{Hom}}\n(F\\mathbin{\\overset{L}{\\otimes}}L^\\vee[-r],G)\n\\simeq\nR\\underline{\\operatorname{Hom}}\n(F,G\\mathbin{\\overset{L}{\\otimes}}L[r])\n\\simeq\nR\\underline{\\operatorname{Hom}}(F,G)\n\\mathbin{\\overset{L}{\\otimes}}L[r].\\]\nOne deduces easily from this that, if\n\\(K'\\simeq K\\mathbin{\\overset{L}{\\otimes}}L[r]\\), \\(K'\\) is dualizing.\nMoreover, if we set \\(D_K=D\\), \\(D_{K'}=D'\\), we have, for\n\\(F\\in\\operatorname{ob}D(X)\\),\n\\(D'F\\simeq DF\\mathbin{\\overset{L}{\\otimes}}L[r]\\) by (*), hence, since\n\\(DK\\simeq A_X\\), we have\n\\[D'K\\simeq L[r],\\]\nwhich shows that \\(L[r]\\), hence \\(L\\) and \\(r\\), are determined in an\nessentially unique way by \\(K'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conversely, suppose \\(K'\\) dualizing, and set\n\\[P=D'K=D'DA_X=R\\underline{\\operatorname{Hom}}(K,K').\\]\nWe are going to show that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) \\(K'\\simeq K\\mathbin{\\overset{L}{\\otimes}}P\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \\(P\\simeq L[r]\\), for an invertible \\(A_X\\)-Module \\(L\\), which\nwill complete the proof of the theorem.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first remark that by virtue of 1.9 b)(ii) we have, for\n\\(F\\in\\operatorname{ob}D_c(X)\\),\n\\[\\tag{**} F\\mathbin{\\overset{L}{\\otimes}}P\\simeq D'DF.\\]\nApplying (**) to \\(F=K\\), we get\n\\[K\\mathbin{\\overset{L}{\\otimes}}P\n\\simeq D'DK\\simeq D'A_X\\simeq K',\\]\nwhich proves a).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Applying (**) to \\(F=P'=DD'A_X\\), we get\n\\[P'\\mathbin{\\overset{L}{\\otimes}}P\n=D'DDD'A_X\\simeq D'D'A_X\\simeq A_X.\\]\nHence b) will be a consequence of the following lemma:</p>"
+    },
+    {
+     "id": "I.2.2",
+     "type": "lemma",
+     "label": "2.2.",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.2.</span> (cf. [H] V 3.3)</div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a connected locally noetherian prescheme,\n  and let \\(P,P'\\in\\operatorname{ob}D_c^-(X)\\) be such that\n  \\(P\\mathbin{\\overset{L}{\\otimes}}P'\\simeq A_X\\). Then there exist an\n  invertible \\(A_X\\)-Module \\(L\\) and an integer \\(r\\) such that\n  \\[P\\simeq L[r],\\qquad P'\\simeq L^\\vee[-r].\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof will proceed in two steps.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) <u>Special case</u>: \\(X=\\operatorname{Spec}(k)\\), \\(k\\) a separably\nclosed field. One need only copy the (moreover easy) proof\ngiven in [H] (loc. cit.). The important point is that\n(EGA 0<sub>I</sub> 5.4.3) if \\(M\\) and \\(M'\\) are two \\(A\\)-modules of finite\ntype such that \\(M\\otimes M'\\simeq A\\), then \\(M\\) and \\(M'\\) are invertible\nand \\(M'\\simeq M^\\vee\\); it is here that the hypothesis \\(A\\) local intervenes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) <u>General case</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By virtue of the preceding special case, there exists, for every \\(x\\in X\\),\nan integer \\(r(x)\\) such that\n\\[P_{\\bar{x}}\\simeq A_{\\bar{x}}[-r(x)],\\qquad\nP'_{\\bar{x}}\\simeq A_{\\bar{x}}[r(x)],\\]\ni.e.\n\\(\\underline{H}^{\\,i}(P_{\\bar{x}})=0\\) (resp.\n\\(\\underline{H}^{\\,i}(P'_{\\bar{x}})=0\\)) for\n\\(i\\ne-r(x)\\) (resp. \\(+r(x)\\)), and\n\\[\\underline{H}^{-r(x)}(P_{\\bar{x}})\\simeq A_{\\bar{x}},\\qquad\n\\underline{H}^{r(x)}(P'_{\\bar{x}})\\simeq A_{\\bar{x}}.\\]\nThe point is to show that the function \\(x\\mapsto r(x)\\) is locally\nconstant. Indeed, suppose this point granted. Since \\(X\\) is connected,\n\\(r\\) is constant, say with value \\(r_0\\). We thus have\n\\(\\underline{H}^{\\,i}(P)=0\\) for \\(i\\ne-r_0\\),\n\\(\\underline{H}^{\\,i}(P')=0\\) for \\(i\\ne r_0\\), and\n\\[\\underline{H}^{-r_0}(P)\\otimes\\underline{H}^{r_0}(P')\\simeq A.\\]\nSet \\(\\underline{H}^{-r_0}(P)=L\\),\n\\(\\underline{H}^{r_0}(P')=L'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(u:\\bar{x}\\longrightarrow\\bar{y}\\) be a specialization arrow\n(SGA A VIII 7.2), \\(u^*:L_{\\bar{y}}\\longrightarrow L_{\\bar{x}}\\),\n\\(u'^*:L'_{\\bar{y}}\\longrightarrow L'_{\\bar{x}}\\), the corresponding specialization\nmorphisms (SGA A VIII 7.7). We have a commutative diagram\n\\[\\xymatrix@C=4em@R=3em{\nL_{\\bar{y}}\\otimes L'_{\\bar{y}} \\ar[r]^-{\\sim}\n\\ar[d]_{u^*\\otimes u'^*} &amp; A_{\\bar{y}} \\ar[d] \\\\\nL_{\\bar{x}}\\otimes L'_{\\bar{x}} \\ar[r]^-{\\sim} &amp; A_{\\bar{x}} .\n}\\tag{*}\\]\nLet us choose a basis \\(e\\) (resp. \\(f\\)) of \\(L_{\\bar{x}}\\) (resp.\n\\(L_{\\bar{y}}\\)) over \\(A_{\\bar{x}}\\) (resp. \\(A_{\\bar{y}}\\)), and denote by\n\\(e'\\) (resp. \\(f'\\)) the \"dual\" basis of \\(L'_{\\bar{x}}\\) (resp.\n\\(L'_{\\bar{y}}\\)), i.e. such that the image of \\(e\\otimes e'\\) (resp.\n\\(f\\otimes f'\\)) in \\(A_{\\bar{x}}\\) (resp. \\(A_{\\bar{y}}\\)) equals\n1. We have \\(u^*(f)=\\lambda e\\), \\(u'^*(f')=\\lambda'e'\\), and the commutativity\nof (*) implies \\(\\lambda\\lambda'=1\\), hence \\(u^*\\) is an isomorphism (and\n\\(u'^*\\) the \"contragredient\" isomorphism). By virtue of (SGA A IX 2.13), this\nimplies that \\(L\\) and \\(L'\\) are locally constant, hence of finite\npresentation as \\(A_X\\)-Modules. Consequently, if \\(x\\in X\\), the canonical arrow\n\\[\\underline{\\operatorname{Hom}}(L,F)_{\\bar{x}}\\longrightarrow\n\\operatorname{Hom}(L_{\\bar{x}},F_{\\bar{x}})\\]\nis an isomorphism for every \\(A_X\\)-Module \\(F\\). Since the geometric\nstalks of \\(L\\) are invertible, it follows that \\(L\\) is\ninvertible. Likewise \\(L'\\) is invertible, and \\(L'\\simeq L^\\vee\\). Hence we have\n\\[P\\simeq L[-r_0],\\qquad P'\\simeq L^\\vee[r_0].\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Everything thus comes down to showing that the function \\(r\\) is locally\nconstant. For \\(m\\in\\mathbb{Z}\\), we have \\(r(x)=m\\) if and only if\n\\(\\underline{H}^{\\,m}(P')_{\\bar{x}}\\ne0\\), hence, by virtue of (SGA A IX 2.4),\n\\(r\\) is locally constructible. Consequently, to check that it\nis locally constant, we may, by (EGA IV 1.10.1), assume \\(X\\) local.\nLet \\(x\\) be the closed point of \\(X\\), and let \\(U\\) be the complementary open subset.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We are going to show that \\(r\\) is constant. Arguing by induction on the\ndimension of \\(X\\), we may already assume that \\(r(y)\\) is constant and equal\nto \\(r_0\\) for \\(y\\in U\\), and the point is to prove that \\(r(x)=r_0\\).\nSuppose this is not the case, i.e. that we have \\(r(x)\\ne r_0\\), and\nlet us show that we arrive at a contradiction. By hypothesis, we have\n\\(P|U\\simeq L[r_0]\\), where \\(L\\) is an invertible \\(A_U\\)-Module. After\ntranslating the degrees if necessary, we may assume \\(r_0=0\\). On the other hand we have\n\\(r(x)\\ne0\\), say \\(r(x)=a&gt;0\\). Denote by \\(i:U\\longrightarrow X\\), and\n\\(j:x\\longrightarrow X\\) the canonical inclusions.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us write the exact sequence:\n\\[\\tag{**}0\\longrightarrow i_!(P|U)\\longrightarrow P\n\\longrightarrow j_*j^*P\\longrightarrow0.\\]\nBy hypothesis, the only nonzero cohomology objects of \\(P\\) are\n\\(\\underline{H}^{\\,0}(P)\\) and \\(\\underline{H}^{-a}(P)\\), and we have\n\\(\\underline{H}^{\\,0}(P)\\simeq i_!(L)\\). It follows that (**) splits\nnaturally (thanks to the arrow \\(P\\longrightarrow\\underline{H}^{\\,0}(P)\\)),\nhence that we have\n\\[P\\simeq i_!(P|U)\\oplus j_*j^*P.\\]\nFrom this we deduce\n\\[\\begin{aligned}\nP\\mathbin{\\overset{L}{\\otimes}}P'\n&amp;\\simeq\ni_!(P|U)\\mathbin{\\overset{L}{\\otimes}}P'\n\\oplus j_*j^*P\\mathbin{\\overset{L}{\\otimes}}P'\\\\\n&amp;\\simeq i_!(P|U\\mathbin{\\overset{L}{\\otimes}}P'|U)\n\\oplus j_*(j^*P\\mathbin{\\overset{L}{\\otimes}}j^*P')\\\\\n&amp;\\simeq i_!(A_U)\\oplus j_*(A_x),\n\\end{aligned}\\]\nwhich is absurd, since \\(i_!(A_U)\\oplus j_*(A_x)\\) is manifestly\nnot isomorphic to \\(A_X\\) (already the \\(H^0\\) are not isomorphic!).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This completes the proof of lemma 2.2.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-3",
+   "title": "3. Existence of dualizing complexes",
+   "blocks": [
+    {
+     "id": "I.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.3\">3. Existence of dualizing complexes</h2>"
+    },
+    {
+     "id": "I.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.3.1\">3.1. Preliminaries</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As was said in the introduction, the object of this paragraph is to\nprove that, on a \"good\" regular prescheme \\(X\\), the sheaf \\(A_X\\) is\ndualizing, \\(n\\) being assumed prime to the residue characteristics.\nActually, one would like this to be the case on excellent regular\npreschemes of equal characteristics, but there is no doubt that the\nproof given below will extend to these once resolution of\nsingularities and the purity theorem are available in that case.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall first present the various ingredients that we shall have to\nuse.</p>"
+    },
+    {
+     "id": "I.3.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.1.1\"><strong>3.1.1.</strong> <u>Singular locus.</u> Let \\(X\\) be a\n(locally noetherian) prescheme. We shall say that \\(X\\) satisfies\n<u>condition (reg)</u> if the following equivalent properties are satisfied\n(EGA IV 6.12.3):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) for every subprescheme \\(Y\\) of \\(X\\), the set\n\\(\\operatorname{Reg}(Y)\\) of regular points of \\(Y\\) is open in\n\\(Y\\);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) for every integral closed subprescheme \\(Y\\) of \\(X\\),\n\\(\\operatorname{Reg}(Y)\\) contains a nonempty open subset of \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Condition (reg) is satisfied if \\(X\\) is locally of finite type over\na complete noetherian local ring (for example a field) (EGA IV 6.12.8),\nor over a Dedekind ring whose field of fractions is of\n\\(\\operatorname{car}.0\\) (for example \\(\\mathbb{Z}\\)) (EGA IV 6.12.6), more\ngenerally if \\(X\\) is excellent (EGA IV 7.8.6).</p>"
+    },
+    {
+     "id": "I.3.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.1.2\"><strong>3.1.2.</strong> <u>Dévissage of constructible\nsheaves.</u> Let \\(X\\) be a noetherian prescheme, and let \\(C\\) be a\nstrictly full subcategory of the category\n\\(\\operatorname{Cons}(X)\\) of constructible \\(A_X\\)-Modules. We assume\n\\(C\\) stable under direct factors and extensions. The following conditions are equivalent:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) \\(C=\\operatorname{Cons}(X)\\);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) \\(C\\) contains the sheaves of the type \\(i_!(F)\\), where\n\\(i:Y\\longrightarrow X\\) is the immersion of an integral subprescheme, and\n\\(F\\) is locally constant on \\(Y\\);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) \\(C\\) contains the sheaves of the type \\(f_*i_!(A'_U)\\), where\n\\(i:U\\longrightarrow Y\\) is an open subset of an integral prescheme,\n\\(f:Y\\longrightarrow X\\) is a finite morphism such that the generic point\nof \\(Y\\) is separable over its image and\n\\(A'=\\mathbb{Z}/\\ell\\mathbb{Z}\\), for \\(\\ell\\) a prime divisor of \\(n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X\\) satisfies (reg) (3.1.1.), these conditions are also equivalent\nto the following:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii bis): analogous to (ii), \\(Y\\) being moreover regular;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii bis): analogous to (iii), with \\(U\\) regular.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If moreover \\(X\\) is affine, we may assume in (ii) (resp. (ii bis))\nthat \\(Y\\) is closed in an open subset of the type \\(D(f)\\),\n\\(f\\in\\Gamma(X;\\mathcal{O}_X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: The equivalence of (i)–(iii) was proved in (SGA A IX\n2.5 and 5.8). The other assertions are deduced from it by noetherian\ninduction.</p>"
+    },
+    {
+     "id": "I.3.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.1.3\"><strong>3.1.3.</strong> <u>Cohomological dimension.</u> Let\n\\(X\\) be a (locally noetherian) prescheme. We shall denote by\n\\((\\mathrm{cdloc})_n\\) the following condition:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every subprescheme \\(Y\\) of \\(X\\), every geometric point\n\\(\\bar{y}\\) of \\(Y\\), and every\n\\(f\\in\\Gamma(\\bar{Y}(\\bar{y});\\mathcal{O}_{\\bar{Y},\\bar{y}})\\) (where\n\\(\\bar{Y}(\\bar{y})\\) denotes (cf. SGA A VIII 7.1.) the strict localization of\n\\(Y\\) at \\(\\bar{y}\\)) we have\n\\[\\operatorname{cd}_{L}\\bigl(\\bar{Y}(\\bar{y})-V(f)\\bigr)\n\\leq\\dim\\mathcal{O}_{\\bar{Y},\\bar{y}}\n\\;(=\\dim\\mathcal{O}_{Y,y}\\text{ by EGA IV 6.1.3}),\\]\nwhere \\(L\\) is the set of prime numbers dividing \\(n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Condition \\((\\mathrm{cdloc})_n\\) is satisfied if \\(X\\) is locally\nof finite type over a field (SGA A XIV 3.5), or is an excellent prescheme of\ncharacteristic zero (SGA A XIX 6.2.)<sup class=\"footnote-ref\"><a id=\"I-fn5ref\" href=\"#I-fn5\">(*)</a></sup>.</p>"
+    },
+    {
+     "id": "I.3.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.1.4\"><strong>3.1.4.</strong> <u>Absolute cohomological purity.</u>\nLet \\(X\\) be a regular prescheme, and let \\(Y\\) be a regular closed\nsubprescheme of \\(X\\) of codimension \\(d\\) at every point. We say that the pair\n\\((X,Y)\\) satisfies the absolute cohomological purity theorem\n(relative to \\(n\\)) if we have:\n\\[\\underline{H}^{\\,i}_Y(A_X)=0\\quad\\text{for }i\\ne2d,\\]\nand if the \"local fundamental class\" homomorphism\n(SGA 4<sup>1/2</sup> Cycle 2.2)\n\\[A_Y\\longrightarrow\n\\underline{H}^{\\,2d}_Y\\bigl((\\mu_n)_X^{\\otimes d}\\bigr)\\]\nis an isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We say that the absolute (cohomological) purity theorem is true on\n\\(X\\) if every pair \\((U,Y)\\) as above satisfies it, where \\(U\\) is an\nopen subset of \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The absolute purity theorem is true on \\(X\\) if \\(X\\) is smooth over\na perfect field of char. prime to \\(n\\), (SGA A XVI 3.9), or is an\nexcellent prescheme of characteristic zero (SGA A XIX 3.2), or is a\nregular prescheme of dimension 1 (cf. 5.1)<sup class=\"footnote-ref\"><a href=\"#I-fn5\" id=\"I-fn5ref\">(*)</a></sup>.</p>"
+    },
+    {
+     "id": "I.3.1.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.1.5\"><strong>3.1.5.</strong> <u>Resolution of singularities à la\nHironaka.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Let \\(X\\) be a regular prescheme, and let \\(D\\) be a\n\\(\\geq0\\) divisor on \\(X\\). We say that \\(D\\) has <u>strict normal\ncrossings</u> if there exists a finite family\n\\((f_i)_{i\\in I}\\) of elements of \\(\\Gamma(X;\\mathcal{O}_X)\\) such that\n\\(D=\\sum_{i\\in I}\\operatorname{div}(f_i)\\) (EGA IV 21) and that for every\n\\(x\\in\\operatorname{Supp}(D)\\) the \\((f_i)_x\\) such that\n\\((f_i)_x\\in\\mathfrak{m}_x\\) form part of a system of regular\nparameters. We say that \\(D\\) has <u>normal crossings</u> if \\(D\\) has,\nlocally for the étale topology, strict normal crossings.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The typical example of a divisor with normal crossings is furnished by a\nlocally finite union of coordinate hyperplanes in the standard affine\nspace.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Let \\(X\\) be a locally noetherian prescheme. We shall say that \\(X\\)\nis <u>strongly desingularizable</u> if the following condition is satisfied:\nFor every finite morphism \\(f:Y\\longrightarrow X\\), where \\(Y\\) is integral and\nwith generic point separable over its image, and every regular open subset \\(U\\) of\n\\(Y\\), there exists a proper birational morphism\n\\(h:Y'\\longrightarrow Y\\), where \\(Y'\\) is regular, \\(h\\) induces an\nisomorphism of \\(U'=h^{-1}(U)\\) onto \\(U\\), and \\(Y'-U'\\) is a divisor with\nnormal crossings.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Here are some cases where \\(X\\) is strongly desingularizable:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) \\(X\\) is excellent, of characteristic zero ([2]);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \\(X\\) is locally noetherian, regular, and of dimension\n\\(\\leq1\\);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) \\(X\\) is of finite type over \\(\\mathbb{Z}\\) or over a perfect field,\nand of dimension \\(\\leq2\\) ([1])<sup class=\"footnote-ref\"><a id=\"I-fn6ref\" href=\"#I-fn6\">(*)</a></sup>.</p>"
+    },
+    {
+     "id": "I.3.1.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.1.6\"><strong>3.1.6.</strong> <u>Cohomological finiteness.</u> Let\n\\(f:X\\longrightarrow Y\\) be a morphism of preschemes, and let\n\\(F\\in\\operatorname{ob}D_c^+(X)\\). We have\n\\(Rf_*(F)\\in\\operatorname{ob}D_c^+(Y)\\) in the following cases:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) \\(f\\) is proper and of finite presentation (SGA A XIV 1.1);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \"when resolution of singularities and the purity theorem are\navailable\", in particular</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) if \\(X\\) and \\(Y\\) are locally of finite type over a field \\(k\\) of\ncharacteristic 0 and \\(f\\) is a \\(k\\)-morphism of finite type (SGA A XVI 5.1);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) if \\(Y\\) is excellent of characteristic zero and \\(f\\) of finite\ntype (SGA A XIX 5.1);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) if \\(X\\) is locally of finite type over a field and\n\\(\\dim(X)\\leq2\\) (SGA A XIX 5.1).</p>"
+    },
+    {
+     "id": "I.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.3.2\">3.2. Quasi-injective dimension of \\(A_X\\)</h3>"
+    },
+    {
+     "id": "I.3.2.1",
+     "type": "proposition",
+     "label": "3.2.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.3.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.2.1.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a regular prescheme, with\n  residue characteristics prime to \\(n\\). We suppose that \\(X\\)\n  satisfies conditions (reg) (3.1.1) and \\((\\mathrm{cdloc})_n\\) (3.1.3)\n  and that the absolute purity theorem is true on \\(X\\) (3.1.4). Then,\n  for every constructible \\(A_X\\)-Module \\(F\\) and every \\(x\\in X\\), we have\n  \\[\\tag{*}\n  \\underline{\\operatorname{Ext}}^{\\,i}(F,A_X)_{\\bar{x}}=0\n  \\quad\\text{for }i&gt;2\\dim\\mathcal{O}_{X,x}.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: The question being local, we may assume \\(X\\) affine.\nBy dévissage (3.1.2), we may restrict to checking (*) for \\(F=i_!(G)\\),\nwhere \\(i:Y\\longrightarrow X\\) is the immersion of an integral regular subprescheme\nclosed in an open subset \\(D(f)\\) (\\(f\\in A(X)\\)), and \\(G\\) is a\nlocally constant constructible sheaf on \\(Y\\). We must compute\n\\[\\underline{\\operatorname{Ext}}^{\\,q}(F,A_X)\n=\\underline{H}^{\\,q}(R\\underline{\\operatorname{Hom}}(F,A_X)).\\]\nThe projection formula for \\(i\\) (SGA A XVIII) gives\n\\[R\\underline{\\operatorname{Hom}}(i_!(G),A_X)\n\\simeq Ri_*R\\underline{\\operatorname{Hom}}(G,R^!iA_X).\\]\nBy the purity theorem, we have\n\\[R^!i(A_X)\\simeq(\\mu_n)_Y^{\\otimes-d}[-2d],\n\\quad\\text{where }d=\\operatorname{codim}(Y,X).\\]\nSet \\((\\mu_n)_Y^{\\otimes-d}=T\\). Since \\(G\\) is locally constant\nconstructible, we have\n\\[\\underline{\\operatorname{Ext}}^{\\,p}(G,T)_{\\bar{y}}\n\\simeq\\operatorname{Ext}^p(G_{\\bar{y}},T_{\\bar{y}})\\]\nfor every geometric point \\(\\bar{y}\\) of \\(Y\\) and every \\(p\\). Now\n\\(T_{\\bar{y}}\\) is injective, being isomorphic to \\(A=\\mathbb{Z}/n\\mathbb{Z}\\).\nConsequently \\(\\underline{\\operatorname{Ext}}^{\\,p}(G,T)=0\\) for \\(p\\ne0\\),\nhence\n\\(R\\underline{\\operatorname{Hom}}(G,T)\\simeq\n\\underline{\\operatorname{Hom}}(G,T)\\), whence finally\n\\[R\\underline{\\operatorname{Hom}}(F,A_X)\n\\simeq Ri_*(H)[-2d],\\quad\\text{with }H=\\underline{\\operatorname{Hom}}(G,T).\\]\nLet \\(Z\\) be the schematic closure of \\(Y\\) in \\(X\\) (EGA I 9.5.10). We\nhave \\(Y=Z\\cap D(f)\\) (EGA 0<sub>I</sub> 2.1.6). Denote by\n\\(j:Y\\longrightarrow Z\\), \\(k:Z\\longrightarrow X\\) the canonical immersions.\nWe have \\(Ri_*=k_*Rj_*\\), so we are reduced to computing \\(Rj_*(H)\\). Let\n\\(\\bar{x}\\) be a geometric point of \\(Z\\),\n\\(\\bar{Z}=\\operatorname{Spec}(\\mathcal{O}_{Z,\\bar{x}})\\) the strict localization\nof \\(Z\\) at \\(\\bar{x}\\), \\(\\bar{f}\\) the image of \\(f\\) in\n\\(\\mathcal{O}_{Z,\\bar{x}}\\), \\(\\bar{Y}=\\bar{Z}\\times_ZY=\\bar{Z}-V(\\bar{f})\\),\n\\(\\bar{H}\\) the inverse image of \\(H\\) on \\(\\bar{Y}\\). By (SGA A VIII\n5.2), we have\n\\[R^qj_*(H)_{\\bar{x}}\\simeq H^q(\\bar{Y},\\bar{H}),\\]\nwhence\n\\[\\underline{\\operatorname{Ext}}^{\\,q}(F,A_X)_{\\bar{x}}\n\\simeq H^{q-2d}(\\bar{Y},\\bar{H}).\\]\nCondition \\((\\mathrm{cdloc})_n\\) then implies\n\\(\\underline{\\operatorname{Ext}}^{\\,q}(F,A_X)_{\\bar{x}}=0\\) for\n\\(q-2d&gt;\\dim\\mathcal{O}_{Z,x}\\). From the relations\n\\[d=\\operatorname{codim}_x(Y,X)\\leq\\dim\\mathcal{O}_{X,x}\n\\quad\\text{(EGA IV 5.1.3)}\\]\nand\n\\[\\dim\\mathcal{O}_{Z,x}\n=\\dim\\mathcal{O}_{X,x}-\\operatorname{codim}_x(Z,X)\n\\quad\\text{(EGA 0}_{\\mathrm{IV}}\\text{ 16.5.12 and IV 5.1.9)},\\]\nwe deduce\n\\(\\underline{\\operatorname{Ext}}^{\\,q}(F,A_X)_{\\bar{x}}=0\\) for\n\\(q&gt;2\\dim\\mathcal{O}_{X,x}\\), qed.</p>"
+    },
+    {
+     "id": "I.3.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.2.2\"><u>Remark 3.2.2.</u> The bound obtained in (3.2.1)\nis the best possible. Indeed, let \\(x\\) be a point of \\(X\\) and \\(Y\\)\nthe integral closed subprescheme of \\(X\\) having \\(x\\) as generic point.\nSince \\(X\\) satisfies condition (reg), there exists a regular open subset\n\\(U\\) of \\(Y\\) containing \\(x\\). And by the purity theorem, we have\n\\[\\underline{\\operatorname{Ext}}^{\\,2d}(A_U,A_X)|U\n\\simeq(\\mu_n)_U^{\\otimes d},\\quad\n\\text{where }d=\\dim\\mathcal{O}_{X,x}=\\operatorname{codim}(Y,X).\\]</p>"
+    },
+    {
+     "id": "I.3.2.3",
+     "type": "corollary",
+     "label": "3.2.3.",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"I.3.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.2.3.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a regular prescheme of dimension\n  \\(d\\). If \\(X\\) is smooth over a field \\(k\\) of char. prime to \\(n\\), or\n  is excellent of characteristic zero, then \\(X\\) satisfies the conclusion\n  of (3.2.1) and we consequently have\n  \\[\\dim.\\mathrm{q.inj}(A_X)\\leq2d.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: When \\(X\\) is excellent of char. 0, or when \\(k\\)\nis perfect of char. prime to \\(n\\), and \\(X\\) smooth over \\(k\\), the hypotheses\nof (3.2.1) are satisfied by virtue of (3.1.1), (3.1.3) and (3.1.4). The\nconclusion is still valid if \\(X\\) is smooth over an arbitrary field \\(k\\),\nas one sees at once by base change\n\\(\\operatorname{Spec}(k')\\longrightarrow\\operatorname{Spec}(k)\\), where \\(k'\\)\nis a perfect closure of \\(k\\) (SGA A VIII 1.1).</p>"
+    },
+    {
+     "id": "I.3.2.4",
+     "type": "lemma",
+     "label": "3.2.4.",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.3.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.2.4.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme satisfying the conclusion\n  of (3.2.1) and of dimension \\(\\leq d\\). If there exists an integer \\(N\\) such that\n  \\(X\\) is of cohomological dimension \\(\\leq N\\), we have\n  \\[\\dim.\\mathrm{inj}(A_X)\\leq2d+N.\\]\n  If moreover, for every closed subset \\(Y\\) of \\(X\\),\n  \\(\\operatorname{codim}(Y,X)\\geq p\\) implies\n  \\(\\operatorname{cd}_L(Y)\\leq N-2p\\), then we have\n  \\[\\dim.\\mathrm{inj}(A_X)\\leq N.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: The first assertion follows at once from (1.5). For the\nsecond, we argue as in (1.5). We are reduced to proving, for \\(F\\)\nconstructible on \\(X\\), the relation\n\\(\\operatorname{Ext}^i(X;F,A_X)=0\\) for \\(i&gt;N\\). For this, we examine the\nspectral sequence\n\\[E_2^{pq}=H^p(X;\\underline{\\operatorname{Ext}}^{\\,q}(F,A_X))\n\\;\\Longrightarrow\\;\\operatorname{Ext}^{p+q}(X;F,A_X).\\]\nBy (3.2.1), the sheaves\n\\(\\underline{\\operatorname{Ext}}^{\\,2i}(F,A_X)\\) and\n\\(\\underline{\\operatorname{Ext}}^{\\,2i-1}(F,A_X)\\) are concentrated in\ncodimension \\(\\geq i\\). Hence \\(E_2^{p,2i}=E_2^{p,2i-1}=0\\) for\n\\(p&gt;N-2i\\) by hypothesis. Hence \\(E_2^{pq}=0\\) for \\(p+q&gt;N\\), whence\nthe assertion.</p>"
+    },
+    {
+     "id": "I.3.2.5",
+     "type": "corollary",
+     "label": "3.2.5.",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"I.3.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.2.5.</span></div>\n  <div class=\"thm-body\"><p>If \\(X\\) is a smooth prescheme of dimension \\(d\\)\n  over a separably closed field \\(k\\) of char. prime to \\(n\\), we have\n  \\(\\dim.\\mathrm{inj}(A_X)=2d\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: By (3.2.3) and (SGA A X 4.2), we are indeed within the\nconditions of application of (3.2.4) (note that the hypotheses of (SGA A X\n4.2) are satisfied by virtue of (SGA A X 2.1 and 3.2)), which implies\n\\(\\dim.\\mathrm{inj}A_X\\leq2d\\). The relation\n\\(\\dim.\\mathrm{inj}(A_X)=2d\\) comes from the purity theorem (cf. 3.2.2):\nif \\(x\\) is a closed point of codim. \\(d\\) of \\(X\\), we have indeed\n\\[\\operatorname{Ext}^{2d}(x,A_X;A_X)\n=H_x^{2d}(A_X)\\simeq\\mu_n^{\\otimes d}(k)\\ne0.\\]</p>"
+    },
+    {
+     "id": "I.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.3.3\">3.3. Constructibility of the\n\\(\\underline{\\operatorname{Ext}}^{\\,i}(F,A_X)\\)</h3>"
+    },
+    {
+     "id": "I.3.3.1",
+     "type": "proposition",
+     "label": "3.3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.3.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.3.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme.</p>\n  <p>a) The following conditions are equivalent:</p>\n  <p>(i) for \\(F\\in\\operatorname{ob}D_c^-(X)\\) and\n  \\(G\\in\\operatorname{ob}D_c^+(X)\\),\n  \\(R\\underline{\\operatorname{Hom}}(F,G)\\in\\operatorname{ob}D_c^+(X)\\);</p>\n  <p>(i bis) for every pair \\([F,G]\\) of constructible \\(A_X\\)-Modules,\n  \\(R\\underline{\\operatorname{Hom}}(F,G)\\in\\operatorname{ob}D_c^+(X)\\),\n  i.e. the \\(\\underline{\\operatorname{Ext}}^{\\,i}(F,G)\\) are constructible\n  for every \\(i\\);</p>\n  <p>(ii) for every open immersion \\(i:U\\longrightarrow X\\) and every\n  constructible \\(A_U\\)-Module \\(F\\), \\(R^pi_*(F)\\) is constructible for\n  every \\(p\\);</p>\n  <p>(ii bis) for every immersion \\(i:Y\\longrightarrow X\\) and every\n  constructible \\(A_Y\\)-Module \\(F\\), \\(R^pi_*(F)\\) is constructible for\n  every \\(p\\);</p>\n  <p>(ii ter) for every immersion \\(i:Y\\longrightarrow X\\) and every\n  locally constant constructible \\(A_Y\\)-Module \\(F\\), \\(R^pi_*(F)\\) is\n  constructible for every \\(p\\);</p>\n  <p>(iii) for every finite morphism (resp. every closed immersion)\n  \\(f:Y\\longrightarrow X\\), and every \\(F\\in\\operatorname{ob}D_c^+(X)\\),\n  \\(R^!f(F)\\in\\operatorname{ob}D_c^+(Y)\\).</p>\n  <p>b) These conditions are satisfied in the following two cases:</p>\n  <p>(i) \\(\\dim(X)\\leq1\\);</p>\n  <p>(ii) \"resolution of singularities and purity are available on\n  \\(X\\)\" (cf. 3.1.6 b)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: The equivalence of (i) and (i bis) follows from the standard\nspectral sequence from the \\(\\operatorname{Ext}\\) to the hyper\n\\(\\operatorname{Ext}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i bis) \\(\\Longrightarrow\\) (ii). Let \\(\\bar{F}\\) be a\nconstructible \\(A_X\\)-Module extending \\(F\\), for example\n\\(\\bar{F}=i_!(F)\\). By duality (SGA A XVIII 3.1.10), we have\n\\[Ri_*(F)=Ri_*R\\underline{\\operatorname{Hom}}(A_U,i^*\\bar{F})\n\\simeq R\\underline{\\operatorname{Hom}}(i_!(A_U),\\bar{F}),\\]\nand we are done.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) \\(\\Longrightarrow\\) (ii bis). Factor \\(i\\) as a closed immersion\nfollowed by an open immersion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii bis) \\(\\Longrightarrow\\) (i bis). The question being local, we may\nassume \\(X\\) affine, and, by the usual dévissage (SGA A IX 2.5), we may\nrestrict to checking (ii) for \\(F=i_!(M)\\), where\n\\(i:Y\\longrightarrow X\\) is the immersion of a subprescheme, and \\(M\\) is\na locally constant (constructible) \\(A_Y\\)-Module. By the projection\nformula (SGA A XVIII)\n\\[R\\underline{\\operatorname{Hom}}(i_!(M),G)\n\\simeq Ri_*R\\underline{\\operatorname{Hom}}(M,Ri^!(G))\\]\nand a spectral sequence, we are reduced to proving that\n\\(R\\underline{\\operatorname{Hom}}(M,Ri^!(G))\n\\in\\operatorname{ob}D_c^+(Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first show that \\(Ri^!(G)\\in\\operatorname{ob}D_c^+(Y)\\). After\nfactoring \\(i\\) if necessary, we may assume \\(Y\\) closed. Let\n\\(j:U=X-Y\\) be the complementary immersion. Applying the functor\n\\(R\\underline{\\operatorname{Hom}}(\\ ,G)\\) to the exact sequence\n\\[0\\longrightarrow A_{U,X}\\longrightarrow A_X\\longrightarrow A_Y\n\\longrightarrow0\\]\nwe obtain a distinguished triangle\n\\[\\xymatrix@C=4em@R=2.5em{\n&amp; R\\underline{\\operatorname{Hom}}(A_{U,X},G) \\ar[dl] &amp; \\\\\nR\\underline{\\operatorname{Hom}}(A_X,G) \\ar[rr] &amp;&amp;\nR\\underline{\\operatorname{Hom}}(A_Y,G) \\ar[ul]\n}\\]\nNow we have \\(R\\underline{\\operatorname{Hom}}(A_X,G)=G\\). On the other hand,\n\\(R\\underline{\\operatorname{Hom}}(A_{U,X},G)\\simeq Rj_*j^!(G)\\) belongs\nto \\(D_c^+(X)\\) by hypothesis. Hence\n\\(R\\underline{\\operatorname{Hom}}(A_Y,G)\\simeq i_*Ri^!(G)\\) belongs to\n\\(D_c^+(X)\\). Resolving \\(M\\) on the left locally, for the étale topology,\nby free \\(A_Y\\)-Modules, we deduce from this, by a new dévissage, that\n\\(R\\underline{\\operatorname{Hom}}(M,Ri^!(G))\n\\in\\operatorname{ob}D_c^+(Y)\\), qed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii bis) \\(\\Longrightarrow\\) (ii ter) is trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii ter) \\(\\Longrightarrow\\) (ii). Let \\(i:U\\longrightarrow X\\) be an\nopen immersion, \\(F\\) a constructible \\(A_U\\)-Module. We must prove that\n\\(Ri_*(F)\\in\\operatorname{ob}D_c^+(X)\\). The question being local, we may\nassume \\(X\\) noetherian, and we proceed by noetherian induction on\n\\(X\\). We may assume \\(U\\ne\\varnothing\\), so there exists\na nonempty open subset \\(j:V\\longrightarrow U\\) of \\(U\\) such that \\(j^*(F)\\)\nis locally constant (SGA A IX 2.4). Let \\(M\\) be the mapping-cylinder of\n\\(F\\longrightarrow Rj_*j^*(F)\\). Applying \\(Ri_*\\), we thus obtain a\ndistinguished triangle\n\\[\\xymatrix@C=4em@R=2.5em{\n&amp; Ri_*(M) \\ar[dl]_{(+1)} &amp; \\\\\nRi_*(F) \\ar[rr] &amp;&amp; Ri_*Rj_*j^*(F) \\ar[ul]\n}\\]\nCondition (ii ter) implies that we have\n\\[Ri_*Rj_*j^*(F)\\simeq R(ij)_*j^*(F)\\in\\operatorname{ob}D_c^+(X).\\]\nWe consequently have\n\\[Rj_*j^*(F)\\simeq i^*R(ij)_*j^*(F)\\in\\operatorname{ob}D_c^+(U).\\]\nHence \\(M\\in\\operatorname{ob}D_c^+(U)\\), since\n\\(F\\in\\operatorname{ob}D_c^+(U)\\). Moreover, the cohomology of \\(M\\) is\nsupported in a closed subset \\(Z\\) of \\(U\\) distinct from \\(U\\). Applying\nthe induction hypothesis to \\(U\\cap\\bar{Z}\\longrightarrow\\bar{Z}\\), we deduce\nthat \\(Ri_*(M)\\in\\operatorname{ob}D_c^+(X)\\), and consequently that\n\\(Ri_*(F)\\in\\operatorname{ob}D_c^+(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The equivalence of conditions (i)–(ii ter) with condition (iii) is\nleft to the reader (use 1.14).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) (i) By normalization, we reduce to the case where \\(X\\) is regular and\nwe use purity (which will be proved in (5.1)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) (ii) see 3.1.6 b).</p>"
+    },
+    {
+     "id": "I.3.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.3.4\">3.4. The biduality theorem on regular preschemes</h3>"
+    },
+    {
+     "id": "I.3.4.1",
+     "type": "theorem",
+     "label": "3.4.1.",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"I.3.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">3.4.1.</span> (cf. [H] V 2.2.)</div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a (locally noetherian) regular\n  prescheme of finite dimension. We suppose that \\(X\\) is strongly\n  desingularizable (3.1.5), satisfies conditions (reg) (3.1.1) and\n  \\((\\mathrm{cdloc})_n\\) (3.1.3), and that the absolute purity theorem\n  (3.1.4) is true on every prescheme smooth over \\(X\\). Then \\(A_X\\) is\n  dualizing (1.6).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We must prove that \\(A_X\\) satisfies\nconditions (i) to (iii) of (1.6). Condition (i) is satisfied by virtue of\n(3.2.1). Moreover \\(A_X\\) satisfies (ii) by virtue of (3.3.1 b)). There remains\ncondition (iii). In other words, it remains to prove, by (1.7), that, for\nevery constructible \\(A_X\\)-Module \\(F\\), the canonical homomorphism\n\\(F\\longrightarrow D_XD_XF\\) (where we have set\n\\(D_X=R\\underline{\\operatorname{Hom}}(\\ ,A_X)\\)) is an isomorphism. The\nquestion being local, we may assume \\(X\\) noetherian, and by dévissage\n(3.1.2 (iii bis)), we may restrict to the \\(F\\) of the form\n\\(F=f_*i_!(A'_U)\\), where \\(i:U\\longrightarrow Y\\) is the inclusion of a regular open subset\nin an integral prescheme, \\(f:Y\\longrightarrow X\\) is a finite morphism\nsuch that the generic point of \\(Y\\) is separable over its image,\n\\(A'=\\mathbb{Z}/\\ell\\mathbb{Z}\\), \\(\\ell\\) a prime divisor of \\(n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(X\\) is strongly desingularizable, there then exists (3.1.6) a\nproper birational morphism \\(h:Y'\\longrightarrow Y\\), where \\(Y'\\) is\nregular, \\(h\\) induces an isomorphism of \\(U'=h^{-1}(U)\\) onto \\(U\\), and\n\\(Y'-U'\\) is a divisor with normal crossings (3.1.6). Thanks to the base\nchange th. (cf. SGA A XVII) we have\n\\[i_!(A'_U)\\simeq Rh_*i'_!(A'_{U'}),\\]\nwhere \\(i'\\) is the inclusion \\(U'\\longrightarrow Y'\\), whence\n\\[f_*i_!(A'_U)\\simeq f_*Rh_*i'_!(A'_{U'})\n\\simeq Rg_*i'_!(A'_{U'}),\\]\nwith \\(g=fh\\). By virtue of (1.11), it suffices to prove that the pair</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((i'_!(A'_{U'}),R^!g(A_X))\\) is bidualizing. Embedding\n\\(Y'\\) locally in a prescheme \\(X'\\) smooth over \\(X\\), and applying the purity theorem\non \\(X'\\), we see that \\(R^!g(A_X)\\) is locally isomorphic to\n\\(A_{Y'}\\), up to translation. We are thus reduced to proving the following\nspecial case of (3.4.1):</p>"
+    },
+    {
+     "id": "I.3.4.2",
+     "type": "lemma",
+     "label": "3.4.2",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.3.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.4.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a locally noetherian regular\n  prescheme on which the absolute purity theorem is true (3.1.4). Let\n  \\(Y=Y_1\\cup\\cdots\\cup Y_p\\) be a divisor with strict normal crossings\n  on \\(X\\) (3.1.6), and let \\(U=X-Y\\). Then the pair\n  \\((A'_{U,X},A_X)\\) is bidualizing (1.4).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Thanks to the exact sequence\n\\[0\\longrightarrow A'_{U,X}\\longrightarrow A'_X\n\\longrightarrow A'_Y\\longrightarrow0,\\]\nit amounts to the same to check that the pair \\((A'_Y,A_X)\\) is bidualizing.\nWe argue by induction on \\(p\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) \\(p=1\\). Denote by \\(i\\) the immersion \\(Y\\longrightarrow X\\). By (1.11),\nit suffices to check that \\((A'_Y,R^!i(A_X))\\) is bidualizing. Now, by virtue\nof the purity theorem,\n\\[R^!i(A_X)\\simeq(\\mu_n)_Y^{\\otimes-1}[-2].\\]\nConsequently, the canonical homomorphism\n\\(A'_Y\\longrightarrow D_YD_Y(A'_Y)\\) is an isomorphism, as one checks\ntrivially stalk by stalk (Pontryagin duality for\n\\(A\\)-modules).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \\(p\\geq2\\). Set \\(Y'=Y_1\\cup\\cdots\\cup Y_{p-1}\\). We have the exact\nsequence\n\\[0\\longrightarrow A'_{(Y-Y'),X}\\longrightarrow A'_Y\n\\longrightarrow A'_{Y'}\\longrightarrow0.\\]\nThe pair \\((A'_{Y'},A_X)\\) being bidualizing by the induction hypothesis,\nwe are reduced by the five lemma to checking biduality for\n\\((A'_{(Y-Y'),X},A_X)\\). Now, we again have an exact sequence:\n\\[0\\longrightarrow A'_{(Y-Y'),X}\\longrightarrow A'_{Y_p}\n\\longrightarrow A'_{Y_p\\cap Y'}\\longrightarrow0.\\]\nSince \\((A'_{Y_p},A_X)\\) is bidualizing, we must therefore check that the same is\ntrue of \\((A'_{Y_p\\cap Y'},A_X)\\). Applying (1.11) and purity\nonce more, we are finally reduced to checking biduality for\n\\((A'_{Y_p\\cap Y'},A_{Y_p})\\) on \\(Y_p\\), and we are done by the induction\nhypothesis.</p>"
+    },
+    {
+     "id": "I.3.4.3",
+     "type": "corollary",
+     "label": "3.4.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"I.3.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.4.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(S\\) be a noetherian regular\n  excellent prescheme of characteristic zero. Then \\(A_S\\) is dualizing. Moreover,\n  if \\(f:X\\longrightarrow S\\) is a morphism of finite type,\n  \\(R^!f(A_S)\\) is dualizing.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: The first assertion follows from the fact that \\(S\\) satisfies the\nhypotheses of (3.4.1) (see 3.1). For the second, we must first check\nthat \\(R^!f(A_S)\\) is of finite quasi-injective dimension. For this, we cover\n\\(S\\) by a finite number of affine open subsets \\(S_i\\) such that\n\\(X_i=f^{-1}(S_i)\\) is a finite union of affine open subsets \\(X_{ij}\\) embedded\nas closed subpreschemes in preschemes \\(X'_{ij}\\) smooth of finite dimension over \\(S_i\\).\nFrom (3.2.3) and (1.6), we then deduce that\n\\[\\dim.\\mathrm{q.inj}(R^!f(A_S))\\leq2\\sup(\\dim X'_{ij}).\\]\nIt remains to check conditions (ii) and (iii) of (1.7). Since these\nare of a local nature on \\(X\\) for the étale topology, we may assume\nthat \\(f\\) factors as \\(f=f'i\\), where \\(f':X'\\longrightarrow S\\) is a\nsmooth morphism of relative dimension \\(d\\) and \\(i:X\\longrightarrow X'\\)\na closed immersion. We have\n\\[R^!f(A_S)\\simeq R^!i\\,R^!f'(A_S).\\]\nNow \\(R^!f'(A_S)\\) is locally isomorphic to \\(A_{X'}\\) (up to translation\nby \\(2d\\)), hence dualizing by virtue of the first assertion. Consequently, by\nvirtue of (1.15), \\(R^!f(A_S)\\) is dualizing, hence in particular satisfies\nconditions (ii) and (iii) of (1.7), qed.</p>"
+    },
+    {
+     "id": "I.3.4.4",
+     "type": "corollary",
+     "label": "3.4.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"I.3.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.4.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(k\\) be a field, and let\n  \\(f:X\\longrightarrow S=\\operatorname{Spec}(k)\\) be a morphism locally\n  of finite type, with \\(\\dim(X)\\leq2\\). Then \\(R^!f(A_S)\\) is\n  dualizing.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Replacing \\(k\\) if necessary by its perfect closure,\na harmless operation for the étale topology (VIII 1.1), we may assume\n\\(k\\) perfect. We cover \\(X\\) by affine open subsets \\(X_i\\) of finite\ntype over \\(k\\). Since \\(\\dim(X_i)\\leq2\\), \\(X_i\\) is finite over a \\(X'_i\\)\nsmooth over \\(S\\) and of dimension \\(\\leq2\\) (normalization lemma). By\n(1.15) we are then reduced to the case where \\(f\\) is smooth, hence\n\\(R^!f(A_S)\\simeq A_X[2d]\\) (locally), i.e. to showing that in this case\n\\(A_X\\) is dualizing; but this follows from (3.4.1), since the hypotheses\nare indeed satisfied (see 3.1).</p>"
+    },
+    {
+     "id": "I.3.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.3.4.5\"><u>Remark 3.4.5.</u> We shall see below that if \\(X\\) is\nregular of dimension \\(\\leq1\\), \\(A_X\\) is dualizing.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "I-fn5",
+     "number": "(*)",
+     "html": "(Added in 1977) or, by a\nrecent result of G. Ofer, if \\(X\\) is excellent, regular, and of\ndimension 2."
+    },
+    {
+     "id": "I-fn6",
+     "number": "(*)",
+     "html": "(Added in 1977) more\ngenerally, if \\(X\\) is excellent noetherian of dimension \\(\\leq2\\),\nby H. Hironaka, <i>Desingularization of excellent surfaces</i>,\nnotes by B. Bennett, Bowdoin college, 1967 (to be supplemented if necessary\nby H. Hironaka, <i>Certain numerical characters of singularities</i>,\nJ. of Math. of Kyoto Univ., 10, 1970, p. 151–187)."
+    }
+   ]
+  },
+  {
+   "id": "I-4",
+   "title": "4. Local duality",
+   "blocks": [
+    {
+     "id": "I.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.4\">4. Local duality</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The object of this section is to present the notion of \"biduality\" developed\nin the preceding sections in a form closer to geometric\nintuition.</p>"
+    },
+    {
+     "id": "I.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.1\"><strong>4.1.</strong> Let \\(X\\) be a prescheme,\n\\(i:x\\longrightarrow X\\) a closed point with separably closed residue\nfield, \\(K_X\\) a dualizing complex on \\(X\\) (1.7). We know (1.15) that\n\\(K_{\\{x\\}}=R^!i(K_X)\\) is a dualizing complex on \\(x\\), hence, by virtue\nof (2.1) and (3.4.4), isomorphic to \\(A[r]\\) for some \\(r\\in\\mathbb{Z}\\)\n(if \\(A\\) is local). We shall say that \\(K_X\\) is <u>normalized at \\(x\\)</u>\nif \\(r=0\\) and if we are given an isomorphism\n\\[K_{\\{x\\}}\\xrightarrow{\\sim}A.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For example, if \\(X\\) is smooth of relative dimension \\(d\\) over the\nspectrum of a separably closed field, the complex\n\\((\\mu_n)_X^{\\otimes d}[2d]\\) is, by virtue of the purity theorem\n(SGA A XVI 3, SGA 4<sup>1/2</sup> Cycle 2.3), canonically normalized at every\nclosed point of \\(X\\).</p>"
+    },
+    {
+     "id": "I.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.2\"><strong>4.2.</strong> Let \\(X\\) be a prescheme,\n\\(i:Y\\longrightarrow X\\) a closed subprescheme, \\(K_X\\) a dualizing\ncomplex on \\(X\\). Then (1.15) \\(K_Y=R^!i(K_X)\\) is a dualizing complex\non \\(Y\\), and we have the <u>complementary induction formula</u>\n(1.12. b) (ii)), for \\(F\\in\\operatorname{ob}D_c^b(X)\\),\n\\[\\tag{4.2.1}i^*D_X(F)\\xrightarrow{\\sim}D_YR^!i(F),\\]\nwhere we have set\n\\(D_X=R\\underline{\\operatorname{Hom}}(\\ ,K_X)\\),\n\\(D_Y=R\\underline{\\operatorname{Hom}}(\\ ,K_Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us apply (4.2.1) in particular to the case where \\(Y=\\{x\\}\\) is a closed\npoint of \\(X\\) with separably closed residue field, \\(K_X\\) being normalized\nat \\(x\\) (4.1). Taking into account the fact that \\(A_{\\{x\\}}\\) is injective, (4.2.1)\nthen reads\n\\[\\tag{4.2.2}D_X(F)_x\\xrightarrow{\\sim}\n\\operatorname{Hom}^{\\bullet}(R^!i(F),A).\\]\nNoting that \\(R^!i(F)\\) can also be written, by definition,\n\\(R\\Gamma_x(F)\\), we thus have a perfect pairing in \\(D(A)\\):\n\\[\\tag{4.2.2}'D_X(F)_x\\times R\\Gamma_x(F)\\longrightarrow A,\\]\ngiving rise to perfect pairings between finite groups:\n\\[\\tag{4.2.2}''\n\\underline{H}^{\\,i}(D_X(F))_x\\times\n\\underline{H}^{-i}_x(F)\\longrightarrow A.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For example, let \\(X\\) be a smooth prescheme of dimension \\(d\\) over a\nseparably closed field, and let \\(x\\in X\\) be a closed point. Then, for\n\\(F\\in\\operatorname{ob}D_c^b(X)\\), we have a canonical perfect duality\nbetween finite groups:\n\\[\\tag{4.2.2}'''\n\\underline{\\operatorname{Ext}}^{\\,2d-i}\n(F,(\\mu_n)_X^{\\otimes d})_x\n\\times\\underline{H}^{\\,i}_x(F)\\longrightarrow A.\\]</p>"
+    },
+    {
+     "id": "I.4.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.2.3\"><u>Exercise 4.2.3.</u> Let \\(X\\) be a strictly local\nscheme (SGA A VIII 4.2), with closed point \\(x\\), and let\n\\(i:x\\longrightarrow X\\) be the canonical morphism. Let \\(K\\) be a dualizing\ncomplex on \\(X\\), normalized at \\(x\\). Denote by\n\\[Li_?:D^b(A)\\longrightarrow D^-(X)\\]\nthe functor defined by\n\\[Li_?(M)=M\\mathbin{\\overset{L}{\\otimes}}_A K.\\]\n(If \\(K\\) is of finite tor-dimension over \\(A\\), \\(Li_?\\) extends to a\nfunctor from \\(D^+(A)\\) to \\(D(X)\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Show that there exists, for \\(L\\in D^-(X)\\) and \\(M\\in D^b(A)\\), a\ncanonical functorial isomorphism\n\\[\\tag{*}R\\operatorname{Hom}(L,Li_?(M))\n\\xrightarrow{\\sim}R\\operatorname{Hom}(R^!i(L),M),\\]\n(we assume of course that \\(R^!i:D^-(X)\\longrightarrow D^-(A)\\) is\ndefined ...).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Hint</u>: First define a \"trace\" morphism:\n\\(R^!i\\,Li_?(M)\\longrightarrow M\\), then, to check that (*) is an\nisomorphism, reduce, by dévissage, to the case where\n\\(L\\in\\operatorname{ob}D_c^b(X)\\) and \\(M=A\\), and apply (4.2.2). Note\nthat, for \\(M=A\\), (*) reduces to the perfect pairing (\"local duality\"\ncf. [H] V 6.2):\n\\[R\\Gamma_x(L)\\times R\\operatorname{Hom}(L,K)\\longrightarrow A,\\]\nor\n\\[\\underline{H}^{\\,i}_x(L)\\times\n\\operatorname{Ext}^{-i}(L,K)\\longrightarrow A.\\]</p>"
+    },
+    {
+     "id": "I.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.3\"><strong>4.3.</strong> We are now going to generalize\n(4.2.2) to the case of a geometric point \\(\\bar{x}\\) of \\(X\\) localized at a\npoint \\(x\\) which is not necessarily closed. For this we shall need\nsome preliminaries.</p>"
+    },
+    {
+     "id": "I.4.3.1",
+     "type": "lemma",
+     "label": "4.3.",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.4.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.3.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme, \\(X'\\) the strict\n  localization of \\(X\\) at a geometric point \\(\\bar{x}\\),\n  \\(f:X'\\longrightarrow X\\) the canonical arrow. Then, for\n  \\(F\\in\\operatorname{ob}D_c^-(X)\\), \\(G\\in\\operatorname{ob}D^+(X)\\),\n  the canonical functorial homomorphism (SGA VI I 3.7)\n  \\[f^*R\\underline{\\operatorname{Hom}}(F,G)\\longrightarrow\n  R\\underline{\\operatorname{Hom}}(f^*F,f^*G)\\]\n  is an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: We reduce, as usual, to \\(F\\) and \\(G\\) concentrated\nin degree 0. The question being local in a neighborhood of \\(x\\), we may assume\n\\(X\\) affine. Then \\(F\\) admits (SGA A IX 2.7) a left resolution by\nsheaves of the type \\(i_!(A_U)\\), where \\(i:U\\longrightarrow X\\) is étale\nof finite presentation, so, by dévissage, we are reduced to\n\\(F=i_!(A_U)\\). Let us form the cartesian square\n\\[\\xymatrix@C=4em@R=2.5em{\nU' \\ar[r]^g \\ar[d]_{i'} &amp; U \\ar[d]^i \\\\\nX' \\ar[r]_f &amp; X .\n}\\]\nWe have canonical isomorphisms, trivial special cases of duality\n(SGA A XVIII 3.1.10):\n\\[R\\underline{\\operatorname{Hom}}(F,G)\\simeq Ri_*i^*G,\\]\n\\[R\\underline{\\operatorname{Hom}}(f^*F,f^*G)\n\\simeq Ri'_*g^*i^*G.\\]\nVia these isomorphisms the canonical arrow\n\\[f^*R\\underline{\\operatorname{Hom}}(F,G)\\longrightarrow\nR\\underline{\\operatorname{Hom}}(f^*F,f^*G)\\]\nis identified with the base change arrow (SGA A XVII)\n\\[f^*Ri_*i^*(G)\\longrightarrow Ri'_*g^*i^*(G).\\]\nNow the latter is an isomorphism, as one sees at once by passage to\nthe limit (SGA A VII 5.11).</p>"
+    },
+    {
+     "id": "I.4.4",
+     "type": "lemma",
+     "label": "4.4.",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"I.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.4.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme, and let\n  \\(K\\in\\operatorname{ob}D_c^+(X)\\) be a complex satisfying conditions\n  (i) and (ii) of (1.7). For \\(K\\) to be dualizing, it is necessary and sufficient\n  that, for every strict localization \\(f:\\bar{X}(\\bar{x})\\longrightarrow X\\),\n  \\(f^*K\\) be dualizing.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: Use the fact that every constructible sheaf on a\nstrict localization \\(\\bar{X}(\\bar{x})\\) is induced by a constructible sheaf\non an étale \\(\\bar{x}\\)-pointed scheme over \\(X\\) (SGA A IX 2.7.4) and\napply (4.3).</p>"
+    },
+    {
+     "id": "I.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.5\"><strong>4.5.</strong> Let \\(X\\) be a prescheme, \\(\\bar{x}\\)\na geometric point of \\(X\\), \\(f:X'=\\bar{X}(\\bar{x})\\longrightarrow X\\)\nthe corresponding strict localization.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(Y\\) be the integral closed subprescheme which is the closure of \\(x\\) in \\(X\\),\ndenote by \\(g:\\bar{x}\\longrightarrow Y\\) and \\(i:Y\\longrightarrow X\\) the\ncanonical arrows, and form the cartesian square\n\\[\\xymatrix@C=4em@R=2.5em{\n\\bar{x} \\ar[r]^{i'} \\ar[d]_g &amp; X' \\ar[d]^f \\\\\nY \\ar[r]_i &amp; X .\n}\\]\n(\\(\\bar{x}\\) is at the same time the closed point of \\(X'\\) and the strict localization\nof \\(Y\\) at \\(\\bar{x}\\)). We shall denote by\n\\[R\\Gamma_{\\bar{x}}:D^+(X)\\longrightarrow D^+(\\bar{x})\\]\nthe functor defined by\n\\[\\tag{4.5.1}R\\Gamma_{\\bar{x}}=g^*R^!i.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Using the well-known relation between the functors \\(R^!i\\) and\n\\(Rj_*j^*\\), where \\(j:U\\longrightarrow X\\) is the open complement of\n\\(Y\\), and applying passage to the limit (SGA A VII 5.11), we find a\ncanonical isomorphism\n\\[\\tag{4.5.2}R\\Gamma_{\\bar{x}}\\xrightarrow{\\sim}R^!i'f^*.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(x\\) is a closed point with separably closed residue field,\nthe functor \\(R\\Gamma_{\\bar{x}}\\) coincides with the usual functor\n\\(R\\Gamma_x\\) (SGA V 4.3), which justifies the notation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(K_X\\in\\operatorname{ob}D^+(X)\\), and set\n\\(K_Y=R^!i(K_X)\\), \\(K_{X'}=f^*K_X\\),\n\\(K_{\\bar{x}}=R\\Gamma_{\\bar{x}}(K_X)\\) (warning:\n\\(K_{\\bar{x}}\\) is not the stalk of \\(K_X\\) at \\(\\bar{x}\\)!).\nSuppose that \\(K_X\\) is dualizing. Then, by virtue of (1.15) and (4.4),\nthe same is true of \\(K_{X'}\\), \\(K_Y\\), \\(K_{\\bar{x}}\\). Hence (2.1) we have\n\\(K_{\\bar{x}}\\simeq A[d]\\) for some \\(d\\in\\mathbb{Z}\\). We shall say that\n\\(K_X\\) is <u>normalized at \\(\\bar{x}\\)</u> if \\(d=0\\) and if we have chosen\nan isomorphism \\(K_{\\bar{x}}\\xrightarrow{\\sim}A\\). In the case where \\(x\\)\nis closed with separably closed residue field, we recover the notion\nintroduced in (4.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(K_X\\) be a dualizing complex, and set\n\\(D_X=R\\underline{\\operatorname{Hom}}(\\ ,K_X)\\),\n\\(D_Y=R\\underline{\\operatorname{Hom}}(\\ ,K_Y)\\), etc. Let\n\\(F\\in\\operatorname{ob}D_c^b(X)\\), and let us compute \\((D_XF)_{\\bar{x}}\\). We have:\n\\[\\begin{aligned}\n(D_XF)_{\\bar{x}}&amp;\\simeq g^*i^*D_XF\\\\\n&amp;\\xrightarrow{\\sim}g^*D_YR^!iF\n&amp;&amp;\\text{(by the complementary induction formula (4.2.1))}\\\\\n&amp;\\xrightarrow{\\sim}D_{\\bar{x}}g^*R^!i(F)\n&amp;&amp;\\text{(by (4.3)),}\n\\end{aligned}\\]\nthat is\n\\[\\tag{4.5.3}(D_XF)_{\\bar{x}}\n\\xrightarrow{\\sim}D_{\\bar{x}}R\\Gamma_{\\bar{x}}(F).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Of course, we could have made an analogous computation by passing through</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(X'\\) instead of \\(Y\\); we would then have obtained a canonical isomorphism\n\\[(D_XF)_{\\bar{x}}\\xrightarrow{\\sim}\nD_{\\bar{x}}R^!i'f^*(F),\\]\ncompatible with (4.5.3) via the identification (4.5.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If moreover \\(K_X\\) is normalized at \\(\\bar{x}\\), we obtain\nperfect pairings generalizing (4.2.2)' and (4.2.2)'':\n\\[\\tag{4.5.3}'D_X(F)_{\\bar{x}}\\times\nR\\Gamma_{\\bar{x}}(F)\\longrightarrow A,\\]\n\\[\\tag{4.5.3}''\n\\underline{H}^{\\,i}(D_X(F))_{\\bar{x}}\\times\n\\underline{H}^{-i}_{\\bar{x}}(F)\\longrightarrow A,\\]\n(where we have set\n\\(\\underline{H}^{\\,i}_{\\bar{x}}=\n\\underline{H}^{\\,i}R\\Gamma_{\\bar{x}}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conversely, let \\(K_X\\in\\operatorname{ob}D^+(X)\\) satisfy\nconditions (i) and (ii) of (1.7) and be such that\n\\(K_{\\bar{x}}=R\\Gamma_{\\bar{x}}(K_X)\\) is dualizing for every geometric\npoint \\(\\bar{x}\\) of \\(X\\). Then, for every \\(\\bar{x}\\), we can\ndefine (cf. 1.12 b) (ii)) a canonical arrow\n\\[\\tag{4.5.3}\nD_X(F)_{\\bar{x}}\\longrightarrow\nD_{\\bar{x}}R\\Gamma_{\\bar{x}}(F)\n\\quad\\text{for }F\\in\\operatorname{ob}D_c^b(X).\\]\nIf the latter is an isomorphism for every \\(\\bar{x}\\) and every \\(F\\), then\n\\(K_X\\) is dualizing. Indeed, we must check that the canonical arrow\n\\[F\\longrightarrow D_XD_X(F)\\]\nis an isomorphism for every \\(F\\in\\operatorname{ob}D_c^b(X)\\). Now, at an\narbitrary geometric point \\(\\bar{x}\\), we have\n\\[\\begin{aligned}\nF_{\\bar{x}}&amp;\\xrightarrow{\\sim}\nD_{\\bar{x}}D_{\\bar{x}}(F_{\\bar{x}})\n&amp;&amp;\\text{(puisque \\(K_{\\bar{x}}\\) est dualisant)}\\\\\n&amp;\\xrightarrow{\\sim}\nD_{\\bar{x}}R\\Gamma_{\\bar{x}}D_X(F)\n&amp;&amp;\\text{(by (4.3) and the induction formula 1.12 b) (i))}\\\\\n&amp;\\xrightarrow{\\sim}\nD_XD_X(F)_{\\bar{x}}\n&amp;&amp;\\text{(by hypothesis),}\n\\end{aligned}\\]\nhence, subject to a compatibility check, \\((F,K_X)\\) is\nbidualizing, which proves our assertion. To summarize:</p>"
+    },
+    {
+     "id": "I.4.5.4",
+     "type": "proposition",
+     "label": "4.5.4.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.5.4.</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a prescheme, and\n  \\(K_X\\in\\operatorname{ob}D^+(X)\\) a complex satisfying conditions\n  (i) and (ii) of (1.7). For \\(K_X\\) to be dualizing, it is necessary and sufficient\n  that for every geometric point \\(\\bar{x}\\) of \\(X\\) the complex\n  \\(K_{\\bar{x}}\\) be dualizing and that the canonical arrow (4.5.3) be an\n  isomorphism for every \\(F\\in\\operatorname{ob}D_c^b(X)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.5.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.5.5\"><u>Remark 4.5.5.</u> The existence of dualizing complexes\nmust be regarded, in a sense, as an important complement to the global\nduality theorem. Indeed, the latter expresses that we have, for a\nseparated morphism of finite type \\(f:X\\longrightarrow Y\\) (\\(Y\\) being\nquasi-compact), a canonical isomorphism\n\\[D_YR_!f(F)\\xrightarrow{\\sim}Rf_*D_X(F)\\]\n(with the notations of 1.12).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Its exploitation for the computation of \\(R_!f(F)\\) (when\n\\(F\\in\\operatorname{ob}D_c^b(X)\\)) requires information about\n\\(D_X(F)\\). When \\(K_X\\) is dualizing, this is provided by\nthe isomorphism (4.5.3), which allows, at least theoretically, a computation of the\nstalks of \\(D_X(F)\\) as \"purely spatial\" cohomology invariants.</p>"
+    },
+    {
+     "id": "I.4.5.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.5.6\"><u>Exercise 4.5.6.</u> Let \\(X\\) be a prescheme equipped with a\ndualizing complex (1.7). The family of functors (cf. (4.5.3)'')\n\\[\\underline{H}^{\\,i}_{\\bar{x}}:D_c^b(X)\\longrightarrow(A\\text{-modules})\\]\n(\\(i\\) running through \\(\\mathbb{Z}\\) and \\(\\bar{x}\\) through the set of geometric\npoints of \\(X\\)) is \"conservative\", i.e. a morphism\n\\(F\\longrightarrow G\\) in \\(D_c^b(X)\\) such that the\n\\(\\underline{H}^{\\,i}_{\\bar{x}}(F)\\longrightarrow\n\\underline{H}^{\\,i}_{\\bar{x}}(G)\\) are isomorphisms, is an\nisomorphism.</p>"
+    },
+    {
+     "id": "I.4.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.6\"><strong>4.6.</strong> Let \\(X\\) be a prescheme,\n\\(j:Y\\longrightarrow X\\) a closed subprescheme,\n\\(i:\\bar{x}\\longrightarrow Y\\) a geometric point of \\(Y\\). Let on the other\nhand \\(K_X\\) be a dualizing complex on \\(X\\), normalized at \\(\\bar{x}\\)\n(cf. (4.5)). We saw in (4.5) that, if \\(Y\\) is the closure of \\(x\\), we have,\nfor \\(F\\in\\operatorname{ob}D_c^b(X)\\), a perfect pairing\n\\[R^!j(F)_{\\bar{x}}\\times D_X(F)_{\\bar{x}}\\longrightarrow A.\\]\nIt is not difficult to define an analogous pairing in the general\ncase. Let us introduce the factorization of \\(i\\) as\n\\[\\bar{x}\\xrightarrow{i'}\\{\\bar{x}\\}\\xrightarrow{i''}Y.\\]\nFor \\(F\\in\\operatorname{ob}D_c^b(X)\\), we have canonical isomorphisms:\n\\[\\begin{aligned}\nR\\Gamma_{\\bar{x}}j^*D_X(F)\n&amp;\\xrightarrow{\\sim}R\\Gamma_{\\bar{x}}D_YR^!j(F)\n&amp;&amp;\\text{(complementary induction formula (4.2.1))}\\\\\n&amp;\\xrightarrow{\\sim}i'^*R^!i''D_YR^!j(F)\n&amp;&amp;\\text{(définition de \\(R\\Gamma_{\\bar{x}}\\) (4.5.1))}\\\\\n&amp;\\xrightarrow{\\sim}i'^*D_{\\bar{x}}R^!i''R^!j(F)\n&amp;&amp;\\text{(ordinary induction (1.12. b) (i))}\\\\\n&amp;\\xrightarrow{\\sim}D_{\\bar{x}}i'^*R^!j(F)\n&amp;&amp;\\text{(by 4.3),}\n\\end{aligned}\\]\ni.e. finally a canonical isomorphism\n\\[\\tag{4.6.1}R^!j(F)_{\\bar{x}}\\xrightarrow{\\sim}\nD_{\\bar{x}}R\\Gamma_{\\bar{x}}j^*D_X(F),\\]\nwhence perfect pairings\n\\[\\tag{4.6.1}'R^!j(F)_{\\bar{x}}\\times\nR\\Gamma_{\\bar{x}}j^*D_X(F)\\longrightarrow A,\\]\n\\[\\tag{4.6.1}''\n\\underline{H}^{\\,i}_Y(F)_{\\bar{x}}\\times\n\\underline{H}^{-i}_{\\bar{x}}(D_X(F)|Y)\\longrightarrow A.\\]</p>"
+    },
+    {
+     "id": "I.4.6.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.6.2\"><u>Example 4.6.2.</u> Let \\(X\\) be a regular prescheme,\n\\(\\bar{x}\\) a geometric point of \\(X\\),\n\\(d=\\dim(\\mathcal{O}_{X,x})\\). Set\n\\(K_X=(\\mu_n)_X^{\\otimes d}[2d]\\). If \\(X\\) satisfies condition (reg)\n(3.1.1) and the purity theorem (3.1.4), then \\(K_X\\) is canonically\nnormalized at \\(\\bar{x}\\). Hence, if \\(K_X\\) is dualizing, we have\nperfect pairings\n\\[\\underline{H}^{\\,i}_Y(F)_{\\bar{x}}\\times\n\\underline{H}^{\\,2d-i}_{\\bar{x}}(F'|Y)\\longrightarrow A,\\]\nfor every closed subset \\(Y\\) containing \\(x\\) and every\n\\(F\\in\\operatorname{ob}D_c^b(X)\\), with\n\\[F'=R\\underline{\\operatorname{Hom}}(F,(\\mu_n)_X^{\\otimes d}).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To finish, let us give a strictly local variant of (4.6.1).</p>"
+    },
+    {
+     "id": "I.4.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.7\"><strong>4.7.</strong> Let \\(X\\) be a noetherian strictly local\nscheme (SGA A VIII 4.2), with closed point \\(x\\). Let \\(Y\\) be a nonempty\nclosed subset of \\(X\\), and consider the canonical immersions\n\\[U=X-Y\\xrightarrow{i}V=X-\\{x\\}\\xrightarrow{j}X.\\]\nFinally, let \\(K_X\\) be a dualizing complex normalized at \\(x\\) (4.1), whence\n\"corresponding\" dualizing complexes on \\(U,V,Y,x\\):\n\\[K_V=j^*K_X,\\qquad K_U=i^*K_V,\\qquad K_Y=R\\Gamma_Y(K_X).\\]\nLet \\(G\\in\\operatorname{ob}D_c^b(U)\\), and set \\(G'=D_U(G)\\). We propose\nto define a natural pairing\n\\[\\tag{4.7.1}R\\Gamma(U,G)\\times\nR\\Gamma(V,i_*G')[-1]\\longrightarrow A,\\]\ni.e. a functorial homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\\tag{4.7.1}'R\\Gamma(U,G)\\mathbin{\\overset L\\otimes_A}\nR\\Gamma(V,i_!G')[-1]\\longrightarrow A.\\]\n(There is a difficulty here: \\(A=\\mathbf Z/\\ell^\\nu\\mathbf Z\\) is of\ninfinite cohomological dimension if \\(\\nu\\geq2\\), and a priori one only knows how\nto define the tensor products\n\\[\\mathbin{\\overset L\\otimes}:D^-(A)\\times D^-(A)\\longrightarrow D^-(A)\\]\nand\n\\[\\mathbin{\\overset L\\otimes}:D(A)\\times D^b(A)_{\\mathrm{torf}}\n\\longrightarrow D(A).\\]<sup><a id=\"I-fn7ref\" href=\"#I-fn7\">(*)</a></sup>\nWe therefore leave to the reader the task of making suitable hypotheses\nensuring that the two factors of \\(\\mathbin{\\overset L\\otimes}\\)\nappearing in (4.7.1)' are in \\(D^b(A)\\), or that one of them is of\nfinite tor-dimension.)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By complementary duality (1.12 a) (ii), we have an isomorphism\n\\[\\tag{4.7.2}i_!(G')\\xrightarrow{\\sim}D_V(Ri_*G).\\]\nOn the other hand, by ordinary duality, we have\n\\[\\tag{4.7.3}R\\operatorname{Hom}(A_U,G)\\xrightarrow{\\sim}\nR\\operatorname{Hom}(A_V,Ri_*G).\\]\nBy definition of \\(D_V\\), we have a canonical homomorphism\n\\[\\tag{4.7.4}Ri_*G\\mathbin{\\overset L\\otimes}D_V(Ri_*G)\n\\longrightarrow K_V.\\]\nWe thus deduce from (4.7.2), (4.7.3) and (4.7.4) a homomorphism\n\\[\\tag{4.7.5}R\\Gamma(U,G)\\mathbin{\\overset L\\otimes}\nR\\Gamma(V,i_!G')\\longrightarrow R\\operatorname{Hom}(A_V,K_V).\\]\nSince \\(K_V=j^*K_X\\), we have by duality\n\\[\\tag{4.7.6}R\\operatorname{Hom}(A_V,K_V)\\xrightarrow{\\sim}\nR\\operatorname{Hom}(A_{V,X},K_X).\\]\nFinally, the exact sequence\n\\[\\tag{4.7.7}0\\longrightarrow A_{V,X}\\longrightarrow A_X\n\\longrightarrow A_x\\longrightarrow0\\]\ngives a homomorphism of degree \\(+1\\)\n\\[\\tag{4.7.8}R\\operatorname{Hom}(A_{V,X},K_X)\\longrightarrow\nR\\operatorname{Hom}(A_x,K_X)\\simeq A.\\]\nComposing, we obtain (4.7.1)'.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove that this pairing is perfect. We are going to\nidentify \\(R\\Gamma(V,i_!G')[-1]\\) with\n\\(D_A R\\Gamma(U,G)\\). Suppose first that \\(G=(ji)^*F\\), where\n\\(F\\in\\operatorname{ob}D_c^b(X)\\). Set \\(F'=D_X(F)\\) and\n\\(F'_{U,X}=(ji)_!G'\\). The exact sequence\n\\[\\tag{4.7.9}0\\longrightarrow F'_{U,X}\\longrightarrow F'\n\\longrightarrow F'|Y\\longrightarrow0\\]\ngives rise to a distinguished triangle\n\\[\n\\begin{array}{c}\nR\\Gamma_x(F'_{U,X})\\\\[-2mm]\n\\swarrow^{+1}\\qquad\\searrow\\\\[-2mm]\nR\\Gamma_x(F'|Y)\\longleftarrow R\\Gamma_x(F').\n\\end{array}\\tag{b}\n\\]\nBy definition,\n\\[R\\Gamma_x(F'_{U,X})=R\\operatorname{Hom}(A_x,F'_{U,X}).\\]\nTaking into account (4.7.7), and the fact that\n\\((F'_{U,X})_x=R\\Gamma(X,F'_{U,X})=0\\), we have a canonical isomorphism\n\\[R\\operatorname{Hom}(A_{V,X},F'_{U,X})[1]\\xrightarrow{\\sim}\nR\\Gamma_x(F'_{U,X}).\\]\nBut we have\n\\[\n\\begin{aligned}\nR\\operatorname{Hom}(A_{V,X},F'_{U,X})\n &amp;=R\\operatorname{Hom}(j_!A_V,j_!i_!G')\\\\\n &amp;\\simeq R\\operatorname{Hom}(A_V,i_!G')\\quad\n \\text{by duality (SGA 3.1.10),}\n\\end{aligned}\n\\]\nwhence finally a canonical isomorphism\n\\[\\tag{4.7.10}R\\Gamma(V,i_!G')[-1]\\xrightarrow{\\sim}\nR\\Gamma_x(F'_{U,X}).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On the other hand we have the exact sequence\n\\[\\tag{4.7.11}0\\longrightarrow A_{U,X}\\longrightarrow A_X\n\\longrightarrow A_Y\\longrightarrow0,\\]\nwhich gives rise to a distinguished triangle\n\\[\n\\begin{array}{c}\nR\\Gamma(U,F|U)\\\\[-2mm]\n\\swarrow^{+1}\\qquad\\nearrow\\\\[-2mm]\nR\\Gamma_Y(F)\\longrightarrow R\\Gamma(X,F).\n\\end{array}\\tag{a}\n\\]\nBy virtue of (4.7.1)' and (4.7.10), we have a natural pairing\n\\[\\tag{4.7.12}R\\Gamma(U,F|U)\\times\nR\\Gamma_x(F'_{U,X})\\longrightarrow A.\\]\nBy virtue of (4.6.1)', we have a perfect pairing\n\\[\\tag{4.7.13}R\\Gamma_Y(F)\\times\nR\\Gamma_x(F'|Y)\\longrightarrow A.\\]\nFinally, by the ordinary induction formula (1.12 b) (i), we have a\nperfect pairing\n\\[\\tag{4.7.14}R\\Gamma(X,F)\\times R\\Gamma_x(F')\\longrightarrow A.\\]\nThe reader who has the patience to find his way through this maze of\n\"canonical arrows\" will check that the pairings (4.7.12),\n(4.7.13), and (4.7.14) are \"compatible\" with the arrows of the triangles\n(a) and (b), and consequently that the pairings (4.7.12) and (4.7.1) are\nperfect.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The pairing of the triangles (a) and (b) gives rise to two exact\nsequences \"transposed of each other\":\n\\[\n\\tag{4.7.15}\n\\begin{aligned}\n\\cdots&amp;\\longrightarrow H_Y^i(X,F)\\longrightarrow H^i(X,F)\n\\longrightarrow H^i(U,F)\\longrightarrow\\cdots\\\\\n\\cdots&amp;\\longleftarrow H_x^{-i}(Y,F'|Y)\\longleftarrow\nH_x^{-i}(X,F')\\longleftarrow H^{-i-1}(V,F'_{U,V})\n\\longleftarrow\\cdots.\n\\end{aligned}\n\\]</p>"
+    },
+    {
+     "id": "I.4.7.16",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"theorem\" id=\"I.4.7.16\">\n<p><span class=\"theorem-title\">Proposition 4.7.16.</span> Let \\(X\\) be a\nnoetherian strictly local scheme, with closed point \\(x\\). Let \\(Y\\) be\na nonempty closed subset of \\(X\\), \\(U=X-Y\\), \\(V=X-x\\),\n\\(i:U\\longrightarrow V\\) and \\(j:V\\longrightarrow X\\) the canonical\ninclusions. Let \\(K_X\\) be a dualizing complex on \\(X\\) normalized at\n\\(x\\) (whence associated dualizing complexes on \\(V,U,Y\\)).</p>\n\n<p>For \\(G\\in\\operatorname{ob}D_c^b(U)\\), we have a perfect pairing:\n\\[\\tag{*}R\\Gamma(U,G)\\times R\\Gamma(V,i_!G')[-1]\\longrightarrow A\\]\n(where \\(G'=D_U(G)\\)).</p>\n\n<p>If \\(G=F|U\\), where \\(F\\in\\operatorname{ob}D_c^b(X)\\), we have a\ncanonical isomorphism\n\\[\\tag{**}R\\Gamma(V,i_!G')[-1]\\xrightarrow{\\sim}\nR\\Gamma_x(F'_{U,X})\\]\n(where \\(F'=D_X(F)\\) and\n\\(F'_{U,X}=(ji)_!(F'|U)\\simeq(ji)_!(G')\\)), and a perfect pairing\nbetween the distinguished triangles\n\\[\n\\begin{array}{c}\nR\\Gamma(U,F|U)\\\\[-2mm]\n\\swarrow^{+1}\\qquad\\nearrow\\\\[-2mm]\nR\\Gamma_Y(F)\\longrightarrow R\\Gamma(X,F)\n\\end{array}\n\\qquad\\text{and}\\qquad\n\\begin{array}{c}\nR\\Gamma_x(F'_{U,X})\\\\[-2mm]\n\\nearrow^{+1}\\qquad\\searrow\\\\[-2mm]\nR\\Gamma_x(F'|Y)\\longleftarrow R\\Gamma_x(F'),\n\\end{array}\n\\]\ncompatible with the pairing (*) and the isomorphism (**), and giving\nrise to two exact sequences transposed of each other (4.7.15).</p>\n</div>"
+    },
+    {
+     "id": "I.4.7.17",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.4.7.17\"><u>Remark 4.7.17.</u> In the particular case where\n\\(Y=\\{x\\}\\), the pairing (4.7.1) is defined under the sole hypothesis that\n\\(K_X\\) be normalized at \\(x\\) (and not necessarily dualizing),\ni.e. such that \\(R\\Gamma_x(K_X)\\simeq A\\), (the isomorphism being given);\nthe isomorphism (4.7.2) (which used biduality) then reduces to\nthe identity. Since the pairing (4.7.14) is in any case perfect, we\ntherefore see that <u>local duality on \\(X\\)</u> (in the form\n(4.2.2)') <u>is equivalent to \"global\" duality on \\(U=X-x\\)</u>, i.e.\nto the fact that the pairing (4.7.1)\n\\[R\\Gamma(U,G)\\times R\\Gamma(U,G')[-1]\\longrightarrow A\\]\nis perfect, or again that the pairings\n\\[H^i(U,G)\\times H^{-i-1}(U,G')\\longrightarrow A\\]\nare perfect.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose that we have on \\(X\\) a dualizing complex \\(K_X\\)\nnormalized at \\(x\\). If \\(X\\) is excellent and \\(U\\) regular of\ndimension \\(d\\) (\\(x\\) may thus be an isolated singularity), it\nshould be possible to check that\n\\(K_U=K_X|U\\) is canonically isomorphic to\n\\((\\mu_n)_U^{\\otimes d}[2d]\\) (one checks it easily in any case if\n\\(X\\) is the strict localization of a prescheme locally of finite type over a\nfield of char. 0). Then local duality on \\(X\\) implies that we have,\nfor every locally constant constructible \\(A_U\\)-module \\(G\\), perfect\npairings:\n\\[H^i(U,G)\\times H^{2d-i-1}(U,G^\\circ)\\longrightarrow A,\\]\n(where\n\\(G^\\circ=\\underline{\\operatorname{Hom}}\n(G,(\\mu_n)_U^{\\otimes d})\\)), which correspond formally to Poincaré\nduality on a scheme of dimension \\(2d-1\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "I-fn7",
+     "number": "(*)",
+     "html": "(Added in 77) Inexact: it is\neasy, in fact, to extend\n\\[\n\\mathbin{\\overset L\\otimes}:D^-(A)\\times D^-(A)\\longrightarrow D^-(A)\n\\]\nto\n\\[\n\\mathbin{\\overset L\\otimes}:D^-(A)\\times D(A)\\longrightarrow D(A).\n\\]"
+    }
+   ]
+  },
+  {
+   "id": "I-5",
+   "title": "5. Local duality on curves.",
+   "blocks": [
+    {
+     "id": "I.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.5\">5. Local duality on curves.</h2>"
+    },
+    {
+     "id": "I.5.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"theorem\" id=\"I.5.1\">\n<p><span class=\"theorem-title\">Theorem 5.1.</span> Let \\(X\\) be a\nnoetherian regular prescheme of dimension 1. We assume \\(n\\) prime\nto the residue characteristics of \\(X\\). Then the purity theorem\nis true on \\(X\\) (3.1.4) and the complex \\(A_X\\) is dualizing (1.7).</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> Suppose purity proved. Since \\(X\\)\nobviously satisfies condition (reg) (3.1.1), and the condition\n\\((\\mathrm{cdloc})_n\\) is satisfied by virtue of (SGAA X 2.2), we\nconclude, by (3.2.1), that\n\\(\\dim.q\\text{-}\\operatorname{inj}(A_X)=2\\). On the other hand, condition\n(ii) of (1.7) is satisfied by (3.3.1 b) (ii) (which was proved\nassuming purity). Hence, by virtue of (4.4), we are reduced to proving\nthat \\(A_X\\) is dualizing when \\(X\\) is strictly local. But, to\nprove purity, which is a local question in the neighborhood of a closed\npoint, we may equally assume \\(X\\) strictly local. Finally,\nwe are reduced to proving the theorem when \\(X\\) is strictly local.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose then \\(X\\) strictly local. Let \\(x\\) be its closed point,\n\\(\\pi=\\operatorname{car}(k(x))\\), \\(\\eta\\) its generic point,\n\\(U=X-x=\\operatorname{Spec}(k(\\eta))\\). Let\n\\(G=\\operatorname{Gal}(k(\\bar\\eta)/k(\\eta))\\) be the fundamental group of\n\\(U\\). We know [CL Chap. IV § 2 Exer 2] that there is a canonical\nexact sequence\n\\[\\tag{5.1.1}1\\longrightarrow P\\longrightarrow G\\longrightarrow H\n\\longrightarrow1,\\]\nwhere\n\\[H=\\prod_{\\ell'\\ne\\pi}\\mathbf Z_{\\ell'}(1),\\qquad\n\\mathbf Z_\\ell(1)=\\varprojlim_\\nu\\mu_{\\ell^\\nu},\\]\nand \\(P\\) is a pro-\\(\\pi\\)-group. (Of course, \\(H\\) is isomorphic,\nthough not canonically, to\n\\(\\prod_{\\ell'\\ne\\pi}\\mathbf Z_{\\ell'}\\).)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We know on the other hand (SGAA VIII 2) that the étale cohomology of \\(U\\)\nis interpreted as the Galois cohomology of \\(G\\), the sheaves\n(resp. constructible sheaves) of \\(A_U\\)-modules corresponding to the\n\\(A\\)-modules (resp. \\(A\\)-modules of finite type) on which \\(G\\)\nacts continuously.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>That being so, the \\(H_x^i(A_X)\\) are determined by the exact sequence\n\\[\\tag{5.1.2}0\\longrightarrow H_x^0(A_X)\\longrightarrow H^0(X,A_X)\n\\longrightarrow H^0(U,A_U)\\longrightarrow H_x^1(A_X)\n\\longrightarrow0,\\]\nand the isomorphisms\n\\[\\tag{5.1.3}H_x^i(A_X)\\simeq H^{i-1}(U,A_U)\\quad\\text{for }i\\geq2.\\]\nNow we trivially have \\(H^0(X,A_X)=H^0(U,A_U)=A\\), hence\n\\(H_x^0(A_X)=H_x^1(A_X)=0\\). On the other hand, for a (Galois) \\(G\\)-\\(A\\)-module\n\\(M\\), we have the Hochschild-Serre spectral sequence\n\\[E_2^{pq}=H^p(H,H^q(P,M))\\Longrightarrow H^{p+q}(G,M).\\]\nSince \\(n\\) is prime to \\(\\pi\\) and \\(P\\) is a\npro-\\(\\pi\\)-group, we have\n\\[H^q(P,M)=0\\quad\\text{for }q\\ne0,\\]\nhence \\(E_2^{pq}=0\\) for \\(q\\ne0\\), whence a canonical isomorphism\n\\[\\tag{5.1.4}H^p(G,M)\\xrightarrow{\\sim}H^p(H,M^P).\\]\nOne sees moreover, by an analogous argument, that \\(H^p(H,N)\\)\nis identified with \\(H^p(\\widehat{\\mathbf Z}(1),N)\\) when one makes the\ncomplementary factor of\n\\(\\widehat{\\mathbf Z}(1)\\) act trivially on \\(N\\). We thus finally have, with the preceding\nconvention, a canonical isomorphism\n\\[\\tag{5.1.5}H^p(G,M)\\simeq\nH^p(\\widehat{\\mathbf Z}(1),M^P).\\]\nNow the Galois cohomology of \\(\\widehat{\\mathbf Z}\\) is well known\n(CG Chap. I p. 51): for a \\(G\\)-\\(A\\)-module \\(N\\), we have\n\\[\\tag{5.1.6}\n\\begin{aligned}\nH^i(\\widehat{\\mathbf Z},N)&amp;=0 &amp;&amp;\\text{for }i\\geq2,\\\\\nH^0(\\widehat{\\mathbf Z},N)&amp;=N^{\\widehat{\\mathbf Z}},\\\\\nH^1(\\widehat{\\mathbf Z},N)&amp;=N_{\\widehat{\\mathbf Z}}.\n\\end{aligned}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From (5.1.3), (5.1.5), and (5.1.6) we deduce at once that\n\\[H^i(U,A_U)=0\\quad\\text{for }i\\geq2,\\qquad\nH^1(U,A_U)\\simeq A.\\]\nThis last isomorphism is not canonical, since it depends on the choice\nof an identification of \\(\\widehat{\\mathbf Z}(1)\\) with\n\\(\\widehat{\\mathbf Z}\\). But, using the Kummer exact sequence, one\nfinds (SGAA XIX 1.3) a canonical isomorphism (given by the \"local\nfundamental class\")\n\\[\\tag{5.1.7}H^1(U,\\mu_n)\\simeq A.\\]\nPurity is therefore proved.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now prove that \\(A_X\\) is dualizing. By (4.7.17), the\npoint is to show that, for every locally constant constructible\n\\(A_U\\)-module \\(M\\), the pairing\n\\[\\tag{5.1.8}H^i(U,M)\\times\nH^{1-i}(U,\\underline{\\operatorname{Hom}}(M,A_U))\n\\longrightarrow H^1(U,A_U)\\simeq(\\mu_n)_x^{\\otimes-1}\\]\nis a perfect duality. We are going to interpret this pairing in\nterms of Galois cohomology. We shall use the following elementary\nlemma:</p>"
+    },
+    {
+     "id": "I.5.1.9",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"lemma\" id=\"I.5.1.9\">\n<p><span class=\"lemma-title\">Lemma 5.1.9.</span> Denote by\n\\(D=\\operatorname{Hom}(-,A)\\) the Pontrjagin dualizing functor on the\ncategory of \\(A\\)-modules of finite type. Let \\(M\\) be an \\(A\\)-module of\nfinite type on which a group \\(G\\) acts \\(A\\)-linearly.</p>\n\n<p>(i) We have a canonical isomorphism\n\\[D(M^G)\\simeq(DM)_G.\\]</p>\n\n<p>(ii) If \\(G\\) is a profinite group acting continuously on \\(M\\) and\nif \\(G\\) is of pro-order prime to \\(n\\), the canonical arrow\n\\[M^G\\longrightarrow M_G\\]\nis an isomorphism.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> We have by definition\n\\[M^G=\\varprojlim_{s\\in G}\\operatorname{Ker}\n(M\\xrightarrow{s-1}M),\\]\nwhence\n\\[\nD(M^G)\\simeq\\varinjlim_{s\\in G}\\operatorname{Coker}\n(DM\\xrightarrow{s-1}DM)\\simeq(DM)_G,\n\\]\nwhich proves (i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove (ii). Let \\(M'\\) be the \\(A\\)-module defined by the exact sequence\n\\[0\\longrightarrow M'\\longrightarrow M\\longrightarrow M_G\n\\longrightarrow0.\\]\nNow we have \\(H^1(G,M')=0\\) because \\(G\\) is of pro-order prime to\n\\(n\\). The cohomology exact sequence therefore implies that the arrow\n\\(M^G\\longrightarrow M_G\\) is an epimorphism. But, applying the\nfunctor \\(D\\) and taking (i) into account, we deduce that it is a\nmonomorphism, which completes the proof.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Applying (5.1.9) to \\(M\\) and \\(P\\), we find that\n\\(\\operatorname{Hom}(M,A)^P\\) is canonically identified with\n\\(\\operatorname{Hom}(M^P,A)\\). If we choose an isomorphism of\n\\(\\widehat{\\mathbf Z}(1)\\) onto \\(\\widehat{\\mathbf Z}\\), the pairing\n(5.1.8) reads, taking (5.1.5) into account,\n\\[\\tag{5.1.8}'H^i(\\widehat{\\mathbf Z},M^P)\\times\nH^{1-i}(\\widehat{\\mathbf Z},D(M^P))\n\\longrightarrow H^1(\\widehat{\\mathbf Z},A)\\simeq A.\\]\nIt follows at once from (5.1.6) and (5.1.9(i)) that (5.1.8)' is a\nperfect pairing. This completes the proof of (5.1).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-bibliographie",
+   "title": "BIBLIOGRAPHY",
+   "blocks": [
+    {
+     "id": "I.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.bibliographie\">BIBLIOGRAPHY</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] Hironaka, H. Resolution of singularities of an algebraic variety\nover a field of characteristic zero, <i>Ann. of Math.</i>, vol. 79\n(1964), p. 109.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] Abhyankar, S. Local uniformization on algebraic surfaces over\nground fields of characteristic \\(p\\ne0\\), <i>Ann. of Math.</i>,\nvol. 63 (1956), p. 491–526, and Resolution of singularities of\narithmetical surfaces, <i>Arithmetical Algebraic Geometry</i>, Harper\n&amp; Row, New York (1965).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[H] Hartshorne, R. <i>Residues and duality</i>, Lecture Notes\nnº 20, Springer (1966).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[SGAA] Séminaire de Géométrie Algébrique de l'IHES, Cohomologie étale\ndes schémas, by M. Artin and A. Grothendieck, 1963–64.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[CL] Serre, J.-P. <i>Corps locaux</i>, Hermann (1962).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[CG] Serre, J.-P. <i>Cohomologie galoisienne</i>, Lecture Notes\nnº 5, Springer (1964).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-appendice",
+   "title": "APPENDIX",
+   "blocks": [
+    {
+     "id": "I.appendice",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"I.appendice\">APPENDIX</h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p class=\"author\">by L. ILLUSIE</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The preceding theory extends easily to base Rings more\ngeneral than the constant Ring \\(\\mathbf Z/n\\mathbf Z\\). We are going to\nindicate briefly how the theory reads for base Rings which are locally\nconstant, killed by \\(n&gt;0\\), and whose geometric stalks are\nnoetherian rings. This is, moreover, only a provisional\nframework<sup><a id=\"I-fn8ref\" href=\"#I-fn8\">(*)</a></sup>: sooner or\nlater one will have to globalize, taking as \"coefficients\" on a prescheme\n\\(X\\) relative preschemes over the site\n\\((X_{\\mathrm{ét}},\\mathbf Z/n\\mathbf Z)\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "I-fn8",
+     "number": "(*)",
+     "html": "According to Grothendieck!"
+    }
+   ]
+  },
+  {
+   "id": "I-A-1",
+   "title": "1. Constructible sheaves",
+   "blocks": [
+    {
+     "id": "I.A.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.1\">1. Constructible sheaves</h2>"
+    },
+    {
+     "id": "I.A.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.A.1.1\"><strong>1.1.</strong> Let \\(X\\) be a prescheme, and let\n\\(A_X\\) be a sheaf of rings on \\(X\\) (for the étale topology), locally\nconstant, whose geometric stalks are left noetherian rings. We denote by\n\\(A^X\\) the category of left \\(A_X\\)-Modules, and by\n\\(D(A^X)\\) (or \\(D(X)\\) if there is no risk of confusion) the\ncorresponding derived category. The notion of a (left)\n<u>constructible</u> \\(A_X\\)-Module is defined as in (SGAA IX 2.3), by\nreplacing the expression « locally constant with value of finite\npresentation » by « of finite presentation as an \\(A_U\\)-Module ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We denote by \\(D_c(X)\\) the full subcategory of \\(D(X)\\) consisting of the\ncomplexes \\(E\\) such that \\(\\underline H^i(E)\\) is a constructible \\(A_X\\)-Module\nfor every \\(i\\). It is a triangulated subcategory of\n\\(D(X)\\).</p>"
+    },
+    {
+     "id": "I.A.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.A.1.2\"><strong>1.2.</strong> Let \\(E\\in\\operatorname{ob}D(X)\\).\nWe say (cf. Exp. II 3.11) that \\(E\\) is <u>pseudo-coherent</u> if, for\nevery \\(i\\), \\(\\underline H^i(E)\\) is an \\(A_X\\)-Module of finite\npresentation (or locally constant constructible if one prefers). We denote\nby \\(D(X)_{\\mathrm{coh}}\\) (or \\(D_{\\mathrm{coh}}(X)\\)) the full subcategory\nof \\(D(X)\\) consisting of the pseudo-coherent objects. It follows from\n(SGAA IX 2.1) that it is a triangulated subcategory of \\(D_c(X)\\).</p>"
+    },
+    {
+     "id": "I.A.1.3",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"theorem\" id=\"I.A.1.3\">\n<p><span class=\"theorem-title\">Proposition 1.3 (dévissage lemma).</span>\nLet \\(X\\) be a quasi-compact and quasi-separated (resp. noetherian) prescheme,\nand let \\(C\\) be a strictly full subcategory of the category\n\\(\\operatorname{Cons}(X)\\) of constructible left \\(A_X\\)-Modules.\nWe assume \\(C\\) stable under extensions. The following conditions are equivalent:</p>\n\n<p>(i) \\(C=\\operatorname{Cons}(X)\\);</p>\n\n<p>(ii) \\(C\\) contains the sheaves of the form \\(i_!(F)\\), where\n\\(i:Y\\longrightarrow X\\) is a subprescheme of finite presentation\n(resp. an integral subprescheme), and \\(F\\) is locally constant\nconstructible on \\(Y\\).</p>\n\n<p>If \\(A_X\\) is constant with value \\(A\\), a left noetherian ring\nannihilated by an integer \\(n&gt;0\\), the preceding conditions are\nequivalent to:</p>\n\n<p>(iii) \\(C\\) is stable under direct factors and contains the sheaves\nof the form \\(f_*i_!(M_U)\\), where \\(i:U\\longrightarrow Y\\) is an open\nimmersion (resp. an open subset of an integral prescheme),\n\\(f:Y\\longrightarrow X\\) a finite morphism (resp. finite and such that the\ngeneric point of \\(Y\\) is separable over its image), and \\(M_U\\) a\nconstant left \\(A_U\\)-Module whose value is a monogenic \\(A\\)-module\nannihilated by a prime divisor of \\(n\\).</p>\n\n<p>Finally, if \\(X\\) is noetherian and satisfies the condition (reg)\n(I 3.1.1), condition (ii) (resp. (iii)) is equivalent to the analogous\ncondition in which one assumes in addition that \\(Y\\) (resp. \\(U\\)) is\nregular.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> The equivalence of conditions (i) and (ii) is proved\nas in the case where \\(A_X\\) is constant, see (SGAA IX 2.4 and 2.5).\nSuppose \\(A_X\\) constant with value \\(A\\) annihilated by \\(n\\), and let\nus prove that (iii) implies (ii). Let\n\\(E\\in\\operatorname{ob}\\operatorname{Cons}(X)\\), and let us show that\n\\(E\\in\\operatorname{ob}C\\). By the equivalence (i)\n\\(\\Longleftrightarrow\\) (ii), we may assume that \\(E=j_!(F)\\), where\n\\(j:Z\\longrightarrow X\\) is the immersion of a subprescheme of finite\npresentation (resp. an integral subprescheme), and \\(F\\) a locally\nconstant constructible \\(A_Z\\)-Module, which we may even assume (after\ndévissing a little further) to be trivialized by an étale covering\n\\(g:Z'\\longrightarrow Z\\) with group \\(G\\). The sheaf \\(F\\) is therefore\ndefined by an \\(A\\)-module of finite type \\(M\\) on which \\(G\\) acts.\nIf \\(\\ell\\) is a prime divisor of \\(n\\), the\n\\(\\ell\\)-torsion subgroup of \\(M\\) is a sub-\\(G\\)-\\(A\\)-module \\(M_\\ell\\) of\n\\(M\\), and we have\n\\[M=\\bigoplus M_\\ell,\\]\nwhere \\(\\ell\\) runs through the set of prime divisors of \\(n\\). In view\nof the stability of \\(C\\) under direct factors, we are thus reduced to\nthe case where \\(M\\) is of \\(\\ell\\)-torsion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(H\\) be a \\(\\ell\\)-Sylow subgroup of \\(G\\), and let\n\\(h:U=Z'/H\\longrightarrow Z\\) be the intermediate covering corresponding\nto \\(H\\). The degree of \\(h\\) being prime to \\(\\ell\\), the « trace\nmethod » (SGAA IX 5.1) shows that the adjunction arrow\n\\[F\\longrightarrow h_*h^*(F)\\]\nis an isomorphism onto a direct factor, hence it suffices to prove that\n\\(j_!h_*h^*(F)\\in\\operatorname{ob}C\\). By virtue of the « Main Theorem »\n(EGA IV 8.12.6), there exists a commutative diagram\n\\[\n\\begin{array}{ccc}\nU&amp;\\xrightarrow{i}&amp;Y\\\\\n\\downarrow h&amp;&amp;\\downarrow f\\\\\nZ&amp;\\xrightarrow{j}&amp;X\n\\end{array}\n\\]\nwhere \\(i\\) is an open immersion, and \\(f\\) a finite morphism. We have\n\\[j_!h_*h^*(F)\\simeq f_*i_!h^*(F).\\]\nNow \\(h^*(F)\\) is defined by \\(M\\) regarded as an \\(H\\)-\\(A\\)-module.\nThe implication (iii) \\(\\Rightarrow\\) (ii) will therefore follow from the\nfollowing lemma:</p>"
+    },
+    {
+     "id": "I.A.1.3.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"lemma\" id=\"I.A.1.3.1\">\n<p><span class=\"lemma-title\">Lemma 1.3.1.</span> Let \\(A\\) be a left\nnoetherian ring, \\(\\ell\\) a prime number, \\(H\\) a finite\n\\(\\ell\\)-group, \\(M\\) a left \\(H\\)-\\(A\\)-module of finite type\nannihilated by \\(\\ell^\\nu\\) (\\(\\nu\\geq1\\)). There exists a finite filtration of\n\\(M\\) by sub-\\(H\\)-\\(A\\)-modules such that the successive quotients\nare monogenic \\(A\\)-modules annihilated by \\(\\ell\\) and on which \\(H\\)\nacts trivially.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> The exact sequence (of \\(H\\)-\\(A\\)-modules)\n\\[0\\longrightarrow\\ell M\\longrightarrow M\\longrightarrow M/\\ell M\n\\longrightarrow0\\]\nreduces us, by induction on \\(\\nu\\), to the case where \\(M\\) is annihilated by\n\\(\\ell\\). Let us show that in this case \\(M\\) admits a finite filtration by\nsub-\\(H\\)-\\(A\\)-modules such that \\(H\\) acts trivially on the\nsuccessive quotients. Arguing by noetherian induction on\nthe set of sub-\\(H\\)-\\(A\\)-modules of \\(M\\) possessing the stated\nproperty, we are reduced to proving that \\(M\\ne0\\) implies \\(M^H\\ne0\\). Now\none checks trivially that the kernel of the augmentation\n\\(\\mathbf F_\\ell[H]\\longrightarrow\\mathbf F_\\ell\\) is a nilpotent\nideal, and Nakayama's lemma implies that every\n\\(H\\)-\\(\\mathbf F_\\ell\\)-module not reduced to 0 possesses a nonzero invariant\nvector, which proves our assertion. Hence \\(M\\) admits a\nfinite filtration such that the successive quotients are\n\\(A\\)-modules of finite type annihilated by \\(\\ell\\) and on which \\(H\\)\nacts trivially. By noetherian induction we can even arrange that the\nsuccessive quotients be monogenic \\(A\\)-modules, which completes\nthe proof of (1.3.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The last assertion of (1.3) is immediate and left to the reader.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-2",
+   "title": "2. Quasi-injective dimension.",
+   "blocks": [
+    {
+     "id": "I.A.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.2\">2. Quasi-injective dimension.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The notation being that of (1.1), we define as in (I 1.1 and\n1.4) the notions of a <u>quasi-injective</u> \\(A_X\\)-Module, and of the\n<u>quasi-injective dimension</u> of an object of \\(D(X)\\). Propositions\n(I 1.3, 1.5 and 1.6) extend without change.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is sometimes convenient to introduce a notion of <u>pointwise\nquasi-injective dimension</u>. Let \\(x\\in X\\), and let\n\\(K\\in\\operatorname{ob}D^+(X)\\). We say that \\(K\\) is of quasi-injective\ndimension \\(\\leq N\\) at \\(\\bar x\\) if, for every constructible \\(A_X\\)-Module\n\\(F\\), we have\n\\[\\underline{\\operatorname{Ext}}^i(F,K)_{\\bar x}=0\\quad\\text{for }i&gt;N.\\]\nWe call the quasi-injective dimension of \\(K\\) at \\(\\bar x\\), and we\ndenote by \\(\\dim.q.\\operatorname{inj}_{\\bar x}(K)\\), the infimum of the\n\\(N\\) satisfying the preceding condition. Of course, we have\n\\[\\dim.q.\\operatorname{inj}(K)=\n\\sup_{\\bar x}\\dim.q.\\operatorname{inj}_{\\bar x}(K),\\]\nwhere \\(\\bar x\\) runs through the set of geometric points of \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is interesting to compare the preceding notion with the notion\nof <u>strict topological dimension</u> introduced by Verdier in\n[1]. We say that \\(K\\in\\operatorname{ob}D^+(X)\\) is of strict topological\ndimension \\(\\leq N\\) at a geometric point \\(\\bar x\\) of\n\\(X\\) if for every subprescheme \\(Y\\) of \\(X\\), we have\n\\[\\underline{\\operatorname{Ext}}^i(A_Y,K)_{\\bar x}\n=\\underline H_Y^i(K)_{\\bar x}=0\\quad\\text{for }i&gt;N.\\]\nWe call the strict topological dimension of \\(K\\) at \\(\\bar x\\), and we\ndenote by \\(\\dimstop_{\\bar x}(K)\\), the infimum of the \\(N\\) satisfying the preceding\ncondition.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>While the quasi-injective dimension depends a priori on the base\nRing, the strict topological dimension depends only on the underlying\ncomplex of abelian sheaves. We obviously have:\n\\[\\dimstop_{\\bar x}(K)\\leq\\dim.q.\\operatorname{inj}_{\\bar x}(K).\\]\nWe shall see further below examples where equality holds.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-3",
+   "title": "3. Dualizing complexes: definition and formal properties.",
+   "blocks": [
+    {
+     "id": "I.A.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.3\">3. Dualizing complexes: definition and formal properties.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us keep the preceding notation, but assume \\(A_X\\) commutative.\nThe notions of bidualizing pair and of dualizing complex are defined\nas in (I 1.7). The statements (I 1.9, 1.11, 1.14) are valid without\nmodification. The statements (I 1.12, 1.13, 1.15) are also valid,\nbut on condition that we assume \\(A\\) annihilated by an integer \\(n&gt;0\\)\nprime to the residue characteristics of \\(Y\\). Finally, the uniqueness\ntheorem (I 2.1) is valid provided we assume\n\\(\\operatorname{Spec}(A_{\\bar x})\\) connected for every geometric point\n\\(\\bar x\\) of \\(X\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-4",
+   "title": "4. Absolute purity",
+   "blocks": [
+    {
+     "id": "I.A.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.4\">4. Absolute purity</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us return to the situation of absolute cohomological purity\n(I 3.1.4). Let \\(X\\) be a regular locally noetherian prescheme, and\nlet \\(n&gt;0\\) be an integer prime to the residue characteristics of\n\\(X\\). Let \\(i:Y\\longrightarrow X\\) be a regular subprescheme of\ncodimension \\(d&gt;0\\) at every point. To say that the pair \\((Y,X)\\)\nsatisfies absolute cohomological purity means, let us recall, that\nthe « local fundamental class » homomorphism (SGA \\(4^{1/2}\\)\nCycle 2.2)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\\tag{4.1}(\\mu_n)_Y^{\\otimes-d}[-2d]\\longrightarrow\nRi^!(\\mathbf Z/n\\mathbf Z)_X\\]\nis an isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now give ourselves on \\(X\\) a sheaf of rings \\(A_X\\)\nannihilated by \\(n\\). Set for a moment\n\\(G=(\\mathbf Z/n\\mathbf Z)_X\\). Then, for every\n\\(F\\in\\operatorname{ob}D^+(A_X)\\), we can define a canonical arrow\nof \\(D^+(A_Y)\\):\n\\[\\tag{4.2}i^*(F)\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}\nRi^!(G)\\longrightarrow\nRi^!\\bigl(F\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}G\\bigr).\\]\nIndeed, it amounts to the same, by duality (SGAA XVIII 3.1.6), to define\nan arrow\n\\[\ni_!\\bigl(i^*(F)\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}\nRi^!(G)\\bigr)\\longrightarrow\nF\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}G;\n\\]\nfor which we shall choose the composite of the Künneth arrow\n(SGAA XVII 5.4.2.2)\n\\[\ni_!\\bigl(i^*(F)\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}\nRi^!(G)\\bigr)\\longrightarrow\nF\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}i_!Ri^!(G),\n\\]\nand of the arrow deduced from the trace homomorphism (SGAA XVIII 3.1.6)\n\\[\nF\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}i_!Ri^!(G)\n\\longrightarrow F\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}G.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Note that in the definition of (4.2) we have only used the\nfact that \\(G\\) and \\(Ri^!(G)\\) were of finite tor-dimension over\n\\(\\mathbf Z/n\\mathbf Z\\). Suppose on the other hand that the functor \\(i^!\\)\nis of finite cohomological dimension on the category of\n\\((\\mathbf Z/n\\mathbf Z)_X\\)-Modules: this is the case for example if \\(X\\)\nis of finite type over a field (SGAA XIV 3.1), or more generally if\n\\(X\\) is excellent of equal characteristics (SGAA XIX 6.1) when\nresolution of singularities is available, or again if \\(X\\) is of\nfinite type over \\(\\operatorname{Spec}(\\mathbf Z)\\) (SGAA X 6). Then, the\narrow (4.2) is defined for every \\(F\\in\\operatorname{ob}D(A_X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Composing (4.1) and (4.2), we thus have, for\n\\(F\\in\\operatorname{ob}D^+(A_X)\\), a canonical arrow\n\\[\\tag{4.3}i^*(F)\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}\n(\\mu_n)_Y^{\\otimes-d}[-2d]\\longrightarrow Ri^!(F).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose that \\(A_X\\) is <u>locally constant</u>, and let\n\\(F\\in\\operatorname{ob}D^+(A_X)\\) be such that, for every \\(i\\),\n\\(\\underline H^i(F)\\) is a <u>locally constant</u> \\(A_X\\)-Module.\nThen, <u>if \\(i^!\\) is of finite cohomological dimension, the arrow\n(4.2) (and consequently the arrow (4.3) if \\((Y,X)\\) satisfies purity)\nis an isomorphism</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, by dévissage, we first reduce to the case where \\(F\\) is\nconcentrated in degree 0. The question being local, we may assume \\(X\\)\naffine, and \\(A_X\\) and \\(F\\) constant. Resolving \\(F\\) on the left by\nfree \\(A_X\\)-Modules, and applying the hypothesis that \\(i^!\\) is of\nfinite cohomological dimension, we reduce to the case where \\(F\\) is free.\nBy an immediate passage to the limit, we reduce to \\(F\\) free of finite\ntype, and finally to \\(F=A_X\\). It therefore suffices to prove the assertion\nin the case \\(A_X=(\\mathbf Z/n\\mathbf Z)_X\\). But the preceding dévissage\nreduces us to \\(F=(\\mathbf Z/n\\mathbf Z)_X\\), and in that case the arrow (4.2)\nreduces to the identity.</p>"
+    },
+    {
+     "id": "I.A.4.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.A.4.4\"><u>Definition 4.4.</u> The Ring \\(A_X\\) being given\n(locally constant, annihilated by \\(n\\)), we shall say that the pair\n\\((Y,X)\\) satisfies cohomological purity in the strong sense if, for\nevery \\(F\\in\\operatorname{ob}D^+(A_X)\\) such that the\n\\(\\underline H^i(F)\\) are locally constant, the canonical arrow\n(4.3) is an isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall say that the purity theorem is true in the strong sense on\n\\(X\\) if, locally (for the étale topology), every pair \\((Y,X)\\)\nas above satisfies purity in the strong sense.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By what we have seen, in order for \\((Y,X)\\) to satisfy purity in the\nstrong sense, it therefore suffices that \\((Y,X)\\) satisfy purity in the\nordinary sense (I 3.1.) and that the functor \\(i^!\\) be of finite\ncohomological dimension.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-5",
+   "title": "5. Bounding the quasi-injective dimension.",
+   "blocks": [
+    {
+     "id": "I.A.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.5\">5. Bounding the quasi-injective dimension.</h2>"
+    },
+    {
+     "id": "I.A.5.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"theorem\" id=\"I.A.5.1\">\n<p><span class=\"theorem-title\">Proposition 5.1.</span> Let \\(X\\) be a\nregular locally noetherian prescheme, equipped with a locally constant\nsheaf of rings \\(A_X\\), annihilated by an integer \\(n&gt;0\\) prime to the\nresidue characteristics of \\(X\\), and whose geometric stalks are left\nnoetherian rings. We assume that \\(X\\) satisfies the\nconditions (reg) (I 3.1.1) and \\((\\mathrm{cdloc})_n\\) (I 3.1.3), and that\nthe purity theorem in the strong sense is true on \\(X\\) (4.4) (conditions\nwhich are all satisfied if \\(X\\) is smooth over a perfect field, or if \\(X\\)\nis excellent of characteristic zero).</p>\n\n<p>Let \\(F\\in\\operatorname{ob}D^+(A_X)\\) be such that the\n\\(\\underline H^i(F)\\) are locally constant, and let \\(x\\) be a\npoint of \\(X\\) such that we have \\(F_{\\bar x}\\ne0\\) and\n\\(\\dim.\\operatorname{inj}_{A_{\\bar x}}(F_{\\bar x})&lt;+\\infty\\). Under these\nconditions we have:\n\\[\n\\dim.q.\\operatorname{inj}_{\\bar x}(F)\n=2\\dim(\\mathcal O_{X,x})\n+\\dim.\\operatorname{inj}(F_{\\bar x}),\n\\]\nwith the notation of nº 2.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> We need only repeat step by step the proof of\n(I 3.2.1). We shall first show the inequality\n\\[\n\\dim.q.\\operatorname{inj}_{\\bar x}(F)\n\\leq2\\dim(\\mathcal O_{X,x})+\\dim.\\operatorname{inj}(F_{\\bar x})=N,\n\\]\ni.e. the relation\n\\[\\tag{*}\\underline{\\operatorname{Ext}}^i(E,F)_{\\bar x}=0\n\\quad\\text{for }i&gt;N\\text{ and every constructible }A_X\\text{-Module }E.\n\\]\nThe question being local, we may, by dévissage (1.3), restrict ourselves to\nverifying (*) for \\(E=i_!(M)\\), where \\(i:Y\\longrightarrow X\\) is an\nintegral regular subprescheme closed in an open subset \\(D(f)\\)\n(\\(f\\in\\Gamma(X,\\mathcal O_X)\\)), of codimension \\(d\\) at every point of\n\\(D(f)\\), and \\(M\\) a locally constant constructible \\(A_Y\\)-Module\n(\\(A_Y=i^*A_X\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now we have the duality isomorphism (SGAA XVIII)\n\\[\nR\\underline{\\operatorname{Hom}}(i_!M,F)\\simeq\nRi_*R\\underline{\\operatorname{Hom}}(M,Ri^!F).\n\\]\nBy the purity theorem, we have on the other hand the isomorphism (4.3)\n\\[\ni^*(F)\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}\n(\\mu_n)_Y^{\\otimes-d}[-2d]\\xrightarrow{\\sim}Ri^!(F).\n\\]\nLet \\(\\bar y\\) be a geometric point of \\(Y\\). Since \\(M\\) is\nlocally constant constructible, we have (canonically)\n\\[\nR\\underline{\\operatorname{Hom}}(M,Ri^!F)_{\\bar y}\\simeq\nR\\operatorname{Hom}(M_{\\bar y},(Ri^!F)_{\\bar y}),\n\\]\nhence, thanks to (4.3),\n\\[\nR\\underline{\\operatorname{Hom}}(M,Ri^!F)_{\\bar y}\\simeq\nR\\operatorname{Hom}(M_{\\bar y},F_{\\bar y})[-2d].\n\\]\nWe may on the other hand assume that we have placed ourselves in a connected\nneighborhood of \\(x\\). We then have\n\\[\nF_{\\bar x}\\simeq F_{\\bar y},\\qquad A_{\\bar x}\\simeq A_{\\bar y},\n\\]\nsince \\(A_X\\) and the \\(\\underline H^i(F)\\) are locally constant,\nwhence\n\\[\n\\underline{\\operatorname{Ext}}^i(M_{\\bar y},F_{\\bar y})=0\n\\quad\\text{for }i&gt;\\dim.\\operatorname{inj}(F_{\\bar x}),\n\\]\nand finally\n\\[\n\\underline{\\operatorname{Ext}}^q(M,Ri^!F)=0\n\\quad\\text{for }q&gt;2d+\\dim.\\operatorname{inj}(F_{\\bar x}).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Set \\(G=R\\underline{\\operatorname{Hom}}(M,Ri^!F)\\), and let us now compute\n\\(Ri_*(G)_{\\bar x}\\). For this, we introduce, as in\n(I 3.2.1), the schematic closure \\(Z\\) of \\(Y\\) in \\(X\\), whence a\ncartesian diagram of immersions\n\\[\n\\begin{array}{ccc}\nY&amp;\\longrightarrow&amp;D(f)\\\\\n\\downarrow j&amp;&amp;\\downarrow\\\\\nZ&amp;\\xrightarrow{k}&amp;X.\n\\end{array}\n\\]\nWe therefore have \\(Ri_*(G)\\simeq k_*Rj_*(G)\\). We assume of course that\n\\(x\\in Z\\), otherwise we would trivially have \\(Ri_*(G)_{\\bar x}=0\\).\nLet us then introduce the strict localization\n\\(\\bar Z=\\operatorname{Spec}(\\mathcal O_{Z,\\bar x})\\) of \\(Z\\) at\n\\(\\bar x\\), and denote by \\(\\bar f\\) the image of \\(f\\) in\n\\(\\mathcal O_{Z,\\bar x}\\), \\(\\bar Y=\\bar Z\\times_ZY=\\bar Z\\cap D(f)\\),\n\\(\\bar G\\) the inverse image of \\(G\\) on \\(\\bar Y\\). By\n(SGAA VIII 5.2), we have\n\\[\nRi_*(G)_{\\bar x}=Rj_*(G)_{\\bar x}\\simeq R\\Gamma(\\bar Y,\\bar G).\n\\]\nThe condition \\((\\mathrm{cdloc})_n\\) therefore implies, via a spectral\nsequence argument, that we have\n\\[\nR^pi_*(G)_{\\bar x}=0\\quad\\text{for }\np&gt;2d+\\dim.\\operatorname{inj}(F_{\\bar x})\n+\\dim(\\mathcal O_{Z,x}).\n\\]\nBut we have (cf. I 3.2.1, proof)\n\\[\n\\dim(\\mathcal O_{Z,x})=\\dim(\\mathcal O_{X,x})-d\\geq0,\n\\]\nhence\n\\[\nR^pi_*(G)_{\\bar x}=0\\quad\\text{for }\np&gt;d+\\dim(\\mathcal O_{X,x})\n+\\dim.\\operatorname{inj}(F_{\\bar x}),\n\\]\nhence a fortiori for\n\\(p&gt;2\\dim(\\mathcal O_{X,x})+\\dim.\\operatorname{inj}(F_{\\bar x})\\),\nwhich proves (*).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove that the bound (*) is the best possible.\nSet \\(f=\\dim.\\operatorname{inj}(F_{\\bar x})\\), and let \\(M'\\) be a\n\\(A_{\\bar x}\\)-Module of finite type such that\n\\[\\operatorname{Ext}^f(M',F_{\\bar x})\\ne0.\\]\nLet \\(Z\\) be the integral closed subprescheme of \\(X\\) which is the closure of \\(x\\),\nand let \\(Y=U\\cap Z\\) be a regular open subset of \\(Z\\) containing \\(x\\) and of\ncodimension \\(d=\\dim(\\mathcal O_{X,x})\\) at every point. After shrinking\n\\(Y\\) if necessary, there exists a locally constant constructible\n\\(A_Y\\)-Module \\(M\\) such that \\(M_{\\bar x}=M'\\). Applying the purity\ntheorem, we then find\n\\[\n\\underline{\\operatorname{Ext}}^{2d+f}(M,F|U)_{\\bar x}\n\\simeq\\operatorname{Ext}^f(M',F_{\\bar x})\\ne0,\n\\]\nwhich completes the proof.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Note that if \\(F\\) is a \\(A_X\\)-Module such that \\(F_{\\bar x}\\) is\ninjective, we may, in the last part of the proof, choose\n\\(M=A_Y\\); we therefore obtain:</p>"
+    },
+    {
+     "id": "I.A.5.1.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"corollary\" id=\"I.A.5.1.1\">\n<p><span class=\"corollary-title\">Corollary 5.1.1.</span> Under the\nhypotheses of (5.1), suppose that \\(F\\) is a locally constant\n\\(A_X\\)-Module such that \\(F_{\\bar x}\\) is injective. Then we have\n\\[\n\\dim.q.\\operatorname{inj}_{\\bar x}(F)\n=\\dimstop_{\\bar x}(F)=2\\dim(\\mathcal O_{X,x}),\n\\]\nwith the notation of nº 2.</p>\n</div>"
+    },
+    {
+     "id": "I.A.5.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.A.5.1.2\"><u>Remarks 5.1.2.</u> a) With the notation of\n(5.1), if \\(F_{\\bar x}=0\\), then \\(F=0\\) in a neighborhood of \\(x\\),\nhence \\(R\\underline{\\operatorname{Hom}}(E,F)_{\\bar x}=0\\) for every\n\\(E\\in\\operatorname{ob}D^-(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) If \\(\\dim.\\operatorname{inj}(F_{\\bar x})=+\\infty\\), then\n\\(\\dim.q.\\operatorname{inj}_{\\bar x}(F)=+\\infty\\); indeed, for every\n\\(p\\), there exists a \\(A_{\\bar x}\\)-Module of finite type \\(M'\\) such that\n\\(\\operatorname{Ext}^p(M',F_{\\bar x})\\ne0\\), hence a constructible \\(A_X\\)-Module\n\\(M\\), locally constant in a neighborhood of \\(x\\), such that\n\\(\\underline{\\operatorname{Ext}}^p(M,F)_{\\bar x}\\ne0\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-6",
+   "title": "6. Constructibility of \\(R\\underline{\\operatorname{Hom}}\\).",
+   "blocks": [
+    {
+     "id": "I.A.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.6\">6. Constructibility of \\(R\\underline{\\operatorname{Hom}}\\).</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The equivalence of the conditions a) of (I 3.3.1) is still valid\nwhen we replace the Ring \\((\\mathbf Z/n\\mathbf Z)_X\\) by a commutative, locally\nconstant Ring whose geometric stalks are noetherian\nrings: there is nothing to change in the proof.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The preceding conditions are satisfied when resolution of\nsingularities and purity in the strong sense (4.4) are available, in\nparticular if \\(X\\) is of dimension \\(\\leq1\\), or if \\(X\\) is\nexcellent of characteristic zero, or locally of finite type over a\nfield and of dimension \\(\\leq2\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-7",
+   "title": "7. Existence of dualizing complexes.",
+   "blocks": [
+    {
+     "id": "I.A.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.7\">7. Existence of dualizing complexes.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this section, \\(X\\) denotes a prescheme equipped with a sheaf\nof rings \\(A_X\\) which is commutative, locally constant, and whose\ngeometric stalks are noetherian rings.</p>"
+    },
+    {
+     "id": "I.A.7.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"lemma\" id=\"I.A.7.1\">\n<p><span class=\"lemma-title\">Lemma 7.1.</span> Let\n\\(F\\in\\operatorname{ob}D^-_{\\mathrm{coh}}(X)\\),\n\\(G\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(X)\\); then\n\\[\nR\\underline{\\operatorname{Hom}}(F,G)\n\\in D^+_{\\mathrm{coh}}(X)\n\\]\n(notation of (1.2)).</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> This is standard. We reduce, by a spectral\nsequence, to \\(F\\) and \\(G\\) concentrated in degree 0, and then proceed as\nin (EGA \\(0_{\\mathrm{III}}\\) 12.3.3).</p>"
+    },
+    {
+     "id": "I.A.7.2",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"lemma\" id=\"I.A.7.2\">\n<p><span class=\"lemma-title\">Lemma 7.2.</span> Let\n\\(g:X'\\longrightarrow X\\) be a morphism of preschemes, and equip\n\\(X'\\) with the sheaf of rings \\(A_{X'}=g^*(A_X)\\). Then, for\n\\(F\\in\\operatorname{ob}D^-_{\\mathrm{coh}}(X)\\),\n\\(G\\in\\operatorname{ob}D^+(X)\\), the canonical arrow\n\\[\ng^*R\\underline{\\operatorname{Hom}}(F,G)\\longrightarrow\nR\\underline{\\operatorname{Hom}}(g^*F,g^*G)\n\\]\nis an isomorphism.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> This is likewise standard: we reduce, by\ndévissage, to \\(F=A_X\\) (cf. EGA \\(0_{\\mathrm{III}}\\) 12.3.5).</p>"
+    },
+    {
+     "id": "I.A.7.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"I.A.7.2.1\"><u>Remark 7.2.1.</u> The preceding lemmas are\nspecial cases of more general statements which appear in (SGA 6 I).</p>"
+    },
+    {
+     "id": "I.A.7.3",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"lemma\" id=\"I.A.7.3\">\n<p><span class=\"lemma-title\">Lemma 7.3.</span> Suppose \\(X\\)\nquasi-compact, and let \\(K\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(X)\\)\nbe such that, for every geometric point \\(\\bar x\\) of \\(X\\),\n\\(K_{\\bar x}\\) is a dualizing complex in the sense of [H] V 2.1. Then,\nfor every \\(F\\in\\operatorname{ob}D^b_{\\mathrm{coh}}(X)\\), we have\n\\[\nR\\underline{\\operatorname{Hom}}(F,K)\n\\in\\operatorname{ob}D^b_{\\mathrm{coh}}(X),\n\\]\nand \\(F\\) is reflexive relative to \\(K\\).</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> We may, of course, restrict ourselves to carrying out the\nverification for \\(F\\) concentrated in degree 0. By (7.1), we have\n\\(R\\underline{\\operatorname{Hom}}(F,K)\n\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(X)\\). Let us prove that we have\n\\(R\\underline{\\operatorname{Hom}}(F,K)\n\\in D^b_{\\mathrm{coh}}(X)\\). Let \\(\\bar x\\) be a geometric point of\n\\(X\\). By (7.2), we have\n\\[\nR\\underline{\\operatorname{Hom}}(F,K)_{\\bar x}\n\\xrightarrow{\\sim}R\\operatorname{Hom}(F_{\\bar x},K_{\\bar x}).\n\\]\nIf we set\n\\(\\dim.\\operatorname{inj}(K_{\\bar x})=N(\\bar x)\\), we therefore have\n\\[\n\\underline{\\operatorname{Ext}}^i(F,K)_{\\bar x}=0\n\\quad\\text{for }i&gt;N(\\bar x).\n\\]\nSince the \\(\\underline{\\operatorname{Ext}}^i(F,K)\\) are locally\nconstant, there then exists an open neighborhood \\(U\\) of \\(x\\) such that\n\\(\\underline{\\operatorname{Ext}}^i(F,K)|U=0\\) for \\(i&gt;N(\\bar x)\\),\nand we conclude thanks to the quasi-compactness hypothesis on \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to verify that the canonical arrow\n\\[\nF\\longrightarrow\nR\\underline{\\operatorname{Hom}}\n(R\\underline{\\operatorname{Hom}}(F,K),K)\n\\]\nis an isomorphism. For this it suffices to place ourselves at a\ngeometric point \\(\\bar x\\) of \\(X\\). In the commutative diagram\n\\[\n\\begin{array}{ccc}\nF_{\\bar x}&amp;\\longrightarrow&amp;\nR\\underline{\\operatorname{Hom}}\n(R\\underline{\\operatorname{Hom}}(F,K),K)_{\\bar x}\\\\\n\\Vert&amp;&amp;\\downarrow\\\\\nF_{\\bar x}&amp;\\longrightarrow&amp;\nR\\operatorname{Hom}\n(R\\operatorname{Hom}(F_{\\bar x},K_{\\bar x}),K_{\\bar x}),\n\\end{array}\n\\]\nthe right-hand vertical arrow is an isomorphism by (7.2) and the\nbottom horizontal arrow is an isomorphism because \\(K_{\\bar x}\\)\nis dualizing, hence the upper horizontal arrow is an\nisomorphism, q.e.d.</p>"
+    },
+    {
+     "id": "I.A.7.4",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"lemma\" id=\"I.A.7.4\">\n<p><span class=\"lemma-title\">Lemma 7.4.</span> We assume that \\(X\\) is\na regular noetherian prescheme, that \\(A_X\\) is annihilated by an integer\n\\(n&gt;0\\) prime to the residue characteristics of \\(X\\), and that the\npurity theorem in the strong sense (4.4) is true on \\(X\\). Let \\(D\\) be a\ndivisor with normal crossings on \\(X\\) (I 3.1.5 a)), and denote by\n\\(j:Y=V(D)\\longrightarrow X\\) and\n\\(i:X-Y=U\\longrightarrow X\\) the canonical inclusions. Let\n\\(K\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(X)\\) be such that, for every geometric\npoint \\(\\bar x\\) of \\(X\\), \\(K_{\\bar x}\\) is a dualizing\ncomplex for the ring \\(A_{\\bar x}\\) (in the sense of [H] V 2.1). Then,\nfor every \\(E\\in\\operatorname{ob}D^b_{\\mathrm{coh}}(X)\\), we have\n\\[\nR\\underline{\\operatorname{Hom}}(i_!i^*(E),K)\n\\in\\operatorname{ob}D_c^b(X),\n\\]\nand the pair \\((i_!i^*(E),K)\\) is bidualizing.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof:</u> We may assume \\(E\\) concentrated in degree 0, i.e. a\nlocally constant constructible \\(A_X\\)-Module. On the other hand, the\nquestion being local on \\(X\\) for the étale topology, we may\nassume that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(a) \\(A_X\\) is constant with value \\(A\\), and \\(E\\) is constant with\nvalue denoted \\(E\\) by abuse of language, say \\(E=E_X\\);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(b) \\(D\\) has strict normal crossings, say\n\\(D=\\sum_{i\\in I}\\operatorname{div}(s_i)\\), where\n\\(s_i\\in\\Gamma(X,\\mathcal O_X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us argue by induction on \\(p=\\operatorname{card}(I)\\). For\n\\(p=0\\), the assertions are a consequence of (7.3). Suppose that\n\\(I=\\{1,\\ldots,p\\}\\), set \\(Y_p=V(s_p)\\),\n\\(Y'=V(\\sum_{1\\leq i\\leq p-1}\\operatorname{div}(s_i))\\),\n\\(U'=X-Y'\\), whence a cartesian diagram of immersions\n\\[\n\\begin{array}{ccccc}\n\\varnothing&amp;\\longrightarrow&amp;U'\\cap Y_p&amp;\\xrightarrow{i'_p}&amp;Y_p\\\\\n\\downarrow&amp;&amp;\\downarrow j'_p&amp;&amp;\\downarrow j_p\\\\\nU&amp;\\longrightarrow&amp;U'&amp;\\xrightarrow{i'}&amp;X.\n\\end{array}\n\\]\nConsider the exact sequence\n\\[\n0\\longrightarrow E_{U,X}\\longrightarrow E_{U',X}\n\\longrightarrow E_{U'\\cap Y_p,X}\\longrightarrow0.\n\\]\nBy the induction hypothesis, the theorem is true for the pair\n\\((E_{U',X},K)\\). Since, for fixed \\(K\\), the set of \\(F\\) such that\n\\(R\\underline{\\operatorname{Hom}}(F,K)\\in\\operatorname{ob}D_c^b(X)\\)\nand such that \\((F,K)\\) is bidualizing forms a triangulated subcategory of\n\\(D_c(X)\\), we are reduced to proving the theorem for the pair\n\\((E_{U'\\cap Y_p,X},K)\\). But we have\n\\[\nE_{U'\\cap Y_p,X}=j_{p*}\\,i'_{p!}(E_{U'\\cap Y_p}),\n\\]\nand, by (I 1.13), it amounts to the same to prove the theorem for the\npair\n\\[\n\\bigl(i'_{p!}(E_{U'\\cap Y_p}),Rj_p^!(K)\\bigr)\n\\]\nin \\(Y_p\\). But, by the purity theorem, we have (4.3)\n\\[\nRj_p^!(K)\\simeq\nj_p^*(K)\\mathbin{\\overset L\\otimes_{\\mathbf Z/n\\mathbf Z}}\n(\\mu_n)_{Y_p}^{\\otimes-1}[-2].\n\\]\nHence \\(Rj_p^!(K)\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(Y_p)\\) and, for\nevery geometric point \\(\\bar y\\) of \\(Y_p\\),\n\\((Rj_p^!K)_{\\bar y}\\) is dualizing, and consequently we conclude thanks to the\ninduction hypothesis.</p>"
+    },
+    {
+     "id": "I.A.7.5",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"theorem\" id=\"I.A.7.5\">\n<p><span class=\"theorem-title\">Theorem 7.5.</span> We make the\nfollowing hypotheses: \\(X\\) is a regular noetherian prescheme;\n\\(A_X\\) is annihilated by an integer \\(n&gt;0\\) prime to the residue\ncharacteristics of \\(X\\); \\(X\\) is strongly desingularizable (I 3.1.5),\nand satisfies the conditions (reg) (I 3.1.1) and\n\\((\\mathrm{cdloc})_n\\) (I 3.1.3); the purity theorem in the strong sense\n(4.4) is true on every prescheme smooth over \\(X\\) (conditions\nsatisfied if \\(X\\) is excellent of characteristic zero, or of\ndimension \\(\\leq2\\) and smooth over a perfect field).</p>\n\n<p>Then, if \\(K\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(X)\\) is such that\n\\(K_{\\bar x}\\) is dualizing (in the sense of [H] V 2.1) for every geometric\npoint \\(\\bar x\\) of \\(X\\), \\(K\\) is dualizing.</p>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> We must show that \\(K\\) satisfies the\nconditions (i) to (iii) of (I 1.7). For every geometric point \\(\\bar x\\)\nof \\(X\\), \\(K_{\\bar x}\\) is of finite injective dimension, and, since\n\\(K\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(X)\\), the function\n\\[\nx\\longmapsto\\dim.\\operatorname{inj}(K_{\\bar x})\n\\]\nis locally constant, hence bounded since \\(X\\) is noetherian. It\nthen follows from (5.1) that \\(K\\) is of finite quasi-injective\ndimension.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By what we saw in nº 6, condition (ii) of loc. cit. is\nlikewise satisfied.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove condition (iii), i.e. that every\n\\(F\\in\\operatorname{ob}D_c^b(X)\\) is reflexive relative to \\(K\\).\nBy dévissage, we may assume \\(F\\) concentrated in degree 0. On the other hand,\nthe question being local on \\(X\\) for the étale topology, we may\nassume \\(A_X\\) constant with value \\(A\\). The dévissage (1.3) then\nreduces us to \\(F=f_*i_!(E_U)\\), where \\(f:Y\\longrightarrow X\\) is a\nfinite morphism, with \\(Y\\) integral with generic point separable over its\nimage, \\(i:U\\longrightarrow Y\\) a regular open subset \\(\\ne\\varnothing\\),\nand \\(E_U\\) a constant \\(A_U\\)-Module with value \\(E\\), an \\(A\\)-module\nof finite type. Since \\(X\\) is strongly desingularizable, there exists\n(I 3.1.5) a projective and birational morphism\n\\(h:Y'\\longrightarrow Y\\) such that \\(Y'\\) is regular, that \\(h\\)\ninduces an isomorphism \\(h^{-1}(U)\\longrightarrow U\\), and that\n\\(h^{-1}(U)\\) is the complement of a divisor with normal\ncrossings in \\(Y'\\). Identifying \\(h^{-1}(U)\\) with \\(U\\) by \\(h\\), we\ntherefore have a commutative diagram\n\\[\n\\begin{array}{ccccc}\n&amp;&amp;Y'&amp;&amp;\\\\[-2mm]\n&amp;{}^{i'}\\nearrow&amp;\\downarrow h&amp;\\searrow^{g}&amp;\\\\[-2mm]\nU&amp;\\xrightarrow{i}&amp;Y&amp;\\xrightarrow{f}&amp;X.\n\\end{array}\n\\]\nConsequently we have\n\\[\nf_*i_!(E_U)\\simeq f_*Rh_*i'_!(E_U)\n\\simeq Rg_*i'_!(E_U)\\simeq Rg_*i'_!i'^*(E_{Y'}).\n\\]\nBy virtue of (I 1.13), it suffices to prove biduality for the pair\n\\[\n\\bigl(i'_!i'^*(E_{Y'}),Rg^!(K)\\bigr).\n\\]\nBut, embedding \\(Y'\\) locally in a prescheme \\(X'\\) smooth over\n\\(X\\) and applying purity in the strong sense on \\(X'\\) (4.4), we find\nthat \\(Rg^!(K)\\) is locally isomorphic (up to translation of degrees)\nto \\(g^*(K)\\), hence that\n\\(Rg^!(K)\\in\\operatorname{ob}D^+_{\\mathrm{coh}}(Y')\\) and that\n\\(Rg^!(K)_{\\bar x}\\) is dualizing for every geometric point\n\\(\\bar x\\) of \\(Y'\\). It then suffices to apply (7.4).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The preceding proof shows moreover that we have\n\\[\nR\\underline{\\operatorname{Hom}}(F,K)\\in\\operatorname{ob}D_c^b(X)\n\\]\n(granting the finiteness theorem for a proper morphism\n(SGAA XIV)), which will relieve the reader who might not have had\nconfidence in the discourse of nº 6.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This completes the proof.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-A-bibliographie",
+   "title": "BIBLIOGRAPHY",
+   "blocks": [
+    {
+     "id": "I.A.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.A.bibliographie\">BIBLIOGRAPHY</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] Verdier, J.-L. Dimension des espaces localement compacts, Note\naux <i>C. R. Ac. Sc. Paris</i>, 261, p. 5293–5296 (1965). (See also:\nVerdier, J.-L., Dualité dans la cohomologie des espaces localement\ncompacts, Séminaire Bourbaki, nº 300, 1965–66).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>SGA A = SGA 4</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

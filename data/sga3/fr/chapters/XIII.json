@@ -1,0 +1,979 @@
+{
+ "chapter_id": "XIII",
+ "title": "ÉLÉMENTS RÉGULIERS DES GROUPES ALGÉBRIQUES ET DES ALGÈBRES DE LIE",
+ "number": "XIII",
+ "pages": [
+  {
+   "id": "XIII",
+   "title": "ÉLÉMENTS RÉGULIERS DES GROUPES ALGÉBRIQUES ET DES ALGÈBRES DE LIE",
+   "blocks": [
+    {
+     "id": "XIII",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XIII\">EXPOSÉ XIII<br>ÉLÉMENTS RÉGULIERS DES GROUPES ALGÉBRIQUES ET DES ALGÈBRES DE LIE<span class=\"author\">par A. Grothendieck</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIII-1",
+   "title": "1. Un lemme auxiliaire sur les variétés à opérateurs",
+   "blocks": [
+    {
+     "id": "XIII.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIII.1\">1. Un lemme auxiliaire sur les variétés à opérateurs</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un préschéma, G un S-préschéma en groupes opérant à gauche sur un S-préschéma V, W un sous-S-préschéma fermé de V, N son stabilisateur dans G, sous-groupe de G dont les points, à valeurs dans un S′ sur S, sont les \\(g \\in \\mathrm{G}(\\mathrm{S}')\\) tels que \\(g \\cdot \\mathrm{W}_{\\mathrm{S}'} = \\mathrm{W}_{\\mathrm{S}'}\\). Nous munissons \\((\\mathbf{Sch}_{/\\mathrm{S}})\\) de la topologie fidèlement plate quasi-compacte, et identifions G, V, M aux faisceaux correspondants (cf. <a class=\"ref\" href=\"#IV\">IV</a>). Nous raisonnerons donc dans la catégorie des faisceaux sur \\((\\mathbf{Sch})_{/\\mathrm{S}}\\), et dans ce numéro la locution « localement » réfère à la topologie que nous venons de préciser sur \\((\\mathbf{Sch})_{/\\mathrm{S}}\\). Notons que N est un faisceau, considérons le faisceau quotient G/N. On voit tout de suite qu'il est isomorphe au foncteur suivant : à tout S′ sur S, on associe l'ensemble des sous-faisceaux W′ de \\(\\mathrm{V}_{\\mathrm{S}'}\\) qui sont localement conjugués de \\(\\mathrm{W}_{\\mathrm{S}'}\\) par le groupe G. Soit X le sous-faisceau de \\(\\mathrm{G}/\\mathrm{N} \\times_{\\mathrm{S}} \\mathrm{V}\\) dont la valeur, pour tout S′ sur S, est l'ensemble des \\((\\mathrm{W}', v)\\), où W′ est comme dessus et \\(v\\) est une section de W′ sur S′ (donc une section de \\(\\mathrm{V}_{\\mathrm{S}'}\\) sur S′). Soit Z l'image inverse de X dans \\(\\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{V}\\), de sorte que nous avons le diagramme cartésien\n\\[\n\\xymatrix{\n\\mathrm{Z} \\ar[r] \\ar[d] &amp; \\mathrm{X} \\ar[d]^-{i} \\\\\n\\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{V} \\ar[r] &amp; \\mathrm{G}/\\mathrm{N} \\times_{\\mathrm{S}} \\mathrm{V},\n}\n\\]\noù i est l'immersion canonique, et la deuxième flèche horizontale provient du morphisme canonique \\(\\mathrm{G} \\to \\mathrm{G}/\\mathrm{N}\\). Comme celui-ci fait correspondre au point \\(g \\in \\mathrm{G}(\\mathrm{S}')\\) le sous-faisceau \\(g \\cdot \\mathrm{W}_{\\mathrm{S}'}\\) de \\(\\mathrm{V}_{\\mathrm{S}'}\\), on voit que \\(\\mathrm{Z}(\\mathrm{S}')\\) est l'ensemble des couples \\((g,v) \\in \\mathrm{G}(\\mathrm{S}') \\times \\mathrm{V}(\\mathrm{S}')\\) tels que \\(v \\in g \\cdot \\mathrm{W}_{\\mathrm{S}'}(\\mathrm{S}')\\). Par suite, Z est isomorphe au faisceau \\(\\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{W}\\), grâce à l'isomorphisme\n\\[\n\\mathrm{G} \\underset{\\mathrm{S}}{\\times} \\mathrm{W} \\xrightarrow{\\ \\sim\\ } \\mathrm{Z}\n\\]\ndéfini par \\((g,w) \\mapsto (g, g\\cdot w)\\). Ainsi le diagramme cartésien précédent donne le diagramme cartésien\n\\[\n\\xymatrix{\n\\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{W} \\ar[r]^-{q} \\ar[d]_-{\\lambda} &amp; \\mathrm{X} \\ar[d]^-{i} \\\\\n\\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{V} \\ar[r] &amp; \\mathrm{G}/\\mathrm{N} \\times_{\\mathrm{S}} \\mathrm{V}\n}\n\\]\noù l'on a \\(\\lambda(g,w) = (g, g\\cdot w)\\), donc \\(q(g,w) = (\\overline{g}, g\\cdot w)\\), où \\(\\overline{g}\\) désigne l'image de \\(g\\) par l'application canonique \\(\\mathrm{G}(\\mathrm{S}') \\to (\\mathrm{G}/\\mathrm{N})(\\mathrm{S}')\\). On voit enfin sur le diagramme précédent que \\(\\mathrm{Z} \\to \\mathrm{X}\\) fait de Z un fibré principal de base X et de groupe N opérant à droite par \\((g,v)\\cdot n = (gn, v)\\), de sorte que dans le second diagramme, \\(q : \\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{W} \\to \\mathrm{X}\\) fait de \\(\\mathrm{G} \\times_{\\mathrm{S}} \\mathrm{W}\\) un fibré principal de base X et de groupe N opérant à droite par\n\\[\n(g,w)\\cdot n = (gn, n^{-1}\\cdot w).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous résumons les principaux morphismes précédents dans le diagramme suivant :\n\\[\n\\xymatrix{\n&amp; \\mathrm{G}\\times_{\\mathrm{S}}\\mathrm{W} \\ar[d]^-{q} \\ar[dr]^-{\\varphi} &amp; \\\\\n\\mathrm{G}/\\mathrm{N} &amp; \\mathrm{X} \\ar[l]_-{p} \\ar[r]^-{\\psi} \\ar[d]^-{i} &amp; \\mathrm{V} \\\\\n&amp; \\mathrm{G}/\\mathrm{N}\\times_{\\mathrm{S}}\\mathrm{V} \\ar@{--&gt;}[ul]^-{\\mathrm{pr}_1} \\ar@{--&gt;}[ur]_-{\\mathrm{pr}_2} &amp;\n}\n\\]\noù \\(\\psi = \\mathrm{pr}_2 \\circ i\\) et \\(\\varphi = \\psi \\circ q\\) i.e. \\(\\varphi(g,w) = g\\cdot w\\). Si \\(v\\) est une section de V sur S, le sous-faisceau \\(\\mathrm{X}_v\\) de X image inverse de cette section par \\(\\psi\\) est donné par \\(\\mathrm{X}_v(\\mathrm{S}') =\\) ensemble des sous-faisceaux W′ de \\(\\mathrm{V}_{\\mathrm{S}'}\\) qui sont localement conjugués de \\(\\mathrm{W}_{\\mathrm{S}'}\\) par G, et qui contiennent la section \\(v_{\\mathrm{S}'}\\) de \\(\\mathrm{V}_{\\mathrm{S}'}\\), tandis que le sous-faisceau de \\(\\mathrm{G}\\times_{\\mathrm{S}}\\mathrm{W}\\) image inverse de \\(v\\) par \\(\\varphi\\) est isomorphe au sous-faisceau \\(\\mathrm{M}_v\\) de G donné par \\(\\mathrm{M}_v(\\mathrm{S}') =\\) ensemble des \\(g \\in \\mathrm{G}(\\mathrm{S}')\\) tels que \\(v_{\\mathrm{S}'} \\in g\\cdot \\mathrm{W}(\\mathrm{S}')\\), i.e. tels que \\(g^{-1}v_{\\mathrm{S}'} \\in \\mathrm{W}(\\mathrm{S}')\\). Si \\(v\\) est une section de W et non seulement de V, alors \\(\\mathrm{M}_v\\) contient évidemment N.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ces explicitations, on n'a pas utilisé le fait que G, V, W étaient représentables (ni que le site sur lequel on travaille est défini en termes de préschémas !). Mais supposons maintenant que N soit représentable et fidèlement plat et quasi-compact sur S, et que G/N soit représentable. Lorsque S est le spectre d'un corps, et que G est de type fini sur \\(k\\), on sait que cette hypothèse est nécessairement satisfaite (<a class=\"ref\" href=\"#VIII.6\">VIII 6</a> et <a class=\"ref\" href=\"#VIB.11\">VI<sub>B</sub> 11.18</a>). On voit alors sur le diagramme cartésien précédent, utilisant la théorie de la descente fidèlement plate quasi-compacte et le fait que \\(\\mathrm{Z} \\to \\mathrm{G}\\times_{\\mathrm{S}}\\mathrm{V}\\) est une immersion fermée, que X est représentable (il est obtenu par descente du sous-préschéma fermé Z de \\(\\mathrm{G}\\times_{\\mathrm{S}}\\mathrm{V}\\) par le morphisme fidèlement plat et quasi-compact \\(\\mathrm{G}\\times_{\\mathrm{S}}\\mathrm{V} \\to \\mathrm{G}/\\mathrm{N}\\times_{\\mathrm{S}}\\mathrm{V}\\)). Donc le diagramme (D) est un diagramme de morphismes de préschémas sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous supposons par la suite que S est le spectre d'un corps \\(k\\), et que G, V, W sont de type fini sur \\(k\\). Soit \\(\\mathfrak{n}\\) l'algèbre de Lie de N, donc on a \\(\\dim \\mathrm{N} \\leqslant \\mathrm{rang}\\,\\mathfrak{n}\\), l'égalité étant vraie si et seulement si N est lisse sur \\(k\\) (Exp VI<sup class=\"footnote-ref\"><a id=\"XIII-fn1ref\" href=\"#XIII-fn1\">1</a></sup>). Soit \\(a \\in \\mathrm{W}(k)\\), et considérons le sous-schéma \\(\\mathrm{M}_a\\) de G défini plus haut, contenant N, et isomorphe à \\(\\varphi^{-1}(a)\\) ; nous désignerons par \\(\\mathfrak{m}_a\\) son espace tangent de Zariski en l'élément neutre \\(e\\) de N, de sorte qu'on a\n\\[\n(1) \\qquad \\mathfrak{n} \\subset \\mathfrak{m}_a, \\qquad \\dim \\mathrm{N} \\leqslant \\mathrm{rang}\\,\\mathfrak{n} \\leqslant \\mathfrak{m}_a.\n\\]</p>"
+    },
+    {
+     "id": "XIII.1.1",
+     "type": "lemme",
+     "label": "1.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIII.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Avec les notations précédentes :</p>\n  <p>a) Considérons les conditions suivantes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(\\mathfrak{n} = \\mathfrak{m}_a\\) et N est lisse sur \\(k\\).</p></li>\n  <li><span class=\"item-label\">(i bis)</span> <p>\\(\\dim \\mathrm{N} = \\mathrm{rang}_k\\,\\mathfrak{m}_a\\).</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Le morphisme \\(\\psi : \\mathrm{X} \\to \\mathrm{V}\\) est non ramifié en \\((\\overline{e},a)\\).</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>\\(\\mathrm{M}_a\\) et N coïncident au voisinage de \\(e\\).</p></li>\n  </ol>\n  <p>Alors on a les implications (i) \\(\\Leftrightarrow\\) (i bis) \\(\\Rightarrow\\) (ii) \\(\\Leftrightarrow\\) (iii).</p>\n  <p>b) Supposons \\(\\varphi : \\mathrm{G}\\times_{\\mathrm{S}}\\mathrm{W} \\to \\mathrm{V}\\) lisse en \\((e,a)\\). Alors \\(\\mathrm{M}_a\\) est lisse sur \\(k\\) en \\(e\\), et \\(\\psi\\) est lisse en \\((\\overline{e},a)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Démonstration.</em> a) L'équivalence de (i) et (i bis) résulte aussitôt des relations (1) et du fait signalé plus haut que N est lisse sur \\(k\\) si et seulement si \\(\\dim \\mathrm{N} = \\mathrm{rang}_k\\,\\mathfrak{n}\\). D'autre part, considérons le morphisme d'inclusion \\(\\mathrm{N} \\to \\mathrm{M}_a\\), il est bien connu<sup class=\"footnote-ref\"><a id=\"XIII-fn2ref\" href=\"#XIII-fn2\">2</a></sup> que si N est lisse sur \\(k\\) en \\(e\\) et l'application tangente en \\(e\\) surjective, alors \\(\\mathrm{N} \\to \\mathrm{M}_a\\) est lisse en \\(e\\), donc (étant une immersion) est un isomorphisme en \\(e\\), ce qui montre que (i) implique (iii). Pour prouver l'équivalence de (ii) et (iii), considérons comme plus haut \\(\\mathrm{X}_a = \\psi^{-1}(a)\\) et utilisons l'isomorphisme \\(\\mathrm{M}_a \\simeq \\varphi^{-1}(a) \\simeq q^{-1}(\\mathrm{X}_a)\\) pour obtenir un morphisme \\(p_a : \\mathrm{M}_a \\to \\mathrm{X}_a\\) qui fait de \\(\\mathrm{M}_a\\) un fibré principal homogène de groupe \\(\\mathrm{N}_{\\mathrm{X}_a}\\). Considérons le diagramme suivant\n\\[\n\\xymatrix{\n\\mathrm{M}_a \\ar[d]_-{p_a} &amp; \\mathrm{N} \\ar[l]_-{j_a} \\ar[d] \\\\\n\\mathrm{X}_a \\ar[r]_-{j_a'} &amp; \\mathrm{S} = \\mathrm{Spec}(k),\n}\n\\]\noù \\(\\mathrm{Spec}(k) \\to \\mathrm{X}_a\\) est défini par le point \\((\\overline{e},a)\\) de X, et \\(j_a : \\mathrm{N} \\to \\mathrm{M}_a\\) est l'immersion canonique. Dire que \\(\\psi\\) est non ramifié en \\((\\overline{e},a)\\) signifie que \\(j_a'\\) est une immersion ouverte, ou encore qu'il induit un isomorphisme \\(\\mathrm{S} \\xrightarrow{\\ \\sim\\ } \\mathrm{Spec}(\\mathscr{O}_{\\mathrm{X}_a,a})\\). Comme \\(p_a\\) est plat, il est équivalent de dire que le morphisme déduit du précédent par le changement de base \\(\\mathrm{Spec}(\\mathscr{O}_{\\mathrm{M}_a,e}) \\to \\mathrm{Spec}(\\mathscr{O}_{\\mathrm{X}_a,a})\\) est un isomorphisme, or ce morphisme déduit n'est autre que le morphisme \\(\\mathrm{Spec}(\\mathscr{O}_{\\mathrm{N},e}) \\to \\mathrm{Spec}(\\mathscr{O}_{\\mathrm{M}_a,e})\\), ce qui prouve l'équivalence de (ii) et (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On notera d'ailleurs que la démonstration prouve que les conditions (ii), (iii) impliquent la condition suivante, en apparence plus forte que (iii) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii bis) N est un sous-schéma ouvert et fermé de M.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) La première assertion provient du fait que \\(\\mathrm{M}_a\\) est isomorphe à \\(\\varphi^{-1}(a)\\), la deuxième du fait que \\(q\\) est plat et \\(q(e,a) = (\\overline{e},a)\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIII-fn1",
+     "number": "1",
+     "html": "N.D.E. : N'ayant pas identifié cette référence, nous renvoyons au théorème II.5.2.1 du livre : M. Demazure & P. Gabriel, <em>Groupes algébriques I</em>, Masson (1970)."
+    },
+    {
+     "id": "XIII-fn2",
+     "number": "2",
+     "html": "N.D.E. : voir, par exemple, EGA <span style=\"white-space:nowrap\">IV<sub>4</sub></span>, Th. 17.11.1 d)."
+    }
+   ]
+  },
+  {
+   "id": "XIII-2",
+   "title": "2. Théorème de densité et théorie des points réguliers de G",
+   "blocks": [
+    {
+     "id": "XIII.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIII.2\">2. Théorème de densité et théorie des points réguliers de G</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons appliquer les constructions et notations du N° précédent dans le cas où G est un groupe algébrique connexe lisse sur \\(k\\), où \\(\\mathrm{V} = \\mathrm{G}\\) sur lequel G opère par automorphismes intérieurs, et où W est un sous-groupe algébrique connexe lisse H de G. Nous désignerons par \\(\\mathfrak{g}\\) l'algèbre de Lie de G, par \\(\\mathfrak{h}\\) celle de H, par N le normalisateur de H dans G, par \\(\\mathfrak{n}\\) l'algèbre de Lie de N. Si \\(a \\in \\mathrm{G}(k)\\), nous désignerons encore comme au N° 1 par \\(\\mathrm{M}_a\\) le symétrique de son transporteur dans H, de sorte que si \\(a \\in \\mathrm{H}(k)\\), on a \\(\\mathrm{N} \\subset \\mathrm{M}_a\\) ; dans ce cas, on désigne par \\(\\mathfrak{m}_a\\) l'espace tangent de Zariski de \\(\\mathrm{M}_a\\) en l'élément neutre \\(e\\) de G. Notons que\n\\[\n\\mathfrak{h} \\subset \\mathfrak{n} \\subset \\mathfrak{m}_a \\subset \\mathfrak{g} \\qquad \\text{pour } a \\in \\mathrm{H}(k).\n\\]\nNous aurons à utiliser le</p>"
+    },
+    {
+     "id": "XIII.2.0",
+     "type": "lemme",
+     "label": "2.0",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIII.2.0\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.0</span></div>\n  <div class=\"thm-body\"><p>Pour qu'on ait \\(\\mathrm{H} = \\mathrm{N}^0\\), il faut et suffit que l'on ait \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}} = 0\\) (où le premier membre désigne le sous-espace des invariants sous l'opération de H déduite de la représentation adjointe). Lorsque cette condition est satisfaite, N est lisse et on a \\(\\dim \\mathrm{X} = \\dim \\mathrm{G}\\). En tous cas, \\(\\dim \\mathrm{X} \\leqslant \\dim \\mathrm{G}\\), et cette inégalité est une égalité si et seulement si H est d'indice fini dans N.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on a vu (<a class=\"ref\" href=\"#II.5.2.3\">II 5.2.3</a> (i)) que \\(\\mathfrak{n}\\) est égal à l'image inverse de \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}}\\) par le morphisme \\(\\mathfrak{g} \\to \\mathfrak{g}/\\mathfrak{h}\\), donc \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}} = 0\\) équivaut à \\(\\mathfrak{h} = \\mathfrak{n}\\), ce qui équivaut aussi (H étant un sous-groupe algébrique lisse connexe du groupe algébrique N) à \\(\\mathrm{H} = \\mathrm{N}^0\\) (cf. VI.2). Cela implique évidemment que N est lisse. D'autre part, on a\n\\[\n\\dim \\mathrm{X} = (\\dim \\mathrm{G} - \\dim \\mathrm{N}) + \\dim \\mathrm{H} = \\dim \\mathrm{G} - (\\dim \\mathrm{N} - \\dim \\mathrm{H}),\n\\]\ndonc on a\n\\[\n\\dim \\mathrm{X} \\leqslant \\dim \\mathrm{G},\n\\]\nl'égalité étant atteinte si et seulement si \\(\\dim \\mathrm{H} = \\dim \\mathrm{N}\\), i.e. si et seulement si H est d'indice fini dans N. Ceci est le cas en particulier si \\(\\mathrm{H} = \\mathrm{N}^0\\), ce qui achève la démonstration de 2.0.</p>"
+    },
+    {
+     "id": "XIII.2.1",
+     "type": "theoreme",
+     "label": "2.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XIII.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse connexe sur le corps algébriquement clos \\(k\\), H un sous-groupe algébrique connexe et lisse, N son normalisateur, \\(\\mathfrak{g}, \\mathfrak{h}, \\mathfrak{n}\\) les algèbres de Lie, \\(\\mathrm{X} = \\mathrm{G}\\times^{\\mathrm{N}}\\mathrm{H}\\) le schéma (fibré sur \\(\\mathrm{G}/\\mathrm{N}\\) de fibre type H) introduit au N° 1, \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) le morphisme canonique (dont l'image est aussi l'image de \\(\\varphi : \\mathrm{G}\\times\\mathrm{H} \\to \\mathrm{G}\\) défini par \\(\\varphi(g,h) = \\mathrm{int}(g)h = ghg^{-1}\\)). Les conditions suivantes sont toutes équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>H contient un sous-groupe de Cartan (<a class=\"ref\" href=\"#XII.1\">XII 1</a>) C de G.</p></li>\n  <li><span class=\"item-label\">(i bis)</span> <p>H a même rang réductif et même rang nilpotent (<a class=\"ref\" href=\"#XII.1\">XII 1</a>) que G.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>H contient un tore maximal T de G, et \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{T}} = 0\\).</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>L'ensemble des conjugués de H contenant un tore maximal donné est fini non vide, et H est d'indice fini dans son normalisateur.</p></li>\n  <li><span class=\"item-label\">(iv)</span> <p>Il existe \\(a \\in \\mathrm{H}(k)\\) qui n'est contenu que dans un nombre fini de conjugués de H (ou seulement tel que \\(\\psi^{-1}(a)\\) ait un point isolé), et H est d'indice fini dans son normalisateur.</p></li>\n  <li><span class=\"item-label\">(iv bis)</span> <p>Le morphisme \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) est génériquement quasi-fini (i.e. il existe un ouvert dense de X sur lequel \\(\\psi\\) est quasi-fini), et H est d'indice fini dans son normalisateur.</p></li>\n  <li><span class=\"item-label\">(v)</span> <p>Il existe un ouvert dense U dans G tel que pour tout \\(x \\in \\mathrm{U}(k)\\), l'ensemble des conjugués de H contenant \\(x\\) soit fini non vide, i.e. \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) est dominant et génériquement quasi-fini.</p></li>\n  <li><span class=\"item-label\">(vi)</span> <p>Il existe un ouvert dense U de G tel que tout \\(x \\in \\mathrm{U}(k)\\) soit contenu dans un conjugué de H, i.e. \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) est dominant.</p></li>\n  <li><span class=\"item-label\">(vii)</span> <p>Il existe \\(a \\in \\mathrm{H}(k)\\) tel que le sous-espace de \\(\\mathfrak{g}/\\mathfrak{h}\\) des points fixes de \\(\\mathrm{ad}_{\\mathfrak{g}/\\mathfrak{h}}(a)\\) soit nul.</p></li>\n  </ol>\n  <p>De plus, ces conditions impliquent que H est son propre normalisateur connexe i.e. N est lisse et \\(\\dim \\mathrm{H} = \\dim \\mathrm{N}\\), et que \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) est génériquement étale.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Démonstration.</em> D'après 2.0, on a \\(\\dim \\mathrm{X} \\leqslant \\dim \\mathrm{G}\\), avec égalité si et seulement si \\(\\dim \\mathrm{H} = \\dim \\mathrm{N}\\), i.e. H d'indice fini dans N. De l'inégalité \\(\\dim \\mathrm{X} \\leqslant \\dim \\mathrm{G}\\) résulte que \\(\\psi\\) est dominant si et seulement si il est dominant et génériquement quasi-fini, ou encore si et seulement si \\(\\psi\\) est génériquement quasi-fini et \\(\\dim \\mathrm{X} = \\dim \\mathrm{G}\\). Comme cette dernière égalité signifie aussi, d'après 2.0, que H est d'indice fini dans N, on a prouvé l'équivalence de (vi), (v), (iv bis). L'équivalence de (iv) et (iv bis) est immédiate.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'équivalence de (i) et (i bis) est immédiate sur les définitions, et laissée au lecteur. D'autre part, si H contient un sous-groupe de Cartan C de G, il contient le tore maximal T de C, qui est un tore maximal de G. Comme C est le centralisateur de T, son algèbre de Lie \\(\\mathfrak{c}\\) est donnée par\n\\[\n\\mathfrak{c} = \\mathfrak{g}^{\\mathrm{T}}\n\\]\n(<a class=\"ref\" href=\"#II.5.2.3\">II, 5.2.3</a> (ii)). Donc comme \\(\\mathrm{H} \\supset \\mathrm{C}\\), d'où \\(\\mathfrak{h} \\supset \\mathfrak{c}\\), il s'ensuit que \\(\\mathfrak{h} \\subset \\mathfrak{g}^{\\mathrm{T}}\\), ce qui équivaut grâce à <a class=\"ref\" href=\"#I.4.7.3\">I, 4.7.3</a> à la relation\n\\[\n(x) \\qquad (\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{T}} = 0.\n\\]\nInversement, supposons que H contienne le tore maximal T et que la relation précédente soit valable, i.e. que l'on ait \\(\\mathfrak{h} \\supset \\mathfrak{n}\\), je dis que H contient le centralisateur C de T (ce qui établira (i) \\(\\Leftrightarrow\\) (ii)). Cela résulte du</p>"
+    },
+    {
+     "id": "XIII.2.1.1",
+     "type": "lemme",
+     "label": "2.1.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIII.2.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.1.1</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur le corps \\(k\\), T un sous-groupe de type multiplicatif de G, C son centralisateur connexe (égal au centralisateur de T si G est connexe et T un tore, (<a class=\"ref\" href=\"#XII.6.6\">XII 6.6</a> b))), H un sous-groupe lisse de G contenant T. Pour que H contienne C, il faut et il suffit que son algèbre de Lie \\(\\mathfrak{h}\\) contienne celle \\(\\mathfrak{c}\\) de C.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on sait (<a class=\"ref\" href=\"#XI.2.4\">XI 2.4</a>) que \\(\\mathrm{Centr}_{\\mathrm{G}}(\\mathrm{T})\\) est lisse sur \\(k\\), donc C est lisse sur \\(k\\), de même \\(\\mathrm{Centr}_{\\mathrm{H}}(\\mathrm{T})\\) est lisse sur \\(k\\), or \\(\\mathrm{Centr}_{\\mathrm{H}}(\\mathrm{T}) = \\mathrm{Centr}_{\\mathrm{G}}(\\mathrm{T}) \\cap \\mathrm{H}\\) a \\(\\mathfrak{h}\\cap\\mathfrak{c}\\) comme algèbre de Lie, donc l'hypothèse implique que le sous-groupe lisse \\(\\mathrm{Centr}_{\\mathrm{H}}(\\mathrm{T})\\) du groupe lisse \\(\\mathrm{Centr}_{\\mathrm{G}}(\\mathrm{T})\\) a même algèbre de Lie, donc il contient la composante connexe C de ce dernier, donc H contient C. C.Q.F.D.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons l'équivalence de (i) et (iii), ce qui revient à prouver que si H contient le tore maximal T de G, alors la condition \\(\\mathrm{H} \\supset \\mathrm{C}\\) (qui équivaut aussi à (x) ci-dessus, comme on vient de voir), équivaut au fait que H est d'indice fini dans son normalisateur et que l'ensemble des conjugués de H contenant T est fini. Si H contient C donc si on a (x), alors a fortiori\n\\[\n(xx) \\qquad (\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}} = 0,\n\\]\nor on sait que \\(\\mathfrak{n}\\) est l'image inverse du premier membre de la relation précédente par l'homomorphisme canonique \\(\\mathfrak{g} \\to \\mathfrak{g}/\\mathfrak{h}\\) (<a class=\"ref\" href=\"#II.5.2.3\">II 5.2.3</a> (i)), donc la relation précédente signifie aussi en vertu de 2.0 que \\(\\mathrm{H} = \\mathrm{N}^0\\), a fortiori H est d'indice fini dans son normalisateur. Considérons maintenant le diagramme de sous-groupes\n\\[\n\\xymatrix{\n\\mathrm{T} \\ar[r] &amp; \\mathrm{N}(\\mathrm{T})\\cap \\mathrm{H} \\ar[r] \\ar[d] &amp; \\mathrm{H} \\ar[d] \\\\\n&amp; \\mathrm{N}(\\mathrm{T})\\cap \\mathrm{N}(\\mathrm{H}) \\ar[r] \\ar[d] &amp; \\mathrm{N}(\\mathrm{H}) \\\\\n&amp; \\mathrm{N}(\\mathrm{T}) &amp;\n}\n\\]\nUtilisant le théorème de conjugaison des tores maximaux dans H (<a class=\"ref\" href=\"#XII.6.6\">XII 6.6</a> a)), on voit que tout conjugué de H contenant T est conjugué de H par un élément de \\(\\mathrm{N}(\\mathrm{T})(k)\\), donc que l'ensemble des conjugués de H contenant T est en correspondance biunivoque avec l'ensemble des points de \\(\\mathrm{N}(\\mathrm{T})/\\mathrm{N}(\\mathrm{T})\\cap\\mathrm{N}(\\mathrm{H})\\) à coefficients dans \\(k\\), or comme \\(\\mathrm{H} \\supset \\mathrm{C}\\) on a \\(\\mathrm{N}(\\mathrm{T}) \\cap \\mathrm{H} \\supset \\mathrm{C}\\) donc l'ensemble précédent est un quotient de \\((\\mathrm{N}(\\mathrm{T})/\\mathrm{C})(k)\\) qui est un ensemble fini, donc est fini. Cela prouve que (i) \\(\\Rightarrow\\) (iii). Inversement, supposons (iii) i.e. \\(\\mathrm{N}(\\mathrm{T})/\\mathrm{N}(\\mathrm{T})\\cap\\mathrm{N}(\\mathrm{H})\\) fini et \\(\\mathrm{N}(\\mathrm{H})/\\mathrm{H}\\) fini. Utilisant encore le théorème de conjugaison dans H, on voit encore que l'homomorphisme\n\\[\n\\mathrm{N}(\\mathrm{T}) \\cap \\mathrm{N}(\\mathrm{H})/\\mathrm{N}(\\mathrm{T}) \\cap \\mathrm{H} \\longrightarrow \\mathrm{N}(\\mathrm{H})/\\mathrm{H}\n\\]\ninduit par le diagramme précédent est bijectif sur les points à valeurs dans \\(k\\), (en fait, c'est un isomorphisme), donc comme le second est fini, il en est de même du premier, donc \\(\\mathrm{N}(\\mathrm{T}) \\cap \\mathrm{H}\\) est d'indice fini dans \\(\\mathrm{N}(\\mathrm{T})\\), donc contient \\(\\mathrm{C} = \\mathrm{N}(\\mathrm{T})^0\\), donc \\(\\mathrm{H} \\supset \\mathrm{C}\\). Ainsi, (i), (i bis), (ii), (iii) sont des conditions équivalentes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons que (ii)\\(\\Rightarrow\\) (vii). On voit aussitôt que les conditions (ii) et (vii) sont chacune invariante par une extension \\(k \\to k'\\) du corps de base, avec \\(k'\\) algébriquement clos, ce qui nous permet de supposer que \\(k\\) est de degré de transcendance infini sur son sous-corps premier. Alors il est bien connu (et on vérifie immédiatement) qu'il existe un élément \\(a\\) de \\(\\mathrm{T}(\\mathrm{K})\\) tel que le sous-groupe de \\(\\mathrm{T}(\\mathrm{K})\\) qu'il engendre soit dense dans T pour la topologie de Zariski. On en conclut aisément \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{T}} = (\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{ad}(a)}\\), et comme par hypothèse le premier membre est nul, on en conclut (vii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons (vii) \\(\\Rightarrow\\) (vi). Cette implication est contenue dans le résultat suivant, qui précise 2.1 :</p>"
+    },
+    {
+     "id": "XIII.2.2",
+     "type": "corollaire",
+     "label": "2.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur un corps \\(k\\), H un sous-groupe algébrique lisse, N son normalisateur dans G, \\(\\varphi : \\mathrm{G}\\times\\mathrm{H} \\to \\mathrm{G}\\) le morphisme défini par \\(\\varphi(g,h) = \\mathrm{ad}(g)h = ghg^{-1}\\), \\(\\psi : \\mathrm{X} = \\mathrm{G}\\times^{\\mathrm{N}}\\mathrm{H} \\to \\mathrm{G}\\) le morphisme déduit de \\(\\varphi\\) par passage au quotient (cf. N° 1), \\(a \\in \\mathrm{H}(k)\\). Les conditions suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(\\varphi\\) est lisse en \\((e,a)\\).</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>\\(\\psi\\) est étale en \\((\\overline{e},a)\\), et N est lisse sur \\(k\\).</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>\\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{ad}(a)} = 0\\) (où \\(\\mathfrak{g}, \\mathfrak{h}\\) sont les algèbres de Lie de G, H).</p></li>\n  </ol>\n  <p>Ces conditions impliquent \\(\\mathrm{H}^0 = \\mathrm{N}^0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On sait que la lissité de \\(\\varphi\\) (qui est un morphisme de \\(k\\)-préschémas lisses) en un point rationnel sur \\(k\\) est équivalente à la surjectivité de l'application tangente en ce point. Or un calcul immédiat montre que cette application tangente s'écrit (moyennant les identifications habituelles des espaces tangents aux points de G et de H à l'algèbre de Lie de G et de H)\n\\[\nd\\varphi(\\xi,\\eta) = (\\mathrm{id} - \\mathrm{ad}(a))\\cdot\\xi + \\eta,\n\\]\nconsidérée comme application de \\(\\mathfrak{g}\\times\\mathfrak{h}\\) dans \\(\\mathfrak{g}\\). La surjectivité équivaut donc à la surjectivité de \\((\\mathrm{id}-\\mathrm{ad}(a))\\) dans \\(\\mathfrak{g}/\\mathfrak{h}\\), i.e. à (iii). Or (iii) implique a fortiori \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}} = 0\\), i.e. (cf. 2.0, où l'hypothèse de connexité du début du N° est inutile) \\(\\mathrm{H}^0 = \\mathrm{N}^0\\). On en tire que N est lisse, et \\(\\dim \\mathrm{H} = \\dim \\mathrm{N}\\), d'où \\(\\dim \\mathrm{X} = \\dim \\mathrm{G}\\). Or comme \\(q : \\mathrm{G}\\times\\mathrm{H} \\to \\mathrm{X}\\) est plat et \\(\\psi = \\varphi\\circ q\\) lisse en \\((e,a)\\), il s'ensuit que \\(\\psi\\) est lisse en \\(q(e,a) = (\\overline{e},a)\\), donc étale en ce point par raison de dimensions. Donc on a prouvé (i) \\(\\Leftrightarrow\\) (iii) \\(\\Rightarrow\\) (ii), d'autre part (ii) \\(\\Rightarrow\\) (i), car la lissité de N implique celle de \\(q\\). C.Q.F.D.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons enfin (vi) \\(\\Rightarrow\\) (i), ce qui, avec les implications déjà établies, prouvera le théorème. Supposons d'abord G <em>affine</em>. Soit U un ouvert non vide de G tel que \\(x \\in \\mathrm{U}(k)\\) implique que \\(x\\) est contenu dans un conjugué de H. Soit C un sous-groupe de Cartan de G. Utilisant l'implication (i) \\(\\Rightarrow\\) (iv) pour C au lieu de H (c'est le « théorème de densité » de Borel), il s'ensuit que l'on peut trouver un conjugué de C qui rencontre U, donc on peut supposer que \\(\\mathrm{U} \\cap \\mathrm{C} \\neq \\emptyset\\), i.e. qu'il existe un ouvert V non vide dans C tel que pour tout \\(x \\in \\mathrm{V}(k)\\), \\(x\\) soit contenu dans un conjugué de H. Écrivons C comme produit\n\\[\n\\mathrm{C} = \\mathrm{T}\\cdot\\mathrm{C}_u\n\\]\noù T est le tore maximal de C (qui est un tore maximal de G) et \\(\\mathrm{C}_u\\) la partie unipotente de C, T étant dans le centre de C (<em>BIBLE</em> 6 th. 2). Nous pouvons encore supposer que \\(k\\) est de degré de transcendance infini sur son sous-corps premier, ce qui nous permet de trouver un élément \\(t\\) de \\(\\mathrm{T}(k)\\) qui soit élément de la projection de V sur T (qui est un ouvert non vide de T) i.e. \\(t\\cdot\\mathrm{C}_u \\cap \\mathrm{V} \\neq \\emptyset\\), et tel que \\(t\\) « engendre » T. Comme tout sous-groupe algébrique de G qui contient un produit \\(t\\cdot u\\) (\\(t \\in \\mathrm{T}(k), u \\in \\mathrm{C}_u(k)\\)) contient les deux facteurs (<em>BIBLE</em> 4 th. 3), il s'ensuit, avec le choix précédent de \\(t\\), et prenant \\(t\\cdot u \\in \\mathrm{V}(k)\\), qu'il existe un conjugué de H qui contient \\(t\\), donc T. Donc on peut déjà supposer que l'on a\n\\[\n\\mathrm{T} \\subset \\mathrm{H}.\n\\]\nSi W est l'ouvert de \\(\\mathrm{C}_u\\) image inverse de V par \\(u \\mapsto t\\cdot u\\), on voit donc que pour tout élément \\(x\\) de \\((\\mathrm{T}\\cdot\\mathrm{W})(k)\\), il existe un conjugué de H qui contient T et \\(x\\). Comme nous avons déjà remarqué, un tel conjugué est de la forme \\(\\mathrm{int}(g)\\cdot\\mathrm{H}\\), où \\(g \\in \\mathrm{N}(\\mathrm{T})(k)\\). Considérons alors le morphisme\n\\[\nf : \\mathrm{N}(\\mathrm{T}) \\times \\mathrm{H} \\longrightarrow \\mathrm{G}\n\\]\ndéfini par \\(f(g,h) = \\mathrm{int}(g)\\cdot h = ghg^{-1}\\), alors l'image de \\(f\\) contient \\(\\mathrm{T}\\cdot\\mathrm{W}\\), donc comme \\(\\mathrm{N}(\\mathrm{T})\\) est réunion finie de translatés \\(\\mathrm{C}\\cdot g_i\\) (où \\(g_i \\in \\mathrm{N}(\\mathrm{T})(k)\\)) puisque C est d'indice fini dans \\(\\mathrm{N}(\\mathrm{T})\\), il s'ensuit qu'il existe un ouvert dense \\(\\mathrm{V}'\\) de \\(\\mathrm{C} = \\mathrm{T}\\cdot\\mathrm{C}_u\\) qui est contenu dans l'image de \\((\\mathrm{C}\\cdot g_i)\\times\\mathrm{H}\\) par \\(f\\). Quitte à remplacer H par \\(\\mathrm{int}(g_i)\\cdot\\mathrm{H}\\) on peut supposer \\(g_i = e\\), i.e. \\(f(\\mathrm{C}\\times\\mathrm{H}) \\supset \\mathrm{V}'\\). Donc pour tout \\(u \\in \\mathrm{V}'(k)\\), il existe \\(v \\in \\mathrm{C}(k)\\) et \\(h \\in \\mathrm{H}(k)\\) tel que\n\\[\nv^{-1}hv = u \\qquad \\text{d'où} \\qquad vuv^{-1} \\in \\mathrm{H}(k),\n\\]\nd'où, posant \\(\\mathrm{C}' = \\mathrm{C}\\cap\\mathrm{H} = \\mathrm{Centr}_{\\mathrm{H}}(\\mathrm{T})\\), \\(vuv^{-1} \\in \\mathrm{C}'\\) d'où \\(\\mathrm{int}(v)\\cdot\\mathrm{C}' \\to u\\). Cela prouve que la réunion des conjugués de \\(\\mathrm{C}'\\) dans C (par des éléments de \\(\\mathrm{C}(k)\\)) est dense, ce qui implique (comme on l'a vu pour le cas du couple \\((\\mathrm{G},\\mathrm{H})\\) au lieu de \\((\\mathrm{C},\\mathrm{C}')\\)) que \\(\\mathrm{C}'\\) est d'indice fini dans son normalisateur dans C. En vertu de <em>BIBLE</em> 7 lemme du N° 1, il s'ensuit que \\(\\mathrm{C}' = \\mathrm{C}\\), donc \\(\\mathrm{C} = \\mathrm{H}\\), ce qui prouve (vi) \\(\\Rightarrow\\) (i) lorsque G est affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas général, nous procédons par récurrence sur \\(n = \\dim \\mathrm{G}\\), l'assertion étant triviale si \\(n = 0\\). Soit Z le centre de G, et distinguons deux cas :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1°) \\(\\dim \\mathrm{Z}\\cap\\mathrm{H} &gt; 0\\), alors posant \\(\\mathrm{G}' = \\mathrm{G}/\\mathrm{Z}\\cap\\mathrm{H}\\), on a \\(\\dim \\mathrm{G}' &lt; n\\), d'autre part l'hypothèse (vi) sur H implique la même condition pour l'image \\(\\mathrm{H}'\\) de H dans \\(\\mathrm{G}'\\), donc \\(\\mathrm{H}'\\) contient un sous-groupe de Cartan \\(\\mathrm{C}'\\) de \\(\\mathrm{G}'\\), donc H contient l'image inverse C de \\(\\mathrm{C}'\\), qui est un sous-groupe de Cartan en vertu de <a class=\"ref\" href=\"#XII.6.6\">XII 6.6</a> e).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2°) \\(\\dim \\mathrm{Z}\\cap\\mathrm{H} = 0\\), donc le morphisme canonique \\(\\mathrm{H} \\to \\mathrm{G}/\\mathrm{Z}\\) est un morphisme fini, et comme \\(\\mathrm{G}/\\mathrm{Z}\\) est affine en vertu de <a class=\"ref\" href=\"#XII.6.1\">XII 6.1</a>, il s'ensuit que H est <em>affine</em>, donc tout homomorphisme de H dans une variété abélienne est nul (et même tout morphisme de préschémas de H dans une variété abélienne est nul) : cela résulte du fait qu'un groupe algébrique affine lisse connexe sur un corps algébriquement clos est une variété rationnelle, ou simplement qu'il est réunion de ses sous-groupes de Borel (<em>BIBLE</em> 6 th. 5 b)), or il résulte très facilement des théorèmes de structure, <em>BIBLE</em> 6.2 et 6.3 qu'un groupe affine lisse connexe résoluble est une variété rationnelle. Utilisons maintenant le théorème de structure de Chevalley pour G, suivant lequel G est extension d'une variété abélienne A par un groupe affine lisse. Alors l'image de H dans A est nulle, H étant affine, d'autre part elle est identique à A, car la réunion de ses conjugués dans A doit être dense. Donc \\(\\mathrm{A} = 0\\), donc G est affine, et on est ramené au cas déjà traité. Cela achève la démonstration de 2.1.</p>"
+    },
+    {
+     "id": "XIII.2.3",
+     "type": "corollaire",
+     "label": "2.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Supposons réalisées les conditions équivalentes de 2.1.</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Soit \\(k(\\mathrm{X})\\) (resp. \\(k(\\mathrm{G})\\)) le corps des fonctions rationnelles de X (resp. G), alors \\(k(\\mathrm{X})\\) est une extension finie séparable de \\(k(\\mathrm{G})\\). Désignons par \\(d\\) son degré.</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Soit T un tore maximal de G contenu dans H (qui existe par la forme 2.1 (ii)), soit C le sous-groupe de Cartan de G correspondant. Alors \\(\\mathrm{C} \\subset \\mathrm{H}\\). D'autre part, \\(\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{T})\\) est un sous-groupe lisse de G et \\(\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{T})\\cap\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H}) = \\mathrm{Norm}_{\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H})}(\\mathrm{T})\\) en est un sous-groupe lisse d'indice fini égal à \\(d\\) (défini dans a)). Le nombre des conjugués de H contenant un tore maximal ou un sous-groupe de Cartan donné est égal à \\(d\\).</p></li>\n  <li><span class=\"item-label\">c)</span> <p>Soit U le plus grand ouvert de G tel que \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) induise un morphisme \\(\\psi^{-1}(\\mathrm{U}) \\to \\mathrm{U}\\) qui soit fini et étale. Alors U est un ouvert dense et pour \\(g \\in \\mathrm{G}(k)\\), on a \\(g \\in \\mathrm{U}(k)\\) si et seulement si il existe exactement \\(d\\) conjugués de H contenant \\(g\\), ou encore si et seulement si il existe au moins \\(d\\) conjugués distincts \\(\\mathrm{H}_i\\) de H contenant \\(g\\) tels que pour tout \\(i\\), \\((\\mathfrak{g}/\\mathfrak{h}_i)^{\\mathrm{ad}(g)} = 0\\) (où \\(\\mathfrak{h}_i = \\mathrm{Lie}(\\mathrm{H}_i)\\)).</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'assertion a) provient du fait que \\(\\psi\\) est génériquement étale (qui a été énoncé à la fin de 2.1) ; cela implique aussi que l'ouvert U introduit dans c) est non vide i.e. dense, et les deux caractérisations énoncées pour les éléments de \\(\\mathrm{U}(k)\\), (compte tenu que \\(\\psi\\) est séparé, X intègre et G intègre normal, SGA 1, I 10.11, et du fait que \\((\\mathfrak{g}/\\mathfrak{h}_i)^{\\mathrm{ad}(g)} = 0\\) signifie que \\(\\psi\\) est étale en le point \\(x_i\\) de \\(\\psi^{-1}(g)\\) correspondant à \\(\\mathrm{H}_i\\)). Si H contient le tore maximal T de G, alors les centralisateurs de T dans H et G ont même dimension, et sont lisses et connexes (<a class=\"ref\" href=\"#XII.6.6\">XII 6.6</a> b)), donc sont égaux, ce qui prouve que \\(\\mathrm{C} \\subset \\mathrm{H}\\). D'ailleurs on sait que le normalisateur de T dans un groupe lisse qui le contient est lisse (XI, 2.4 bis), donc \\(\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{T})\\) et \\(\\mathrm{Norm}_{\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H})}(\\mathrm{T})\\) sont lisses (N.B. on a signalé que \\(\\mathrm{N} = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H})\\) est lisse, à la fin de l'énoncé 2.1), d'ailleurs \\(\\mathrm{Norm}_{\\mathrm{N}}(\\mathrm{T})\\) contient C qui est d'indice fini dans \\(\\mathrm{N}(\\mathrm{T})\\), donc il est d'indice fini dans \\(\\mathrm{N}(\\mathrm{T})\\). Utilisant le théorème de conjugaison pour les tores maximaux de H, on voit que l'indice en question est égal au nombre des conjugués de H qui contiennent T, ou ce qui revient au même, qui contiennent C. Or comme la réunion des conjugués de C dans G est dense (en vertu de 2.1 (i) \\(\\Rightarrow\\) (vi) appliqué à C au lieu de H), et l'ouvert U défini dans c) évidemment stable par automorphismes intérieurs, on voit que \\(\\mathrm{C}\\cap\\mathrm{U} \\neq \\emptyset\\). Procédant comme dans la démonstration de l'implication (vi) \\(\\Rightarrow\\) (i) de 2.1, on en conclut que (quitte à faire un changement de corps de base inoffensif) il existe un \\(g \\in (\\mathrm{C}\\cap\\mathrm{U})(k)\\) tel que tout conjugué de H qui contient \\(g\\) contienne T, et par suite aussi C. Donc les conjugués de H contenant C sont ceux contenant \\(g\\), et comme \\(g \\in \\mathrm{U}(k)\\), leur nombre est égal à \\(d\\), ce qui achève d'établir b). On notera que nous avons établi en fait que l'ensemble des conjugués de H contenant T est un ensemble homogène sous le groupe des points rationnels de\n\\[\n\\mathrm{W}_{\\mathrm{G}}(\\mathrm{T}) = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{T})/\\mathrm{Centr}_{\\mathrm{G}}(\\mathrm{T}),\n\\]\nce qui prouve en particulier que\n\\[\nd \\leqslant \\text{ordre du groupe de Weyl de G}.\n\\]</p>"
+    },
+    {
+     "id": "XIII.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de 2.1, les conditions suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) est un morphisme birationnel.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Il y a un conjugué et un seul de H contenant un sous-groupe de Cartan donné de G.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>H contient un sous-groupe de Cartan C de G, et \\(\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H}) \\supset \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{C})\\).</p></li>\n  <li><span class=\"item-label\">(iv)</span> <p>Il existe un ouvert non vide V de G tel que \\(g \\in \\mathrm{V}(k)\\) implique que \\(g\\) est contenu dans exactement un conjugué de H.</p></li>\n  </ol>\n  <p>C'est clair grâce à 2.1 et 2.3.</p></div>\n</div>"
+    },
+    {
+     "id": "XIII.2.5",
+     "type": "corollaire",
+     "label": "2.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Supposons réalisées les conditions de 2.4 et soit \\(g \\in \\mathrm{G}(k)\\). Les conditions suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(g \\in \\mathrm{U}(k)\\), où U est défini dans 2.3 c), i.e. \\(g\\) est contenu dans un conjugué et un seul de H.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>L'ensemble des conjugués de H contenant \\(g\\) est fini non vide.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>Le schéma \\(\\psi^{-1}(g)\\) « des conjugués de H contenant \\(g\\) » contient un point isolé.</p></li>\n  <li><span class=\"item-label\">(iv)</span> <p>Il existe un conjugué \\(\\mathrm{H}'\\) de H contenant \\(g\\), et on a \\((\\mathfrak{g}/\\mathfrak{h}')^{\\mathrm{ad}(g)} = 0\\), où \\(\\mathfrak{h}' = \\mathrm{Lie}(\\mathrm{H}')\\).</p></li>\n  </ol>\n  <p>Enfin, U est aussi le plus grand ouvert de G tel que \\(\\psi\\) induise un isomorphisme \\(\\psi^{-1}(\\mathrm{U}) \\xrightarrow{\\ \\sim\\ } \\mathrm{U}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'équivalence de (i) (ii) (iii) ainsi que la dernière assertion résultent du « Main Theorem »<sup class=\"footnote-ref\"><a id=\"XIII-fn3ref\" href=\"#XIII-fn3\">3</a></sup> appliqué au morphisme birationnel \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\), compte tenu que G est normal. L'équivalence de ces conditions avec (iv) résulte aussitôt de la dernière assertion de 2.1 caractérisant l'ensemble des éléments de X en lesquels \\(\\psi\\) est étale.</p>"
+    },
+    {
+     "id": "XIII.2.6",
+     "type": "theoreme",
+     "label": "2.6",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XIII.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse connexe sur un corps algébriquement clos \\(k\\), C un sous-groupe de Cartan, associé à un tore maximal T, \\(\\mathrm{N} = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{C}) = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{T})\\) (cf. <a class=\"ref\" href=\"#XII.8.4\">XII 8.4</a>), soit \\(\\mathrm{X} = \\mathrm{G}\\times^{\\mathrm{N}}\\mathrm{C}\\), où N opère sur le facteur gauche G par translations à droite, et sur le facteur droit C par automorphismes intérieurs, \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) le morphisme canonique.</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Le morphisme \\(\\psi\\) est birationnel.</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Soit U le plus grand ouvert de G tel que \\(\\psi\\) induise un isomorphisme \\(\\psi^{-1}(\\mathrm{U}) \\xrightarrow{\\ \\sim\\ } \\mathrm{U}\\) (cf. 2.5). Soit\n  \\[\n  \\rho = \\rho_{\\nu}(\\mathrm{G}) = \\dim \\mathrm{C}\n  \\]\n  le rang nilpotent de G. Alors pour tout \\(g \\in \\mathrm{G}(k)\\), la multiplicité de la valeur propre 1 dans \\(\\mathrm{ad}(g)\\) opérant sur \\(\\mathfrak{g}\\) est au moins égale à \\(\\rho\\), et pour qu'elle soit égale à \\(\\rho\\), il faut et il suffit que l'on ait \\(g \\in \\mathrm{U}(k)\\).</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Démonstration.</em> Comme la condition 2.1 (i) est vérifiée, ou peut appliquer 2.4 (iii) \\(\\Rightarrow\\) (i), qui établit (a). Dans <em>BIBLE</em> 7 (dans le cas où G est affine) les points de \\(\\mathrm{U}(k)\\) sont appelés les points <em>réguliers</em> de \\(\\mathrm{G}(k)\\), et nous suivrons cette terminologie en appelant U l'ouvert des points réguliers de G. (N.B. La démonstration donnée dans <em>BIBLE</em> du fait que l'ensemble en question est lui-même ouvert est incorrecte, mais nous l'avons obtenu dans le présent exposé sous des conditions plus générales).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons b), et pour ceci, introduisons pour tout \\(g \\in \\mathrm{G}(k)\\) le polynôme caractéristique\n\\[\n\\mathrm{P}(\\mathrm{ad}(g),t) = t^n + c_1(g)t^{n-1} + \\cdots + c_n(g);\n\\]\non voit aussitôt (remplaçant \\(k\\) par une algèbre quelconque sur \\(k\\)) que les \\(c_i(g)\\) proviennent de sections bien déterminées\n\\[\nc_i \\in \\Gamma(\\mathrm{G}, \\mathscr{O}_{\\mathrm{G}}).\n\\]\nLorsque \\(g \\in \\mathrm{G}(k)\\) est un élément contenu dans un sous-groupe de Cartan, (par exemple un élément régulier), que nous pouvons supposer être C, alors par 2.5 (iv) on voit que l'on a \\((\\mathfrak{g}/\\mathfrak{c})^{\\mathrm{ad}(g)} = 0\\) si et seulement si \\(g\\) est régulier (où \\(\\mathfrak{c}\\) désigne l'algèbre de Lie de C) ; d'autre part comme C est nilpotent on voit tout de suite que \\(\\mathrm{ad}_{\\mathfrak{c}}(g)\\) n'a que la seule valeur propre 1, ce qui prouve que la multiplicité de la valeur propre 1 dans \\(\\mathrm{ad}_{\\mathfrak{g}}(g)\\) est \\(\\geqslant \\rho\\), et égale exactement à \\(\\dim \\mathrm{C} = \\rho\\) si et seulement si \\(g\\) est régulier. En particulier, le polynôme ci-dessus est divisible par \\((t-1)^{\\rho}\\). Comme la relation de divisibilité par \\((t-1)^{\\rho}\\) s'exprime par des relations linéaires (à coefficients entiers) entre les coefficients du polynôme, et que ces relations sont satisfaites pour \\(g \\in \\mathrm{U}(k)\\), U étant un ouvert dense, il s'ensuit (G étant réduit) qu'elles le sont pour tout \\(g\\), en fait on a une relation\n\\[\n(\\dagger) \\qquad t^n + c_1t^{n-1} + c_0 = (t-1)^{\\rho}(t^{n-\\rho} + b_1t^{n-\\rho-1} + \\cdots + b_{n-\\rho})\n\\]\ndans l'anneau des polynômes sur \\(\\Gamma(\\mathrm{G}, \\mathscr{O}_{\\mathrm{G}})\\) ; en particulier pour tout \\(g \\in \\mathrm{G}(\\mathrm{K})\\), \\(\\mathrm{ad}(g)\\) a la valeur propre 1 avec la multiplicité \\(\\rho\\) au moins. De plus, on a vu qu'on a égalité si \\(g\\) est régulier, prouvons la réciproque. Pour ceci, supposons d'abord G affine, et écrivons \\(g\\) comme produit\n\\[\ng = g_sg_u\n\\]\nde sa partie semi-simple par sa partie unipotente (<em>BIBLE</em> 4 N° 4), alors\n\\[\n\\mathrm{ad}(g) = \\mathrm{ad}(g_s)\\,\\mathrm{ad}(g_u)\n\\]\nest la décomposition analogue de \\(\\mathrm{ad}(g)\\) (<em>loc. cit.</em> cor au th. 3), et par suite \\(\\mathrm{ad}(g)\\) et \\(\\mathrm{ad}(g_s)\\) ont mêmes valeurs propres (comptées avec leurs multiplicités), en particulier la valeur propre 1 intervient avec la même multiplicité dans \\(\\mathrm{ad}(g)\\) et dans \\(\\mathrm{ad}(g_s)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part, en vertu de <em>BIBLE</em> 7 th. 2 cor. 1, \\(g\\) est régulier si et seulement si \\(g_s\\) l'est. Donc pour prouver b), on peut supposer \\(g = g_s\\) i.e. \\(g\\) semi-simple, donc contenu dans un tore maximal en vertu de <em>BIBLE</em> 6 th. 5 c), et a fortiori dans un sous-groupe de Cartan, cas qui a déjà été traité. Cela prouve b) dans le cas G affine. Dans le cas général, soit \\(\\mathrm{Z} = \\mathrm{Centr}(\\mathrm{G})_{\\text{réd}}\\), alors en vertu de <a class=\"ref\" href=\"#XII.6.6\">XII 6.6</a> e) les sous-groupes de Cartan de G sont les images inverses de ceux de \\(\\mathrm{G}' = \\mathrm{G}/\\mathrm{Z}\\), donc \\(g\\) est régulier dans G si et seulement si son image \\(g'\\) dans \\(\\mathrm{G}'\\) est régulier dans \\(\\mathrm{G}'\\). D'autre part, comme Z est lisse, l'algèbre de Lie \\(\\mathfrak{g}'\\) de \\(\\mathrm{G}'\\) n'est autre que \\(\\mathfrak{g}/\\mathfrak{z}\\), où \\(\\mathfrak{z} = \\mathrm{Lie}(\\mathrm{Z})\\), et \\(\\mathrm{ad}(g')\\) n'est autre que \\(\\mathrm{ad}(g)_{\\mathfrak{g}/\\mathfrak{z}}\\), donc la multiplicité de la valeur propre 1 dans \\(\\mathrm{ad}(g)\\) est égale à \\(d = \\dim \\mathrm{Z}\\) plus la multiplicité de la valeur propre 1 dans \\(\\mathrm{ad}(g')\\), d'où résulte aussitôt que le premier est égal au rang nilpotent de G si et seulement si le deuxième est égal au rang nilpotent de \\(\\mathrm{G}'\\). Ainsi on est ramené au cas de \\(\\mathrm{G}'\\), or \\(\\mathrm{G}'\\) étant affine en vertu de <a class=\"ref\" href=\"#XII.6.1\">XII 6.1</a>, ce cas a déjà été traité. Cela achève la démonstration de 2.6.</p>"
+    },
+    {
+     "id": "XIII.2.7",
+     "type": "corollaire",
+     "label": "2.7",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de la démonstration qui précède<sup class=\"footnote-ref\"><a id=\"XIII-fn4ref\" href=\"#XIII-fn4\">4</a></sup>, soit\n  \\[\n  b = 1 + b_1 + \\cdots + b_{n-\\rho} \\in \\Gamma(\\mathrm{G}, \\mathscr{O}_{\\mathrm{G}}).\n  \\]\n  Alors l'ouvert des points réguliers de G est donné par\n  \\[\n  \\mathrm{U} = \\mathrm{G}_b\n  \\]\n  (ensemble des points de G en lesquels \\(b\\) est inversible), en particulier U est un ouvert affine si G est affine.</p></div>\n</div>"
+    },
+    {
+     "id": "XIII.2.8",
+     "type": "corollaire",
+     "label": "2.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.2.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.8</span></div>\n  <div class=\"thm-body\"><p>Soit H un sous-groupe algébrique lisse et connexe de G contenant un sous-groupe de Cartan de G.</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Soit C un sous-groupe algébrique de H. Pour que C soit un sous-groupe de Cartan de H, il faut et suffit que ce soit un sous-groupe de Cartan de G.</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Soit \\(g \\in \\mathrm{G}(k)\\), et soit \\(d\\) l'entier introduit dans 2.3. Pour que \\(g\\) soit un point régulier de G, il faut et il suffit qu'il existe exactement \\(d\\) conjugués \\(\\mathrm{H}_i\\) de H contenant \\(g\\), et que pour chaque \\(i\\), \\(g\\) soit un élément régulier de \\(\\mathrm{H}_i\\), ou encore qu'il y ait au plus \\(d\\) conjugués de H contenant \\(g\\), et que \\(g\\) soit régulier dans l'un d'eux. S'il en est ainsi, et si C est l'unique sous-groupe de Cartan de G contenant \\(g\\), alors les conjugués de H contenant \\(g\\) sont les conjugués de H contenant C.</p></li>\n  <li><span class=\"item-label\">c)</span> <p>Soit \\(g \\in \\mathrm{H}(k)\\), pour que \\(g\\) soit régulier dans G, il faut et suffit qu'il soit régulier dans H, et qu'on ait\n  \\[\n  (\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{ad}(g)} = 0.\n  \\]</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons a). Sous l'une et l'autre hypothèse sur C, l'unique tore maximal T de C est un tore maximal de H et de G, (H ayant même rang réductif que G), donc comme \\(\\mathrm{Centr}_{\\mathrm{H}}(\\mathrm{T}) \\subset \\mathrm{Centr}_{\\mathrm{G}}(\\mathrm{T})\\) sont des groupes lisses connexes de même dimension, ils sont égaux, donc il revient au même de dire que C est égal à l'un ou à l'autre de ces deux groupes, ce qui prouve a).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons b). Supposons d'abord \\(g\\) régulier pour G, soit C l'unique sous-groupe de Cartan de G contenant \\(g\\), alors en vertu de 2.3. b) il existe exactement \\(d\\) conjugués \\(\\mathrm{H}_i\\) de H contenant C. Comme \\((\\mathfrak{g}/\\mathfrak{c})^{\\mathrm{ad}(g)} = 0\\) i.e. \\(\\mathrm{ad}(g)\\) n'a pas de valeur propre \\(+1\\) dans \\(\\mathfrak{g}/\\mathfrak{c}\\), on a a fortiori \\((\\mathfrak{g}/\\mathfrak{h}_i)^{\\mathrm{ad}(g)} = 0\\), donc en vertu de 2.3 c) il y a exactement \\(d\\) conjugués de H contenant \\(g\\), savoir les \\(\\mathrm{H}_i\\). Pour un tel \\(\\mathrm{H}_i\\), un sous-groupe de Cartan de \\(\\mathrm{H}_i\\) contenant \\(g\\) est un sous-groupe de Cartan de G contenant \\(g\\) en vertu de a), donc égal à C, ce qui prouve que \\(g\\) est régulier dans \\(\\mathrm{H}_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Inversement, supposons qu'il existe au plus \\(d\\) conjugués \\(\\mathrm{H}_i\\) de H contenant \\(g\\), et que \\(g\\) soit régulier dans l'un d'eux, qu'on peut supposer égal à H. Prouvons que \\(g\\) est régulier dans G. Comme \\(g\\) est régulier dans H il est contenu dans un unique sous-groupe de Cartan C de H, par a) c'est un sous-groupe de Cartan de G. Soit \\(\\mathrm{C}'\\) un sous-groupe de Cartan de G contenant \\(g\\), prouvons \\(\\mathrm{C}' = \\mathrm{C}\\) (ce qui prouvera que \\(g\\) est régulier dans C). En effet en vertu de 2.3 b) il existe exactement \\(d\\) conjugués de H contenant \\(\\mathrm{C}'\\), et comme ces derniers contiennent \\(g\\), ce sont nécessairement les \\(\\mathrm{H}_i\\), donc les \\(\\mathrm{H}_i\\) et en particulier H contiennent \\(\\mathrm{C}'\\). Donc C, \\(\\mathrm{C}'\\) sont deux sous-groupes de Cartan de H (en vertu de a)) qui contiennent le même élément régulier \\(g\\) de H, donc sont égaux. C.Q.F.D.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons c) : désignant par \\(\\nu(u)\\) la nullité<sup class=\"footnote-ref\"><a id=\"XIII-fn5ref\" href=\"#XIII-fn5\">5</a></sup> de \\(\\mathrm{id} - u\\), pour un endomorphisme d'un espace vectoriel de dimension finie, on aura\n\\[\n\\nu(\\mathrm{ad}(g)_{\\mathfrak{g}}) = \\nu(\\mathrm{ad}(g)_{\\mathfrak{h}}) + \\nu(\\mathrm{ad}(g)_{\\mathfrak{g}/\\mathfrak{h}}),\n\\]\nor les deux termes du deuxième membre sont respectivement \\(\\geqslant\\) rang nilpotent de H (égal au rang nilpotent \\(\\rho\\) de G en vertu de a)) et \\(\\geqslant 0\\), donc on a \\(\\nu(\\mathrm{ad}(g)_{\\mathfrak{g}}) = \\rho\\) si et seulement si \\(\\nu(\\mathrm{ad}(g)_{\\mathfrak{h}}) = \\rho\\) et \\(\\nu(\\mathrm{ad}(g)_{\\mathfrak{g}/\\mathfrak{h}}) = 0\\), i.e. \\(g\\) est régulier dans G si et seulement si \\(g\\) est régulier dans H et \\(\\mathrm{ad}(g)_{\\mathfrak{g}/\\mathfrak{h}}\\) est sans invariants non nuls. C.Q.F.D.</p>"
+    },
+    {
+     "id": "XIII.2.9",
+     "type": "remarque",
+     "label": "2.9",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XIII.2.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\"><p>Dans l'énoncé de 2.1, on ne peut affaiblir la condition (iii) en supposant seulement que H contient un tore maximal et est d'indice fini dans son normalisateur, même si on exige que ce normalisateur soit de plus lisse i.e. qu'on ait \\(\\mathrm{H} = \\mathrm{N}^0\\), et même lorsque G est affine résoluble. Un exemple est fourni par le groupe G des matrices de la forme\n  \\[\n  g = \\begin{pmatrix} t &amp; a &amp; c \\\\ 0 &amp; 1 &amp; b \\\\ 0 &amp; 0 &amp; 1 \\end{pmatrix},\n  \\]\n  et le sous-groupe H des matrices de la forme précédente, avec \\(b = c = 0\\) (N.B. le sous-groupe de Cartan de G est ici formé des matrices \\(g\\) avec \\(a = c = 0\\)).</p></div>\n</div>"
+    },
+    {
+     "id": "XIII.2.10",
+     "type": "remarque",
+     "label": "2.10",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XIII.2.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">2.10</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur \\(k\\), H un sous-groupe algébrique lisse, mais ne supposons plus que H et G soient connexes. Supposons que \\(\\mathrm{H}^0\\) contienne un sous-groupe de Cartan de \\(\\mathrm{G}^0\\). Alors \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}} \\subset (\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{H}^0} = 0\\), donc \\(\\mathrm{H}^0 = \\mathrm{N}^0\\) (N est le normalisateur de H), en particulier N est lisse. Cependant, on construit facilement des exemples, avec G connexe, où H a une composante connexe \\(\\mathrm{H}_i\\) telle que pour aucun \\(h \\in \\mathrm{H}_i(k)\\), on n'ait \\((\\mathfrak{g}/\\mathfrak{h})^{\\mathrm{ad}(h)} = 0\\) i.e. le morphisme \\((g,h) \\to \\mathrm{ad}(g)\\cdot h\\) de \\(\\mathrm{G}\\times\\mathrm{H}_i\\) dans G n'est étale (ni même quasi-fini) en aucun point (prendre par exemple pour H le normalisateur du tore maximal dans \\(\\mathrm{SL}(2)_k\\)). De même, même si l'image \\(\\mathrm{H}'\\) de H dans le groupe fini \\(\\mathrm{G}' = \\mathrm{G}/\\mathrm{G}^0\\) est égale à \\(\\mathrm{G}'\\), il n'est pas nécessairement vrai que la réunion des conjugués de H dans G soit dense (prendre pour G le produit semi-direct de \\(\\mathbb{Z}/2\\mathbb{Z}\\) avec \\(\\mathrm{G}^0 = \\mathrm{SL}(2)_k\\) sur lequel il opère par « symétrie », et pour H le produit semi-direct \\(\\mathbb{Z}/2\\mathbb{Z}\\cdot\\mathrm{T}\\), où T est un tore maximal de \\(\\mathrm{G}^0\\)). Par contre, si on ne suppose pas a priori que \\(\\mathrm{H}^0\\) contienne un sous-groupe de Cartan de \\(\\mathrm{G}^0\\), mais que la réunion des conjugués de H dans G est dense, alors \\(\\mathrm{H}^0\\) contient nécessairement un sous-groupe de Cartan de \\(\\mathrm{G}^0\\) : pour le vérifier, on peut évidemment supposer G connexe, et il suffit de reprendre la démonstration de 2.1 (vi) \\(\\Rightarrow\\) (i), qui est valable sans supposer H connexe.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIII-fn3",
+     "number": "3",
+     "html": "N.D.E. : de Zariski !"
+    },
+    {
+     "id": "XIII-fn4",
+     "number": "4",
+     "html": "N.D.E. : cf. (†) plus haut."
+    },
+    {
+     "id": "XIII-fn5",
+     "number": "5",
+     "html": "N.D.E. : c.-à-d., la dimension de son nil-espace."
+    }
+   ]
+  },
+  {
+   "id": "XIII-3",
+   "title": "3. Cas d'un préschéma de base quelconque",
+   "blocks": [
+    {
+     "id": "XIII.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIII.3\">3. Cas d'un préschéma de base quelconque</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons d'abord que l'on soit sur un corps de base \\(k\\), pas nécessairement algébriquement clos. Comme les conditions 2.1 (i bis), (iv bis), (v), (vi) sont invariantes par extension du corps de base, on voit par passage à la clôture algébrique \\(\\overline{k}\\) de \\(k\\) qu'elles sont équivalentes entre elles, et équivalent au fait que \\(\\mathrm{H}_{\\overline{k}}\\) contient un sous-groupe de Cartan de \\(\\mathrm{G}_{\\overline{k}}\\). Lorsque cette condition est satisfaite, alors (avec les notations de 2.3) il sera encore vrai que \\(k(\\mathrm{X})\\) est une extension finie séparable de \\(k(\\mathrm{G})\\), de degré \\(d\\) indépendant de toute extension de la base. Si U est le plus grand ouvert de G tel que \\(\\psi\\) induise un morphisme \\(\\psi^{-1}(\\mathrm{U}) \\to \\mathrm{U}\\) qui soit fini et étale, alors la formation de U commute avec l'extension du corps de base. Si \\(\\psi\\) est birationnel, alors U est aussi le plus grand ouvert de G tel que \\(\\psi\\) induise un isomorphisme \\(\\psi^{-1}(\\mathrm{U}) \\xrightarrow{\\ \\sim\\ } \\mathrm{U}\\), et si alors \\(g \\in \\mathrm{U}(k)\\), il existe un sous-groupe \\(\\mathrm{H}'\\) de G et un seul, conjugué de H sur la clôture algébrique \\(\\overline{k}\\) de \\(k\\), tel que \\(\\mathrm{H}' \\ni g\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un point \\(g \\in \\mathrm{G}(k)\\) est dit <em>régulier</em>, s'il est régulier en tant qu'élément de \\(\\mathrm{G}(\\overline{k}) = \\mathrm{G}_{\\overline{k}}(\\overline{k})\\). Plus généralement, la construction de 2.7 nous donne un ouvert de G, dont la formation commute avec toute extension du corps de base, appelé <em>ouvert des points réguliers</em> de G, qui est aussi caractérisé par le fait que pour toute extension algébriquement close K de \\(k\\) et tout point \\(g \\in \\mathrm{G}(\\mathrm{K})\\), \\(g\\) est un point régulier de \\(\\mathrm{G}_{\\mathrm{K}}\\) si et seulement si \\(g \\in \\mathrm{U}(\\mathrm{K})\\). Si \\(g \\in \\mathrm{U}(k)\\)<sup class=\"footnote-ref\"><a id=\"XIII-fn6ref\" href=\"#XIII-fn6\">6</a></sup>, on voit que \\(g\\) est contenu dans un sous-groupe de Cartan et un seul de G, comme nous allons montrer sous des conditions plus générales ci-dessous.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un préschéma en groupes lisse, séparé, de type fini, à fibres connexes sur le préschéma S, considérons le foncteur \\(\\mathscr{C} : (\\mathbf{Sch})^{\\circ}_{/\\mathrm{S}} \\to (\\mathbf{Ens})\\) défini par \\(\\mathscr{C}(\\mathrm{S}') =\\) ensemble des sous-groupes de Cartan (<a class=\"ref\" href=\"#XII.3.1\">XII 3.1</a>) de \\(\\mathrm{G}_{\\mathrm{S}'}\\).\nSupposons que ce foncteur soit représentable par un préschéma lisse sur S ; nous donnons dans <a class=\"ref\" href=\"#XV\">XV</a> une condition nécessaire et suffisante pour qu'il en soit ainsi, mais nous savons déjà que cette hypothèse est satisfaite si G est affine sur S de rang réductif localement constant (<a class=\"ref\" href=\"#XII.3.3\">XII 3.3</a>), ou plus généralement si G admet localement pour la topologie fpqc un tore maximal (<a class=\"ref\" href=\"#XII.7.1\">XII 7.1</a> a)), par exemple si S est le spectre d'un corps. Soit X le sous-groupe de Cartan du \\(\\mathscr{C}\\)-préschéma en groupes \\(\\mathrm{G}_{\\mathscr{C}}\\), « sous-groupe de Cartan universel » de G. En tant que préschéma sur S, X représente donc le foncteur\n\\[\n\\mathrm{X}(\\mathrm{S}') = \\text{ensemble des couples } (\\mathrm{C},g), \\; \\mathrm{C} \\text{ un sous-groupe de Cartan de } \\mathrm{G}_{\\mathrm{S}'} \\text{ et } g \\text{ une section de } \\mathrm{C} \\text{ sur } \\mathrm{S}'.\n\\]\nConsidérons le morphisme de projection canonique \\((\\mathrm{C},g) \\mapsto g\\)\n\\[\n\\psi : \\mathrm{X} \\to \\mathrm{G}.\n\\]\nOn a alors le</p>"
+    },
+    {
+     "id": "XIII.3.1",
+     "type": "theoreme",
+     "label": "3.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XIII.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions précédentes sur G, et avec les notations précédentes, soit U l'ensemble des \\(g \\in \\mathrm{G}\\) tels que \\(g\\) soit un élément régulier de sa fibre \\(\\mathrm{G}_s\\). Alors U est ouvert, et c'est aussi le plus grand ouvert U de G tel que \\(\\psi\\) induise un isomorphisme\n  \\[\n  \\psi^{-1}(\\mathrm{U}) \\xrightarrow{\\ \\sim\\ } \\mathrm{U}.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons d'abord que U est ouvert. De l'hypothèse de représentabilité de \\(\\mathscr{C}\\) comme préschéma lisse sur S, comme son morphisme structural est évidemment surjectif, on conclut aussitôt que G admet localement pour la topologie étale un sous-groupe de Cartan, et que le rang nilpotent des fibres de G est localement constant. Il en est de même de la dimension des fibres de G, et quitte à se localiser sur S, on peut supposer que l'un et l'autre sont constants, soient \\(\\rho\\) et \\(n\\). Considérons alors le polynôme de Killing\n\\[\n\\mathrm{P}_{\\mathrm{G}}(t) = t^n + c_1t^{n-1} + \\cdots + c_n \\in \\mathrm{A}[t], \\qquad \\text{où } \\mathrm{A} = \\Gamma(\\mathrm{G}, \\mathscr{O}_{\\mathrm{G}}).\n\\]\nLa restriction de ce polynôme aux fibres \\(\\mathrm{G}_s\\) de G, et en particulier aux fibres en les points maximaux de S, est divisible par \\((t-1)^{\\rho}\\), ce qui s'exprime par le fait que certaines combinaisons linéaires à coefficients entiers des \\(c_i\\) sont nulles sur les fibres \\(\\mathrm{G}_s\\). Lorsque S est réduit (ce qu'on peut supposer pour établir que U est ouvert), il s'ensuit qu'elles sont elles-mêmes nulles, donc que le polynôme de Killing lui-même est divisible par \\((t-1)^{\\rho}\\), soit\n\\[\n\\mathrm{P}_{\\mathrm{G}}(t) = (t-1)^{\\rho}(t^{n-\\rho} + b_1t^{n-r-1} + \\cdots + b_{n-\\rho}).\n\\]\nSoit \\(b\\) la somme des coefficients \\(b_0 = 1, b_1, \\ldots, b_{n-\\rho}\\) du deuxième facteur, alors en vertu de 2.7 appliqué aux fibres de G, on voit que\n\\[\n\\mathrm{U} = \\mathrm{G}_b,\n\\]\nce qui prouve bien que U est ouvert.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour prouver que \\(\\psi^{-1}(\\mathrm{U}) \\to \\mathrm{U}\\) est un isomorphisme, on est ramené par SGA 1, I 5.7 à le vérifier fibre par fibre, ce qui nous ramène au cas d'un corps de base, qu'on peut supposer algébriquement clos. Alors il existe un sous-groupe de Cartan C de G, et si N est son normalisateur, C s'identifie par le théorème de conjugaison <a class=\"ref\" href=\"#XII.7.1\">XII 7.1</a> a) et b) à \\(\\mathrm{G}/\\mathrm{N}\\), et le morphisme \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) envisagé ici n'est autre que celui défini dans le N° 2. On conclut alors par 2.6 b). Le même raisonnement montre également que U est le <em>plus grand</em> ouvert de G tel que \\(\\psi\\) induise un isomorphisme \\(\\psi^{-1}(\\mathrm{U}) \\to \\mathrm{U}\\).</p>"
+    },
+    {
+     "id": "XIII.3.2",
+     "type": "corollaire",
+     "label": "3.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de 3.1, soit \\(g\\) une section régulière de G, i.e. telle que pour tout \\(s \\in \\mathrm{S}\\), \\(g(s)\\) soit un point régulier de \\(\\mathrm{G}_s\\). Alors il existe un et un seul sous-groupe de Cartan C de G tel que \\(g\\) soit une section de C.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, l'hypothèse sur \\(g\\) signifie que \\(g\\) est une section de U, et la conclusion qu'il existe une unique section de X qui la relève, ce qui n'est qu'une autre façon d'exprimer que \\(\\psi^{-1}(\\mathrm{U}) \\to \\mathrm{U}\\) est un isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons maintenant que l'ouvert \\(\\psi^{-1}(\\mathrm{U})\\) du sous-groupe de Cartan X de \\(\\mathrm{G}_{\\mathscr{C}}\\) n'est autre que l'ouvert de X formé des points de X qui sont réguliers dans \\(\\mathrm{G}_{\\mathscr{C}}\\) (par quoi on entend : réguliers dans leur fibre). On obtient ainsi une « fibration » naturelle de l'ouvert dense U des points réguliers de G au-dessus du préschéma \\(\\mathscr{C}\\), les fibres étant des ouverts denses de sous-groupes de Cartan des fibres de \\(\\mathrm{G}_{\\mathscr{C}}\\) (savoir les ouverts des points réguliers dans G). On trouve par exemple le résultat suivant (qui sera considérablement précisé dans l'exposé suivant) :</p>"
+    },
+    {
+     "id": "XIII.3.3",
+     "type": "corollaire",
+     "label": "3.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse connexe sur le corps \\(k\\), \\(\\mathscr{T}\\) le schéma des tores maximaux de G (\\(\\simeq\\) le schéma des sous-groupes de Cartan de G). Alors le corps des fonctions \\(k(\\mathrm{G})\\) de G est isomorphe au corps des fonctions d'un groupe algébrique lisse connexe affine nilpotent C sur le corps des fonctions \\(k(\\mathscr{T})\\) de \\(\\mathscr{T}\\), savoir \\(\\mathrm{C} = \\)« le sous-groupe de Cartan générique de G ». Si G est affine de rang unipotent nul, i.e. si les sous-groupes de Cartan de \\(\\mathrm{G}_{\\overline{\\mathrm{K}}}\\) sont des tores, alors \\(k(\\mathrm{G})\\) est une extension unirationnelle de \\(k(\\mathscr{T})\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Bien entendu, par sous-groupe de Cartan générique de G, on entend (par abus de langage) le sous-groupe de Cartan de \\(\\mathrm{G}_{k(\\mathscr{T})}\\) fibre générique de X au-dessus de \\(\\mathscr{T}\\). Il n'y a plus qu'à prouver la dernière assertion de 3.3, qui est contenue dans le résultat bien connu suivant (dû à Chevalley) :</p>"
+    },
+    {
+     "id": "XIII.3.4",
+     "type": "lemme",
+     "label": "3.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIII.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(k\\) un corps, T un tore sur \\(k\\), \\(k(\\mathrm{T})\\) le corps des fonctions rationnelles sur T, alors \\(k(\\mathrm{T})\\) est une extension unirationnelle de \\(k\\), i.e. est contenue dans une extension transcendante pure de \\(k\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit en effet \\(k'\\) une extension finie séparable de \\(k\\) qui splitte<sup class=\"footnote-ref\"><a id=\"XIII-fn7ref\" href=\"#XIII-fn7\">7</a></sup> T (<a class=\"ref\" href=\"#X.1.4\">X 1.4</a>), alors \\(\\mathrm{T}\\otimes_k k'\\) est une variété rationnelle i.e. admet un ouvert dense isomorphe à un ouvert dense de l'espace affine \\(\\mathbb{A}^n_{k'}\\), donc \\(\\mathrm{T}' = \\prod_{\\mathrm{Spec}(k')/\\mathrm{Spec}(k)} \\mathrm{T}_{k'}/\\mathrm{Spec}(k')\\) est une variété rationnelle (car admet un ouvert dense isomorphe à un ouvert dense de \\(\\prod_{\\mathrm{Spec}(k')/\\mathrm{Spec}(k)} \\mathbb{A}^n_{k'}\\), qui est isomorphe à l'espace affine de dimension \\(mn\\) sur \\(k\\), où \\(m = [k':k]\\)). Considérons l'homomorphisme norme de \\(\\mathrm{T}'\\) dans T (défini dès que T est un schéma en groupes commutatif sur \\(k\\)) ; le composé \\(\\mathrm{T} \\to \\mathrm{T}' \\to \\mathrm{T}\\) est la puissance \\(m\\)-ème dans T, donc dominant, donc \\(\\mathrm{T}' \\to \\mathrm{T}\\) est dominant, ce qui prouve que T est unirationnel.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Revenons aux conditions de 3.1, mais en supposant même que G admette, localement pour la topologie fpqc, un tore maximal (<a class=\"ref\" href=\"#XII.7.1\">XII 7.1</a>). Soit Y le tore maximal du sous-groupe de Cartan X de G, de sorte que le morphisme \\(\\psi : \\mathrm{X} \\to \\mathrm{G}\\) induit un morphisme \\(\\mathrm{Y} \\to \\mathrm{G}\\) dont l'image est formée ensemblistement des éléments semi-simples des fibres de G (<a class=\"ref\" href=\"#XII.8\">XII 8</a>). Enfin, il résulte de 3.1 que la restriction de \\(\\psi\\) à l'ouvert \\(\\mathrm{Y}^{\\text{rég}}\\) des points réguliers de Y induit une immersion fermée\n\\[\n\\mathrm{Y}^{\\text{rég}} \\to \\mathrm{U} = \\mathrm{G}^{\\text{rég}}.\n\\]\nExplicitant la signification de \\(\\mathrm{Z} = \\mathrm{Y}^{\\text{rég}}\\) en tant que foncteur sur S, on trouve :</p>"
+    },
+    {
+     "id": "XIII.3.5",
+     "type": "corollaire",
+     "label": "3.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Soit G un S-préschéma en groupes lisse, séparé, de type fini et à fibres connexes sur le préschéma S, admettant localement pour la topologie fpqc un tore maximal. Soit \\(\\mathrm{Z} : (\\mathbf{Sch})^{\\circ}_{/\\mathrm{S}} \\to (\\mathbf{Ens})\\) le foncteur défini par\n  \\[\n  \\mathrm{Z}(\\mathrm{S}') = \\text{ensemble des sections régulières de } \\mathrm{G}_{\\mathrm{S}'} \\text{ sur } \\mathrm{S}' \\text{ qui sont contenues dans un tore maximal de } \\mathrm{G}_{\\mathrm{S}'}\n  \\]\n  Alors Z est représentable par un sous-préschéma fermé, lisse sur S, de l'ouvert \\(\\mathrm{U} = \\mathrm{G}^{\\text{rég}}\\) de G introduit dans 3.1.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour finir, notons le résultat suivant, qui précise le théorème de densité 2.1 (i) \\(\\Rightarrow\\) (vi) :</p>"
+    },
+    {
+     "id": "XIII.3.6",
+     "type": "corollaire",
+     "label": "3.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de 3.5, soit C un sous-groupe de Cartan de G, et considérons le morphisme\n  \\[\n  \\varphi : \\mathrm{Z}\\times\\mathrm{C} \\to \\mathrm{G}\n  \\]\n  défini par \\(\\varphi(g,h) = \\mathrm{ad}(g)h = ghg^{-1}\\). Alors \\(\\varphi\\) est dominant.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit évidemment de le prouver fibre par fibre, ce qui nous ramène au cas où S est le spectre d'un corps algébriquement clos. Soit T le tore maximal de C, \\(t_0\\) un élément de \\(\\mathrm{T}(k)\\) régulier dans G, \\(c_0\\) un élément de \\(\\mathrm{C}(k)\\) régulier dans G, considérons \\(\\varphi^{-1}(\\varphi(t_0,c_0))\\), dont les points rationnels sur \\(k\\) sont les couples \\((t,c)\\), avec \\(t \\in \\mathrm{Z}(k)\\), \\(c \\in \\mathrm{C}(k)\\), tels que\n\\[\n\\mathrm{ad}(t)c = \\mathrm{ad}(t_0)c_0 \\qquad \\text{i.e.} \\qquad c = \\mathrm{ad}(t^{-1}t_0)c_0,\n\\]\nqui sont donc en correspondance biunivoque avec les \\(t \\in \\mathrm{Z}(k)\\) tels que \\(\\mathrm{ad}(t^{-1}t_0)c_0 \\in \\mathrm{C}\\), ou ce qui revient au même, \\(c_0\\), étant régulier, tels que \\(t^{-1}t_0 \\in \\mathrm{N}\\) (normalisateur de C), i.e. \\(t \\in \\mathrm{N}\\). On obtient une partie ouverte et fermée de cette fibre en se bornant aux \\(t \\in \\mathrm{Z}(k)\\) tels que \\(t \\in \\mathrm{C}(k)\\). Donc on a trouvé une composante connexe de \\(\\varphi^{-1}\\varphi(t_0,c_0)\\) isomorphe à T (N.B. que le raisonnement ensembliste précédent donne bien un isomorphisme de schémas se voit en remplaçant les points à valeurs dans \\(k\\) par des points à valeurs dans un \\(k\\)-préschéma quelconque), donc la fibre générique de \\(\\varphi\\) est de dimension \\(\\leqslant \\dim \\mathrm{T}\\), donc \\(\\mathrm{Im}(\\varphi)\\) est de dimension \\(\\geqslant \\dim \\mathrm{Z}\\times\\mathrm{C} - \\dim \\mathrm{T} = \\dim \\mathrm{Z} + \\dim \\mathrm{C} - \\dim \\mathrm{T}\\), or on a \\(\\dim \\mathrm{Z} = \\dim \\mathrm{Y} = \\dim \\mathscr{C} + \\dim \\mathrm{T} = \\dim \\mathrm{G} - \\dim \\mathrm{C} + \\dim \\mathrm{T}\\), d'où enfin \\(\\dim \\mathrm{Im}(\\varphi) \\geqslant \\dim \\mathrm{G}\\) donc \\(\\varphi\\) est dominante. C.Q.F.D.</p>"
+    },
+    {
+     "id": "XIII.3.7",
+     "type": "remarque",
+     "label": "3.7",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XIII.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>On notera que le raisonnement montre en plus que la composante connexe en \\((t_0,c_0)\\) de la fibre de \\(\\varphi(t_0,c_0)\\) est isomorphe à T, en particulier est lisse sur \\(k\\), et a même dimension que la fibre générique, ce qui implique que \\(\\varphi\\) est en fait <em>lisse</em> en \\((t_0,c_0)\\) (ce qu'on devrait pouvoir vérifier également par le calcul de l'application tangente). Il s'ensuit que sous les conditions de 3.6 le morphisme induit \\(\\mathrm{Z}\\times_{\\mathrm{S}}\\mathrm{C}^{\\text{rég}} \\to \\mathrm{G}^{\\text{rég}}\\) (où on a posé \\(\\mathrm{C}^{\\text{rég}} = \\mathrm{C}\\cap\\mathrm{G}^{\\text{rég}}\\)) est un morphisme <em>lisse</em>. On voit de même que le morphisme analogue \\(\\mathrm{Z}\\times\\mathrm{T}^{\\text{rég}} \\to \\mathrm{Z}\\) (où T est un tore maximal de G) est lisse ; plus généralement, pour tout sous-groupe algébrique lisse connexe invariant H de C contenant un élément régulier \\(c_0\\) de \\(\\mathrm{G}(k)\\), l'image de \\(\\mathrm{Z}\\times\\mathrm{H} \\to \\mathrm{G}\\) est dense dans celle de \\(\\mathrm{G}\\times\\mathrm{H} \\to \\mathrm{G}\\).</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIII-fn6",
+     "number": "6",
+     "html": "N.D.E. : correction de G(k) en U(k)."
+    },
+    {
+     "id": "XIII-fn7",
+     "number": "7",
+     "html": "N.D.E. : déploie ( ?), ou : « sur laquelle T est déployé »."
+    }
+   ]
+  },
+  {
+   "id": "XIII-4",
+   "title": "4. Algèbres de Lie sur un corps : rang, éléments réguliers, sous-algèbres de Cartan",
+   "blocks": [
+    {
+     "id": "XIII.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIII.4\">4. Algèbres de Lie sur un corps : rang, éléments réguliers, sous-algèbres de Cartan</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la suite de cet exposé, nous reprenons la théorie développée par Chevalley dans son livre « Théorie des Groupes de Lie III » (Act. Sc. Ind. 1226, Paris 1955), la technique des schémas nous permettant d'éliminer l'hypothèse de caractéristique nulle. Nous commençons par rappeler dans le présent n° certaines notions et résultats bien connus.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathfrak{g}\\) une algèbre de Lie sur un anneau \\(k\\). Pour tout \\(a \\in \\mathfrak{g}\\), on désigne par \\(\\mathrm{ad}(a)\\) l'endomorphisme\n\\[\n\\mathrm{ad}(a)\\cdot x = [a,x]\n\\]\nde \\(\\mathfrak{g}\\), qui est une dérivation de l'algèbre de Lie \\(\\mathfrak{g}\\). Or pour toute dérivation D de l'algèbre de Lie \\(\\mathfrak{g}\\), le nil-espace de D, i.e. la réunion des noyaux des itérés de D, est une sous-algèbre de Lie de \\(\\mathfrak{g}\\), comme on voit sur la formule de Leibniz\n\\[\n\\mathrm{D}^m([x,y]) = \\sum_{0\\leqslant p\\leqslant m} \\binom{m}{p} [\\mathrm{D}^px, \\mathrm{D}^{m-p}y].\n\\]\nNous poserons\n\\[\n\\mathrm{Nil}(a,\\mathfrak{g}) = \\text{ nil-espace de } \\mathrm{ad}(a) = \\bigcup_{m\\geqslant 0} \\mathrm{Ker}\\,\\mathrm{ad}(a)^m;\n\\]\nquand aucune confusion ne sera à craindre, nous le noterons simplement \\(\\mathrm{Nil}(a)\\), et l'appellerons le nil-espace de \\(a\\) (dans \\(\\mathfrak{g}\\)).</p>"
+    },
+    {
+     "id": "XIII.4.1",
+     "type": "proposition",
+     "label": "4.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIII.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\"><p>Pour tout \\(a \\in \\mathfrak{g}\\), son nil-espace \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) est une sous-algèbre de Lie de \\(\\mathfrak{g}\\), égale à son propre normalisateur.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à prouver que c'est son propre normalisateur, i.e. que tout élément de \\(\\mathfrak{g}/\\mathrm{Nil}\\) annulé par la représentation adjointe de Nil dans \\(\\mathfrak{g}/\\mathrm{Nil}\\) est nul, ce qui est trivial (car tout élément dans ce quotient annulé par \\(\\mathrm{Ad}(a)\\) est nul).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la suite de ce N°, nous supposons que \\(k\\) est un corps, et \\(\\mathfrak{g}\\) de dimension finie sur \\(k\\). Nous désignerons par \\(\\mathrm{W}(\\mathfrak{g})\\) le schéma sur \\(k\\) défini par \\(\\mathfrak{g}\\), dont les points dans la \\(k\\)-algèbre A sont les éléments de \\(\\mathfrak{g}\\otimes_k \\mathrm{A}\\). Si \\(a \\in \\mathfrak{g}\\), le polynôme caractéristique de \\(\\mathrm{ad}(a)\\) est aussi appelé <em>polynôme caractéristique</em> ou <em>polynôme de Killing</em> de \\(a\\) dans \\(\\mathfrak{g}\\), soit\n\\[\n\\mathrm{P}_{\\mathfrak{g}}(a,t) = t^n + c_1(a)t^{n-1} + \\cdots + c_n(a),\n\\]\noù \\(n = \\mathrm{rang}_k\\,\\mathfrak{g}\\), les \\(c_i(a) \\in k\\). Prenant également ce polynôme pour \\(a \\in \\mathfrak{g}\\otimes_k \\mathrm{A}\\)<sup class=\"footnote-ref\"><a id=\"XIII-fn8ref\" href=\"#XIII-fn8\">8</a></sup>, où A est une \\(k\\)-algèbre quelconque, on voit que les \\(c_i(a)\\) proviennent de sections bien déterminées \\(c_i\\) du faisceau structural de \\(\\mathrm{W}(\\mathfrak{g})\\) i.e. d'éléments de l'algèbre symétrique \\(\\mathrm{A} = \\mathrm{Sym}_k(\\mathfrak{g}^{\\vee})\\), où \\(\\mathfrak{g}^{\\vee}\\) est le dual du \\(k\\)-module \\(\\mathfrak{g}\\). (Lorsque \\(k\\) est un corps infini, les \\(c_i\\) sont déterminés par la connaissance des fonctions polynômiales correspondantes \\(\\mathfrak{g} \\to k\\), mais il n'en est plus ainsi si \\(k\\) est un corps fini). Soit \\(r\\) le plus grand entier tel que le polynôme de Killing\n\\[\n\\mathrm{P}_{\\mathfrak{g}}(t) = t^n + c_1t^{n-1} + \\cdots + c_n \\in \\mathrm{A}[t]\n\\]\nsoit divisible par \\(t^r\\), i.e. on a :\n\\[\n\\mathrm{P}_{\\mathfrak{g}}(t) = t^n + c_1t^{n-1} + \\ldots + c_{n-r}t^r, \\qquad c_{n-r} \\neq 0.\n\\]\nL'entier \\(r\\) est appelé le <em>rang nilpotent</em> de l'algèbre de Lie \\(\\mathfrak{g}\\). Il est invariant par extension du corps de base.</p>"
+    },
+    {
+     "id": "XIII.4.2",
+     "type": "proposition",
+     "label": "4.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIII.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(r\\) le rang nilpotent de \\(\\mathfrak{g}\\), et soit \\(a \\in \\mathfrak{g}\\). Alors on a\n  \\[\n  \\mathrm{rang}_k\\,\\mathrm{Nil}(a,\\mathfrak{g}) \\geqslant r,\n  \\]\n  et on a égalité si et seulement si on a\n  \\[\n  c_{n-r}(a) \\neq 0.\n  \\]\n  Dans ce cas, \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) est une algèbre de Lie nilpotente, (et nous verrons dans 5.7 b) la réciproque, lorsque \\(\\mathfrak{g}\\) est l'algèbre de Lie d'un groupe algébrique G lisse sur \\(k\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La première assertion est triviale, car par définition on a \\(\\mathrm{rang}_k\\,\\mathrm{Nil}(a,\\mathfrak{g}) =\\) multiplicité de la racine nulle dans \\(\\mathrm{P}_{\\mathfrak{g}}(a,t)\\). Prouvons que si \\(c_{n-r}(a) \\neq 0\\), alors \\(\\mathrm{Nil}(a)\\) est nilpotente, ce qui signifie aussi que pour tout \\(x \\in \\mathrm{Nil}(a)\\), \\(\\mathrm{ad}_{\\mathrm{Nil}(a)}(x)\\) est un endomorphisme nilpotent. On peut supposer \\(k\\) algébriquement clos, alors comme \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathrm{Nil}(a)}\\) est injectif, il existe un ouvert non vide U de \\(\\mathrm{W}(\\mathrm{Nil}(a))\\) tel que pour tout \\(x \\in \\mathrm{U}(k)\\), \\(\\mathrm{ad}(x)_{\\mathfrak{g}/\\mathrm{Nil}(a)}\\) soit injectif donc \\(\\mathrm{Nil}(x) \\subset \\mathrm{Nil}(a)\\) ; on peut supposer de plus U contenu dans l'ouvert des points où \\(c_{n-r}\\) ne s'annule pas (puisque cet ouvert est non vide en vertu de \\(c_{n-r}(a) \\neq 0\\)) et alors \\(\\mathrm{Nil}(x)\\) ayant même dimension que \\(\\mathrm{Nil}(a)\\), on aura \\(\\mathrm{Nil}(x) = \\mathrm{Nil}(a)\\). Par suite, pour tout \\(x \\in \\mathrm{U}(k)\\), \\(\\mathrm{ad}(x)_{\\mathrm{Nil}(a)}\\) est nilpotent, et par le principe de prolongement des identités algébriques, cela restera vrai pour tout \\(x \\in \\mathrm{Nil}(a)\\), donc \\(\\mathrm{Nil}(a)\\) est nilpotent.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que l'élément \\(a\\) de \\(\\mathfrak{g}\\) est <em>régulier</em>, si \\(c_{n-r}(a) \\neq 0\\) i.e. si \\(\\mathrm{rang}_k(\\mathrm{Nil}(a,\\mathfrak{g}) = r\\). Lorsque \\(k\\) est infini, cela signifie donc aussi que \\(\\mathrm{rang}_k\\,\\mathrm{Nil}(a,\\mathfrak{g})\\) est le plus petit possible (pour \\(a\\) variable dans \\(\\mathfrak{g}\\)). En tous cas, la notion d'élément régulier de \\(\\mathfrak{g}\\) est invariante par extension du corps de base, et l'ensemble des points de \\(\\mathrm{W}(\\mathfrak{g})\\) qui sont réguliers, (i.e. qui proviennent de points réguliers de \\(\\mathrm{W}(\\mathfrak{g})\\) à valeur dans une extension convenable de \\(k\\)) est ouvert, car identique à \\(\\mathrm{W}(\\mathfrak{g})_{c_{n-r}}\\) (ensemble des points où \\(c_{n-r}\\) est inversible).</p>"
+    },
+    {
+     "id": "XIII.4.3",
+     "type": "corollaire",
+     "label": "4.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(a\\) un élément régulier de \\(\\mathfrak{g}\\), \\(\\mathfrak{h}\\) une sous-algèbre de Lie de \\(\\mathfrak{g}\\) qui contient \\(a\\). Alors \\(\\mathfrak{h}\\) est nilpotente si et seulement si \\(\\mathfrak{h} \\subset \\mathrm{Nil}(a,\\mathfrak{g})\\) ; en particulier, \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) est une sous-algèbre nilpotente maximale de \\(\\mathfrak{g}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(\\mathrm{Nil}(a)\\) est nilpotente, la relation \\(\\mathfrak{h} \\subset \\mathrm{Nil}(a)\\) implique en effet que \\(\\mathfrak{h}\\) est nilpotente, et inversement, si \\(\\mathfrak{h}\\) est nilpotente, elle est contenue dans le nil-espace de son élément \\(a\\), i.e. \\(\\mathfrak{h} \\subset \\mathrm{Nil}(a)\\).</p>"
+    },
+    {
+     "id": "XIII.4.4",
+     "type": "proposition",
+     "label": "4.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIII.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Supposons \\(k\\) infini. Soit \\(\\mathfrak{d}\\) une sous-algèbre de Lie de \\(\\mathfrak{g}\\). Considérons les conditions suivantes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(\\mathfrak{d}\\) est nilpotente maximale et contient un élément régulier de \\(\\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(i bis)</span> <p>\\(\\mathfrak{d}\\) est de la forme \\(\\mathrm{Nil}(a,\\mathfrak{g})\\), où \\(a\\) est un élément régulier de \\(\\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>\\(\\mathfrak{d}\\) est nilpotente et de la forme \\(\\mathrm{Nil}(a,\\mathfrak{g})\\), où \\(a \\in \\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(ii bis)</span> <p>\\(\\mathfrak{d}\\) est nilpotente, et il existe \\(a \\in \\mathfrak{d}\\) tel que \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{d}}\\) soit injectif.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>\\(\\mathfrak{d}\\) est nilpotente et identique à son propre normalisateur.</p></li>\n  </ol>\n  <p>On a les implications :\n  \\[\n  (\\mathrm{i}) \\Leftrightarrow (\\mathrm{i\\ bis}) \\Rightarrow (\\mathrm{ii}) \\Leftrightarrow (\\mathrm{ii\\ bis}) \\Leftrightarrow (\\mathrm{iii})\n  \\]\n  (et nous verrons dans 5.7 a) que si \\(\\mathfrak{g}\\) est l'algèbre de Lie d'un groupe algébrique lisse, alors toutes les conditions précédentes sont équivalentes).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'équivalence de (i) et (i bis) est triviale par 4.3, et ces conditions impliquent trivialement (ii). L'équivalence de (ii) et (ii bis) est également triviale, ainsi que (ii bis) \\(\\Rightarrow\\) (iii) (cf. 4.1). Reste à prouver l'implication (iii)\\(\\Rightarrow\\)(ii bis), la seule d'ailleurs qui utilise le fait que \\(k\\) soit infini, et qui résulte aussitôt du</p>"
+    },
+    {
+     "id": "XIII.4.5",
+     "type": "lemme",
+     "label": "4.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIII.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathfrak{d}\\) une algèbre de Lie nilpotente sur un corps infini \\(k\\), opérant sur un vectoriel V de dimension finie. Supposons que pour tout \\(x \\in \\mathfrak{d}\\), l'endomorphisme \\(u(x)\\) soit non injectif. Alors il existe un élément \\(v\\) non nul de V annulé par \\(\\mathfrak{d}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut supposer \\(k\\) algébriquement clos et \\(\\mathfrak{d}\\) de dimension finie. On sait alors que V est somme directe d'un nombre fini de sous-espaces vectoriels stables non nuls \\(\\mathrm{V}_i\\) (\\(1 \\leqslant i \\leqslant n\\)), tels que pour tout \\(i\\), et tout \\(x \\in \\mathfrak{d}\\), \\(u(x)|_{\\mathrm{V}_i}\\) ait une seule valeur propre \\(\\lambda_i(x)\\), (cf. Bourbaki, <em>Groupes et Algèbres de Lie</em>, Chap. I, § 4, Exercice 22). Soit \\(c_i(x)\\) le terme constant du polynôme caractéristique de \\(u(x)|_{\\mathrm{V}_i}\\), de sorte que \\(\\lambda_i(x) = 0\\) si et seulement si \\(c_i(x) = 0\\). Alors \\(c_i\\) est une fonction polynômiale sur \\(\\mathfrak{d}\\), et l'hypothèse signifie que \\(\\mathfrak{d}\\) est la réunion des ensembles de zéros des \\(c_i\\). Donc un des \\(c_i\\) est nul, ce qui nous ramène (remplaçant V par \\(\\mathrm{V}_i\\)) au cas où V est tel que les \\(u(x)\\) (\\(x \\in \\mathfrak{d}\\)) sont nilpotents. Mais alors le théorème d'Engel (Bourbaki <em>loc. cit.</em> th. 1) implique qu'il existe \\(v\\) non nul dans V annulé par \\(\\mathfrak{d}\\). C.Q.F.D.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit facilement que (\\(k\\) étant toujours un corps infini) les conditions (i) (i bis) de 4.4 sont invariantes par toute extension du corps de base. Si elles sont remplies, on dira que \\(\\mathfrak{d}\\) est une <em>sous-algèbre de Cartan</em> de \\(\\mathfrak{g}\\) ; dans le cas général (\\(k\\) non nécessairement infini) on dira que \\(\\mathfrak{d}\\) est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\), si elle devient une sous-algèbre de Cartan pour une (et par suite, toute) extension du corps de base \\(k \\to k'\\), avec \\(k'\\) infini. Cela implique donc que \\(\\mathfrak{d}\\) est nilpotente et égale à son propre normalisateur.</p>"
+    },
+    {
+     "id": "XIII.4.6",
+     "type": "proposition",
+     "label": "4.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIII.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\">\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Soit \\(a\\) un élément de \\(\\mathfrak{g}\\). Si \\(a\\) est régulier, il est contenu dans une sous-algèbre de Cartan et une seule de \\(\\mathfrak{g}\\) (et nous verrons dans 6.1 d) la réciproque lorsque \\(k\\) est algébriquement clos et \\(\\mathfrak{g}\\) l'algèbre de Lie d'un groupe algébrique lisse).</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Soit \\(\\mathfrak{d}\\) une sous-algèbre de Cartan de \\(\\mathfrak{g}\\), \\(a\\) un élément de \\(\\mathfrak{d}\\), alors \\(a\\) est régulier dans \\(\\mathfrak{g}\\) si et seulement si \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{d}}\\) est injectif.</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, pour a) on note que si \\(a\\) est régulier, alors \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\) (car c'est vrai sur une extension infinie \\(k'\\) de \\(k\\)), et il résulte alors aussitôt de 4.3 que toute sous-algèbre de Cartan de \\(\\mathfrak{g}\\) contenant \\(a\\) est identique à la précédente. Pour b) on note que la nullité<sup class=\"footnote-ref\"><a id=\"XIII-fn9ref\" href=\"#XIII-fn9\">9</a></sup> de \\(\\mathrm{ad}(a)_{\\mathfrak{g}}\\) est égale à la somme des nullités de \\(\\mathrm{ad}(a)_{\\mathfrak{d}}\\) et de \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{d}}\\), et comme la première vaut \\(r\\), la somme est égale à \\(r\\) si et seulement si \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{d}}\\) est injectif. C.Q.F.D.</p>"
+    },
+    {
+     "id": "XIII.4.7",
+     "type": "corollaire",
+     "label": "4.7",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\"><p>Soient \\(a\\) un élément régulier de \\(\\mathfrak{g}\\), \\(\\mathfrak{d}\\) une sous-algèbre de Cartan de \\(\\mathfrak{g}\\) contenant \\(a\\), A une algèbre sur \\(k\\), \\(\\mathfrak{g}_{\\mathrm{A}}\\) et \\(\\mathfrak{d}_{\\mathrm{A}} \\subset \\mathfrak{g}_{\\mathrm{A}}\\) les A-algèbres de Lie déduites de \\(\\mathfrak{g}, \\mathfrak{d}\\) par changement de base, \\(a_{\\mathrm{A}}\\) l'image de \\(a\\) dans \\(\\mathfrak{g}_{\\mathrm{A}}\\). Soit \\(u\\) un automorphisme de \\(\\mathfrak{g}_{\\mathrm{A}}\\). Pour que \\(u(\\mathfrak{d}_{\\mathrm{A}}) = \\mathfrak{d}_{\\mathrm{A}}\\), il faut et suffit que l'on ait \\(u(a_{\\mathrm{A}}) \\in \\mathfrak{d}_{\\mathrm{A}}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La condition est trivialement nécessaire, prouvons qu'elle est aussi suffisante. Si elle est remplie, alors \\(\\mathfrak{d}' = u(\\mathfrak{d}_{\\mathrm{A}})\\) est une sous-algèbre de Lie contenant \\(a_{\\mathrm{A}}\\), et dont tout élément \\(b\\) est tel que \\(\\mathrm{ad}(b)_{\\mathfrak{d}'}\\) soit nilpotent (car \\(\\mathfrak{d}'\\) est isomorphe à \\(\\mathfrak{d}_{\\mathrm{A}}\\) qui a cette propriété, comme il résulte aussitôt de la définition de « nilpotent » dans Bourbaki, <em>Groupes et Algèbres de Lie</em>, Chap. I, § 4, déf. 1). Prenant \\(b = a_{\\mathrm{A}}\\), on voit que le nil-espace \\(\\mathrm{Nil}(b,\\mathfrak{g}_{\\mathrm{A}})\\) contient \\(\\mathfrak{d}'\\), d'autre part il est égal à \\(\\mathfrak{d}_{\\mathrm{A}}\\) et comme \\(\\mathfrak{d}'\\) est localement facteur direct dans le module \\(\\mathfrak{g}_{\\mathrm{A}}\\) (\\(\\mathfrak{d}\\) l'étant) donc dans \\(\\mathfrak{d}_{\\mathrm{A}}\\), et que c'est un module projectif de même rang \\(r\\) que ce dernier, on conclut qu'il lui est égal. C.Q.F.D.</p>"
+    },
+    {
+     "id": "XIII.4.8",
+     "type": "proposition",
+     "label": "4.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIII.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathfrak{h}\\) une sous-algèbre de Lie de \\(\\mathfrak{g}\\).</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Les conditions suivantes sont équivalentes si \\(k\\) est infini :</p>\n    <ol class=\"enumerate\">\n    <li><span class=\"item-label\">(i)</span> <p>\\(\\mathfrak{h}\\) contient une sous-algèbre de Cartan \\(\\mathfrak{d}\\) de \\(\\mathfrak{g}\\).</p></li>\n    <li><span class=\"item-label\">(ii)</span> <p>\\(\\mathfrak{h}\\) contient un élément régulier \\(a\\) de \\(\\mathfrak{g}\\), et un élément \\(b\\) tel que \\(\\mathrm{ad}(b)_{\\mathfrak{g}/\\mathfrak{h}}\\) soit injectif.</p></li>\n    <li><span class=\"item-label\">(iii)</span> <p>\\(\\mathfrak{h}\\) a même rang nilpotent que \\(\\mathfrak{g}\\), et contient un élément régulier de \\(\\mathfrak{g}\\).</p></li>\n    </ol>\n    <p>Ces conditions sont invariantes par extension du corps de base \\(k\\).</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Supposons que ces conditions soient vérifiées sur une extension infinie convenable \\(k'\\) de \\(k\\). Soit \\(a \\in \\mathfrak{h}\\), alors \\(a\\) est régulier dans \\(\\mathfrak{g}\\) si et seulement si il est régulier dans \\(\\mathfrak{h}\\) et \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}\\) est injectif, i.e. si et seulement si \\(\\mathrm{Nil}(a,\\mathfrak{h}) = \\mathrm{Nil}(a,\\mathfrak{g})\\) et si c'est une sous-algèbre de Cartan de \\(\\mathfrak{h}\\).</p></li>\n  <li><span class=\"item-label\">c)</span> <p>Sous les conditions de b), soit \\(\\mathfrak{d}\\) une sous-algèbre de Lie de \\(\\mathfrak{h}\\) ; pour que ce soit une sous-algèbre de Cartan de \\(\\mathfrak{h}\\), il suffit que ce soit une sous-algèbre de Cartan de \\(\\mathfrak{g}\\) (et nous verrons dans 5.8 que la condition est aussi nécessaire si \\(\\mathfrak{g}\\) est l'algèbre de Lie d'un groupe algébrique lisse G, et \\(\\mathfrak{h}\\) l'algèbre de Lie d'un sous-groupe algébrique lisse H de G).</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit tout de suite que les conditions (ii) et (iii) de a) sont invariantes par extension du corps de base \\(k\\) (supposé infini), et que dans les énoncés b) et c), on peut supposer \\(k\\) infini, ce que nous ferons. Si \\(\\mathfrak{h}\\) contient la sous-algèbre de Cartan \\(\\mathfrak{d} = \\mathrm{Nil}(a,\\mathfrak{g})\\), alors \\(a\\) est un élément régulier de \\(\\mathfrak{g}\\) tel que \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}\\) soit injectif, donc (i)\\(\\Rightarrow\\) (ii). Réciproquement, si (ii) est vérifié, alors pour un élément \\(a\\) « assez général » de \\(\\mathfrak{h}\\), \\(a\\) satisfait simultanément aux deux conditions envisagées dans (ii), donc \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\) et est contenue dans \\(\\mathfrak{h}\\), donc on a (i). Donc (i) et (ii) sont équivalentes. Supposons-les vérifiées, soit \\(a\\) un élément variable de \\(\\mathfrak{h}\\), alors\n\\[\n(x) \\qquad \\mathrm{rang}_k\\,\\mathrm{Nil}(a,\\mathfrak{g}) = \\mathrm{rang}_k\\,\\mathrm{Nil}(a,\\mathfrak{h}) + \\mathrm{rang}_k\\,\\mathrm{Nil}(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}),\n\\]\nd'autre part, les deux termes du deuxième membre sont respectivement \\(\\geqslant r' =\\) rang nilpotent de \\(\\mathfrak{h}\\), et \\(\\geqslant 0\\), les égalités étant d'ailleurs atteintes<sup class=\"footnote-ref\"><a id=\"XIII-fn10ref\" href=\"#XIII-fn10\">10</a></sup> pour un élément « assez général » de \\(\\mathfrak{h}\\). D'ailleurs, on a également \\(\\mathrm{rang}_k\\,\\mathrm{Nil}(a,\\mathfrak{g}) \\geqslant r =\\) rang nilpotent de \\(\\mathfrak{g}\\), l'égalité étant atteinte pour un élément « assez général » de \\(\\mathfrak{h}\\), et étant atteinte si et seulement si \\(a\\) est régulier dans \\(\\mathfrak{g}\\). On conclut de ceci que l'on a \\(r = r'\\), et que \\(a\\) est régulier si et seulement si les deux termes du second membre de (x) sont égaux respectivement à \\(r'\\) et à 0, i.e. si et seulement si \\(a\\) est régulier dans \\(\\mathfrak{h}\\) et \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}\\) est injectif, ce qui prouve b), et c) en résulte trivialement en prenant un élément \\(a\\) dans \\(\\mathfrak{d}\\) régulier dans \\(\\mathfrak{g}\\), de sorte que \\(\\mathrm{Nil}(a,\\mathfrak{g}) = \\mathfrak{d}\\). De plus, le résultat précédent montre que (i)\\(\\Rightarrow\\)(iii), enfin (iii)\\(\\Rightarrow\\)(i), car moyennant (iii), un élément assez général \\(a\\) de \\(\\mathfrak{h}\\) est régulier dans \\(\\mathfrak{h}\\) et dans \\(\\mathfrak{g}\\), donc \\(\\mathrm{Nil}(a,\\mathfrak{h}) \\subset \\mathrm{Nil}(a,\\mathfrak{g})\\) sont respectivement des sous-algèbres de Cartan de \\(\\mathfrak{h}\\) et de \\(\\mathfrak{g}\\), et comme elles ont même rang sur \\(k\\), elles sont identiques, ce qui prouve (i). Cela achève la démonstration de 4.8.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIII-fn8",
+     "number": "8",
+     "html": "N.D.E. : on a corrigé \\(\\mathrm{W}\\otimes_k \\mathrm{A}\\) en \\(\\mathfrak{g}\\otimes_k \\mathrm{A}\\)."
+    },
+    {
+     "id": "XIII-fn9",
+     "number": "9",
+     "html": "N.D.E. : c.-à-d., la dimension du nil-espace."
+    },
+    {
+     "id": "XIII-fn10",
+     "number": "10",
+     "html": "N.D.E. : on a remplacé « l'égalité » par « les égalités »."
+    }
+   ]
+  },
+  {
+   "id": "XIII-5",
+   "title": "5. Cas de l'algèbre de Lie d'un groupe algébrique lisse : théorème de densité",
+   "blocks": [
+    {
+     "id": "XIII.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIII.5\">5. Cas de l'algèbre de Lie d'un groupe algébrique lisse : théorème de densité</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un groupe algébrique lisse sur le corps \\(k\\), et \\(\\mathfrak{g}\\) son algèbre de Lie. Soit \\(\\mathfrak{h}\\) une sous-algèbre de Lie de \\(\\mathfrak{g}\\). Faisons opérer G sur \\(\\mathrm{W}(\\mathfrak{g})\\) par la représentation adjointe, et considérons le sous-schéma \\(\\mathrm{W}(\\mathfrak{h})\\). La construction du N° 1 nous amène à introduire\n\\[\n\\mathrm{N} = \\mathrm{Norm}_{\\mathrm{G}}(\\mathfrak{h}) = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{W}(\\mathfrak{h})),\n\\]\nqui est un sous-groupe algébrique de G (pas nécessairement lisse),\n\\[\n\\mathfrak{n} = \\mathrm{Lie}(\\mathrm{N}),\n\\]\net le schéma\n\\[\n\\mathrm{X} = \\mathrm{G}\\times^{\\mathrm{N}}\\mathrm{W}(\\mathfrak{h})\n\\]\nquotient de \\(\\mathrm{X} = \\mathrm{G}\\times\\mathrm{W}(\\mathfrak{h})\\) par N opérant à droite par \\((g,x)\\cdot n = (gn, \\mathrm{Ad}(n^{-1})x)\\). Nous considérons les morphismes canoniques\n\\[\n\\xymatrix{\n\\mathrm{G}\\times \\mathrm{W}(\\mathfrak{h}) \\ar[d]_-{q} \\ar[dr]^-{\\varphi} &amp; \\\\\n\\mathrm{X} \\ar[r]_-{\\psi} &amp; \\mathrm{W}(\\mathfrak{g}).\n}\n\\]</p>"
+    },
+    {
+     "id": "XIII.5.1",
+     "type": "theoreme",
+     "label": "5.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XIII.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\"><p>Avec les notations précédentes, supposons \\(k\\) infini. Considérons les conditions suivantes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(\\mathfrak{h}\\) contient une sous-algèbre de Cartan \\(\\mathfrak{d}\\) de \\(\\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Il existe \\(a \\in \\mathfrak{h}\\) tel que \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}\\) soit injectif.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>\\(\\varphi : \\mathrm{G}\\times\\mathrm{W}(\\mathfrak{h}) \\to \\mathrm{W}(\\mathfrak{g})\\) est génériquement lisse.</p></li>\n  <li><span class=\"item-label\">(iv)</span> <p>Le morphisme précédent \\(\\varphi\\) (ou encore \\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\)) est dominant, et \\(\\mathfrak{h}\\) a même rang nilpotent que \\(\\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(v)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est génériquement lisse et \\(\\mathfrak{h} = \\mathfrak{n}\\).</p></li>\n  <li><span class=\"item-label\">(vi)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est dominant, et \\(\\mathfrak{h} = \\mathfrak{n}\\).</p></li>\n  <li><span class=\"item-label\">(vii)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est dominant.</p></li>\n  <li><span class=\"item-label\">(viii)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est dominant, et N est lisse.</p></li>\n  <li><span class=\"item-label\">(ix)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est dominant, et \\(\\mathfrak{h} = \\mathfrak{n}\\), et \\(\\mathfrak{h}\\) est l'algèbre de Lie d'un sous-groupe algébrique lisse H de G.</p></li>\n  <li><span class=\"item-label\">(x)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est génériquement quasi-fini, et \\(\\mathfrak{n} = \\mathfrak{h}\\).</p></li>\n  <li><span class=\"item-label\">(xi)</span> <p>\\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est génériquement étale, et \\(\\mathfrak{n} = \\mathfrak{h}\\).</p></li>\n  <li><span class=\"item-label\">(xii)</span> <p>Il existe un sous-groupe algébrique lisse H de G d'algèbre de Lie \\(\\mathfrak{h}\\), et \\(\\mathfrak{h}\\) contient une sous-algèbre de Cartan \\(\\mathfrak{d}\\) de \\(\\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(xiii)</span> <p>Il existe \\(a \\in \\mathfrak{h}\\) tel que N et le transporteur \\(\\mathrm{M}_a\\) de \\(a\\) dans \\(\\mathfrak{h}\\) (cf. n° 1) coïncident au voisinage de \\(e\\), et \\(\\mathfrak{n} = \\mathfrak{h}\\).</p></li>\n  </ol>\n  <p>On a alors le diagramme d'implications suivant :\n  \\[\n  \\xymatrix{\n  (\\mathrm{xi}) \\ar@{&lt;=&gt;}[r] &amp; (\\mathrm{xii}) \\ar[r] \\ar[dl] &amp; (\\mathrm{xiii}) \\ar[r] &amp; (\\mathrm{viii}) \\ar@{&lt;=&gt;}[r] &amp; (\\mathrm{ix}) \\ar@{&lt;=&gt;}[r] \\ar[dr] &amp; (\\mathrm{x}) &amp; \\\\\n  (\\mathrm{i}) \\ar@{&lt;=&gt;}[r] &amp; (\\mathrm{ii}) \\ar@{&lt;=&gt;}[r] &amp; (\\mathrm{iii}) \\ar@{&lt;=&gt;}[r] &amp; (\\mathrm{iv}) \\ar[r] &amp; (\\mathrm{v}) \\ar[r] &amp; (\\mathrm{vi}) \\ar[r] &amp; (\\mathrm{vii})\n  }\n  \\]\n  Lorsque \\(k\\) est de caractéristique nulle, toutes les conditions envisagées sont équivalentes. Enfin, on a\n  \\[\n  (\\mathrm{xi}) \\Leftrightarrow [(\\mathrm{i}) \\text{ et } (\\mathrm{viii})] \\Leftrightarrow [(\\mathrm{v}) \\text{ et } (\\mathrm{viii})].\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons d'abord les implications triviales :\n\\[\n(\\mathrm{v})\\Rightarrow(\\mathrm{vi})\\Rightarrow(\\mathrm{vii}) \\ , \\qquad (\\mathrm{ix})\\Rightarrow(\\mathrm{vi}) \\ , \\qquad (\\mathrm{xi})\\Leftrightarrow[(\\mathrm{x}) \\text{ et } (\\mathrm{v})].\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons l'équivalence des conditions (i) à (iv) et le fait qu'elles impliquent (v). L'implication (i) \\(\\Rightarrow\\) (ii) est triviale. D'autre part (iii) signifie, lorsque \\(k\\) est algébriquement clos, qu'il existe un point de \\(\\mathrm{G}\\times\\mathrm{W}(\\mathfrak{h})\\) rationnel sur \\(k\\) en lequel l'application tangente à \\(\\varphi\\) est surjective, et on voit aussitôt que l'on peut prendre ce point de la forme \\((e,a)\\), où \\(a \\in \\mathfrak{h}\\) (quitte à le transformer par une opération de \\(\\mathrm{G}(k)\\)). On en conclut que si \\(k\\) est infini (pas nécessairement algébriquement clos) cette condition (évidemment suffisante) de lissité générique est encore nécessaire. Or l'application tangente se calcule aisément : en identifiant l'espace tangent à \\(\\mathrm{W}(\\mathfrak{h})\\) en \\(a\\) à \\(\\mathfrak{h}\\), c'est l'application\n\\[\n(\\xi,x) \\longmapsto [\\xi,a] + x\n\\]\nde \\(\\mathfrak{g}\\times\\mathfrak{h}\\) dans \\(\\mathfrak{g}\\). Dire qu'elle est surjective signifie aussi que \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}\\) est surjectif, ou ce qui revient au même, injectif. Cela prouve l'équivalence des conditions (ii) et (iii). D'ailleurs, (ii) implique évidemment \\(\\mathfrak{h} = \\mathfrak{n}\\), et (iii) implique que \\(\\psi\\) est génériquement lisse, car si \\(\\varphi\\) est lisse en un point \\(u\\), il s'ensuit (\\(q\\) étant plat) que \\(\\psi\\) est lisse en \\(q(u)\\). Donc (ii), (iii) impliquent (v). Prouvons qu'ils impliquent (i). Pour ceci, notons que puisque \\(\\psi\\) est dominant, et que l'ensemble des points réguliers de \\(\\mathfrak{g}\\) est ouvert dense, il s'ensuit que \\(\\mathfrak{h}\\) contient des éléments réguliers de \\(\\mathfrak{g}\\), donc qu'un élément « assez général » \\(b\\) de \\(\\mathfrak{h}\\) est régulier dans \\(\\mathfrak{g}\\) et satisfait à \\(\\mathrm{ad}(b)_{\\mathfrak{g}/\\mathfrak{h}}\\) injectif, donc \\(\\mathrm{Nil}(b,\\mathfrak{g}) \\subset \\mathfrak{h}\\), donc \\(\\mathfrak{h}\\) contient la sous-algèbre de Cartan \\(\\mathfrak{d} = \\mathrm{Nil}(b,\\mathfrak{g})\\). Donc (i) (ii) (iii) sont équivalents, enfin (i) \\(\\Leftrightarrow\\)(iv), car on a déjà remarqué que si \\(\\mathfrak{h}\\) contient une sous-algèbre de Cartan, elle a même rang que \\(\\mathfrak{g}\\) (4.6), donc (i)\\(\\Rightarrow\\)(iv), inversement si (iv) est vérifié, alors \\(\\mathfrak{h}\\) contient un élément régulier de \\(\\mathfrak{g}\\) et comme elle a même rang que \\(\\mathfrak{g}\\), elle contient une sous-algèbre de Cartan en vertu de 4.6.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons l'équivalence des conditions (viii) à (x). Remarquons d'abord les faits suivants :</p>"
+    },
+    {
+     "id": "XIII.5.2",
+     "type": "lemme",
+     "label": "5.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIII.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\">\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Si N est lisse, alors\n  \\[\n  \\dim \\mathrm{X} \\leqslant \\dim \\mathrm{G},\n  \\]\n  l'égalité ayant lieu si et seulement si \\(\\mathfrak{h} = \\mathfrak{n}\\).</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Si \\(\\mathfrak{h} = \\mathfrak{n}\\), alors\n  \\[\n  \\dim \\mathrm{X} \\geqslant \\dim \\mathrm{G},\n  \\]\n  l'égalité ayant lieu si et seulement si N est lisse.</p></li>\n  </ol>\n  <p>Ces assertions résultent aussitôt de la formule \\(\\dim \\mathrm{X} = \\dim \\mathrm{G} - \\dim \\mathrm{N} + \\dim_k \\mathfrak{h}\\), et du fait que \\(\\dim \\mathrm{N} = \\dim_k \\mathfrak{n}\\) équivaut à N lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci posé, (viii)\\(\\Rightarrow\\) (x), car (viii) implique \\(\\dim \\mathrm{X} \\geqslant \\dim \\mathrm{G}\\), donc en vertu de 5.2 a) l'égalité de ces dimensions et \\(\\mathfrak{h} = \\mathfrak{n}\\), donc (x), et on voit de même (x) \\(\\Rightarrow\\)(viii) en appliquant 5.2 b). D'autre part, (viii) implique (ix), car il implique \\(\\mathfrak{h} = \\mathfrak{n}\\), donc \\(\\mathfrak{h}\\) est l'algèbre de Lie du sous-groupe algébrique lisse N de G, et inversement (ix) \\(\\Rightarrow\\) (viii), car comme H normalise son algèbre de Lie \\(\\mathfrak{h}\\), et il est contenu dans N, et comme H est lisse et a même algèbre de Lie que N, il s'ensuit que N est lisse.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons enfin l'équivalence des conditions (xi) (xii) (xiii) et le fait qu'elles entraînent (iii) (ce qui achèvera d'établir notre diagramme d'implications). On a (xi) \\(\\Leftrightarrow\\) (xiii), car si \\(\\mathfrak{n} = \\mathfrak{h}\\), alors en vertu de 5.2 b) on a \\(\\dim \\mathrm{X} \\geqslant \\dim \\mathrm{G}\\), donc (xi) équivaut alors (compte tenu que \\(\\mathrm{W}(\\mathfrak{g})\\) est normal) au fait que \\(\\psi\\) est génériquement non ramifié, ce qui équivaut aussi à (xiii) grâce à (1.1 (ii) \\(\\Leftrightarrow\\) (iii)), en procédant comme plus haut pour la démonstration de (ii) \\(\\Leftrightarrow\\) (iii). Comme (xi) \\(\\Rightarrow\\) (x) \\(\\Rightarrow\\) (viii) par ce que nous avons déjà vu, on voit que (xi) implique que N est lisse i.e. \\(q : \\mathrm{G}\\times\\mathrm{W}(\\mathfrak{h}) \\to \\mathrm{X}\\) est lisse, donc le composé \\(\\varphi = \\psi\\circ q\\) est génériquement lisse, i.e. on a (iii). Comme (iii) \\(\\Rightarrow\\) (i), il s'ensuit aussi que (xi) \\(\\Rightarrow\\) (xii)<sup class=\"footnote-ref\"><a id=\"XIII-fn11ref\" href=\"#XIII-fn11\">11</a></sup>. Enfin (xii) \\(\\Rightarrow\\) (xi), car on a évidemment (xii) \\(\\Rightarrow\\) (i), donc comme on a vu (i)\\(\\Rightarrow\\)(iii)\\(\\Rightarrow\\)(v), on a (xii) \\(\\Rightarrow\\) (v), il s'ensuit qu'on a aussi (xii) \\(\\Rightarrow\\) (ix), et comme on a vu (ix) \\(\\Rightarrow\\) (x), il s'ensuit que (xii) \\(\\Rightarrow\\) ((v) et (x)), donc (xii) \\(\\Rightarrow\\) (xi) puisque génériquement étale = génériquement lisse + génériquement quasi-fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, lorsque \\(k\\) est de caractéristique 0, alors (vii) \\(\\Rightarrow\\) (viii), car en vertu d'un théorème de Cartier, N est automatiquement lisse (<a class=\"ref\" href=\"#VIB.1.6.1\">VI<sub>B</sub> 1.6.1</a>), et [(viii) et (x)] \\(\\Rightarrow\\) (xi), puisque en caractéristique nulle, pour un morphisme de préschémas intègres, génériquement étale = dominant et génériquement quasi-fini. Cela montre que dans ce cas, toutes les conditions (i) à (xiii) sont équivalentes.</p>"
+    },
+    {
+     "id": "XIII.5.3",
+     "type": "corollaire",
+     "label": "5.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions équivalentes (viii) à (x), il existe un unique sous-groupe algébrique lisse et connexe H de G dont l'algèbre de Lie soit \\(\\mathfrak{h}\\), et on a\n  \\[\n  \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H}) = \\mathrm{Norm}_{\\mathrm{G}}(\\mathfrak{h}) = \\mathrm{N}, \\qquad \\mathrm{H} = \\mathrm{N}^0.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, \\(\\mathrm{H} = \\mathrm{N}^0\\) satisfera aux conditions voulues, d'autre part si H y satisfait, alors (comme H normalise son algèbre de Lie \\(\\mathfrak{h}\\)) on a \\(\\mathrm{H} \\subset \\mathrm{N}\\), donc comme il s'agit d'une inclusion de groupes lisses ayant même algèbre de Lie, avec H connexe, on aura \\(\\mathrm{H} = \\mathrm{N}^0\\). Pour l'identité \\(\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H}) = \\mathrm{Norm}_{\\mathrm{G}}(\\mathfrak{h})\\), on peut supposer \\(k\\) algébriquement clos, alors de ce qu'on vient de voir, il résulte immédiatement que les points des deux groupes à valeurs dans \\(k\\) sont les mêmes, d'autre part les inclusions \\(\\mathrm{H} \\subset \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H}) \\subset \\mathrm{N}\\) montrent que \\(\\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{H})\\) et N ont même algèbre de Lie donc ils sont identiques.</p>"
+    },
+    {
+     "id": "XIII.5.4",
+     "type": "corollaire",
+     "label": "5.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions équivalentes (i) à (iv), soit \\(a \\in \\mathfrak{h}\\). Alors les conditions suivantes sont équivalentes, et sont réalisées si \\(a\\) est régulier dans \\(\\mathfrak{g}\\) :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(\\varphi\\) est lisse en \\((e,a)\\).</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>\\(\\mathrm{M}_a = \\mathrm{Transp}_{\\mathrm{G}}(a,\\mathfrak{h})\\) est lisse en \\(e\\), et \\(\\dim_e(\\mathrm{M}_a) = \\mathrm{rang}_k\\,\\mathfrak{h}\\).</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>\\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{h}}\\) est injectif (ou encore, bijectif).</p></li>\n  </ol>\n  <p>Lorsqu'on est sous les conditions équivalentes (xi) à (xiii), soit H le sous-groupe algébrique de G envisagé dans 5.3. Alors les conditions précédentes équivalent aussi aux conditions suivantes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(iv)</span> <p>\\(\\psi\\) est étale en \\((\\overline{e},a)\\).</p></li>\n  <li><span class=\"item-label\">(v)</span> <p>Désignant par \\(\\mathrm{M}_a^0\\) la composante connexe de \\(e\\) dans le transporteur \\(\\mathrm{M}_a\\) de \\(a\\) dans \\(\\mathfrak{h}\\), muni de la structure induite par \\(\\mathrm{M}_a\\), on a\n  \\[\n  \\mathrm{H} = \\mathrm{M}_a^0.\n  \\]</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Évidemment (i)\\(\\Rightarrow\\)(ii) puisque \\(\\mathrm{M}_a\\) est isomorphe à la fibre \\(\\varphi^{-1}(a)\\), le point \\(e\\) correspondant à \\((e,a)\\), et on a (ii)\\(\\Rightarrow\\)(i), car (ii) implique que \\(\\varphi\\) est « équidimensionnel » en \\((e,a)\\) (i.e. la dimension de la fibre passant par ce point est celle de la fibre générique) ce qui implique (\\(\\mathrm{G}\\times\\mathrm{W}(\\mathfrak{h})\\) et \\(\\mathrm{W}(\\mathfrak{g})\\) étant réguliers) qu'il est plat en \\((e,a)\\), donc lisse puisque sa fibre l'est en ce point. L'équivalence de (i) et (iii) a été vue dans la démonstration de 5.1 comme résultant du simple calcul de l'application tangente. D'ailleurs, on a vu dans 4.8 b), que « \\(a\\) régulier dans \\(\\mathfrak{g}\\) » \\(\\Rightarrow\\)(iii). Sous les conditions (xi) à (xiii), comme \\(q : \\mathrm{G}\\times\\mathrm{W}(\\mathfrak{h}) \\to \\mathrm{X}\\) est lisse (N étant lisse), il s'ensuit que (i) équivaut à \\(\\psi\\) lisse en \\((\\overline{e},a)\\), et comme \\(\\psi\\) est génériquement étale, cela équivaut à (iv). Enfin, comme il a été signalé à la fin de la démonstration de 1.1, (iv) implique que N est le préschéma induit sur \\(\\mathrm{M}_a\\) par une partie ouverte et fermée de \\(\\mathrm{M}_a\\), d'où (v), enfin (v)\\(\\Rightarrow\\)(ii) trivialement (ou encore (v)\\(\\Rightarrow\\) (iv) par 1.1, car \\(\\psi\\) étant dominant et \\(\\mathrm{W}(\\mathfrak{g})\\) normal, « non ramifié » équivaut ici à « étale ») ; cela achève la démonstration de 5.4.</p>"
+    },
+    {
+     "id": "XIII.5.5",
+     "type": "corollaire",
+     "label": "5.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur un corps \\(k\\), H un sous-groupe algébrique lisse tel que son algèbre de Lie \\(\\mathfrak{h}\\) contienne (tout au moins sur une extension convenable de \\(k\\)) une sous-algèbre de Cartan de l'algèbre de Lie \\(\\mathfrak{g}\\) de G. Soit K un sous-groupe algébrique connexe de G (pas nécessairement lisse), d'algèbre de Lie \\(\\mathfrak{k}\\), supposons que \\(\\mathfrak{k}\\) contienne un élément régulier \\(a\\) de \\(\\mathfrak{g}\\) (tout au moins sur une extension convenable de \\(k\\)). Alors H contient K si et seulement si \\(\\mathfrak{h}\\) contient \\(\\mathfrak{k}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, en vertu de 5.4 (iii)\\(\\Rightarrow\\)(v) on a \\(\\mathrm{H} = \\mathrm{M}_a^0\\) (N.B. bien entendu, cette relation étant invariante par extension du corps de base, elle est valable sans l'hypothèse que ce dernier soit infini !), d'autre part \\(\\mathfrak{k} \\subset \\mathfrak{h}\\) implique évidemment \\(\\mathrm{K} \\subset \\mathrm{M}_a\\), donc comme K est connexe, \\(\\mathrm{K} \\subset \\mathrm{M}_a^0\\), d'où \\(\\mathrm{K} \\subset \\mathrm{H}\\). C.Q.F.D.</p>"
+    },
+    {
+     "id": "XIII.5.6",
+     "type": "corollaire",
+     "label": "5.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\"><p>Soient G, H comme dans 5.5 et soit K un sous-groupe algébrique de G, on suppose H connexe et K lisse. Alors K contient H si et seulement si \\(\\mathfrak{k}\\) contient \\(\\mathfrak{h}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, si \\(\\mathfrak{k} \\supset \\mathfrak{h}\\), alors K satisfait à l'hypothèse envisagée dans 5.5 pour H, d'autre part H satisfait évidemment à la condition envisagée pour K dans 5.5. La conclusion résulte alors de 5.5.</p>"
+    },
+    {
+     "id": "XIII.5.7",
+     "type": "corollaire",
+     "label": "5.7",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.5.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathfrak{g}\\) l'algèbre de Lie d'un groupe algébrique lisse G sur un corps \\(k\\). Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Soit \\(\\mathfrak{d}\\) une sous-algèbre de Lie de \\(\\mathfrak{g}\\). Pour que \\(\\mathfrak{d}\\) soit une sous-algèbre de Cartan, il faut et suffit que \\(\\mathfrak{d}\\) soit nilpotente et égale à son propre normalisateur.</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Soit \\(a\\) un élément de \\(\\mathfrak{g}\\), pour que \\(a\\) soit régulier, il faut et suffit que \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) soit nilpotent.</p></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Quitte à faire une extension du corps de base, on peut supposer \\(k\\) infini. Compte tenu de 4.4, on est ramené pour a) à prouver que si \\(\\mathfrak{d}\\) est nilpotente et contient un élément \\(a\\) tel que \\(\\mathrm{ad}(a)_{\\mathfrak{g}/\\mathfrak{d}}\\) soit injectif, alors \\(\\mathfrak{d}\\) est une sous-algèbre de Cartan. Or en vertu de 5.1 (ii) \\(\\Rightarrow\\) (i), \\(\\mathfrak{d}\\) contient une sous-algèbre de Cartan \\(\\mathfrak{d}' = \\mathrm{Nil}(a,\\mathfrak{g})\\), et en vertu de 4.3 on conclut du fait que \\(\\mathfrak{d}\\) est nilpotente que \\(\\mathfrak{d} = \\mathfrak{d}'\\). Pour prouver b), on note que \\(\\mathrm{Nil}(a,\\mathfrak{g})\\) est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\) grâce à a), donc \\(a\\) est régulier.</p>"
+    },
+    {
+     "id": "XIII.5.8",
+     "type": "corollaire",
+     "label": "5.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.8</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur un corps \\(k\\), H un sous-groupe algébrique lisse, \\(\\mathfrak{g}, \\mathfrak{h}\\) les algèbres de Lie, supposons que après extension convenable du corps de base, \\(\\mathfrak{h}\\) contienne une sous-algèbre de Cartan de \\(\\mathfrak{g}\\). Soit \\(\\mathfrak{d}\\) une sous-algèbre de \\(\\mathfrak{h}\\), alors c'est une sous-algèbre de Cartan de \\(\\mathfrak{h}\\) si et seulement si c'est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de 4.8 c), il reste à montrer que si \\(\\mathfrak{d}\\) est une sous-algèbre de Cartan de \\(\\mathfrak{h}\\), c'est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\), et pour ceci on est ramené à montrer que \\(\\mathfrak{d}\\) contient un élément \\(a\\) régulier dans \\(\\mathfrak{g}\\), en supposant (ce qui est loisible) \\(k\\) algébriquement clos. Mais comme il y a un ouvert dense dans \\(\\mathfrak{h}\\) formé de points réguliers de \\(\\mathfrak{g}\\), notre assertion résulte de 5.1 (i) \\(\\Rightarrow\\) (vii) appliqué à \\((\\mathfrak{h},\\mathfrak{d})\\).</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIII-fn11",
+     "number": "11",
+     "html": "N.D.E. : car H = N convient."
+    }
+   ]
+  },
+  {
+   "id": "XIII-6",
+   "title": "6. Sous-algèbres de Cartan et sous-groupes de type (C), relatifs à un groupe algébrique lisse",
+   "blocks": [
+    {
+     "id": "XIII.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIII.6\">6. Sous-algèbres de Cartan et sous-groupes de type (C), relatifs à un groupe algébrique lisse</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour simplifier, nous nous bornons dans le théorème suivant au cas d'un corps de base algébriquement clos, (le cas d'un préschéma de base quelconque étant traité dans le prochain exposé) :</p>"
+    },
+    {
+     "id": "XIII.6.1",
+     "type": "theoreme",
+     "label": "6.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XIII.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur un corps algébriquement clos \\(k\\), \\(\\mathfrak{g}\\) son algèbre de Lie. Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>Les sous-algèbres de Cartan de \\(\\mathfrak{g}\\) sont conjuguées.</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Soit \\(\\mathfrak{d}\\) une sous-algèbre de Cartan de \\(\\mathfrak{g}\\). Alors son normalisateur N dans G est lisse, et \\(\\mathrm{D} = \\mathrm{N}^0\\) est le seul sous-groupe lisse et connexe de G dont l'algèbre de Lie est \\(\\mathfrak{d}\\). On a\n  \\[\n  \\mathrm{Norm}_{\\mathrm{G}}(\\mathfrak{d}) = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{D}) = \\mathrm{N}, \\qquad \\text{donc} \\quad \\mathrm{D} = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{D})^0.\n  \\]</p></li>\n  <li><span class=\"item-label\">c)</span> <p>Avec \\(\\mathfrak{d}\\) comme dans b), posons comme dans le N° 5 : \\(\\mathrm{X} = \\mathrm{G}\\times^{\\mathrm{N}}\\mathrm{W}(\\mathfrak{d})\\), et considérons le morphisme canonique\n  \\[\n  \\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g}),\n  \\]\n  (dont la fibre en \\(a \\in \\mathfrak{g}\\) a comme points à valeurs dans \\(k\\) l'ensemble des sous-algèbres de Cartan de \\(\\mathfrak{g}\\) qui contiennent \\(a\\)). Alors \\(\\psi\\) est un morphisme birationnel.</p></li>\n  <li><span class=\"item-label\">d)</span> <p>Avec les notations de c), soit U le plus grand ouvert de \\(\\mathrm{W}(\\mathfrak{g})\\) tel que \\(\\psi\\) induise un isomorphisme\n  \\[\n  \\psi^{-1}(\\mathrm{U}) \\xrightarrow{\\ \\sim\\ } \\mathrm{U}.\n  \\]\n  Alors pour \\(a \\in \\mathfrak{g}\\), les conditions suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(a \\in \\mathrm{U}(k)\\).</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>\\(a\\) est contenu dans une sous-algèbre de Cartan de \\(\\mathfrak{g}\\) et une seule.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>L'ensemble des sous-algèbres de Cartan de \\(\\mathfrak{g}\\) contenant \\(a\\) est fini non vide.</p></li>\n  <li><span class=\"item-label\">(iv)</span> <p>La fibre \\(\\psi^{-1}(a)\\) a un point isolé.</p></li>\n  <li><span class=\"item-label\">(v)</span> <p>(Si \\(a \\in \\mathfrak{d}\\)) Le morphisme \\(\\psi\\) est étale (ou seulement : quasi fini) en le point \\((\\overline{e},a)\\).</p></li>\n  <li><span class=\"item-label\">(vi)</span> <p>\\(a\\) est un élément régulier de \\(\\mathfrak{g}\\).</p></li>\n  <li><span class=\"item-label\">(vii)</span> <p>Avec les notations de 5.4 (iii), on a \\(\\mathrm{N} = \\mathrm{M}_a\\).</p></li>\n  </ol></li>\n  </ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Démonstration.</em> Appliquons 5.1 lorsque \\(\\mathfrak{h}\\) est une sous-algèbre Cartan \\(\\mathfrak{d}\\) de \\(\\mathfrak{g}\\), montrons que les conditions les plus fortes (xi) à (xiii) sont alors vérifiées. Cela est évident, soit sous la forme (xiii) compte tenu de 4.7, (qui implique que pour un élément régulier \\(a\\) de \\(\\mathfrak{g}\\) contenu dans \\(\\mathfrak{d}\\), on a \\(\\mathrm{N} = \\mathrm{M}_a\\)), soit sous la forme (xi)=(x)+(i), car la condition (i) est triviale et la condition (x) résulte du fait que un point régulier de \\(\\mathfrak{g}\\) est contenu dans une seule sous-algèbre de Cartan de \\(\\mathfrak{g}\\) (4.6 a)), et a fortiori dans un seul conjugué de \\(\\mathfrak{d}\\). Alors b) résulte de 5.3 et c) résulte du fait que \\(\\psi\\) est génériquement étale et qu'un point assez général (de façon précise, un point régulier) de \\(\\mathfrak{g}\\) est contenu dans une seule sous-algèbre Cartan de \\(\\mathfrak{g}\\). Sous ces conditions, l'équivalence des conditions (i) à (v) sur \\(a\\) est une conséquence immédiate du Main Theorem de Zariski pour le morphisme séparé birationnel \\(\\psi\\), compte tenu que \\(\\mathrm{W}(\\mathfrak{g})\\) est normal et X est intègre. L'équivalence de (v) et (vi) est un cas particulier de 5.4 (iii)\\(\\Leftrightarrow\\)(iv) (en se ramenant au cas où \\(a \\in \\mathfrak{d}\\) en transformant \\(a\\) par un élément convenable \\(g \\in \\mathrm{G}(k)\\)), compte tenu de 4.6 b). D'ailleurs par 5.4, (v) et (vi) équivalent aussi à \\(\\mathrm{N} \\supset \\mathrm{M}_a^0\\), et en vertu de 4.7 déjà invoqué, cela implique même \\(\\mathrm{N} = \\mathrm{M}\\). Cela prouve d). Bien entendu, b), c), et l'équivalence de (i) (iv) (v) (vi) (vii) restent valables sur un corps de base quelconque.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons maintenant a) en utilisant le fait que \\(k\\) est algébriquement clos. En vertu de 5.1 (i) \\(\\Rightarrow\\) (vii), \\(\\psi : \\mathrm{X} \\to \\mathrm{W}(\\mathfrak{g})\\) est dominant, donc il existe un ouvert dense V de \\(\\mathrm{W}(\\mathfrak{g})\\) tel que tout \\(a \\in \\mathrm{V}(k)\\) est l'image d'un élément de \\(\\mathrm{X}(k)\\), i.e. est contenu dans un conjugué de \\(\\mathfrak{d}\\). Appliquant ce résultat à une deuxième sous-algèbre de Cartan \\(\\mathfrak{d}'\\) de \\(\\mathfrak{g}\\), on voit qu'on peut prendre V tel que tout élément de \\(\\mathrm{V}(k)\\) soit conjugué d'un élément de \\(\\mathfrak{d}\\) et d'un élément \\(\\mathfrak{d}'\\). Prenant un élément <em>régulier</em> dans \\(\\mathrm{V}(k)\\), il s'ensuit qu'il y a un conjugué \\(\\mathfrak{d}''\\) de \\(\\mathfrak{d}'\\) qui contient un élément de \\(\\mathfrak{d}\\) régulier dans \\(\\mathfrak{g}\\), donc qui est égal à \\(\\mathfrak{d}\\) en vertu de 4.6 a). Cela achève la démonstration de 6.1.</p>"
+    },
+    {
+     "id": "XIII.6.2",
+     "type": "definition",
+     "label": "6.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XIII.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\"><p>Soit G un groupe algébrique lisse sur un corps \\(k\\). On appelle <em>sous-groupe de type (C)</em> de G, tout sous-groupe algébrique lisse et connexe dont l'algèbre de Lie est une sous-algèbre de Cartan de \\(\\mathfrak{g}\\). On appelle <em>rang infinitésimal</em> de G le rang nilpotent de son algèbre de Lie \\(\\mathfrak{g}\\), égal à la dimension de tout sous-groupe de type (C) de G.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De 6.1 b) on conclut aussitôt :</p>"
+    },
+    {
+     "id": "XIII.6.3",
+     "type": "corollaire",
+     "label": "6.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.3</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de 6.2, l'application \\(\\mathrm{D} \\mapsto \\mathfrak{d} = \\mathrm{Lie}\\,\\mathrm{D}\\) établit une correspondance biunivoque entre sous-groupes de type (C) de G, et sous-algèbres de Cartan \\(\\mathfrak{d}\\) de \\(\\mathfrak{g}\\). Si D est un sous-groupe de type (C) de G, D est son propre normalisateur connexe :\n  \\[\n  \\mathrm{D} = \\mathrm{Norm}_{\\mathrm{G}}(\\mathrm{D})^0.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conjuguant 6.1 (a) et 6.3, on trouve :</p>"
+    },
+    {
+     "id": "XIII.6.4",
+     "type": "corollaire",
+     "label": "6.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.4</span></div>\n  <div class=\"thm-body\"><p>Si \\(k\\) est algébriquement clos, les sous-groupes de type (C) de G sont conjugués entre eux.</p></div>\n</div>"
+    },
+    {
+     "id": "XIII.6.5",
+     "type": "corollaire",
+     "label": "6.5",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIII.6.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.5</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe algébrique lisse sur \\(k\\) algébriquement clos, H un sous-groupe algébrique lisse de G, \\(\\mathfrak{g}\\) et \\(\\mathfrak{h}\\) les algèbres de Lie. Pour que \\(\\mathfrak{h}\\) contienne une sous-algèbre de Cartan de \\(\\mathfrak{g}\\), il faut et suffit que H contienne un sous-groupe D de type (C) de G.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C'est évidemment suffisant, et c'est aussi nécessaire, car pour que l'on ait \\(\\mathrm{H} \\supset \\mathrm{D}\\), il faut et suffit que \\(\\mathfrak{h} \\supset \\mathfrak{d}\\), en vertu de 5.5.</p>"
+    },
+    {
+     "id": "XIII.6.6",
+     "type": "remarque",
+     "label": "6.6",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XIII.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">6.6</span></div>\n  <div class=\"thm-body\">\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">a)</span> <p>On notera que les sous-groupes <em>connexes</em> H de G décrits dans 6.5 correspondent biunivoquement aux sous-algèbres de Lie \\(\\mathfrak{h}\\) de \\(\\mathfrak{g}\\) qui satisfont à la condition la plus forte (xii) de 5.1 (et en vertu de 5.5, les relations d'inclusion entre de tels sous-groupes se reconnaissent déjà sur leurs algèbres de Lie).</p></li>\n  <li><span class=\"item-label\">b)</span> <p>Supposons toujours \\(k\\) algébriquement clos, et soit D un sous-groupe de type (C) de G, alors il est facile de montrer que D contient un sous-groupe de Cartan C de G : en effet, soit \\(\\mathrm{V} = \\mathfrak{g}/\\mathfrak{d}\\), alors pour un élément « général » \\(a\\) de \\(\\mathfrak{d}\\), \\(\\mathrm{ad}(a)\\) opérant sur V est injectif (il suffit que \\(a\\) soit régulier dans \\(\\mathfrak{g}\\)), d'où on conclut facilement que pour \\(g \\in \\mathrm{D}(k)\\) « général », \\(\\mathrm{Ad}(g)\\) opérant sur V n'a pas d'invariant non nul, ce qui permet d'appliquer 2.1 (vii)\\(\\Rightarrow\\) (i). En fait, nous verrons dans l'exposé suivant un résultat plus précis : tout sous-groupe de Cartan C de G est contenu dans un sous-groupe de type (C) et un seul de G.</p></li>\n  <li><span class=\"item-label\">c)</span> <p>On se gardera de confondre en général sous-groupes de Cartan et sous-groupes de type (C) : les sous-groupes de type (C) de G sont des sous-groupes de Cartan si et seulement si ils sont nilpotents (les sous-groupes de Cartan étant en effet des sous-groupes nilpotent maximaux), or il peut arriver que \\(\\mathfrak{g}\\) soit nilpotente sans que G le soit (exemple : \\(\\mathrm{SL}(2)_k\\) pour \\(k\\) de caractéristique 2), alors les sous-algèbres de Cartan de \\(\\mathfrak{g}\\) sont identiques à \\(\\mathfrak{g}\\), i.e. G est un sous-groupe de type (C) de lui-même si G est connexe, mais ce n'est pas un sous-groupe de Cartan de G ! Par contre, nous verrons dans <a class=\"ref\" href=\"#XIV\">XIV</a> que si G est un groupe semi-simple <em>adjoint</em>, alors ses sous-groupes de type (C) sont ses sous-groupes de Cartan. De même, en caractéristique 0, sans restriction sur le groupe algébrique lisse G sur \\(k\\), la même conclusion est valable : cela résulte aussitôt du fait qu'en caractéristique 0, un groupe algébrique connexe est nilpotent si (et seulement si) son algèbre de Lie l'est. Ceci résulte aussitôt du fait qu'en caractéristique zéro, le centre Z du groupe algébrique connexe G a comme algèbre de Lie le centre de \\(\\mathfrak{g}\\) (car on obtient a priori l'espace des invariants de \\(\\mathfrak{g}\\) sous la représentation adjointe de G, or G étant connexe et \\(k\\) de caractéristique nulle, ce sont aussi les « invariants » au sens infinitésimal de la représentation adjointe de \\(\\mathfrak{g}\\), i.e. le centre de \\(\\mathfrak{g}\\)), et que par le théorème de Cartier (cf. <a class=\"ref\" href=\"#VIB.1.6.1\">VI<sub>B</sub> 1.6.1</a>) Z est lisse.</p></li>\n  </ol></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. Grothendieck"
+}

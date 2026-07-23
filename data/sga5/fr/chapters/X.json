@@ -1,0 +1,2305 @@
+{
+ "chapter_id": "X",
+ "title": "FORMULE D'EULER-POINCARÉ EN COHOMOLOGIE ÉTALE",
+ "number": "X",
+ "pages": [
+  {
+   "id": "X",
+   "title": "FORMULE D'EULER-POINCARÉ EN COHOMOLOGIE ÉTALE",
+   "blocks": [
+    {
+     "id": "X",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"X\">EXPOSÉ X<br>FORMULE D'EULER-POINCARÉ EN COHOMOLOGIE ÉTALE<span class=\"author\">par A. GROTHENDIECK<br>(Rédigé par I. BUCUR)</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le but du présent exposé est l'énoncé et la démonstration de la formule (7.2), du type d'Euler-Poincaré. Cette formule généralise une formule obtenue indépendamment par Ogg et Chafarevitch, dont les résultats sont exposés (du point de vue de la cohomologie étale) dans l'exposé de M. Raynaud [1].</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La formule d'Euler-Poincaré utilise de façon essentielle le formalisme des catégories dérivées. Comme dans loc.cit. la démonstration se fait par l'intermédiaire d'une variante (5.1) d'une formule bien connue de Weil.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-1",
+   "title": "1. Faisceaux sur un schéma à opérateurs.",
+   "blocks": [
+    {
+     "id": "X.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.1\">1. <u>Faisceaux sur un schéma à opérateurs.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\) un schéma muni d'un groupe \\(G\\) opérant par automorphismes. En procédant comme dans ([T] chap. V) on peut définir la notion de faisceau étale sur \\(X\\) à groupe d'opérateurs \\(G\\), ou simplement « faisceau sur \\((X_{\\mathrm{et}},G)\\) ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par définition, se donner un faisceau étale sur \\(X\\) à groupe d'opérateurs \\(G\\), c'est se donner un faisceau \\(F\\in\\operatorname{Ob}(\\widetilde X_{\\mathrm{et}})\\) et un morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[S_g:F\\longrightarrow g^*(F)\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour chaque \\(g\\in G\\), de façon que les conditions suivantes soient remplies :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:8em;\">a) \\(S_e=1_F\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:8em;\">b) Pour \\(g,h\\in G\\), le diagramme :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\xymatrix{\nF\\ar[r]^{S_{hg}}\\ar[d]_{S_h}&amp;(hg)^*(F)\\ar[d]^{C_{h,g}(F)}\\\\\nh^*(F)\\ar[r]_{h^*(S_g)}&amp;h^*(g^*(F))\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est commutatif, où \\(C_{h,g}(F):(hg)^*(F)\\longrightarrow(h^*g^*)(F)\\) est l'isomorphisme canonique.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les morphismes entre deux faisceaux \\((F,S_g)\\), \\((F',S'_g)\\) sur \\(X\\) à groupe \\(G\\) d'opérateurs sont définis d'une manière évidente, et on obtient une catégorie \\(\\widetilde X_{\\mathrm{et},G}\\) qui est un topos, comme il résulte aisément du critère de Giraud (SGA 4 II 4.12).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un anneau \\(A\\) de \\(\\widetilde X_{\\mathrm{et},G}\\) étant donné, on peut considérer la catégorie abélienne des \\(A\\)-Modules, qu'on désignera par \\(\\operatorname{Mod}(A)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par exemple, un anneau \\(\\Lambda\\) étant donné, on peut munir trivialement le faisceau constant \\(\\Lambda_X\\) associé à \\(\\Lambda\\) d'une structure de faisceau à groupe \\(G\\) d'opérateurs, en utilisant les isomorphismes canoniques de transitivité</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[S_g:\\Lambda_X\\xrightarrow{\\sim}g^*(\\Lambda_X).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Tous les résultats démontrés dans [T] chap. V, peuvent s'étendre dans ce cadre, et nous en laissons les détails au lecteur.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-2",
+   "title": "2. Où l'on prouve qu'un certain complexe de \\(\\Lambda[G]\\)-modules est parfait",
+   "blocks": [
+    {
+     "id": "X.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.2\">2. <u>Où l'on prouve qu'un certain complexe de \\(\\Lambda[G]\\)-modules est parfait</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons le résultat suivant de (SGA 4 XVII) :</p>"
+    },
+    {
+     "id": "X.2.1",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 2.1.",
+     "html": "<div class=\"thm lemma\" id=\"X.2.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 2.1.</u></span></div><div class=\"thm-body\"><p><u>Soient \\(X\\) et \\(Y\\) deux schémas et \\(f:X\\longrightarrow Y\\) un morphisme propre, avec \\(Y\\) quasi-compact. Désignons par \\(A\\) un anneau de torsion, et soit \\(F^\\bullet\\) un complexe de faisceaux de \\(A\\)-modules sur \\(X\\) de tor-dimension finie (SGA 4 XVII) ; alors \\(Rf_*(F^\\bullet)\\) est de tor-dimension finie.</u></p></div></div>"
+    },
+    {
+     "id": "X.2.2",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 2.2.",
+     "html": "<div class=\"thm proposition\" id=\"X.2.2\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 2.2.</u></span></div><div class=\"thm-body\"><p><u>Soient \\(X\\) un schéma propre sur le corps \\(k\\) séparablement clos, \\(G\\) un groupe fini opérant sur \\(X\\), \\(V\\) un ouvert de \\(X\\) stable par \\(G\\) et tel que \\(G\\) opère de façon admissible (SGA 1 V 1.7) et librement sur \\(V\\), \\(\\Lambda=\\mathbb Z/\\ell^n\\mathbb Z\\) avec \\(\\ell\\) un nombre premier différent de la caractéristique de \\(k\\), et \\(\\Lambda_V\\) le faisceau constant sur \\(V\\) associé à \\(\\Lambda\\), muni de sa structure triviale de faisceau à groupe \\(G\\) d'opérateurs. Désignons par \\(i:V\\longrightarrow X\\) l'immersion de \\(V\\) dans \\(X\\) et soit \\(\\Lambda_{V,X}=i_!(\\Lambda_V)\\). Dans ces conditions le complexe de \\(\\Lambda[G]\\)-modules \\(R\\Gamma_X(\\Lambda_{V,X})\\) est un complexe parfait (VIII 7).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration :</u> Si \\(p:X\\longrightarrow Y=X/G\\) est la projection canonique, il est bien connu qu'on a l'isomorphisme canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\Gamma_X(\\Lambda_{V,X})\\simeq R\\Gamma_Y(Rp_*(\\Lambda_{V,X}))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dans la catégorie \\(D(\\Lambda[G])\\). D'autre part le complexe \\(Rp_*(\\Lambda_{V,X})\\) de \\(\\Lambda[G]\\)-modules sur \\(Y\\) est de tor-dimension finie. En effet \\(p:X\\longrightarrow Y\\) étant un morphisme fini de schémas, on a \\(R^qp_*(\\Lambda_{V,X})=0\\) si \\(q\\ne0\\) (SGA 4 VIII 5.5). Il en résulte donc que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[Rp_*(\\Lambda_{V,X})=p_*(\\Lambda_{V,X})\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(SGA 4 VIII 5.5) nous donne aussi la possibilité de déterminer les fibres du faisceau \\(p_*(\\Lambda_{V,X})\\), et on trouve, si l'on tient compte du fait que \\(G\\) opère librement sur \\(V\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np_*(\\Lambda_{V,X})_{\\bar y}\\simeq\n\\begin{cases}\n\\displaystyle\\prod_{x\\in p^{-1}(y)}\\Lambda_{V,X,x}\\simeq\\Lambda[G]&amp;\\text{si }y\\in p(V),\\\\[6pt]\n0&amp;\\text{si }y\\notin p(V)\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(\\(\\bar y\\) est le point géométrique de \\(Y\\) localisé en \\(y\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par conséquent \\(Rp_*(\\Lambda_{V,X})=p_*(\\Lambda_{V,X})\\) est plat sur \\(\\Lambda[G]\\), l'étant fibre à fibre (SGA 4 XVII), donc de tor-dimension finie. Appliquant 2.1 au morphisme canonique \\(Y\\longrightarrow\\operatorname{Spec}(k)\\) on déduit que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\Gamma_X(\\Lambda_{V,X})=R\\Gamma_Y(Rp_*(\\Lambda_{V,X}))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est de tor-dimension finie.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour conclure que \\(R\\Gamma_X(\\Lambda_{V,X})\\) est parfait il nous reste à démontrer qu'il est pseudo-cohérent et à cohomologie bornée (VIII 8.1). Mais \\(\\Lambda[G]\\) étant noethérien, pour vérifier que \\(R\\Gamma_X(\\Lambda_{V,X})\\) est pseudo-cohérent il suffit de montrer que les \\(H^q(X,\\Lambda_{V,X})\\) sont de type fini sur \\(\\Lambda[G]\\) (VIII 7.2), ou ce qui revient au même, sur \\(\\Lambda\\), ce qui résulte de (SGA 4 XIV 1.1) appliqué au \\(\\Lambda\\)-Module \\(\\Lambda_{V,X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La formule de Weil 6.1 donnera une expression de la classe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{cl}_{K^\\bullet(\\Lambda[G])}\\bigl(R\\Gamma_X(\\Lambda_{V,X})\\bigr),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour le cas d'une courbe \\(X\\), en termes d'invariants globaux connus et d'invariants locaux que nous allons définir au n° 5.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-3",
+   "title": "3. Rappels sur les représentations linéaires des groupes finis.",
+   "blocks": [
+    {
+     "id": "X.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.3\">3. <u>Rappels sur les représentations linéaires des groupes finis.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce n°, \\(\\Lambda\\) désigne un anneau commutatif, et \\(G\\) un groupe.</p>"
+    },
+    {
+     "id": "X.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.3.1\">3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons la sous-catégorie pleine \\(\\mathcal C\\) de \\(\\operatorname{Mod}(\\Lambda[G])\\) des \\(\\Lambda[G]\\)-modules \\(M\\) dont le \\(\\Lambda\\)-module sous-jacent soit projectif de type fini. Pour un tel module \\(M\\) et pour un \\(g\\in G\\) on considère l'endomorphisme (pour la structure de \\(\\Lambda\\)-module)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[g_M:M\\longrightarrow M,\\qquad g_M(x)=gx.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient une fonction</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\chi_M:G\\longrightarrow\\Lambda,\\qquad \\chi_M(g)=\\operatorname{Tr}_M(g),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui est une fonction <u>centrale</u> sur \\(G\\) et qui s'appelle le <u>caractère du \\(\\Lambda[G]\\)-module</u> \\(M\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si l'on associe à chaque \\(M\\in\\operatorname{Ob}(\\mathcal C)\\) son caractère \\(\\chi_M\\) on obtient une fonction additive (VIII 1). Utilisant le sorite des traces pour les endomorphismes de complexes parfaits, on obtient même une fonction additive \\(\\operatorname{Tr}\\) sur la catégorie des complexes de \\(\\Lambda[G]\\)-modules qui sont parfaits en tant que complexes de \\(\\Lambda\\)-modules. D'où un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R^\\bullet_\\Lambda(G)\\xrightarrow{\\operatorname{Tr}}\\mathcal F(G,\\Lambda),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(R^\\bullet_\\Lambda(G)\\) est l'anneau des représentations de \\(G\\) sur \\(\\Lambda\\) (VIII 10), \\(\\mathcal F(G,\\Lambda)\\) le module des fonctions centrales \\(G\\longrightarrow\\Lambda\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque \\(G\\) est fini, le composé de l'homomorphisme canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^\\bullet(\\Lambda[G])\\longrightarrow R^\\bullet_\\Lambda(G)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(\\operatorname{Tr}\\) sera désigné par \\(\\operatorname{tr}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons le résultat suivant (IX th.1, cor. 3) :</p>"
+    },
+    {
+     "id": "X.3.2",
+     "type": "proposition",
+     "label": "3.2.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"X.3.2\"><div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.2.</span> — <u>Soient \\(\\mathbb Z_\\ell\\) l'anneau des entiers \\(\\ell\\)-adiques et \\(G\\) un groupe fini. Alors l'homomorphisme</u></div><div class=\"thm-body\">\n\\[\\operatorname{tr}:K^\\bullet(\\mathbb Z_\\ell[G])\\longrightarrow\\mathcal F(G,\\mathbb Z_\\ell)\\]\n<p><u>est un monomorphisme. Deux \\(\\mathbb Z_\\ell[G]\\)-modules projectifs ayant même fonction trace dans \\(\\mathcal F(G,\\mathbb Z_\\ell)\\) sont isomorphes.</u></p></div></div>"
+    },
+    {
+     "id": "X.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.3.3\">3.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\alpha:G\\longrightarrow G'\\) un homomorphisme d'un groupe \\(G\\) dans \\(G'\\). Par restriction d'opérateurs on obtient un foncteur exact :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[J:\\operatorname{Mod}(\\Lambda[G'])\\longrightarrow\\operatorname{Mod}(\\Lambda[G]).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce foncteur admet un adjoint à gauche :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[I:\\operatorname{Mod}(\\Lambda[G])\\longrightarrow\\operatorname{Mod}(\\Lambda[G']),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>à savoir \\(I(F)=\\Lambda[G']\\otimes_{\\Lambda[G]}F\\). Si \\(F\\) est projectif de type fini (resp. de type fini) \\(I(F)\\) l'est aussi.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\varphi\\in\\mathcal F(G',\\Lambda)\\) est une fonction centrale sur \\(G'\\), la fonction \\(\\varphi\\circ\\alpha\\) est une fonction centrale sur \\(G\\) et on obtient par conséquent l'application</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\alpha_*:\\mathcal F(G',\\Lambda)\\longrightarrow\\mathcal F(G,\\Lambda).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\varphi\\) est le caractère d'un \\(\\Lambda[G']\\)-module \\(M\\) dans \\(C(G')\\), \\(\\alpha_*(\\varphi)\\) est le caractère du \\(\\Lambda[G]\\)-module \\(J(M)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant que \\(\\alpha:G\\longrightarrow G'\\) est une injection et que \\(G\\) soit d'indice fini dans \\(G'\\). Dans ce cas si \\(F\\) est un \\(\\Lambda[G]\\)-module dans \\(C(G)\\) dont le caractère est \\(\\psi:G\\longrightarrow\\Lambda\\), alors \\(I(F)\\) est dans \\(C(G')\\) et le caractère \\(\\psi^*:G'\\longrightarrow\\Lambda\\) de \\(I(F)\\) est le caractère « induit » par \\(\\psi\\), i.e. la fonction sur \\(G'\\) déduite de \\(\\psi\\) par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(3.3.1)\\qquad \\psi^*(g)=\\sum_{t\\in G'\\!/G}\\psi(t^{-1}gt),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en convenant que \\(\\psi(t^{-1}gt)=0\\) si \\(t^{-1}gt\\notin G\\).</p>"
+    },
+    {
+     "id": "X.3.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.3.4\">3.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(X^\\bullet\\) et \\(Y^\\bullet\\) deux complexes de \\(A\\)-modules. De même que dans le cas des modules, si l'un des complexes \\(X^\\bullet\\), \\(Y^\\bullet\\) a une structure supplémentaire de \\(A\\)-\\(B\\)-bimodule, alors il est possible d'introduire sur \\(\\operatorname{Hom}_A^\\bullet(X^\\bullet,Y^\\bullet)\\) une structure de complexe de \\(B\\)-modules et en conséquence une structure correspondante sur \\(R\\operatorname{Hom}_A(X^\\bullet,Y^\\bullet)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons par exemple que \\(X^\\bullet\\) est un objet de \\(D^-(A)\\) et \\(Y^\\bullet\\) est un complexe de \\(A\\)-\\(B\\)-bimodules, disons pour préciser que nous sommes dans le cas décrit par le symbole \\({}_A{}_B Y^\\bullet\\). En particulier \\(Y^\\bullet\\) est un objet de \\(D(A)\\). Soit \\(P^\\bullet\\longrightarrow X^\\bullet\\) une résolution projective de \\(X^\\bullet\\). Alors \\(\\operatorname{Hom}_A^\\bullet(P^\\bullet,Y^\\bullet)\\) est évidemment un complexe de \\(B\\)-modules à gauche, c'est-à-dire un objet de \\(D(B)\\). Si on utilise une autre résolution projective \\(P_1^\\bullet\\longrightarrow X^\\bullet\\), le complexe de \\(B\\)-modules \\(\\operatorname{Hom}_A^\\bullet(P_1^\\bullet,Y^\\bullet)\\) est isomorphe canoniquement dans \\(D(B)\\) au complexe \\(\\operatorname{Hom}_A^\\bullet(P^\\bullet,Y^\\bullet)\\). Il en résulte donc qu'on peut définir \\(R\\operatorname{Hom}_A(X^\\bullet,Y^\\bullet)\\) comme un objet de \\(D(B)\\) déterminé à isomorphisme unique près, dépendant fonctoriellement de \\(X^\\bullet\\) dans \\(D^-(A)\\) et \\(Y^\\bullet\\) dans \\(D(A\\otimes_{\\mathbb Z}B)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Des considérations analogues s'appliquent pour le cas du complexe \\(X^\\bullet\\mathbin{\\overset L\\otimes}_A Y^\\bullet\\). Si par exemple \\(Y^\\bullet\\) est un complexe de \\(A\\)-\\(B\\)-bimodules comme plus haut et \\(X\\) est un complexe de \\(A\\)-modules à droite et borné à droite, on peut définir \\(X^\\bullet\\mathbin{\\overset L\\otimes}_A Y^\\bullet\\) comme un objet de \\(D(B)\\) déterminé à isomorphisme unique près.</p>"
+    },
+    {
+     "id": "X.3.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.3.5\">3.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\Lambda\\) un anneau commutatif, \\(A\\) et \\(B\\) deux algèbres sur \\(\\Lambda\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[C=A\\otimes_\\Lambda B.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les \\(C\\)-modules sont donc les \\(A\\)-\\(B\\)-bimodules.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\Delta\\) est une sous-catégorie triangulée pleine de \\(D(A)\\), on désignera par \\(D(C)_\\Delta\\) la sous-catégorie triangulée pleine de \\(D(C)\\) engendrée par les complexes qui, considérés comme objets de \\(D(A)\\) appartiennent à \\(\\Delta\\).</p>"
+    },
+    {
+     "id": "X.3.6",
+     "type": "proposition",
+     "label": "3.6.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"X.3.6\"><div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6.</span> — <u>Les notations étant celles de 3.4 et 3.5, soit \\(\\Delta\\) une sous-catégorie triangulée pleine de \\(D(A)\\) stable par facteurs directs. Si \\(P^\\bullet\\) est un objet de \\(D(B)_{\\mathrm{parf}}\\) (VIII 7) et \\(M\\) est un objet de \\(D(C)_\\Delta\\), le complexe de \\(A\\)-modules \\(R\\operatorname{Hom}_B(P^\\bullet,M^\\bullet)\\in D(A)\\) défini dans 4.1 est un objet de \\(\\Delta\\). Il en résulte en particulier un accouplement de catégories triangulées</u></div><div class=\"thm-body\">\n\\[(3.6.1)\\qquad R\\operatorname{Hom}:D(B)_{\\mathrm{parf}}\\times D(C)_\\Delta\\longrightarrow\\Delta,\\]\n<p><u>c'est-à-dire un bifoncteur exact en chaque variable, et par conséquent (VIII 3) une application bilinéaire :</u></p>\n\\[(3.6.2)\\qquad K^\\bullet(B)\\times K^\\bullet(D(C)_\\Delta)\\xrightarrow{\\ \\mathrm{hom}\\ }K(\\Delta)\\]\n<p><u>telle que</u></p>\n\\[(3.6.3)\\qquad \\operatorname{hom}(\\operatorname{cl}_{K^\\bullet(B)}(P^\\bullet),\\operatorname{cl}_{K^\\bullet(D(C)_\\Delta)}(M^\\bullet))=\\operatorname{cl}_{K(\\Delta)}(R\\operatorname{Hom}_B(P^\\bullet,M^\\bullet)).\\]\n<p><u>On obtient un énoncé analogue si l'on remplace \\(B\\) par son opposé \\(B^\\circ\\) et \\(R\\operatorname{Hom}_B(P,M)\\) par \\(P^\\bullet\\mathbin{\\overset L\\otimes}_B M^\\bullet\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On montre d'abord que \\(R\\operatorname{Hom}_B(P,M)\\) est un objet de \\(\\Delta\\) dans le cas particulier où \\(P^\\bullet\\) a une seule composante non nulle, puis on raisonne par récurrence suivant le nombre des composantes non nulles de \\(P^\\bullet\\).</p>"
+    },
+    {
+     "id": "X.3.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.3.7\">3.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(P\\) un \\(\\Lambda[G]\\)-module. C'est en particulier un \\(\\Lambda\\)-module. On peut munir le \\(\\Lambda\\)-module \\(\\check P=\\operatorname{Hom}_\\Lambda(P,\\Lambda)\\) d'une structure de \\(\\Lambda[G]\\)-module à gauche, en posant pour chaque \\(u\\in\\operatorname{Hom}_\\Lambda(P,\\Lambda)\\) et \\(g\\in G\\), \\((gu)(x)=u(g^{-1}x)\\), i.e. :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(3.7.1)\\qquad g_{\\check P}={}^{t}(g^{-1})_P.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le module \\(\\check P\\) sur \\(\\Lambda[G]\\) ainsi obtenu sera appelé <u>le dual</u> de \\(P\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut donc définir le dual \\(\\check P^\\bullet=\\operatorname{Hom}_\\Lambda^\\bullet(P^\\bullet,\\Lambda)\\) d'un complexe \\(P\\) de \\(\\Lambda[G]\\)-modules comme étant un complexe de \\(\\Lambda[G]\\)-modules.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\chi_P\\) est le caractère de \\(P\\), le caractère \\(\\chi_{\\check P}\\) de son dual est donné par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(3.7.2)\\qquad \\chi_{\\check P}(g)=\\chi_P(g^{-1}),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui se déduit immédiatement de (4.3.1) en utilisant la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Tr}_\\Lambda^*(v)=\\operatorname{Tr}_\\Lambda^*({}^tv).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(P\\) est un \\(\\Lambda[G]\\)-module projectif de type fini il est clair que \\(\\check P\\) est aussi un \\(\\Lambda[G]\\)-module projectif de type fini. En plus, dans ce cas, l'homomorphisme canonique de \\(\\Lambda\\)-modules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[P\\longrightarrow\\check{\\check P}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est en fait un isomorphisme de \\(\\Lambda[G]\\)-modules. De cette façon on définit sur \\(K^\\bullet(\\Lambda[G])\\) une involution</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[x\\longmapsto\\check x,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui associe à la classe de \\(P\\) la classe de \\(\\check P\\). Il est immédiat que si \\(\\mu:\\Lambda\\longrightarrow\\Gamma\\) est un homomorphisme d'anneaux commutatifs et \\(u:\\Lambda[G]\\longrightarrow\\Gamma[G]\\) l'homomorphisme associé, l'homomorphisme \\(u^*:K^\\bullet(\\Lambda[G])\\longrightarrow K^\\bullet(\\Gamma[G])\\) commute aux involutions \\(x\\longmapsto\\check x\\) sur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(K^\\bullet(\\Lambda[G])\\) et \\(K^\\bullet(\\Gamma[G])\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(A\\) une algèbre sur \\(\\Lambda\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[A[G]=\\Lambda[G]\\otimes_\\Lambda A.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un complexe \\(X^\\bullet\\) de \\(A[G]\\)-modules étant donné, on désigne par \\(X^{\\bullet G}\\) le complexe de \\(A\\)-modules image de \\(X^\\bullet\\) par le foncteur qui associe à chaque \\(A[G]\\)-module \\(X\\) le module sur \\(A\\) formé par les éléments de \\(X\\) invariants par \\(G\\).</p>"
+    },
+    {
+     "id": "X.3.8",
+     "type": "proposition",
+     "label": "3.8.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"X.3.8\"><div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.8.</span> — <u>Soient \\(G\\) un groupe fini, \\(P^\\bullet\\) un complexe borné de \\(\\Lambda[G]\\)-modules dont toutes les composantes sont projectives de type fini, et \\(M\\) un complexe de \\(A[G]\\)-modules. Sous ces conditions il existe des isomorphismes canoniques de complexes de \\(A\\)-modules :</u></div><div class=\"thm-body\">\n\\[(3.8.1)\\qquad \\operatorname{Hom}_{\\Lambda[G]}^\\bullet(P^\\bullet,M)\\simeq\\operatorname{Hom}_\\Lambda^\\bullet(P^\\bullet,M)^G\\simeq(\\check P^\\bullet\\otimes_\\Lambda M^\\bullet)^G\\simeq\\check P^\\bullet\\otimes_{\\Lambda[G]}M^\\bullet.\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration utilise les isomorphismes bien-connus pour le cas des modules, et est laissée au lecteur. Noter que dans les deuxième et troisième terme, les opérations de \\(G\\) sur \\(\\operatorname{Hom}_\\Lambda^\\bullet(P^\\bullet,M^\\bullet)\\) resp. \\(\\check P^\\bullet\\otimes_\\Lambda M^\\bullet\\) se définissent par transport de structure à partir de ses opérations sur \\(P^\\bullet\\) et \\(M^\\bullet\\) resp. \\(\\check P^\\bullet\\) et \\(\\check M^\\bullet\\).</p>"
+    },
+    {
+     "id": "X.3.9",
+     "type": "corollary",
+     "label": "3.9.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm corollary\" id=\"X.3.9\"><div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.9.</span> — <u>Si \\(P^\\bullet\\in\\operatorname{Ob}(D(\\Lambda[G])_{\\mathrm{parf}})\\) et \\(M^\\bullet\\in D^+(A[G])\\) alors on a dans la catégorie dérivée \\(D(A)\\) les isomorphismes suivants :</u></div><div class=\"thm-body\">\n\\[(3.9.1)\\qquad R\\operatorname{Hom}_{\\Lambda[G]}(P^\\bullet,M^\\bullet)=R\\Gamma^G(\\check P^\\bullet\\mathbin{\\overset L\\otimes}_\\Lambda M)\\simeq\\check P^\\bullet\\mathbin{\\overset L\\otimes}_{\\Lambda[G]}M^\\bullet.\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet grâce à l'hypothèse \\(P^\\bullet\\in D(\\Lambda[G])_{\\mathrm{parf}}\\), on peut supposer que \\(P^\\bullet\\) est borné et toutes ses composantes sont projectives de type</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>fini. On a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\operatorname{Hom}_{\\Lambda[G]}(P^\\bullet,M^\\bullet)=\\operatorname{Hom}_{\\Lambda[G]}^\\bullet(P^\\bullet,M^\\bullet)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on peut utiliser les isomorphismes (4.3.4). Mais \\(\\check P^\\bullet\\) est comme \\(P^\\bullet\\), borné à composantes projectives de type fini, donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\check P^\\bullet\\mathbin{\\overset L\\otimes}_{\\Lambda[G]}M^\\bullet=\\check P^\\bullet\\otimes_{\\Lambda[G]}M^\\bullet.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De même \\(\\check P^\\bullet\\mathbin{\\overset L\\otimes}_\\Lambda M^\\bullet=\\check P^\\bullet\\otimes_\\Lambda M^\\bullet\\). De plus les composantes du complexe \\(\\check P^\\bullet\\otimes_\\Lambda M^\\bullet\\) sont cohomologiquement triviales ([3] IX 3) et on a donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\Gamma^G(\\check P^\\bullet\\mathbin{\\overset L\\otimes}_\\Lambda M^\\bullet)=(\\check P^\\bullet\\otimes_\\Lambda M^\\bullet)^G.\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-4",
+   "title": "4. La représentation de Swan.",
+   "blocks": [
+    {
+     "id": "X.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.4\">4. <u>La représentation de Swan.</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(E\\) une courbe algébrique lisse et connexe sur le corps \\(k\\) algébriquement clos. Si \\(x\\in E\\) est un point fermé de \\(E\\), son anneau local \\(\\mathcal O_{E,x}\\) (ou simplement \\(\\mathcal O_x\\)) est un anneau de valuation discrète dont le corps de fractions est isomorphe au corps de fonctions rationnelles sur \\(E\\) et dont le corps résiduel est \\(k\\). La valuation correspondante sera désignée par \\(v_x\\).</p>"
+    },
+    {
+     "id": "X.4.1",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 4.1.",
+     "html": "<div class=\"thm lemma\" id=\"X.4.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 4.1.</u></span></div><div class=\"thm-body\"><p><u>Soient \\(E\\) une courbe algébrique lisse sur le corps \\(k\\) algébriquement clos et \\(g:E\\longrightarrow E\\) un endomorphisme de \\(E\\) différent de l'identité. Supposons que \\(x\\in E\\) est un point fixe isolé de \\(g\\) et soit \\(\\pi\\) une uniformisante de \\(\\mathcal O_{E,x}\\). Si \\(v_x\\) est la valuation de \\(\\mathcal O_{E,x}\\) correspondante, alors la multiplicité \\(v_x(g)\\) du point fixe \\(x\\) de l'application \\(g\\) (IV) est égale à \\(v_x(g(\\pi)-\\pi)\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le produit \\(E\\times E\\) la diagonale et le graphe de l'endomorphisme \\(g\\) seront désignés respectivement par \\(\\Delta\\) et \\(\\Gamma_g\\). Soient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\gamma:E\\longrightarrow E\\times E,\\qquad \\delta:E\\longrightarrow E\\times E\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>les immersions respectives. Elles sont données, sur les anneaux locaux complétés de \\(x\\) resp. \\((x,x)\\), par les homomorphismes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\gamma^*,\\delta^*:A\\widehat\\otimes A\\longrightarrow A\\qquad(A=\\widehat{\\mathcal O}_x),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\gamma^*(a\\otimes b)=ab,\\qquad \\delta^*(a\\otimes b)=a g^*(b).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il s'agit d'évaluer la multiplicité \\(v_x(g)\\) du point \\(\\delta(x)\\) dans l'intersection \\(\\Delta\\Gamma_g\\) sur \\(E\\times E\\). Or le diviseur \\(\\Delta\\) correspond à l'idéal engendré par l'élément \\(1\\otimes\\pi-\\pi\\otimes1\\) de \\(A\\widehat\\otimes A\\). Donc la multiplicité de \\(\\delta(x)\\) dans l'intersection \\(\\Delta\\Gamma_g\\) est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[v_x(g)=v_x\\bigl(\\delta^*(1\\otimes\\pi-\\pi\\otimes1)\\bigr)=v_x(g(\\pi)-\\pi),\\qquad\\text{cqfd.}\\]\n\n</p>"
+    },
+    {
+     "id": "X.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.4.2\">4.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) une courbe algébrique lisse, propre et connexe sur le corps \\(k\\) algébriquement clos. Si \\(\\eta\\) est son point générique, désignons par \\(K=k(\\eta)\\) son corps de fonctions rationnelles.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K'\\supset K,\\qquad [K':K]=n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>une extension galoisienne finie de degré \\(n\\) et de groupe de Galois \\(G\\). Désignons par \\(C'\\) la normalisée de \\(C\\) dans \\(K'\\) et soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[p:C'\\longrightarrow C\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la projection canonique. Le groupe de Galois \\(G\\) opère évidemment sur \\(C'\\). Le stabilisateur de \\(y'\\in C'\\) dans \\(G\\) sera noté \\(G_{y'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\pi\\) est une uniformisante de \\(\\mathcal O_{C',y'}\\) et si \\(s\\in G_{y'}\\), \\(s\\ne e\\), posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.1)\\qquad v_{y'}(s(\\pi)-\\pi)=v_{y'}(s)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(la multiplicité du point fixe \\(y'\\) pour l'application \\(s:C'\\longrightarrow C'\\) (lemme 5.1)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>La représentation de Swan</u> associée à \\(y'\\) est définie par son caractère \\(\\sigma_{y'}\\), qui est donné par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.2)\\qquad \\sigma_{y'}(s)=\n\\begin{cases}\n1-v_{y'}(s)&amp;\\text{si }s\\ne e,\\\\\n\\displaystyle\\sum_{s\\ne e}(v_{y'}(s)-1)&amp;\\text{si }s=e.\n\\end{cases}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les résultats de Artin-Serre-Swan (IX Th 4) montrent que, \\(\\ell\\) étant un nombre premier distinct de la caractéristique de \\(k\\), il existe un \\(\\mathbb Z_\\ell[G_{y'}]\\)-module projectif de type fini \\(\\operatorname{Sw}_{y'}\\), déterminé à isomorphisme près, qui a pour caractère \\(\\sigma_{y'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il y a aussi intérêt à considérer le \\(\\mathbb Z_\\ell[G_{y'}]\\)-module</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.3)\\qquad \\operatorname{Sw}'_{y'}=\\operatorname{Sw}_{y'}\\otimes_{\\mathbb Z_\\ell}\\mathbb Z_\\ell[G_{y'}].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le caractère \\(\\sigma'_{y'}\\) de \\(\\operatorname{Sw}'_{y'}\\) est donné par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.4)\\qquad \\sigma'_{y'}(s)=\n\\begin{cases}\n1-v_{y'}(s)&amp;\\text{si }s\\ne e,\\\\\n\\displaystyle 1+\\sum_{s\\ne e}v_{y'}(s)=1+v_{y'}(\\mathfrak D_{C'/C})&amp;\\text{si }s=e,\n\\end{cases}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\mathfrak D_{C'/C}\\) est la différente du revêtement \\(C'/C\\), la dernière formule n'étant autre que [3, Chap. VI 2, prop. 4] où on fait \\(H=\\{1\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, la fonction</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.5)\\qquad a_{y'}=\\sigma_{y'}+u_{G_{y'}}=\\sigma'_{y'}-1_{G_{y'}},\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(u_{G_{y'}}\\) désigne le caractère de l'idéal d'augmentation de \\(\\mathbb Z_\\ell[G]\\), est aussi le caractère d'un \\(\\mathbb Q_\\ell[G_{y'}]\\)-module, <u>la représentation d'Artin de \\(G_{y'}\\)</u>, qui sera désigné par \\(\\operatorname{Art}_{y'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.6)\\qquad a_{y'}(s)=\n\\begin{cases}\n-v_{y'}(s)&amp;\\text{si }s\\ne e,\\\\\n\\displaystyle\\sum_{s\\ne e}v_{y'}(s)=v_{y'}(\\mathfrak D_{C/C'})&amp;\\text{si }s=e.\n\\end{cases}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons maintenant l'inclusion \\(G_{y'}\\subset G\\). On pose :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.2.7)\\qquad \\operatorname{Sw}_y=\\operatorname{Sw}_{y'}\\otimes_{\\mathbb Z_\\ell[G_{y'}]}\\mathbb Z_\\ell[G],\\qquad \\operatorname{Sw}'_y=\\operatorname{Sw}'_{y'}\\otimes_{\\mathbb Z_\\ell[G_{y'}]}\\mathbb Z_\\ell[G],\\]\n\\[(4.2.8)\\qquad \\operatorname{Art}_y=\\operatorname{Art}_{y'}\\otimes_{\\mathbb Q_\\ell[G_{y'}]}\\mathbb Q_\\ell[G].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les caractères des représentations précédentes sont notés \\(\\sigma_y,\\sigma'_y,a_y\\).</p>"
+    },
+    {
+     "id": "X.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.4.3\">4.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons que les modules ainsi obtenus ne dépendent — à isomorphisme près — que du point \\(y\\in C\\), et non du choix du point \\(y'\\) et \\(C'\\) au dessus de \\(y\\). Soit donc \\(y''\\) un autre tel point. Il existe donc \\(g\\in G\\) tel que \\(y''=g\\cdot y'\\). La situation \\((C',y'',G)\\) se déduit donc de la situation \\((C,y',G)\\) par l'isomorphisme \\(g\\) sur \\(C'\\), \\(\\operatorname{int}(g):h\\longmapsto ghg^{-1}\\) sur \\(G\\). On en conclut par <u>transport de structure</u> que les modules \\(\\operatorname{Sw}_y\\) etc. associés à \\(y''\\) se déduisent de ceux associés à \\(y'\\) par extension des opérateurs à l'aide de \\(\\operatorname{int}(g):G\\longrightarrow G\\). On sait que cette extension transforme un module en un module isomorphe.</p>"
+    },
+    {
+     "id": "X.4.4",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 4.4.",
+     "html": "<div class=\"thm proposition\" id=\"X.4.4\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 4.4.</u></span> — <u>Les notations étant celles de 3.7 avec \\(\\Lambda=\\mathbb Z_\\ell\\) et \\(M^\\bullet\\) étant un objet de \\(D^+(A[G])\\) on a des isomorphismes :</u></div><div class=\"thm-body\">\n\\[(*)\\qquad \\operatorname{Sw}_y\\simeq\\check{\\operatorname{Sw}}_y\\]\n\\[(**)\\qquad \\operatorname{Hom}_{\\mathbb Z_\\ell[G]}^\\bullet(\\operatorname{Sw}_y,M^\\bullet)\\simeq\\operatorname{Sw}_y\\otimes_{\\mathbb Z_\\ell[G]}M^\\bullet.\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Pour que deux \\(\\mathbb Z_\\ell[G]\\)-modules projectifs de type fini soient isomorphes il suffit qu'ils aient même caractère (3.2). Or si l'on désigne par \\(\\check\\sigma_y\\) le caractère de \\(\\check{\\operatorname{Sw}}_y\\) on a (3.7.2) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\check\\sigma_y(s)=\\sigma_y(s^{-1}).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[v_{y'}(s^{-1}(\\pi)-\\pi)=v_{y'}\\bigl(s(s^{-1}(\\pi)-\\pi)\\bigr)=v_{y'}(\\pi-s(\\pi))=v_{y'}(s(\\pi)-\\pi),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc \\(\\operatorname{Sw}_{y'}\\simeq\\check{\\operatorname{Sw}}_{y'}\\), d'où la formule (*) par définition (4.2.7). La formule (**) en résulte grâce à 3.8.</p>"
+    },
+    {
+     "id": "X.4.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.4.5\">4.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous aurons besoin plus bas d'une formule explicite pour le caractère de la représentation de Swan. On a en fait les formules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(4.5.1)\\qquad \\sigma_{y'}^*(s)=\\sigma_{y''}^*(s)=\\sigma_y(s)=\n\\begin{cases}\n\\displaystyle\\sum_{\\substack{p(z')=y\\\\s(z')=z'}}(1-v_{z'}(s))&amp;\\text{si }s\\ne e,\\\\[6pt]\n\\displaystyle\\sum_{p(z')=y}\\bigl(1+v_{z'}(\\mathfrak D_{C'/C})\\bigr)-n&amp;\\text{si }s=e,\n\\end{cases}\\]\n\\[(4.5.2)\\qquad \\sigma_{y'}'{}^*(s)=\\sigma_{y''}'{}^*(s)=\\sigma'_y(s)=\n\\begin{cases}\n\\displaystyle\\sum_{\\substack{p(z')=y\\\\s(z')=z'}}(1-v_{z'}(s))&amp;\\text{si }s\\ne e,\\\\[6pt]\n\\displaystyle\\sum_{p(z')=y}\\bigl(1+v_{z'}(\\mathfrak D_{C'/C})\\bigr)&amp;\\text{si }s=e,\n\\end{cases}\\]\n\\[(4.5.3)\\qquad a_{y'}^*(s)=a_{y''}^*(s)=a_y(s)=\n\\begin{cases}\n-\\displaystyle\\sum_{\\substack{p(z')=y\\\\s(z')=z'}}v_{z'}(s)&amp;\\text{si }s\\ne e,\\\\[6pt]\n\\displaystyle\\sum_{p(z')=y}v_{z'}(\\mathfrak D_{C'/C})&amp;\\text{si }s=e.\n\\end{cases}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour déduire ces formules on utilise (3.3.1) et l'on tient compte du fait que si l'on fixe un point \\(y'_0\\in C'\\), alors on peut trouver, pour chaque \\(y'\\in C'\\) tel que \\(p(y')=p(y'_0)\\), un élément \\(g'\\in G\\) tel que \\(g'(y'_0)=y'\\). Les éléments \\(g'\\) constituent un système de représentants pour les classes à droite de \\(G_{y'_0}\\) dans \\(G\\) et on a de plus \\(G_{y'}=g'G_{y'_0}g'^{-1}\\). Ce système de représentants peut être utilisé dans le deuxième membre de la formule (3.3.1), et on obtient les formules écrites.</p>"
+    },
+    {
+     "id": "X.4.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.4.6\">4.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les invariants \\(\\operatorname{Sw}_y\\), \\(\\operatorname{Sw}'_y\\), \\(\\operatorname{Art}_y\\) peuvent se définir dans des conditions plus générales. Soit pour cela \\(C'\\) une courbe algébrique lisse sur \\(k\\), non nécessairement connexe. Supposons que le groupe fini \\(G\\) opère sur \\(C'\\) et qu'il existe un ouvert \\(U\\) de \\(C=C'/G\\) dense dans \\(C\\) tel que \\(C'|U\\) soit un revêtement principal de \\(U\\) de groupe \\(G\\). Pour un point \\(y\\in C\\) on peut définir les modules \\(\\operatorname{Sw}_y\\), \\(\\operatorname{Sw}'_y\\), \\(\\operatorname{Art}_y\\) en procédant comme plus haut. On peut se ramener au cas où \\(C'\\) est connexe de la façon suivante. Soient \\(y'\\in C'\\) tel que \\(p(y')=y\\), \\(C'_1\\) la composante irréductible de \\(C'\\) qui contient \\(y'\\) et \\(C_1\\) la composante irréductible de \\(C\\) qui contient \\(y\\). Si \\(G_{C'_1}\\) est le stabilisateur de la composante \\(C'_1\\) et si \\(\\eta'_1\\) (resp. \\(\\eta_1\\)) est le point générique de \\(C'_1\\) (resp. \\(C_1\\)) alors l'extension</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K'_1=k(\\eta'_1)\\supset k(\\eta_1)=K_1\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est galoisienne de groupe de Galois \\(G_{C'_1}\\) et \\(C'_1\\) est la normalisée de \\(C_1\\) dans \\(K'_1\\) (SGA 1 I 10). On peut donc appliquer les considérations faites plus haut pour les courbes \\(C'_1\\), \\(C_1\\) et le groupe \\(G_{C'_1}\\). De cette façon on obtient les \\(\\mathbb Z_\\ell[G_{C'_1}]\\)-modules projectifs de type fini \\(\\operatorname{Sw}_{G_{C'_1},y}\\), \\(\\operatorname{Sw}'_{G_{C'_1},y}\\), \\(\\operatorname{Art}_{G_{C'_1},y}\\), et \\(\\operatorname{Sw}_y\\), \\(\\operatorname{Sw}'_y\\), \\(\\operatorname{Art}_y\\) sont les modules induits associés à l'inclusion \\(G_{C'_1}\\subset G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remarque 4.6.</u> Les modules \\(\\operatorname{Sw}_{y'}\\), \\(\\operatorname{Sw}'_{y'}\\), \\(\\operatorname{Art}_{y'}\\) sont des invariants purement locaux : ils sont connus par le groupe \\(G_{y'}\\) opérant sur le complété de l'anneau local \\(\\mathcal O_{C',y'}\\). En plus on a \\(\\operatorname{Sw}_{y'}=0\\) si et seulement si \\(p:C'\\longrightarrow C\\) est modérément ramifiée en \\(y'\\) ou, ce qui revient au même, si \\(G_{y'}\\) est d'ordre premier à la caractéristique de \\(k\\) [3 VI].</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-5",
+   "title": "5. La formule de Weil (comparer [3 VI § 4]).",
+   "blocks": [
+    {
+     "id": "X.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.5\">5. <u>La formule de Weil</u> (comparer [3 VI § 4]).</h2>"
+    },
+    {
+     "id": "X.5.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.5.0\">5.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Tous les schémas considérés dans ce numéro seront définis sur un corps de base \\(k\\) algébriquement clos.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons les notations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\Lambda_\\nu=\\mathbb Z/\\ell^\\nu\\mathbb Z,\\quad \\ell\\text{ étant un nombre premier donné, distinct de la caractéristique de }k.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathbb Z_\\ell\\longrightarrow\\Lambda_\\nu\\) l'homomorphisme canonique. Il induit un homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lambda_\\nu:\\mathbb Z_\\ell[G]\\longrightarrow\\Lambda_\\nu[G]\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent [VIII 9] un homomorphisme de réduction :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lambda_\\nu^*:K^\\bullet(\\mathbb Z_\\ell[G])\\longrightarrow K^\\bullet(\\Lambda_\\nu[G]).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les images par \\(\\lambda_\\nu^*\\) des éléments associés aux modules \\(\\operatorname{Sw}_y\\), \\(\\operatorname{Sw}'_y\\) seront désignés par \\(\\widehat{\\operatorname{Sw}}_y^{\\Lambda_\\nu}\\), \\(\\widehat{\\operatorname{Sw}}_y'{}^{\\Lambda_\\nu}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'homomorphisme de réduction \\(\\lambda_\\nu^*\\) est en fait un isomorphisme [IX 1.5]. L'inverse de \\(\\lambda_\\nu^*\\) sera désigné par \\(\\mu_\\nu\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le faisceau constant sur le schéma \\(X\\) associé à l'anneau \\(\\Lambda_\\nu\\) sera désigné par \\(\\Lambda_{\\nu,X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(V\\) un ouvert de \\(X\\), \\(j:V\\lhook\\joinrel\\longrightarrow X\\) l'immersion canonique. On pose</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[j_!(\\Lambda_{\\nu,V})=\\Lambda_{\\nu,V,X}.\\]\n\n</p>"
+    },
+    {
+     "id": "X.5.1",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 5.1.",
+     "html": "<div class=\"thm proposition\" id=\"X.5.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 5.1.</u></span> — <u>Soient \\(C'\\) une courbe algébrique, lisse et propre sur le corps \\(k\\) algébriquement clos, \\(G\\) un groupe fini opérant sur \\(C'\\), \\(C=C'/G\\), \\(p:C'\\longrightarrow C\\) la projection canonique, \\(U\\) un ouvert dense de \\(C\\) tel que \\(U'=p^{-1}(U)\\) soit un revêtement principal de \\(U\\) de groupe \\(G\\), \\(Y=C-U\\), \\(Y'=p^{-1}(Y)=C'-U'\\), et soit \\(\\operatorname{EP}(C)\\) la caractéristique d'Euler-Poincaré de \\(C\\) (égale à \\(2-2g\\) si \\(C\\) est connexe de genre \\(g\\)).</u></div><div class=\"thm-body\">\n<p><u>Dans ces conditions on a la formule de Weil :</u></p>\n\\[(5.2)\\qquad \\operatorname{cl}_{K^\\bullet(\\Lambda_\\nu[G])}\\bigl(R\\Gamma_{C'}(\\Lambda_{\\nu,U',C'})\\bigr)=\\operatorname{EP}(C)\\operatorname{cl}_{K^\\bullet(\\Lambda_\\nu[G])}(\\Lambda_\\nu[G])-\\sum_{y\\in Y}\\widehat{\\operatorname{Sw}}'_y{}^{\\Lambda_\\nu}\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où le premier membre de (6.2) est défini grâce à 2.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Désignons par \\(S_1\\) (resp. \\(S_2\\)) le premier (resp. le deuxième) membre de la formule à démontrer. L'homomorphisme de réduction \\(\\lambda_\\nu^*\\) étant en fait un isomorphisme, il suffit de démontrer que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mu_\\nu(S_1)=\\mu_\\nu(S_2).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part (3.3.1) l'homomorphisme trace :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^\\bullet(\\mathbb Z_\\ell[G])\\xrightarrow{\\ \\operatorname{tr}\\ }\\mathcal F(G,\\mathbb Z_\\ell)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un monomorphisme. Par conséquent il suffit de démontrer que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{tr}(\\mu_\\nu(S_1))=\\operatorname{tr}(\\mu_\\nu(S_2)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le caractère \\(\\sigma_2=\\operatorname{tr}(\\mu_\\nu(S_2))\\) est évidemment donné par la formule</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(5.2.1)\\qquad \\sigma_2=\\operatorname{EP}(C)r_G-\\sum_{y\\in Y}\\sigma'_y,\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\sigma'_y\\) est le caractère de \\(\\operatorname{Sw}'_y\\) ((4.2.7) et (4.2.3)), \\(r_G\\) la représentation régulière.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons maintenant les homomorphismes de réduction pour les traces :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal F(G,\\mathbb Z_\\ell)\\xrightarrow{\\ \\lambda_n^\\natural\\ }\\mathcal F(G,\\mathbb Z/\\ell^n\\mathbb Z).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a évidemment</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathcal F(G,\\mathbb Z_\\ell)=\\varprojlim_n\\mathcal F(G,\\mathbb Z/\\ell^n\\mathbb Z).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit donc de démontrer qu'on a, quel que soit \\(n\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lambda_n^\\natural\\bigl(\\operatorname{tr}(\\mu_\\nu(S_1))\\bigr)=\\lambda_n^\\natural(\\sigma_2).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le premier membre est égal à \\(\\operatorname{tr}(\\lambda_n^*(\\mu_\\nu(S_1)))\\), or</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lambda_n^*(\\mu_\\nu(S_1))=\\operatorname{cl}_{K^\\bullet(\\Lambda_n[G])}\\bigl(R\\Gamma_{C'}(\\Lambda_{\\nu,U',C'})\\bigr),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>grâce à la formule de Künneth (SGA 4 XVIII)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\Gamma_{C'}(\\Lambda_{n,U',C'})\\mathbin{\\overset L\\otimes}_{\\Lambda_n}\\Lambda_\\nu\\xrightarrow{\\sim}R\\Gamma_{C'}(\\Lambda_{\\nu,U',C'})\\qquad\\text{pour }n\\geq\\nu.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On est donc ramené à prouver l'égalité :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{tr}\\!\\left(\\operatorname{cl}_{K^\\bullet(\\Lambda_n[G])}\\bigl(R\\Gamma_{C'}(\\Lambda_{n,U',C'})\\bigr)\\right)=\\lambda_n^\\natural(\\sigma_2).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons le premier membre de cette égalité par \\(\\pi\\) et soit \\(g\\in G\\). L'élément \\(g\\) induit évidemment un endomorphisme du triangle distingué :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n&amp;R\\Gamma_{Y'}(\\Lambda_{n,Y'})\\ar[dl]\\ar[dr]&amp;\\\\\nR\\Gamma_{C'}(\\Lambda_{n,U',C'})\\ar[rr]&amp;&amp;R\\Gamma_{C'}(\\Lambda_{n,C'})\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tau(g)=\\operatorname{Tr}^*gR\\Gamma_{C'}(\\Lambda_{n,U',C'})\n=\\operatorname{Tr}^*gR\\Gamma_{C'}(\\Lambda_{n,C'})\n-\\operatorname{Tr}^*gR\\Gamma_{Y'}(\\Lambda_{n,Y'}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(Pour abréger on a écrit \\(\\operatorname{Tr}^*\\) au lieu de \\(\\operatorname{Tr}_{\\Lambda_n}^*\\)). Or on a, en appliquant une « formule de Lefschetz » triviale sur l'espace discret \\(Y'\\) sur lequel \\(g\\) opère :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}^*gR\\Gamma_{Y'}(\\Lambda_{n,Y'})\n=\\text{nombre des points fixes de la restriction }g_{Y'}\\text{ de }g\\text{ à }Y'\n=\\sum_{\\substack{y'\\in Y'\\\\gy'=y'}}1.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part la formule de Lefschetz (III 4.7) pour \\(g\\) opérant sur \\(C'\\) nous donne, si \\(g\\ne e\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}^*gR\\Gamma_{C'}(\\Lambda_{n,C'})\n=\\sum_{y'\\in Y'}v_{y'}(g)\n=\\text{la somme des multiplicités des points fixes de l'application }g_{C'}:C'\\longrightarrow C',\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}^*gR\\Gamma_{C'}(\\Lambda_{n,C'})\n=\\operatorname{EP}(C')\\cdot1_{\\Lambda}\\quad\\text{pour }g=e,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>grâce au calcul explicite des \\(H^i(C',\\Lambda_{n,C'})\\), via (SGA 4 IX 4.7) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Künneth (SGA 4 XVII).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte donc la formule suivante pour \\(\\tau\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(5.2.2)\\qquad\n\\tau(g)=\n\\begin{cases}\n\\displaystyle\\sum_{\\substack{y'\\in Y'\\\\g(y')=y'}}(v_{y'}(g)-1)&amp;\\text{si }g\\ne e,\\\\[8pt]\n\\operatorname{EP}(C')-\\operatorname{card}(Y')&amp;\\text{si }g=e.\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comparant avec (5.2.1) on trouve facilement \\(\\tau=\\lambda_n^\\natural(\\sigma_2)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet si \\(g\\ne e\\) l'égalité entre \\(\\tau(g)\\) et \\(\\lambda_n^\\natural(\\sigma_2)\\) est immédiate (4.5.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(g=e\\) la formule à vérifier s'écrit :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{EP}(C')-\\operatorname{card}(Y')\n=N\\operatorname{EP}(C)-\\sum_{y\\in Y}\\sigma'_y(e),\n\\quad\\text{où }N=\\operatorname{card}(G),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est-à-dire (4.5.2) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{EP}(C')-N\\operatorname{EP}(C)\n=-\\deg(\\mathfrak D_{C'/C}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui n'est pas autre chose que la classique formule de Hurwitz.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-6",
+   "title": "6. Définition des termes locaux \\(\\varepsilon_x^\\Delta(F)\\)",
+   "blocks": [
+    {
+     "id": "X.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.6\">6. <u>Définition des termes locaux \\(\\varepsilon_x^\\Delta(F)\\)</u></h2>"
+    },
+    {
+     "id": "X.6.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.6.1\">6.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(C\\) une courbe algébrique connexe lisse sur le corps \\(k\\) algébriquement clos, \\(A\\) une \\(\\Lambda\\)-algèbre (\\(\\Lambda=\\mathbb Z/\\ell^\\nu\\mathbb Z\\), \\(\\ell\\) distinct de la caractéristique de \\(k\\)) et \\(\\Delta\\subset D^+(A)\\) une sous-catégorie triangulée de \\(D^+(A)\\) stable par facteurs directs. Soit \\(F\\) un complexe de faisceaux de \\(A\\)-modules sur \\(C\\) tel que les conditions suivantes soient remplies :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">i) Pour tout point géométrique \\(\\bar x\\in C(\\bar k)\\), on a \\(F_{\\bar x}\\in(\\Delta)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">ii) Il existe un ouvert non vide de \\(C\\) sur lequel \\(F\\) soit « localement constant », ou ce qui revient au même, il existe un ouvert non vide \\(U\\) de \\(C\\) et un revêtement galoisien connexe \\(C'\\xrightarrow p C\\) de \\(C\\), de groupe \\(G\\), tel que, si \\(F'=p^*(F)\\) est l'image inverse de \\(F\\) par \\(p\\), alors \\(F'|U'\\) est constant (\\(U'=p^{-1}(U)\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le faisceau \\(F|U\\) est donc défini par un complexe \\(M\\) de \\(A\\)-modules sur lequel \\(G\\) opère. Si on désigne par \\(\\eta\\) (resp. \\(\\eta'\\)) le point générique de \\(C\\) (resp. \\(C'\\)) et par \\(\\bar\\eta\\) (resp. \\(\\bar\\eta'\\)) un point géométrique sur \\(\\eta\\) (resp. \\(\\eta'\\)) on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np(\\eta')=\\eta,\n\\]\n\\[\n(6.1.1)\\qquad F_{\\bar\\eta}\\simeq F'_{\\bar\\eta'}=M.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme complexe de \\(A\\)-modules \\(M\\) est isomorphe à \\(F_{\\bar\\eta}\\), et grâce à la condition i) c'est un objet de \\(\\Delta\\). Donc (3.5) pour tout \\(x\\in C(\\bar k)\\), \\(\\operatorname{Hom}_{\\Lambda[G]}^\\bullet(\\widehat{\\operatorname{Sw}}_x^\\Lambda,M)\\) est un objet de \\(\\Delta\\), d'où un élément de \\(K(\\Delta)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En fait l'objet de \\(\\Delta\\) défini par \\(\\operatorname{Hom}_{\\Lambda[G]}^\\bullet(\\widehat{\\operatorname{Sw}}_x^\\Lambda,M)\\) ne dépend pas, à isomorphisme près, du revêtement galoisien \\(C'\\xrightarrow p C\\) qui trivialise \\(F|U\\). Pour le démontrer il suffit de comparer les éléments associés à deux revêtements \\(C'\\xrightarrow p C\\), \\(C''\\xrightarrow{p'}C'\\xrightarrow p C\\). Dans ce cas, si \\(G'\\) est le groupe de Galois du revêtement \\(C''\\xrightarrow{p''}C\\), alors \\(G\\) est un groupe quotient de \\(G'\\). Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi:\\mathbb Z_\\ell[G']\\longrightarrow\\mathbb Z_\\ell[G]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l'épimorphisme canonique associé. Les modules de Swan sont alors liés par la relation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Sw}_{G,x}\\simeq\n\\operatorname{Sw}_{G',x}\\otimes_{\\mathbb Z_\\ell[G']}\\mathbb Z_\\ell[G],\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui résulte immédiatement du fait que le caractère \\(a_{G,x}\\) est le caractère induit de \\(G'\\) à \\(G\\) ([3] VI Prop. 3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part on a un isomorphisme de complexes de \\(A[G']\\)-modules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF_{\\bar\\eta'}\\simeq[F_{\\bar\\eta''}]_{(\\varphi)}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte un isomorphisme canonique de complexes de \\(A\\)-modules entre \\(\\operatorname{Hom}_{\\Lambda[G]}^\\bullet(\\widehat{\\operatorname{Sw}}_{G,x}^\\Lambda,F_{\\bar\\eta'})\\) et \\(\\operatorname{Hom}_{\\Lambda[G']}^\\bullet(\\widehat{\\operatorname{Sw}}_{G',x}^\\Lambda,F_{\\bar\\eta''})\\) (formule d'adjonction).</p>"
+    },
+    {
+     "id": "X.6.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"X.6.2\">6.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons les notations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.2.1)\\qquad\n\\alpha_x^\\Delta(F)=\\operatorname{cl}_{K(\\Delta)}\\!\\left(\\operatorname{Hom}_{\\Lambda[G]}^\\bullet(\\widehat{\\operatorname{Sw}}_x^\\Lambda,F_{\\bar\\eta})\\right)\n\\]\n\\[\n(6.2.2)\\qquad\n\\varepsilon_x^\\Delta(F)=\\alpha_x^\\Delta(F)+\\left(\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\operatorname{cl}_{K(\\Delta)}(F_{\\bar x})\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Bien entendu dans la formule (6.2.1) \\(F_{\\bar\\eta}\\) est muni de la structure de \\(A[G]\\)-module grâce à l'isomorphisme (6.1.1). Notons que si \\(x\\in C(\\bar k)\\) est tel que \\(C'\\) soit modérément ramifié en \\(x\\), on aura (4.6) \\(\\operatorname{Sw}_x=0\\) donc \\(\\alpha_x(\\Delta)=0\\), donc dans ce cas on aura (en conformité avec Ogg-Chafarévitch) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.2.3)\\qquad\n\\varepsilon_x^\\Delta(F)=\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\operatorname{cl}_{K(\\Delta)}(F_{\\bar x}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que \\(\\varepsilon_x^\\Delta(F)=0\\) si \\(x\\notin Y=C-U\\), et par conséquent il existe seulement un nombre fini de \\(x\\) tel que \\(\\varepsilon_x^\\Delta(F)\\ne0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donnons maintenant des exemples de catégories \\(\\Delta\\) et de complexes de faisceaux \\(F\\) tels que les conditions énoncées plus haut soient vérifiées.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">a) Soient \\(\\Delta=D^b(A)_{\\mathrm{coh}}\\) (VIII 5) et \\(F\\) un complexe de faisceaux de \\(A\\)-modules constructible (SGA 4 XVII) et à cohomologie bornée. Dans ce cas \\(\\varepsilon_x^\\Delta(F)\\in K_\\bullet(A)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">b) On prend \\(\\Delta=D(A)_{\\mathrm{parf}}\\) (VIII 6) et \\(F\\) un complexe de faisceaux de \\(A\\)-modules constructible et de tor-dimension finie. Dans ce cas \\(\\varepsilon_x^\\Delta(F)\\in K^\\bullet(A)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">c) Soient \\(A\\), \\(B\\) deux \\(\\Lambda\\)-algèbres et \\(\\varphi:A\\longrightarrow B\\) un homomorphisme de \\(\\Lambda\\)-algèbres. On prend \\(\\Delta=D^b(B\\operatorname{ rel }A)_{\\mathrm{coh}}\\) (VIII 10) et \\(F\\) un complexe de faisceaux de \\(B\\)-modules, constructible comme faisceau de complexes de \\(A\\)-modules et à cohomologie bornée. On obtient \\(\\varepsilon_x^\\Delta(F)\\in K_\\bullet(B\\operatorname{ rel }A)\\). Évidemment on peut varier comme plus haut pour obtenir, par exemple, des éléments \\(\\varepsilon_x^\\Delta(F)\\in K^\\bullet(B\\operatorname{ rel }A)\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-7",
+   "title": "7. Formule d'Euler-Poincaré.",
+   "blocks": [
+    {
+     "id": "X.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.7\">7. <u>Formule d'Euler-Poincaré.</u></h2>"
+    },
+    {
+     "id": "X.7.1",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 7.1.",
+     "html": "<div class=\"thm theorem\" id=\"X.7.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 7.1.</u></span></div><div class=\"thm-body\"><p><u>Soient \\(C\\) une courbe algébrique connexe, lisse et propre sur le corps \\(k\\) algébriquement clos, \\(\\eta\\) le point générique de \\(C\\), \\(\\Delta\\subset D^+(A)\\) une sous-catégorie triangulée de \\(D^+(A)\\) stable par facteurs directs, \\(F\\) un complexe de faisceaux de \\(A\\)-modules tel que les conditions i), ii) de 7.1 soient remplies. Sous ces conditions on a \\(R\\Gamma_C(F)\\in\\operatorname{Ob}(\\Delta)\\), et la formule suivante (formule d'Euler-Poincaré) est vraie :</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.2)\\qquad \\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(F))=\\operatorname{EP}(C)\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\sum_{x\\in C(k)}\\varepsilon_x^\\Delta(F),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>où les \\(\\varepsilon_x^\\Delta(F)\\) sont définis dans 6.2 (formule 6.2.2).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de ce théorème sera faite en quelques étapes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Soit \\(\\Psi\\) un complexe borné à gauche de faisceaux de \\(\\Lambda[G]\\)-modules sur \\(C\\). On a un isomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.3)\\qquad R\\Gamma^G(R\\Gamma_C(\\Psi))\\simeq R\\Gamma_C(R\\underline\\Gamma^G(\\Psi)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\underline\\Gamma^G\\) est le foncteur : « sous faisceau des sections \\(G\\)-invariantes ». En effet \\(\\Gamma_C\\) transforme un faisceau injectif de \\(\\Lambda[G]\\)-modules dans un \\(\\Lambda[G]\\)-module injectif et \\(\\underline\\Gamma^G\\) transforme un faisceau injectif de \\(\\Lambda[G]\\)-modules dans un faisceau injectif de \\(\\Lambda\\)-modules (utiliser pour cela par exemple des adjoints évidents de \\(\\Gamma_C\\) et \\(\\underline\\Gamma^G\\)), et d'autre part on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\Gamma^G\\circ\\Gamma_C=\\Gamma_C\\circ\\underline\\Gamma^G.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prenant les foncteurs dérivés des deux membres et appliquant ([5] prop. 3.1), on obtient donc (7.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Soit \\(\\Phi\\) un complexe limité à gauche de faisceaux de \\(\\Lambda\\)-modules sur \\(C\\), nul en dehors de \\(U\\). On a un isomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.4)\\qquad \\Phi\\simeq R\\underline\\Gamma^G(p_*(\\Phi')),\\quad\\text{où }\\Phi'=p^*(\\Phi).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons d'abord que les foncteurs \\(p^*\\), \\(\\underline\\Gamma^G\\circ p_*\\) établissent des équivalences quasi-inverses l'une de l'autre de la catégorie des faisceaux de \\(\\Lambda\\)-modules sur \\(C'\\) sur lesquels \\(G\\) opère et nuls en dehors de \\(U'=p^{-1}(U)\\), et de la catégorie des faisceaux de \\(\\Lambda\\)-modules sur \\(C\\) nuls en dehors de \\(U\\). On aura donc l'isomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\Phi\\xrightarrow{\\sim}R((\\underline\\Gamma^G\\circ p_*)\\circ p^*)(\\Phi).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part on peut appliquer de nouveau ([5] Prop 3.1) qui nous donne, compte tenu que \\(Rp^*=p^*\\), \\(Rp_*=p_*\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Phi\\xrightarrow{\\sim}R(\\underline\\Gamma^G\\circ p_*)(p^*(\\Phi))\\simeq(R\\underline\\Gamma^G)(p_*p^*(\\Phi)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui est l'isomorphisme voulu.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) Soit \\(\\Phi\\) un complexe de faisceaux comme dans b). On a l'isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.5)\\qquad R\\Gamma_C(\\Phi)\\simeq(R\\Gamma^G)(R\\Gamma_{C'}(\\Phi')),\\quad\\text{où }\\Phi'=p^*(\\Phi).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(R\\Gamma^G)(R\\Gamma_{C'}(\\Phi'))\\simeq(R\\Gamma^G)(R\\Gamma_C(p_*(\\Phi')))\\simeq R\\Gamma_C(R\\underline\\Gamma^G(p_*(\\Phi')))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>grâce à (7.3) et (7.5) en résulte grâce à l'isomorphisme (7.4).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d) Désignons par \\(i':U'\\longrightarrow C'\\), \\(i:U\\longrightarrow C\\) les inclusions canoniques et posons :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\Phi=F_{U,C}=i_!(F|U).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour calculer \\(R\\Gamma_C(\\Phi)\\) on peut appliquer la formule (7.5). D'autre part, avec les notations de 7.1, \\(\\Phi'\\simeq\\Lambda_{U',C'}\\mathbin{\\overset L\\otimes}_\\Lambda M\\) et la formule de Kunneth (SGA 4 XVII) nous donnent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.6)\\qquad R\\Gamma_{C'}(\\Phi')\\simeq R\\Gamma_{C'}(\\Lambda_{U',C'}\\mathbin{\\overset L\\otimes}_\\Lambda M)\\simeq R\\Gamma_{C'}(\\Lambda_{U',C'})\\mathbin{\\overset L\\otimes}_\\Lambda M.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce dernier isomorphisme est en fait un isomorphisme entre les <u>objets de \\(D(\\Lambda[G])\\)</u> définis par les deux membres. En combinant (7.6), (7.5) et la formule (3.9.1), qui est applicable grâce à 2.1, on obtient :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.7)\\qquad R\\Gamma_C(F_{U,C})\\simeq R\\Gamma^G\\!\\left(R\\Gamma_{C'}(\\Lambda_{U',C'})\\mathbin{\\overset L\\otimes}_\\Lambda M\\right)\\simeq R\\operatorname{Hom}_{\\Lambda[G]}\\!\\left(R\\Gamma_{C'}(\\Lambda_{U',C'})^\\vee,M\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc compte tenu de \\(M\\simeq F_{\\bar\\eta}\\in\\operatorname{Ob}(\\Delta)\\) (condition (i)) et de (3.6), on trouve :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\Gamma_C(F_{U,C})\\in\\operatorname{Ob}(\\Delta).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part on a le triangle distingué (où \\(Y=C-U\\)) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.8)\\qquad\\xymatrix{&amp;R\\Gamma_Y(F|Y)\\ar[dl]&amp;\\\\R\\Gamma_C(F_{U,C})\\ar[rr]&amp;&amp;R\\Gamma_C(F)\\ar[ul]}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où évidemment \\(R\\Gamma_Y(F)=\\bigoplus_{y\\in Y}F_{\\bar y}\\in\\operatorname{Ob}(\\Delta)\\), car \\(F_{\\bar y}\\in\\operatorname{Ob}(\\Delta)\\) (condition (i)). Il en résulte donc que \\(R\\Gamma_C(F)\\in\\operatorname{Ob}(\\Delta)\\), c'est-à-dire la première assertion du théorème. Le triangle distingué (7.8) nous donne de plus la relation :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(F))=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(F_{U,C}))+\\sum_{y\\in Y}\\operatorname{cl}_{K(\\Delta)}(F_{\\bar y}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et en utilisant l'isomorphisme 7.7 :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(F))=\\operatorname{cl}_{K(\\Delta)}\\!\\left(R\\operatorname{Hom}_{\\Lambda[G]}(R\\Gamma_{C'}(\\Lambda_{U',C'})^\\vee,F_{\\bar\\eta})\\right)+\\sum_{y\\in Y}\\operatorname{cl}_{K(\\Delta)}(F_{\\bar y}).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour obtenir la formule d'Euler-Poincaré il suffit maintenant d'utiliser la formule de Weil (5.2). En effet d'abord 4.4, (5.2) et 3.6 (dans le cas particulier \\(B=\\Lambda[G]\\)) nous donnent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{cl}_{K^\\bullet(\\Lambda[G])}(R\\Gamma_{C'}(\\Lambda_{U',C'}))=\\operatorname{cl}_{K^\\bullet(\\Lambda[G])}(R\\Gamma_{C'}(\\Lambda_{U',C'})^\\vee).\n\\]\n\\[\n\\begin{aligned}\n\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(F))\n={}&amp;\\operatorname{hom}\\!\\left(\\operatorname{cl}_{K^\\bullet(\\Lambda[G])}(R\\Gamma_{C'}(\\Lambda_{U',C'})),\\operatorname{cl}_{K(D(\\Lambda[G])_\\Delta)}(F_{\\bar\\eta})\\right)+\\sum_{y\\in Y}\\operatorname{cl}_{K(\\Delta)}(F_{\\bar y})\\\\\n={}&amp;\\sum_{y\\in Y}\\operatorname{cl}_{K(\\Delta)}(F_{\\bar y})+\\operatorname{hom}\\!\\left(\\operatorname{EP}(C)\\operatorname{cl}_{K^\\bullet(\\Lambda[G])}(\\Lambda[G])-\\sum_{y\\in Y}\\left(\\widehat{\\operatorname{Sw}}_y^\\Lambda+\\operatorname{cl}_{K^\\bullet(\\Lambda[G])}(\\Lambda[G])\\right),\\operatorname{cl}_{K(D(\\Lambda[G])_\\Delta)}(F_{\\bar\\eta})\\right)\\\\\n={}&amp;\\sum_{y\\in Y}\\operatorname{cl}_{K(\\Delta)}(F_{\\bar y})+\\operatorname{EP}(C)\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\sum_{y\\in Y}\\left(\\alpha_y^\\Delta(F)+\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})\\right)\\\\\n={}&amp;\\operatorname{EP}(C)\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\sum_{y\\in Y}\\varepsilon_y^\\Delta(F).\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu que \\(\\varepsilon_x^\\Delta(F)=0\\) pour \\(x\\in U\\), ceci n'est autre que la formule (7.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour un complexe de faisceaux \\(F\\), satisfaisant les conditions de 7.1, on introduira la notation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{EP}_\\Delta(C,F)=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(F)).\\]\n\n</p>"
+    },
+    {
+     "id": "X.7.9",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 7.9.",
+     "html": "<div class=\"thm corollary\" id=\"X.7.9\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 7.9.</u></span></div><div class=\"thm-body\">\n<p><u>Si \\(F\\), \\(F'\\) sont des complexes de faisceaux satisfaisant aux conditions de 7.1 et s'ils sont localement isomorphes (pour la topologie étale) comme complexes de \\(A\\)-modules, on a :</u></p>\n\\[(7.10)\\qquad \\operatorname{EP}_\\Delta(C,F)=\\operatorname{EP}_\\Delta(C,F').\\]\n<p><u>En particulier, si \\(F\\) est localement constant de valeur \\(M\\), on a :</u></p>\n\\[(7.11)\\qquad \\operatorname{EP}_\\Delta(C,F)=\\operatorname{EP}(C)\\operatorname{cl}_{K(\\Delta)}(M).\\]\n</div></div>"
+    },
+    {
+     "id": "X.7.12",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 7.12.",
+     "html": "<div class=\"thm corollary\" id=\"X.7.12\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 7.12.</u></span></div><div class=\"thm-body\">\n<p><u>Soient \\(C\\) une courbe algébrique connexe lisse, propre sur \\(k\\), \\(V\\) un ouvert non vide de \\(C\\), \\(\\Delta\\) une sous-catégorie de \\(D^+(A)\\) comme dans 7.1, et \\(F\\) un complexe de faisceaux de \\(A\\)-modules sur \\(V\\) tel que sa restriction à un sous-ouvert non vide convenable de \\(V\\) soit trivialisée par un revêtement galoisien de \\(V\\). Supposons de plus que \\(F_{\\bar x}\\in\\operatorname{Ob}(\\Delta)\\) quelque soit \\(x\\in V\\). Sous ces conditions on a :</u></p>\n\\[(*)\\qquad R\\Gamma_!(V,F),\\ R\\Gamma(V,F)\\in\\operatorname{Ob}(\\Delta),\\]\n\\[(**)\\qquad \\operatorname{cl}_{K(\\Delta)}(R\\Gamma_!(V,F))=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma(V,F)).\\]\n<p><u>Posons</u> \\(\\operatorname{EP}_\\Delta(V,F)=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_V(F))\\) <u>et</u></p>\n\\[\n\\operatorname{EP}(V)=\\operatorname{EP}_{D(\\mathbb F_\\ell)_{\\mathrm{coh}}}(V,\\mathbb F_\\ell)=\\operatorname{EP}(C)-\\operatorname{card}(Z),\n\\]\n<p><u>où \\(Z=C-V\\) et où \\(\\mathbb F_\\ell\\) est le faisceau sur \\(C\\) défini en dimension zéro par le faisceau constant associé à \\(\\mathbb F_\\ell=\\mathbb Z/\\ell\\mathbb Z\\). On a alors la formule :</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.13)\\qquad \\operatorname{EP}_\\Delta(V,F)=\\operatorname{EP}(V)\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\sum_{x\\in V(k)}\\varepsilon_x^\\Delta(F)-\\sum_{x\\in Z}\\alpha_x^\\Delta(F),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\varepsilon_x^\\Delta\\) et \\(\\alpha_x^\\Delta\\) sont définis par (6.2.1), (6.2.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons le lemme suivant :</p>"
+    },
+    {
+     "id": "X.7.14",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 7.14.",
+     "html": "<div class=\"thm lemma\" id=\"X.7.14\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 7.14.</u></span></div><div class=\"thm-body\">\n<p><u>Soient \\(K\\) le corps des fractions d'un anneau de valuation discrète strictement local \\(R\\), \\(W=\\operatorname{Spec}K\\), \\(A\\) un anneau noethérien qui est annulé par un entier \\(n\\) premier à la caractéristique résiduelle \\(p\\) de \\(R\\), et \\(F\\) un complexe de faisceaux de \\(A\\)-modules sur \\(W\\) trivialisé par une extension finie de \\(K\\). Si \\(\\Delta\\) est une sous-catégorie triangulée de \\(D^+(A)\\) stable par facteurs directs et si \\(F_{\\bar\\eta}\\in\\operatorname{Ob}(\\Delta)\\) (\\(\\bar\\eta\\) le point générique de \\(S\\)) alors \\(R\\Gamma_W(F)\\in\\operatorname{Ob}(\\Delta)\\) et \\(\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_W(F))=0\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration de 7.14.</u> Soit \\(\\pi\\) le groupe fondamental de \\(W\\). Alors \\(F\\) correspond à un complexe de \\(A\\)-modules \\(M^\\bullet\\) à groupe \\(\\pi\\) d'opérateurs. Le complexe de \\(A\\)-modules sous-jacent à \\(M^\\bullet\\) est isomorphe à \\(F_{\\bar\\eta}\\) et par conséquent il appartient à \\(\\operatorname{Ob}(\\Delta)\\). Introduisons le groupe quotient \\(\\bar\\pi\\) de \\(\\pi\\) par son unique \\(p\\)-sous-groupe de Sylow \\(P\\) [4, II 33], c'est à dire la limite projective de groupes quotients discrets de \\(\\pi\\) qui sont d'ordre premier à \\(p\\), où \\(p\\) est l'exposant caractéristique du corps résiduel de \\(R\\). (Si \\(p=1\\), on pose \\(\\bar\\pi=\\pi\\).) On a donc la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[1\\longrightarrow P\\longrightarrow\\pi\\longrightarrow\\bar\\pi\\longrightarrow0,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on obtient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R\\Gamma_W(F)\\simeq R\\Gamma^\\pi(M^\\bullet)\\simeq R\\Gamma^{\\bar\\pi}(R\\Gamma^P(M^\\bullet))\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(«isomorphisme de Hochschild-Serre»). Or \\(P\\) opère sur \\(M^\\bullet\\) via un groupe quotient fini, qui est donc un \\(p\\)-groupe donc d'ordre premier à \\(n\\). Donc on a \\(R\\Gamma^P(M^\\bullet)\\simeq\\Gamma^P(M^\\bullet)\\), et \\(\\Gamma^P(M^\\bullet)\\) est un facteur direct de \\(M^\\bullet\\), et appartient donc à \\(\\operatorname{Ob}(\\Delta)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part \\(\\bar\\pi=\\prod_{\\ell\\ne p}\\mathbb Z_\\ell\\) ([4], II 33). Nous sommes donc ramenés à démontrer que si \\(M^\\bullet\\in\\operatorname{Ob}(\\Delta)\\), alors \\(R\\Gamma^{\\bar\\pi}(M^\\bullet)\\in\\operatorname{Ob}(\\Delta)\\) et \\(\\operatorname{cl}_{K(\\Delta)}(R\\Gamma^{\\bar\\pi}(M^\\bullet))=0\\). Soit pour cela \\(f\\) un générateur topologique de \\(\\bar\\pi\\). Nous pouvons supposer que les composantes \\(M^i\\) de \\(M\\) sont des \\(\\bar\\pi\\)-modules tels que \\(H^j(\\bar\\pi,M^i)=0\\) si \\(j\\geq1\\). Il existe alors un triangle distingué :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.15)\\qquad \\xymatrix{M^\\bullet\\ar[dr]^{1-f}&amp;R\\Gamma^{\\bar\\pi}(M^\\bullet)\\ar[l]\\ar[d]\\\\&amp;M^\\bullet.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet d'une part il est clair que \\(R\\Gamma^{\\bar\\pi}=\\operatorname{Ker}(1-f)\\). D'autre part \\(1-f:M^\\bullet\\longrightarrow M^\\bullet\\) est surjectif. En effet</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^1(\\bar\\pi,M)=M^\\bullet/(1-f)M^\\bullet,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(voir pour ce calcul [4] pp. 197) dans un cas sensiblement analogue) donc il en résulte \\(M^\\bullet=(1-f)M^\\bullet\\). Le triangle (7.15) nous donne en même temps \\(R\\Gamma^{\\bar\\pi}(M^\\bullet)\\in\\operatorname{Ob}(\\Delta)\\) et \\(\\operatorname{cl}_{K(\\Delta)}(R\\Gamma^{\\bar\\pi}(M^\\bullet))=0\\), ce qui prouve 7.14.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration de 7.12.</u> Le fait que \\(R\\Gamma_!V(F)\\in\\operatorname{Ob}(\\Delta)\\) résulte immédiatement de 7.1 appliqué au complexe \\(i_!(F)\\), où \\(i:V\\longrightarrow C\\) ; en effet on a \\(R\\Gamma_!V(F)=R\\Gamma_C(i_!F)\\). Pour prouver que \\(R\\Gamma_V(F)\\in\\operatorname{Ob}(\\Delta)\\), on considère le triangle distingué :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{&amp;Q^\\bullet\\ar[dl]\\\\Ri_!(F)\\ar[rr]&amp;&amp;Ri_*(F)\\ar[ul]},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(Q^\\bullet\\) est concentré sur \\(Z=C-V\\), d'où en appliquant \\(R\\Gamma_C\\) le triangle distingué :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(7.16)\\qquad \\xymatrix{&amp;R\\Gamma_Z(Q^\\bullet|Z)\\ar[dl]\\\\R\\Gamma_!V(F)\\ar[rr]&amp;&amp;R\\Gamma_V(F)\\ar[ul]}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(R\\Gamma_!V(F)\\in\\operatorname{Ob}(\\Delta)\\), il en résulte que \\(R\\Gamma_V(F)\\in\\operatorname{Ob}(\\Delta)\\) si et seulement si \\(R\\Gamma_Z(Q^\\bullet|Z)\\in\\operatorname{Ob}(\\Delta)\\), c'est-à-dire \\((Ri_*(F))_x\\in\\operatorname{Ob}(\\Delta)\\) pour tout \\(x\\in Z\\). Rappelons que pour calculer \\((Ri_*(F))_x\\) on considère le carré cartésien</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\\widetilde V\\ar[r]^j\\ar[d]_u&amp;C_x\\ar[d]\\\\V\\ar[r]&amp;C}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(C_x\\) est le schéma localisé strict correspondant au point géométrique \\(x\\) ; on a \\((Ri_*(F))_x\\simeq R\\Gamma_{\\widetilde V}(u^*F)\\), en vertu de 7.14, et on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc \\((Ri_*(F))_x\\in\\operatorname{Ob}(\\Delta)\\) et \\(\\operatorname{cl}_{K(\\Delta)}(Ri_*(F))_x=0\\). Il en résulte que \\(\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_Z(Q^\\bullet|Z))=0\\) et le triangle distingué (7.16) nous donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_!V(F))=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_V(F)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin pour établir (7.13) il suffit d'utiliser la formule d'Euler-Poincaré (7.2) pour le complexe de faisceaux \\(i_!(F)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{EP}_\\Delta(V,F)=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_V(F))=\\operatorname{cl}_{K(\\Delta)}(R\\Gamma_C(i_!F))=\\operatorname{EP}(C)\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta})-\\sum_{x\\in C(k)}\\varepsilon_x^\\Delta(i_!(F)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\sum_{x\\in C(k)}\\varepsilon_x^\\Delta(i_!(F))=\\sum_{x\\in V(k)}\\varepsilon_x^\\Delta(F)+\\sum_{x\\in Z}\\varepsilon_x^\\Delta(F).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais pour \\(x\\in Z\\) on a \\((i_!(F))_x=0\\) et par conséquent pour un tel \\(x\\) on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varepsilon_x^\\Delta(i_!(F))=\\alpha_x^\\Delta(F)+\\operatorname{cl}_{K(\\Delta)}(F_{\\bar\\eta}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où la formule (7.13).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "X-references",
+   "title": "Références",
+   "blocks": [
+    {
+     "id": "X.references",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"X.references\"><u>Références</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] M. Raynaud — Caractéristique d'Euler-Poincaré d'un faisceau et cohomologie des variétés abéliennes, Séminaire Bourbaki 1965, n° 286.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] A. Grothendieck — Sur quelques points d'algèbre homologique, Toh. Math. Journal, vol. 9 (1957), p. 119–221, (cité [T]).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] Serre, J.-P. — Corps locaux, Act. Sci. Ind, 1296 (1962), Hermann Paris.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] Serre, J.-P. — Cohomologie Galoisienne, Lecture Notes in Mathematics 5, 1964 (Springer).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] Verdier, J.-L. — Catégories dérivées, I H E S 1963 (publié dans SGA 4<sup>1/2</sup>).</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. GROTHENDIECK (Rédigé par I. BUCUR)"
+}

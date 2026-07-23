@@ -1,0 +1,1219 @@
+{
+ "chapter_id": "XIX",
+ "title": "COHOMOLOGIE DES PRÉSCHÉMAS EXCELLENTS D'ÉGALES CARACTÉRISTIQUES",
+ "number": "XIX",
+ "pages": [
+  {
+   "id": "XIX",
+   "title": "COHOMOLOGIE DES PRÉSCHÉMAS EXCELLENTS D'ÉGALES CARACTÉRISTIQUES",
+   "blocks": [
+    {
+     "id": "XIX",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XIX\">EXPOSÉ XIX<br>COHOMOLOGIE DES PRÉSCHÉMAS EXCELLENTS D'ÉGALES CARACTÉRISTIQUES<span class=\"author\">par M. Artin</span></h1>"
+    },
+    {
+     "id": "XIX.sommaire",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.sommaire\">Sommaire</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1. Pureté pour l'anneau \\(k[[x_1, \\ldots, x_n]]\\).<br>\n2. Le cas d'un anneau strictement local.<br>\n3. Pureté.<br>\n4. Acyclicité locale d'un morphisme régulier.<br>\n5. Théorème de finitude.<br>\n6. Dimension cohomologique des morphismes affines.<br>\n7. Morphismes affines – fin de la démonstration.<br></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans cet exposé on développe la théorie de la cohomologie étale pour les préschémas excellents (EGA IV 7.8.1) d'égales caractéristiques, en admettant le théorème de résolution des singularités pour de tels préschémas, sous la forme suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X = \\operatorname{Spec} A\\) un schéma local excellent d'égales caractéristiques, et soit \\(U \\subset X\\) un ouvert régulier. Il existe un morphisme propre et birationnel \\(f : X' \\to X\\) et une immersion ouverte \\(U \\to X'\\) au-dessus de \\(X\\) tel que \\(X'\\) soit régulier et que \\(Y = X - U\\) soit partout de codimension \\(1\\), à intersections transversales.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les démonstrations sont donc valables, \"pour l'instant\", seulement en caractéristique zéro [4]. On pourrait aussi en déduire des résultats pour les préschémas de caractéristique \\(p &gt; 0\\) dans les basses dimensions [1].</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sous l'hypothèse de résolution, on obtiendra des résultats plus ou moins satisfaisants pour les préschémas d'égales caractéristiques et pour les coefficients premiers à la caractéristique (cf. 3.2, 4.1, 5.1, 6.1). Par contre, on ne connaît presque rien sur la cohomologie des préschémas généraux d'inégales caractéristiques, même en dimension 2, où on dispose de la résolution [2]. Par exemple, on ne connaît le théorème de pureté 2.1 pour aucun anneau complet d'inégales caractéristiques de dimension \\(&gt; 1\\). Ce résultat, pour les anneaux de séries formelles \\(k[[x_1, \\ldots, x_n]]\\) (1.2), est un des outils principaux dans la théorie. Notons d'ailleurs que pour la démonstration de 1.2, on ne se sert pas du théorème de résolution. Ce théorème est donc démontré en caractéristique quelconque.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On va utiliser souvent sans mention explicite les propriétés des schémas excellents qui sont développés dans EGA IV 7.8, tels que la stabilité par rapport aux extensions de type fini (EGA IV 7.8.3 (ii)) et par rapport aux localisations strictes. Ce dernier fait résulte de la résolution et de EGA IV 7.9.5.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-1",
+   "title": "1. Pureté pour l'anneau \\(k[[x_1, \\ldots, x_n]]\\).",
+   "blocks": [
+    {
+     "id": "XIX.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.1\">1. Pureté pour l'anneau \\(k[[x_1, \\ldots, x_n]]\\).</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons le corollaire suivant de XVI 3.7 :</p>"
+    },
+    {
+     "id": "XIX.1.1",
+     "type": "theorem",
+     "label": "1.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau strictement local, et notons \\(A\\{x\\}\\) le localisé strict de \\(A[x]\\) en l'idéal premier engendré par \\(\\operatorname{rad} A\\) et \\(x\\). Soit \\(U = \\operatorname{Spec} A\\{x\\}[1/x]\\). Alors pour \\(n\\) premier à la caractéristique résiduelle de \\(A\\), on a\n  \\[H^q(U, \\mu_n) \\simeq \\begin{cases} \\mu_n(A) &amp; \\text{si} \\quad q = 0 \\\\ \\mathbb{Z}/n &amp; \\text{si} \\quad q = 1 \\\\ 0 &amp; \\text{si} \\quad q &gt; 1. \\end{cases}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, soit \\(X = \\operatorname{Spec} A[x]\\), et \\(Y = V(x)\\) le lieu des zéros de \\(x\\) dans \\(X\\). Alors \\((Y, X)\\) est couple lisse (XVI 3.1) au-dessus de \\(\\operatorname{Spec} A\\). D'après (V 4, VIII 5), \\(H^q(U, \\mu_n)\\) s'identifie à la fibre du faisceau \\(\\underline{H}^{q+1}_Y(X, \\mu_n)\\) en un point géométrique au-dessus du point \\((\\operatorname{rad} A, x)\\) de \\(X\\), et le corollaire résulte donc immédiatement de (XVI 3.7). Notons que \\(\\mu_n\\), \\(\\mathbb{Z}/n\\) sont tous les deux des groupes cycliques d'ordre \\(n\\). On les a mis ici pour donner les formules canoniques (cf. 3.4).</p>"
+    },
+    {
+     "id": "XIX.1.2",
+     "type": "theorem",
+     "label": "1.2",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(k\\) un corps séparablement clos, et \\(U = \\operatorname{Spec} k[[x_1, \\ldots, x_r]][1/x_r]\\). Alors pour \\(n\\) premier à la caractéristique de \\(k\\), on a\n  \\[H^q(U, \\mu_n) = \\begin{cases} \\mu_n(A) &amp; \\text{si} \\quad q = 0 \\\\ \\mathbb{Z}/n &amp; \\text{si} \\quad q = 1 \\\\ 0 &amp; \\text{si} \\quad q &gt; 1. \\end{cases}\\]</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.1.2.rem",
+     "type": "remark",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm remark\" id=\"XIX.1.2.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>La démonstration vaut également pour l'anneau de séries convergentes, dans le cas \\(k = \\mathbb{C}\\). De plus, on évite facilement l'hypothèse que \\(k\\) soit séparablement clos en faisant l'énoncé avec un peu plus de soin. Mais pour établir le théorème de pureté générale 3.2 (sous l'hypothèse de résolution des singularités, bien entendu), nous avons besoin du résultat seulement dans le cas \\(k\\) séparablement clos, et ces autres assertions sont des corollaires de ce théorème 3.2.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour les dimensions 0, 1, on peut démontrer le résultat pour chaque anneau régulier strictement local :</p>"
+    },
+    {
+     "id": "XIX.1.3",
+     "type": "theorem",
+     "label": "1.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau régulier strictement local et \\(x \\in \\operatorname{rad} A\\) un paramètre local. Soit \\(U = \\operatorname{Spec} A[1/x]\\). Alors \\(H^0(U, \\mu_n) = \\mu_n(A)\\), et on a des isomorphismes canoniques\n  \\[\\mathbb{Z}/n \\;\\simeq\\; H^0(U, \\mathbb{G}_m)/(H^0(U, \\mathbb{G}_m))^n \\;\\simeq\\; H^1(U, \\mu_n),\\]\n  où le générateur de \\(\\mathbb{Z}/n\\) est le \"résidu\" de \\(x \\in H^0(U, \\mathbb{G}_m)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Pour \\(q = 0\\), l'assertion est que \\(U\\) soit connexe et non-vide. C'est vrai. Pour \\(q = 1\\), appliquons la suite exacte de Kummer (IX 3.7). On a \\(\\operatorname{Pic} U = 0\\) parce que \\(A\\) est régulier et factoriel, et que \\(U\\) est un ouvert de \\(X = \\operatorname{Spec} A\\). Il s'ensuit qu'on a la suite exacte\n\\[H^0(U, \\mathbb{G}_m) \\xrightarrow{\\ n\\ } H^0(U, \\mathbb{G}_m) \\longrightarrow H^1(U, \\mu_n) \\longrightarrow 0,\\]\net il reste à démontrer que \\(H^0(U, \\mathbb{G}_m)/(H^0(U, \\mathbb{G}_m))^n\\) est isomorphe à \\(\\mathbb{Z}/n\\) et engendré par le résidu de \\(x\\). Or on a une suite exacte évidente\n\\[\\xymatrix@C=2.5em{ 0 \\ar[r] &amp; H^0(X, \\mathbb{G}_m) \\ar[r] \\ar@{=}[d] &amp; H^0(U, \\mathbb{G}_m) \\ar[r] \\ar@{=}[d] &amp; \\mathbb{Z} \\ar[r] &amp; 0 \\\\ &amp; A^* &amp; A[1/x]^* &amp; &amp; }\\]\noù l'image d'une section \\(a \\in H^0(U, \\mathbb{G}_m)\\) dans \\(\\mathbb{Z}\\) est l'ordre du zéro de \\(a\\) de long de \\(\\{x = 0\\}\\). Le groupe \\(A^*\\) est divisible par \\(n\\), parce que \\(A\\) est strictement local et que \\(n\\) est premier à la caractéristique résiduelle. En effet, si \\(u \\in H^0(X, \\mathbb{G}_m)\\), l'équation \\(Y^n - u = 0\\) définit une extension finie étale de \\(A\\), qui est donc complètement décomposée. Il s'ensuit que \\(H^1(U, \\mu_n) \\simeq \\mathbb{Z}/n\\), d'où le lemme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 1.2. Il reste à traiter le cas \\(q &gt; 1\\). Rappelons la terminologie de (V, appendice). On a\n\\[H^q(U, \\mu_n) = \\varinjlim_{\\mathbb{U}} H^q(\\mathbb{U}, \\mu_n)\\]\noù \\(\\mathbb{U} = \\left\\{ U_0 \\mathrel{\\substack{\\longleftarrow \\\\ \\longleftarrow}} U_1 \\mathrel{\\substack{\\longleftarrow \\\\ \\longleftarrow \\\\ \\longleftarrow}} \\cdots \\right\\}\\) parcourt la catégorie (filtrante, à homotopie près) des hyper-recouvrements de \\(U\\). Soit \\(\\mathbb{U}\\) un tel hyper-recouvrement, et prenons des \\(U_i\\) séparés et de type fini. Puisqu'on veut démontrer que \\(H^q(U, \\mu_n) = 0\\), il suffit de trouver un hyper-recouvrement \\(\\mathbb{V}\\) et un morphisme \\(\\mathbb{V} \\to \\mathbb{U}\\) tel que le morphisme induit\n\\[H^q(\\mathbb{U}, \\mu_n) \\longrightarrow H^q(\\mathbb{V}, \\mu_n)\\]\nsoit le morphisme nul.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\{W_1, \\ldots, W_m\\}\\) l'ensemble des composantes connexes de tous les \\(U_i\\) pour \\(i \\leqslant q+1\\), et soit \\(B_j\\) l'anneau normalisé de \\(A = k[[x_1, \\ldots, x_r]]\\) dans le corps \\(R(W_j)\\) des fonctions rationnelles sur \\(W_j\\). Alors, puisque \\(W_j \\to U\\) est étale, le schéma \\(W_j\\) est un ouvert de \\(\\operatorname{Spec} B_j\\), disons l'ouvert complémentaire à \\(\\operatorname{Spec} C_j\\), où \\(C_j\\) est l'anneau réduit quotient de \\(B_j\\) convenable.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Choisissons en plus un élément \\(b_j\\) de \\(B_j\\) tel que \\(b_j\\) engendre l'extension séparable \\(R(W_j)\\) de \\(k((x_1, \\ldots, x_r))\\). Soit \\(f_j(Y) \\in A[Y]\\) le polynôme unitaire irréductible de \\(b_j\\) au-dessus de \\(A\\), de sorte que \\(B_j\\) soit isomorphe au normalisé de l'anneau \\(A[Y]/(f_j)\\). Soit enfin \\(d_j \\in A\\) le discriminant de \\(f_j(Y)\\), qui est un élément non-nul de \\(A\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or il est permis de remplacer les \\(x_i\\) pour \\(i &lt; r\\) par d'autres éléments de \\(A\\), la seule condition étant que \\(\\{x_1, \\ldots, x_r\\}\\) doivent former un système de paramètres de \\(A\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est facile de voir qu'en changeant au besoin ces éléments, on peut supposer que les hypothèses suivantes sont satisfaites :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(1.4)</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> Pour chaque \\(j\\) tel que \\(d_j\\) ne soit pas une unité, \\(x_1, \\ldots, x_{r-1}, d_j\\) engendrent un idéal primaire pour \\(\\operatorname{rad} A\\).</li>\n<li><span class=\"item-label\">(ii)</span> Pour chaque \\(j\\), les images des \\(x_1, \\ldots, x_{r-1}\\) dans \\(C_j\\) engendrent un idéal primaire pour \\(\\operatorname{rad} C_j\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Alors on a le lemme suivant :</p>"
+    },
+    {
+     "id": "XIX.1.5",
+     "type": "theorem",
+     "label": "1.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A^0 = k[[x_1, \\ldots, x_{r-1}]]\\{x_r\\}\\) le hensélisé de \\(k[[x_1, \\ldots, x_{r-1}]][x_r]\\) en le point \\((x_1, \\ldots, x_r)\\), soient \\(X^0 = \\operatorname{Spec} A^0\\) et \\(U^0 = \\operatorname{Spec} A^0[1/x_r]\\). Sous les conditions 1.4 ci-dessus, il existe un hyper-recouvrement \\(\\mathbb{U}^0\\) de \\(U^0\\) (d'ordre \\(q+1\\)) et un isomorphisme \\(\\mathbb{U}^0 \\times_{X^0} X \\simeq \\mathbb{U}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Admettons le lemme. Or l'anneau \\(A^0\\) est excellent (EGA IV 7.8.3 (ii), 7.9.5), et par conséquent, les composantes connexes des \\(U^0_i\\) et des \\(U_i\\) sont en correspondance biunivoque (EGA IV 7.8.3 (vii)). L'isomorphisme \\(\\mathbb{U}^0 \\times_{X^0} X \\simeq \\mathbb{U}\\) donne donc un isomorphisme\n\\[H^q(\\mathbb{U}^0, \\mu_n) \\simeq H^q(\\mathbb{U}, \\mu_n).\\]\nPuisque \\(k\\) est séparablement clos, \\(A^0\\) est un anneau strictement local, et on peut appliquer 1.1 à l'anneau \\(A^0\\). Il s'ensuit que \\(H^q(U^0, \\mu_n) = 0\\). Mais\n\\[H^q(U^0, \\mu_n) \\simeq \\varinjlim_{\\mathbb{U}^0} H^q(\\mathbb{U}^0, \\mu_n),\\]\noù \\(\\mathbb{U}^0\\) parcourt la catégorie des hyper-recouvrements de \\(U^0\\) d'ordre \\(q+1\\), et \\(H^q(\\mathbb{U}^0, \\mu_n)\\) est un groupe fini. Par conséquent, il existe un morphisme de hyper-recouvrements \\(\\mathbb{V}^0 \\to \\mathbb{U}^0\\) tel que le morphisme induit\n\\[H^q(\\mathbb{U}^0, \\mu_n) \\longrightarrow H^q(\\mathbb{V}^0, \\mu_n)\\]\nsoit le morphisme nul. Posons \\(\\mathbb{V} = \\mathbb{V}^0 \\times_{X^0} X\\). Alors \\(H^q(\\mathbb{V}^0, \\mu_n) \\simeq H^q(\\mathbb{V}, \\mu_n)\\) (même raisonnement que pour \\(\\mathbb{U}^0\\)), donc\n\\[H^q(\\mathbb{U}, \\mu_n) \\longrightarrow H^q(\\mathbb{V}, \\mu_n)\\]\nest également le morphisme nul, cqfd.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 1.5. Il suffit de trouver des \\(A^0\\)-algèbres finies \\(B^0_j\\), \\(C^0_j\\) et des \\(A\\)-isomorphismes\n\\[\\begin{aligned} B^0_j \\otimes_{A^0} A &amp;\\xrightarrow{\\ \\sim\\ } B_j \\\\ C^0_j \\otimes_{A^0} A &amp;\\xrightarrow{\\ \\sim\\ } C_j. \\end{aligned}\\]\nEn effet, d'après ([3] 1.4) le morphisme \\(B_j \\to C_j\\) est induit par un morphisme \\(B^0_j \\to C^0_j\\), donc l'ouvert \\(W_j \\subset \\operatorname{Spec} B_j\\) est induit par un ouvert \\(W^0_j \\subset \\operatorname{Spec} B^0_j\\). De plus, les \\(U\\)-morphismes entre les \\(W_j\\) sont induits par des morphismes entre les \\(A\\)-algèbres \\(B_j\\), donc ([3] 1.4) par des morphismes entre les \\(B^0_j\\), donc par des \\(U^0\\)-morphismes des \\(W^0_j\\). Il s'ensuit que les \\(W^0_j\\) forment l'ensemble des composantes connexes d'un objet simplicial \\(\\mathbb{U}^0\\) au-dessus de \\(U^0\\) qui induit \\(\\mathbb{U}\\), et on voit immédiatement que c'est un hyper-recouvrement de \\(U^0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or 1.4 (ii) implique bien que \\(C_j\\) est induit par une \\(A^0\\)-algèbre \\(C^0_j\\), comme on vérifie facilement <sup class=\"footnote-ref\"><a id=\"XIX-fn1ref\" href=\"#XIX-fn1\">(∗)</a></sup>. Pour \\(B_j\\), il suffit de trouver un polynôme unitaire \\(f^0_j(Y) \\in A^0[Y]\\) tel que les deux \\(A\\)-algèbres\n\\[A[Y]/(f_j) \\quad \\text{et} \\quad A[Y]/(f^0_j) = A \\otimes_{A^0} A^0[Y]/(f^0_j)\\]\nsoient isomorphes. En effet, \\(A^0[Y]/(f^0_j)\\) est alors réduit, et on prend pour \\(B^0_j\\) le normalisé (EGA IV 7.8.3 (vi)) de \\(A^0[Y]/(f^0_j)\\). L'anneau \\(B^0_j \\otimes_{A^0} A\\) est encore normal (EGA IV 7.8.3 (vii)) et birationel à \\(B_j\\), donc égal à cet anneau.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après 1.4 (i), l'idéal \\(I_j \\subset A\\) engendré par \\(d_j\\) est induit par un idéal de \\(k[[x_1, \\ldots, x_{r-1}]][x_r]\\) (th. de prép. de Weierstrass [5] [6]), donc par un idéal \\(I^0_j\\) de \\(A^0\\). De plus, \\(A/I_j\\) est une \\(k[[x_1, \\ldots, x_{r-1}]]\\)-algèbre finie, donc est isomorphe à \\(A^0/I^0_j\\). Ce dernier anneau est donc complet, et par conséquent, l'anneau complété \\(I^0_j\\)-adique de \\(A^0\\) est complet et isomorphe à \\(A\\). On peut donc trouver un polynôme unitaire \\(f^0_j \\in A^0[Y]\\) tel que dans \\(A[Y]\\), on ait\n\\[f_j \\equiv f^0_j \\quad (\\text{modulo } d_j^2 \\operatorname{rad} A).\\]\nD'après ([3], 1.3), \\(A[Y]/(f_j) \\simeq A[Y]/(f^0_j)\\), d'où le lemme.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) En effet, 1.4 (ii) implique que \\(C_j\\) est fini sur \\(k[[x_1,\\ldots,x_{r-1}]]\\), et a fortiori sur \\(A^0\\), et il suffit de prendre \\(C^0_j = C_j\\) avec la structure de \\(A^0\\)-module obtenue par restriction des scalaires. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-2",
+   "title": "2. Le cas d'un anneau strictement local.",
+   "blocks": [
+    {
+     "id": "XIX.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.2\">2. Le cas d'un anneau strictement local.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le théorème est le suivant :</p>"
+    },
+    {
+     "id": "XIX.2.1",
+     "type": "theorem",
+     "label": "2.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.1</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn2ref\" href=\"#XIX-fn2\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau excellent, régulier, strictement local, d'égales caractéristiques, et soit \\(x\\) un \"paramètre local\" <sup class=\"footnote-ref\"><a id=\"XIX-fn3ref\" href=\"#XIX-fn3\">(∗∗)</a></sup> de \\(A\\). Soit \\(U = \\operatorname{Spec} A[1/x]\\). Alors pour \\(n\\) premier à la caractéristique de \\(A\\), on a\n  \\[H^q(U, \\mu_n) = \\begin{cases} \\mu_n(A) &amp; \\text{si} \\quad q = 0 \\\\ \\mathbb{Z}/n &amp; \\text{si} \\quad q = 1 \\\\ 0 &amp; \\text{si} \\quad q &gt; 1. \\end{cases}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration se fait par récurrence sur \\(q\\). Nous notons par \\(P(N)\\) l'énoncé de 2.1 pour les valeurs de \\(q \\leqslant N\\). D'après 1.3, l'assertion \\(P(1)\\) est vraie.</p>"
+    },
+    {
+     "id": "XIX.2.2",
+     "type": "theorem",
+     "label": "2.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Supposons que \\(P(N)\\) soit vrai. Soit \\(A \\to A'\\) un morphisme local d'anneaux excellents, réguliers, strictement locaux, d'égales caractéristiques. Soit \\(\\{x_1, \\ldots, x_r\\}\\) une partie d'un système régulier de paramètres de \\(A\\) dont l'ensemble des images dans \\(A'\\) est encore une partie d'un système régulier de paramètres. Soient\n  \\[U = \\operatorname{Spec} A[1/x_1, \\ldots, 1/x_r]\\]\n  \\[U' = \\operatorname{Spec} A'[1/x'_1, \\ldots, 1/x'_r].\\]\n  Alors le morphisme canonique\n  \\[H^q(U, \\mu_n) \\longrightarrow H^q(U', \\mu_n)\\]\n  est bijectif pour chaque \\(q \\leqslant N\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. <sup class=\"footnote-ref\"><a id=\"XIX-fn4ref\" href=\"#XIX-fn4\">(∗)</a></sup> Récurrence sur \\(r\\) ; l'assertion est triviale pour \\(r = 0\\). Soit \\(r &gt; 0\\) et supposons que le théorème est démontré pour \\(r - 1\\). Soient \\(B = A/(x)\\), \\(V = \\operatorname{Spec} A[1/x_1, \\ldots, 1/x_{r-1}]\\), \\(Y = \\operatorname{Spec} B[1/x_1, \\ldots, 1/x_{r-1}]\\) (où on dénote par le même symbole l'image de \\(x_i\\) dans \\(B\\)). Il y a une immersion ouverte \\(i : U \\to V\\) et \\(Y\\) est l'ensemble fermé complémentaire, défini par l'élément \\(x_r\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En appliquant \\(P(N)\\) aux anneaux localisés stricts de \\(V\\) en les points géométriques de \\(Y\\), on trouve que\n\\[(2.3)\\qquad R^q i_*(\\mu_n)_U = \\begin{cases} (\\mu_n)_V &amp; \\text{si} \\quad q = 0 \\\\ (\\mathbb{Z}/n)_Y &amp; \\text{si} \\quad q = 1 \\\\ 0 &amp; \\text{si} \\quad 1 &lt; q \\leqslant N, \\end{cases}\\]\nparce que ces localisés stricts sont des anneaux réguliers excellents d'égales car., et que l'élément \\(x_r\\) est un paramètre local en chaque point de \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons avec un \"prime\" les objets analogues déduits de \\(A'\\). On trouve un morphisme de suites spectrales\n\\[\\xymatrix@C=1em@R=3em{ E_2^{pq} = H^p(V, R^q i_* \\mu_n) \\ar@{=&gt;}[r] \\ar[d]_{\\varphi_2^{pq}} &amp; H^{p+q}(U, \\mu_n) \\ar[d]^{\\varphi} \\\\ E'^{pq}_2 = H^p(V', R^q i'_* \\mu_n) \\ar@{=&gt;}[r] &amp; H^{p+q}(U', \\mu_n). }\\]\nOr il est évident par 1.3 et 2.3 que le changement de base \\(V \\xleftarrow{\\ g\\ } V'\\) induit un isomorphisme\n\\[g^* R^q i_* \\mu_n \\xrightarrow{\\ \\sim\\ } R^q i'_* \\mu_n\\]\npour \\(q \\leqslant N\\) (ce n'est que pour \\(q = 0,1\\) qu'il y a quelque petite chose à vérifier). Par suite, l'hypothèse de récurrence, appliquée au morphisme\n\\[H^q(V, \\mu_n) \\longrightarrow H^q(V', \\mu_n),\\]\nimplique que \\(\\varphi_2^{pq}\\) est un isomorphisme pour \\(q = 0\\) et \\(p \\leqslant N\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De même, on peut appliquer l'hypothèse de récurrence au morphisme d'anneaux \\(B \\to B'\\) — ce sont des anneaux rég., exc., str. loc., d'égales car., et les éléments \\(x_1, \\ldots, x_{r-1}\\) forment une partie d'un système de paramètres. Donc\n\\[H^q(Y, \\mu_n) \\xrightarrow{\\ \\sim\\ } H^q(Y', \\mu_n) \\quad \\text{si} \\quad q \\leqslant N.\\]\nPuisque \\((\\mu_n)_Y \\simeq (\\mathbb{Z}/n)_Y\\), il s'ensuit que \\(\\varphi_2^{pq}\\) est également bijectif pour \\(p \\leqslant N\\) et pour \\(q = 1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Du fait que \\(R^q i_* \\mu_n = R^q i'_* \\mu_n = 0\\) si \\(1 &lt; q \\leqslant N\\), on trouve \\(E_2^{pq} = E'^{pq}_2 = 0\\) si \\(1 &lt; q \\leqslant N\\), et le morphisme de suites spectrales se réduit donc pour \\(1 \\leqslant m \\leqslant N\\) à un morphisme de suites exactes\n\\[\\xymatrix@C=0.9em{ H^{m-2}(Y,\\mathbb{Z}/n) \\ar[r] \\ar[d]^{a} &amp; H^m(V,\\mu_n) \\ar[r] \\ar[d]^{b} &amp; H^m(U,\\mu_n) \\ar[r]^-{e} \\ar[d]^{c} &amp; H^{m-1}(Y,\\mathbb{Z}/n) \\ar[r] \\ar[d]^{d} &amp; H^{m+1}(V,\\mu_n) \\ar[d] \\\\ H^{m-2}(Y',\\mathbb{Z}/n) \\ar[r] &amp; H^m(V',\\mu_n) \\ar[r] &amp; H^m(U',\\mu_n) \\ar[r] &amp; H^{m-1}(Y',\\mathbb{Z}/n) \\ar[r] &amp; H^{m+1}(V',\\mu_n). }\\]\nOr on a déjà vu que \\(a\\), \\(b\\), \\(d\\) sont bijectifs, et il s'ensuit que \\(c\\) est injectif. Pour démontrer que \\(c\\) est surjectif, il suffit de démontrer que le morphisme\n\\[H^m(U, \\mu_n) \\xrightarrow{\\ e\\ } H^{m-1}(Y, \\mathbb{Z}/n)\\]\nest surjectif pour \\(m \\leqslant N\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(k \\subset A\\) un corps séparablement clos arbitraire, et soit \\(A^0 = k[x_1, \\ldots, x_r]\\) le hensélisé de \\(k[x_1, \\ldots, x_r]\\) à l'origine. Alors les hypothèses de 2.1 sont satisfaites pour le morphisme \\(A^0 \\to A\\) et pour les éléments \\(x_i\\). Avec les notations évidentes, on a un carré commutatif\n\\[\\xymatrix@C=3em{ H^m(U^0,\\mu_n) \\ar[r]^-{e^0} \\ar[d]_{c^0} &amp; H^{m-1}(Y^0, \\mathbb{Z}/n) \\ar[d]^{d^0} \\\\ H^m(U,\\mu_n) \\ar[r]^-{e} &amp; H^{m-1}(Y, \\mathbb{Z}/n) }\\]\net on sait déjà que la flèche \\(d^0\\) est bijective. Il suffit ainsi de démontrer que le morphisme \\(e^0\\) est surjectif. On est donc ramené (en laissant tomber les \\({}^0\\)) à vérifier la surjectivité dans le cas \\(A = k\\{x_1, \\ldots, x_r\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour cet anneau, qui est limite de schémas lisses sur \\(k\\), on avait démontré le théorème de pureté dans XVI 3.7. On a donc \\(R^q i_* \\mu_n = 0\\) pour chaque \\(q &gt; 1\\), et par conséquent une suite exacte\n\\[H^m(U, \\mu_n) \\xrightarrow{\\ e\\ } H^{m-1}(Y, \\mathbb{Z}/n) \\longrightarrow H^{m+1}(V, \\mu_n) \\xrightarrow{\\ f\\ } H^{m+1}(U, \\mu_n)\\]\npour chaque \\(m \\geqslant 1\\). La surjectivité de \\(e\\) équivaut donc à l'injectivité de \\(f\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(Z = \\operatorname{Spec} k\\{x_1, \\ldots, x_{r-1}\\}[1/x_1, \\ldots, 1/x_{r-1}]\\). Le morphisme \\(\\operatorname{Spec} k\\{x_1, \\ldots, x_r\\} \\to \\operatorname{Spec} k\\{x_1, \\ldots, x_{r-1}\\}\\) donné par l'inclusion d'anneaux est acyclique. C'est l'acyclicité locale d'un morphisme lisse (XVI 1.1). Puisque l'ouvert \\(V\\) de \\(\\operatorname{Spec} k\\{x_1, \\ldots, x_r\\}\\) est l'image inverse de \\(Z\\), le morphisme\n\\[H^q(Z, \\mu_n) \\longrightarrow H^q(V, \\mu_n)\\]\nest bijectif pour chaque \\(q\\) (XV 1.3). Il suffit donc de démontrer que le morphisme\n\\[H^q(Z, \\mu_n) \\longrightarrow H^q(U, \\mu_n)\\]\nest injectif pour chaque \\(q\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(k\\{x_1, \\ldots, x_r\\}\\) est limite inductive d'anneaux \\(A_\\alpha\\) étales au-dessus de \\(k\\{x_1, \\ldots, x_{r-1}\\}[x_r]\\), avec un relèvement du point \\(x_1 = x_2 = \\cdots = x_r = 0\\) à cet anneau. Par conséquent, \\(U\\) est limite projective des ouverts \\(U_\\alpha = \\operatorname{Spec} A_\\alpha[1/x_1, \\ldots, 1/x_r]\\), et on a\n\\[H^q(U, \\mu_n) = \\varinjlim_\\alpha H^q(U_\\alpha, \\mu_n).\\]\nMais puisque \\(A_\\alpha[1/x_r]\\) est lisse au-dessus de l'anneau hensélien \\(k\\{x_1, \\ldots, x_{r-1}\\}\\), et que la fibre fermée de \\(A[1/x_r]\\) est non-vide, on voit immédiatement que la \\(k\\{x_1, \\ldots, x_{r-1}\\}\\)-algèbre \\(A_\\alpha[1/x_r]\\) admet des sections. Donc \\(U_\\alpha\\) admet des sections au-dessus de \\(Z\\), et il s'ensuit que\n\\[H^q(Z, \\mu_n) \\longrightarrow H^q(U_\\alpha, \\mu_n)\\]\nest injectif pour chaque \\(q\\), donc que\n\\[H^q(Z, \\mu_n) \\longrightarrow H^q(U, \\mu_n)\\]\nest aussi injectif, d'où le lemme.</p>"
+    },
+    {
+     "id": "XIX.2.4",
+     "type": "theorem",
+     "label": "2.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>Supposons que \\(P(N)\\) soit vrai. Soient \\(A \\to A'\\) un morphisme régulier (EGA IV 6.8.1) d'anneaux excellents, strictement locaux, d'égales caractéristiques (pas nécessairement réguliers), et \\(U \\subset \\operatorname{Spec} A\\) un ouvert qui est régulier. Soit \\(U' = U \\times_{\\operatorname{Spec} A} \\operatorname{Spec} A'\\). Alors pour \\(n\\) premier à la car. rés. de \\(A\\), le morphisme\n  \\[H^q(U, \\mu_n) \\longrightarrow H^q(U', \\mu_n)\\]\n  est bijectif pour \\(q \\leqslant N\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Soit \\(f : X \\to \\operatorname{Spec} A\\) une résolution des singularités de \\(\\operatorname{Spec} A\\) telle que l'ouvert \\(U\\) de \\(\\operatorname{Spec} A\\) se relève en un ouvert \\(i : U \\to X\\), et que l'ensemble fermé \\(Y = X - U\\) soit purement de codimension 1 et à intersections transversales. Notons par un \\({}'\\) le changement de base induit par \\(A \\to A'\\). Le morphisme \\(g : X' \\to X\\) est régulier (EGA IV 6.8.3), donc \\(f' : X' \\to \\operatorname{Spec} A'\\) est une résolution de \\(\\operatorname{Spec} A'\\), \\(i' : U' \\to X'\\) une immersion ouverte, et \\(Y' = X' - U'\\) est purement de codimension 1, à intersections transversales. Tous ces schémas sont excellents.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(p'\\) un point de \\(X'\\) et \\(p\\) son image dans \\(X\\). Puisque \\(Y\\) est à intersections transversales dans \\(X\\), il existe des éléments \\(x_1, \\ldots, x_r \\in \\mathcal{O}_{X,p}\\) tels que \\(\\{x_1, \\ldots, x_r\\}\\) soit une partie d'un système de paramètres de \\(\\mathcal{O}_{X,p}\\) et que \\(\\operatorname{Spec} \\mathcal{O}_{X,p} \\cap Y = V(x_1, \\ldots, x_r)\\). De plus, il résulte immédiatement du fait que \\(g : X' \\to X\\) est régulier que les images \\(x'_i\\) des \\(x_i\\) dans \\(\\mathcal{O}_{X',p'}\\) forment une partie d'un système de paramètres de cet anneau, et qu'on a \\(\\operatorname{Spec} \\mathcal{O}_{X',p'} \\cap Y = V(x'_1, \\ldots, x'_r)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(B'\\) le localisé strict de \\(\\mathcal{O}_{X',p'}\\) en un point géométrique \\(\\bar{p}\\) au-dessus de \\(p'\\), et soit \\(B\\) le localisé strict de \\(\\mathcal{O}_{X,p}\\) au point géométrique de \\(X\\) correspondant (ce sont des anneaux excellents (EGA IV 7.8.3 (ii), 7.9.5)). Soient\n\\[U_{\\bar{p}} = \\operatorname{Spec} B[1/x_1, \\ldots, 1/x_r], \\qquad U'_{\\bar{p}} = \\operatorname{Spec} B'[1/x'_1, \\ldots, 1/x'_r].\\]\nLemme 2.2 est applicable, et on en déduit que les morphismes\n\\[(*)\\qquad H^q(U_{\\bar{p}}, \\mu_n) \\longrightarrow H^q(U'_{\\bar{p}}, \\mu_n)\\]\nsont bijectifs pour \\(q \\leqslant N\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Calculons les faisceaux \\(R^q i_* \\mu_n\\), \\(R^q i'_* \\mu_n\\) pour les immersions ouvertes \\(i : U \\to X\\) et \\(i' : U' \\to X'\\) : la fibre \\((R^q i'_* \\mu_n)_{\\bar{p}}\\) au point géométrique \\(\\bar{p}\\) n'est autre que \\(H^q(U'_{\\bar{p}}, \\mu_n)\\) (VIII 5). De même, \\((R^q i_* \\mu_n)_{\\bar{p}} = H^q(U_{\\bar{p}}, \\mu_n)\\). Donc \\((*)\\) implique que les morphismes de changement de base\n\\[(**)\\qquad g^* R^q i_* \\mu_n \\longrightarrow R^q i'_* \\mu_n\\]\nsont bijectifs pour \\(q \\leqslant N\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après le théorème de changement de base pour un morphisme propre (XII 5.5), on a (puisque \\(X\\) et \\(X'\\) sont propres au-dessus des spectres d'anneaux strictement locaux, et que les fibres fermées de \\(X\\) et \\(X'\\) sont égales)\n\\[H^q(X, F) \\xrightarrow{\\ \\sim\\ } H^q(X', g^* F)\\]\nquel que soit le faisceau de torsion \\(F\\), pour chaque \\(q\\). Par conséquent, \\((**)\\) implique que dans le morphisme de suites spectrales\n\\[\\xymatrix@C=1em@R=3em{ E_2^{pq} = H^p(X, R^q i_* \\mu_n) \\ar@{=&gt;}[r] \\ar[d]_{\\varphi_2^{pq}} &amp; H^{p+q}(U, \\mu_n) \\ar[d]^{\\varphi} \\\\ E'^{pq}_2 = H^p(X', R^q i'_* \\mu_n) \\ar@{=&gt;}[r] &amp; H^{p+q}(U', \\mu_n), }\\]\nles flèches \\(\\varphi_2^{pq}\\) sont bijectives pour chaque \\(q \\leqslant N\\). On voit facilement que cela implique que \\(\\varphi_\\infty^{pq}\\) est bijectif si \\(q \\leqslant N\\) et \\(p+q \\leqslant N+1\\). Par conséquent, le morphisme des aboutissements\n\\[H^m(U, \\mu_n) \\longrightarrow H^m(U', \\mu_n)\\]\nest bijectif pour \\(m \\leqslant N\\), d'où le lemme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le lemme suivant achèvera la démonstration de 2.1 :</p>"
+    },
+    {
+     "id": "XIX.2.5",
+     "type": "theorem",
+     "label": "2.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>\\(P(N) \\Longrightarrow P(N+1)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Soient \\(A\\) strictement local, régulier, excellent, d'égales caractéristiques, \\(x \\in \\operatorname{rad} A\\) un paramètre local, \\(U = \\operatorname{Spec} A[1/x]\\). Soient \\(\\hat{A}\\) le complété de \\(A\\), \\(\\hat{x}\\) l'élément image de \\(x\\), \\(\\hat{U} = \\operatorname{Spec} \\hat{A}[1/x]\\), et \\(g : \\hat{U} \\to U\\) le morphisme canonique. Il suffit de démontrer qu'on a\n\\[(2.6)\\qquad \\begin{aligned} g_*(\\mu_n)_{\\hat{U}} &amp;\\simeq (\\mu_n)_U \\quad \\text{et} \\\\ R^q g_* \\mu_n &amp;= 0 \\quad \\text{si} \\quad 1 \\leqslant q \\leqslant N. \\end{aligned}\\]\nEn effet, la suite spectrale de Leray\n\\[E_2^{pq} = H^p(U, R^q g_* \\mu_n) \\Longrightarrow H^{p+q}(\\hat{U}, \\mu_n)\\]\ndonnera des isomorphismes\n\\[H^q(U, \\mu_n) \\xrightarrow{\\ \\sim\\ } H^q(\\hat{U}, \\mu_n)\\]\npour \\(q \\leqslant N\\), et une suite exacte\n\\[0 \\longrightarrow H^{N+1}(U, \\mu_n) \\longrightarrow H^{N+1}(\\hat{U}, \\mu_n) \\longrightarrow H^0(U, R^{N+1} g_* \\mu_n).\\]\nMais on sait déjà que \\(P(1)\\) est vrai (1.3), et il s'agit donc de démontrer que \\(H^q(\\hat{U}, \\mu_n) = 0\\) si \\(1 &lt; q \\leqslant N+1\\). On peut ainsi remplacer \\(A\\) par \\(\\hat{A}\\), qui est isomorphe à un anneau de séries formelles \\(\\hat{A} \\simeq k[[x_1, \\ldots, x_r]]\\) avec \\(k\\) séparablement clos et \\(\\hat{x} = x_r\\). On a traité ce cas dans 1.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Vérifions donc (2.6) : le fait que \\(g_*(\\mu_n)_{\\hat{U}} \\simeq (\\mu_n)_U\\) n'est que l'assertion de (2.3) pour \\(q = 0\\). Rappelons que \\(R^q g_* \\mu_n\\) est le faisceau associé au préfaisceau \\(\\mathcal{Q}^q\\), où\n\\[\\mathcal{Q}^q(V) = H^q(\\hat{V}, \\mu_n)\\]\npour \\(V \\to U\\) étale. Il suffit de prendre \\(V\\) séparé et de type fini, alors \\(V\\) est somme de schémas intègres, et il suffit de regarder de tels \\(V\\). Soit \\(B\\) le normalisé de \\(A\\) dans le corps des fractions de \\(\\Gamma(V, \\mathcal{O}_V)\\). Alors \\(B\\) est une \\(A\\)-algèbre finie (EGA IV 7.8.3 (vi)) et on voit immédiatement que \\(V\\) est un ouvert régulier de \\(\\operatorname{Spec} B\\) et que \\(\\hat{V}\\) est l'ouvert correspondant de \\(\\operatorname{Spec} \\hat{B}\\), où \\(\\hat{B} = B \\otimes_A \\hat{A}\\). Il s'ensuit que les hypothèses de 2.4 sont satisfaites pour l'ouvert \\(V \\subset \\operatorname{Spec} B\\), et pour le morphisme \\(B \\to \\hat{B}\\). On a donc\n\\[\\mathcal{Q}^q(V) \\simeq H^q(V, \\mu_n) \\simeq H^q(\\hat{V}, \\mu_n)\\]\npour \\(q \\leqslant N\\). Or le faisceau associé au préfaisceau \\(V \\mapsto H^q(V, \\mu_n)\\) est évidemment nul, d'où le lemme.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). </p>"
+    },
+    {
+     "id": "XIX-fn3",
+     "number": "(∗∗)",
+     "html": "<p>(∗∗) Par quoi on entend ici : élément faisant partie d'un système régulier de paramètres. </p>"
+    },
+    {
+     "id": "XIX-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) Une démonstration plus courte que celle qui suit, mais utilisant le formalisme du cup-produit, consisterait à montrer que sous l'hypothèse \\(P(N)\\), la cohomologie \\(H^*(U,\\mathbb{Z}/n\\mathbb{Z})\\) est, en dimension \\(\\leqslant N\\), l'algèbre extérieure (sur \\(\\mathbb{Z}/n\\mathbb{Z}\\)) de \\(H^1(U,\\mathbb{Z}/n\\mathbb{Z}) \\simeq (\\mathbb{Z}/n\\mathbb{Z})^r\\), ce qui ramène à établir 2.2 pour \\(q = 1\\), cas bien connu. Le calcul indiqué sous l'hypothèse \\(P(N)\\) est explicité par exemple dans SGA 7. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-3",
+   "title": "3. Pureté.",
+   "blocks": [
+    {
+     "id": "XIX.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.3\">3. Pureté.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous adopterons une terminologie analogue à celle de XVI 3 :</p>"
+    },
+    {
+     "id": "XIX.3.1",
+     "type": "definition",
+     "label": "3.1",
+     "title": "Définition",
+     "html": "<div class=\"thm definition\" id=\"XIX.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>On appelle couple régulier \\((Y, X)\\) de codimension \\(c\\) une immersion fermée \\(i : Y \\to X\\) de schémas localement noethériens réguliers tel que pour chaque \\(y \\in Y\\) on ait \\(\\operatorname{codim}_y(Y, X) = c\\) (alors il existe un voisinage ouvert \\(X'\\) de \\(y\\) dans \\(X\\) et des sections \\(x_1, \\ldots, x_c \\in \\Gamma(X', \\mathcal{O}_X)\\) qui engendrent l'idéal de \\(Y\\), et qui forment une partie d'un système régulier de paramètres de \\(X\\) en chaque point de \\(Y \\cap X'\\)). On note \\(U = X - Y\\), et \\(j : U \\to X\\) l'immersion ouverte correspondante.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un morphisme \\((Y', X') \\to (Y, X)\\) de couples réguliers de codimension \\(c\\) est un morphisme \\(X' \\to X\\) tel que \\(Y' = Y \\times_X X'\\). On définit d'une façon analogue évidente la notion de triple régulier, de morphisme de triple régulier, etc ...</p>"
+    },
+    {
+     "id": "XIX.3.2",
+     "type": "theorem",
+     "label": "3.2",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.2</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn5ref\" href=\"#XIX-fn5\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>(Pureté cohomologique) Soit \\((Y, X)\\) un couple régulier de codimension \\(c &gt; 0\\), où \\(X\\) est un préschéma excellent d'égales caractéristiques. Soit \\(F\\) un faisceau sur \\(X\\) localement constant de groupes cycliques d'ordre \\(n\\) premiers à la caractéristique de \\(X\\). Alors on a, dans la notation de (V 4, VIII 5)\n  \\[\\underline{H}^q_Y(X, F) = (R^q i^!)F = 0 \\quad \\text{si} \\quad q \\neq 2c,\\]\n  \\[(R^q j_*)j^* F = 0 \\quad \\text{si} \\quad q \\neq 0, 2c-1, \\quad \\text{et}\\]\n  \\[\\underline{H}^{2c}_Y(X, F) = i^*(R^{2c-1} j_*)j^* F\\]\n  est un faisceau localement constant de groupes cycliques d'ordre \\(n\\) sur \\(Y\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. (cf. XVI 3.7). On voit immédiatement qu'on a\n\\[\\underline{H}^q_Y(X, F) = 0 \\quad \\text{si} \\quad q = 0,1.\\]\nD'après (V 4.5)\n\\[\\underline{H}^q_Y(X, F) = (R^q i^!)F \\simeq i^*(R^{q-1} j_*)j^* F \\quad \\text{si} \\quad q &gt; 1,\\]\ndonc les assertions pour les trois faisceaux sont équivalentes. Puisque les assertions sont locales sur \\(X\\) pour la topologie étale, on peut supposer que \\(F = \\mu_n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour le cas \\(c = 1\\), le calcul des fibres (VIII 5) de \\((R^q j_*)j^* \\mu_n\\) nous ramène à la situation envisagée dans 2.1, d'où\n\\[((R^q j_*)j^* \\mu_n)_{\\bar{y}} = \\begin{cases} \\mathbb{Z}/n &amp; \\text{si} \\quad q = 1 \\\\ 0 &amp; \\text{si} \\quad q &gt; 1 \\end{cases}\\]\npour chaque point géométrique \\(\\bar{y}\\) de \\(Y\\). Puisque ces faisceaux sont nuls en dehors de \\(Y\\) en tout cas, cela démontre l'assertion pour \\(q &gt; 1\\). Pour \\(q = 1\\) (\\(= 2c-1\\)), on applique le critère de (IX 2.13 (i)) et le calcul explicite de 1.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le cas \\(c &gt; 1\\) se traite par récurrence (cf. XVI 3.7) : Soit \\((Y, X)\\) un couple régulier de codimension \\(c &gt; 1\\). D'après la définition, il est clair que, localement sur \\(X\\), on peut trouver un triple régulier \\((Y, Z, X)\\) où \\((Z, X)\\) est de codimension 1 et \\((Y, Z)\\) est de codimension \\(c-1\\). Soient\n\\[\\xymatrix@R=2.2em@C=1.2em{ Y \\ar[rr]^{u} \\ar[dr]_{i} &amp; &amp; Z \\ar[dl]^{v} \\\\ &amp; X &amp; }\\]\nles immersions fermées. On a la suite spectrale\n\\[E_2^{pq} = (R^p u^!)(R^q v^!)F \\Longrightarrow (R^{p+q} i^!)F.\\]\nPar hypothèse de récurrence, \\((R^q v^!)F = 0\\) si \\(q \\neq 2\\), et est localement constant etc ... si \\(q = 2\\). Donc, encore par hypothèse de récurrence, appliqué au morphisme \\(u\\), \\((R^p u^!)(R^q v^!)F = 0\\) si \\((p,q) \\neq (2c-2, 2)\\), et est loc. const. etc ... si \\((p,q) = (2c-2, 2)\\), d'où le résultat pour l'aboutissement \\((R^{p+q} i^!)F\\), oqfd.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.3.</strong> Il reste maintenant à déterminer les faisceaux localement constants de (3.2) à isomorphisme canonique près. Nous introduisons pour chaque préschéma \\(S\\) les faisceaux localement constants\n\\[(\\mu_n^{\\otimes r})_S = \\text{le produit tensoriel } r\\text{-ième du faisceau } (\\mu_n)_S\\]\nau-dessus du faisceau constant d'anneaux \\(\\mathbb{Z}_S\\). Posons aussi \\((\\mu_n^{\\otimes 0})_S = (\\mathbb{Z}/n)_S\\). On constate immédiatement que si \\(n\\) est inversible sur \\(S\\), alors \\((\\mu_n^{\\otimes r})_S\\) est un faisceau localement constant de groupes cycliques d'ordre \\(n\\). On a des formules du type\n\\[(\\mu_n^{\\otimes r}) \\otimes (\\mu_n^{\\otimes s}) = (\\mu_n^{\\otimes r+s}),\\]\net si \\(S' \\to S\\), alors \\((\\mu_n^{\\otimes r})_{S'}\\) est canoniquement isomorphe à l'image inverse sur \\(S'\\) de \\((\\mu_n^{\\otimes r})_S\\). Nous omettrons souvent le symbole \\(S\\) s'il n'y a pas de confusion à craindre.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\((Y, X)\\) un couple régulier de codimension 1, et supposons que \\(Y\\) soit défini par une équation \\(x = 0\\). On a la suite exacte de faisceaux\n\\[0 \\longrightarrow (\\mathbb{G}_m)_X \\longrightarrow j_*(\\mathbb{G}_m)_U \\longrightarrow \\mathbb{Z}_Y \\longrightarrow 0,\\]\nd'où en appliquant (1.3), des isomorphismes canoniques\n\\[(3.3.1)\\qquad (R^1 j_* \\mu_n) \\simeq j_*(\\mathbb{G}_m)_U/(j_*(\\mathbb{G}_m)_U)^n \\simeq (\\mathbb{Z}/n)_Y,\\]\nqui ne dépendent évidemment pas du choix de \\(x\\). Par conséquent, on a un isomorphisme canonique\n\\[(3.3.2)\\qquad \\varphi : \\mathbb{Z}/n \\xrightarrow{\\ \\sim\\ } (R^2 i^!)\\mu_n \\simeq i^*(R^1 j_*)\\mu_n.\\]</p>"
+    },
+    {
+     "id": "XIX.3.4",
+     "type": "theorem",
+     "label": "3.4",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.4</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn6ref\" href=\"#XIX-fn6\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathcal{C}\\) la famille des couples réguliers de schémas excellents, d'égales caractéristiques. Il existe une fonction et une seule \\(\\varphi\\) donnant pour chaque couple régulier \\((Y, X)\\) de codimension \\(c\\) un isomorphisme (dit canonique) de faisceaux\n  \\[\\varphi(Y, X) = \\varphi : \\mathbb{Z}/n \\xrightarrow{\\ \\sim\\ } \\underline{H}^{2c}_Y(X, \\mu_n^{\\otimes c}) = (R^{2c} i^!)\\mu_n^{\\otimes c}\\]\n  tel que \\(\\varphi\\) satisfasse aux conditions suivantes :</p>\n  <p>(i) Si \\(c = 1\\), et si \\(Y\\) est défini dans \\(X\\) par une équation \\(x = 0\\), alors \\(\\varphi\\) est le morphisme (3.3).</p>\n  <p>(ii) \\(\\varphi\\) est compatible avec les morphismes de couples lisses, c'est-à-dire, si \\((Y', X') \\to (Y, X)\\) est un morphisme, soit \\(g : Y' \\to Y\\) le morphisme induit. Le diagramme de \\(Y'\\)-faisceaux\n  \\[\\xymatrix@C=4em@R=3em{ \\mathbb{Z}/n \\ar[r]^-{\\varphi(Y',X')} \\ar[d] &amp; (R^{2c} i^!)\\mu_n^{\\otimes c} \\ar[d] \\\\ g^*(\\mathbb{Z}/n) \\ar[r]^-{g^* \\varphi(Y,X)} &amp; g^*(R^{2c} i^!)\\mu_n^{\\otimes c} }\\]\n  est commutatif (ce qui implique en particulier que la flèche verticale de droite est un isomorphisme).</p>\n  <p>(iii) Transitivité : soit \\((Z, Y, X)\\) un triple régulier, c'est-à-dire, un diagramme commutatif d'immersion fermée de préschémas réguliers etc ...,\n  \\[\\xymatrix@R=2.2em@C=1.2em{ Z \\ar[rr]^{v} \\ar[dr]_{w} &amp; &amp; Y \\ar[dl]^{u} \\\\ &amp; X &amp; }\\]\n  Soient \\(a, b, c\\) les codimensions de \\(u, v, w\\) respectivement (donc \\(c = a+b\\)). On a un isomorphisme\n  \\[\\varphi(Y, X) \\otimes \\mu_n^{\\otimes b} : \\mu_n^{\\otimes b} \\longrightarrow (R^{2a} u^!)\\mu_n^{\\otimes a} \\otimes \\mu_n^{\\otimes b} \\simeq (R^{2a} u^!)\\mu_n^{\\otimes c}.\\]\n  La suite spectrale \\((R^p v^!)(R^q u^!)F \\Longrightarrow (R^{p+q} w^!)F\\) donne un isomorphisme\n  \\[\\xi : (R^{2b} v^!)(R^{2a} u^!)\\mu_n^{\\otimes c} \\xrightarrow{\\ \\sim\\ } (R^{2c} w^!)\\mu_n^{\\otimes c}.\\]\n  On obtient ainsi un diagramme d'isomorphismes\n  \\[(3.4.1)\\qquad \\xymatrix@C=4em@R=3.2em{ \\mathbb{Z}/n \\ar[r]^-{\\varphi(Z,Y)} \\ar[d]_{\\varphi(Z,X)} &amp; (R^{2b} v^!)\\mu_n^{\\otimes b} \\ar[d]^{\\eta} \\\\ (R^{2c} w^!)\\mu_n^{\\otimes c} &amp; (R^{2b} v^!)(R^{2a} u^!)\\mu_n^{\\otimes c} \\ar[l]^-{\\xi} }\\]\n  où \\(\\eta = (R^{2b} v^!)(\\varphi(Y,X) \\otimes \\mu_n^{\\otimes b})\\), et l'assertion de transitivité est que ce diagramme est commutatif.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. La démonstration de l'existence et l'unicité se fait par récurrence sur la codimension \\(c\\). Pour \\(c = 1\\), on définit le morphisme \\(\\varphi\\) localement avec (3.3.1). Puisque ce morphisme ne dépend pas du choix du paramètre \\(x\\), on obtient un isomorphisme \\(\\varphi\\) pour chaque \\((Y, X)\\) de codimension 1 par recollement, et il est clair, d'après la définition du morphisme et de 1.3, que le \\(\\varphi\\) ainsi construit satisfait à (ii). La transitivité n'intervient pas pour \\(c = 1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant que l'existence et l'unicité sont déjà démontrées si la codimension est \\(&lt; c\\), et que \\(c &gt; 1\\). En appliquant l'hypothèse de récurrence, on constate immédiatement que dans la situation de 3.4 (iii) les trois flèches de 3.4.1 qui sont déjà définies, i.e. \\(\\varphi(Z,Y)\\), \\(\\xi\\), \\(\\eta\\) sont compatibles avec les morphismes de triples réguliers. Posons dans cette situation\n\\[\\Psi(Z,Y,X) = \\xi\\, \\eta\\, \\varphi(Z,Y),\\]\ndonc \\(\\Psi\\) est également compatible avec les morphismes de triples. Or si \\((Z,X)\\) est un couple régulier de codimension \\(c &gt; 1\\), on peut, localement sur \\(X\\), trouver un triple \\((Z,Y,X)\\) avec \\(0 &lt; \\operatorname{codim}(Y,X) &lt; c\\). Tout revient donc à démontrer que la flèche \\(\\Psi(Z,Y,X)\\) est indépendante de \\(Y\\). En effet, cela démontrera l'unicité de \\(\\varphi\\) pour la codimension \\(c\\), et l'existence résultera par recollement.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\((Z,Y,X)\\) est arbitraire tel que \\(\\operatorname{codim}(Y,X) &gt; 1\\), on peut, localement sur \\(X\\), trouver un triple régulier \\((Y,W,X)\\) où la codimension de \\((W,X)\\) est égale à 1. Par une chasse de diagramme de transitivité, que nous laissons au lecteur, on se ramène donc à vérifier l'indépendance de \\(Y\\) lorsque \\((Y,X)\\) est de codimension 1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\((Z,Y_0,X)\\) et \\((Z,Y_1,X)\\) deux tels triples. Il suffit de faire la vérification fibre par fibre, et on est donc ramené au cas \\(X\\) strictement local, et \\(Y_i\\) défini par une équation, disons \\(f_i = 0\\) (\\(i=0,1\\)). Soient \\(\\bar{X} = \\operatorname{Spec} \\mathcal{O}_X[t]\\), \\(\\bar{Z} = Z \\times_X \\bar{X}\\), et \\(\\bar{Y}\\) le sous-schéma fermé de \\(\\bar{X}\\) défini par l'équation\n\\[(f_1 - f_0)t + f_0 = 0.\\]\nAlors \\(\\bar{Y}\\) est évidemment régulier en les points au-dessus des sections \\(\\varepsilon_0 : \\{t=0\\}\\) et \\(\\varepsilon_1 : \\{t=1\\}\\) de \\(\\bar{X}/X\\). Soit \\(C\\) le sous-ensemble fermé (EGA IV 7.8.3 (iv)) de \\(\\bar{Y}\\) des points où \\(\\bar{Y}\\) n'est pas régulier, et remplaçons \\(\\bar{X}, \\bar{Y}, \\bar{Z}\\) par \\(\\bar{X} - C\\), \\(\\bar{Y} - C\\), \\(\\bar{Z} - C \\cap \\bar{Z}\\) respectivement. Alors \\((\\bar{Z}, \\bar{Y}, \\bar{X})\\) est un triple régulier, et les sections \\(\\varepsilon_i\\) donnent des morphismes de triples\n\\[(Z, Y_i, X) \\longrightarrow (\\bar{Z}, \\bar{Y}, \\bar{X}) \\quad (i=0,1).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F = (R^{2c} w^!)\\mu_n^{\\otimes c}\\) le faisceau sur \\(Z\\). C'est un faisceau localement constant, isomorphe à \\(\\mathbb{Z}/n\\) (par l'un ou l'autre des isomorphismes \\(\\Psi(Z, Y_i, X)\\)), et on constate immédiatement que le faisceau \\(\\bar{F} = (R^{2c} \\bar{w}^!)\\mu_n^{\\otimes c}\\) sur \\(\\bar{Z}\\) est l'image inverse sur \\(\\bar{Z}\\) de \\(F\\). Puisque les fibres de \\(\\bar{Z} \\to Z\\) sont connexes non-vides et que \\(\\bar{Z} \\to Z\\) est lisse, donc ouvert, il s'ensuit que le morphisme déduit\n\\[H^0(Z, F) \\longrightarrow H^0(\\bar{Z}, \\bar{F})\\]\nest bijectif, donc que chacun des morphismes\n\\[(*)\\qquad \\xymatrix@R=1.4em@C=3em{ &amp; &amp; H^0(Z, F) \\\\ H^0(Z, F) \\ar[r] &amp; H^0(\\bar{Z}, \\bar{F}) \\ar[ur]^{\\varepsilon_0^*} \\ar[dr]_{\\varepsilon_1^*} &amp; \\\\ &amp; &amp; H^0(Z, F) }\\]\nest bijectif, donc que \\(\\varepsilon_0^* = \\varepsilon_1^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or donner un isomorphisme d'un faisceau \\(F\\) avec \\(\\mathbb{Z}/n\\) équivaut à donner une section globale (image de 1) qui est un générateur. Soient \\(\\bar{\\alpha}\\), \\(a_i\\) les sections globales de \\(\\bar{F}\\), \\(F\\) données par les isomorphismes \\(\\Psi(\\bar{Z}, \\bar{Y}, \\bar{X})\\), \\(\\Psi(Z, Y_i, X)\\) respectivement. Puisque \\(\\Psi(.,.,.)\\) est compatible avec les morphismes, le diagramme \\((*)\\) implique que\n\\[a_0 = \\varepsilon_0^*(\\bar{\\alpha}) = \\varepsilon_1^*(\\bar{\\alpha}) = a_1,\\]\nd'où \\(\\Psi(Z, Y_0, X) = \\Psi(Z, Y_1, X)\\), cqfd.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn5",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). </p>"
+    },
+    {
+     "id": "XIX-fn6",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). Ce théorème peut être considéré aussi comme la conjonction de 3.2 et de la théorie de variance de Exp XVIII par les \"classes fondamentales locales\", où on étudie des homomorphismes \\(\\varphi(Y,X)\\) (pas nécessairement bijectifs) pour \\(Y\\) localement intersection complète dans \\(X\\). </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-4",
+   "title": "4. Acyclicité locale d'un morphisme régulier.",
+   "blocks": [
+    {
+     "id": "XIX.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.4\">4. Acyclicité locale d'un morphisme régulier.</h2>"
+    },
+    {
+     "id": "XIX.4.1",
+     "type": "theorem",
+     "label": "4.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.1</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn7ref\" href=\"#XIX-fn7\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>(acyclicité locale). Soit \\(g : X' \\to X\\) un morphisme régulier (EGA IV 6.8.1) de schémas excellents d'égales caractéristiques. Alors \\(g\\) est universellement localement acyclique pour \\(n\\) premier à la caractéristique.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. L'hypothèse étant stable par changement de base de type fini, il résulte aussitôt de XV 1.13 ii) qu'il suffit de prouver que \\(g\\) est localement acyclique pour \\(n\\). Appliquons le critère de XV 1.17 : Soient \\(\\bar{x}'\\) un point géométrique de \\(X'\\) et \\(\\bar{x}\\) le point géométrique de \\(X\\) correspondant. Il résulte immédiatement de la définition de morphisme régulier que le morphisme des localisés stricts en ces points induit par \\(g\\) est encore régulier. On est donc ramené au cas où \\(X = \\operatorname{Spec} A\\) et \\(X' = \\operatorname{Spec} A'\\) sont strictement locaux, \\(g\\) et un morphisme local, et d'après XV 1.17 il suffit de démontrer que les fibres géométriques de \\(g\\) sont acycliques pour \\(n\\). En remplaçant \\(X\\) par un sous-schéma fermé intègre et \\(X'\\) par le fermé correspondant, on se ramène au cas de la fibre géométrique générique \\(X'_{\\bar{x}}\\). Prenons \\(\\bar{x} = \\operatorname{Spec} \\bar{K}\\) où \\(\\bar{K}\\) est la clôture séparable du corps de fonctions rationnelles sur \\(X\\). Alors on a\n\\[\\bar{x} = \\varprojlim_\\alpha U_\\alpha\\]\noù \\(U_\\alpha\\) parcourt une catégorie filtrante de \\(X\\)-schémas étales connexes, qu'on peut supposer réguliers (EGA IV 7.8.3 (v)). Soit \\(B_\\alpha\\) le normalisé de \\(A\\) dans le corps des fonctions rationnelles \\(R(U_\\alpha)\\). Posons \\(U'_\\alpha = X' \\times_X U_\\alpha\\) et \\(B'_\\alpha = A' \\otimes_A B_\\alpha\\). Alors \\(U_\\alpha\\) est un ouvert régulier de \\(\\operatorname{Spec} B_\\alpha\\) et \\(B_\\alpha \\to B'_\\alpha\\) est régulier, donc par 2.4\n\\[H^q(U_\\alpha, \\mu_n) \\xrightarrow{\\ \\sim\\ } H^q(U'_\\alpha, \\mu_n)\\]\npour chaque \\(q\\). Or la fibre \\(X'_{\\bar{x}}\\) est limite des \\(U'_\\alpha\\), donc\n\\[\\begin{aligned} H^q(X'_{\\bar{x}}, \\mu_n) &amp;= \\varinjlim_\\alpha H^q(U'_\\alpha, \\mu_n) \\\\ &amp;= \\varinjlim_\\alpha H^q(U_\\alpha, \\mu_n) \\\\ &amp;= H^q(\\bar{x}, \\mu_n) = 0 \\quad \\text{si} \\quad q &gt; 0, \\quad \\text{cqfd.} \\end{aligned}\\]</p>"
+    },
+    {
+     "id": "XIX.4.2",
+     "type": "theorem",
+     "label": "4.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>(changement de base par un morphisme régulier). Soit\n  \\[\\xymatrix@C=3em@R=3em{ X \\ar[d]_{f} &amp; X' \\ar[l]_{g} \\ar[d]^{f'} \\\\ Y &amp; Y' \\ar[l]^{g} }\\]\n  un diagramme cartésien, \\(g : Y' \\to Y\\) étant un morphisme régulier de préschémas excellents d'égales caractéristiques, \\(f\\) quasi-compact et quasi-séparé. Alors pour chaque faisceau \\(F\\) abélien de torsion premier à la caractéristique, les morphismes de changement de base (XII 4.2)\n  \\[g^*(R^q f_*)F \\longrightarrow (R^q f'_*)g'^* F\\]\n  sont bijectifs pour chaque \\(q \\geqslant 0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte de 4.1 et de XVI 1.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De 4.1 et XV 1.17 on déduit immédiatement</p>"
+    },
+    {
+     "id": "XIX.4.3",
+     "type": "theorem",
+     "label": "4.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>Soient \\(A\\) un anneau strictement local excellent d'égales caractéristiques, et \\(f : X \\to \\operatorname{Spec} A\\) un morphisme. Soit \\(A \\to A'\\) un morphisme régulier, où \\(A'\\) est également strictement local, excellent, d'égales caractéristiques. Notons par un \\({}'\\) le changement de base induit par \\(A \\to A'\\). Pour chaque faisceau de torsion \\(F\\) sur \\(X\\), premier à la caractéristique de \\(A\\), on a\n  \\[H^q(X, F) \\xrightarrow{\\ \\sim\\ } H^q(X', F')\\]\n  pour chaque \\(q \\geqslant 0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce corollaire s'applique notamment dans le cas où \\(A'\\) est le complété \\(\\hat{A}\\) de \\(A\\). (Dans ce cas, on peut d'ailleurs remplacer l'hypothèse \"\\(A\\) strictement local\" par \"\\(A\\) local hensélien\", comme on constate immédiatement.)</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn7",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-5",
+   "title": "5. Théorème de finitude.",
+   "blocks": [
+    {
+     "id": "XIX.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.5\">5. Théorème de finitude.</h2>"
+    },
+    {
+     "id": "XIX.5.1",
+     "type": "theorem",
+     "label": "5.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.1</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn8ref\" href=\"#XIX-fn8\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>(finitude). Soit \\(f : X \\to S\\) un morphisme de type fini de schémas excellents d'égales caractéristiques, et soit \\(F\\) un faisceau abélien de torsion premier à la caractéristique sur \\(X\\), qui est un faisceau constructible. Alors les \\((R^q f_*)F\\) sont également constructibles pour chaque \\(q\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce résultat généralise le théorème de XVI 5.1. La démonstration est à peu près la même : on applique le résultat de pureté 3.2 au lieu de XVI 3.7.</p>"
+    },
+    {
+     "id": "XIX.5.2",
+     "type": "theorem",
+     "label": "5.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau excellent strictement local d'égales caractéristiques et \\(f : X \\to \\operatorname{Spec} A\\) un morphisme de type fini. Soit \\(F\\) un faisceau abélien sur \\(X\\) de torsion premier à la caractéristique de \\(A\\), et constructible. Alors les \\(H^q(X, F)\\) sont des groupes finis pour chaque \\(q\\).</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn8",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-6",
+   "title": "6. Dimension cohomologique des morphismes affines.",
+   "blocks": [
+    {
+     "id": "XIX.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.6\">6. Dimension cohomologique des morphismes affines.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f : X \\to Y\\) un morphisme de type fini de préschémas excellents, et \\(F\\) un faisceau sur \\(X\\). Rappelons qu'on a défini (XIV 2.2) un entier \\(\\delta(F)\\) dans le cas où \\(Y\\) est local. On peut donc regarder \\(\\delta\\) comme fonction \\(\\delta(F,f)\\) sur un \\(Y\\) arbitraire, en posant\n\\[(6.0)\\qquad \\delta(F,f,y) = \\delta(F'),\\]\nou \\(Y' = \\operatorname{Spec} \\mathcal{O}_{Y,y}\\), \\(X' \\to Y'\\) est le morphisme déduit de \\(f\\) par le changement de base \\(Y' \\to Y\\), et \\(F'\\) est le faisceau image inverse de \\(F\\) sur \\(X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a le résultat suivant, qui généralise XIV 3.1 :</p>"
+    },
+    {
+     "id": "XIX.6.1",
+     "type": "theorem",
+     "label": "6.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.1</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn9ref\" href=\"#XIX-fn9\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\to Y\\) un morphisme affine de type fini, où \\(Y\\) est un schéma excellent d'égales caractéristiques, et soit \\(F\\) un faisceau abélien de torsion sur \\(X\\). Alors \\(R^q f_* F\\) est nul en chaque point \\(y \\in Y\\) tel que \\(\\delta(F,f,y) &lt; q\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La variante locale, évidemment équivalente à 6.1, est la suivante :</p>"
+    },
+    {
+     "id": "XIX.6.1bis",
+     "type": "theorem",
+     "label": "6.1 bis",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.1bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.1 bis</span> <sup class=\"footnote-ref\"><a id=\"XIX-fn10ref\" href=\"#XIX-fn10\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>Soient \\(A\\) un anneau strictement local excellent d'égales caractéristiques, et \\(f : X \\to Y = \\operatorname{Spec} A\\) un morphisme affine de type fini. Soit \\(F\\) un faisceau de torsion sur \\(X\\). Alors\n  \\[H^q(X, F) = 0 \\quad \\text{si} \\quad q &gt; \\delta(F).\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons (X 5.1) qu'il n'y a pas d'intérêt dans de telles assertions pour les \\(F\\) de \\(p\\)-torsion, où \\(p\\) est égale à la caractéristique. On peut donc supposer \\(F\\) premier à la caractéristique.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a le corollaire suivant :</p>"
+    },
+    {
+     "id": "XIX.6.2",
+     "type": "theorem",
+     "label": "6.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) un anneau hensélien, excellent, d'égales caractéristiques, à corps résiduel \\(k\\), et soit \\(U \\subset \\operatorname{Spec} A\\) un ouvert affine. Soit \\(\\ell \\in \\mathbb{P}\\). On a\n  \\[\\operatorname{cd}_\\ell U \\leqslant \\operatorname{cd}_\\ell k + \\dim A.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, soit \\(\\tilde{A}\\) le localisé strict de \\(A\\), qui est un revêtement étale galoisien infini, de groupe \\(G = G(\\bar{k}/k)\\), et soit \\(\\tilde{U}\\) l'ouvert affine de \\(\\operatorname{Spec} \\tilde{A}\\) induit de \\(U\\). En appliquant la suite spectrale d'Hochschild-Serre (VIII 8.4)\n\\[H^p(G, H^q(\\tilde{U}, .)) \\Longrightarrow H^{p+q}(U, .)\\]\non se ramène à traiter le cas \\(A = \\tilde{A}\\), et alors c'est un cas spécial de 6.1 bis.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avec les notations ci-dessus, soit \\(R(A)\\) l'anneau des fonctions rationnelles sur \\(A\\). On a \\(\\operatorname{Spec} R(A) = \\varprojlim_\\alpha U_\\alpha\\) où \\(U_\\alpha\\) est un ouvert affine de \\(\\operatorname{Spec} A\\). Il résulte donc de la théorie de passage à la limite qu'on a</p>"
+    },
+    {
+     "id": "XIX.6.3",
+     "type": "theorem",
+     "label": "6.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A\\) hensélien excellent d'égales caractéristiques, à corps résiduel \\(k\\). Soit \\(R(A)\\) le corps des fonctions rationnelles sur \\(\\operatorname{Spec} A\\). Alors pour \\(\\ell \\in \\mathbb{P}\\), on a\n  \\[\\operatorname{cd}_\\ell R(A) \\leqslant \\operatorname{cd}_\\ell k + \\dim A\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec l'égalité si \\(\\ell\\) est inversible dans \\(k\\), et si de plus \\(\\ell \\neq 2\\) ou \\(k\\) n'est pas ordonnable.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'égalité dans le dernier cas résulte de X 2.4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, en appliquant X 4.2, 4.4, on trouve</p>"
+    },
+    {
+     "id": "XIX.6.4",
+     "type": "theorem",
+     "label": "6.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) un schéma noethérien excellent d'égales caractéristiques, et \\(R(X)\\) l'anneau des fonctions rationnelles sur \\(X\\). Soit \\(\\ell \\in \\mathbb{P}\\) inversible sur \\(X\\), et supposons que \\(\\ell \\neq 2\\) ou qu'aucun corps résiduel de \\(X\\) ne soit ordonnable. Alors\n  \\[\\operatorname{cd}_\\ell(X) \\leqslant \\operatorname{cd}_\\ell R(X) + \\dim X \\leqslant 2 \\operatorname{cd}_\\ell R(X).\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de 6.1. On commence par une réduction analogue à celle de XIV 3. Récurrence sur \\(\\delta\\) : Il est clair que 6.1 pour \\(\\delta \\leqslant d\\) équivaut à (6.1 bis) pour \\(\\delta \\leqslant d\\). Pour \\(\\delta = 0\\), c'est trivial. Traitons le cas \\(\\delta \\leqslant 1\\), sous la forme 6.1 bis. Puisque \\(F\\) est limite de ses sous-faisceaux constructibles (IX 2.9 (iii)), on peut supposer \\(F\\) constructible, et alors le support de \\(F\\) est contenu dans un fermé \\(Z \\subset X\\) avec \\(\\delta(z) \\leqslant 1\\) pour chaque \\(z \\in Z\\) (XIV 2.2). Chaque composante irréductible réduite \\(Z_i\\) de \\(Z\\) est alors, ou bien un schéma affine de type fini de dimension \\(\\leqslant 1\\) au-dessus du point fermé \\(y\\) de \\(Y\\), ou bien un schéma quasi-fini au-dessus d'un sous-schéma fermé réduit \\(C\\) de \\(Y\\) de dimension 1. Dans ce dernier cas, on a \\(C = \\operatorname{Spec} B\\) où \\(B\\) est un anneau intègre strictement local de dimension 1. Un tel schéma \\(Z_i\\) est le spectre d'un anneau intègre strictement local, de dimension \\(\\leqslant 1\\), ou d'un corps fini au-dessus du corps des fractions de \\(B\\). Donc la dimension cohomologique de \\(Z_i\\) est au plus égal à 1 en tout cas, d'après X 2.3 et IX 5.7. On a une suite exacte\n\\[0 \\longrightarrow F \\longrightarrow \\prod_i F_i \\longrightarrow \\varepsilon \\longrightarrow 0\\]\noù \\(F_i\\) est la restriction de \\(F\\) à \\(Z_i\\), d'où l'on tire le résultat pour \\(Z\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant que le théorème soit démontré pour les valeurs de \\(\\delta &lt; d\\), et prouvons-le pour \\(\\delta(F) \\leqslant d\\), supposant \\(d \\geqslant 2\\).</p>"
+    },
+    {
+     "id": "XIX.6.5",
+     "type": "theorem",
+     "label": "6.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.5</span></div>\n  <div class=\"thm-body\"><p>Il suffit de traiter le cas où \\(X = \\mathbb{E}^1_Y = \\operatorname{Spec} \\mathcal{O}_Y[t]\\) est l'espace affine de dimension 1, et où \\(Y\\) est strictement local.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est celle de XIV 4.2 : Il est clair qu'on peut supposer \\(Y\\) strictement local, et que \\(\\delta(F) \\leqslant d\\). Il faut démontrer que \\(H^q(X,F) = 0\\) si \\(q &gt; d\\). On peut plonger \\(X\\) dans \\(\\mathbb{E}^N_Y\\), donc il suffit de traiter le cas \\(X = \\mathbb{E}^N_Y\\). Récurrence sur \\(N\\) : Considérons le diagramme\n\\[\\xymatrix@R=2.2em@C=1.2em{ \\mathbb{E}^N_Y \\ar[rr]^{g} \\ar[dr]_{f} &amp; &amp; \\mathbb{E}^{N-1}_Y \\ar[dl]^{h} \\\\ &amp; Y &amp; }\\]\nde sorte que \\(\\mathbb{E}^N_Y\\) est l'espace affine de dimension 1 sur \\(\\mathbb{E}^{N-1}_Y\\). En appliquant l'hypothèse de récurrence et la suite spectrale de Leray\n\\[H^p(\\mathbb{E}^{N-1}_Y, R^q g_* F) \\Longrightarrow H^{p+q}(\\mathbb{E}^N_Y, F)\\]\non voit qu'il suffit de démontrer que\n\\[\\delta(R^q g_* F) \\leqslant d-q.\\]\nCela veut dire que si \\(z \\in \\mathbb{E}^{N-1}_Y\\) est un point tel que \\(\\delta(z) &gt; d-q\\), alors \\(R^q g_* F = 0\\) au point \\(z\\). Mais l'hypothèse de récurrence sur \\(N\\) s'applique au morphisme \\(g\\), et on a donc \\(R^q g_* F = 0\\) au point \\(z\\) si \\(\\delta(F,g,z) &lt; q\\). Il suffit ainsi de démontrer l'inégalité\n\\[\\delta(F,g,z) + \\delta(z) \\leqslant \\delta(F).\\]\nNous laissons ce plaisir au lecteur.</p>"
+    },
+    {
+     "id": "XIX.6.6",
+     "type": "theorem",
+     "label": "6.6",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.6</span></div>\n  <div class=\"thm-body\"><p>Pour démontrer 6.1 pour les valeurs de \\(\\delta \\leqslant d\\), il suffit de démontrer ceci : Soit \\(B\\) un anneau local complet normal d'égales caractéristiques et de dimension \\(d\\). Soit \\(U \\subset \\operatorname{Spec} B\\) un ouvert affine. Supposons qu'il existe un élément \\(x \\in \\operatorname{rad} B\\) qui est inversible sur \\(U\\). Alors\n  \\[H^q(U, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; d.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce lemme est d'ailleurs un cas spécial du corollaire 6.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. (cf. XIV 4.4). D'après 6.5, il suffit de traiter le cas \\(Y\\) strictement local et \\(X = \\mathbb{E}^1_Y\\). Considérons le diagramme\n\\[\\xymatrix@R=2.2em@C=1.2em{ \\mathbb{E}^1_Y \\ar[rr]^{i} \\ar[dr]_{f} &amp; &amp; \\mathbb{P}^1_Y \\ar[dl]^{g} \\\\ &amp; Y &amp; }\\]\noù \\(\\mathbb{P}^1_Y\\) est l'espace projectif et \\(\\mathbb{E}^1_Y\\) est déduit de \\(\\mathbb{P}^1\\) en enlevant la section \\(Y_\\infty\\) à l'infini. Soit \\(F\\) un faisceau de torsion sur \\(\\mathbb{E}^1\\), avec \\(\\delta(F) \\leqslant d\\). On a la suite spectrale\n\\[H^p(\\mathbb{P}^1, R^q i_* F) \\Longrightarrow H^{p+q}(\\mathbb{E}^1, F).\\]\nOr les \\(R^q i_* F\\) pour \\(q &gt; 0\\) sont concentrés sur la section \\(Y_\\infty\\) qui est isomorphe à \\(Y\\). Puisque \\(Y\\) est strictement local, il s'ensuit que \\(H^p(\\mathbb{P}^1, R^q i_* F) = 0\\) si \\(p &gt; 0\\) et \\(q &gt; 0\\). De plus, d'après XII 5.3, on a \\(H^p(\\mathbb{P}^1, i_* F) = 0\\) si \\(p &gt; 2\\). Comme on veut démontrer que \\(H^n(\\mathbb{E}^1, F) = 0\\) si \\(n &gt; d\\), et que \\(d \\geqslant 2\\), il suffit de démontrer que\n\\[H^0(\\mathbb{P}^1, R^q i_* F) = H^0(Y_\\infty, R^q i_* F) = 0 \\quad \\text{si} \\quad q &gt; d.\\]\nCe groupe est isomorphe à la fibre de \\(R^q i_* F\\) au point \\(y_\\infty\\) à l'infini de \\(\\mathbb{P}^1\\) dans la fibre fermée.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or il suffit (VII 3.3 et IX 2.9 (iii)) de traiter le cas \\(F\\) constructible. Alors puisque \\(\\delta(F) \\leqslant d\\), il existe un sous-schéma fermé \\(X\\) de \\(\\mathbb{P}^1\\) avec \\(\\dim X \\leqslant d\\) tel que \\(X\\) contienne le support de \\(F\\). Soient \\(\\operatorname{Spec} A = \\tilde{X}\\) le localisé strict de \\(X\\) au point \\(y_\\infty\\), \\(\\tilde{U} = \\tilde{X} - \\tilde{X} \\times_{\\mathbb{P}^1} Y_\\infty\\), et \\(\\tilde{F}\\) le faisceau induit de \\(F\\) sur \\(\\tilde{U}\\). Notons que \\(U\\) est déduit de \\(\\tilde{X}\\) en localisant par rapport à un élément \\(x \\in \\Gamma(X, \\mathcal{O}_X)\\). On a\n\\[(R^q i_* F)_{y_\\infty} \\simeq H^q(\\tilde{U}, \\tilde{F}).\\]\nIl suffit ainsi de démontrer que \\(H^q(\\tilde{U}, F) = 0\\), si \\(q &gt; d\\), pour chaque faisceau de torsion \\(\\tilde{F}\\) sur \\(\\tilde{U}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut maintenant appliquer IX 5.6, avec \\(\\varphi = \\delta\\), et on trouve qu'il suffit de démontrer que\n\\[H^q(V, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; \\delta(V)\\]\npour chaque \\(V\\) fini et intègre au-dessus de \\(\\tilde{U}\\) et pour \\(\\ell\\) inversible. Soit \\(\\pi : \\bar{V} \\to V\\) le normalisé de \\(V\\). On a la suite exacte\n\\[0 \\longrightarrow (\\mathbb{Z}/\\ell)_V \\longrightarrow \\pi_*(\\mathbb{Z}/\\ell)_{\\bar{V}} \\longrightarrow C \\longrightarrow 0\\]\navec \\(\\delta(C) &lt; \\delta(V)\\), et on tire de cela (par récurrence sur \\(\\delta\\)) qu'il suffit de prendre \\(V\\) normal.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(B\\) le normalisé de \\(A\\) dans le corps des fonctions rationnelles sur \\(V\\). Alors \\(B\\) est un anneau strictement local excellent d'égales caractéristiques, et \\(V\\) est un ouvert affine de \\(\\operatorname{Spec} B\\), obtenu en localisant par rapport à \\(x\\). Soit \\(\\hat{B}\\) le complété de \\(B\\), et \\(\\hat{V}\\) l'ouvert induit (qui est obtenu de \\(\\operatorname{Spec} \\hat{B}\\) en localisant par rapport à l'image de \\(x\\) dans \\(\\hat{B}\\)). D'après 4.3, on a\n\\[H^q(V, \\mathbb{Z}/\\ell) \\simeq H^q(\\hat{V}, \\mathbb{Z}/\\ell).\\]\nOn est donc ramené à démontrer que\n\\[H^q(\\hat{V}, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; \\delta(V) = \\dim B = \\dim \\hat{B}.\\]\nPar hypothèse de récurrence, le théorème est vrai si \\(\\delta(V) &lt; d\\), donc le théorème 6.1 bis s'applique dans cette situation. Par conséquent, il suffit de traiter le cas \\(\\dim \\hat{B} = d\\), et puisque \\(\\hat{B}\\) est normal, on est dans la situation du lemme, d'où le résultat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>6.7.0.</strong> On va d'abord démontrer 6.6 sous des hypothèses supplémentaires, si \\(B\\) est de caractéristique \\(p &gt; 0\\). Soient \\(A\\) un anneau équidimensionel, complet, d'égales caractéristiques et \\(k \\subset A\\) un corps tel que \\(A/\\operatorname{rad} A\\) soit une extension finie de \\(k\\). On dit que la \\(k\\)-algèbre \\(A\\) est <em>formellement séparable</em> s'il existe une sous-\\(k\\)-algèbre de \\(A\\) de la forme \\(k[[x_1, \\ldots, x_n]]\\) tel que le morphisme \\(\\operatorname{Spec} A \\to \\operatorname{Spec} k[[x]]\\) soit fini et étale au point générique de \\(\\operatorname{Spec} k[[x]]\\) (\\(x=(x_1, \\ldots, x_n)\\)).</p>"
+    },
+    {
+     "id": "XIX.6.7",
+     "type": "theorem",
+     "label": "6.7",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(k \\subset B\\) un corps au-dessus duquel \\(B/\\operatorname{rad} B\\) soit finie. Sous l'hypothèse de récurrence sur \\(d\\) ci-dessus, la conclusion de 6.6 est valable si les hypothèses de 6.6 sont satisfaites et si de plus l'une ou l'autre des conditions suivantes est satisfaite :</p>\n  <p>(i) \\(k\\) est de caractéristique \\(0\\).</p>\n  <p>(ii) Il existe un élément \\(x \\in \\operatorname{rad} B\\) qui est inversible sur \\(U\\) et tel que \\(\\bar{B} = B/(x)\\) soit une \\(k\\)-algèbre formellement séparable.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Choisissons des éléments \\(x_1 = x, x_2, \\ldots, x_d\\) de \\(\\operatorname{rad} B\\) tels que \\(\\{x_1, \\ldots, x_d\\}\\) engendre un idéal primaire pour \\(\\operatorname{rad} B\\). Alors \\(B\\) est une \\(A\\)-algèbre finie, où \\(A = k[[x_1, \\ldots, x_d]]\\), et \\(\\bar{B}\\) est la \\(k[[x_2, \\ldots, x_d]] = \\bar{A}\\)-algèbre \\(B/x_1 B\\). Comme dans le cas (ii) \\(\\bar{B}\\) est analytiquement séparable, on peut dans ce cas choisir les éléments \\(x_2, \\ldots, x_d\\) d'une telle manière que \\(\\bar{B}\\) devienne une \\(k[[x_2, \\ldots, x_d]]\\)-algèbre génériquement étale. Alors il s'ensuit immédiatement que \\(B\\) est également une \\(A\\)-algèbre génériquement étale, ce qui est aussi vrai, bien entendu, dans le cas (i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(b \\in B\\) un élément qui engendre l'extension de corps \\(R(B)\\) sur \\(k((x))\\). Soit \\(\\varepsilon \\in k[[x]]\\) le discriminant de l'équation unitaire irréductible de \\(b\\) au-dessus de \\(k[[x]]\\). Dans le cas (ii), on peut choisir \\(b\\) de façon que \\(x_1\\) ne divise pas \\(\\varepsilon\\). Écrivons de plus \\(\\operatorname{Spec} B - U = V(x_1) \\cup Y\\), où \\(Y\\) ne contient aucune composante irréductible de \\(V(x_1)\\). Soit \\(C\\) l'anneau \\(\\Gamma(Y, \\mathcal{O}_Y)\\), où on prend \\(Y\\) avec sa structure induite réduite. En changeant au besoin les \\(x_2, \\ldots, x_d\\), on peut supposer que \\(V(x_d)\\) n'est pas contenu dans l'image de \\(Y\\) dans \\(\\operatorname{Spec} A\\), et que de plus dans le cas (ii) \\(V(x_d)\\) n'est pas contenu dans \\(V(\\varepsilon)\\).</p>"
+    },
+    {
+     "id": "XIX.6.8",
+     "type": "theorem",
+     "label": "6.8",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">6.8</span></div>\n  <div class=\"thm-body\"><p>Soit \\(A_0 = k[[x_1, \\ldots, x_{d-1}]]\\{x_d\\}\\) le localisé strict de \\(k[[x_1, \\ldots, x_{d-1}]][x_d]\\) au point \\(x_1 = x_2 = \\cdots = x_d = 0\\). Sous les conditions ci-dessus, il existe une \\(A^0\\)-algèbre \\(B^0\\), un ouvert affine \\(U^0 \\subset \\operatorname{Spec} B^0\\), et un isomorphisme \\(A \\otimes_{A^0} B^0 \\simeq B\\) tel que l'ouvert de \\(\\operatorname{Spec} B\\) induit de \\(U^0\\) soit \\(U\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de ce lemme est analogue à celle de 1.5 : il suffit de trouver des \\(A^0\\)-algèbres \\(B^0\\), \\(C^0\\) et des isomorphismes \\(A \\otimes_{A^0} B^0 \\simeq B\\), \\(A \\otimes_{A^0} C^0 \\simeq C\\), parce qu'alors il existera ([3] 1.4) un morphisme (surjectif) et un seul \\(B^0 \\to C^0\\) qui induise le morphisme \\(B \\to C\\). On prend donc \\(U^0 = \\operatorname{Spec} B^0 - \\{(\\operatorname{Spec} C^0) \\cup V(x_1)\\}\\), et on constate immédiatement que \\(U\\) est induit de \\(U^0\\). L'existence de \\(C^0\\), et de \\(B^0\\) dans le cas (ii), se prouve comme dans 1.5. L'existence de \\(B^0\\) dans le cas (i) est conséquence de ([3] 5.1). (On peut aussi le démontrer directement en appliquant le lemme de Abyankhar à la ramification le long de \\(\\{x_1 = 0\\}\\), et descente).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous pouvons maintenant achever la démonstration de 6.7. En appliquant encore une fois 4.3, on trouve que\n\\[H^q(U, \\mathbb{Z}/\\ell) \\simeq H^q(U^0, \\mathbb{Z}/\\ell),\\]\nd'où il résulte qu'il suffit de démontrer que ce dernier groupe est nul pour \\(q &gt; d\\). Or \\(\\operatorname{Spec} A^0\\) est limite de schémas affines et étales au-dessus de \\(k[[x_1, \\ldots, x_{d-1}]][x_d]\\), donc \\(\\operatorname{Spec} B^0\\) est limite de schémas de type fini au-dessus de \\(\\operatorname{Spec} k[[x_1, \\ldots, x_{d-1}]]\\) dont chaque fibre est de dimension \\(\\leqslant 1\\). Puisque \\(U^0 \\subset \\operatorname{Spec} B^0[1/x_1]\\), on a\n\\[U^0 = \\varprojlim U^0_\\alpha\\]\noù \\(U^0_\\alpha\\) est affine de type fini au-dessus du schéma \\(V^0 = \\operatorname{Spec} k[[x_1, \\ldots, x_{d-1}]][1/x_1]\\) et où chaque fibre de \\(U^0_\\alpha/V^0\\) est de dimension \\(\\leqslant 1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f^0 : U^0 \\to V^0\\) le morphisme structural. Puisque les fibres de \\(f^0_\\alpha\\) sont toutes de dimension \\(\\leqslant 1\\), on a pour \\(v \\in V^0\\)\n\\[\\delta(\\mathbb{Z}/\\ell, f^0_\\alpha, v) \\leqslant \\dim \\mathcal{O}_{V^0,v} + 1 \\leqslant d-1\\]\n(parce que \\(\\dim \\mathcal{O}_{V^0,v} \\leqslant d-2\\)). L'hypothèse de récurrence sur \\(d\\) est donc applicable au morphisme \\(f^0\\), et on trouve, en appliquant 6.1,\n\\[R^q f^0_{\\alpha*}(\\mathbb{Z}/\\ell) = 0 \\quad \\text{au point } v \\text{ si } q &gt; \\dim \\mathcal{O}_{V^0,v} + 1,\\]\ni.e. si \\(q &gt; d - \\dim \\bar{v}\\). Donc \\(R^q f^0_{\\alpha*}(\\mathbb{Z}/\\ell) \\neq 0\\) au point \\(v\\) implique que \\(\\dim \\bar{v} \\leqslant d-q\\). Donc pour l'inclusion\n\\[i : V^0 \\longrightarrow \\operatorname{Spec} k[[x_1, \\ldots, x_{d-1}]] \\quad (\\text{cf } (6.0))\\]\non a\n\\[\\delta(R^q f^0_{\\alpha*}(\\mathbb{Z}/\\ell)) \\leqslant d-q,\\]\net l'hypothèse de récurrence, sous la forme 6.1 bis, appliquée au morphisme \\(i\\), implique que\n\\[H^p(V^0, R^q f^0_{\\alpha*}(\\mathbb{Z}/\\ell)) = 0 \\quad \\text{si} \\quad p+q &gt; d.\\]\nLa suite spectrale de Leray\n\\[E_2^{pq} = H^p(V^0, R^q f^0_{\\alpha*}(\\mathbb{Z}/\\ell)) \\Longrightarrow H^{p+q}(U^0, \\mathbb{Z}/\\ell)\\]\nimplique donc que \\(H^n(U^0_\\alpha, \\mathbb{Z}/\\ell) = 0\\) si \\(n &gt; d\\), et comme \\(U^0\\) est limite des \\(U^0_\\alpha\\), on trouve que de même\n\\[H^n(U^0, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad n &gt; d.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci achève la démonstration de 6.7, donc du théorème 6.1 en caractéristique 0.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn9",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). </p>"
+    },
+    {
+     "id": "XIX-fn10",
+     "number": "(∗)",
+     "html": "<p>(∗) Dépend de la résolution des singularités (cf. Introduction). </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-7",
+   "title": "7. Morphismes affines - fin de la démonstration.",
+   "blocks": [
+    {
+     "id": "XIX.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.7\">7. Morphismes affines - fin de la démonstration.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons que pour terminer la démonstration de 6.1 en caractéristique \\(p &gt; 0\\) (toujours sous l'hypothèse de résolution), on s'était ramené par 6.6 à démontrer l'assertion suivante pour \\(d \\geqslant 2\\) :</p>"
+    },
+    {
+     "id": "XIX.7.1",
+     "type": "theorem",
+     "label": "7.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.7.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">7.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(B\\) un anneau local complet, normal, d'égales caractéristiques, à corps résiduel séparablement clos, et de dimension \\(d\\). Soit \\(U \\subset \\operatorname{Spec} B\\) un ouvert affine tel qu'il existe \\(x \\in \\operatorname{rad} B\\) qui soit inversable sur \\(U\\). Alors\n  \\[H^q(U, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; d.\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De plus, par hypothèse de récurrence, on peut supposer que 6.1 soit vrai pour les valeurs de \\(\\delta &lt; d\\), et que 7.1 soit déjà démontré dans le cas particulier 6.7 (ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons d'abord que la condition que \\(B\\) soit normal n'est pas importante. En effet, soient \\(B\\) arbitraire, \\(\\pi : \\bar{B} \\to B\\) le normalisé de \\(B\\), et \\(\\bar{U} \\subset \\operatorname{Spec} \\bar{B}\\) l'image inverse de \\(U\\). On a une suite exacte\n\\[0 \\longrightarrow (\\mathbb{Z}/\\ell)_U \\longrightarrow \\pi_*(\\mathbb{Z}/\\ell)_{\\bar{U}} \\longrightarrow C \\longrightarrow 0,\\]\noù la dimension du support de \\(C\\) est \\(&lt; d\\), donc \\(H^q(U,C) = 0\\) si \\(q &gt; d-1\\). Puisque \\(H^q(U, \\pi_*) = H^q(\\bar{U},.)\\) (VIII 5.6), on voit que\n\\[(7.2)\\qquad \\begin{aligned} H^q(U, \\mathbb{Z}/\\ell) &amp;= 0 \\quad \\text{si} \\quad q &gt; d \\quad \\text{équivaut à} \\\\ H^q(\\bar{U}, \\mathbb{Z}/\\ell) &amp;= 0 \\quad \\text{si} \\quad q &gt; d. \\end{aligned}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>7.3.0.</strong> On va rappeler brièvement et sans démonstration des propriétés de la notion de séparabilité formelle dont nous avons besoin. Le lecteur peut consulter (EGA IV 18.11.10, 18.11.11) : Soit \\(A\\) une \\(k\\)-algèbre locale noethérienne complète dont le corps résiduel soit une extension finie de \\(k\\), et notons \\(A'\\) le complété de l'anneau local \\(A \\otimes_k k'\\) (où \\(k' = k^{1/p}\\)). Alors l'extension \\(A \\to A'\\) est radicielle (éventuellement infinie), comme on voit facilement — c'est l'exemple bien connu de Nagata. Il est donc inoffensif pour le calcul de la cohomologie étale de remplacer \\(A\\) par \\(A'\\) (VIII 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or la condition sur une algèbre \\(A\\) équidimensionelle de dimension \\(d\\) d'être formellement séparable, c'est-à-dire, d'être une extension finie génériquement étale de \\(k[[x_1,\\ldots,x_d]]\\), s'exprime en termes du module \\(\\hat{\\Omega}^1_{A/k}\\) (EGA IV 18.11.10), ou du critère jacobien (EGA \\(\\mathrm{O}_{\\mathrm{IV}}\\) 22.6, IV 7.1) <sup class=\"footnote-ref\"><a id=\"XIX-fn11ref\" href=\"#XIX-fn11\">(∗)</a></sup>, et on voit que si \\(A\\) n'est pas analytiquement séparable, alors la \\(k'\\)-algèbre \\(A'\\) n'est pas réduite. On peut par exemple se réduire pour la démonstration au cas où \\(A\\) est donné par une équation \\(f = 0\\), \\(f \\in k[[x_1,\\ldots,x_{d+1}]]\\) et appliquer le critère jacobien et le lemme suivant dont nous laissons la démonstration agréable au lecteur :</p>"
+    },
+    {
+     "id": "XIX.7.3",
+     "type": "theorem",
+     "label": "7.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.7.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">7.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f(x_1,\\ldots,x_n) \\in k[[x_1,\\ldots,x_n]]\\) une série formelle. Supposons que pour chaque \\(i = 1,\\ldots,n\\) il existe un élément inversible \\(u_i \\in k[[x_1,\\ldots,x_n]]\\) tel que \\(u_i f\\) soit une série en \\(x_i^p\\) et en les \\(x_1,\\ldots,x_{i-1},x_{i+1},\\ldots,x_n\\). Alors il existe un élément inversible \\(v \\in k[[x_1,\\ldots,x_n]]\\) tel que\n  \\[vf \\in k[[x_1^p, \\ldots, x_n^p]].\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte facilement qu'en appliquant un nombre fini de fois le procédé de remplacer \\((A,k)\\) par \\((\\bar{A}',k')\\), où \\(\\bar{A}'\\) est le normalisé de \\(A'\\), on se ramène à la situation où \\(A\\) est bien formellement séparable. De même, on peut démontrer que pour un \\(x \\in \\operatorname{rad} A\\) donné, l'anneau \\((A/(x))_{\\text{réd}}\\) deviendra une algèbre formellement séparable par le même procédé, appliqué à l'algèbre \\(A\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En appliquant VIII 1.1 et 7.2, on trouve</p>"
+    },
+    {
+     "id": "XIX.7.4",
+     "type": "theorem",
+     "label": "7.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.7.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">7.4</span></div>\n  <div class=\"thm-body\"><p>Il suffit de démontrer (7.1) sous la condition supplémentaire que \\(B\\) contienne un corps \\(k\\) au-dessus duquel \\(B/\\operatorname{rad} B\\) soit finie, et tel que la \\(k\\)-algèbre \\((B/(x))_{\\text{réd}}\\) soit formellement séparable.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de 7.1 dans ce cas consiste en une réduction au cas particulier qu'on a traité dans 6.7 (ii) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Avec les notations de 7.1, 7.4, soit\n\\[D(x) = \\sum_i r_i X_i\\]\nle diviseur de \\(x\\), de sorte que chaque \\(X_i\\) soit un sous-schéma irréductible fermé de \\(\\operatorname{Spec} B\\) de codimension 1 qui est formellement séparable au-dessus de \\(k\\) (c'est-à-dire, tel que \\(B/\\mathfrak{J}(X_i)\\) soit une \\(k\\)-algèbre formellement séparable, ce qui équivaut d'ailleurs à l'assertion que \\((B/(x))_{\\text{réd}}\\) soit formellement séparable). Choisissons \\(y \\in \\operatorname{rad} B\\) tel que l'on ait\n\\[D(y) = \\sum_i (r_i-1)X_i + \\Gamma\\]\noù \\(\\Gamma\\) ne contient aucun \\(X_i\\), et considérons l'éclatement\n\\[f : Z \\longrightarrow \\operatorname{Spec} B\\]\nde l'idéal \\((x,y)\\). Les spectres des anneaux \\(B[y/x]\\) et \\(B[x/y]\\) forment un recouvrement ouvert affine de \\(Z\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(B_1\\) le localisé strict de \\(B[x/y]\\) en l'idéal maximal engendré par \\((\\operatorname{rad} B, x/y)\\). Pour chaque point fermé \\(Q\\) de la fibre fermée de \\(\\operatorname{Spec} B[y/x] \\to \\operatorname{Spec} B\\), notons \\(A_Q\\) le localisé strict de \\(B[y/x]\\) en \\(Q\\), et \\(U_Q\\) l'ouvert affine de \\(\\operatorname{Spec} A_Q\\) image inverse de \\(U\\).</p>"
+    },
+    {
+     "id": "XIX.7.5",
+     "type": "theorem",
+     "label": "7.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XIX.7.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">7.5</span></div>\n  <div class=\"thm-body\"><p>Pour démontrer 7.1 pour l'anneau \\(B\\), il suffit de démontrer que pour \\(q &gt; d\\) (\\(\\geqslant 2\\)) on a</p>\n  <p>(i) \\(\\quad H^q(\\operatorname{Spec} B_1[y/x], \\mathbb{Z}/\\ell) = 0\\)</p>\n  <p>et</p>\n  <p>(ii) \\(\\quad H^q(U_Q, \\mathbb{Z}/\\ell) = 0\\) pour chaque \\(Q\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. On a des immersions ouvertes\n\\[U \\hookrightarrow \\operatorname{Spec} B[1/x] \\hookrightarrow \\operatorname{Spec} B[y/x],\\]\ndonc un diagramme\n\\[\\xymatrix@R=2.2em@C=1.2em{ U \\ar[rr]^-{i} \\ar[dr]_{k} &amp; &amp; \\operatorname{Spec} B[y/x] \\ar[dl]^{j} \\\\ &amp; Z &amp; }\\]\nSi \\(Q\\) est un point fermé de la fibre fermée de \\(\\operatorname{Spec} B[y/x] \\to \\operatorname{Spec} B\\), on a \\((R^q i_* \\mathbb{Z}/\\ell)_Q = 0\\) si \\(q &gt; 0\\), par hypothèse. Pour chaque point \\(P\\) de \\(\\operatorname{Spec} B[y/x]\\) qui n'est pas fermé dans la fibre fermée de \\(\\operatorname{Spec} B[y/x] \\to \\operatorname{Spec} B\\), on a \\(\\delta(F,i,P) &lt; d\\), où \\(F = (\\mathbb{Z}/\\ell)_U\\) (notation de (6.0)). Donc en appliquant l'hypothèse de récurrence et 6.1 au morphisme \\(i\\), on trouve que pour le morphisme \\(\\operatorname{Spec} B[y/x] \\to \\operatorname{Spec} B\\) on a\n\\[\\delta(R^q i_* \\mathbb{Z}/\\ell) \\leqslant d-q.\\]\nPar conséquent, l'hypothèse de récurrence sous la forme 6.1 bis, appliqué à ce dernier morphisme, implique que\n\\[H^p(\\operatorname{Spec} B[y/x], R^q i_* \\mathbb{Z}/\\ell) = 0\\]\nsi \\(q &gt; 0\\) et \\(p &gt; d-q\\). Avec la suite spectrale de Leray\n\\[E_2^{pq} = H^p(\\operatorname{Spec} B[y/x], R^q i_* \\mathbb{Z}/\\ell) \\Longrightarrow H^{p+q}(U, \\mathbb{Z}/\\ell),\\]\non se ramène, pour la démonstration de 7.1, à démontrer que\n\\[H^p(\\operatorname{Spec} B[y/x], i_* \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad p &gt; d.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a une suite exacte\n\\[(7.6)\\qquad 0 \\longrightarrow \\mathbb{Z}/\\ell \\longrightarrow i_*(\\mathbb{Z}/\\ell)_U \\longrightarrow C \\longrightarrow 0\\]\noù \\(\\delta(C) &lt; d\\). Il suffit donc (encore par récurrence) de démontrer que\n\\[(7.7)\\qquad H^p(\\operatorname{Spec} B[y/x], \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad p &gt; d.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or l'immersion ouverte \\(\\operatorname{Spec} B[y/x] \\xrightarrow{\\ j\\ } Z\\) est obtenue en enlevant de \\(Z\\) le sous-ensemble fermé \\(C\\) \"à l'infini\", et s'identifie dans l'autre ouvert \\(\\operatorname{Spec} B[x/y]\\) de \\(Z\\) à l'ouvert \\(C = V(x/y)\\). Les \\(R^q j_* \\mathbb{Z}/\\ell\\) sont concentrés sur \\(C\\), et le morphisme \\(C \\to \\operatorname{Spec} B\\) est une immersion fermée. Par conséquent, on a \\(H^p(Z, R^q j_* \\mathbb{Z}/\\ell) = 0\\) si \\(p\\) et \\(q &gt; 0\\). Puisque la fibre fermée de \\(Z \\to \\operatorname{Spec} B\\) est de dimension 1 et que ce morphisme est propre, XII 5.3 bis implique que \\(H^p(Z, j_* \\mathbb{Z}/\\ell) = 0\\) si \\(p &gt; 2\\). La suite spectrale\n\\[E_2^{pq} = H^p(Z, R^q j_* \\mathbb{Z}/\\ell) \\Longrightarrow H^{p+q}(\\operatorname{Spec} B[y/x], \\mathbb{Z}/\\ell)\\]\ndonne donc des isomorphismes\n\\[H^q(\\operatorname{Spec} B[y/x], \\mathbb{Z}/\\ell) \\simeq H^0(Z, R^q j_* \\mathbb{Z}/\\ell) \\simeq (R^q j_* \\mathbb{Z}/\\ell)_P\\]\nsi \\(q \\geqslant 2\\), où \\(P\\) est le point \"à l'infini\" de \\(Z\\). Ces fibres ne sont autres (VIII 5) que\n\\[(R^q j_* \\mathbb{Z}/\\ell)_P \\simeq H^q(\\operatorname{Spec} B_1[y/x], j_* \\mathbb{Z}/\\ell).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après 7.7, il suffit donc de démontrer que ces derniers groupes sont nuls si \\(q &gt; d\\) (\\(\\geqslant 2\\)). On a une suite exacte analogue à 7.6 qui, jointe à l'hypothèse de récurrence montre qu'il suffit que\n\\[H^q(\\operatorname{Spec} B_1[y/x], \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; d,\\]\nd'où le lemme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Démonstration de 7.5 (i).</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons l'ensemble fermé \\(C = V(x/y)\\) de \\(\\operatorname{Spec} B[x/y]\\), avec la structure induite réduite. On voit immédiatement que l'immersion fermée de \\(C\\) dans \\(\\operatorname{Spec} B\\) induite par le morphisme \\(Z \\to \\operatorname{Spec} B\\) identifie \\(C\\) au sous-schéma fermé \\(X = \\bigcup X_i\\) de \\(\\operatorname{Spec} B\\). Puisque\n\\[\\begin{aligned} D(x) &amp;= \\sum r_i X_i \\\\ D(y) &amp;= \\sum (r_i-1)X_i + \\Gamma, \\end{aligned}\\]\nl'élément \\(x/y\\) engendre l'idéal \\(\\mathfrak{J}(X_i)\\) localement au point générique de \\(X_i\\), où l'anneau local est un anneau de valuation discrète parce que \\(B\\) est normal. Par conséquent, le morphisme \\(\\operatorname{Spec} B[x/y] \\to \\operatorname{Spec} B\\) est un isomorphisme au voisinage d'un tel point, et l'élément \\(x/y\\) s'annule avec l'ordre 1 sur chacune des composantes irréductibles \\(C_i\\) (correspondant à \\(X_i\\)) de \\(C\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque l'ensemble fermé \\(C\\) se relève à \\(\\operatorname{Spec} B_1\\), cela reste vrai si l'on remplace l'anneau \\(B[x/y]\\) par \\(B_1\\), donc \\(B_1/(x/y)\\) est un anneau complet qui est une \\(k\\)-algèbre formellement séparable.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour démontrer 7.5 (i), on peut d'abord appliquer 4.3, qui permet de remplacer \\(B_1\\) par son complété \\(\\hat{B}_1\\), ce qui n'affecte pas l'anneau \\(B_1/(x/y)\\). D'après 7.2, on peut de plus remplacer \\(\\hat{B}_1\\) par son normalisé \\(\\bar{B}_1\\). Puisque \\(B_1\\) (donc \\(\\hat{B}_1\\)) est déjà régulier aux points génériques des \\(C_i\\), le morphisme \\(\\operatorname{Spec} \\bar{B}_1 \\to \\operatorname{Spec} \\hat{B}_1\\) est un isomorphisme en ces points, donc \\(\\bar{B}_1/(x/y)\\) est encore une \\(k\\)-algèbre formellement séparable. On est ainsi ramené au cas particulier 6.7 (ii), d'où le résultat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Démonstration de 7.5 (ii).</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Choisissons le point \\(Q\\) de la fibre fermée de \\(\\operatorname{Spec} B[y/x] \\to \\operatorname{Spec} B\\). Le localisé strict \\(A_Q\\) s'écrit comme limite\n\\[A_Q = \\varinjlim A\\]\noù \\(A\\) parcourt une catégorie filtrante d'anneaux étales et de type fini au-dessus de \\(B[y/x]\\). Soit l'ouvert affine \\(U_A\\) de \\(\\operatorname{Spec} A\\), image inverse de \\(U\\). Puisque \\(x\\) est inversible sur \\(U_A\\), le morphisme \\(U_A \\to \\operatorname{Spec} B\\) est étale, et \\(U_A\\) est normal. Par conséquent, si l'on dénote par \\(C\\) le normalisé de \\(B\\) dans le corps \\(R(A)\\) des fonctions rationnelles sur \\(A\\), on a une immersion ouverte\n\\[U_A \\longrightarrow \\operatorname{Spec} C.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit (VII 5.7) de démontrer que pour chaque \\(A\\), l'image de \\(H^q(U_A, \\mathbb{Z}/\\ell)\\) dans \\(H^q(U_Q, \\mathbb{Z}/\\ell)\\) est nulle si \\(q &gt; d\\). Puisque \\(x\\) est inversible sur \\(U_Q\\), le morphisme \\(U_Q \\to \\operatorname{Spec} A\\) se factorise par rapport à \\(\\operatorname{Spec} A[1/f]\\), si \\(f \\in B\\) est un élément arbitraire tel que \\(f\\) soit divisible par \\(x\\) dans \\(B[y/x]\\) et que \\(f/x\\) ne s'annule pas au point \\(Q\\). Il suffit ainsi de démontrer que pour un tel \\(f\\) convenable, on a\n\\[H^q(U_{A,f}, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; d,\\]\noù \\(U_{A,f} = U_A - V(f)\\) est l'ouvert affine de \\(\\operatorname{Spec} A[1/f]\\), qui est aussi un ouvert affine de \\(\\operatorname{Spec} C\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(c \\in k\\) un élément tel que \\(y/x + c\\) ne s'annule pas en \\(Q\\), et soit \\(J\\) l'idéal dans \\(B\\) de l'ensemble fermé \\(\\Gamma \\cap X\\). Alors si\n\\[(7.8)\\qquad f \\equiv y + cx \\quad (\\bmod J^N) \\qquad N &gt; 0,\\]\nl'élément \\(f\\) satisfait à la condition ci-dessus : En effet, on voit immédiatement que dans \\(\\operatorname{Spec} B[y/x]\\) on a \\(V(J) = V(x)\\). Donc (7.8) implique bien que \\(f\\) est divisible par \\(x\\), d'où\n\\[f/x \\equiv y/x + c \\quad (\\bmod J).\\]\nPuisque \\(J\\) s'annule en \\(Q\\), et que \\(y/x + c\\) n'est pas nul en \\(Q\\), ceci démontre notre assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(\\Gamma \\cap X\\) est un sous-ensemble fermé de \\(\\operatorname{Spec} B\\) de codimension 2. Par conséquent, on peut choisir un \\(f\\) satisfaisant à (7.8), appelons-le \\(z\\), tel que \\(V(z) \\cap V(y)\\) soit également de codimension 2. Choisissons aussi des éléments \\(x_3, \\ldots, x_d\\) tels que \\(y,z,x_3, \\ldots, x_d\\) soit un système de paramètres de l'anneau \\(B\\). Alors \\(B\\), donc \\(C\\) aussi, est une \\(k[[y,z,x_3, \\ldots, x_d]]\\)-algèbre finie.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C^0\\) le normalisé de \\(k[[y,z,x_3, \\ldots, x_d]]\\) dans la clôture séparable de \\(k((y,z,x))\\) dans le corps des fonctions rationnelles \\(R(C)\\), de sorte que \\(C\\) soit une extension radicielle de \\(C^0\\), et que \\(C^0\\) soit une extension génériquement étale de \\(k((y,z,x))\\) (où \\(x = x_3, \\ldots, x_d\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Choisissons une combinaison linéaire\n\\[f = az + by \\qquad (a,b \\in k),\\]\ntelle que le morphisme\n\\[\\operatorname{Spec} C^0 \\longrightarrow \\operatorname{Spec} k[[z,y,x]]\\]\nsoit étale au-dessus du point générique de \\(V(f)\\), et tel que \\(f/x\\) ne s'annule pas en \\(Q\\) dans \\(\\operatorname{Spec} B[y/x]\\). Il suffit de démontrer que\n\\[H^q(U_{A,f}, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; d,\\]\ndonc (VIII 1.1) de démontrer que\n\\[H^q(U^0_{A,f}, \\mathbb{Z}/\\ell) = 0 \\quad \\text{si} \\quad q &gt; d,\\]\noù \\(U^0_{A,f}\\) est l'ouvert de \\(\\operatorname{Spec} C^0\\) correspondant à l'ouvert \\(U_{A,f}\\) de \\(\\operatorname{Spec} C\\), qui est un ouvert affine, comme on voit par descente (EGA IV 2.7.1 (xiii)). Mais par construction, l'élément \\(f\\) de \\(C^0\\) est inversible sur \\(U^0_{A,f}\\), et \\(C^0/(f)\\) est une \\(k\\)-algèbre formellement séparable. On est donc dans la situation de 6.7 (ii), ce qui achève la démonstration de 7.5 (ii), donc de 6.1.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XIX-fn11",
+     "number": "(∗)",
+     "html": "<p>(∗) Le corédacteur de ce séminaire n'est pas parvenu à élucider la signification de cette référence à une situation qui lui semble bien différente, et la justification de l'assertion qui suit. A. G. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XIX-bibliographie",
+   "title": "Bibliographie",
+   "blocks": [
+    {
+     "id": "XIX.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.bibliographie\">Bibliographie</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] ABYANKHAR, S. <em>Local uniformization on algebraic surfaces over ground fields of characteristic \\(p \\neq 0\\)</em>. Annals of Math. vol. 63 (1963), et <em>Résolution of singularities of embedded algebraic surfaces</em>, Academic Press (1966).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] ABYANKHAR, S. <em>Resolution of singularities of arithmetical surfaces</em>. Arithmetical Algebraic Geometry, New York (1966).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] ARTIN, M. <em>Etale coverings of schemes over hensel rings</em>, Amer. Journal Math. vol 88, n°4 p 915-934 (1966).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] HIRONAKA, H. <em>Resolution of singularities of an algebraic variety over a field of characteristic zero I, II</em>. Annals of Math. vol. 79, n° 1, 2 (1964).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] WEIERSTRASS, K. <em>Einige auf die analytischen Functionen mehrerer Veränderlichen sich beziehende Sätze</em>. Mathematische Werke von K. Weierstrass, Bd 2, Berlin (1895).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[6] BOURBAKI, N. <em>Algèbre commutative</em>, Chap. 3.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par M. Artin"
+}

@@ -1,0 +1,1029 @@
+{
+ "chapter_id": "V",
+ "title": "EXPOSÉ V CONSTRUCTION OF QUOTIENT SCHEMES",
+ "number": "V",
+ "pages": [
+  {
+   "id": "V",
+   "title": "EXPOSÉ V CONSTRUCTION OF QUOTIENT SCHEMES",
+   "blocks": [
+    {
+     "id": "V",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"V\">EXPOSÉ V<br>CONSTRUCTION OF QUOTIENT SCHEMES<span class=\"author\">by P. Gabriel</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The purpose of this exposé is to prove the theorems stated in TDTE III. If X\nand T are two objects of a category \\(\\mathscr{C}\\) we write \\(X(T)\\) instead of\n\\(\\mathrm{Hom}_{\\mathscr{C}}(T,X)\\). Similarly, if \\(\\varphi : Y \\to X\\) and \\(f : U \\to T\\) are two arrows of \\(\\mathscr{C}\\),\n\\(\\varphi(T)\\) denotes the map \\(g \\mapsto \\varphi \\circ g\\) from \\(Y(T)\\) to \\(X(T)\\), and \\(Y(f)\\) the map\n\\(g \\mapsto g \\circ f\\) from \\(Y(T)\\) to \\(Y(U)\\). Finally, if P is a scheme, we denote by \\(\\underline{P}\\) the set\nunderlying P.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Exceptionally, in the present exposé we do not follow the convention\nstated in <a class=\"ref\" href=\"#IV.4.6.15\">IV 4.6.15</a> concerning the notation for quotients (loc. cit. top of page 68), because\nhere we wish to give a construction of quotients that applies equally to\n\"equivalence prerelations\" which are not equivalence relations.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-1",
+   "title": "1. \\(\\mathscr{C}\\)-groupoids",
+   "blocks": [
+    {
+     "id": "V.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.1\">1. \\(\\mathscr{C}\\)-groupoids</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\mathscr{C}\\) is a category in which products and fibered products exist. Let us first recall\nthat a diagram\n\\[\n\\xymatrix{\nX_1 \\ar@&lt;0.6ex&gt;[r]^{d_1} \\ar@&lt;-0.6ex&gt;[r]_{d_0} &amp; X_0 \\ar[r]^{p} &amp; Y\n}\n\\]\nin \\(\\mathscr{C}\\) is said to be <em>exact</em> if \\(pd_0 = pd_1\\) and if, for every \\(T \\in \\mathscr{C}\\), \\(T(p)\\) is a bijection from\n\\(T(Y)\\) onto the subset of \\(T(X_0)\\) consisting of the arrows \\(f : X_0 \\to T\\) such that \\(fd_0 = fd_1\\). We also\nsay that \\((Y,p)\\) is the <em>cokernel</em> of \\((d_0,d_1)\\) and we write\n\\[\n(Y,p) = \\mathrm{Coker}(d_0,d_1).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let for example \\(\\mathscr{C}\\) be the category of ringed spaces. In this case, a cokernel \\((Y,p)\\)\nalways exists, and it admits the following description: the space underlying\nY is obtained from \\(X_0\\) by identifying the points \\(d_0(x)\\) and \\(d_1(x)\\) and endowing\nY with the quotient topology. The canonical map \\(\\pi : X \\to Y\\) and \\(d_0, d_1\\) then induce\na double arrow of sheaves of rings on Y\n\\[\n\\xymatrix{\n\\pi_*(\\mathscr{O}_0) \\ar@&lt;0.6ex&gt;[r]^{\\delta_0} \\ar@&lt;-0.6ex&gt;[r]_{\\delta_1} &amp; \\pi_*(d_{0*}\\mathscr{O}_1) = \\pi_*(d_{1*}\\mathscr{O}_1)\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><!-- p.158 -->where \\(\\mathscr{O}_i\\) is the structure sheaf of \\(X_i\\). As the sheaf of rings on Y one takes\nthe subsheaf of \\(\\pi_*(\\mathscr{O}_0)\\) whose sections s are such that \\(\\delta_0(s) = \\delta_1(s)\\). The arrow\np is defined in the obvious way. In this exposé, we study the existence of\n\\(\\mathrm{Coker}(d_0,d_1)\\) when the double arrow \\((d_0,d_1)\\) is embedded in a richer\ncontext; more precisely, denote by \\(X_2 = X_1 \\times_{d_1,d_0} X_1\\) the fibered product of the diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(*)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\n&amp; X_1 \\ar[d]^{d_1} \\\\\nX_1 \\ar[r]_{d_0} &amp; X_0\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and by \\(d_0'\\) and \\(d_2'\\) the two canonical projections of \\(X_2\\) onto \\(X_1\\); by\ndefinition we thus have a cartesian square</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(0)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\nX_2 \\ar[r]^{d_0'} \\ar[d]_{d_2'} &amp; X_1 \\ar[d]^{d_1} \\\\\nX_1 \\ar[r]_{d_0} &amp; X_0\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, let us give ourselves a third arrow \\(d_1' : X_2 \\to X_1\\); we say that\n\\((d_0, d_1 : X_1 \\rightrightarrows X_0, d_1')\\) is a \\(\\mathscr{C}\\)-groupoid if for every object T of \\(\\mathscr{C}\\), \\(X_1(T)\\)\nis the set of arrows of a groupoid \\(X_*(T)\\) whose set of objects is \\(X_0(T)\\),\nwhose source map is \\(d_1(T)\\), whose target map is \\(d_0(T)\\), and whose composition map\nis \\(d_1'(T)\\) (as usual we identify \\((X_1 \\times_{d_1,d_0} X_1)(T)\\) with\n\\(X_1(T) \\times_{d_1(T),d_0(T)} X_1(T)\\); recall also that a groupoid is a category all of\nwhose arrows are invertible). If \\(\\varphi\\) is an arrow of the groupoid \\(X_*(T)\\), the map\n\\(f \\mapsto \\varphi \\circ f\\) is a bijection from the set of arrows f whose target coincides with\nthe source of \\(\\varphi\\) onto the set of arrows having the same target as \\(\\varphi\\). One easily sees\nthat this fact can be expressed by saying that <em>the square</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\nX_2 \\ar[r]^{d_1'} \\ar[d]_{d_0'} &amp; X_1 \\ar[d]^{d_0} \\\\\nX_1 \\ar[r]_{d_0} &amp; X_0\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>is cartesian.</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Similarly, the map \\(g \\mapsto g \\circ \\varphi\\) is a bijection from the set of arrows g\nof \\(X_*(T)\\) whose source is the target of \\(\\varphi\\) onto the set of arrows having the same\nsource as \\(\\varphi\\). This fact can again be expressed by saying that <em>the square</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(2)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\nX_2 \\ar[r]^{d_1'} \\ar[d]_{d_2'} &amp; X_1 \\ar[d]^{d_1} \\\\\nX_1 \\ar[r]_{d_1} &amp; X_0\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>is cartesian.</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On the other hand, let us denote by \\(s : X_0 \\to X_1\\) the unique arrow of \\(\\mathscr{C}\\) such that \\(s(T) : X_0(T) \\to\nX_1(T)\\) assigns to every object of \\(X_*(T)\\) the identity arrow of that object. The arrow s\nsatisfies the equalities\n\\[\nd_1 s = \\mathrm{id}_{X_0}, \\qquad (3) \\qquad\\qquad\\qquad d_0 s = \\mathrm{id}_{X_0}. \\qquad (3\\text{ bis})\n\\]\nFinally, the associativity of the composition maps \\(d_1'(T)\\) is expressed by the commutativity\nof the diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(4)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\nX_1\\times_{d_1,d_0} X_1 \\times_{d_1,d_0} X_1 \\ar[rr]^-{d_1' \\times X_1} \\ar[d]_-{X_1 \\times d_1'} &amp; &amp; X_1 \\times_{d_1,d_0} X_1 \\ar[d]^-{d_1'} \\\\\nX_1 \\times_{d_1,d_0} X_1 \\ar[rr]_-{d_1'} &amp; &amp; X_1\n}\n\\]\nConversely, conditions (1), (2) and (4) and the existence of an arrow s satisfying\n(3) imply that \\((X_1 \\rightrightarrows X_0, d_1')\\) is a \\(\\mathscr{C}\\)-groupoid. Condition (3) is harmless;\nit simply ensures that the map \\(d_1(T) : X_1(T) \\to X_0(T)\\) is surjective for every\n\\(T \\in \\mathscr{C}\\). In the rest of this exposé, we mainly use the cartesian squares\n(0), (1) and (2), which we summarize in the diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(0,1,2)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this diagram the two left-hand squares (i.e. squares (0) and (2)) are\ncartesian; the first row is exact and \\(X_2\\) is identified with the fibered product\n\\(X_1 \\times_{d_0,d_0} X_1\\). We use associativity only in an indirect way, for instance\nto guarantee the existence of an arrow s satisfying (3) and (3 bis), or to guarantee\nthe existence of an arrow \\(\\sigma : X_1 \\to X_1\\) such that \\(d_0\\sigma = d_1\\) and \\(d_1\\sigma = d_0\\) (one chooses\n\\(\\sigma\\) in such a way that \\(\\sigma(T) : X_1(T) \\to X_1(T)\\) sends every arrow of \\(X_*(T)\\) to its\ninverse arrow).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><!-- p.160 -->By abuse of language we shall sometimes call a \\(\\mathscr{C}\\)-groupoid a diagram\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\nsuch that (0), (1) and (2) are cartesian, (4) is commutative, and there exists s satisfying\n(3). The object \\(X_2\\) may thus be \"a\" fibered product of (*) without being \"the\" fibered\nproduct of (*). Instead of the \\(\\mathscr{C}\\)-groupoid \\(X_*\\), we shall also speak of the <em>groupoid \\(X_*\\) with\nbase \\(X_0\\)</em>, or of the <em>equivalence prerelation \\(X_*\\) in \\(X_0\\)</em>.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-2",
+   "title": "2. Examples of \\(\\mathscr{C}\\)-groupoids",
+   "blocks": [
+    {
+     "id": "V.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.2\">2. Examples of \\(\\mathscr{C}\\)-groupoids</h2>"
+    },
+    {
+     "id": "V.2.a",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.2.a\"><strong>a)</strong> Let X be an object of \\(\\mathscr{C}\\) and G a \\(\\mathscr{C}\\)-group acting on X on the left. We\ndenote by \\(d_0 : G\\times X \\to X\\) the arrow defining the action of G on X, by\n\\(d_1 : G\\times X \\to X\\) the projection of the product onto the second factor, by \\(\\mu : G\\times G \\to G\\)\nthe arrow defining the \\(\\mathscr{C}\\)-group structure of G, and finally by \\(\\mathrm{pr}_{2,3}\\) the projection of\n\\(G\\times G\\times X = G\\times(G\\times X)\\) onto the second factor. Then\n\\[\n\\xymatrix{\nG\\times G\\times X \\ar@&lt;1.1ex&gt;[r]^{\\mathrm{pr}_{2,3}} \\ar[r]|-{\\mu\\times X} \\ar@&lt;-1.1ex&gt;[r]_{G\\times d_0} &amp; G\\times X \\ar@&lt;0.6ex&gt;[r]^{d_1} \\ar@&lt;-0.6ex&gt;[r]_{d_0} &amp; X\n}\n\\]\nis a \\(\\mathscr{C}\\)-groupoid.</p>"
+    },
+    {
+     "id": "V.2.b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.2.b\"><strong>b)</strong> Let \\(d_0, d_1 : X_1 \\to X_0\\) be an equivalence pair. If \\(d_0 \\boxtimes d_1 : X_1 \\to X_0\\times X_0\\)\nis the arrow with components \\(d_0\\) and \\(d_1\\), we thus assume that \\((d_0\\boxtimes d_1)(T)\\) is,\nfor every object T of \\(\\mathscr{C}\\), a bijection from \\(X_1(T)\\) onto the graph of an equivalence relation\non \\(X_0(T)\\). The set \\(X_1(T)\\) is consequently identified with the set of pairs \\((x,y)\\)\nof elements of \\(X_0(T)\\) such that \\(x \\sim y\\); similarly, the set\n\\(X_2(T) = (X_1\\times_{d_1,d_0} X_1)(T)\\) is identified with the set of triples \\((x,y,z)\\) of elements\nof \\(X_0(T)\\) such that \\(x \\sim y\\) and \\(y \\sim z\\). There is therefore one and only one arrow \\(d_1' : X_2 \\to X_1\\)\nmaking the squares (1) and (2) commutative: \\(d_1'(T)\\) must send \\((x,y,z) \\in X_2(T)\\) to\n\\((x,z) \\in X_1(T)\\). For this choice of \\(d_1'\\), \\((d_0, d_1 : X_1 \\rightrightarrows X_0, d_1')\\) is a \\(\\mathscr{C}\\)-groupoid.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conversely, consider a \\(\\mathscr{C}\\)-groupoid \\(X_*\\) such that \\(d_0 \\boxtimes d_1 : X_1 \\to X_0\\times X_0\\)\nis a monomorphism. Then \\((d_0,d_1)\\) is an equivalence pair and \\(X_*\\) can be\nreconstructed from \\((d_0,d_1)\\) as explained a few lines above.</p>"
+    },
+    {
+     "id": "V.2.c",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.2.c\"><strong>c)</strong> If \\(p : X \\to Y\\) is an arbitrary arrow of \\(\\mathscr{C}\\) and if \\(\\mathrm{pr}_1\\) and \\(\\mathrm{pr}_2\\) are the two\nprojections of \\(X\\times_{p,p} X\\) onto X, then \\((\\mathrm{pr}_1,\\mathrm{pr}_2) : X\\times_{p,p} X \\rightrightarrows X\\) is an equivalence\npair. We say that p is an <em>effective epimorphism</em> if the diagram\n\\[\n\\xymatrix{\nX\\times_{p,p} X \\ar@&lt;0.6ex&gt;[r]^{\\mathrm{pr}_1} \\ar@&lt;-0.6ex&gt;[r]_{\\mathrm{pr}_2} &amp; X \\ar[r]^{p} &amp; Y\n}\n\\]\nis exact, that is, if \\((Y,p) = \\mathrm{Coker}(\\mathrm{pr}_1,\\mathrm{pr}_2)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let for example S be a noetherian scheme and let \\(\\mathscr{C}\\) be the category of schemes finite\nover S. Let us show that an epimorphism of \\(\\mathscr{C}\\) is not necessarily effective: we\nchoose S equal to \\(\\mathrm{Spec}\\ k[T^3,T^5]\\), where k is a commutative field, Y equal to S and X equal to\n\\(\\mathrm{Spec}\\ k[T]\\). If i is the inclusion of \\(B = k[T^3,T^5]\\) into \\(A = k[T]\\), p is chosen equal to\n\\(\\mathrm{Spec}\\ i\\). In this case \\(X\\times_{p,p} X\\) is identified with \\(\\mathrm{Spec}(A\\otimes_B A)\\) and \\(\\mathrm{Coker}(\\mathrm{pr}_1,\\mathrm{pr}_2)\\) with\n\\(\\mathrm{Spec}\\ B'\\), where \\(B'\\) is the subring of A consisting of the elements a such that \\(a\\otimes_B 1 = 1\\otimes_B a\\). Now\n\\[\nT^7\\otimes_B 1 = (T^2T^5)\\otimes_B 1 = T^2\\otimes_B T^5 = T^2\\otimes_B(T^3T^2) = T^5\\otimes_B T^2 = 1\\otimes_B T^7.\n\\]\nHence \\(T^7\\) belongs to \\(B'\\) but does not belong to B, and \\(\\mathrm{Spec}\\ B'\\) is distinct from \\(\\mathrm{Spec}\\ B\\), whence\nthe counterexample.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-3",
+   "title": "3. Some sorites on \\(\\mathscr{C}\\)-groupoids",
+   "blocks": [
+    {
+     "id": "V.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.3\">3. Some sorites on \\(\\mathscr{C}\\)-groupoids</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Here, in no particular order, are some remarks used in what follows:</p>"
+    },
+    {
+     "id": "V.3.a",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.a\"><strong>a)</strong> Let\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\nbe a \\(\\mathscr{C}\\)-groupoid and \\(f_0 : Y_0 \\to X_0\\) an arrow of \\(\\mathscr{C}\\). We are going to define a \\(\\mathscr{C}\\)-groupoid\nwith base \\(Y_0\\)\n\\[\n\\xymatrix{\nY_2 \\ar@&lt;1.1ex&gt;[r]^{e_0'} \\ar[r]|-{e_1'} \\ar@&lt;-1.1ex&gt;[r]_{e_2'} &amp; Y_1 \\ar@&lt;0.6ex&gt;[r]^{e_0} \\ar@&lt;-0.6ex&gt;[r]_{e_1} &amp; Y_0\n}\n\\]\nwhich will be said to be <em>induced</em> by \\(X_*\\) and \\(f_0\\). We shall also say that \\(Y_*\\) is <em>the inverse image of \\(X_*\\)\nunder the base change \\(f_0\\)</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We choose for \\(Y_1\\) the fibered product of the diagram\n\\[\n\\xymatrix{\nY_1 \\ar@{--&gt;}[r]^-{f_1} \\ar@{--&gt;}[d] &amp; X_1 \\ar[d]^{d_0\\boxtimes d_1} \\\\\nY_0\\times Y_0 \\ar[r]_-{f_0\\times f_0} &amp; X_0\\times X_0\n}\n\\]\nand for \\(e_0\\) and \\(e_1\\) the arrows obtained by composing the canonical arrow \\(Y_1 \\to Y_0\\times Y_0\\) with the\nfirst and second projections of \\(Y_0\\times Y_0\\). One may say that the pair \\((e_0,e_1)\\) is\ndefined in such a way that, for every \\(T \\in \\mathscr{C}\\) and for every pair \\((y,x)\\) of elements of\n\\(Y_0(T)\\), there is a certain one-to-one correspondence \\(\\psi \\mapsto {}_y\\psi_x\\) between the arrows \\(\\psi\\)\nof \\(X_*(T)\\) with source \\(f_0(x)\\) and target \\(f_0(y)\\) and the arrows \\({}_y\\psi_x\\) of \\(Y_*(T)\\) with source x and\ntarget y. One then determines \\(e_1' : Y_2 \\to Y_1\\) by defining for every \\(T \\in \\mathscr{C}\\) the composition\nof arrows of \\(Y_*(T)\\) by means of the formula\n\\[\n{}_z\\psi_y \\circ {}_y\\varphi_x = {}_z(\\psi\\circ\\varphi)_x.\n\\]\nIt is clear that this definition makes each \\(Y_*(T)\\) a groupoid.</p>"
+    },
+    {
+     "id": "V.3.b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.b\"><strong>b)</strong> Knowing the \\(\\mathscr{C}\\)-groupoid \\(X_*\\) and the base change \\(f_0 : Y_0 \\to X_0\\), one\ncan reconstruct the pair \\((e_0,e_1) : Y_1 \\rightrightarrows Y_0\\) in another way: construct\n<!-- p.162 -->\\(Y_0\\times_{X_0} X_1\\), \\(\\mathrm{pr}_1\\) and \\(\\mathrm{pr}_2\\) in such a way that the square\n\\[\n\\xymatrix{\nY_0\\times_{X_0} X_1 \\ar[r]^-{\\mathrm{pr}_2} \\ar[d]_-{\\mathrm{pr}_1} &amp; X_1 \\ar[d]^{d_0} \\\\\nY_0 \\ar[r]_-{f_0} &amp; X_0\n}\n\\]\nis cartesian. One then verifies without difficulty, by reduction to the set-theoretic case, that one can\ndefine \\(Y_1\\) by means of the cartesian square:\n\\[\n\\xymatrix{\nY_1 \\ar[r]^-{e_0\\boxtimes f_1} \\ar[d]_-{e_1} &amp; Y_0\\times_{X_0} X_1 \\ar[d]^{d_1\\circ\\mathrm{pr}_2} \\\\\nY_0 \\ar[r]_-{f_0} &amp; X_0\n}\n\\]\nwhere \\(f_1\\) denotes the canonical projection of \\(Y_1 = (Y_0\\times Y_0)\\times_{(X_0\\times X_0)} X_1\\) onto \\(X_1\\).</p>"
+    },
+    {
+     "id": "V.3.c",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.c\"><strong>c)</strong> We shall give an example of the inverse image of a \\(\\mathscr{C}\\)-groupoid:\ntake \\(Y_0\\) equal to \\(X_1\\) and \\(f_0\\) equal to \\(d_0\\). For every object T of \\(\\mathscr{C}\\), \\(Y_1(T)\\) is\nthen identified with the set of diagrams of the form\n\\[\n\\xymatrix{\nb \\ar[r]^{\\varphi} &amp; d \\\\\na \\ar[u]^{f} &amp; c \\ar[u]_{g}\n}\n\\]\nin \\(X_*(T)\\). The source of such a diagram is the arrow f, the target is the arrow g. These\ndiagrams compose in the obvious way.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now set \\(Y_0' = X_1\\), \\(f_0' = d_1\\) (we add the primes to avoid any\nconfusion with the preceding example). In this case, \\(Y_1'(T)\\) is identified for every \\(T\\in\\mathscr{C}\\)\nwith the set of diagrams of the form\n\\[\n\\xymatrix{\nb &amp; &amp; d \\\\\na \\ar[u]^{f} \\ar[rr]_-{\\psi} &amp; &amp; c \\ar[u]_{g}\n}\n\\]\nof the groupoid \\(X_*(T)\\). The source of such a diagram is f, the target is g; the composition\nof these diagrams is obvious.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This being said, it is clear that the identity map of \\(Y_0(T)\\) and the map\n\\[\n\\xymatrix{\nb \\ar[r]^{\\varphi} &amp; d \\\\\na \\ar[u]^{f} &amp; c \\ar[u]_{g}\n}\n\\qquad\\longmapsto\\qquad\n\\xymatrix{\nb &amp; d \\\\\na \\ar[u]^{f} \\ar[r]_{g^{-1}\\varphi f} &amp; c \\ar[u]_{g}\n}\n\\]\nfrom \\(Y_1(T)\\) to \\(Y_1'(T)\\) define an isomorphism of the groupoid \\(Y_*(T)\\) onto \\(Y_*'(T)\\). Moreover,\nthis isomorphism depends functorially on T, so that <em>the \\(\\mathscr{C}\\)-groupoids\n\\(Y_*\\) and \\(Y_*'\\) are isomorphic.</em></p>"
+    },
+    {
+     "id": "V.3.d",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.d\"><strong>d)</strong></p>"
+    },
+    {
+     "id": "V.3.1",
+     "type": "proposition",
+     "label": "3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"V.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>We keep the notation of a) and we assume that \\(f_0\\) is\na universal effective epimorphism. In this case, \\(\\mathrm{Coker}(d_0,d_1)\\) exists if and only\nif \\(\\mathrm{Coker}(e_0,e_1)\\) exists. The equality \\((X,p) = \\mathrm{Coker}(d_0,d_1)\\) implies\n\\((X,pf_0) = \\mathrm{Coker}(e_0,e_1)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first recall that an epimorphism \\(f_0 : Y_0 \\to X_0\\) is said to be <em>universal</em> if, for every\ncartesian square\n\\[\n\\xymatrix{\nY' \\ar[r] \\ar[d]_{f'} &amp; Y_0 \\ar[d]^{f_0} \\\\\nX' \\ar[r] &amp; X_0\n}\n\\]\n\\(f'\\) is an epimorphism. This being so, denote by \\(\\mathrm{C}(d_0,d_1)\\) the covariant functor from\n\\(\\mathscr{C}\\) to sets which assigns to every \\(T\\in\\mathscr{C}\\) the kernel of the pair\n\\(T(d_0), T(d_1) : T(X_0) \\rightrightarrows T(X_1)\\). Define \\(\\mathrm{C}(e_0,e_1)\\) similarly. For every\n\\(T \\in \\mathscr{C}\\), we thus have a commutative diagram\n\\[\n\\xymatrix{\n\\mathrm{C}(d_0,d_1)(T) \\ar[r] \\ar[d]_{\\mathrm{T}(f)} &amp; T(X_0) \\ar@&lt;0.6ex&gt;[r]^{\\mathrm{T}(d_1)} \\ar@&lt;-0.6ex&gt;[r]_{\\mathrm{T}(d_0)} \\ar[d]_{\\mathrm{T}(f_0)} &amp; T(X_1) \\ar[d]^{\\mathrm{T}(f_1)} \\\\\n\\mathrm{C}(e_0,e_1)(T) \\ar[r] &amp; T(Y_0) \\ar@&lt;0.6ex&gt;[r]^{\\mathrm{T}(e_1)} \\ar@&lt;-0.6ex&gt;[r]_{\\mathrm{T}(e_0)} &amp; T(Y_1)\n}\n\\]\nwhere \\(\\mathrm{T}(f)\\) is the injection induced by the injection \\(\\mathrm{T}(f_0)\\). If we show that \\(\\mathrm{T}(f)\\)\nis a surjection for every T, we will have a functorial isomorphism\n\\(f : \\mathrm{C}(d_0,d_1) \\xrightarrow{\\ \\sim\\ } \\mathrm{C}(e_0,e_1)\\), so that the representability of one of these functors\nwill be equivalent to that of the other; this will prove our proposition.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove the surjectivity of \\(\\mathrm{T}(f)\\), consider the diagram\n\\[\n\\xymatrix{\n&amp; &amp; Y_1 \\ar[rr]^{f_1} \\ar@&lt;0.6ex&gt;[d]^{e_0} \\ar@&lt;-0.6ex&gt;[d]_{e_1} &amp; &amp; X_1 \\ar@&lt;0.6ex&gt;[d]^{d_0} \\ar@&lt;-0.6ex&gt;[d]_{d_1} \\\\\nY_0\\times_{X_0} Y_0 \\ar@&lt;0.6ex&gt;[rr]^{\\mathrm{pr}_2} \\ar@&lt;-0.6ex&gt;[rr]_{\\mathrm{pr}_1} \\ar[urr]^{\\Delta} &amp; &amp; Y_0 \\ar[rr]_{f_0} &amp; &amp; X_0\n}\n\\]\nwhere \\(\\Delta\\) is defined by the equalities \\((e_0\\boxtimes e_1)\\Delta = \\mathrm{pr}_1\\boxtimes\\mathrm{pr}_2\\) and \\(f_1\\Delta = sf_0\\mathrm{pr}_1\\), the\narrow \\(s : X_0 \\to X_1\\) satisfying equalities (3) and (3 bis) of Section 1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If the arrow \\(g : Y_0 \\to T\\) is such that \\(g\\circ e_0 = g\\circ e_1\\), we have \\(g\\circ e_0\\circ\\Delta = g\\circ e_1\\circ\\Delta\\),\nhence \\(g\\circ\\mathrm{pr}_1 = g\\circ\\mathrm{pr}_2\\). Since \\(f_0\\) is an effective epimorphism, g is the composite of \\(f_0\\)\nand an arrow \\(h : X_0 \\to T\\), that is, we have \\(g = \\mathrm{T}(f_0)(h)\\). It remains to show that h\nbelongs to \\(\\mathrm{C}(d_0,d_1)(T)\\), that is, satisfies the equality \\(hd_0 = hd_1\\); now we have\n\\[\nhd_0f_1 = hf_0e_0 = ge_0 = ge_1 = hf_0e_1 = hd_1f_1,\n\\]\nwhence the desired equality, thanks to the fact that \\(f_1\\) is an epimorphism (because \\(f_0\\) is a universal\nepimorphism).</p>"
+    },
+    {
+     "id": "V.3.e",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.e\"><strong>e)</strong> Now consider a scheme S and choose \\(\\mathscr{C}\\) equal to \\((\\mathrm{Sch}/S)\\). The\ndatum of a \\(\\mathscr{C}\\)-groupoid\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\nallows us to define <em>an equivalence relation on the set \\(\\underline{X_0}\\) underlying the\nscheme \\(X_0\\)</em>: if \\(x,y \\in \\underline{X_0}\\), we shall write \\(x\\sim y\\) when there exists \\(z\\in\\underline{X_1}\\) such that\n\\(x = d_1 z\\) and \\(y = d_0 z\\). The reflexivity and symmetry of this relation are obvious;\nlet us prove transitivity: if \\(x\\sim y\\) and \\(y\\sim z\\), there exist \\(u,v\\in\\underline{X_1}\\) such that\n\\(x = d_1u\\), \\(y = d_0u\\), \\(y = d_1v\\), \\(z = d_0v\\). It follows that \\((v,u)\\) belongs to the set-theoretic fibered\nproduct \\(\\underline{X_1}\\times_{d_1,d_0}\\underline{X_1}\\). Since the canonical map\n\\[\n\\underline{X_1\\times_{d_1,d_0} X_1} \\longrightarrow \\underline{X_1}\\times_{d_1,d_0}\\underline{X_1}\n\\]\nfrom the set underlying the fibered product to the fibered product of the underlying sets\nis surjective, \\((v,u)\\) is the image of some \\(w\\in\\underline{X_2}\\). We then have \\(x = d_1d_1'w\\)\nand \\(z = d_0d_1'w\\), whence \\(x\\sim z\\).</p>"
+    },
+    {
+     "id": "V.3.f",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.3.f\"><strong>f)</strong> Let us keep the notation of a) and b), \\(\\mathscr{C}\\) still being equal to \\((\\mathrm{Sch}/S)\\). If\n\\(x,y\\) are points of \\(\\underline{Y_0}\\), we shall see that \\(x\\sim y\\) if and only if\n\\(f_0(x)\\sim f_0(y)\\) (the inverse image of the equivalence relation defined by a groupoid\nis the equivalence relation defined by the inverse image of the groupoid).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, suppose that \\(x\\sim y\\). There then exists \\(z\\in\\underline{Y_1}\\) such that \\(x = e_1z\\),\n\\(y = e_0z\\). We then have \\(f_0(x) = d_1f_1z\\) and \\(f_0(y) = d_0f_1z\\), whence \\(f_0(x)\\sim f_0(y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conversely, suppose that \\(f_0(x)\\sim f_0(y)\\) and let \\(z\\in\\underline{X_1}\\) be such that\n\\(f_0(y) = d_1z\\), \\(f_0(x) = d_0z\\). There is then a point t of \\(\\underline{Y_0\\times_{X_0} X_1}\\) such that\n<!-- p.163 -->\\(\\mathrm{pr}_1(t) = x\\) and \\(\\mathrm{pr}_2(t) = z\\) (the notation is that of b)). Similarly, since\n\\(f_0(y) = d_1\\mathrm{pr}_2(t)\\), there is an \\(s\\in\\underline{Y_1}\\) such that \\(y = e_1(s)\\) and \\((e_0\\boxtimes f_1)(s) = t\\). We then\nhave \\(e_0(s) = \\mathrm{pr}_1(e_0\\boxtimes f_1)(s) = \\mathrm{pr}_1(t) = x\\). Whence \\(x\\sim y\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-4",
+   "title": "4. Passage to the quotient by a finite flat equivalence prerelation(proof of a special case)",
+   "blocks": [
+    {
+     "id": "V.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.4\">4. Passage to the quotient by a finite flat equivalence prerelation<br>(proof of a special case)</h2>"
+    },
+    {
+     "id": "V.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"V.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\"><p>Let\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\nbe a \\((\\mathrm{Sch}/S)\\)-groupoid such that \\(d_1\\) is finite locally free and such that, for every \\(x\\in X_0\\),\nthe set \\(d_0d_1^{-1}(x)\\) is contained in an affine open subset of \\(X_0\\). Then:</p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <p>There exists a cokernel \\((Y,p)\\) of \\((d_0,d_1)\\) in \\((\\mathrm{Sch}/S)\\); moreover, such a \\((Y,p)\\) is\na cokernel of \\((d_0,d_1)\\) in the category of all ringed spaces.</p></li>\n<li><span class=\"item-label\">(ii)</span> <p>p is integral, and Y is affine if \\(X_0\\) is affine.</p></li>\n<li><span class=\"item-label\">(iii)</span> <p>The morphism \\(X_1 \\to X_0\\times_Y X_0\\) with components \\(d_0\\) and \\(d_1\\) is surjective.</p></li>\n<li><span class=\"item-label\">(iv)</span> <p>If \\((d_0,d_1)\\) is an equivalence pair, \\(X_1 \\to X_0\\times_Y X_0\\) is an isomorphism\nand \\(p : X_0 \\to Y\\) is finite locally free.</p></li>\n</ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It clearly follows from (i) that the topological space underlying Y is the quotient\nof the topological space underlying \\(X_0\\) by the equivalence relation defined by the\n\\((\\mathrm{Sch}/S)\\)-groupoid \\(X_*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall first prove this theorem when \\(X_0\\) is affine and \\(d_1\\) is\nlocally free of constant rank n. We shall then see how one can reduce\nto this special case: In the case we have placed ourselves in, \\(X_0\\), \\(X_1\\) and \\(X_2\\) are\naffine. We may therefore assume that we have\n\\[\nX_i = \\mathrm{Spec}\\ A_i \\ , \\qquad d_j = \\mathrm{Spec}\\ \\delta_j \\ , \\qquad d_k' = \\mathrm{Spec}\\ \\delta_k',\n\\]\nwhere the \\(A_i\\) are commutative rings and the \\(\\delta_j\\), \\(\\delta_k'\\) are ring homomorphisms.\nOne may then replace the diagram (0,1,2) by the following one</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(0,1,2)*</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\n\\xymatrix{\nA_2 &amp; A_1 \\ar@&lt;1.1ex&gt;[l]_{\\delta_0'} \\ar[l]|-{\\delta_1'} \\ar@&lt;-1.1ex&gt;[l]^{\\delta_2'} \\\\\nA_1 \\ar[u] &amp; A_0 \\ar@&lt;0.6ex&gt;[l]_{\\delta_0} \\ar@&lt;-0.6ex&gt;[l]^{\\delta_1} \\ar[u]\n}\n\\]\nin which the two left-hand squares are cocartesian.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Denote by B the subring of \\(A_0\\) consisting of the \\(a\\in A_0\\) such that \\(\\delta_0(a) = \\delta_1(a)\\).</p>"
+    },
+    {
+     "id": "V.4.a",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.a\"><!-- p.166 --><strong>a)</strong> \\(A_0\\) is integral over B:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If a belongs to \\(A_0\\), let\n\\[\n\\mathrm{P}_{\\delta_1}(\\mathrm{T},\\delta_0(a)) = \\mathrm{T}^n - \\sigma_1\\mathrm{T}^{n-1} + \\cdots + (-1)^n\\sigma_n\n\\]\nbe the characteristic polynomial of \\(\\delta_0(a)\\) when \\(A_1\\) is regarded as an algebra over \\(A_0\\) by\nmeans of the homomorphism \\(\\delta_1\\) (cf. Bourbaki, <em>Alg.</em> VIII, § 12 and <em>Alg. comm.</em> II, § 5,\nexercise 9). Since the left-hand squares of (0,1,2)* are cocartesian, we have\n\\[\n\\delta_0(\\mathrm{P}_{\\delta_1}(\\mathrm{T},\\delta_0(a))) = \\mathrm{P}_{\\delta_2'}(\\mathrm{T},\\delta_0'\\delta_0(a)) \\qquad\\text{and}\\qquad\n\\delta_1(\\mathrm{P}_{\\delta_1}(\\mathrm{T},\\delta_0(a))) = \\mathrm{P}_{\\delta_2'}(\\mathrm{T},\\delta_1'\\delta_0(a)).\n\\]\nSince \\(\\delta_0'\\delta_0 = \\delta_1'\\delta_0\\), we have\n\\[\n\\delta_0(\\mathrm{P}_{\\delta_1}(\\mathrm{T},\\delta_0(a))) = \\delta_1(\\mathrm{P}_{\\delta_1}(\\mathrm{T},\\delta_0(a)))\n\\]\nthat is, \\(\\delta_0(\\sigma_i) = \\delta_1(\\sigma_i)\\) for every i. On the other hand, Hamilton-Cayley teaches us\nthat\n\\[\n\\delta_0(a)^n - \\delta_1(\\sigma_1)\\delta_0(a)^{n-1} + \\cdots + (-1)^n\\delta_1(\\sigma_n) = 0.\n\\]\nSince \\(\\delta_1(\\sigma_i)\\) equals \\(\\delta_0(\\sigma_i)\\), we also have\n\\[\n\\delta_0(a)^n - \\delta_0(\\sigma_1)\\delta_0(a)^{n-1} + \\cdots + (-1)^n\\delta_0(\\sigma_n) = 0,\n\\]\nwhence\n\\[\na^n - \\sigma_1a^{n-1} + \\cdots + (-1)^n\\sigma_n = 0,\n\\]\nbecause there exists a homomorphism \\(\\tau : A_1 \\to A_0\\) such that \\(\\tau\\delta_0 = \\mathrm{id}_{A_0}\\), so \\(\\delta_0\\) is injective.\nIt follows that \\(A_0\\) is integral over B.</p>"
+    },
+    {
+     "id": "V.4.b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.b\"><strong>b)</strong> Now consider two prime ideals x and y of \\(A_0\\). We shall show\nthat the equality \\(x\\cap B = y\\cap B\\) implies the existence of a prime ideal z of \\(A_1\\) such that\n\\(x = d_0(z)\\) and \\(y = d_1(z)\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, if the assertion were not true, x would be distinct from \\(\\delta_0^{-1}(t)\\) for every prime\nideal t of \\(A_1\\) such that \\(\\delta_1^{-1}(t) = y\\). For such a t we would have\n\\(\\delta_0^{-1}(t)\\cap B = \\delta_1^{-1}(t)\\cap B = y\\cap B = x\\cap B\\), from which it would follow, thanks to\nCohen-Seidenberg, that x would not be contained in any \\(\\delta_0^{-1}(t)\\) (for there are at most n prime\nideals t of \\(A_1\\) such that \\(\\delta_1^{-1}(t) = y\\)); there would therefore be an \\(a\\in x\\) which\nwould belong to no \\(\\delta_0^{-1}(t)\\); consequently, \\(\\delta_0(a)\\) would belong to none of these\nt, so that the norm \\(\\mathrm{N}_{\\delta_1}(\\delta_0(a))\\) would not belong to y (this norm is computed\nby regarding \\(A_1\\) as an algebra over \\(A_0\\) by means of the homomorphism \\(\\delta_1\\); we have\n\\(\\mathrm{N}_{\\delta_1}(\\delta_0(a)) = \\sigma_n\\) with the notation of a)). But this norm would belong to\n\\(B\\cap x = B\\cap y\\), whence the contradiction.</p>"
+    },
+    {
+     "id": "V.4.c",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.c\"><strong>c)</strong> <em>Proof of (i):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Set \\(Y = \\mathrm{Spec}\\ B\\) and \\(p = \\mathrm{Spec}\\ i\\), where i is the inclusion of B into \\(A_0\\). We shall\nfirst show that \\((Y,p)\\) is a cokernel of \\((d_0,d_1)\\) in the category of all\nringed spaces: indeed, it follows from b) that the set underlying \\(\\mathrm{Spec}\\ B\\) is obtained\nfrom the set underlying \\(X_0\\) by identifying the points x and y for which there exists\n\\(z\\in X_1\\) with \\(d_1z = y\\), \\(d_0z = x\\). Moreover, since i is integral, \\(p = \\mathrm{Spec}\\ i\\) is closed,\nso that Y carries the quotient topology of that of \\(X_0\\). Finally, it follows from the choice\nof B and from the fact that p, \\(d_0\\) and \\(d_1\\) are affine, that the canonical sequence of sheaves\nof rings\n<!-- p.167 -->\n\\[\n\\xymatrix{\n\\mathscr{O}_Y \\ar[r] &amp; p_*(\\mathscr{O}_{X_0}) \\ar@&lt;0.6ex&gt;[r]^{p_*(\\delta_0)} \\ar@&lt;-0.6ex&gt;[r]_{p_*(\\delta_1)} &amp; p_*(d_{0*}(\\mathscr{O}_{X_1})) = p_*(d_{1*}(\\mathscr{O}_{X_1}))\n}\n\\]\nis exact, q.e.d.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to show that \\((Y,p)\\) is also the cokernel of \\((d_0,d_1)\\) in the category of\nschemes (more generally, in that of locally ringed spaces): so let\n\\(q : X_0 \\to Z\\) be a morphism of schemes such that \\(qd_0 = qd_1\\). By what precedes,\nthere is one and only one morphism of ringed spaces \\(r : Y \\to Z\\) such that \\(q = rp\\). We must\nshow that, for every \\(y\\in Y\\), the homomorphism \\(\\mathscr{O}_{r(y)} \\to \\mathscr{O}_y\\) induced by r is\nlocal. This follows from the fact that p is surjective, hence that y is of the form \\(p(x)\\), and from\nthe fact that the homomorphisms \\(\\mathscr{O}_{q(x)} \\to \\mathscr{O}_x\\) and \\(\\mathscr{O}_y \\to \\mathscr{O}_x\\) induced by p and q are\nlocal.</p>"
+    },
+    {
+     "id": "V.4.d",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.d\"><strong>d)</strong> <em>Proof of (ii):</em> Follows from a) and c).</p>"
+    },
+    {
+     "id": "V.4.e",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.e\"><strong>e)</strong> <em>Proof of (iii):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Recall that we denote by \\(\\underline{P}\\) the set underlying a scheme P, and by\n\\(\\underline{d} : \\underline{P} \\to \\underline{Q}\\) the map induced by a morphism \\(d : P \\to Q\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One can then rephrase b) by saying that the map\n\\[\n\\underline{d_0}\\boxtimes\\underline{d_1} : \\underline{X_1} \\longrightarrow \\underline{X_0}\\times_{\\underline{Y}}\\underline{X_0}\n\\]\nwith components \\(\\underline{d_0}\\) and \\(\\underline{d_1}\\) is surjective; now this map factors as follows\n\\[\n\\underline{X_1} \\xrightarrow{\\ \\underline{d_0\\boxtimes d_1}\\ } \\underline{X_0\\times_Y X_0} \\xrightarrow{\\ q\\ } \\underline{X_0}\\times_{\\underline{Y}}\\underline{X_0}\n\\]\nwhere q is the canonical map; the image of \\(d_0\\boxtimes d_1\\) therefore contains all the points v\nof \\(X_0\\times_Y X_0\\) such that \\(\\{v\\} = q^{-1}(q(v))\\). This last condition<sup>(1)</sup> will be satisfied\nin particular if v is <em>rational over Y</em>, that is, if the residue field \\(\\kappa(v)\\)\nof v is identified with the residue field \\(\\kappa(w)\\) of the image w of v in Y.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(v\\in X_0\\times_Y X_0\\) is not rational over Y, let w still denote the image of v\nin Y; there then exists a local ring C with radical \\(\\mathfrak{m}\\) and a local flat\nhomomorphism \\(f : \\mathscr{O}_w \\to C\\) such that \\(C/\\mathfrak{m}\\) is isomorphic to \\(\\kappa(v)\\) as a \\(\\kappa(w)\\)-algebra. If\nwe set \\(Y' = \\mathrm{Spec}\\ C\\) and if \\(\\pi : Y' \\to Y\\) is the morphism induced by f, it is clear that\nthe canonical projection of \\((X_0\\times_Y X_0)\\times_Y Y'\\) to \\(X_0\\times_Y X_0\\) sends onto v a point\n\\(v'\\) of \\((X_0\\times_Y X_0)\\times_Y Y'\\) which is rational over \\(Y'\\). Since\n\\((X_0\\times_Y X_0)\\times_Y Y'\\) is identified with \\((X_0\\times_Y Y')\\times_{Y'}(X_0\\times_Y Y')\\) and since the arguments\nmade above remain valid after the base change \\(\\pi : Y' \\to Y\\), \\(v'\\) is\nthe image of an element \\(u'\\in X_1\\times_Y Y'\\) under the morphism deduced from \\(d_0\\boxtimes d_1\\) by\nbase change. If u is the image of \\(u'\\) in \\(X_1\\), we indeed have \\(v = (d_0\\boxtimes d_1)(u)\\),\nq.e.d.</p>"
+    },
+    {
+     "id": "V.4.f",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.4.f\"><strong>f)</strong> <em>Proof of (iv):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It suffices to show that, for every prime ideal \\(\\mathfrak{p}\\) of B, the homomorphism\n\\((A_0)_{\\mathfrak{p}}\\otimes_{B_{\\mathfrak{p}}}(A_0)_{\\mathfrak{p}} \\to (A_1)_{\\mathfrak{p}}\\) with components \\(\\delta_{0\\mathfrak{p}}\\) and \\(\\delta_{1\\mathfrak{p}}\\) is bijective.\nIn other words, we may assume that B is local. It then follows from b) that \\((A_0)_{\\mathfrak{p}}\\) is\nsemi-local; indeed, if \\(\\mathfrak{m}\\) is a maximal ideal of \\((A_0)_{\\mathfrak{p}}\\), the other maximal ideals\nare of the form \\(\\delta_0^{-1}(\\mathfrak{n})\\), where \\(\\mathfrak{n}\\)\n<span class=\"footnote\"><sup>(1)</sup> N.D.E.: Note the permutation of pages in Lecture Notes 151; the true order is\n265-266-268-269-267-270-271.</span></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><!-- p.168 -->runs through the prime ideals of \\(A_1\\) such that \\(\\delta_1^{-1}(\\mathfrak{n}) = \\mathfrak{m}\\); the assertion thus follows\nfrom the fact that there are at most \\(n = [A_1 : A_0]\\) prime ideals \\(\\mathfrak{n}\\). After possibly performing a faithfully\nflat base change, we may also assume that the residue field of B is infinite,\nso that we can use the following lemma:</p>"
+    },
+    {
+     "id": "V.4.2",
+     "type": "lemme",
+     "label": "4.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"V.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Let B be a local ring with infinite residue field, A a semi-local\nring and \\(i : B \\to A\\) a homomorphism sending the maximal ideal \\(\\mathfrak{n}\\) of B into the radical\n\\(\\mathfrak{r}\\) of A. Let M be a free A-module of rank n and N a B-submodule of M which\ngenerates M as an A-module. Then N contains a basis of M over A.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, recall that a sequence \\(m_1,\\ldots,m_n\\) of elements of M is an A-basis of\nM if and only if the canonical images of \\(m_1,\\ldots,m_n\\) in \\(M/\\mathfrak{r}M\\) form a\nbasis of \\(M/\\mathfrak{r}M\\) over \\(A/\\mathfrak{r}\\). One may therefore replace M by \\(M/\\mathfrak{r}M\\), N by\n\\(N/(N\\cap\\mathfrak{r}M)\\), A by \\(A/\\mathfrak{r}\\) and B by \\(B/\\mathfrak{m}\\). In this case the lemma is easy (if A is\na product of fields \\(K_1\\times\\cdots\\times K_r\\), one may identify M with the module\n\\(K_1^n\\times\\cdots\\times K_r^n\\); if \\(x_j\\) is then an element of N whose j-th component in\n\\(K_1^n\\times\\cdots\\times K_r^n\\) is nonzero, show that some linear combination x of the \\(x_j\\) with\ncoefficients in B has all its components nonzero; then replace M by\n\\(M/Ax\\) and proceed by induction on n).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We apply the preceding lemma in the following situation: \\(B = B\\), \\(A = A_0\\),\ni is the inclusion of B into \\(A_0\\), \\(M = A_1\\) regarded as an \\(A_0\\)-module by means of\nthe homomorphism \\(\\delta_1\\), \\(N = \\delta_0(A_0)\\): indeed, since \\(d_0\\boxtimes d_1 : X_1 \\to X_0\\times_Y X_0\\) is\na monomorphism, the homomorphism \\(A_0\\otimes_B A_0 \\to A_1\\) with components \\(\\delta_0\\) and \\(\\delta_1\\)\nis surjective; this means precisely that \\(\\delta_0(A_0)\\) generates the \\(A_0\\)-module \\(A_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>So let \\(a_1,\\ldots,a_n\\) be elements of \\(A_0\\) such that \\(\\delta_0(a_1),\\ldots,\\delta_0(a_n)\\) form\na basis of \\(A_1\\) over \\(A_0\\). If we show that \\(a_1,\\ldots,a_n\\) is a basis of \\(A_0\\) over B,\nit will follow that the homomorphism \\(A_0\\otimes_B A_0 \\to A_1\\) takes the basis\n\\((1\\otimes a_i)_{1\\leqslant i\\leqslant n}\\) to the basis \\((\\delta_0(a_i))_{1\\leqslant i\\leqslant n}\\), hence is bijective. Consequently,\nif \\(\\varepsilon : \\mathbb{Z}^n \\to A_0\\) is the homomorphism of abelian groups sending the natural basis\nof \\(\\mathbb{Z}^n\\) to \\(a_1,\\ldots,a_n\\), it suffices to prove that the map \\(B\\otimes_{\\mathbb{Z}}\\mathbb{Z}^n \\to A_0\\) with\ncomponents i and \\(\\varepsilon\\) is bijective. Now the diagram (0,1,2)* considered at the beginning of this\nproof induces the commutative diagram\n\\[\n\\xymatrix{\nA_2 &amp; A_1 \\ar@&lt;1.1ex&gt;[l]_{\\delta_0'} \\ar[l]|-{\\delta_1'} \\ar@&lt;-1.1ex&gt;[l]^{\\delta_2'} \\\\\nA_1\\otimes_{\\mathbb{Z}}\\mathbb{Z}^n \\ar[u]^{u_2} &amp; A_0\\otimes_{\\mathbb{Z}}\\mathbb{Z}^n \\ar@&lt;0.6ex&gt;[l]^{\\delta_0\\otimes\\mathbb{Z}^n} \\ar@&lt;-0.6ex&gt;[l]_{\\delta_1\\otimes\\mathbb{Z}^n} \\ar[u]_{u_1}^{\\cong} \\\\\n&amp; B\\otimes_{\\mathbb{Z}}\\mathbb{Z}^n \\ar[u]_{u_0} \\ar[uu]_{i\\otimes\\mathbb{Z}^n}\n}\n\\]\nwhere \\(u_0\\), \\(u_1\\) and \\(u_2\\) have as components respectively i and \\(\\varepsilon\\), \\(\\delta_1\\) and \\(\\delta_0\\varepsilon\\), \\(\\delta_2'\\) and\n\\(\\delta_0'\\delta_0\\varepsilon\\). We know that \\(u_1\\) is an isomorphism. Since the two left-hand squares\nof (0,1,2)* are cocartesian, \\(u_2\\) is bijective. Now the two horizontal rows of our\ndiagram are exact; hence \\(u_0\\) is bijective.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-5",
+   "title": "5. Passage to the quotient by a finite flat equivalence prerelation(general case)",
+   "blocks": [
+    {
+     "id": "V.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.5\">5. Passage to the quotient by a finite flat equivalence prerelation<br>(general case)</h2>"
+    },
+    {
+     "id": "V.5.a",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.5.a\"><!-- p.169 --><strong>a)</strong> Let \\(\\mathrm{U}^{(n)}\\) be the largest open subset of \\(X_0\\) over which \\(d_1\\) is finite\nlocally free of rank n. We know that \\(X_0\\) is the direct sum of the \\(\\mathrm{U}^{(n)}\\). On the other hand, it follows\nfrom the two cartesian squares\n\\[\n\\xymatrix{\nX_2 \\ar[r]^{d_0'} \\ar[d]_{d_2'} &amp; X_1 \\ar[d]^{d_1} \\\\\nX_1 \\ar[r]_{d_0} &amp; X_0\n}\n\\qquad\\text{and}\\qquad\n\\xymatrix{\nX_2 \\ar[r]^{d_1'} \\ar[d]_{d_2'} &amp; X_1 \\ar[d]^{d_1} \\\\\nX_1 \\ar[r]_{d_1} &amp; X_0\n}\n\\]\nthat the inverse images of \\(\\mathrm{U}^{(n)}\\) under \\(d_0\\) and \\(d_1\\) both coincide with the\nlargest open subset of \\(X_1\\) over which \\(d_2'\\) is locally free of rank n; we thus have\n\\(d_0^{-1}(\\mathrm{U}^{(n)}) = d_1^{-1}(\\mathrm{U}^{(n)})\\), so that the groupoid \\(X_*\\) is the direct sum of the\ngroupoids \\(X_*^{(n)}\\) induced by \\(X_*\\) on the open and closed subsets \\(\\mathrm{U}^{(n)}\\). It therefore suffices,\nas is easily seen, to prove <a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a> for each of the \\(X_*^{(n)}\\): <em>we are\nreduced to the case where \\(d_1\\) is finite locally free of rank n.</em></p>"
+    },
+    {
+     "id": "V.5.b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.5.b\"><strong>b)</strong> <em>We are now in a position to prove our theorem in the general\ncase.</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By a) we may assume that \\(d_1\\) is locally free of rank n. So let \\((Y,p)\\)\nbe a cokernel of \\((d_0,d_1)\\) in the category of all ringed spaces. The argument\nof paragraph 4.c) shows that in order to prove 4.1 (i) it suffices to prove that Y is a\nscheme and \\(p : X_0 \\to Y\\) a morphism of schemes. The question is therefore local on Y:\nLet \\(y\\in Y\\) and let \\(x\\in X_0\\) be such that \\(p(x) = y\\). If x has a saturated affine open\nneighborhood U, then \\(p(U)\\) will be an affine open subset of Y by <a class=\"ref\" href=\"#V.4\">§ 4</a> and \\(p|U\\) will be a morphism of\nschemes. It therefore suffices to prove that every \\(x\\in X_0\\) has a saturated affine open\nneighborhood U. Here is how one proceeds (the proof is taken from SGA 1, VIII\ncor. 7.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\[\nd_1(d_0^{-1}(x)) \\ \\subset\\ \\mathrm{U} = (\\mathrm{V}_f)' \\ \\subset\\ \\mathrm{V}_f \\ \\subset\\ \\mathrm{V}' \\ \\subset\\ \\mathrm{V} \\ \\subset\\ X_0\n\\]\nwhere \\(\\mathrm{U} = (\\mathrm{V}_f)'\\) is the <em>largest saturated open subset of \\(\\mathrm{V}_f\\)</em>, \\(\\mathrm{V}_f\\) is a <em>special affine open subset\nof \\(\\mathrm{V}\\)</em>, \\(\\mathrm{V}'\\) is the <em>largest saturated open subset of \\(\\mathrm{V}\\)</em>, and V is an <em>affine open subset</em> of \\(X_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For V one takes an affine open subset containing \\(d_1(d_0^{-1}(x))\\); if \\(\\mathrm{F} = \\mathrm{X}-\\mathrm{V}\\),\nthen \\(d_1(d_0^{-1}(\\mathrm{F}))\\) is closed, since \\(d_1\\) is integral, and \\(\\mathrm{V}' = \\mathrm{X}-d_1(d_0^{-1}(\\mathrm{F}))\\) is the largest\nsaturated open subset contained in V. Since \\(\\mathrm{V}'\\) is a neighborhood of the finite set\n\\(d_1(d_0^{-1}(x))\\), there exists a section f of the structure sheaf of V which vanishes on\n\\(\\mathrm{V}-\\mathrm{V}'\\) and is such that\n\\(d_1(d_0^{-1}(x))\\) is contained in the open subset \\(\\mathrm{V}_f\\) of V consisting of the points where f does not\nvanish.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall see that the largest saturated open subset \\((\\mathrm{V}_f)'\\) of \\(\\mathrm{V}_f\\) is affine, and hence\nanswers the question:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, let \\(\\mathrm{Z}(f) = \\mathrm{V}'-\\mathrm{V}_f\\). Then \\(d_0^{-1}(\\mathrm{Z}(f))\\) is the set of points of\n\\(d_0^{-1}(\\mathrm{V}') = d_1^{-1}(\\mathrm{V}')\\) where the image \\(d_0^*(f)\\) of f under the map induced by\n\\(d_0\\) vanishes. On the other hand, since \\(d_1\\) induces a locally free morphism of rank n from\n\\(d_0^{-1}(\\mathrm{V}') = d_1^{-1}(\\mathrm{V}')\\) onto \\(\\mathrm{V}'\\), \\(d_1(d_0^{-1}(\\mathrm{Z}(f)))\\) is the set of points where\nthe norm N of \\(d_0^*(f)\\) for the morphism \\(d_1\\) vanishes. It follows that\n\\((\\mathrm{V}_f)' = \\mathrm{V}'-d_1(d_0^{-1}(\\mathrm{Z}(f)))\\) is the set of points of \\(\\mathrm{V}_f\\) where N does not\nvanish; consequently, \\((\\mathrm{V}_f)'\\) is affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This proves 4.1 (i); the other assertions are clear.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-6",
+   "title": "6. Passage to the quotient when a quasi-section exists",
+   "blocks": [
+    {
+     "id": "V.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.6\">6. Passage to the quotient when a quasi-section exists</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall now prove a <em>lemma of a technical nature</em> which will serve us\nin the proof of the two theorems we have in view: Let S be a scheme\nand\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\na \\((\\mathrm{Sch}/S)\\)-groupoid. We shall call a <em>quasi-section</em> of the groupoid \\(X_*\\) any subscheme\nU of \\(X_0\\) satisfying (1) and (2):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(1) The restriction v of \\(d_1\\) to \\(d_0^{-1}(\\mathrm{U})\\) is a finite, locally free and\nsurjective morphism from \\(d_0^{-1}(\\mathrm{U})\\) onto \\(X_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(2) Every subset of U consisting of points pairwise equivalent for the equivalence\nrelation defined by the groupoid \\(X_*\\) (<a class=\"ref\" href=\"#V.3.e\">§ 3.e)</a>) is contained in an affine open subset\nof U.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If U is a quasi-section of \\(X_*\\), the \\((\\mathrm{Sch}/S)\\)-groupoid\n\\[\n\\xymatrix{\n\\mathrm{U}_2 \\ar@&lt;1.1ex&gt;[r]^{u_0'} \\ar[r]|-{u_1'} \\ar@&lt;-1.1ex&gt;[r]_{u_2'} &amp; \\mathrm{U}_1 \\ar@&lt;0.6ex&gt;[r]^{u_0} \\ar@&lt;-0.6ex&gt;[r]_{u_1} &amp; \\mathrm{U}\n}\n\\]\ninduced by \\(X_*\\) and the inclusion of U into \\(X_0\\) (cf. <a class=\"ref\" href=\"#V.3.a\">§ 3.a)</a>) satisfies the hypotheses of\n<a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a>. Indeed, set \\(\\mathrm{V} = d_0^{-1}(\\mathrm{U})\\) and let u and v be the morphisms with source V induced\nrespectively by \\(d_0\\) and \\(d_1\\):\n\\[\n\\xymatrix{\nX_0 &amp; \\mathrm{V} \\ar[l]_{v} \\ar[r]^{u} &amp; \\mathrm{U}\n}\n\\]\nBy <a class=\"ref\" href=\"#V.3.b\">paragraph 3.b)</a>, we have a cartesian square\n\\[\n\\xymatrix{\n\\mathrm{U}_1 \\ar[r] \\ar[d]_{u_1} &amp; \\mathrm{V} \\ar[d]^{v} \\\\\n\\mathrm{U} \\ar[r]_{\\text{inclusion}} &amp; X_0\n}\n\\]\nso that \\(u_1\\) is finite locally free by (1). Together with (2), condition (1) thus ensures\nthat the groupoid \\(\\mathrm{U}_*\\) satisfies the hypotheses of <a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a>. In particular\n<!-- p.171 -->\\(\\mathrm{Coker}(u_0,u_1)\\) exists in \\((\\mathrm{Sch}/S)\\). Moreover, \\(d_0\\) admits a section, so that u\nis a universal effective epimorphism; it follows, by <a class=\"ref\" href=\"#V.3.1\">Proposition 3.1</a>, that\n\\(\\mathrm{Coker}(u_0,u_1)\\) coincides with \\(\\mathrm{Coker}(v_0,v_1)\\) (where\n\\[\n\\xymatrix{\n\\mathrm{V}_2 \\ar@&lt;1.1ex&gt;[r]^{v_0'} \\ar[r]|-{v_1'} \\ar@&lt;-1.1ex&gt;[r]_{v_2'} &amp; \\mathrm{V}_1 \\ar@&lt;0.6ex&gt;[r]^{v_0} \\ar@&lt;-0.6ex&gt;[r]_{v_1} &amp; \\mathrm{V}\n}\n\\]\ndenotes the inverse image of \\(\\mathrm{U}_*\\) under the base change \\(u : \\mathrm{V} \\to \\mathrm{U}\\), that is,\nequally the inverse image of \\(\\mathrm{U}_*\\) under the base change\n\\(\\mathrm{V} \\xrightarrow{\\ \\text{inclusion}\\ } X_1 \\xrightarrow{\\ d_0\\ } X_0\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Similarly, since v is a universal effective epimorphism, \\(\\mathrm{Coker}(d_0,d_1)\\) coincides\nwith the cokernel of the inverse image of \\(X_*\\) under the base change\n\\(v : \\mathrm{V} \\xrightarrow{\\ \\text{inclusion}\\ } X_1 \\xrightarrow{\\ d_1\\ } X_0\\). Now this inverse image is isomorphic to \\(\\mathrm{V}_*\\) by\nparagraph 3.c). We have thus proved the first assertion of the following lemma:</p>"
+    },
+    {
+     "id": "V.6.1",
+     "type": "lemme",
+     "label": "6.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"V.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Suppose that the \\((\\mathrm{Sch}/S)\\)-groupoid \\(X_*\\) admits a quasi-section and\nthat \\(d_0 : X_1 \\to X_0\\) is faithfully flat and quasi-compact. Then:</p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <p>There exists a cokernel \\((Y,p)\\) of \\((d_0,d_1)\\) in \\((\\mathrm{Sch}/S)\\); moreover, such a \\((Y,p)\\) is\na cokernel of \\((d_0,d_1)\\) in the category of all ringed spaces.</p></li>\n<li><span class=\"item-label\">(ii)</span> <p>p is surjective; it is open if \\(d_0\\) is; if S is locally noetherian and \\(X_0\\)\nof finite type over S, then Y is of finite type over S.</p></li>\n<li><span class=\"item-label\">(iii)</span> <p>The morphism \\(X_1 \\to X_0\\times_Y X_0\\) with components \\(d_0\\) and \\(d_1\\) is surjective.</p></li>\n<li><span class=\"item-label\">(iv)</span> <p>If \\((d_0,d_1)\\) is an equivalence pair, \\(X_1 \\to X_0\\times_Y X_0\\) is an isomorphism\nand p is faithfully flat.</p></li>\n</ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Before proving the second assertion of (i), we shall prove (ii) and (iii):</p>"
+    },
+    {
+     "id": "V.6.a",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.6.a\"><strong>a)</strong> <em>Proof of (ii):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have just seen that \\((Y,p)\\) is identified with \\(\\mathrm{Coker}(v_0,v_1)\\) and \\(\\mathrm{Coker}(u_0,u_1)\\). So let\nq and r be the canonical epimorphisms from U and V to Y:\n\\[\n\\xymatrix{\n&amp; X_0 \\ar[drrr]_{p} &amp; &amp; \\mathrm{V} \\ar[ll]_{v} \\ar[rr]^{u} \\ar[dr]^{r} &amp; &amp; \\mathrm{U} \\ar[dl]_{q} \\\\\n&amp; &amp; &amp; &amp; \\mathrm{Y} &amp; &amp;\n}\n\\]\nSince u and v are surjective, p is surjective if and only if r is, hence if and only\nif q is. Now q is surjective by <a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a>; whence the surjectivity of p.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Similarly, if \\(\\mathrm{U}'\\) is an arbitrary open subset of U, the saturation of \\(\\mathrm{U}'\\) for the equivalence\nrelation defined by the groupoid \\(\\mathrm{U}_*\\) is none other than \\(u_1(u_0^{-1}(\\mathrm{U}'))\\); it is therefore an\nopen subset of U, from which it follows that the morphism q is open; if \\(d_0\\) is open, then u is\nopen as well, and so is r; since v is surjective, it follows that p is open.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><!-- p.172 -->Now suppose S locally noetherian and \\(X_0\\) of finite type over\nS. Let us show that Y is of finite type over S: indeed, since U is quasi-compact\nover S and q is surjective, Y is quasi-compact over S.\nMoreover, let \\(\\mathrm{S}' = \\mathrm{Spec}\\ \\mathrm{R}\\) be an affine open subset of S, \\(\\mathrm{Y}' = \\mathrm{Spec}\\ \\mathrm{B}\\) an affine open subset\nof Y projecting into \\(\\mathrm{S}'\\), and \\(\\mathrm{U}' = \\mathrm{Spec}\\ \\mathrm{A}\\) the inverse image of \\(\\mathrm{Y}'\\) in U. We must\nshow that B is an R-algebra of finite type; now, by Sections 4\nand 5, B is contained in A, which is an R-algebra of finite type; the assertion thus follows\nfrom the fact that R is noetherian and A is integral over B.</p>"
+    },
+    {
+     "id": "V.6.b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.6.b\"><strong>b)</strong> <em>Proof of (iii):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since the groupoid \\(\\mathrm{V}_*\\) with base V is isomorphic both to the inverse image of\n\\(\\mathrm{U}_*\\) under the base change u and to the inverse image of \\(X_*\\) under the base\nchange v, we have a double cartesian square\n\\[\n\\xymatrix{\nX_1 \\ar[d]_{d_0\\boxtimes d_1} &amp; \\mathrm{V}_1 \\ar[l] \\ar[r] \\ar[d]|{v_0\\boxtimes v_1} &amp; \\mathrm{U}_1 \\ar[d]^{u_0\\boxtimes u_1} \\\\\nX_0\\times_Y X_0 &amp; \\mathrm{V}_0\\times_Y \\mathrm{V}_0 \\ar[l]^{v\\times v} \\ar[r]_{u\\times u} &amp; \\mathrm{U}_0\\times_Y \\mathrm{U}_0\n}\n\\]\nSince \\(u_0\\boxtimes u_1\\) is surjective, the same holds for \\(v_0\\boxtimes v_1\\). Since \\(v\\times v\\)\nis surjective, the same holds for the composite morphisms\n\\[\n\\xymatrix{\n\\mathrm{V}_1 \\ar[r]^{v_0\\boxtimes v_1} &amp; \\mathrm{V}_0\\times_Y\\mathrm{V}_0 \\ar[r]^{v\\times v} &amp; X_0\\times_Y X_0\n}\n\\qquad\\text{and}\\qquad\n\\xymatrix{\n\\mathrm{V}_1 \\ar[r] &amp; X_1 \\ar[r]^{d_0\\boxtimes d_1} &amp; X_0\\times_Y X_0,\n}\n\\]\nhence for \\(d_0\\boxtimes d_1\\).</p>"
+    },
+    {
+     "id": "V.6.c",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.6.c\"><strong>c)</strong> <em>Proof of (i):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove that \\((Y,p)\\) is a cokernel of \\((d_0,d_1)\\) in the category of all\nringed spaces. We first show that Y is obtained from \\(X_0\\) by identifying\nthe points x and y for which there exists \\(z\\in X_1\\) with \\(d_0(z) = x\\) and \\(d_1(z) = y\\): indeed p is\nsurjective and we have \\(pd_0 = pd_1\\); furthermore, if \\(p(x) = p(y)\\), there is a point \\(z'\\) of\n\\(X_0\\times_Y X_0\\) whose first projection is x and whose second is y. If z is a point of\n\\(X_1\\) such that \\((d_0\\boxtimes d_1)(z) = z'\\), we indeed have \\(d_0(z) = x\\) and \\(d_1(z) = y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On the other hand, if W is a saturated open subset of \\(X_0\\), then \\(\\mathrm{W}\\cap\\mathrm{U}\\) is a saturated open subset of U;\nby 4.1, \\(q(\\mathrm{W}\\cap\\mathrm{U})\\) is an open subset of Y. Since \\(q(\\mathrm{W}\\cap\\mathrm{U})\\) is none other than \\(p(\\mathrm{W})\\),\nwe see that Y carries a quotient topology of that of \\(X_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove that the canonical sequence of sheaves of rings\n\\[\n\\mathscr{O}_Y \\longrightarrow p_*(\\mathscr{O}_{X_0}) \\rightrightarrows p_*d_{0*}(\\mathscr{O}_{X_1}) = p_*d_{1*}(\\mathscr{O}_{X_1})\n\\]\nis exact. So let \\(\\mathrm{Y}'\\) be an open subset of Y and set \\(\\mathrm{U}' = q^{-1}(\\mathrm{Y}')\\), \\(\\mathrm{X}_0' = p^{-1}(\\mathrm{Y}')\\), etc...\nIt is clear that \\(\\mathrm{U}'\\) is an open subset of U saturated for the equivalence relation defined by\nthe groupoid \\(\\mathrm{U}_*\\). It therefore follows from <a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a> that \\(\\mathrm{Y}'\\) is the cokernel of the groupoid\ninduced by \\(\\mathrm{U}_*\\) on \\(\\mathrm{U}'\\). Similarly, \\(\\mathrm{X}_0'\\) is an open subset of \\(X_0\\) saturated for the equivalence\n<!-- p.173 -->relation defined by \\(X_*\\), and we have \\(\\mathrm{U}' = \\mathrm{X}_0'\\cap\\mathrm{U}\\). Consequently, \\(\\mathrm{U}'\\) is a quasi-section\nof the groupoid induced by \\(X_*\\) on \\(\\mathrm{X}_0'\\). What precedes then shows that \\(\\mathrm{Y}'\\) is\nalso the cokernel of this latter groupoid. In particular, for every S-scheme T, we have\nthe exact sequence\n\\[\n\\xymatrix{\nT(\\mathrm{Y}') \\ar[r]^{\\mathrm{T}(p|_{\\mathrm{X}_0'})} &amp; T(\\mathrm{X}_0') \\ar@&lt;0.6ex&gt;[r]^{\\mathrm{T}(d_0|_{\\mathrm{X}_1'})} \\ar@&lt;-0.6ex&gt;[r]_{\\mathrm{T}(d_1|_{\\mathrm{X}_1'})} &amp; T(\\mathrm{X}_1').\n}\n\\]\nNow, if T is the \"affine line\" \\(\\mathbb{G}_{a,S}\\) (<a class=\"ref\" href=\"#I.4.3\">I 4.3</a>), this sequence is identified with the sequence:\n\\[\n\\xymatrix{\n\\Gamma(\\mathrm{Y}',\\mathscr{O}_Y) \\ar[r] &amp; \\Gamma(p^{-1}(\\mathrm{Y}'),\\mathscr{O}_{X_0}) \\ar@&lt;0.6ex&gt;[r]^{\\delta_0} \\ar@&lt;-0.6ex&gt;[r]_{\\delta_1} &amp; \\Gamma(d_0^{-1}p^{-1}(\\mathrm{Y}'),\\mathscr{O}_{X_1}) = \\Gamma(d_1^{-1}p^{-1}(\\mathrm{Y}'),\\mathscr{O}_{X_1})\n}\n\\]\nwhich is therefore exact for every open subset \\(\\mathrm{Y}'\\).</p>"
+    },
+    {
+     "id": "V.6.d",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.6.d\"><strong>d)</strong> <em>Proof of (iv):</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\((d_0,d_1)\\) is an equivalence pair, the same holds for \\((u_0,u_1)\\). It follows\nthat \\(u_0\\boxtimes u_1 : \\mathrm{U}_1 \\to \\mathrm{U}_0\\times_Y \\mathrm{U}_0\\) is an isomorphism (<a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a>), hence so is\n\\(v_0\\boxtimes v_1\\) (compare the cartesian squares of b)); since \\(v\\times v\\) is faithfully flat and\nquasi-compact, \\(d_0\\boxtimes d_1\\) is an isomorphism (SGA 1, VIII 5.4). Moreover, q is\nfaithfully flat, hence so is r, because u is faithfully flat. Since r and v are faithfully\nflat, the same holds for p.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-7",
+   "title": "7. Quotient by a proper flat equivalence prerelation",
+   "blocks": [
+    {
+     "id": "V.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.7\">7. Quotient by a proper flat equivalence prerelation</h2>"
+    },
+    {
+     "id": "V.7.1",
+     "type": "theoreme",
+     "label": "7.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"V.7.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">7.1</span></div>\n  <div class=\"thm-body\"><p>Let S be a locally noetherian scheme and\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\na \\((\\mathrm{Sch}/S)\\)-groupoid such that \\(d_1\\) is proper and flat, \\(X_0\\) is quasi-projective over\nS, and the morphism \\(d : X_1 \\to X_0\\times_S X_0\\) with components \\(d_0\\) and \\(d_1\\) is quasi-finite.\nThen:</p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <p>There exists a cokernel \\((Y,p)\\) of \\((d_0,d_1)\\) in \\((\\mathrm{Sch}/S)\\); moreover, such a \\((Y,p)\\) is\na cokernel of \\((d_0,d_1)\\) in the category of all ringed spaces.</p></li>\n<li><span class=\"item-label\">(ii)</span> <p>p is surjective, open, proper, and Y is of finite type over S.</p></li>\n<li><span class=\"item-label\">(iii)</span> <p>The morphism \\(X_1 \\to X_0\\times_Y X_0\\) with components \\(d_0\\) and \\(d_1\\) is surjective.</p></li>\n<li><span class=\"item-label\">(iv)</span> <p>If \\((d_0,d_1)\\) is an equivalence pair, \\(X_1 \\to X_0\\times_Y X_0\\) is an isomorphism\nand p is faithfully flat.</p></li>\n</ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\((Y,p)\\) be the cokernel of \\((d_0,d_1)\\) in the category of all ringed spaces. The\nargument of paragraph 4.c) shows that, in order to prove (i), it suffices to show\nthat Y is a scheme and p a morphism of schemes. Now this question is local on\nY; by <a class=\"ref\" href=\"#V.6.1\">Lemma 6.1</a> (i), it therefore suffices to show that every point z of \\(X_0\\) has\na saturated open neighborhood \\(\\mathrm{U}_z\\) such that the groupoid induced on \\(\\mathrm{U}_z\\) by \\(X_*\\) admits\na quasi-section. We may even assume that z is closed in the fiber of z over\n<!-- p.174 -->S (we shall say that z is <em>closed relative to S</em>). The existence of \\(\\mathrm{U}_z\\) then follows\nfrom the lemmas below:</p>"
+    },
+    {
+     "id": "V.7.2",
+     "type": "lemme",
+     "label": "7.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"V.7.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">7.2</span></div>\n  <div class=\"thm-body\"><p>Let T be a noetherian affine scheme, X, Y, and Z T-schemes of finite\ntype, with X quasi-projective over T, and\n\\[\n\\xymatrix{\nY \\ar[r]^{u} \\ar[d]_{v} &amp; X \\ar@{--&gt;}[d] \\\\\nZ \\ar@{--&gt;}[r] &amp; T\n}\n\\]\na diagram in \\((\\mathrm{Sch}/T)\\). Let z moreover be a point of Z which is closed relative\nto T and such that v is flat at the points of \\(v^{-1}(z)\\). If \\(v^{-1}(z)\\) is not empty, there exists a\nclosed subscheme F of X such that \\(u(u^{-1}(\\mathrm{F})\\cap v^{-1}(z))\\) is finite nonempty and such that the\nrestriction of v to \\(u^{-1}(\\mathrm{F})\\) is flat at the points of \\(v^{-1}(z)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\mathrm{T} = \\mathrm{Spec}\\ \\mathrm{A}\\). We may assume X of the form \\(\\mathrm{Proj}\\ \\mathrm{S}\\), where S is\nthe symmetric algebra of an A-module of finite type E. If \\(u(v^{-1}(z))\\) is finite, we can choose\nF equal to X. Otherwise, we denote by \\(y_1,\\ldots,y_n\\) the points of the fiber \\(v^{-1}(z)\\) associated\nto the structure sheaf \\(\\mathscr{O}_{v^{-1}(z)}\\) of \\(v^{-1}(z)\\) (the \\(y_i\\) are thus such that, if \\(\\mathscr{O}_i\\) denotes\nthe local ring of \\(v^{-1}(z)\\) at the point \\(y_i\\), the maximal ideal of \\(\\mathscr{O}_i\\) consists of zero\ndivisors). If t is the image of z in T, \\(u(v^{-1}(z))\\) is an infinite constructible subset of the\nfiber of t in X. There thus exists a point x closed in this fiber, belonging to\n\\(u(v^{-1}z)\\) and distinct from \\(u(y_1),\\ldots,u(y_n)\\). Then \\(\\mathrm{X}-\\overline{\\{x\\}}\\) is an open neighborhood of\n\\(u(y_1),\\ldots,u(y_n)\\), hence contains an open neighborhood of the form \\(\\mathrm{D}_+(f)\\), where f is a\nhomogeneous element of degree d of S (the notation is that of EGA II, § 2.3). Consequently,\nthe closed subscheme \\(\\mathrm{X}_1 = \\mathrm{V}_+(f)\\) defined by f contains x and avoids the\npoints \\(u(y_1),\\ldots,u(y_n)\\). It follows obviously that the inverse image\n\\(\\mathrm{Y}_1 = u^{-1}(\\mathrm{V}_+(f))\\) of this subscheme is distinct from Y and meets \\(v^{-1}(z)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall even show that the restriction \\(v_1\\) of v to \\(\\mathrm{Y}_1\\) is flat at the points of\n\\(v^{-1}(z)\\); if \\(u(v_1^{-1}(z))\\) is finite, it will thus suffice to choose F equal to \\(\\mathrm{X}_1\\); otherwise, one\nrepeats the argument just developed, replacing Y by \\(\\mathrm{Y}_1\\), v by \\(v_1\\), and u\nby the morphism \\(u_1\\) induced on \\(\\mathrm{Y}_1\\) by u; in this way one obtains a decreasing\nsequence \\(\\mathrm{X}, \\mathrm{X}_1,\\ldots\\) of closed subschemes of X; since such a sequence terminates,\n\\(u(u^{-1}(\\mathrm{X}_n)\\cap v^{-1}(z))\\) will be finite nonempty for some n and one will choose F equal to\n\\(\\mathrm{X}_n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It thus remains to show that \\(v_1\\) is flat at the points of \\(v^{-1}(z)\\); so let y be a\npoint of \\(\\mathrm{Y}_1\\) above z, \\(\\mathscr{O}_y\\) the local ring of y in Y, \\(\\overline{\\mathscr{O}}_y\\) the local ring of\ny in \\(v^{-1}(z)\\), \\(\\mathscr{O}_{v(y)}\\) the local ring of \\(v(y)\\) in Z. If \\(g\\in \\mathrm{S}_1\\) is such that \\(\\mathrm{D}_+(g)\\)\nis a neighborhood of \\(u(y)\\) in X, let \\(\\varphi\\) be the image of \\(f/g^d\\) in \\(\\mathscr{O}_y\\) and \\(\\overline{\\varphi}\\) the image\nof \\(f/g^d\\) in \\(\\overline{\\mathscr{O}}_y\\). It then follows from the construction of f that \\(\\overline{\\varphi}\\) does not divide 0\nin \\(\\overline{\\mathscr{O}}_y\\); since \\(\\mathscr{O}_y\\) is flat over \\(\\mathscr{O}_z\\), \\(\\varphi\\) does not divide 0 in \\(\\mathscr{O}_y\\) and\n\\(\\mathscr{O}_y/\\mathscr{O}_y\\varphi\\) is flat over \\(\\mathscr{O}_z\\) (SGA 1, IV 5.7). Now \\(\\mathscr{O}_y/\\mathscr{O}_y\\varphi\\) is none other than the local\nring of z in \\(\\mathrm{Y}_1\\).</p>"
+    },
+    {
+     "id": "V.7.3",
+     "type": "lemme",
+     "label": "7.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"V.7.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">7.3</span></div>\n  <div class=\"thm-body\"><p>We keep the notation and hypotheses of 7.1. Every point z\nof \\(X_0\\) which is closed relative to S then has a saturated open neighborhood \\(\\mathrm{U}_z\\) such\nthat the groupoid induced by \\(X_*\\) on \\(\\mathrm{U}_z\\) admits a quasi-section.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><!-- p.175 -->The statement being local on S, we may assume S affine and apply the preceding lemma\nto the diagram\n\\[\n\\xymatrix{\nX_1 \\ar[r]^{d_0} \\ar[d]_{d_1} &amp; X_0 \\ar@{--&gt;}[d] \\\\\nX_0 \\ar@{--&gt;}[r] &amp; S\n}\n\\]\nin \\((\\mathrm{Sch}/S)\\). So let F be a closed subscheme of \\(X_0\\) such that\n\\(d_0(d_0^{-1}(\\mathrm{F})\\cap d_1^{-1}(z))\\) is finite nonempty and such that the restriction of \\(d_1\\) to \\(d_0^{-1}(\\mathrm{F})\\)\nis flat at the points of \\(d_1^{-1}(z)\\). Denote by \\(\\mathrm{F}_1\\) and \\(\\mathrm{F}_2\\) the inverse images\nof F under \\(d_0\\) and \\(d_0d_0' = d_0d_1'\\), and by \\(\\widetilde{d}_0, \\widetilde{d}_1\\ldots\\) the morphisms induced by\n\\(d_0, d_1\\ldots\\) We thus have a commutative diagram\n\\[\n\\xymatrix{\n\\mathrm{F}_2 \\ar@&lt;0.6ex&gt;[r]^{\\widetilde{d}_1'} \\ar@&lt;-0.6ex&gt;[r]_{\\widetilde{d}_0'} \\ar[d]_{\\widetilde{d}_2'} &amp; \\mathrm{F}_1 \\ar[r]^{\\widetilde{d}_0} \\ar[d]_{\\widetilde{d}_1} &amp; \\mathrm{F} \\\\\nX_1 \\ar@&lt;0.6ex&gt;[r]^{d_1} \\ar@&lt;-0.6ex&gt;[r]_{d_0} &amp; X_0 &amp; {}\n}\n\\]\nin which the two left-hand squares are cartesian and the first row is exact\n(compare (0,1,2), § 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first show that there are only finitely many points of \\(\\mathrm{F}_1\\) above z:\nindeed, let s be the image of z in S; since \\(\\widetilde{d}_0(\\widetilde{d}_1^{-1}(z))\\) is finite, the points of this\nset are closed in the fiber of s in \\(X_0\\); there are therefore only finitely many\npoints u of \\(X_0\\times_S X_0\\) whose second projection is z and whose first projection\nbelongs to \\(\\widetilde{d}_0(\\widetilde{d}_1^{-1}(z))\\); finally, since \\(X_1 \\to X_0\\times_S X_0\\) is quasi-finite, such a\npoint u comes from finitely many points of \\(X_1\\), whence the assertion. The morphism\n\\(\\widetilde{d}_1\\) is therefore quasi-finite and flat at the points of \\(\\mathrm{F}_1\\) above z.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Denote by \\(\\Phi\\) the closed subset of \\(\\mathrm{F}_1\\) consisting of the points where \\(\\widetilde{d}_1\\) is not both flat\nand quasi-finite (SGA 1, IV 6.10 and EGA III, 4.4.10). Since \\(d_1\\) is proper, \\(\\widetilde{d}_1(\\Phi)\\) is\nclosed and does not contain z; consequently, if we set \\(\\mathrm{W} = \\widetilde{d}_1(\\mathrm{F}_1) - \\widetilde{d}_1(\\Phi)\\),\nthen \\(\\widetilde{d}_1\\) is flat and quasi-finite, that is, finite and locally free (EGA III, 4.4.2), over\nW. Since the restriction of \\(\\widetilde{d}_1\\) to \\(\\widetilde{d}_1^{-1}(\\mathrm{W})\\) is open, \\(\\widetilde{d}_1(\\mathrm{F}_1)\\) is an open\nneighborhood of z, and W is the largest open subset of \\(X_0\\) contained in \\(\\widetilde{d}_1(\\mathrm{F}_1)\\)\nover which \\(\\widetilde{d}_1\\) is both flat and quasi-finite.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall see in <a class=\"ref\" href=\"#V.7.4\">Lemma 7.4</a> that the inverse images of \\(\\Phi\\) under \\(\\widetilde{d}_1'\\) and\n\\(\\widetilde{d}_0'\\) are both identified with the set of points of \\(\\mathrm{F}_2\\) where \\(\\widetilde{d}_2'\\) is not both\nflat and quasi-finite. It follows that\n\\(d_0^{-1}(\\mathrm{W}) = \\widetilde{d}_2'(\\mathrm{F}_2) - \\widetilde{d}_2'(\\widetilde{d}_0'^{-1}\\Phi)\\) coincides with\n\\(d_1^{-1}(\\mathrm{W}) = \\widetilde{d}_2'(\\mathrm{F}_2) - \\widetilde{d}_2'(\\widetilde{d}_1'^{-1}\\Phi)\\), that is, W is saturated. Consequently,\nif we set \\(\\mathrm{W}_1 = \\widetilde{d}_1^{-1}(\\mathrm{W})\\), the equality \\(d_0^{-1}(\\mathrm{W}) = d_1^{-1}(\\mathrm{W})\\) implies\n\\(\\widetilde{d}_2'^{-1}d_0^{-1}(\\mathrm{W}) = \\widetilde{d}_2'^{-1}d_1^{-1}(\\mathrm{W})\\), that is, \\(\\widetilde{d}_0'^{-1}(\\mathrm{W}_1) = \\widetilde{d}_1'^{-1}(\\mathrm{W}_1)\\). Since\n\\(\\widetilde{d}_0'\\) is faithfully flat and quasi-compact and\n<!-- p.176 -->the square\n\\[\n\\xymatrix{\n\\mathrm{F}_2 \\ar[r]^{\\widetilde{d}_1'} \\ar[d]_{\\widetilde{d}_0'} &amp; \\mathrm{F}_1 \\ar[d]^{\\widetilde{d}_0} \\\\\n\\mathrm{F}_1 \\ar[r]_{\\widetilde{d}_0} &amp; \\mathrm{F}\n}\n\\]\nis cartesian, it follows that \\(\\mathrm{W}_1\\) is of the form \\(\\widetilde{d}_0^{-1}(\\mathrm{U})\\), where U is an open subset of F\n(SGA 1, VIII 4.4). This open subset U of F is a quasi-section for the groupoid with base\nW induced by \\(X_*\\). We may therefore choose \\(\\mathrm{U}_z\\) equal to W.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It thus remains to state <a class=\"ref\" href=\"#V.7.4\">Lemma 7.4</a>, whose proof is classical:</p>"
+    },
+    {
+     "id": "V.7.4",
+     "type": "lemme",
+     "label": "7.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"V.7.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">7.4</span></div>\n  <div class=\"thm-body\"><p>Consider a cartesian square of schemes\n\\[\n\\xymatrix{\n\\mathrm{F}_2 \\ar[r]^{v} \\ar[d]_{d'} &amp; \\mathrm{F}_1 \\ar[d]^{d} \\\\\nX_1 \\ar[r]_{u} &amp; X_0\n}\n\\]\nand let x be a point of \\(\\mathrm{F}_2\\). If u is flat, \\(d'\\) is flat at x if and only if d is\nflat at \\(v(x)\\). If d is locally of finite type, \\(d'\\) is quasi-finite at x if and only if\nd is quasi-finite at \\(v(x)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have thus proved that there exists a covering of \\(X_0\\) by saturated open subsets\nW such that the groupoid \\(\\mathrm{W}_*\\) induced by \\(X_*\\) on W admits a quasi-section. Modulo\n<a class=\"ref\" href=\"#V.6.1\">Lemma 6.1</a>, this proves <a class=\"ref\" href=\"#V.7.1\">Theorem 7.1</a>, except perhaps for the fact that p is\nproper. For this last point, we take up again the notation of 6.a), replacing the\ngroupoid \\(X_*\\) by \\(\\mathrm{W}_*\\). Then q is integral by <a class=\"ref\" href=\"#V.4.1\">Theorem 4.1</a>, hence proper.\nSince u is deduced from \\(w_0 : \\mathrm{W}_1 \\to \\mathrm{W}_0\\) by base change, u is proper;\nhence r is proper. Since \\(\\mathrm{W}_0\\) is quasi-projective over S, \\(\\mathrm{W}_0\\) is separated and of finite\ntype over Y; moreover, v is surjective; hence p is proper (EGA II, 5.4.3 (ii)).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-8",
+   "title": "8. Passage to the quotient by a flat equivalence prerelationnot necessarily proper",
+   "blocks": [
+    {
+     "id": "V.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.8\">8. Passage to the quotient by a flat equivalence prerelation<br>not necessarily proper</h2>"
+    },
+    {
+     "id": "V.8.1",
+     "type": "theoreme",
+     "label": "8.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"V.8.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">8.1</span></div>\n  <div class=\"thm-body\"><p>Let S be a noetherian scheme and\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\na \\((\\mathrm{Sch}/S)\\)-groupoid such that \\(d_1\\) is flat and of finite type, \\(X_0\\) is of finite type over\nS, and the morphism \\(X_1 \\to X_0\\times_S X_0\\) with components \\(d_0\\) and \\(d_1\\) is quasi-finite.\nThere then exists a dense saturated open subset \\(\\mathrm{W}_0\\) of \\(X_0\\) satisfying the following\nproperties:</p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <p>If\n\\[\n\\xymatrix{\n\\mathrm{W}_2 \\ar@&lt;0.6ex&gt;[r]^{w_0'} \\ar@&lt;-0.6ex&gt;[r]_{w_1'} &amp; \\mathrm{W}_1 \\ar@&lt;0.6ex&gt;[r]^{w_0} \\ar@&lt;-0.6ex&gt;[r]_{w_1} &amp; \\mathrm{W}_0\n}\n\\]\nis the groupoid induced by \\(X_*\\) on \\(\\mathrm{W}_0\\), then \\((w_0,w_1)\\) has a cokernel \\((\\mathrm{V},p)\\) in\n\\((\\mathrm{Sch}/S)\\); moreover, \\((\\mathrm{V},p)\\) is a cokernel of \\((w_0,w_1)\\) in the category of all\nringed spaces.</p></li>\n<li><span class=\"item-label\">(ii)</span> <p>p is surjective, open, and V is of finite type over S.</p></li>\n<li><span class=\"item-label\">(iii)</span> <p>The morphism \\(\\mathrm{W}_1 \\to \\mathrm{W}_0\\times_{\\mathrm{V}} \\mathrm{W}_0\\) with components \\(w_0\\) and \\(w_1\\) is surjective.</p></li>\n<li><span class=\"item-label\">(iv)</span> <p>If \\((d_0,d_1)\\) is an equivalence pair, \\(\\mathrm{W}_1 \\to \\mathrm{W}_0\\times_{\\mathrm{V}} \\mathrm{W}_0\\) is an isomorphism\nand p is faithfully flat.</p></li>\n</ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall show that W can be chosen in such a way that the \\((\\mathrm{Sch}/S)\\)-groupoid\n\\(\\mathrm{W}_*\\) induced by \\(X_*\\) admits a quasi-section (compare <a class=\"ref\" href=\"#V.7\">§ 7</a>). <a class=\"ref\" href=\"#V.8.1\">Theorem 8.1</a> will then\nfollow from <a class=\"ref\" href=\"#V.6.1\">Lemma 6.1</a>. Let us admit provisionally that, for every point \\(z\\in X_0\\) closed\nrelative to S (compare <a class=\"ref\" href=\"#V.7\">§ 7</a>), there exists an open subset \\(\\mathrm{W}_z\\) which is saturated, admits a\nquasi-section, and meets all the irreducible components of \\(X_0\\) passing through z.\nThen the exterior \\(X_0-\\overline{\\mathrm{W}_z}\\) of \\(\\mathrm{W}_z\\) in \\(X_0\\) is saturated (for the saturation\n\\(d_1(d_0^{-1}(X_0-\\overline{\\mathrm{W}_z}))\\) of this exterior is open and does not meet \\(\\mathrm{W}_z\\)). If this\nexterior is not empty, one can choose in it a point \\(z'\\) closed relative to S and\nassociate to \\(z'\\) an open subset \\(\\mathrm{W}_{z'}\\) as above; one may moreover assume \\(\\mathrm{W}_{z'}\\)\ncontained in \\(X_0-\\overline{\\mathrm{W}_z}\\); then \\(\\mathrm{W}_z\\) and \\(\\mathrm{W}_{z'}\\) are disjoint and the groupoid induced\nby \\(X_*\\) on \\(\\mathrm{W}_z\\cup\\mathrm{W}_{z'}\\) admits a quasi-section... The process must stop\nbecause \\(X_0\\) has only finitely many irreducible components.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It thus remains to construct \\(\\mathrm{W}_z\\): For this we may assume S affine;\nin this case, let y be a point of \\(X_1\\) such that \\(d_1(y) = z\\), X an affine open subset of \\(X_0\\)\ncontaining \\(d_0(y)\\), Y the inverse image of X in \\(X_1\\) under \\(d_0\\), and finally \\(u : \\mathrm{Y} \\to \\mathrm{X}\\) and\n\\(v : \\mathrm{Y} \\to X_0\\) the morphisms induced by \\(d_0\\) and \\(d_1\\). Since X is affine, hence\nquasi-projective, we can apply <a class=\"ref\" href=\"#V.7.2\">Lemma 7.2</a>: there is thus a subscheme F of \\(X_0\\)\nsuch that \\(d_0^{-1}(\\mathrm{F})\\cap d_1^{-1}(z)\\) is nonempty, \\(d_0(d_0^{-1}(\\mathrm{F})\\cap d_1^{-1}(z))\\)\nis finite, and the restriction of \\(d_1\\) to \\(d_0^{-1}(\\mathrm{F})\\) is flat at the points of \\(v^{-1}(z)\\). This fact\nallows us to take up again the notation of <a class=\"ref\" href=\"#V.7.3\">Lemma 7.3</a>, denoting by \\(\\mathrm{F}_1\\) and \\(\\mathrm{F}_2\\) the\ninverse images of F in \\(X_1\\) and \\(X_2\\), etc...\n\\[\n\\xymatrix{\n\\mathrm{F}_2 \\ar@&lt;0.6ex&gt;[r]^{\\widetilde{d}_1'} \\ar@&lt;-0.6ex&gt;[r]_{\\widetilde{d}_0'} \\ar[d]_{\\widetilde{d}_2'} &amp; \\mathrm{F}_1 \\ar[r]^{\\widetilde{d}_0} \\ar[d]_{\\widetilde{d}_1} &amp; \\mathrm{F} \\\\\nX_1 \\ar@&lt;0.6ex&gt;[r]^{d_1} \\ar@&lt;-0.6ex&gt;[r]_{d_0} &amp; X_0 &amp; {}\n}\n\\]\nOne then shows as in 7.3 that \\(\\widetilde{d}_1\\) is quasi-finite at the points of \\(\\widetilde{d}_1^{-1}(z)\\), so\nthat it is natural to consider the open subset \\(\\mathrm{F}_1'\\) of \\(\\mathrm{F}_1\\) consisting of the points where \\(\\widetilde{d}_1\\) is both\nflat and quasi-finite. By 7.4, the two inverse images of \\(\\mathrm{F}_1'\\) under \\(\\widetilde{d}_1'\\) and\n\\(\\widetilde{d}_0'\\) consist of the points of \\(\\mathrm{F}_2\\) where \\(\\widetilde{d}_2'\\) is flat and quasi-finite, so that these\ntwo inverse images coincide and \\(\\mathrm{F}_1'\\) is of the form \\(\\widetilde{d}_0^{-1}(\\mathrm{F}')\\), where \\(\\mathrm{F}'\\)\nis an open subset of F (SGA 1, VIII 4.4). After replacing F by \\(\\mathrm{F}'\\), we may therefore\n<!-- p.178 -->assume that \\(\\widetilde{d}_1\\) is quasi-finite and flat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this case, we denote by \\(\\mathrm{W}_z\\) the largest open subset of \\(\\widetilde{d}_1(\\mathrm{F}_1)\\) over\nwhich \\(\\widetilde{d}_1\\) is finite and flat. This open subset \\(\\mathrm{W}_z\\) contains the generic points of the\nirreducible components of \\(X_0\\) passing through z. It then follows from SGA 1, VIII, 6.5 and\n5.7, that \\(d_0^{-1}(\\mathrm{W}_z)\\) and \\(d_1^{-1}(\\mathrm{W}_z)\\) both coincide with the largest open subset\nof \\(\\widetilde{d}_2'(\\mathrm{F}_2)\\) over which \\(\\widetilde{d}_2'\\) is finite and flat. Consequently one sees as\nin 7.3 that the two inverse images of \\(\\widetilde{d}_1^{-1}(\\mathrm{W}_z)\\) under \\(\\widetilde{d}_0'\\) and \\(\\widetilde{d}_1'\\) coincide,\nhence that \\(\\widetilde{d}_1^{-1}(\\mathrm{W}_z)\\) is of the form \\(\\widetilde{d}_0^{-1}(\\mathrm{U})\\) where U is an open subset of F which is a\nquasi-section for the groupoid induced by \\(X_*\\) on \\(\\mathrm{W}_z\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "V-9",
+   "title": "9. Elimination of the noetherian hypotheses in Theorem 7.1",
+   "blocks": [
+    {
+     "id": "V.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"V.9\">9. Elimination of the noetherian hypotheses in Theorem 7.1</h2>"
+    },
+    {
+     "id": "V.9.a",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.9.a\"><strong>a)</strong> Let us take up again the notation and hypotheses of <a class=\"ref\" href=\"#V.6.1\">Lemma 6.1</a> and let\n\\(\\pi : \\mathrm{S}' \\to \\mathrm{S}\\) be an arbitrary base change. Denote by \\(f' : \\mathrm{X}' \\to \\mathrm{Y}'\\) the\nmorphism of \\(\\mathrm{S}'\\)-schemes deduced by the extension \\(\\pi\\) of the base from a morphism of\nS-schemes \\(f : \\mathrm{X} \\to \\mathrm{Y}\\). With this convention, \\(p' : \\mathrm{X}_0' \\to \\mathrm{Y}'\\) is surjective, as is\nthe morphism \\(\\mathrm{X}_1' \\to \\mathrm{X}_0'\\times_{\\mathrm{Y}'} \\mathrm{X}_0'\\) with components \\(d_0'\\) and \\(d_1'\\). The set\nunderlying \\(\\mathrm{Y}'\\) is thus identified with the quotient of the set underlying \\(\\mathrm{X}_0'\\) by the\nequivalence relation defined in \\(\\mathrm{X}_0'\\) by the \\(\\mathrm{S}'\\)-groupoid \\(\\mathrm{X}_*'\\). Moreover,\n\\(q' : \\mathrm{U}' \\to \\mathrm{Y}'\\) is integral surjective, so that the topology of \\(\\mathrm{Y}'\\) is the quotient\ntopology of that of \\(\\mathrm{U}'\\), hence also of that of \\(\\mathrm{X}_0'\\) (compare the proof in <a class=\"ref\" href=\"#V.6.c\">§ 6.c)</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On the other hand, it is clear that \\(\\mathrm{U}'\\) is a quasi-section of the \\(\\mathrm{S}'\\)-groupoid \\(\\mathrm{X}_*'\\),\nto which we can therefore apply <a class=\"ref\" href=\"#V.6.1\">Lemma 6.1</a>. In particular, \\(\\mathrm{X}_*'\\) has a cokernel\n\\((\\mathrm{Y}_1,p_1)\\) and the topological space underlying \\(\\mathrm{Y}_1\\) is obtained from the topological\nspace underlying \\(\\mathrm{X}_0'\\) by identifying the points equivalent for the relation\ndefined by \\(\\mathrm{X}_*'\\). It follows that the canonical morphism \\(\\mathrm{Y}_1 \\to \\mathrm{Y}'\\) is a\nhomeomorphism; I even claim that \\(\\mathrm{Y}_1 \\to \\mathrm{Y}'\\) is a <em>universal homeomorphism</em>: indeed,\nif \\(\\mathrm{S}''\\) is over \\(\\mathrm{S}'\\), let \\(\\mathrm{Y}_2\\) be the cokernel of\n\\((d_0\\times_{\\mathrm{S}}\\mathrm{S}'',\\ d_1\\times_{\\mathrm{S}}\\mathrm{S}'')\\). By what precedes, applied to the base\nchanges \\(\\mathrm{S}''\\to\\mathrm{S}'\\) and \\(\\mathrm{S}''\\to\\mathrm{S}\\), \\(\\mathrm{Y}_2\\to\\mathrm{Y}_1\\times_{\\mathrm{S}'}\\mathrm{S}''\\) and\n\\(\\mathrm{Y}_2\\to \\mathrm{Y}\\times_{\\mathrm{S}}\\mathrm{S}'' \\simeq \\mathrm{Y}'\\times_{\\mathrm{S}'}\\mathrm{S}''\\) are homeomorphisms, so that the same\nholds for \\(\\mathrm{Y}_1\\times_{\\mathrm{S}'}\\mathrm{S}'' \\to \\mathrm{Y}'\\times_{\\mathrm{S}'}\\mathrm{S}''\\).</p>"
+    },
+    {
+     "id": "V.9.b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.9.b\"><strong>b)</strong> Analogous remarks obviously apply to the case where the groupoid\n\\(X_*\\) admits quasi-sections \"locally\" (compare the proof of Theorem\n7.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let for example S be an arbitrary scheme and\n\\[\n\\xymatrix{\nX_2 \\ar@&lt;1.1ex&gt;[r]^{d_0'} \\ar[r]|-{d_1'} \\ar@&lt;-1.1ex&gt;[r]_{d_2'} &amp; X_1 \\ar@&lt;0.6ex&gt;[r]^{d_0} \\ar@&lt;-0.6ex&gt;[r]_{d_1} &amp; X_0\n}\n\\]\na \\((\\mathrm{Sch}/S)\\)-groupoid on which we make the following hypotheses: \\(X_0\\) is of\nfinite presentation and quasi-projective over S; \\(d_1\\) is of finite presentation, proper and\nflat; the morphism \\(X_1 \\to X_0\\times_S X_0\\) with components \\(d_0\\) and \\(d_1\\) is quasi-finite. <em>Then\nevery point x of \\(X_0\\) has an open neighborhood W which is saturated and such that the groupoid\ninduced by \\(X_*\\) in W admits a quasi-section:</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, the question is local on S, so that we may assume S affine. There then exists\na ring A of finite type over \\(\\mathbb{Z}\\), a morphism \\(\\mathrm{S}\\to \\mathrm{T} = \\mathrm{Spec}\\ \\mathrm{A}\\) and a\n\\((\\mathrm{Sch}/T)\\)-groupoid \\(\\mathrm{Z}_*\\) such that \\(X_*\\) is identified with \\(\\mathrm{Z}_*\\times_{\\mathrm{T}} \\mathrm{S}\\) (EGA IV, 8); moreover,\nwe may assume that \\(\\mathrm{Z}_*\\) satisfies the conditions of <a class=\"ref\" href=\"#V.7.1\">Theorem 7.1</a> (EGA IV, 8). Consequently\n\\(\\mathrm{Z}_*\\) admits quasi-sections \"locally\" and we can apply the\nremarks of a).</p>"
+    },
+    {
+     "id": "V.9.c",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"V.9.c\"><!-- p.179 --><strong>c)</strong> It follows from a) and b) that assertions (i), (iii) and (iv) of <a class=\"ref\" href=\"#V.7.1\">Theorem 7.1</a>\nremain true under the hypotheses of b). When moreover \\((d_0,d_1)\\) is an equivalence\npair, one sees that Y is of finite presentation over S by applying the following\nproposition:</p>"
+    },
+    {
+     "id": "V.9.1",
+     "type": "proposition",
+     "label": "9.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"V.9.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">9.1</span></div>\n  <div class=\"thm-body\"><p>Consider morphisms of schemes\n\\[\n\\xymatrix{\nX_0 \\ar[r]^{p} &amp; Y \\ar[r]^{q} &amp; S\n}\n\\]\nsuch that \\(qp\\) is of finite type (resp. of finite presentation) and p is faithfully flat of\nfinite presentation. Then q is of finite type (resp. of finite presentation)<sup>(*)</sup>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since p is surjective and \\(qp\\) quasi-compact, q is quasi-compact. We may therefore\nassume S, Y and \\(X_0\\) affine with rings A, B, C: We have \\(\\mathrm{B} = \\varinjlim \\mathrm{B}_i\\), where the \\(\\mathrm{B}_i\\)\nrun through the subalgebras of finite type of B. Since C is of finite presentation over\nB, there exist an index \\(i_0\\), a \\(\\mathrm{B}_{i_0}\\)-algebra of finite presentation \\(\\mathrm{C}_{i_0}\\) and an\nisomorphism \\(\\mathrm{C} \\simeq \\mathrm{C}_{i_0}\\otimes_{\\mathrm{B}_{i_0}} \\mathrm{B}\\); if we set \\(\\mathrm{C}_i = \\mathrm{C}_{i_0}\\otimes_{\\mathrm{B}_{i_0}} \\mathrm{B}_i\\) for\n\\(i\\geqslant i_0\\), we thus have \\(\\mathrm{C} \\simeq \\mathrm{C}_i\\otimes_{\\mathrm{B}_i} \\mathrm{B}\\).\n\\[\n\\xymatrix{\n\\mathrm{B} \\ar[r] &amp; \\mathrm{C} \\\\\n\\mathrm{B}_i \\ar[u] \\ar[r] &amp; \\mathrm{C}_i \\ar[u] \\\\\n\\mathrm{A} \\ar[u] &amp; {}\n}\n\\]\nSince C is faithfully flat over B, one deduces from EGA IV 11 the existence of an\n\\(i_1\\geqslant i_0\\) such that \\(\\mathrm{C}_{i_1}\\) is faithfully flat over \\(\\mathrm{B}_{i_1}\\);\nconsequently \\(\\mathrm{C}_i\\) is faithfully flat\nover \\(\\mathrm{B}_i\\) for \\(i\\geqslant i_1\\). For \\(i\\geqslant i_1\\), the canonical map \\(\\mathrm{C}_i \\to \\mathrm{C}\\) is then\ninjective, being deduced from \\(\\mathrm{B}_i \\to \\mathrm{B}\\) by faithfully flat extension of the base. If C\nis of finite type over A, it follows that the map \\(\\mathrm{C}_i \\to \\mathrm{C}\\), hence also the map\n\\(\\mathrm{B}_i \\to \\mathrm{B}\\), are bijective for i large enough.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now suppose C of finite presentation over A: by what precedes, B is\nof finite type over A, hence of the form \\(\\overline{\\mathrm{B}}/\\mathrm{I}\\) where \\(\\overline{\\mathrm{B}}\\) is a polynomial algebra\nover A in finitely many indeterminates, and I an ideal of \\(\\overline{\\mathrm{B}}\\). Then I is the union of\nits subideals of finite type \\(\\mathrm{I}_\\alpha\\); whence the equality \\(\\mathrm{B} = \\varinjlim \\mathrm{B}_\\alpha\\) with\n\\(\\mathrm{B}_\\alpha = \\overline{\\mathrm{B}}/\\mathrm{I}_\\alpha\\). Proceeding as above, one chooses an index \\(\\alpha_0\\) and a\n\\(\\mathrm{B}_{\\alpha_0}\\)-algebra of finite presentation \\(\\mathrm{C}_{\\alpha_0}\\) such that there exists an isomorphism\n\\(\\mathrm{C} \\simeq \\mathrm{C}_{\\alpha_0}\\otimes_{\\mathrm{B}_{\\alpha_0}} \\mathrm{B}\\). For \\(\\alpha\\geqslant\\alpha_0\\), one again sets\n\\(\\mathrm{C}_\\alpha = \\mathrm{C}_{\\alpha_0}\\otimes_{\\mathrm{B}_{\\alpha_0}} \\mathrm{B}_\\alpha\\), so that we have \\(\\mathrm{C} \\simeq \\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} \\mathrm{B}\\) for\n\\(\\alpha\\geqslant\\alpha_0\\). Again by EGA IV 11, one concludes as above that \\(\\mathrm{C}_\\alpha\\) is\nfaithfully flat over \\(\\mathrm{B}_\\alpha\\) for \\(\\alpha\\) large enough. In this case, the kernel of the map\n\\(\\mathrm{C}_\\alpha \\to \\mathrm{C}\\) (resp. \\(\\mathrm{C}_\\alpha \\to \\mathrm{C}_\\beta\\) for \\(\\beta\\geqslant\\alpha\\)) is identified with\n\\(\\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} (\\mathrm{I}/\\mathrm{I}_\\alpha)\\) (resp. with \\(\\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} (\\mathrm{I}_\\beta/\\mathrm{I}_\\alpha)\\)). Since \\(\\mathrm{C}_\\alpha\\) and C\nare of finite presentation over A and \\(\\mathrm{C}_\\alpha \\to \\mathrm{C}\\) is surjective,\n\\(\\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} (\\mathrm{I}/\\mathrm{I}_\\alpha)\\) is an ideal of finite type and is the union of the ideals\n\\(\\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} (\\mathrm{I}_\\beta/\\mathrm{I}_\\alpha)\\). We therefore have \\(\\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} (\\mathrm{I}_\\beta/\\mathrm{I}_\\alpha) =\n\\mathrm{C}_\\alpha\\otimes_{\\mathrm{B}_\\alpha} (\\mathrm{I}/\\mathrm{I}_\\alpha)\\) for \\(\\beta\\) large enough, whence also \\(\\mathrm{I}_\\beta = \\mathrm{I}\\) (for \\(\\mathrm{C}_\\alpha\\) is\nfaithfully flat over \\(\\mathrm{B}_\\alpha\\)); hence B is of finite presentation over A.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p class=\"footnote\"><sup>(*)</sup> Cf. EGA IV<sub>4</sub>, 17.7.5 for a more general result.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

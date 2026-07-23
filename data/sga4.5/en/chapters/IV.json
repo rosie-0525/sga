@@ -1,0 +1,1863 @@
+{
+ "chapter_id": "IV",
+ "title": "The cohomology class associated with a cycle",
+ "number": "4",
+ "pages": [
+  {
+   "id": "IV",
+   "title": "The cohomology class associated with a cycle",
+   "html": "<h1 id=\"IV\">4 The class of cohomology associated with a cycle</h1>\n<p>by A. Grothendieck, written by P. Deligne</p>\n<p>This presentation is inspired by notes by Grothendieck, who formed a state 0 of <span class=\"cite\">[<a class=\"cite-src\" id=\"sga5-cite-9\" href=\"#sga5\">21</a>]</span>. It defines the cohomology class of a cycle \\(X\\) in a separate smooth pattern of the finite type on a field and shows that the intersection corresponds to the cup-product.</p>\n<p>The Chapter <a class=\"ref\" href=\"#IV:1\">1</a> contains some general sorites. <a class=\"ref\" href=\"#IV:2\">2</a>, the class of a cycle is defined, in several situations more general than the one mentioned above. The main unconsidered compatibility is that between direct image of a cycle and trace morphism in cohomology. <a class=\"ref\" href=\"#IV:3\">3</a>, the formula of the traces of Lefschetz is deduced from this formalism for an endomorphism with fixed points isolated from a clean and smooth pattern on \\(k\\) algebraically closed – and for an endomorphism of Frobenius of a curve.</p>\n<p>We make the following conditions:</p>\n<ol class=\"enumerate\">\n<li><p>\"scheme\" means separate noetherian scheme (this is largely a hypothesis of convenience).</p></li>\n<li><p>In the Chapter <a class=\"ref\" href=\"#IV:2\">2</a>, an integer is fixed \\(n\\), and \\(n\\) is invertible on all the schemes considered.</p></li>\n<li><p>In the Chapter <a class=\"ref\" href=\"#IV:3\">3</a>, a prime number is fixed \\(\\ell\\), and \\(\\ell\\) is invertible on all the schemes considered. The cohomology used is always cohomology \\(\\ell\\)-adic:</p>\n<div class=\"displaymath\" id=\"disp-IV-1\">\n\\[\n\\underline{\\operatorname{H}}^\\bullet(X) = \\mathbb{Q}_\\ell\\otimes_{\\mathbb{Z}_\\ell} \\varprojlim \\underline{\\operatorname{H}}^\\bullet(X,\\mathbb{Z}/\\ell^n) \\text{.}\n\\]\n</div></li>\n</ol>\n<p>Cycle cohomology classes, trace morphisms, ... are defined by limit passage from the case of finite coefficients \\(\\mathbb{Z}/\\ell^n\\) (cf. \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga5-cite-10\" href=\"#sga5\">21</a>]</span>).</p>",
+   "blocks": [
+    {
+     "id": "IV",
+     "type": "heading",
+     "label": "4",
+     "title": null,
+     "html": "<h1 id=\"IV\">4 The class of cohomology associated with a cycle</h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>by A. Grothendieck, written by P. Deligne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This presentation is inspired by notes by Grothendieck, who formed a state 0 of <span class=\"cite\">[<a class=\"cite-src\" id=\"sga5-cite-9\" href=\"#sga5\">21</a>]</span>. It defines the cohomology class of a cycle \\(X\\) in a separate smooth pattern of the finite type on a field and shows that the intersection corresponds to the cup-product.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The Chapter <a class=\"ref\" href=\"#IV:1\">1</a> contains some general sorites. <a class=\"ref\" href=\"#IV:2\">2</a>, the class of a cycle is defined, in several situations more general than the one mentioned above. The main unconsidered compatibility is that between direct image of a cycle and trace morphism in cohomology. <a class=\"ref\" href=\"#IV:3\">3</a>, the formula of the traces of Lefschetz is deduced from this formalism for an endomorphism with fixed points isolated from a clean and smooth pattern on \\(k\\) algebraically closed – and for an endomorphism of Frobenius of a curve.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We make the following conditions:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><p>\"scheme\" means separate noetherian scheme (this is largely a hypothesis of convenience).</p></li>\n<li><p>In the Chapter <a class=\"ref\" href=\"#IV:2\">2</a>, an integer is fixed \\(n\\), and \\(n\\) is invertible on all the schemes considered.</p></li>\n<li><p>In the Chapter <a class=\"ref\" href=\"#IV:3\">3</a>, a prime number is fixed \\(\\ell\\), and \\(\\ell\\) is invertible on all the schemes considered. The cohomology used is always cohomology \\(\\ell\\)-adic:</p>\n<div class=\"displaymath\" id=\"disp-IV-1\">\n\\[\n\\underline{\\operatorname{H}}^\\bullet(X) = \\mathbb{Q}_\\ell\\otimes_{\\mathbb{Z}_\\ell} \\varprojlim \\underline{\\operatorname{H}}^\\bullet(X,\\mathbb{Z}/\\ell^n) \\text{.}\n\\]\n</div></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cycle cohomology classes, trace morphisms, ... are defined by limit passage from the case of finite coefficients \\(\\mathbb{Z}/\\ell^n\\) (cf. \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga5-cite-10\" href=\"#sga5\">21</a>]</span>).</p>"
+    }
+   ],
+   "footnotes": [],
+   "bibliography": []
+  },
+  {
+   "id": "IV:1",
+   "title": "Cohomology with support and cup–products",
+   "html": "<h2 id=\"IV:1\">1 Cohomology with support and cup–products</h2>\n<p>This paragraph contains reminders of general topology, which the reader is invited to consult only as needed.</p>\n<h3 id=\"IV:1-1\">1.1 \\(H^1\\) and torsors</h3>\n<h3 id=\"IV:1-1-1\">1.1.1 </h3>\n<p>Either \\(\\mathscr{F}\\) an abelian sheaf on a site \\(X\\). We know that \\(\\underline{\\operatorname{H}}^1(X,\\mathscr{F})\\) classifies \\(\\mathscr{F}\\)-torsors on \\(X\\). We will normalize (\\(=\\)choose the sign) of isomorphism \\((\\)all classes of isomorphism of \\(F\\)-tors\\()\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^1(X,\\mathscr{F})\\) such that for any exact sequence \\(0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathscr{F}\\xrightarrow{\\alpha}\\mathscr{G}\\xrightarrow{\\beta}\\mathscr{H}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0\\) and all \\(h\\in\\underline{\\operatorname{H}}^0(X,\\mathscr{H})\\), the \\(\\mathscr{F}\\)-torseur \\(\\beta^{-1}(h)\\subset \\mathscr{G}\\), on which \\(F\\) acts by \\((f,x)\\mapsto \\alpha(f)+x\\), or class \\(\\partial h\\).</p>\n<h3 id=\"IV:1-1-2\">1.1.2 </h3>\n<p>Either \\(\\mathscr{P}\\) a \\(\\mathscr{F}\\)-torseur. If \\((U_i)\\) is an open cover of \\(X\\), and \\(p_i\\) a section of \\(\\mathscr{P}\\) on \\(U_i\\), the Čech cocycle is associated with \\(\\mathscr{P}\\)</p>\n<div class=\"displaymath\" id=\"disp-IV:1-1\">\n\\[\np_{i j} = p_j - p_i \\qquad \\text{(} p_{i j}\\in \\underline{\\operatorname{H}}^0(U_i\\times U_j,\\mathscr{F}) \\text{).}\n\\]\n</div>\n<p>If, according to the usual rule, the application is defined \\(\\operatorname{\\check H}^\\bullet(X,\\mathscr{F})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X,\\mathscr{F})\\) in such a way that it is a morphism of \\(\\delta\\)-fonctors, the image of \\((p_{i j})\\in \\operatorname{\\check H}^1(X,\\mathscr{F})\\) in \\(\\underline{\\operatorname{H}}^1(X,\\mathscr{F})\\) is the class of \\(\\mathscr{P}\\), as normalized by <a class=\"ref\" href=\"#IV:1-1-1\">1.1.1</a>.</p>\n<h3 id=\"IV:1-1-3\">1.1.3 </h3>\n<p>The definition of \\(\\underline{\\operatorname{H}}^\\bullet(X,\\mathscr{F})\\) is as follows: for \\(\\mathscr{F}^\\bullet\\) a resolution with acyclic components of \\(\\mathscr{F}\\), \\(\\underline{\\operatorname{H}}^i(X,\\mathscr{F}) = \\underline{\\operatorname{H}}^i\\Gamma(X,\\mathscr{F}^\\bullet)\\). The structure of \\(\\delta\\)-fonctor is obtained by combining with a short exact sequence of sheaves a short exact sequence of resolutions that remains accurate after application of the \\(\\Gamma\\). If \\(\\mathscr{F}^\\bullet\\) is a resolution of \\(\\mathscr{F}\\), the connection homomorphism \\(\\partial\\) associated with</p>\n<div class=\"displaymath\" id=\"disp-IV:1-2\">\n\\[\n\\xymatrix{\n  0 \\ar[r]\n    &amp; \\mathscr{F} \\ar[r]\n    &amp; \\mathscr{F}^0 \\ar[r]^-d \n    &amp; \\ker(d) \\ar[r] \n    &amp; 0\n}\n\\]\n</div>\n<p>induces the opposite of definition isomorphism \\(\\underline{\\operatorname{H}}^1(X,\\mathscr{F}) = \\Gamma\\left(X,\\ker(d)\\right)/d \\Gamma(X,\\mathscr{F}^0)\\).</p>\n<h3 id=\"IV:1-1-4\">1.1.4 </h3>\n<p>Either \\(U\\) an open part of \\(X\\) (a subbeam of the final sheaf) or \\(D\\) the \"additional closed.\" It is known that \\(\\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\\) classifies \\(\\mathscr{F}\\)-torsors on \\(X\\), trivialised on \\(U\\). For any short exact sequence \\(0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathscr{F}\\xrightarrow{\\alpha} \\mathscr{G}\\xrightarrow{\\beta}\\mathscr{H}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0\\), and any supporting section in \\(D\\) \\(h\\in\\underline{\\operatorname{H}}_D^0(X,\\mathscr{H})\\), the torsor \\(\\beta^{-1}(h)\\), trivialised on \\(U\\) by the section \\(0\\), has for class \\(\\partial h\\).</p>\n<p>The long exact sequence of supporting cohomology</p>\n<div class=\"displaymath\" id=\"disp-IV:1-3\">\n\\[\n\\xymatrix{\n  \\cdots \\ar[r]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^i(X,\\mathscr{F}) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^i(X,\\mathscr{F}) \\ar[r]\n    &amp; \\underline{\\operatorname{H}}^i(U,\\mathscr{F}) \\ar[r]^-\\partial \n    &amp; \\cdots\n}\n\\]\n</div>\n<p>is defined from the sequence of searchers</p>\n<div class=\"displaymath\" id=\"disp-IV:1-4\">\n\\[\n\\xymatrix{\n  0 \\ar[r] \n    &amp; \\Gamma_D \\ar[r] \n    &amp; \\Gamma \\ar[r] \n    &amp; \\Gamma(U,-) \\ar[r] \n    &amp; 0\n}\n\\]\n</div>\n<p>For any section \\(f\\in \\underline{\\operatorname{H}}^0(U,\\mathscr{F})\\), \\(\\partial f\\in \\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\\) is the class of the trivial torsor \\(\\mathscr{F}\\), trivialised on \\(U\\) by \\(f\\).</p>\n<h3 id=\"IV:1-1-5\">1.1.5 </h3>\n<p>Either \\(j:U\\hookrightarrow X\\). If \\(\\mathscr{F}\\) is injected into \\(j_* j^* \\mathscr{F}\\), the exact sequence</p>\n<div class=\"displaymath\" id=\"disp-IV:1-5\">\n\\[\n\\xymatrix{\n  0 \\ar[r] \n  &amp; \\mathscr{F} \\ar[r]\n  &amp; j_* j^* \\mathscr{F} \\ar[r]\n  &amp; j_* j^* \\mathscr{F} / \\mathscr{F} \\ar[r]\n  &amp; 0\n}\n\\]\n</div>\n<p>provides \\(\\partial:\\underline{\\operatorname{H}}^0(j_* j^*\\mathscr{F}/\\mathscr{F}) = \\underline{\\operatorname{H}}_D^0(j_* j^* \\mathscr{F}/\\mathscr{F}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\\). The compound application</p>\n<div class=\"displaymath\" id=\"disp-IV:1-6\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^0(U,\\mathscr{F}) = \\underline{\\operatorname{H}}^0(X,j_* j^*\\mathscr{F}) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^0(X,j_* j^*\\mathscr{F} / \\mathscr{F}) \\ar[r]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\n}\n\\]\n</div>\n<p>is the opposite of the application considered in <a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>.</p>\n<h3 id=\"IV:1-1-6\">1.1.6 </h3>\n<p>It is recalled that if \\(\\mathscr{L}\\) is an invertible sheaf on a diagram \\(X\\), the corresponding \\(\\mathbb{G}_m\\)-torsor is the sheaf \\(\\operatorname{Isom}(\\mathscr{O},\\mathscr{L})\\), on which \\(\\mathbb{G}_m\\) acts by \\((\\lambda,f)\\mapsto f\\circ (\\lambda\\cdot) = \\lambda f\\). It is also recalled that if \\(D\\) is a partitioner of Cartier on \\(X\\), and \\(j:U\\hookrightarrow X\\) the inclusion of additional aperture, the invertible sheaf \\(\\mathscr{O}(D)\\) is the subbeam of \\(j_*\\mathscr{O}_U\\) formed of local sections \\(s\\) such as \\(s f\\) be in \\(\\mathscr{O}_X\\), for \\(f\\) a local equation of \\(D\\).</p>\n<h3 id=\"IV:1-2\">1.2 Cup-products</h3>\n<p>In this issue, we develop some remarks on cup-products in support cohomology that we will reserve, in [V], to connect the duality of Poincaré curves and self-duality of the jacobian.</p>\n<h3 id=\"IV:1-2-1\">1.2.1 </h3>\n<p>Be \\(X\\) a site, \\(Y\\) a closed part of \\(X\\), and \\(\\mathscr{F},\\mathscr{G}\\) two abelian sheaves on \\(X\\). For example: \\(X\\) a scheme, \\(Y\\) a closed subschema and \\(\\mathscr{F},\\mathscr{G}\\) sheaves on \\({X}_{\\mathrm{\\acute{e}t}}\\). Set a product</p>\n<div class=\"equation\" id=\"IV:eq:1-2-1-1\">\n\\[\n\\tag{1.2.1.1}\n  \\Gamma_Y(X,\\mathscr{F})\\otimes \\Gamma(Y,\\mathscr{G}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\Gamma_Y(X,\\mathscr{F}\\otimes\\mathscr{G}) \\text{.}\n\\]\n</div>\n<p>The product of a section \\(s\\), supported in \\(Y\\), of \\(\\mathscr{F}\\) by a section \\(t\\) of \\(\\mathscr{G}\\) on \\(Y\\) is obtained as follows: locally on \\(X\\), \\(t\\) is the restriction to \\(Y\\) of a section \\(t'\\) of \\(\\mathscr{G}\\) on \\(X\\), and the product is formed \\(s\\otimes t'\\). It is supported in \\(Y\\), and does not depend on the choice of \\(t'\\), which legitimizes and allows the globalization of the definition.</p>\n<p>Be \\(i:Y\\hookrightarrow X\\) the inclusion morphism.<a class=\"ref\" href=\"#IV:eq:1-2-1-1\">1.2.1.1</a>) is the product.</p>\n<div class=\"equation\" id=\"IV:eq:1-2-1-2\">\n\\[\n\\tag{1.2.1.2}\n  i^!\\mathscr{F}\\otimes i^*\\mathscr{G} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} i^!(\\mathscr{F}\\otimes\\mathscr{G}) \\text{,}\n\\]\n</div>\n<p>of which (<a class=\"ref\" href=\"#IV:eq:1-2-1-1\">1.2.1.1</a>) is deducted by application of \\(\\Gamma(Y,-)\\).</p>\n<h3 id=\"IV:1-2-2\">1.2.2 </h3>\n<p>Derive these arrows. Be \\(\\mathscr{K}\\), \\(\\mathscr{L}\\) and \\(\\mathscr{M}\\) in the derived category, and a bilinear application \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathscr{M}\\). By derivation of (<a class=\"ref\" href=\"#IV:eq:1-2-1-1\">1.2.1.1</a>), it is deduced from</p>\n<div class=\"equation\" id=\"IV:eq:1-2-2-1\">\n\\[\n\\tag{1.2.2.1}\n  \\mathsf{R}\\Gamma_Y(X,\\mathscr{K}) \\overset{\\mathsf{L}}{\\otimes} \\mathsf{R}\\Gamma(Y,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma_Y(X,\\mathscr{M})\n\\]\n</div>\n<p>Inducing</p>\n<div class=\"equation\" id=\"IV:eq:1-2-2-2\">\n\\[\n\\tag{1.2.2.2}\n  \\underline{\\operatorname{H}}_Y^i(X,\\mathscr{K})\\otimes \\underline{\\operatorname{H}}^j(Y,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_Y^{i+j}(X,\\mathscr{M})\n\\]\n</div>\n<p>(the cup-product). The local arrow (<a class=\"ref\" href=\"#IV:eq:1-2-1-2\">1.2.1.2</a>) provides</p>\n<div class=\"equation\" id=\"IV:eq:1-2-2-3\">\n\\[\n\\tag{1.2.2.3}\n  \\mathsf{R} i^! \\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} i^*\\mathscr{L} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R} i^!\\mathscr{M} \\text{,}\n\\]\n</div>\n<p>of which (<a class=\"ref\" href=\"#IV:eq:1-2-2-1\">1.2.2.1</a>) is deducted by application of \\(\\mathsf{R}\\Gamma(Y,-)\\).</p>\n<h3 id=\"IV:1-2-3\">1.2.3 </h3>\n<p>Above, I have ignored the conflicts that the use of the same formula of diversions on the right (\\(\\mathsf{R}\\Gamma\\)) and on the left (\\(\\overset{\\mathsf{L}}{\\otimes}\\)).</p>\n<ol class=\"enumerate\">\n<li><p>At the next issue, the right derivatives considered will all be of finished cohomological dimension. This allows to work systematically in the derived categories \\(\\mathsf{D}^-\\). To have complexes both flat and flaccid, we use canonical flaccid resolutions as in <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-23\" href=\"#sga4\">2</a>]</span>.</p></li>\n<li><p>For a more general theory, it ceases to be to interpret the bilinear applications of \\(\\mathscr{K}\\) and \\(\\mathscr{L}\\) in \\(\\mathscr{M}\\) as morphisms of \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\) in \\(\\mathscr{M}\\). For example, \\(\\mathsf{R}\\Gamma_Y(X,\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes}\\mathsf{R}\\Gamma(Y,\\mathscr{L})\\) is not defined if both factors are in \\(\\mathsf{D}^+\\). One solution is to work in \\(\\mathsf{D}^+\\), to define</p>\n<div class=\"displaymath\" id=\"disp-IV:1-7\">\n\\[\n\\operatorname{Bil}(\\mathscr{K},\\mathscr{L};\\mathscr{M}) = \\varinjlim \\hom(\\mathscr{K}'\\otimes\\mathscr{L}',\\mathscr{M}') \\text{,}\n\\]\n</div>\n<p>where the limit is taken on quasi-isomorphisms \\(\\mathscr{K}'\\xrightarrow{\\sim} \\mathscr{K}\\), \\(\\mathscr{L}'\\xrightarrow{\\sim} \\mathscr{L}\\), \\(\\mathscr{M}\\xrightarrow{\\sim} \\mathscr{M}'\\) (\\(\\mathscr{K}'\\), \\(\\mathscr{L}'\\), \\(\\mathscr{M}'\\) lower bounded) and where \\(\\hom\\) is for \"complex morphism, close to homotopy,\" and to systematically use such bilinear applications, without ever mentioning \\(\\otimes\\).</p></li>\n</ol>\n<h3 id=\"IV:1-2-4\">1.2.4 Second theme</h3>\n<p>Be \\(U\\) an open \\(X\\) and \\(j:U\\hookrightarrow X\\) the inclusion morphism. For \\(\\mathscr{K}\\) in the derived category, on \\(U\\), we pose \\(\\mathsf{R}\\Gamma_!(U,\\mathscr{K})=\\mathsf{R}\\Gamma(X,j_!\\mathscr{K})\\). For \\(\\mathscr{K}\\), \\(\\mathscr{L}\\) and \\(\\mathscr{M}\\) on \\(U\\), and a bilinear application \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathscr{M}\\), we want to define</p>\n<div class=\"equation\" id=\"IV:eq:1-2-4-1\">\n\\[\n\\tag{1.2.4.1}\n  \\mathsf{R}\\Gamma(U,\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes}\\mathsf{R}\\Gamma_!(U,\\mathscr{L})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathsf{R}\\Gamma_!(U,\\mathscr{M}) \\text{.}\n\\]\n</div>\n<p>At the level of the sheaves, and of their overall sections, such a product is deduced from the isomorphism \\(j_*\\mathscr{F}\\otimes j_!\\mathscr{G}\\xleftarrow{\\sim} j_!(\\mathscr{F}\\otimes \\mathscr{G})\\), but care must be taken that \\(\\mathsf{R}\\Gamma_!\\) is not in general the derivative of the actuator \\(\\Gamma(X,j_!-)\\).</p>\n<p>Let's start by defining</p>\n<div class=\"displaymath\" id=\"disp-IV:1-8\">\n\\[\n\\xymatrix{\n  \\mathsf{R} j_* \\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} j_! \\mathscr{L} \n    &amp; j_!(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} \\mathscr{L}) \\ar[r] \\ar[l]_-\\sim&amp; j_!\\mathscr{M} .\n}\n\\]\n</div>\n<p>Applying \\(\\mathsf{R}\\Gamma(X,-)\\), we find</p>\n<div class=\"displaymath\" id=\"disp-IV:1-9\">\n\\[\n\\xymatrix{\n  \\mathsf{R}\\Gamma(U,\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes}\\mathsf{R}\\Gamma_!(U,\\mathscr{L}) = \\mathsf{R}\\Gamma(X,\\mathsf{R} j_*\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes} \\mathsf{R}\\Gamma(X,j_!\\mathscr{L}) \\ar[r] \n    &amp; \\mathsf{R}\\Gamma(X,j_! \\mathscr{M}) .\n}\n\\]\n</div>\n<p>Again, the conflict between the left and the right will resolve the next number by working in \\(\\mathsf{D}^-\\).</p>\n<h3 id=\"IV:1-2-5\">1.2.5 Coda</h3>\n<p>Been \\(j:U\\hookrightarrow X\\) an open part and \\(i:Y\\hookrightarrow U\\) a closed part of \\(U\\). Either \\(\\overline{Y}\\) a closed \\(X\\) such as \n\\(\\overline{Y}\\cap U=Y\\), (e.g. the addition of \\(U\\setminus Y\\)) Either \\(\\mathscr{K}\\) \non \\(U\\)We're laying down. \\(\\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{K})=\\mathsf{R}\\Gamma_!(Y,\\mathsf{R} i^!\\mathscr{K})\\) where \n\\(\\mathsf{R}\\Gamma_!\\) is related to the inclusion of \\(Y\\) in \\(\\overline{Y}\\). For all open \n\\(V\\) of the \\(U\\), containing \\(Y\\), \\(\\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{K})\\) sent in \n\\(\\mathsf{R}\\Gamma_!(V,\\mathscr{K})\\): if we still note \\(i\\) the inclusion of \\(\\overline{Y}\\) in \\(X\\), \n\\(j\\) that of \\(Y\\) in \\(\\overline{Y}\\) and \\(k\\) that of \\(V\\) in \\(X\\), we have \n\\(\\mathsf{R} i^!\\mathscr{K} = j^*\\mathsf{R} i^! k_!(k^*\\mathscr{K})\\), hence a morphism \n\\(j_!\\mathsf{R} i^!\\mathscr{K} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R} i^! k_!(k^*\\mathscr{K})\\)Applying it \n\\(\\mathsf{R}\\Gamma(\\overline{Y},-)\\), we find \n\\(\\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{K})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma_{\\overline{Y}}(k_! k^* \\mathscr{K}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma(k_! k^*\\mathscr{K}) = \\mathsf{R}\\Gamma_!(V,\\mathscr{K})\\).</p>\n<p>For \\(\\mathscr{K},\\mathscr{L},\\mathscr{M}\\) on \\(U\\), and a bilinear application \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathscr{M}\\), we want to define</p>\n<div class=\"equation\" id=\"IV:eq:1-2-5-1\">\n\\[\n\\tag{1.2.5.1}\n  \\underline{\\operatorname{H}}^n(U,\\mathscr{K})\\otimes \\underline{\\operatorname{H}}_!^m(Y,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_{Y!}^{n+m}(U,\\mathscr{M})\n\\]\n</div>\n<p>(the latter group itself sends itself to \\(\\underline{\\operatorname{H}}_!^{n+m}(V,\\mathscr{M})\\)). In the derived category, it is necessary to define</p>\n<div class=\"equation\" id=\"IV:eq:1-2-5-2\">\n\\[\n\\tag{1.2.5.2}\n  \\mathsf{R}\\Gamma_Y(U,\\mathscr{K}) \\overset{\\mathsf{L}}{\\otimes} \\mathsf{R}\\Gamma_!(R,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{M}) \\text{.}\n\\]\n</div>\n<p>We identify \\(\\mathsf{R}\\Gamma_Y\\) to \\(\\mathsf{R}\\Gamma(Y,\\mathsf{R} i^!\\mathscr{K})\\). The product we are looking for is of the type (<a class=\"ref\" href=\"#IV:eq:1-2-4-1\">1.2.4.1</a>) relating to the local product (<a class=\"ref\" href=\"#IV:eq:1-2-2-3\">1.2.2.3</a>) on \\(Y\\): \\(\\mathsf{R} i^! \\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R} i^! \\mathscr{M}\\).</p>\n<h3 id=\"IV:1-2-6\">1.2.6 </h3>\n<p>Above, the absolute sorite was carried out. There is a parallel relative sorite, with \\(\\Gamma\\) replaced by \\(f_*\\) by \\(f\\) a morphism \\(X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\).</p>\n<h3 id=\"IV:1-3\">1.3 The Koszul Rule</h3>\n<p>Be \\(A\\) a commutative ring, and \\((V_i)_{i\\in I}\\) a finished family of \\(A\\)-graded modules (or \\(\\mathbb{Z}/2\\)-graded). Recall the definition of the graduated tensor product \\(\\bigotimes_{i\\in I} V_i\\), within the meaning of the Koszul rule (cf. <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-24\" href=\"#sga4\">2</a>]</span>) For each total order \\(a\\) on \\(I\\), we will define a module \\(V(a)\\). We will also define a transitive system of isomorphisms \\(\\varphi_{a b}:V(b)\\xrightarrow{\\sim} V(a)\\) and the graduated tensorial product of \\(V_i\\) will be the \"common value\" \\(\\varprojlim V(a)\\) of this module system.</p>\n<ol class=\"enumerate\">\n<li><p>\\(V(a) = \\bigotimes_{i\\in I} |V_i|\\) (ordinary tensor product of ungraded modules underlying \\(V_i\\)).</p></li>\n<li><p>If the \\(x_i\\in V_i\\) are homogeneous, we take \\(\\varphi_{a b}(\\otimes x_i) = (-1)^N \\otimes x_i\\), where \\(N\\) is the sum of \\(\\deg(x_i)\\deg(x_j)\\) extended to couples \\((i,j)\\) such as \\(i&lt;_a j\\) and \\(i&gt;_b j\\).</p></li>\n</ol>\n<h3 id=\"sub-IV:1-10\">Example 1</h3>\n<p>Take \\(I=\\{1,2\\}\\) and be \\(a\\) the order where \\(1&lt;2\\), \\(b\\) the order where \\(1&gt;2\\). Be \\(v_i\\in V_i\\), homogeneous, and note \\(v_1\\otimes v_2\\) (rep. \\(v_2\\otimes v_1\\)) the image in the tensor product graduated from the product of \\(v_i\\) in \\(V(a)\\) (rep. \\(V(b)\\)).</p>\n<div class=\"displaymath\" id=\"disp-IV:1-11\">\n\\[\nv_1\\otimes v_2 = (-1)^{\\deg(v_1)\\deg(v_2)} v_2\\otimes v_1\n\\]\n</div>\n<p>(Koszul rule).</p>\n<h3 id=\"sub-IV:1-12\">Example 2</h3>\n<p>If the \\(V_i\\) are all of degree \\(1\\), we have , linking the underlying module to the graduated tensor product, and the ordinary tensor product of the modules \\(|V_i|\\) underlying \\(V_i\\), a canonical isomorphism</p>\n<div class=\"displaymath\" id=\"disp-IV:1-13\">\n\\[\n\\left|\\bigotimes V_i\\right| \\simeq \\bigotimes |V_i|\\otimes_{\\mathbb{Z}}\\bigwedge^{|I|}\\mathbb{Z}^I \\text{.}\n\\]\n</div>\n<h3 id=\"sub-IV:1-14\">Example 3</h3>\n<p>For \\(A\\) a field, and \\(X_i\\) a finite family of spaces, the formula of Künneth is written \\(\\underline{\\operatorname{H}}^\\bullet\\left(\\prod X_i,A\\right) = \\bigotimes \\underline{\\operatorname{H}}^\\bullet(X_i,A)\\).</p>\n<p>Either \\(V^\\vee\\) the graduated dual of \\(V\\). The canonical application</p>\n<div class=\"equation\" id=\"IV:eq:1-3-1\">\n\\[\n\\tag{1.3.1}\n  V^\\vee\\otimes V = V\\otimes V^\\vee \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} A\n\\]\n</div>\n<p>is \\(v'\\otimes v\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} v'(v)\\).</p>\n<p>It is now assumed that \\(A\\) is a field, and only vector spaces of finite dimension are considered. Canon isomorphism</p>\n<div class=\"equation\" id=\"IV:eq:1-3-2\">\n\\[\n\\tag{1.3.2}\n  W\\otimes V^\\vee \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\hom(V,W)\n\\]\n</div>\n<p>is \\(w\\otimes v'\\mapsto \\left(v\\mapsto w\\cdot v'(v)\\right)\\). Through this isomorphism, the composition \\(\\hom(Y,Z)\\otimes \\hom(X,Y)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\hom(X,Z)\\) is identified with the morphism induced by (<a class=\"ref\" href=\"#IV:eq:1-3-1\">1.3.1</a>): \\(Z\\otimes Y^\\vee\\otimes Y\\otimes X^\\vee \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Z\\otimes X^\\vee\\).</p>\n<p>The trace of \\(f:V\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} V^\\vee\\) (nil for \\(f\\) homogeneity of degree \\(\\ne 0\\)) is the image of \\(f\\) by</p>\n<div class=\"equation\" id=\"IV:eq:1-3-4\">\n\\[\n\\tag{1.3.4}\n  \\operatorname{tr}:\\hom(V,V) {\\xleftarrow{\\sim}}_\\text{(1.3.2)} V\\otimes V^\\vee = V^\\vee \\otimes V \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}_\\text{(1.3.1)} A .\n\\]\n</div>\n<p>It is easily verified that for \\(f\\) degree \\(0\\),</p>\n<div class=\"equation\" id=\"IV:eq:1-3-5\">\n\\[\n\\tag{1.3.5}\n  \\operatorname{tr}(f,V) = \\sum (-1)^i \\operatorname{tr}(f,V^i) \\text{.}\n\\]\n</div>\n<p>If we express that the two morphisms composed of morphisms (<a class=\"ref\" href=\"#IV:eq:1-3-1\">1.3.1</a>) \\(V^\\vee\\otimes V\\otimes W^\\vee\\otimes W\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} k\\) switch, we find that for \\(f:V\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} W\\) and \\(g:W\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} V\\) homogeneous, we have</p>\n<div class=\"equation\" id=\"IV:eq:1-3-6\">\n\\[\n\\tag{1.3.6}\n  \\operatorname{tr}(f g) = (-1)^{\\deg(f)\\deg(g)} \\operatorname{tr}(g f) \\text{.}\n\\]\n</div>",
+   "blocks": [
+    {
+     "id": "IV:1",
+     "type": "heading",
+     "label": "1",
+     "title": null,
+     "html": "<h2 id=\"IV:1\">1 Cohomology with support and cup–products</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This paragraph contains reminders of general topology, which the reader is invited to consult only as needed.</p>"
+    },
+    {
+     "id": "IV:1-1",
+     "type": "heading",
+     "label": "1.1",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1\">1.1 \\(H^1\\) and torsors</h3>"
+    },
+    {
+     "id": "IV:1-1-1",
+     "type": "heading",
+     "label": "1.1.1",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1-1\">1.1.1 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(\\mathscr{F}\\) an abelian sheaf on a site \\(X\\). We know that \\(\\underline{\\operatorname{H}}^1(X,\\mathscr{F})\\) classifies \\(\\mathscr{F}\\)-torsors on \\(X\\). We will normalize (\\(=\\)choose the sign) of isomorphism \\((\\)all classes of isomorphism of \\(F\\)-tors\\()\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^1(X,\\mathscr{F})\\) such that for any exact sequence \\(0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathscr{F}\\xrightarrow{\\alpha}\\mathscr{G}\\xrightarrow{\\beta}\\mathscr{H}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0\\) and all \\(h\\in\\underline{\\operatorname{H}}^0(X,\\mathscr{H})\\), the \\(\\mathscr{F}\\)-torseur \\(\\beta^{-1}(h)\\subset \\mathscr{G}\\), on which \\(F\\) acts by \\((f,x)\\mapsto \\alpha(f)+x\\), or class \\(\\partial h\\).</p>"
+    },
+    {
+     "id": "IV:1-1-2",
+     "type": "heading",
+     "label": "1.1.2",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1-2\">1.1.2 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(\\mathscr{P}\\) a \\(\\mathscr{F}\\)-torseur. If \\((U_i)\\) is an open cover of \\(X\\), and \\(p_i\\) a section of \\(\\mathscr{P}\\) on \\(U_i\\), the Čech cocycle is associated with \\(\\mathscr{P}\\)</p>"
+    },
+    {
+     "id": "disp-IV:1-1",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-1\">\n\\[\np_{i j} = p_j - p_i \\qquad \\text{(} p_{i j}\\in \\underline{\\operatorname{H}}^0(U_i\\times U_j,\\mathscr{F}) \\text{).}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If, according to the usual rule, the application is defined \\(\\operatorname{\\check H}^\\bullet(X,\\mathscr{F})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X,\\mathscr{F})\\) in such a way that it is a morphism of \\(\\delta\\)-fonctors, the image of \\((p_{i j})\\in \\operatorname{\\check H}^1(X,\\mathscr{F})\\) in \\(\\underline{\\operatorname{H}}^1(X,\\mathscr{F})\\) is the class of \\(\\mathscr{P}\\), as normalized by <a class=\"ref\" href=\"#IV:1-1-1\">1.1.1</a>.</p>"
+    },
+    {
+     "id": "IV:1-1-3",
+     "type": "heading",
+     "label": "1.1.3",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1-3\">1.1.3 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The definition of \\(\\underline{\\operatorname{H}}^\\bullet(X,\\mathscr{F})\\) is as follows: for \\(\\mathscr{F}^\\bullet\\) a resolution with acyclic components of \\(\\mathscr{F}\\), \\(\\underline{\\operatorname{H}}^i(X,\\mathscr{F}) = \\underline{\\operatorname{H}}^i\\Gamma(X,\\mathscr{F}^\\bullet)\\). The structure of \\(\\delta\\)-fonctor is obtained by combining with a short exact sequence of sheaves a short exact sequence of resolutions that remains accurate after application of the \\(\\Gamma\\). If \\(\\mathscr{F}^\\bullet\\) is a resolution of \\(\\mathscr{F}\\), the connection homomorphism \\(\\partial\\) associated with</p>"
+    },
+    {
+     "id": "disp-IV:1-2",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-2\">\n\\[\n\\xymatrix{\n  0 \\ar[r]\n    &amp; \\mathscr{F} \\ar[r]\n    &amp; \\mathscr{F}^0 \\ar[r]^-d \n    &amp; \\ker(d) \\ar[r] \n    &amp; 0\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>induces the opposite of definition isomorphism \\(\\underline{\\operatorname{H}}^1(X,\\mathscr{F}) = \\Gamma\\left(X,\\ker(d)\\right)/d \\Gamma(X,\\mathscr{F}^0)\\).</p>"
+    },
+    {
+     "id": "IV:1-1-4",
+     "type": "heading",
+     "label": "1.1.4",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1-4\">1.1.4 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(U\\) an open part of \\(X\\) (a subbeam of the final sheaf) or \\(D\\) the \"additional closed.\" It is known that \\(\\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\\) classifies \\(\\mathscr{F}\\)-torsors on \\(X\\), trivialised on \\(U\\). For any short exact sequence \\(0\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathscr{F}\\xrightarrow{\\alpha} \\mathscr{G}\\xrightarrow{\\beta}\\mathscr{H}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0\\), and any supporting section in \\(D\\) \\(h\\in\\underline{\\operatorname{H}}_D^0(X,\\mathscr{H})\\), the torsor \\(\\beta^{-1}(h)\\), trivialised on \\(U\\) by the section \\(0\\), has for class \\(\\partial h\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The long exact sequence of supporting cohomology</p>"
+    },
+    {
+     "id": "disp-IV:1-3",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-3\">\n\\[\n\\xymatrix{\n  \\cdots \\ar[r]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^i(X,\\mathscr{F}) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^i(X,\\mathscr{F}) \\ar[r]\n    &amp; \\underline{\\operatorname{H}}^i(U,\\mathscr{F}) \\ar[r]^-\\partial \n    &amp; \\cdots\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is defined from the sequence of searchers</p>"
+    },
+    {
+     "id": "disp-IV:1-4",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-4\">\n\\[\n\\xymatrix{\n  0 \\ar[r] \n    &amp; \\Gamma_D \\ar[r] \n    &amp; \\Gamma \\ar[r] \n    &amp; \\Gamma(U,-) \\ar[r] \n    &amp; 0\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For any section \\(f\\in \\underline{\\operatorname{H}}^0(U,\\mathscr{F})\\), \\(\\partial f\\in \\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\\) is the class of the trivial torsor \\(\\mathscr{F}\\), trivialised on \\(U\\) by \\(f\\).</p>"
+    },
+    {
+     "id": "IV:1-1-5",
+     "type": "heading",
+     "label": "1.1.5",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1-5\">1.1.5 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(j:U\\hookrightarrow X\\). If \\(\\mathscr{F}\\) is injected into \\(j_* j^* \\mathscr{F}\\), the exact sequence</p>"
+    },
+    {
+     "id": "disp-IV:1-5",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-5\">\n\\[\n\\xymatrix{\n  0 \\ar[r] \n  &amp; \\mathscr{F} \\ar[r]\n  &amp; j_* j^* \\mathscr{F} \\ar[r]\n  &amp; j_* j^* \\mathscr{F} / \\mathscr{F} \\ar[r]\n  &amp; 0\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>provides \\(\\partial:\\underline{\\operatorname{H}}^0(j_* j^*\\mathscr{F}/\\mathscr{F}) = \\underline{\\operatorname{H}}_D^0(j_* j^* \\mathscr{F}/\\mathscr{F}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\\). The compound application</p>"
+    },
+    {
+     "id": "disp-IV:1-6",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-6\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^0(U,\\mathscr{F}) = \\underline{\\operatorname{H}}^0(X,j_* j^*\\mathscr{F}) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^0(X,j_* j^*\\mathscr{F} / \\mathscr{F}) \\ar[r]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^1(X,\\mathscr{F})\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is the opposite of the application considered in <a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>.</p>"
+    },
+    {
+     "id": "IV:1-1-6",
+     "type": "heading",
+     "label": "1.1.6",
+     "title": null,
+     "html": "<h3 id=\"IV:1-1-6\">1.1.6 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is recalled that if \\(\\mathscr{L}\\) is an invertible sheaf on a diagram \\(X\\), the corresponding \\(\\mathbb{G}_m\\)-torsor is the sheaf \\(\\operatorname{Isom}(\\mathscr{O},\\mathscr{L})\\), on which \\(\\mathbb{G}_m\\) acts by \\((\\lambda,f)\\mapsto f\\circ (\\lambda\\cdot) = \\lambda f\\). It is also recalled that if \\(D\\) is a partitioner of Cartier on \\(X\\), and \\(j:U\\hookrightarrow X\\) the inclusion of additional aperture, the invertible sheaf \\(\\mathscr{O}(D)\\) is the subbeam of \\(j_*\\mathscr{O}_U\\) formed of local sections \\(s\\) such as \\(s f\\) be in \\(\\mathscr{O}_X\\), for \\(f\\) a local equation of \\(D\\).</p>"
+    },
+    {
+     "id": "IV:1-2",
+     "type": "heading",
+     "label": "1.2",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2\">1.2 Cup-products</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this issue, we develop some remarks on cup-products in support cohomology that we will reserve, in [V], to connect the duality of Poincaré curves and self-duality of the jacobian.</p>"
+    },
+    {
+     "id": "IV:1-2-1",
+     "type": "heading",
+     "label": "1.2.1",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2-1\">1.2.1 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Be \\(X\\) a site, \\(Y\\) a closed part of \\(X\\), and \\(\\mathscr{F},\\mathscr{G}\\) two abelian sheaves on \\(X\\). For example: \\(X\\) a scheme, \\(Y\\) a closed subschema and \\(\\mathscr{F},\\mathscr{G}\\) sheaves on \\({X}_{\\mathrm{\\acute{e}t}}\\). Set a product</p>"
+    },
+    {
+     "id": "IV:eq:1-2-1-1",
+     "type": "equation",
+     "label": "1.2.1.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-1-1\">\n\\[\n\\tag{1.2.1.1}\n  \\Gamma_Y(X,\\mathscr{F})\\otimes \\Gamma(Y,\\mathscr{G}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\Gamma_Y(X,\\mathscr{F}\\otimes\\mathscr{G}) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The product of a section \\(s\\), supported in \\(Y\\), of \\(\\mathscr{F}\\) by a section \\(t\\) of \\(\\mathscr{G}\\) on \\(Y\\) is obtained as follows: locally on \\(X\\), \\(t\\) is the restriction to \\(Y\\) of a section \\(t'\\) of \\(\\mathscr{G}\\) on \\(X\\), and the product is formed \\(s\\otimes t'\\). It is supported in \\(Y\\), and does not depend on the choice of \\(t'\\), which legitimizes and allows the globalization of the definition.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Be \\(i:Y\\hookrightarrow X\\) the inclusion morphism.<a class=\"ref\" href=\"#IV:eq:1-2-1-1\">1.2.1.1</a>) is the product.</p>"
+    },
+    {
+     "id": "IV:eq:1-2-1-2",
+     "type": "equation",
+     "label": "1.2.1.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-1-2\">\n\\[\n\\tag{1.2.1.2}\n  i^!\\mathscr{F}\\otimes i^*\\mathscr{G} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} i^!(\\mathscr{F}\\otimes\\mathscr{G}) \\text{,}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>of which (<a class=\"ref\" href=\"#IV:eq:1-2-1-1\">1.2.1.1</a>) is deducted by application of \\(\\Gamma(Y,-)\\).</p>"
+    },
+    {
+     "id": "IV:1-2-2",
+     "type": "heading",
+     "label": "1.2.2",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2-2\">1.2.2 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Derive these arrows. Be \\(\\mathscr{K}\\), \\(\\mathscr{L}\\) and \\(\\mathscr{M}\\) in the derived category, and a bilinear application \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathscr{M}\\). By derivation of (<a class=\"ref\" href=\"#IV:eq:1-2-1-1\">1.2.1.1</a>), it is deduced from</p>"
+    },
+    {
+     "id": "IV:eq:1-2-2-1",
+     "type": "equation",
+     "label": "1.2.2.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-2-1\">\n\\[\n\\tag{1.2.2.1}\n  \\mathsf{R}\\Gamma_Y(X,\\mathscr{K}) \\overset{\\mathsf{L}}{\\otimes} \\mathsf{R}\\Gamma(Y,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma_Y(X,\\mathscr{M})\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Inducing</p>"
+    },
+    {
+     "id": "IV:eq:1-2-2-2",
+     "type": "equation",
+     "label": "1.2.2.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-2-2\">\n\\[\n\\tag{1.2.2.2}\n  \\underline{\\operatorname{H}}_Y^i(X,\\mathscr{K})\\otimes \\underline{\\operatorname{H}}^j(Y,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_Y^{i+j}(X,\\mathscr{M})\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(the cup-product). The local arrow (<a class=\"ref\" href=\"#IV:eq:1-2-1-2\">1.2.1.2</a>) provides</p>"
+    },
+    {
+     "id": "IV:eq:1-2-2-3",
+     "type": "equation",
+     "label": "1.2.2.3",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-2-3\">\n\\[\n\\tag{1.2.2.3}\n  \\mathsf{R} i^! \\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} i^*\\mathscr{L} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R} i^!\\mathscr{M} \\text{,}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>of which (<a class=\"ref\" href=\"#IV:eq:1-2-2-1\">1.2.2.1</a>) is deducted by application of \\(\\mathsf{R}\\Gamma(Y,-)\\).</p>"
+    },
+    {
+     "id": "IV:1-2-3",
+     "type": "heading",
+     "label": "1.2.3",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2-3\">1.2.3 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Above, I have ignored the conflicts that the use of the same formula of diversions on the right (\\(\\mathsf{R}\\Gamma\\)) and on the left (\\(\\overset{\\mathsf{L}}{\\otimes}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><p>At the next issue, the right derivatives considered will all be of finished cohomological dimension. This allows to work systematically in the derived categories \\(\\mathsf{D}^-\\). To have complexes both flat and flaccid, we use canonical flaccid resolutions as in <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-23\" href=\"#sga4\">2</a>]</span>.</p></li>\n<li><p>For a more general theory, it ceases to be to interpret the bilinear applications of \\(\\mathscr{K}\\) and \\(\\mathscr{L}\\) in \\(\\mathscr{M}\\) as morphisms of \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\) in \\(\\mathscr{M}\\). For example, \\(\\mathsf{R}\\Gamma_Y(X,\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes}\\mathsf{R}\\Gamma(Y,\\mathscr{L})\\) is not defined if both factors are in \\(\\mathsf{D}^+\\). One solution is to work in \\(\\mathsf{D}^+\\), to define</p>\n<div class=\"displaymath\" id=\"disp-IV:1-7\">\n\\[\n\\operatorname{Bil}(\\mathscr{K},\\mathscr{L};\\mathscr{M}) = \\varinjlim \\hom(\\mathscr{K}'\\otimes\\mathscr{L}',\\mathscr{M}') \\text{,}\n\\]\n</div>\n<p>where the limit is taken on quasi-isomorphisms \\(\\mathscr{K}'\\xrightarrow{\\sim} \\mathscr{K}\\), \\(\\mathscr{L}'\\xrightarrow{\\sim} \\mathscr{L}\\), \\(\\mathscr{M}\\xrightarrow{\\sim} \\mathscr{M}'\\) (\\(\\mathscr{K}'\\), \\(\\mathscr{L}'\\), \\(\\mathscr{M}'\\) lower bounded) and where \\(\\hom\\) is for \"complex morphism, close to homotopy,\" and to systematically use such bilinear applications, without ever mentioning \\(\\otimes\\).</p></li>\n</ol>"
+    },
+    {
+     "id": "IV:1-2-4",
+     "type": "heading",
+     "label": "1.2.4",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2-4\">1.2.4 Second theme</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Be \\(U\\) an open \\(X\\) and \\(j:U\\hookrightarrow X\\) the inclusion morphism. For \\(\\mathscr{K}\\) in the derived category, on \\(U\\), we pose \\(\\mathsf{R}\\Gamma_!(U,\\mathscr{K})=\\mathsf{R}\\Gamma(X,j_!\\mathscr{K})\\). For \\(\\mathscr{K}\\), \\(\\mathscr{L}\\) and \\(\\mathscr{M}\\) on \\(U\\), and a bilinear application \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathscr{M}\\), we want to define</p>"
+    },
+    {
+     "id": "IV:eq:1-2-4-1",
+     "type": "equation",
+     "label": "1.2.4.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-4-1\">\n\\[\n\\tag{1.2.4.1}\n  \\mathsf{R}\\Gamma(U,\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes}\\mathsf{R}\\Gamma_!(U,\\mathscr{L})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathsf{R}\\Gamma_!(U,\\mathscr{M}) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>At the level of the sheaves, and of their overall sections, such a product is deduced from the isomorphism \\(j_*\\mathscr{F}\\otimes j_!\\mathscr{G}\\xleftarrow{\\sim} j_!(\\mathscr{F}\\otimes \\mathscr{G})\\), but care must be taken that \\(\\mathsf{R}\\Gamma_!\\) is not in general the derivative of the actuator \\(\\Gamma(X,j_!-)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's start by defining</p>"
+    },
+    {
+     "id": "disp-IV:1-8",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-8\">\n\\[\n\\xymatrix{\n  \\mathsf{R} j_* \\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} j_! \\mathscr{L} \n    &amp; j_!(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} \\mathscr{L}) \\ar[r] \\ar[l]_-\\sim&amp; j_!\\mathscr{M} .\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Applying \\(\\mathsf{R}\\Gamma(X,-)\\), we find</p>"
+    },
+    {
+     "id": "disp-IV:1-9",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-9\">\n\\[\n\\xymatrix{\n  \\mathsf{R}\\Gamma(U,\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes}\\mathsf{R}\\Gamma_!(U,\\mathscr{L}) = \\mathsf{R}\\Gamma(X,\\mathsf{R} j_*\\mathscr{K})\\overset{\\mathsf{L}}{\\otimes} \\mathsf{R}\\Gamma(X,j_!\\mathscr{L}) \\ar[r] \n    &amp; \\mathsf{R}\\Gamma(X,j_! \\mathscr{M}) .\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Again, the conflict between the left and the right will resolve the next number by working in \\(\\mathsf{D}^-\\).</p>"
+    },
+    {
+     "id": "IV:1-2-5",
+     "type": "heading",
+     "label": "1.2.5",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2-5\">1.2.5 Coda</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Been \\(j:U\\hookrightarrow X\\) an open part and \\(i:Y\\hookrightarrow U\\) a closed part of \\(U\\). Either \\(\\overline{Y}\\) a closed \\(X\\) such as \n\\(\\overline{Y}\\cap U=Y\\), (e.g. the addition of \\(U\\setminus Y\\)) Either \\(\\mathscr{K}\\) \non \\(U\\)We're laying down. \\(\\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{K})=\\mathsf{R}\\Gamma_!(Y,\\mathsf{R} i^!\\mathscr{K})\\) where \n\\(\\mathsf{R}\\Gamma_!\\) is related to the inclusion of \\(Y\\) in \\(\\overline{Y}\\). For all open \n\\(V\\) of the \\(U\\), containing \\(Y\\), \\(\\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{K})\\) sent in \n\\(\\mathsf{R}\\Gamma_!(V,\\mathscr{K})\\): if we still note \\(i\\) the inclusion of \\(\\overline{Y}\\) in \\(X\\), \n\\(j\\) that of \\(Y\\) in \\(\\overline{Y}\\) and \\(k\\) that of \\(V\\) in \\(X\\), we have \n\\(\\mathsf{R} i^!\\mathscr{K} = j^*\\mathsf{R} i^! k_!(k^*\\mathscr{K})\\), hence a morphism \n\\(j_!\\mathsf{R} i^!\\mathscr{K} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R} i^! k_!(k^*\\mathscr{K})\\)Applying it \n\\(\\mathsf{R}\\Gamma(\\overline{Y},-)\\), we find \n\\(\\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{K})\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma_{\\overline{Y}}(k_! k^* \\mathscr{K}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma(k_! k^*\\mathscr{K}) = \\mathsf{R}\\Gamma_!(V,\\mathscr{K})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(\\mathscr{K},\\mathscr{L},\\mathscr{M}\\) on \\(U\\), and a bilinear application \\(\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}\\mathscr{M}\\), we want to define</p>"
+    },
+    {
+     "id": "IV:eq:1-2-5-1",
+     "type": "equation",
+     "label": "1.2.5.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-5-1\">\n\\[\n\\tag{1.2.5.1}\n  \\underline{\\operatorname{H}}^n(U,\\mathscr{K})\\otimes \\underline{\\operatorname{H}}_!^m(Y,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_{Y!}^{n+m}(U,\\mathscr{M})\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(the latter group itself sends itself to \\(\\underline{\\operatorname{H}}_!^{n+m}(V,\\mathscr{M})\\)). In the derived category, it is necessary to define</p>"
+    },
+    {
+     "id": "IV:eq:1-2-5-2",
+     "type": "equation",
+     "label": "1.2.5.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-2-5-2\">\n\\[\n\\tag{1.2.5.2}\n  \\mathsf{R}\\Gamma_Y(U,\\mathscr{K}) \\overset{\\mathsf{L}}{\\otimes} \\mathsf{R}\\Gamma_!(R,\\mathscr{L}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}\\Gamma_{Y!}(U,\\mathscr{M}) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We identify \\(\\mathsf{R}\\Gamma_Y\\) to \\(\\mathsf{R}\\Gamma(Y,\\mathsf{R} i^!\\mathscr{K})\\). The product we are looking for is of the type (<a class=\"ref\" href=\"#IV:eq:1-2-4-1\">1.2.4.1</a>) relating to the local product (<a class=\"ref\" href=\"#IV:eq:1-2-2-3\">1.2.2.3</a>) on \\(Y\\): \\(\\mathsf{R} i^! \\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}\\mathscr{L} \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R} i^! \\mathscr{M}\\).</p>"
+    },
+    {
+     "id": "IV:1-2-6",
+     "type": "heading",
+     "label": "1.2.6",
+     "title": null,
+     "html": "<h3 id=\"IV:1-2-6\">1.2.6 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Above, the absolute sorite was carried out. There is a parallel relative sorite, with \\(\\Gamma\\) replaced by \\(f_*\\) by \\(f\\) a morphism \\(X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\).</p>"
+    },
+    {
+     "id": "IV:1-3",
+     "type": "heading",
+     "label": "1.3",
+     "title": null,
+     "html": "<h3 id=\"IV:1-3\">1.3 The Koszul Rule</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Be \\(A\\) a commutative ring, and \\((V_i)_{i\\in I}\\) a finished family of \\(A\\)-graded modules (or \\(\\mathbb{Z}/2\\)-graded). Recall the definition of the graduated tensor product \\(\\bigotimes_{i\\in I} V_i\\), within the meaning of the Koszul rule (cf. <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-24\" href=\"#sga4\">2</a>]</span>) For each total order \\(a\\) on \\(I\\), we will define a module \\(V(a)\\). We will also define a transitive system of isomorphisms \\(\\varphi_{a b}:V(b)\\xrightarrow{\\sim} V(a)\\) and the graduated tensorial product of \\(V_i\\) will be the \"common value\" \\(\\varprojlim V(a)\\) of this module system.</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><p>\\(V(a) = \\bigotimes_{i\\in I} |V_i|\\) (ordinary tensor product of ungraded modules underlying \\(V_i\\)).</p></li>\n<li><p>If the \\(x_i\\in V_i\\) are homogeneous, we take \\(\\varphi_{a b}(\\otimes x_i) = (-1)^N \\otimes x_i\\), where \\(N\\) is the sum of \\(\\deg(x_i)\\deg(x_j)\\) extended to couples \\((i,j)\\) such as \\(i&lt;_a j\\) and \\(i&gt;_b j\\).</p></li>\n</ol>"
+    },
+    {
+     "id": "sub-IV:1-10",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:1-10\">Example 1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Take \\(I=\\{1,2\\}\\) and be \\(a\\) the order where \\(1&lt;2\\), \\(b\\) the order where \\(1&gt;2\\). Be \\(v_i\\in V_i\\), homogeneous, and note \\(v_1\\otimes v_2\\) (rep. \\(v_2\\otimes v_1\\)) the image in the tensor product graduated from the product of \\(v_i\\) in \\(V(a)\\) (rep. \\(V(b)\\)).</p>"
+    },
+    {
+     "id": "disp-IV:1-11",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-11\">\n\\[\nv_1\\otimes v_2 = (-1)^{\\deg(v_1)\\deg(v_2)} v_2\\otimes v_1\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(Koszul rule).</p>"
+    },
+    {
+     "id": "sub-IV:1-12",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:1-12\">Example 2</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If the \\(V_i\\) are all of degree \\(1\\), we have , linking the underlying module to the graduated tensor product, and the ordinary tensor product of the modules \\(|V_i|\\) underlying \\(V_i\\), a canonical isomorphism</p>"
+    },
+    {
+     "id": "disp-IV:1-13",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:1-13\">\n\\[\n\\left|\\bigotimes V_i\\right| \\simeq \\bigotimes |V_i|\\otimes_{\\mathbb{Z}}\\bigwedge^{|I|}\\mathbb{Z}^I \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": "sub-IV:1-14",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:1-14\">Example 3</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(A\\) a field, and \\(X_i\\) a finite family of spaces, the formula of Künneth is written \\(\\underline{\\operatorname{H}}^\\bullet\\left(\\prod X_i,A\\right) = \\bigotimes \\underline{\\operatorname{H}}^\\bullet(X_i,A)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(V^\\vee\\) the graduated dual of \\(V\\). The canonical application</p>"
+    },
+    {
+     "id": "IV:eq:1-3-1",
+     "type": "equation",
+     "label": "1.3.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-3-1\">\n\\[\n\\tag{1.3.1}\n  V^\\vee\\otimes V = V\\otimes V^\\vee \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} A\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is \\(v'\\otimes v\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} v'(v)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is now assumed that \\(A\\) is a field, and only vector spaces of finite dimension are considered. Canon isomorphism</p>"
+    },
+    {
+     "id": "IV:eq:1-3-2",
+     "type": "equation",
+     "label": "1.3.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-3-2\">\n\\[\n\\tag{1.3.2}\n  W\\otimes V^\\vee \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\hom(V,W)\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is \\(w\\otimes v'\\mapsto \\left(v\\mapsto w\\cdot v'(v)\\right)\\). Through this isomorphism, the composition \\(\\hom(Y,Z)\\otimes \\hom(X,Y)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\hom(X,Z)\\) is identified with the morphism induced by (<a class=\"ref\" href=\"#IV:eq:1-3-1\">1.3.1</a>): \\(Z\\otimes Y^\\vee\\otimes Y\\otimes X^\\vee \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Z\\otimes X^\\vee\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The trace of \\(f:V\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} V^\\vee\\) (nil for \\(f\\) homogeneity of degree \\(\\ne 0\\)) is the image of \\(f\\) by</p>"
+    },
+    {
+     "id": "IV:eq:1-3-4",
+     "type": "equation",
+     "label": "1.3.4",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-3-4\">\n\\[\n\\tag{1.3.4}\n  \\operatorname{tr}:\\hom(V,V) {\\xleftarrow{\\sim}}_\\text{(1.3.2)} V\\otimes V^\\vee = V^\\vee \\otimes V \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow}_\\text{(1.3.1)} A .\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is easily verified that for \\(f\\) degree \\(0\\),</p>"
+    },
+    {
+     "id": "IV:eq:1-3-5",
+     "type": "equation",
+     "label": "1.3.5",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-3-5\">\n\\[\n\\tag{1.3.5}\n  \\operatorname{tr}(f,V) = \\sum (-1)^i \\operatorname{tr}(f,V^i) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If we express that the two morphisms composed of morphisms (<a class=\"ref\" href=\"#IV:eq:1-3-1\">1.3.1</a>) \\(V^\\vee\\otimes V\\otimes W^\\vee\\otimes W\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} k\\) switch, we find that for \\(f:V\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} W\\) and \\(g:W\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} V\\) homogeneous, we have</p>"
+    },
+    {
+     "id": "IV:eq:1-3-6",
+     "type": "equation",
+     "label": "1.3.6",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:1-3-6\">\n\\[\n\\tag{1.3.6}\n  \\operatorname{tr}(f g) = (-1)^{\\deg(f)\\deg(g)} \\operatorname{tr}(g f) \\text{.}\n\\]\n</div>"
+    }
+   ],
+   "footnotes": [],
+   "bibliography": []
+  },
+  {
+   "id": "IV:2",
+   "title": "The cohomology class associated with a cycle",
+   "html": "<h2 id=\"IV:2\">2 The class of cohomology associated with a cycle</h2>\n<h3 id=\"IV:2-1\">The class of a divisor</h3>\n<h3 id=\"IV:2-1-1\">2.1.1 </h3>\n<p>Be \\(D\\) a partitioner of Cartier in a scheme \\(X\\). Outside \\(D\\), the invertible sheaf \\(\\mathscr{O}(D)\\) is triviatized by the section \\(1\\). The class \\(\\operatorname{cl}(D)\\) of \\(D\\), in \\(\\underline{\\operatorname{H}}_D^1(X,\\mathbb{G}_m)\\), is the class of \\(\\mathbb{G}_m\\)-triviatizer on \\(X\\setminus D\\) correspondent (<a class=\"ref\" href=\"#IV:1-1-6\">1.1.6</a> and <a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>).</p>\n<p>Either \\(\\partial:\\underline{\\operatorname{H}}^i(X\\setminus D,\\mathbb{G}_m)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_D^i(X,\\mathbb{G}_m)\\) morphism \n<a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>. If \\(D\\) admits a global equation \\(f\\), the multiplication by \\(f\\) is an isomorphism of \\(\\mathscr{O}(D)\\), trivialised by \\(1\\) on \\(X\\setminus D\\), with \\(\\mathscr{O}\\), trivialised by \\(f\\) on \\(X\\setminus D\\). <a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>, so we've got</p>\n<div class=\"equation\" id=\"IV:eq:2-1-1\">\n\\[\n\\tag{2.1.1}\n  \\operatorname{cl}(D) = \\partial f \\text{.}\n\\]\n</div>\n<p>For any morphism \\(u:X'\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\) such that \\(u^* D\\) is still a divisor of Cartier (i.e., \\(u^{-1} D\\) disjointed from \\(\\operatorname{Ass}(X')\\)), we have \\(\\operatorname{cl}(u^* D) = u^*\\operatorname{cl}(D)\\). If we wanted such a functionality for any morphism \\(u\\), we should consider not Cartier divisors, but more generally invertible sheaves with a section.</p>\n<p>Remember that the entire \\(n\\) is now assumed to be invertible on the schemes considered. Either \\(\\partial:\\underline{\\operatorname{H}}_D^i(X,\\mathbb{G}_m) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_D^{i+1}(X,\\boldsymbol{\\mu}_n)\\) the starboard for the exact continuation of Kummer \\(0 \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\boldsymbol{\\mu}_n \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{G}_m \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{G}_m \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0\\).</p>\n<div class=\"thm thm-remark definition\" id=\"IV:2-1-2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.1.2</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-1-2\"></span>\nThe <em>class \\(\\operatorname{cl}_n(D)\\)</em> of \\(D\\) in \\(\\underline{\\operatorname{H}}_D^2(X,\\boldsymbol{\\mu}_n)\\) is \\(\\partial \\operatorname{cl}(D)\\).</p></div>\n</div>\n<p>When there is no risk of confusion, the mention of \\(n\\) will be omitted.</p>\n<h3 id=\"IV:2-1-3\">2.1.3 </h3>\n<p>The diagram</p>\n<div class=\"displaymath\" id=\"disp-IV:2-1\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^0(X\\setminus D,\\mathbb{G}_m) \\ar[r]^-\\partial \\ar[d]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^1(X,\\mathbb{G}_m) \\ar[d]^-\\partial \\\\\n  \\underline{\\operatorname{H}}^1(X\\setminus D,\\boldsymbol{\\mu}_n) \\ar[r]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^2(X,\\boldsymbol{\\mu}_n)\n}\n\\]\n</div>\n<p>If \\(D\\) admits a global equation \\(f\\), \\(\\operatorname{cl}_n(D)\\) is therefore the opposite of the image by \\(\\partial\\) of the class in \\(\\underline{\\operatorname{H}}^1(X\\setminus D,\\boldsymbol{\\mu}_n)\\) of \\(\\boldsymbol{\\mu}_n\\)-torseur of the roots \\(n\\)-ths of \\(f\\).</p>\n<div class=\"thm thm-plain proposition\" id=\"IV:2-1-4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1.4</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-1-4\"></span>\nEither \\(i\\) the inclusion of \\(D\\) in \\(X\\). If \\(D\\) and \\(X\\) are regular, the supporting cohomology sheaves \\(\\mathsf{R}^p i^! \\boldsymbol{\\mu}_n\\) are void for \\(p=0,2\\), and \\(\\mathsf{R}^2 i^!\\boldsymbol{\\mu}_n = \\underline{\\mathbb{Z}/n}\\), generated by \\(\\operatorname{cl}_n(D)\\).</p></div>\n</div>\n<p>It is sufficient to prove that, for \\(X\\) strictly local and \\(D\\) defined by a regular parameter, we have \\(\\underline{\\operatorname{H}}_D^p(X,d\\mu_n) = 0\\) for \\(p=0,1\\) and \\(\\underline{\\operatorname{H}}^2(X,\\boldsymbol{\\mu}_n) = \\mathbb{Z}/n\\) generated by \\(\\operatorname{cl}(D)\\). Noting by \\(\\sim\\) reduced cohomology, we have \\(\\widetilde{\\underline{\\operatorname{H}}}^{p-1}(X\\setminus D,\\boldsymbol{\\mu}_n)\\xrightarrow{\\sim} \\underline{\\operatorname{H}}_D^p(X,\\boldsymbol{\\mu}_n)\\). The assertion for \\(p=0,1\\) expresses that \\(D\\) does not disconnect by \\(X\\), and for \\(p=2\\) results, via <a class=\"ref\" href=\"#IV:2-1-3\">2.1.3</a>, Abhyankar's lemma.</p>\n<p>This is a partial analogue of the relative theorem ([I]Etal Cohomology, <a class=\"ref\" href=\"#I:5-3-4\">5.3.4</a>) Grothendieck conjectures that the \\(\\mathsf{R}^p i^! \\boldsymbol{\\mu}_n\\) are null for \\(p\\ne 2\\), at least for \\(X\\) excellent (purity guess), but this is known only in characteristic \\(0\\) (<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-25\" href=\"#sga4\">2</a>]</span>).</p>\n<div class=\"thm thm-plain theorem\" id=\"IV:2-1-5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.1.5</span> <span class=\"thm-title\">(Basic compatibility)</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-1-5\"></span>\nBe \\(X\\) uen smooth curve on an algebraically closed field \\(k\\), \\(P\\) a closed point of \\(X\\) and \\(\\operatorname{tr}\\) the compound \\(\\underline{\\operatorname{H}}_P^2(X,\\boldsymbol{\\mu}_n) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_c^2(X,\\boldsymbol{\\mu}_n) \\xrightarrow{\\operatorname{tr}} \\mathbb{Z}/n\\).</p>\n<div class=\"displaymath\" id=\"disp-IV:2-2\">\n\\[\n\\operatorname{tr} \\operatorname{cl}(P) = 1 \\text{.}\n\\]\n</div></div>\n</div>\n<p>Either \\(\\overline{X}\\) the projective and smooth curve complementing \\(X\\). The formula expresses that the invertible sheaf \\(\\mathscr{O}(P)\\) on \\(\\overline{X}\\) is of degree \\(1\\).</p>\n<h3 id=\"IV:2-2\">2.2 Cohomological method</h3>\n<h3 id=\"IV:2-2-1\">2.2.1 </h3>\n<p>Either \\(X\\) a diagram (noetherian). Let's remember that a sub-scheme \\(Y\\) of the \\(X\\) \nis said to be full local intersection, co-dimension \\(c\\), if, locally (on \\(Y\\)), it is defined by a regular sequence of \\(c\\) equations in \n\\(X\\). For \\(X\\) the spectrum of a local ring \\(A\\) maximum ideal \\(\\mathfrak{m}\\) and \n\\(Y\\) ideal \\(\\mathfrak{a}\\), it means that \\(\\exp^i(A/\\mathfrak{a},A) = 0\\) for \n\\(i&lt;\\dim(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a})=c\\), and any sequence of elements of \\(\\mathfrak{a}\\), image in \n\\(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a}\\) a base of \\(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a}\\), is a regular sequence of equations for \\(Y\\).</p>\n<h3 id=\"IV:2-2-2\">2.2.2 </h3>\n<p>Either \\(i:Y\\hookrightarrow X\\) full local intersection, co-dimension \\(c\\). It is proposed to define a local fundamental class \\(\\operatorname{cl}(Y)\\) which is a global section of the support cohomology sheaf \\(\\mathsf{R}^{2c}i^! \\mathbb{Z}/n(c)\\) (remember that \\(\\mathbb{Z}/n(c)=\\boldsymbol{\\mu}_n^{\\otimes c}\\)).</p>\n<p>Locally, \\(Y\\) is the intersection of a sequence of \\(c\\) divisors \\(D_i\\), and we define \\(\\operatorname{cl}(Y)\\) as the cup-product of \\(\\operatorname{cl}(D_i)\\). Each \\(\\operatorname{cl}(D_i)\\) is supported in \\(D_i\\), their product is supported in \\(Y\\). That, locally, this product does not depend on the choice of \\(D_i\\), results from <a class=\"ref\" href=\"#IV:2-2-3\">2.2.3</a> \nbelow and the following invariance properties:</p>\n<ol class=\"enumerate\">\n<li><p>localization compatibility;</p></li>\n<li><p>independence of the order of \\(D_i\\) (the \\(\\operatorname{cl}(D_i)\\) are of degree \\(2\\), even, so the cup-product is commutative);</p></li>\n<li><p>the product depends only on the \"flag\" \\(D_1\\supset D_1\\cap D_2\\supset \\cdots\\supset Y\\).</p></li>\n</ol>\n<p>In order to prove c, the existence of a product (variant of <a class=\"ref\" href=\"#IV:1-2-1\">1.2.1</a>)</p>\n<div class=\"displaymath\" id=\"disp-IV:2-3\">\n\\[\n\\underline{\\operatorname{H}}_{D_1}^\\bullet(X)\\otimes \\underline{\\operatorname{H}}_{D_1\\cap D_2}^\\bullet(D_1)\\otimes \\cdots \\otimes \\underline{\\operatorname{H}}_Y^\\bullet(D_1\\cap \\cdots \\cap D_{c-1}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_Y^\\bullet(X) \\text{;}\n\\]\n</div>\n<p>the product of \\(\\operatorname{cl}(D_i)\\) is still the product of (\\(\\operatorname{cl}(D_i)\\) restricted to \\(D_1\\cap \\cdots \\cap D_{i-1})=(\\operatorname{cl}(D_1\\cap \\cdots \\cap D_i)\\) in \\(D_1\\cap \\cdots \\cap D_{i-1})\\).</p>\n<div class=\"thm thm-plain lemma\" id=\"IV:2-2-3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.2.3</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-2-3\"></span>\nBe \\(A\\) a local ring of maximum ideal \\(\\mathfrak{m}\\) and \\(u=(u_1,\\dots,u_c)\\), \\(v=(v_1,\\dots,v_c)\\) two regular suites generating the same ideal \\(\\mathfrak{a}\\). There is then a suite \\(w_i\\) (\\(1\\leqslant i\\leqslant N\\)) of such suites, connecting them, such as \\(w_{i+1}\\) deduces itself from \\(w_i\\) by a permutation, or by changing only the last element.</p></div>\n</div>\n<p>Since permutations are available, it would be the same to afford to change a single element, rather than the last. <a class=\"ref\" href=\"#IV:2-2-1\">2.2.1</a>In the vector space \\(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a}\\), we can move from one base to another through a series of permutations and basic changes that change only one vector. The linear group is in fact generated by diagonal, elementary and permutation matrices.</p>\n<h3 id=\"IV:2-2-4\">2.2.4 </h3>\n<p>The same methods allow to define a local fundamental class for all \\(Y\\subset X\\) locally defined by \\(c\\) equations (where fewer equations are enough, the class is null).</p>\n<h3 id=\"IV:2-2-5\">2.2.5 </h3>\n<p>One can move from such a local fundamental class, in \\(\\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R}^{2 c} i^!\\mathbb{Z}/n(c)\\right)\\), to a global fundamental class, in \\(\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\), when one has semi-pure results:</p>\n<div class=\"thm thm-plain proposition\" id=\"IV:2-2-6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.2.6</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-2-6\"></span></p>\n<ol class=\"enumerate\">\n<li><p>If \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p&lt;2 c\\), then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-4\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\xrightarrow{\\sim} \\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R}^{2 c} i^! \\mathbb{Z}/n(c)\\right) \\text{.}\n\\]\n</div></li>\n<li><p>Either \\(Z\\) a closed part of \\(Y\\), complement \\(V\\) in \\(Y\\), and \\(k\\) the inclusion of \\(Z\\) in \\(X\\). If \\(\\mathsf{R}^p i^! \\mathbb{Z}/n = 0\\) for \\(p\\leqslant 2 c\\), then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-5\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\hookrightarrow \\underline{\\operatorname{H}}_V^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\text{.}\n\\]\n</div>\n<p>If \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p\\leqslant 2 c+1\\), this arrow is an isomorphism.</p></li>\n</ol></div>\n</div>\n<p>The hypothesis \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) is equivalent to \\(\\mathsf{R}^p i^!\\mathbb{Z}/n(c)=0\\). That said, (i) is read on the spectral sequence \\(\\underline{\\operatorname{H}}^p(Y,\\mathsf{R}^q i^!)\\Rightarrow \\underline{\\operatorname{H}}_Y^{p+q}(X,-)\\). If \\(k_1\\) the inclusion of \\(Z\\) in \\(Y\\), we have \\(k=i k_1\\), from where \\(\\mathsf{R} k^! \\mathbb{Z}/n=\\mathsf{R} k_1^! \\mathsf{R} i^!\\), and the exact long sequence of cohomology for \\(Z\\subset Y\\) provides an exact long sequence</p>\n<div class=\"displaymath\" id=\"disp-IV:2-6\">\n\\[\n\\xymatrix{\n  \\cdots \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^i\\left(Z,\\mathsf{R} k^! \\mathbb{Z}/n(c)\\right) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}_Y^i\\left(X,\\mathbb{Z}/n(c)\\right) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}_V^i\\left(X,\\mathbb{Z}/n(c)\\right) \\ar[r] \n    &amp; \\cdots\n}\n\\]\n</div>\n<p>of which (ii) results.</p>\n<h3 id=\"IV:2-2-7\">2.2.7 Amplification</h3>\n<p>The proposal <a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a> remains valid for \\(i\\) any separated morphism of finite type, and \\(2 c\\) any integer (positive or negative), provided that it is replaced \\(\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\) by \\(\\underline{\\operatorname{H}}^{2 c}\\left(Y,\\mathsf{R} i^!\\mathbb{Z}/n(c)\\right)\\), and likewise for \\(\\underline{\\operatorname{H}}_V\\).</p>\n<p>The following semi-purity results result from: \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga2-cite-1\" href=\"#sga2\">24</a>]</span>. We will recall their evidence.</p>\n<div class=\"thm thm-plain theorem\" id=\"IV:2-2-8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.2.8</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-2-8\"></span>\nOr a morphism of \\(S\\)-schemes of finite type</p>\n<div class=\"displaymath\" id=\"disp-IV:2-7\">\n\\[\n\\xymatrix{\n  X \\ar[r]^-i \\ar[dr]_-f \n    &amp; X \\ar[d]^-g \\\\\n  &amp; S\n}\n\\]\n</div>\n<p>It is assumed \\(X\\) smooth, purely of relative dimension \\(N\\) and that \\(Y\\) is fiber by fiber of dimension \\(\\leqslant d\\). Or \\(c=N-d\\).</p>\n<ol class=\"enumerate\">\n<li><p>We have \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p&lt;2 c\\); likewise for \\(\\mathbb{Z}/n\\) replaced by a sheaf \\(g^* \\mathscr{F}\\).</p></li>\n<li><p>If, above a dense open \\(U\\) of \\(S\\), \\(Y\\) is fibre by fibre of size \\(&lt;d\\), we have \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p\\leqslant 2 c\\). If further the complement \\(Z\\) of \\(U\\) does not disconnect locally \\(S\\), we have \\(\\mathsf{R}^pi^!\\mathbb{Z}/n=0\\) for \\(p\\leqslant 2 c+1\\).</p></li>\n</ol></div>\n</div>\n<p>Since \\(\\mathsf{R} g^! \\mathscr{F}=g^*\\mathscr{F}(N)[2N]\\), the transitivity formula \\(\\mathsf{R} i^!\\mathsf{R} g^!=\\mathsf{R} f^!\\) shows that \\(\\mathsf{R}^{2 c+q} i^!(g^*\\mathscr{F})=0\\Leftrightarrow \\mathsf{R}^{-2 d+q}f^!(\\mathscr{F})\\). This brings us back to studying \\(f\\), i.e. assuming that \\(X=S\\). The assertion (i) is then <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-26\" href=\"#sga4\">2</a>]</span>.</p>\n<p>Either \\(Y'\\) the inverse image of \\(Z\\) in \\(Y\\):</p>\n<div class=\"displaymath\" id=\"disp-IV:2-8\">\n\\[\n\\xymatrix{\n  Y' \\ar[r]^-v \\ar[d]^-f \n    &amp; Y \\ar[d]^-f \\\\\n  Z \\ar[r]^-u \n    &amp; S\n}\n\\]\n</div>\n<p>According to (i), \\(\\mathsf{R}^p f^! \\mathbb{Z}/n\\) are supported in \\(Y'\\) for \\(p\\leqslant -2 d+1\\); and the spectral sequence \\(\\mathsf{R}^a v^!\\mathsf{R}^b f^! \\Rightarrow \\mathsf{R}^{a+b} (f v)^!\\) shows that they coincide with \\(\\mathsf{R}^p(f v)^!\\mathbb{Z}/n=\\mathsf{R}^p(u f)^!\\mathbb{Z}/n\\). Applying (i) to \\(Y'/Z\\) and to the spectral sequence \\(\\mathsf{R}^a f^!\\mathsf{R}^b u^! \\Rightarrow \\mathsf{R}^{a+b} (u f)^!\\), it is found that (ii) results from the nullity of \\(\\mathsf{R}^b u^! \\mathbb{Z}/n\\) for \\(b=0\\), or \\(b=0\\) and \\(1\\) as the case may be.</p>\n<h3 id=\"IV:2-2-9\">2.2.9 </h3>\n<p>Grothendieck conjectures the following absolute analogy of <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a> (semi-purety conjecture – a consequence of purity conjecture): for \\(Y\\) co-dimensional \\(\\geqslant c\\) in \\(X\\) regular, we have \\(\\underline{\\operatorname{H}}_Y^i(X,\\mathbb{Z}/n)=0\\) for \\(i&lt;2 c\\), at least if \\(X\\) is excellent.</p>\n<h3 id=\"IV:2-2-10\">2.2.10 </h3>\n<p>We are now at work to define the class of a cycle \\(Y\\) of co-dimensional \\(c\\) in \\(X\\) smooth on a field \\(k\\). We write \\(Y=\\sum d_i Y_i\\), where the \\(Y_i\\) are reduced irreducible. An open \\(U_i\\) of \\(Y_i\\), of co-dimensional complement \\(&gt;c\\), is then of full local intersection in \\(X\\). This allows to define the local fundamental class of \\(U_i\\). <a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a> and <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>, it comes from a single fundamental class \\(\\operatorname{cl}(Y_i)\\in \\underline{\\operatorname{H}}_{Y_i}^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\), and we pose</p>\n<div class=\"displaymath\" id=\"disp-IV:2-9\">\n\\[\n\\operatorname{cl}(Y) = \\sum d_i \\operatorname{cl}(Y_i) \\in \\underline{\\operatorname{H}}_{|Y|}^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\text{.}\n\\]\n</div>\n<h3 id=\"IV:2-2-11\">2.2.11 </h3>\n<p>In complex analytical geometry, a construction of Baum, Fulton and Mac Pherson <span class=\"cite\">[<a class=\"cite-src\" id=\"bfm75-cite-1\" href=\"#bfm75\">4</a>]</span> allows to define without restriction the class of cohomology of a complete local intersection \\(Y\\subset X\\). Suppose \\(Y\\) \npurely of co-dimensions \\(c\\), and be \\(\\mathscr{N}\\) Vector fibration on \\(Y\\) normal fibrous \\(Y\\) in \\(X\\). Its local sections are those of \\((\\mathscr{I}/\\mathscr{I}^2)^\\vee\\), from which \\(\\mathscr{I}\\) is the sheaf of ideals of \\(Y\\). Recall that the sheaf of functions \\(C^\\infty\\) on \\(X\\) is defined locally, in terms of local dives of \\(X\\) in \\(\\mathbb{C}^n\\), such as the restriction to \\(X\\) of the function sheaf quotient \\(C^\\infty\\) on \\(\\mathbb{C}^n\\) by the ideal generated by the real and imaginary parts of the equations that define \\(X\\). Fibre \\(\\mathscr{N}\\) prolongs into a complex vector fibre \\(C^\\infty N\\) on a neighbourhood \\(U\\) of the \\(Y\\) in \\(X\\), and for \\(U\\) small enough, there are sections \n\\(f\\) of the \\(N\\), place of zeros \\(Y\\), and such as, on \\(Y\\), \\(d f:\\mathscr{N}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} N\\) \neither the identity. Two choices of \\(N\\) and \\(f\\) are homotopes on \\(Y\\) Small enough.</p>\n<p>The cohomology class \\(\\operatorname{cl}(U)\\) of the section \\(0\\) of \\(N\\) (noted \\(z:U\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} N\\)) is defined: \\(U\\) is of complete local intersection in \\(N\\), and \\(\\mathsf{R}^i z^!\\mathbb{Z} = 0\\) for \\(i\\ne 2 c\\), \\(\\mathsf{R}^{2 c} z^!\\mathbb{Z} = \\mathbb{Z}\\). There are \\(f^*:\\underline{\\operatorname{H}}_U^\\bullet(N,\\mathbb{Z}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_Y^\\bullet(X,\\mathbb{Z})\\) and there are</p>\n<div class=\"displaymath\" id=\"disp-IV:2-10\">\n\\[\n\\operatorname{cl}(Y) = f^*\\operatorname{cl}(U) \\text{.}\n\\]\n</div>\n<p>The same construction works as soon as one has on an analytical subspace \\(Y\\) of \\(X\\) the following normal structure: a locally free sheaf \\(\\mathscr{C}\\) of rank \\(c\\) on \\(Y_\\text{red}\\), and an epimorphism \\(\\mathscr{C}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathscr{I}/\\mathscr{I}\\cdot \\mathscr{I}_\\text{red}\\).</p>\n<h3 id=\"IV:2-3\">2.3 Homological method</h3>\n<h3 id=\"IV:2-3-1\">2.3.1 </h3>\n<p>Either \\(f:Y\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\) a flat morphism of finite type, with fibers of size \\(\\leqslant d\\). <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-27\" href=\"#sga4\">2</a>]</span>, we have defined a trace morphism</p>\n<div class=\"equation\" id=\"IV:eq:2-3-1-1\">\n\\[\n\\tag{2.3.1.1}\n  \\operatorname{tr}_f:\\mathsf{R}^{2 d} f_! \\mathbb{Z}/n(d) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{Z}/n \\text{.}\n\\]\n</div>\n<p>We have \\(\\mathsf{R}^i f_!\\mathbb{Z}/n(d)=0\\) for \\(i&gt;2 d\\), and \\(\\mathsf{R}^i f^!\\mathbb{Z}/n=0\\) for \\(i&lt;-2 d\\). This, and the addition between \\(\\mathsf{R} f_!\\) and \\(\\mathsf{R} f^!\\), provide isomorphisms</p>\n<div class=\"equation\" id=\"IV:eq:2-1-3-2\">\n\\[\n\\tag{2.1.3.2}\n\\begin{aligned}\n  \\hom\\left(\\mathsf{R}^{2 d}f_!\\mathbb{Z}/n(d),\\mathbb{Z}/n\\right) \n    &amp;= \\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d),\\mathbb{Z}/n[-2 d]\\right) \\\\\n    &amp;= \\hom\\left(\\mathbb{Z}/n,\\mathsf{R} f^!\\mathbb{Z}/n(-d)[-2 d]\\right) \\\\\n    &amp;= \\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R}^{-2 d}f^!\\mathbb{Z}/n\\right) \\text{.}\n\\end{aligned}\n\\]\n</div>\n<p>At least on \\(S\\) one point, the image of \\(\\operatorname{tr}_f\\) in the last two groups deserves the basic class name of \\(Y\\) (in homology).</p>\n<p>There's still a note. \\(\\operatorname{tr}_f\\) the image of \\(\\operatorname{tr}_f\\) in the second group, and the morphisms that deduce from it by functionality. For example, for \\(Y/S\\) \nclean, morphism</p>\n<div class=\"equation\" id=\"IV:eq:2-3-1-3\">\n\\[\n\\tag{2.3.1.3}\n\\xymatrix{\n  \\underline{\\operatorname{H}}^i\\left(Y,\\mathbb{Z}/n(d)\\right) = \\underline{\\operatorname{H}}^i\\left(S,\\mathsf{R} f_!\\mathbb{Z}/n(d)\\right) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^{i-2 d}(S,\\mathbb{Z}/n) .\n}\n\\]\n</div>\n<p>Suppose \\(Y\\) contained in \\(X\\) smooth on \\(S\\), purely of relative dimension \\(N\\), and posions \\(c=N-d\\).</p>\n<div class=\"displaymath\" id=\"disp-IV:2-11\">\n\\[\n\\xymatrix{\n  Y \\ar@{^{(}-&gt;}[r]^-i \\ar[dr]_-f \n    &amp; X \\ar[d] \\\\\n  &amp; S\n}\n\\]\n</div>\n<p>We have \\(\\mathsf{R} f^! = \\mathsf{R} i^!\\mathsf{R} g^!\\), and \\(\\mathsf{R} g^! \\mathbb{Z}/n=\\mathbb{Z}/n(-N)[-2 N]\\). The fundamental class of \\(Y\\) is identified with an element of \\(\\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R} i^!\\mathbb{Z}/n(c)[2 c]\\right)=\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\), the class \\(\\operatorname{cl}(Y)\\) of \\(Y\\) in \\(X\\). We will see further that it depends only on \\(Y\\subset X\\), not on the projection of \\(X\\) on \\(S\\), and that for \\(Y\\) of the local complete intersection, it induces the local class of the previous number.</p>\n<p>Explain isomorphism</p>\n<div class=\"displaymath\" id=\"disp-IV:2-12\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\xrightarrow{\\sim} \\hom\\left(\\mathsf{R}^{2 d}f_!\\mathbb{Z}/n(d),\\mathbb{Z}/n\\right)\n\\]\n</div>\n<p>which transforms \\(\\operatorname{cl}(Y)\\) into \\(\\operatorname{tr}_f\\): via isomorphisms</p>\n<div class=\"displaymath\" id=\"disp-IV:2-13\">\n\\begin{align*}\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \n    &amp;= \\underline{\\operatorname{H}}_Y^{2 c}\\left(\\mathsf{R} i^!\\mathbb{Z}/n(c)\\right) \\\\\n    &amp;= \\hom_Y\\left(\\mathbb{Z}/n(d)[2 d],\\mathsf{R} i^!\\mathbb{Z}/n(N)[2 N]\\right) \\\\\n    &amp;= \\hom_X\\left(\\mathbb{Z}/n(d)[2 d]_Y,\\mathbb{Z}/n(N)[2 n]\\right) \\text{,}\n\\end{align*}\n</div>\n<p>that's the top line of</p>\n<div class=\"displaymath\" id=\"disp-IV:2-14\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}_Y^{2 c} \\ar[r] \\ar[dr]_-{(3)} \n    &amp; \\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2 d],\\mathsf{R} f_! \\mathsf{R} i^!\\mathbb{Z}/n(N)[2 n]\\right) \\ar[r]^-{(1)} \\ar[d]^-{\\operatorname{tr}_i} \\ar@{}[dr]|-{(2)}\n    &amp; \\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2d],\\mathbb{Z}/n\\right) \\ar@{=}[d] \\\\\n  &amp; \\hom\\left(\\mathsf{R} g_!\\mathbb{Z}/n(d)[2 d]_Y,\\mathsf{R} g_!\\mathbb{Z}/n(N)[2 N]\\right) \\ar[r]^-{\\operatorname{tr}_g} \n    &amp; \\hom\\left(\\mathsf{R} g_!\\mathbb{Z}/n(d)[2 d]_Y,\\mathbb{Z}/n\\right) ,\n}\n\\]\n</div>\n<p>where (1) is the addition arrow \\(\\mathsf{R} f_!\\mathsf{R} f^!\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\text{id}\\). Commutativity (2) expresses that isomorphism \\(\\mathsf{R} f^!=\\mathsf{R} i^!\\mathsf{R} g^!\\) is defined by addition. Finally, the arrow derived from (3)</p>\n<div class=\"displaymath\" id=\"disp-IV:2-15\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2c}\\left(X,\\mathbb{Z}/n(c)\\right) \\otimes \\mathsf{R}^{2 d} g_!\\mathbb{Z}/n(d) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}^{2 N} g_!\\mathbb{Z}/n(N)\n\\]\n</div>\n<p>is interpreted as a cup-product (cf. <a class=\"ref\" href=\"#IV:1-2\">1.2</a>).</p>\n<div class=\"thm thm-remark definition\" id=\"IV:2-3-2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.3.2</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-2\"></span>\nThe characteristic property of the class \\(\\operatorname{cl}(Y)\\in\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\) is that, for any local \\(u\\) of \\(\\mathsf{R}^{2 d}f_! \\mathbb{Z}/n(d)\\), it is</p>\n<div class=\"displaymath\" id=\"disp-IV:2-16\">\n\\[\n\\operatorname{tr}_f(u) = \\operatorname{tr}_g\\left(\\operatorname{cl}(Y)\\smallsmile u\\right) \\text{.}\n\\]\n</div></div>\n</div>\n<p>Since \\(\\operatorname{cl}(Y)\\) already has an image \\(\\operatorname{tr}_f\\) in \\(\\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2 d],\\mathbb{Z}/n\\right)\\), the formula <a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> applies to arrows deduced from \\(\\operatorname{tr}_f\\) by functionality. For example, for \\(X\\) on \\(S\\) clean and \\(u\\in \\underline{\\operatorname{H}}^\\bullet(Y,\\mathbb{Z}/n)\\), the formula is valid in \n\\(\\underline{\\operatorname{H}}^\\bullet\\left(S,\\mathbb{Z}/n(-d)\\right)\\). For \\(v\\in \\underline{\\operatorname{H}}^\\bullet(X,\\mathbb{Z}/n)\\), it gives</p>\n<div class=\"displaymath\" id=\"disp-IV:2-17\">\n\\[\n\\operatorname{tr}_f(i^* v) = \\operatorname{tr}_g\\left(\\operatorname{cl}(Y)\\smallsmile v\\right) \\text{,}\n\\]\n</div>\n<p>where the cup-product can be calculated in \\(\\underline{\\operatorname{H}}^\\bullet(X,\\mathbb{Z}/n)\\).</p>\n<h3 id=\"IV:2-3-3\">2.3.3 </h3>\n<p>We will define trace morphisms, and therefore the class \\(\\operatorname{cl}(Y)\\), under more general assumptions. So either a diagram</p>\n<div class=\"displaymath\" id=\"disp-IV:2-18\">\n\\[\n\\xymatrix{\n  Y \\ar@{^{(}-&gt;}[r] \\ar[dr]_-f \n    &amp; X \\ar[d]^-g \\\\\n  &amp; S\n}\n\\]\n</div>\n<p>with \\(g\\) smooth, purely of relative dimension \\(N\\) and \\(Y\\) closed in \\(X\\), fibre per fibre of size \\(\\leqslant d\\). More equipment is available \\(Y\\) of a \"weight\" \\(\\mathscr{K}\\) of the following type: \\(\\mathscr{K}\\in\\mathsf{D}_{\\text{parf},X}^b\\) is a bounded complex of sheaves of \\(\\mathscr{O}\\)-modules on \\(X\\), of \\(\\operatorname{Tor}\\)-dimension finished on \\(S\\) (or on \\(X\\), it is the same) and whose cohomology sheaves are coherent and supportable in \\(Y\\). We propose to define a morphism \\(\\operatorname{tr}_{f,\\mathscr{K}}:\\mathsf{R}^{2 d}f_! \\mathbb{Z}/n(d) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{Z}/n\\). For \\(Y\\) \nflat on \\(S\\) and \\(\\mathscr{K}=\\mathscr{O}_Y\\), it will be the previous trace morphism. In general, it depends only on the lengths of \\(\\mathscr{K}\\) generic items \\(y\\) of the irreducible components of \n\\(Y(\\operatorname{lg}_y(\\mathscr{K}) = \\sum (-1)^i \\operatorname{lg} \\underline{\\operatorname{H}}^i(\\mathscr{K})_y)\\).</p>\n<p>Finally, we will note \\(\\operatorname{cl}(Y,\\mathscr{K})\\) the support class in \\(Y\\) such as</p>\n<div class=\"equation\" id=\"IV:eq:2-3-3-1\">\n\\[\n\\tag{2.3.3.1}\n  \\operatorname{tr}_g\\left(\\operatorname{cl}(Y,\\mathscr{K})\\smallsmile u\\right) = \\operatorname{tr}_{f,\\mathscr{K}}(u) \\text{.}\n\\]\n</div>\n<h3 id=\"IV:2-3-4\">2.3.4 </h3>\n<p>The construction of \\(\\operatorname{tr}_{f,\\mathscr{K}}\\) is parallel to that of \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-28\" href=\"#sga4\">2</a>]</span>; nour will indicate only the main lines.</p>\n<h3 id=\"sub-IV:2-19\">A</h3>\n<p>\\(d=0\\) (\\(f\\) quasi-finished). Either \\(x\\) a geometric dot of \\(Y\\). \\(s\\) its image in \\(S\\), \\(\\mathscr{K}_{(x)}\\) the reciprocal image of \\(\\mathscr{K}\\) on the strict localization of \\(X\\) in \\(x\\), \\(\\mathscr{K}_{(x)s} = \\mathscr{K}_{(x)}\\overset{\\mathsf{L}}{\\otimes}_{\\mathscr{O}_{S,s}^h} k(s)\\) its reciprocal image on the geometric fiber in \\(s\\), and \\(n(x)=\\sum (-1)^i \\dim_{k(s)} \\underline{\\operatorname{H}}^i(\\mathscr{K}_{(x)s})\\). The function \\(x\\mapsto n(x)\\) is a weighting of \\(f\\), and the corresponding trace morphism is taken \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-29\" href=\"#sga4\">2</a>]</span>. The weighting \\(n(x)\\), and \\(\\operatorname{tr}_{f,\\mathscr{K}}\\) are training compatible with any basic change.</p>\n<h3 id=\"sub-IV:2-20\">B</h3>\n<p>General case. If \\(u:Z\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{A}_S^d\\) is such that \\(u i\\) is quasi-finished, we place \\(\\operatorname{tr}_{f,\\mathscr{K}} = \\operatorname{tr}_{\\mathbb{A}_S^d}\\circ \\operatorname{tr}_{u i,\\mathscr{K}}\\). This trace morphism is clearly compatible with any basic change \\(S'/S\\). To prove that it does not depend on \\(u\\), it can therefore be assumed that \\(S\\) is the spectrum of an algebraically closed field \\(k\\). In this case \\(Y_i\\) the irreducible components of \\(Y\\), and \\(\\operatorname{lg}_i\\) the length of \\(\\mathscr{K}\\) to the generic point of \\(Y_i\\). If \\(\\alpha_i\\) is the inclusion of \\((Y_i)_\\text{red}\\) in \\(Y\\), we have</p>\n<div class=\"equation\" id=\"IV:eq:2-3-4\">\n\\[\n\\tag{2.3.4}\n  \\operatorname{tr}_{f,\\mathscr{K}} = \\sum \\operatorname{lg}_i \\operatorname{tr}_{Y_{i,\\text{red}/S}} \\alpha_i^\\ast\n\\]\n</div>\n<p>(This formula results from the analogous and easy formula for \\(\\operatorname{tr}_{u i}\\)).</p>\n<p>This defines \\(\\operatorname{tr}_{f,\\mathscr{K}}\\) locally on \\(Y\\); then proceed as in \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-30\" href=\"#sga4\">2</a>]</span>.</p>\n<div class=\"thm thm-plain lemma\" id=\"IV:2-3-5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.3.5</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-5\"></span>\nIf \\(g=g'g'':X\\xrightarrow{g''} S'\\xrightarrow{g'} S\\), with \\(g'\\) and \\(g''\\) is smooth and purely of relative dimension \\(N'\\) and \\(N''\\), and \\(Y\\) is still, on \\(S'\\), fiber per co-dimensional fibre \\(\\geqslant c\\), then the class \\(\\operatorname{cl}(Y,\\mathscr{K})\\) is the same, calculated in terms of \\(g\\) or \\(g''\\).</p></div>\n</div>\n<p>Is \\(f'=g'' i\\) and \\(d'=d-N'\\). The formula \\(\\operatorname{tr}_g=\\operatorname{tr}_{g'}\\operatorname{tr}_{g''}\\) (<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-31\" href=\"#sga4\">2</a>]</span> Var 3) ensures the commutativity of</p>\n<div class=\"displaymath\" id=\"disp-IV:2-21\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}_X^{2 c}\\left(Z,\\mathbb{Z}/n(c)\\right) \\ar[d] \\\\\n  \\hom_{S'}\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d')[2 d'],\\mathsf{R} g_!''\\mathbb{Z}/n(N'')[2 N'']\\right) \\ar[r] \\ar[d]^-{\\mathsf{R} g_!'(N')} \n    &amp; \\hom_{S'}\\left(\\mathsf{R}^{2 d'} f_!' \\mathbb{Z}/n,\\mathbb{Z}/n\\right) \\ar[d]^-{\\operatorname{tr}_{g'}\\circ \\mathsf{R}^{2 N'} g_!'} \\\\\n  \\hom_S\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2d],\\mathsf{R} g_!'\\mathbb{Z}/n(N)[2 N]\\right) \\ar[r] \n    &amp; \\hom_S\\left(\\mathsf{R}^{2 d} f_!\\mathbb{Z}/n,\\mathbb{Z}/n\\right)\n}\n\\]\n</div>\n<p>while the analogous and easy-to-check formula \\(\\operatorname{tr}_{f,\\mathscr{K}}=\\operatorname{tr}_{g'}\\operatorname{tr}_{f',\\mathscr{K}}\\) ensures that the image of \\(\\operatorname{tr}_{f',\\mathscr{K}}\\) is \\(\\operatorname{tr}_{f,\\mathscr{K}}\\). The resultant assertion.</p>\n<div class=\"thm thm-plain lemma\" id=\"IV:2-3-6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.3.6</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-6\"></span>\nIf \\(Y\\) is a divisor in \\(X\\), the class <a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> coincide with the class <a class=\"ref\" href=\"#IV:2-1-2\">2.1.2</a>.</p></div>\n</div>\n<p>By semi-purity (<a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a>(i) and <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>(i)), the problem is local on \\(Y\\); using <a class=\"ref\" href=\"#IV:2-3-5\">2.3.5</a> to replace \\(S\\) by \\(S'\\) suitable, this allows us to assume that \\(N=1\\). Reusing semi-purity (<a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a>(ii) and <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>(ii) it is sufficient to prove \n<a class=\"ref\" href=\"#IV:2-3-6\">2.3.6</a> above the generic points of \\(S\\). An extended location then leads us to assume \\(S\\) spectrum of an algebraically closed field \\(k\\). <a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> and <a class=\"ref\" href=\"#IV:2-1-2\">2.1.2</a> being each additive in \\(Y\\), this brings us back to the case where \\(Y\\) is a closed point on a smooth curve on \\(k\\). That the characteristic property \n<a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> be checked is then the fundamental compatibility \n<a class=\"ref\" href=\"#IV:2-1-5\">2.1.5</a>.</p>\n<div class=\"thm thm-plain lemma\" id=\"IV:2-3-7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.3.7</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-7\"></span>\nThe training of \\(\\operatorname{cl}(Y,\\mathscr{K})\\) is compatible with any basic change \\(S'/S\\).</p></div>\n</div>\n<p>Result of the same assertion for trace morphisms.</p>\n<div class=\"thm thm-plain theorem\" id=\"IV:2-3-8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.3.8</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-8\"></span>\n(i) \\(\\operatorname{cl}(Y,\\mathscr{K})\\) depends only on \\(Y\\subset X\\) and the lengths of \\(\\mathscr{K}\\) at the generic points of \\(Y\\). This class is additive in \\(\\mathscr{K}\\). For \\(\\mathscr{K}=\\mathscr{O}_Y\\) and \\(Y\\) of local complete intersection, it induces the local class <a class=\"ref\" href=\"#IV:2-2-2\">2.2.2</a>.</p>\n<p>(ii) A commutative diagram</p>\n<div class=\"displaymath\" id=\"disp-IV:2-22\">\n\\[\n\\xymatrix{\n  X' \\ar[r]^-u \\ar[d] \n    &amp; X \\ar[d] \\\\\n  S' \\ar[r] \n    &amp; S\n}\n\\]\n</div>\n<p>with \\(X'\\) smooth on \\(S'\\). If \\(u^{-1}(Y)\\) is still fiber by co-dimensional fiber \\(\\geqslant c\\), then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-23\">\n\\[\n\\operatorname{cl}\\left(u^{-1}(Y),\\mathsf{L} u^\\ast\\mathscr{K}\\right) = u^\\ast \\operatorname{cl}(Y,\\mathscr{K}) \\text{.}\n\\]\n</div>\n<p>(iii) either \\(Y'\\subset X\\) fibre per co-dimensional fibre \\(\\geqslant c'\\), \\(\\mathscr{K}'\\) weight on \\(Y'\\) and assume that \\(Y\\cap Y'\\) is fibre per co-dimensional fibre \\(\\geqslant c+c'\\).</p>\n<div class=\"displaymath\" id=\"disp-IV:2-24\">\n\\[\n\\operatorname{cl}\\left(Y\\cap Y',\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} \\mathscr{K}'\\right) = \\operatorname{cl}(Y,\\mathscr{K}) \\smallsmile \\operatorname{cl}(Y',\\mathscr{K}') \\text{.}\n\\]\n</div></div>\n</div>\n<h3 id=\"sub-IV:2-25\">(A)</h3>\n<p>Given \\(Y\\subset X/S\\) as said, it results from semi-purety (<a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a>, <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>) that to verify that two classes in \\(\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\) coincide, it is sufficient to verify locally at the generic points of \\(Y\\), or even after any change of bottom \\(s\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\) (\\(s\\) generic geometric point of \\(S\\)), at the generic points of \\(Y\\).</p>\n<h3 id=\"sub-IV:2-26\">(B) Proof of (ii) for \\(S=S'\\) and \\(u\\) a closed dive</h3>\n<p>By localization (A) it can be assumed that \\(X'\\) is the reciprocal image of the section \\(0\\) by a smooth morphism \\(v:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{A}_S^{N'}\\)</p>\n<div class=\"displaymath\" id=\"disp-IV:2-27\">\n\\[\n\\xymatrix{\n  X' \\ar[r]^-u \\ar[d] \n    &amp; X \\ar[d]^-v \\\\\n  S \\ar[r]^-0 \n    &amp; \\mathbb{A}_S^{N'} \\ar[r]^-\\pi \n    &amp; S\n}\n\\]\n</div>\n<p>We're applying <a class=\"ref\" href=\"#IV:2-3-5\">2.3.5</a> to \\(g=\\pi v\\) and <a class=\"ref\" href=\"#IV:2-3-7\">2.3.7</a> to the basic change \\(S\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{A}_S^{N'}\\).</p>\n<h3 id=\"sub-IV:2-28\">(C) In a product situation:</h3>\n<p>\\(X=X'\\times_S X''\\), \\(Y=Y'\\times_S Y''\\), \\(\\mathscr{K}=\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}_S \\mathscr{K}''\\), we have \\(\\operatorname{cl}(Y,\\mathscr{K}) = \\operatorname{cl}(Y,\\mathscr{K}')\\smallsmile \\operatorname{cl}(Y'',\\mathscr{K}'')\\) (outdoor product, i.e. \\(\\operatorname{pr}_1^\\ast \\operatorname{cl}(Y',\\mathscr{K}')\\smallsmile \\operatorname{pr}_2^\\ast \\operatorname{cl}(Y'',\\mathscr{K}'')\\)).</p>\n<p>Functional properties of \\(\\operatorname{tr}_g\\) <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-32\" href=\"#sga4\">2</a>]</span> results of the commutativity of</p>\n<div class=\"displaymath\" id=\"disp-IV:2-29\">\n\\[\n\\xymatrix@=0.5cm{\n  \\underline{\\operatorname{H}}_{X'}^{2c'}\\otimes \\underline{\\operatorname{H}}_{X''}^{2 c''}\\ar[r] \\ar[d] \n    &amp; \\hom_S\\left(\\mathsf{R} f_!' \\mathbb{Z}/n(d')[2 d'],\\mathsf{R} g_!'\\mathbb{Z}/n(N')[2 N']\\right)\\otimes \\cdots \\ar[r] \\ar[d] \n    &amp; \\hom_S\\left(\\mathsf{R}^{2 d'} f_!' \\mathbb{Z}/n,\\mathbb{Z}/n\\right) \\otimes \\cdots \\ar[d] \\\\\n  \\underline{\\operatorname{H}}_X^{2 c} \\ar[r] \n    &amp; \\hom_S\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2 d],\\mathsf{R} g_!\\mathbb{Z}/n(N)[2 N]\\right) \\ar[r] \n    &amp; \\hom_S\\left(\\mathsf{R}^{2 d}f_!\\mathbb{Z}/n,\\mathbb{Z}/n\\right)\n}\n\\]\n</div>\n<p>and we check that \\(\\operatorname{tr}_f\\) is the image of \\(\\operatorname{tr}_{f'}\\otimes \\operatorname{tr}_{f''}\\) hence the assertion.</p>\n<h3 id=\"sub-IV:2-30\">Proof of (ii)</h3>\n<p>(<a class=\"ref\" href=\"#IV:2-3-7\">2.3.7</a>) and a preliminary change of base leads us to assume that \\(S=S'\\). Bills \\(u\\) by his graph:</p>\n<div class=\"displaymath\" id=\"disp-IV:2-31\">\n\\[\n\\xymatrix{\n  X' \\ar[r]^-{(\\text{id},u)} \n    &amp; X'\\times X \\ar[r]^-{\\operatorname{pr}_2} \n    &amp; X .\n}\n\\]\n</div>\n<p>This leads us to treat separately \\(\\operatorname{pr}_2\\), justiciable from (C) for \\(X'=X'\\), \\(\\mathscr{K}'=\\mathscr{O}_{x'}\\) (with \\(\\operatorname{cl}(Y')=1\\in \\underline{\\operatorname{H}}^0(X,\\mathbb{Z}/n)\\)), and \\((\\text{id},u)\\), justiciable from (B).</p>\n<h3 id=\"sub-IV:2-32\">Proof of (iii)</h3>\n<p>Either \\(\\delta:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\times_S X\\) diagonal inclusion. The formula \\(\\delta^\\ast(Y_1\\times_S Y_2) = Y_1\\cap Y_2\\) is used to reduce to (B) and (C).</p>\n<h3 id=\"sub-IV:2-33\">Proof of (i)</h3>\n<p>The basic change \\(S_\\text{red}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\) replaces \\(X\\) by \\(X_\\text{red}\\); this brings us back to the assumption \\(X\\) and \\(S\\) reduced. A location near the generic points of \\(Y\\) nour then returns to the case where \\(Y_\\text{red}\\) is irreducible and the complete intersection of \\(c\\) divisors \\(D_i\\). The same location, and the definition of \\(\\operatorname{tr}\\) in the quasi-finished case. then shows that \\(\\operatorname{cl}(Y,\\mathscr{K})=\\operatorname{lg}\\operatorname{cl}(Y_\\text{red},\\mathscr{O}_{Y_\\text{red}})\\), where \\(\\operatorname{lg}\\) is the length of \\(\\mathscr{K}\\) to the generic point of \\(Y\\). According to (iv), we have therefore</p>\n<div class=\"displaymath\" id=\"disp-IV:2-34\">\n\\[\n\\operatorname{cl}(Y,\\mathscr{K}) = \\operatorname{lg} \\prod_i \\operatorname{cl}(D_i,\\mathscr{O}_{D_i})\n\\]\n</div>\n<p>and we conclude by <a class=\"ref\" href=\"#IV:2-3-6\">2.3.6</a>.</p>\n<h3 id=\"IV:2-3-9\">2.3.9 Note</h3>\n<p>For \\(S\\) the spectrum of a field, and the class of a cycle being defined as in <a class=\"ref\" href=\"#IV:2-2-10\">2.2.10</a>, the assertion (iii) says that if two cycles \\(Y'\\) and \\(Y''\\) cut with the right dimension, then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-35\">\n\\[\n\\operatorname{cl}(Y'\\cap Y'') = \\operatorname{cl}(Y')\\smallsmile \\operatorname{cl}(Y'')\\text{,}\n\\]\n</div>\n<p>provided that the multiplicity of the components of \\(Y'\\cap Y''\\) are calculated as alternating amounts of \\(\\operatorname{Tor}\\).</p>\n<h3 id=\"IV:2-3-10\">2.3.10 Note</h3>\n<p>Either \\(X/\\operatorname{Spec}(k)\\), \\(k\\) algebraically closed. If two co-dimensional cycles \\(c\\) in \\(X\\) are algebraically equivalent, it follows from the existence of the above relative theory that the images in \\(\\underline{\\operatorname{H}}^{2 c}(X,\\mathbb{Z}/n(c))\\) of their classes are the fibres, in two points of \\(S\\) related suitable, of a section on \\(S\\) of the constant sheaf \\(\\underline{\\operatorname{H}}^{2 c}(X,\\mathbb{Z}/n(c))\\) (the sheaf \\(\\mathsf{R}^{2 c} f_\\ast \\mathbb{Z}/n(c)\\) for \\(f=\\operatorname{pr}_2:X\\times S\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\)): two algebraically equivalent cycles are even classed in \\(\\underline{\\operatorname{H}}^{2 c}(X,\\mathbb{Z}/n(c))\\).</p>",
+   "blocks": [
+    {
+     "id": "IV:2",
+     "type": "heading",
+     "label": "2",
+     "title": null,
+     "html": "<h2 id=\"IV:2\">2 The class of cohomology associated with a cycle</h2>"
+    },
+    {
+     "id": "IV:2-1",
+     "type": "heading",
+     "label": "2.1",
+     "title": null,
+     "html": "<h3 id=\"IV:2-1\">The class of a divisor</h3>"
+    },
+    {
+     "id": "IV:2-1-1",
+     "type": "heading",
+     "label": "2.1.1",
+     "title": null,
+     "html": "<h3 id=\"IV:2-1-1\">2.1.1 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Be \\(D\\) a partitioner of Cartier in a scheme \\(X\\). Outside \\(D\\), the invertible sheaf \\(\\mathscr{O}(D)\\) is triviatized by the section \\(1\\). The class \\(\\operatorname{cl}(D)\\) of \\(D\\), in \\(\\underline{\\operatorname{H}}_D^1(X,\\mathbb{G}_m)\\), is the class of \\(\\mathbb{G}_m\\)-triviatizer on \\(X\\setminus D\\) correspondent (<a class=\"ref\" href=\"#IV:1-1-6\">1.1.6</a> and <a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(\\partial:\\underline{\\operatorname{H}}^i(X\\setminus D,\\mathbb{G}_m)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_D^i(X,\\mathbb{G}_m)\\) morphism \n<a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>. If \\(D\\) admits a global equation \\(f\\), the multiplication by \\(f\\) is an isomorphism of \\(\\mathscr{O}(D)\\), trivialised by \\(1\\) on \\(X\\setminus D\\), with \\(\\mathscr{O}\\), trivialised by \\(f\\) on \\(X\\setminus D\\). <a class=\"ref\" href=\"#IV:1-1-4\">1.1.4</a>, so we've got</p>"
+    },
+    {
+     "id": "IV:eq:2-1-1",
+     "type": "equation",
+     "label": "2.1.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:2-1-1\">\n\\[\n\\tag{2.1.1}\n  \\operatorname{cl}(D) = \\partial f \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For any morphism \\(u:X'\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\) such that \\(u^* D\\) is still a divisor of Cartier (i.e., \\(u^{-1} D\\) disjointed from \\(\\operatorname{Ass}(X')\\)), we have \\(\\operatorname{cl}(u^* D) = u^*\\operatorname{cl}(D)\\). If we wanted such a functionality for any morphism \\(u\\), we should consider not Cartier divisors, but more generally invertible sheaves with a section.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remember that the entire \\(n\\) is now assumed to be invertible on the schemes considered. Either \\(\\partial:\\underline{\\operatorname{H}}_D^i(X,\\mathbb{G}_m) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_D^{i+1}(X,\\boldsymbol{\\mu}_n)\\) the starboard for the exact continuation of Kummer \\(0 \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\boldsymbol{\\mu}_n \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{G}_m \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{G}_m \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} 0\\).</p>"
+    },
+    {
+     "id": "IV:2-1-2",
+     "type": "definition",
+     "label": "2.1.2",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IV:2-1-2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.1.2</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-1-2\"></span>\nThe <em>class \\(\\operatorname{cl}_n(D)\\)</em> of \\(D\\) in \\(\\underline{\\operatorname{H}}_D^2(X,\\boldsymbol{\\mu}_n)\\) is \\(\\partial \\operatorname{cl}(D)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When there is no risk of confusion, the mention of \\(n\\) will be omitted.</p>"
+    },
+    {
+     "id": "IV:2-1-3",
+     "type": "heading",
+     "label": "2.1.3",
+     "title": null,
+     "html": "<h3 id=\"IV:2-1-3\">2.1.3 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The diagram</p>"
+    },
+    {
+     "id": "disp-IV:2-1",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-1\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^0(X\\setminus D,\\mathbb{G}_m) \\ar[r]^-\\partial \\ar[d]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^1(X,\\mathbb{G}_m) \\ar[d]^-\\partial \\\\\n  \\underline{\\operatorname{H}}^1(X\\setminus D,\\boldsymbol{\\mu}_n) \\ar[r]^-\\partial \n    &amp; \\underline{\\operatorname{H}}_D^2(X,\\boldsymbol{\\mu}_n)\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(D\\) admits a global equation \\(f\\), \\(\\operatorname{cl}_n(D)\\) is therefore the opposite of the image by \\(\\partial\\) of the class in \\(\\underline{\\operatorname{H}}^1(X\\setminus D,\\boldsymbol{\\mu}_n)\\) of \\(\\boldsymbol{\\mu}_n\\)-torseur of the roots \\(n\\)-ths of \\(f\\).</p>"
+    },
+    {
+     "id": "IV:2-1-4",
+     "type": "proposition",
+     "label": "2.1.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IV:2-1-4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1.4</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-1-4\"></span>\nEither \\(i\\) the inclusion of \\(D\\) in \\(X\\). If \\(D\\) and \\(X\\) are regular, the supporting cohomology sheaves \\(\\mathsf{R}^p i^! \\boldsymbol{\\mu}_n\\) are void for \\(p=0,2\\), and \\(\\mathsf{R}^2 i^!\\boldsymbol{\\mu}_n = \\underline{\\mathbb{Z}/n}\\), generated by \\(\\operatorname{cl}_n(D)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is sufficient to prove that, for \\(X\\) strictly local and \\(D\\) defined by a regular parameter, we have \\(\\underline{\\operatorname{H}}_D^p(X,d\\mu_n) = 0\\) for \\(p=0,1\\) and \\(\\underline{\\operatorname{H}}^2(X,\\boldsymbol{\\mu}_n) = \\mathbb{Z}/n\\) generated by \\(\\operatorname{cl}(D)\\). Noting by \\(\\sim\\) reduced cohomology, we have \\(\\widetilde{\\underline{\\operatorname{H}}}^{p-1}(X\\setminus D,\\boldsymbol{\\mu}_n)\\xrightarrow{\\sim} \\underline{\\operatorname{H}}_D^p(X,\\boldsymbol{\\mu}_n)\\). The assertion for \\(p=0,1\\) expresses that \\(D\\) does not disconnect by \\(X\\), and for \\(p=2\\) results, via <a class=\"ref\" href=\"#IV:2-1-3\">2.1.3</a>, Abhyankar's lemma.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This is a partial analogue of the relative theorem ([I]Etal Cohomology, <a class=\"ref\" href=\"#I:5-3-4\">5.3.4</a>) Grothendieck conjectures that the \\(\\mathsf{R}^p i^! \\boldsymbol{\\mu}_n\\) are null for \\(p\\ne 2\\), at least for \\(X\\) excellent (purity guess), but this is known only in characteristic \\(0\\) (<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-25\" href=\"#sga4\">2</a>]</span>).</p>"
+    },
+    {
+     "id": "IV:2-1-5",
+     "type": "theorem",
+     "label": "2.1.5",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IV:2-1-5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.1.5</span> <span class=\"thm-title\">(Basic compatibility)</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-1-5\"></span>\nBe \\(X\\) uen smooth curve on an algebraically closed field \\(k\\), \\(P\\) a closed point of \\(X\\) and \\(\\operatorname{tr}\\) the compound \\(\\underline{\\operatorname{H}}_P^2(X,\\boldsymbol{\\mu}_n) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_c^2(X,\\boldsymbol{\\mu}_n) \\xrightarrow{\\operatorname{tr}} \\mathbb{Z}/n\\).</p>\n<div class=\"displaymath\" id=\"disp-IV:2-2\">\n\\[\n\\operatorname{tr} \\operatorname{cl}(P) = 1 \\text{.}\n\\]\n</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(\\overline{X}\\) the projective and smooth curve complementing \\(X\\). The formula expresses that the invertible sheaf \\(\\mathscr{O}(P)\\) on \\(\\overline{X}\\) is of degree \\(1\\).</p>"
+    },
+    {
+     "id": "IV:2-2",
+     "type": "heading",
+     "label": "2.2",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2\">2.2 Cohomological method</h3>"
+    },
+    {
+     "id": "IV:2-2-1",
+     "type": "heading",
+     "label": "2.2.1",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-1\">2.2.1 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(X\\) a diagram (noetherian). Let's remember that a sub-scheme \\(Y\\) of the \\(X\\) \nis said to be full local intersection, co-dimension \\(c\\), if, locally (on \\(Y\\)), it is defined by a regular sequence of \\(c\\) equations in \n\\(X\\). For \\(X\\) the spectrum of a local ring \\(A\\) maximum ideal \\(\\mathfrak{m}\\) and \n\\(Y\\) ideal \\(\\mathfrak{a}\\), it means that \\(\\exp^i(A/\\mathfrak{a},A) = 0\\) for \n\\(i&lt;\\dim(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a})=c\\), and any sequence of elements of \\(\\mathfrak{a}\\), image in \n\\(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a}\\) a base of \\(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a}\\), is a regular sequence of equations for \\(Y\\).</p>"
+    },
+    {
+     "id": "IV:2-2-2",
+     "type": "heading",
+     "label": "2.2.2",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-2\">2.2.2 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(i:Y\\hookrightarrow X\\) full local intersection, co-dimension \\(c\\). It is proposed to define a local fundamental class \\(\\operatorname{cl}(Y)\\) which is a global section of the support cohomology sheaf \\(\\mathsf{R}^{2c}i^! \\mathbb{Z}/n(c)\\) (remember that \\(\\mathbb{Z}/n(c)=\\boldsymbol{\\mu}_n^{\\otimes c}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Locally, \\(Y\\) is the intersection of a sequence of \\(c\\) divisors \\(D_i\\), and we define \\(\\operatorname{cl}(Y)\\) as the cup-product of \\(\\operatorname{cl}(D_i)\\). Each \\(\\operatorname{cl}(D_i)\\) is supported in \\(D_i\\), their product is supported in \\(Y\\). That, locally, this product does not depend on the choice of \\(D_i\\), results from <a class=\"ref\" href=\"#IV:2-2-3\">2.2.3</a> \nbelow and the following invariance properties:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><p>localization compatibility;</p></li>\n<li><p>independence of the order of \\(D_i\\) (the \\(\\operatorname{cl}(D_i)\\) are of degree \\(2\\), even, so the cup-product is commutative);</p></li>\n<li><p>the product depends only on the \"flag\" \\(D_1\\supset D_1\\cap D_2\\supset \\cdots\\supset Y\\).</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In order to prove c, the existence of a product (variant of <a class=\"ref\" href=\"#IV:1-2-1\">1.2.1</a>)</p>"
+    },
+    {
+     "id": "disp-IV:2-3",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-3\">\n\\[\n\\underline{\\operatorname{H}}_{D_1}^\\bullet(X)\\otimes \\underline{\\operatorname{H}}_{D_1\\cap D_2}^\\bullet(D_1)\\otimes \\cdots \\otimes \\underline{\\operatorname{H}}_Y^\\bullet(D_1\\cap \\cdots \\cap D_{c-1}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_Y^\\bullet(X) \\text{;}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the product of \\(\\operatorname{cl}(D_i)\\) is still the product of (\\(\\operatorname{cl}(D_i)\\) restricted to \\(D_1\\cap \\cdots \\cap D_{i-1})=(\\operatorname{cl}(D_1\\cap \\cdots \\cap D_i)\\) in \\(D_1\\cap \\cdots \\cap D_{i-1})\\).</p>"
+    },
+    {
+     "id": "IV:2-2-3",
+     "type": "lemma",
+     "label": "2.2.3",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IV:2-2-3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.2.3</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-2-3\"></span>\nBe \\(A\\) a local ring of maximum ideal \\(\\mathfrak{m}\\) and \\(u=(u_1,\\dots,u_c)\\), \\(v=(v_1,\\dots,v_c)\\) two regular suites generating the same ideal \\(\\mathfrak{a}\\). There is then a suite \\(w_i\\) (\\(1\\leqslant i\\leqslant N\\)) of such suites, connecting them, such as \\(w_{i+1}\\) deduces itself from \\(w_i\\) by a permutation, or by changing only the last element.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since permutations are available, it would be the same to afford to change a single element, rather than the last. <a class=\"ref\" href=\"#IV:2-2-1\">2.2.1</a>In the vector space \\(\\mathfrak{a}/\\mathfrak{m}\\mathfrak{a}\\), we can move from one base to another through a series of permutations and basic changes that change only one vector. The linear group is in fact generated by diagonal, elementary and permutation matrices.</p>"
+    },
+    {
+     "id": "IV:2-2-4",
+     "type": "heading",
+     "label": "2.2.4",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-4\">2.2.4 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The same methods allow to define a local fundamental class for all \\(Y\\subset X\\) locally defined by \\(c\\) equations (where fewer equations are enough, the class is null).</p>"
+    },
+    {
+     "id": "IV:2-2-5",
+     "type": "heading",
+     "label": "2.2.5",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-5\">2.2.5 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One can move from such a local fundamental class, in \\(\\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R}^{2 c} i^!\\mathbb{Z}/n(c)\\right)\\), to a global fundamental class, in \\(\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\), when one has semi-pure results:</p>"
+    },
+    {
+     "id": "IV:2-2-6",
+     "type": "proposition",
+     "label": "2.2.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"IV:2-2-6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.2.6</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-2-6\"></span></p>\n<ol class=\"enumerate\">\n<li><p>If \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p&lt;2 c\\), then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-4\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\xrightarrow{\\sim} \\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R}^{2 c} i^! \\mathbb{Z}/n(c)\\right) \\text{.}\n\\]\n</div></li>\n<li><p>Either \\(Z\\) a closed part of \\(Y\\), complement \\(V\\) in \\(Y\\), and \\(k\\) the inclusion of \\(Z\\) in \\(X\\). If \\(\\mathsf{R}^p i^! \\mathbb{Z}/n = 0\\) for \\(p\\leqslant 2 c\\), then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-5\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\hookrightarrow \\underline{\\operatorname{H}}_V^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\text{.}\n\\]\n</div>\n<p>If \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p\\leqslant 2 c+1\\), this arrow is an isomorphism.</p></li>\n</ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The hypothesis \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) is equivalent to \\(\\mathsf{R}^p i^!\\mathbb{Z}/n(c)=0\\). That said, (i) is read on the spectral sequence \\(\\underline{\\operatorname{H}}^p(Y,\\mathsf{R}^q i^!)\\Rightarrow \\underline{\\operatorname{H}}_Y^{p+q}(X,-)\\). If \\(k_1\\) the inclusion of \\(Z\\) in \\(Y\\), we have \\(k=i k_1\\), from where \\(\\mathsf{R} k^! \\mathbb{Z}/n=\\mathsf{R} k_1^! \\mathsf{R} i^!\\), and the exact long sequence of cohomology for \\(Z\\subset Y\\) provides an exact long sequence</p>"
+    },
+    {
+     "id": "disp-IV:2-6",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-6\">\n\\[\n\\xymatrix{\n  \\cdots \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^i\\left(Z,\\mathsf{R} k^! \\mathbb{Z}/n(c)\\right) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}_Y^i\\left(X,\\mathbb{Z}/n(c)\\right) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}_V^i\\left(X,\\mathbb{Z}/n(c)\\right) \\ar[r] \n    &amp; \\cdots\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>of which (ii) results.</p>"
+    },
+    {
+     "id": "IV:2-2-7",
+     "type": "heading",
+     "label": "2.2.7",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-7\">2.2.7 Amplification</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proposal <a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a> remains valid for \\(i\\) any separated morphism of finite type, and \\(2 c\\) any integer (positive or negative), provided that it is replaced \\(\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\) by \\(\\underline{\\operatorname{H}}^{2 c}\\left(Y,\\mathsf{R} i^!\\mathbb{Z}/n(c)\\right)\\), and likewise for \\(\\underline{\\operatorname{H}}_V\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The following semi-purity results result from: \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga2-cite-1\" href=\"#sga2\">24</a>]</span>. We will recall their evidence.</p>"
+    },
+    {
+     "id": "IV:2-2-8",
+     "type": "theorem",
+     "label": "2.2.8",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IV:2-2-8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.2.8</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-2-8\"></span>\nOr a morphism of \\(S\\)-schemes of finite type</p>\n<div class=\"displaymath\" id=\"disp-IV:2-7\">\n\\[\n\\xymatrix{\n  X \\ar[r]^-i \\ar[dr]_-f \n    &amp; X \\ar[d]^-g \\\\\n  &amp; S\n}\n\\]\n</div>\n<p>It is assumed \\(X\\) smooth, purely of relative dimension \\(N\\) and that \\(Y\\) is fiber by fiber of dimension \\(\\leqslant d\\). Or \\(c=N-d\\).</p>\n<ol class=\"enumerate\">\n<li><p>We have \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p&lt;2 c\\); likewise for \\(\\mathbb{Z}/n\\) replaced by a sheaf \\(g^* \\mathscr{F}\\).</p></li>\n<li><p>If, above a dense open \\(U\\) of \\(S\\), \\(Y\\) is fibre by fibre of size \\(&lt;d\\), we have \\(\\mathsf{R}^p i^!\\mathbb{Z}/n=0\\) for \\(p\\leqslant 2 c\\). If further the complement \\(Z\\) of \\(U\\) does not disconnect locally \\(S\\), we have \\(\\mathsf{R}^pi^!\\mathbb{Z}/n=0\\) for \\(p\\leqslant 2 c+1\\).</p></li>\n</ol></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(\\mathsf{R} g^! \\mathscr{F}=g^*\\mathscr{F}(N)[2N]\\), the transitivity formula \\(\\mathsf{R} i^!\\mathsf{R} g^!=\\mathsf{R} f^!\\) shows that \\(\\mathsf{R}^{2 c+q} i^!(g^*\\mathscr{F})=0\\Leftrightarrow \\mathsf{R}^{-2 d+q}f^!(\\mathscr{F})\\). This brings us back to studying \\(f\\), i.e. assuming that \\(X=S\\). The assertion (i) is then <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-26\" href=\"#sga4\">2</a>]</span>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(Y'\\) the inverse image of \\(Z\\) in \\(Y\\):</p>"
+    },
+    {
+     "id": "disp-IV:2-8",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-8\">\n\\[\n\\xymatrix{\n  Y' \\ar[r]^-v \\ar[d]^-f \n    &amp; Y \\ar[d]^-f \\\\\n  Z \\ar[r]^-u \n    &amp; S\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>According to (i), \\(\\mathsf{R}^p f^! \\mathbb{Z}/n\\) are supported in \\(Y'\\) for \\(p\\leqslant -2 d+1\\); and the spectral sequence \\(\\mathsf{R}^a v^!\\mathsf{R}^b f^! \\Rightarrow \\mathsf{R}^{a+b} (f v)^!\\) shows that they coincide with \\(\\mathsf{R}^p(f v)^!\\mathbb{Z}/n=\\mathsf{R}^p(u f)^!\\mathbb{Z}/n\\). Applying (i) to \\(Y'/Z\\) and to the spectral sequence \\(\\mathsf{R}^a f^!\\mathsf{R}^b u^! \\Rightarrow \\mathsf{R}^{a+b} (u f)^!\\), it is found that (ii) results from the nullity of \\(\\mathsf{R}^b u^! \\mathbb{Z}/n\\) for \\(b=0\\), or \\(b=0\\) and \\(1\\) as the case may be.</p>"
+    },
+    {
+     "id": "IV:2-2-9",
+     "type": "heading",
+     "label": "2.2.9",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-9\">2.2.9 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Grothendieck conjectures the following absolute analogy of <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a> (semi-purety conjecture – a consequence of purity conjecture): for \\(Y\\) co-dimensional \\(\\geqslant c\\) in \\(X\\) regular, we have \\(\\underline{\\operatorname{H}}_Y^i(X,\\mathbb{Z}/n)=0\\) for \\(i&lt;2 c\\), at least if \\(X\\) is excellent.</p>"
+    },
+    {
+     "id": "IV:2-2-10",
+     "type": "heading",
+     "label": "2.2.10",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-10\">2.2.10 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We are now at work to define the class of a cycle \\(Y\\) of co-dimensional \\(c\\) in \\(X\\) smooth on a field \\(k\\). We write \\(Y=\\sum d_i Y_i\\), where the \\(Y_i\\) are reduced irreducible. An open \\(U_i\\) of \\(Y_i\\), of co-dimensional complement \\(&gt;c\\), is then of full local intersection in \\(X\\). This allows to define the local fundamental class of \\(U_i\\). <a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a> and <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>, it comes from a single fundamental class \\(\\operatorname{cl}(Y_i)\\in \\underline{\\operatorname{H}}_{Y_i}^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\), and we pose</p>"
+    },
+    {
+     "id": "disp-IV:2-9",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-9\">\n\\[\n\\operatorname{cl}(Y) = \\sum d_i \\operatorname{cl}(Y_i) \\in \\underline{\\operatorname{H}}_{|Y|}^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": "IV:2-2-11",
+     "type": "heading",
+     "label": "2.2.11",
+     "title": null,
+     "html": "<h3 id=\"IV:2-2-11\">2.2.11 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In complex analytical geometry, a construction of Baum, Fulton and Mac Pherson <span class=\"cite\">[<a class=\"cite-src\" id=\"bfm75-cite-1\" href=\"#bfm75\">4</a>]</span> allows to define without restriction the class of cohomology of a complete local intersection \\(Y\\subset X\\). Suppose \\(Y\\) \npurely of co-dimensions \\(c\\), and be \\(\\mathscr{N}\\) Vector fibration on \\(Y\\) normal fibrous \\(Y\\) in \\(X\\). Its local sections are those of \\((\\mathscr{I}/\\mathscr{I}^2)^\\vee\\), from which \\(\\mathscr{I}\\) is the sheaf of ideals of \\(Y\\). Recall that the sheaf of functions \\(C^\\infty\\) on \\(X\\) is defined locally, in terms of local dives of \\(X\\) in \\(\\mathbb{C}^n\\), such as the restriction to \\(X\\) of the function sheaf quotient \\(C^\\infty\\) on \\(\\mathbb{C}^n\\) by the ideal generated by the real and imaginary parts of the equations that define \\(X\\). Fibre \\(\\mathscr{N}\\) prolongs into a complex vector fibre \\(C^\\infty N\\) on a neighbourhood \\(U\\) of the \\(Y\\) in \\(X\\), and for \\(U\\) small enough, there are sections \n\\(f\\) of the \\(N\\), place of zeros \\(Y\\), and such as, on \\(Y\\), \\(d f:\\mathscr{N}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} N\\) \neither the identity. Two choices of \\(N\\) and \\(f\\) are homotopes on \\(Y\\) Small enough.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The cohomology class \\(\\operatorname{cl}(U)\\) of the section \\(0\\) of \\(N\\) (noted \\(z:U\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} N\\)) is defined: \\(U\\) is of complete local intersection in \\(N\\), and \\(\\mathsf{R}^i z^!\\mathbb{Z} = 0\\) for \\(i\\ne 2 c\\), \\(\\mathsf{R}^{2 c} z^!\\mathbb{Z} = \\mathbb{Z}\\). There are \\(f^*:\\underline{\\operatorname{H}}_U^\\bullet(N,\\mathbb{Z}) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}_Y^\\bullet(X,\\mathbb{Z})\\) and there are</p>"
+    },
+    {
+     "id": "disp-IV:2-10",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-10\">\n\\[\n\\operatorname{cl}(Y) = f^*\\operatorname{cl}(U) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The same construction works as soon as one has on an analytical subspace \\(Y\\) of \\(X\\) the following normal structure: a locally free sheaf \\(\\mathscr{C}\\) of rank \\(c\\) on \\(Y_\\text{red}\\), and an epimorphism \\(\\mathscr{C}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathscr{I}/\\mathscr{I}\\cdot \\mathscr{I}_\\text{red}\\).</p>"
+    },
+    {
+     "id": "IV:2-3",
+     "type": "heading",
+     "label": "2.3",
+     "title": null,
+     "html": "<h3 id=\"IV:2-3\">2.3 Homological method</h3>"
+    },
+    {
+     "id": "IV:2-3-1",
+     "type": "heading",
+     "label": "2.3.1",
+     "title": null,
+     "html": "<h3 id=\"IV:2-3-1\">2.3.1 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(f:Y\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\) a flat morphism of finite type, with fibers of size \\(\\leqslant d\\). <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-27\" href=\"#sga4\">2</a>]</span>, we have defined a trace morphism</p>"
+    },
+    {
+     "id": "IV:eq:2-3-1-1",
+     "type": "equation",
+     "label": "2.3.1.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:2-3-1-1\">\n\\[\n\\tag{2.3.1.1}\n  \\operatorname{tr}_f:\\mathsf{R}^{2 d} f_! \\mathbb{Z}/n(d) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{Z}/n \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have \\(\\mathsf{R}^i f_!\\mathbb{Z}/n(d)=0\\) for \\(i&gt;2 d\\), and \\(\\mathsf{R}^i f^!\\mathbb{Z}/n=0\\) for \\(i&lt;-2 d\\). This, and the addition between \\(\\mathsf{R} f_!\\) and \\(\\mathsf{R} f^!\\), provide isomorphisms</p>"
+    },
+    {
+     "id": "IV:eq:2-1-3-2",
+     "type": "equation",
+     "label": "2.1.3.2",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:2-1-3-2\">\n\\[\n\\tag{2.1.3.2}\n\\begin{aligned}\n  \\hom\\left(\\mathsf{R}^{2 d}f_!\\mathbb{Z}/n(d),\\mathbb{Z}/n\\right) \n    &amp;= \\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d),\\mathbb{Z}/n[-2 d]\\right) \\\\\n    &amp;= \\hom\\left(\\mathbb{Z}/n,\\mathsf{R} f^!\\mathbb{Z}/n(-d)[-2 d]\\right) \\\\\n    &amp;= \\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R}^{-2 d}f^!\\mathbb{Z}/n\\right) \\text{.}\n\\end{aligned}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>At least on \\(S\\) one point, the image of \\(\\operatorname{tr}_f\\) in the last two groups deserves the basic class name of \\(Y\\) (in homology).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There's still a note. \\(\\operatorname{tr}_f\\) the image of \\(\\operatorname{tr}_f\\) in the second group, and the morphisms that deduce from it by functionality. For example, for \\(Y/S\\) \nclean, morphism</p>"
+    },
+    {
+     "id": "IV:eq:2-3-1-3",
+     "type": "equation",
+     "label": "2.3.1.3",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:2-3-1-3\">\n\\[\n\\tag{2.3.1.3}\n\\xymatrix{\n  \\underline{\\operatorname{H}}^i\\left(Y,\\mathbb{Z}/n(d)\\right) = \\underline{\\operatorname{H}}^i\\left(S,\\mathsf{R} f_!\\mathbb{Z}/n(d)\\right) \\ar[r] \n    &amp; \\underline{\\operatorname{H}}^{i-2 d}(S,\\mathbb{Z}/n) .\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose \\(Y\\) contained in \\(X\\) smooth on \\(S\\), purely of relative dimension \\(N\\), and posions \\(c=N-d\\).</p>"
+    },
+    {
+     "id": "disp-IV:2-11",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-11\">\n\\[\n\\xymatrix{\n  Y \\ar@{^{(}-&gt;}[r]^-i \\ar[dr]_-f \n    &amp; X \\ar[d] \\\\\n  &amp; S\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have \\(\\mathsf{R} f^! = \\mathsf{R} i^!\\mathsf{R} g^!\\), and \\(\\mathsf{R} g^! \\mathbb{Z}/n=\\mathbb{Z}/n(-N)[-2 N]\\). The fundamental class of \\(Y\\) is identified with an element of \\(\\underline{\\operatorname{H}}^0\\left(Y,\\mathsf{R} i^!\\mathbb{Z}/n(c)[2 c]\\right)=\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\), the class \\(\\operatorname{cl}(Y)\\) of \\(Y\\) in \\(X\\). We will see further that it depends only on \\(Y\\subset X\\), not on the projection of \\(X\\) on \\(S\\), and that for \\(Y\\) of the local complete intersection, it induces the local class of the previous number.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Explain isomorphism</p>"
+    },
+    {
+     "id": "disp-IV:2-12",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-12\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \\xrightarrow{\\sim} \\hom\\left(\\mathsf{R}^{2 d}f_!\\mathbb{Z}/n(d),\\mathbb{Z}/n\\right)\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which transforms \\(\\operatorname{cl}(Y)\\) into \\(\\operatorname{tr}_f\\): via isomorphisms</p>"
+    },
+    {
+     "id": "disp-IV:2-13",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-13\">\n\\begin{align*}\n\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right) \n    &amp;= \\underline{\\operatorname{H}}_Y^{2 c}\\left(\\mathsf{R} i^!\\mathbb{Z}/n(c)\\right) \\\\\n    &amp;= \\hom_Y\\left(\\mathbb{Z}/n(d)[2 d],\\mathsf{R} i^!\\mathbb{Z}/n(N)[2 N]\\right) \\\\\n    &amp;= \\hom_X\\left(\\mathbb{Z}/n(d)[2 d]_Y,\\mathbb{Z}/n(N)[2 n]\\right) \\text{,}\n\\end{align*}\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>that's the top line of</p>"
+    },
+    {
+     "id": "disp-IV:2-14",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-14\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}_Y^{2 c} \\ar[r] \\ar[dr]_-{(3)} \n    &amp; \\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2 d],\\mathsf{R} f_! \\mathsf{R} i^!\\mathbb{Z}/n(N)[2 n]\\right) \\ar[r]^-{(1)} \\ar[d]^-{\\operatorname{tr}_i} \\ar@{}[dr]|-{(2)}\n    &amp; \\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2d],\\mathbb{Z}/n\\right) \\ar@{=}[d] \\\\\n  &amp; \\hom\\left(\\mathsf{R} g_!\\mathbb{Z}/n(d)[2 d]_Y,\\mathsf{R} g_!\\mathbb{Z}/n(N)[2 N]\\right) \\ar[r]^-{\\operatorname{tr}_g} \n    &amp; \\hom\\left(\\mathsf{R} g_!\\mathbb{Z}/n(d)[2 d]_Y,\\mathbb{Z}/n\\right) ,\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where (1) is the addition arrow \\(\\mathsf{R} f_!\\mathsf{R} f^!\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\text{id}\\). Commutativity (2) expresses that isomorphism \\(\\mathsf{R} f^!=\\mathsf{R} i^!\\mathsf{R} g^!\\) is defined by addition. Finally, the arrow derived from (3)</p>"
+    },
+    {
+     "id": "disp-IV:2-15",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-15\">\n\\[\n\\underline{\\operatorname{H}}_Y^{2c}\\left(X,\\mathbb{Z}/n(c)\\right) \\otimes \\mathsf{R}^{2 d} g_!\\mathbb{Z}/n(d) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathsf{R}^{2 N} g_!\\mathbb{Z}/n(N)\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is interpreted as a cup-product (cf. <a class=\"ref\" href=\"#IV:1-2\">1.2</a>).</p>"
+    },
+    {
+     "id": "IV:2-3-2",
+     "type": "definition",
+     "label": "2.3.2",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"IV:2-3-2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.3.2</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-2\"></span>\nThe characteristic property of the class \\(\\operatorname{cl}(Y)\\in\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\) is that, for any local \\(u\\) of \\(\\mathsf{R}^{2 d}f_! \\mathbb{Z}/n(d)\\), it is</p>\n<div class=\"displaymath\" id=\"disp-IV:2-16\">\n\\[\n\\operatorname{tr}_f(u) = \\operatorname{tr}_g\\left(\\operatorname{cl}(Y)\\smallsmile u\\right) \\text{.}\n\\]\n</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(\\operatorname{cl}(Y)\\) already has an image \\(\\operatorname{tr}_f\\) in \\(\\hom\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2 d],\\mathbb{Z}/n\\right)\\), the formula <a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> applies to arrows deduced from \\(\\operatorname{tr}_f\\) by functionality. For example, for \\(X\\) on \\(S\\) clean and \\(u\\in \\underline{\\operatorname{H}}^\\bullet(Y,\\mathbb{Z}/n)\\), the formula is valid in \n\\(\\underline{\\operatorname{H}}^\\bullet\\left(S,\\mathbb{Z}/n(-d)\\right)\\). For \\(v\\in \\underline{\\operatorname{H}}^\\bullet(X,\\mathbb{Z}/n)\\), it gives</p>"
+    },
+    {
+     "id": "disp-IV:2-17",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-17\">\n\\[\n\\operatorname{tr}_f(i^* v) = \\operatorname{tr}_g\\left(\\operatorname{cl}(Y)\\smallsmile v\\right) \\text{,}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where the cup-product can be calculated in \\(\\underline{\\operatorname{H}}^\\bullet(X,\\mathbb{Z}/n)\\).</p>"
+    },
+    {
+     "id": "IV:2-3-3",
+     "type": "heading",
+     "label": "2.3.3",
+     "title": null,
+     "html": "<h3 id=\"IV:2-3-3\">2.3.3 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We will define trace morphisms, and therefore the class \\(\\operatorname{cl}(Y)\\), under more general assumptions. So either a diagram</p>"
+    },
+    {
+     "id": "disp-IV:2-18",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-18\">\n\\[\n\\xymatrix{\n  Y \\ar@{^{(}-&gt;}[r] \\ar[dr]_-f \n    &amp; X \\ar[d]^-g \\\\\n  &amp; S\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>with \\(g\\) smooth, purely of relative dimension \\(N\\) and \\(Y\\) closed in \\(X\\), fibre per fibre of size \\(\\leqslant d\\). More equipment is available \\(Y\\) of a \"weight\" \\(\\mathscr{K}\\) of the following type: \\(\\mathscr{K}\\in\\mathsf{D}_{\\text{parf},X}^b\\) is a bounded complex of sheaves of \\(\\mathscr{O}\\)-modules on \\(X\\), of \\(\\operatorname{Tor}\\)-dimension finished on \\(S\\) (or on \\(X\\), it is the same) and whose cohomology sheaves are coherent and supportable in \\(Y\\). We propose to define a morphism \\(\\operatorname{tr}_{f,\\mathscr{K}}:\\mathsf{R}^{2 d}f_! \\mathbb{Z}/n(d) \\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{Z}/n\\). For \\(Y\\) \nflat on \\(S\\) and \\(\\mathscr{K}=\\mathscr{O}_Y\\), it will be the previous trace morphism. In general, it depends only on the lengths of \\(\\mathscr{K}\\) generic items \\(y\\) of the irreducible components of \n\\(Y(\\operatorname{lg}_y(\\mathscr{K}) = \\sum (-1)^i \\operatorname{lg} \\underline{\\operatorname{H}}^i(\\mathscr{K})_y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, we will note \\(\\operatorname{cl}(Y,\\mathscr{K})\\) the support class in \\(Y\\) such as</p>"
+    },
+    {
+     "id": "IV:eq:2-3-3-1",
+     "type": "equation",
+     "label": "2.3.3.1",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:2-3-3-1\">\n\\[\n\\tag{2.3.3.1}\n  \\operatorname{tr}_g\\left(\\operatorname{cl}(Y,\\mathscr{K})\\smallsmile u\\right) = \\operatorname{tr}_{f,\\mathscr{K}}(u) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": "IV:2-3-4",
+     "type": "heading",
+     "label": "2.3.4",
+     "title": null,
+     "html": "<h3 id=\"IV:2-3-4\">2.3.4 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The construction of \\(\\operatorname{tr}_{f,\\mathscr{K}}\\) is parallel to that of \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-28\" href=\"#sga4\">2</a>]</span>; nour will indicate only the main lines.</p>"
+    },
+    {
+     "id": "sub-IV:2-19",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-19\">A</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(d=0\\) (\\(f\\) quasi-finished). Either \\(x\\) a geometric dot of \\(Y\\). \\(s\\) its image in \\(S\\), \\(\\mathscr{K}_{(x)}\\) the reciprocal image of \\(\\mathscr{K}\\) on the strict localization of \\(X\\) in \\(x\\), \\(\\mathscr{K}_{(x)s} = \\mathscr{K}_{(x)}\\overset{\\mathsf{L}}{\\otimes}_{\\mathscr{O}_{S,s}^h} k(s)\\) its reciprocal image on the geometric fiber in \\(s\\), and \\(n(x)=\\sum (-1)^i \\dim_{k(s)} \\underline{\\operatorname{H}}^i(\\mathscr{K}_{(x)s})\\). The function \\(x\\mapsto n(x)\\) is a weighting of \\(f\\), and the corresponding trace morphism is taken \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-29\" href=\"#sga4\">2</a>]</span>. The weighting \\(n(x)\\), and \\(\\operatorname{tr}_{f,\\mathscr{K}}\\) are training compatible with any basic change.</p>"
+    },
+    {
+     "id": "sub-IV:2-20",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-20\">B</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>General case. If \\(u:Z\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{A}_S^d\\) is such that \\(u i\\) is quasi-finished, we place \\(\\operatorname{tr}_{f,\\mathscr{K}} = \\operatorname{tr}_{\\mathbb{A}_S^d}\\circ \\operatorname{tr}_{u i,\\mathscr{K}}\\). This trace morphism is clearly compatible with any basic change \\(S'/S\\). To prove that it does not depend on \\(u\\), it can therefore be assumed that \\(S\\) is the spectrum of an algebraically closed field \\(k\\). In this case \\(Y_i\\) the irreducible components of \\(Y\\), and \\(\\operatorname{lg}_i\\) the length of \\(\\mathscr{K}\\) to the generic point of \\(Y_i\\). If \\(\\alpha_i\\) is the inclusion of \\((Y_i)_\\text{red}\\) in \\(Y\\), we have</p>"
+    },
+    {
+     "id": "IV:eq:2-3-4",
+     "type": "equation",
+     "label": "2.3.4",
+     "title": null,
+     "html": "<div class=\"equation\" id=\"IV:eq:2-3-4\">\n\\[\n\\tag{2.3.4}\n  \\operatorname{tr}_{f,\\mathscr{K}} = \\sum \\operatorname{lg}_i \\operatorname{tr}_{Y_{i,\\text{red}/S}} \\alpha_i^\\ast\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(This formula results from the analogous and easy formula for \\(\\operatorname{tr}_{u i}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This defines \\(\\operatorname{tr}_{f,\\mathscr{K}}\\) locally on \\(Y\\); then proceed as in \n<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-30\" href=\"#sga4\">2</a>]</span>.</p>"
+    },
+    {
+     "id": "IV:2-3-5",
+     "type": "lemma",
+     "label": "2.3.5",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IV:2-3-5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.3.5</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-5\"></span>\nIf \\(g=g'g'':X\\xrightarrow{g''} S'\\xrightarrow{g'} S\\), with \\(g'\\) and \\(g''\\) is smooth and purely of relative dimension \\(N'\\) and \\(N''\\), and \\(Y\\) is still, on \\(S'\\), fiber per co-dimensional fibre \\(\\geqslant c\\), then the class \\(\\operatorname{cl}(Y,\\mathscr{K})\\) is the same, calculated in terms of \\(g\\) or \\(g''\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Is \\(f'=g'' i\\) and \\(d'=d-N'\\). The formula \\(\\operatorname{tr}_g=\\operatorname{tr}_{g'}\\operatorname{tr}_{g''}\\) (<span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-31\" href=\"#sga4\">2</a>]</span> Var 3) ensures the commutativity of</p>"
+    },
+    {
+     "id": "disp-IV:2-21",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-21\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}_X^{2 c}\\left(Z,\\mathbb{Z}/n(c)\\right) \\ar[d] \\\\\n  \\hom_{S'}\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d')[2 d'],\\mathsf{R} g_!''\\mathbb{Z}/n(N'')[2 N'']\\right) \\ar[r] \\ar[d]^-{\\mathsf{R} g_!'(N')} \n    &amp; \\hom_{S'}\\left(\\mathsf{R}^{2 d'} f_!' \\mathbb{Z}/n,\\mathbb{Z}/n\\right) \\ar[d]^-{\\operatorname{tr}_{g'}\\circ \\mathsf{R}^{2 N'} g_!'} \\\\\n  \\hom_S\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2d],\\mathsf{R} g_!'\\mathbb{Z}/n(N)[2 N]\\right) \\ar[r] \n    &amp; \\hom_S\\left(\\mathsf{R}^{2 d} f_!\\mathbb{Z}/n,\\mathbb{Z}/n\\right)\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>while the analogous and easy-to-check formula \\(\\operatorname{tr}_{f,\\mathscr{K}}=\\operatorname{tr}_{g'}\\operatorname{tr}_{f',\\mathscr{K}}\\) ensures that the image of \\(\\operatorname{tr}_{f',\\mathscr{K}}\\) is \\(\\operatorname{tr}_{f,\\mathscr{K}}\\). The resultant assertion.</p>"
+    },
+    {
+     "id": "IV:2-3-6",
+     "type": "lemma",
+     "label": "2.3.6",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IV:2-3-6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.3.6</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-6\"></span>\nIf \\(Y\\) is a divisor in \\(X\\), the class <a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> coincide with the class <a class=\"ref\" href=\"#IV:2-1-2\">2.1.2</a>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By semi-purity (<a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a>(i) and <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>(i)), the problem is local on \\(Y\\); using <a class=\"ref\" href=\"#IV:2-3-5\">2.3.5</a> to replace \\(S\\) by \\(S'\\) suitable, this allows us to assume that \\(N=1\\). Reusing semi-purity (<a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a>(ii) and <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>(ii) it is sufficient to prove \n<a class=\"ref\" href=\"#IV:2-3-6\">2.3.6</a> above the generic points of \\(S\\). An extended location then leads us to assume \\(S\\) spectrum of an algebraically closed field \\(k\\). <a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> and <a class=\"ref\" href=\"#IV:2-1-2\">2.1.2</a> being each additive in \\(Y\\), this brings us back to the case where \\(Y\\) is a closed point on a smooth curve on \\(k\\). That the characteristic property \n<a class=\"ref\" href=\"#IV:2-3-2\">2.3.2</a> be checked is then the fundamental compatibility \n<a class=\"ref\" href=\"#IV:2-1-5\">2.1.5</a>.</p>"
+    },
+    {
+     "id": "IV:2-3-7",
+     "type": "lemma",
+     "label": "2.3.7",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IV:2-3-7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.3.7</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-7\"></span>\nThe training of \\(\\operatorname{cl}(Y,\\mathscr{K})\\) is compatible with any basic change \\(S'/S\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Result of the same assertion for trace morphisms.</p>"
+    },
+    {
+     "id": "IV:2-3-8",
+     "type": "theorem",
+     "label": "2.3.8",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IV:2-3-8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.3.8</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:2-3-8\"></span>\n(i) \\(\\operatorname{cl}(Y,\\mathscr{K})\\) depends only on \\(Y\\subset X\\) and the lengths of \\(\\mathscr{K}\\) at the generic points of \\(Y\\). This class is additive in \\(\\mathscr{K}\\). For \\(\\mathscr{K}=\\mathscr{O}_Y\\) and \\(Y\\) of local complete intersection, it induces the local class <a class=\"ref\" href=\"#IV:2-2-2\">2.2.2</a>.</p>\n<p>(ii) A commutative diagram</p>\n<div class=\"displaymath\" id=\"disp-IV:2-22\">\n\\[\n\\xymatrix{\n  X' \\ar[r]^-u \\ar[d] \n    &amp; X \\ar[d] \\\\\n  S' \\ar[r] \n    &amp; S\n}\n\\]\n</div>\n<p>with \\(X'\\) smooth on \\(S'\\). If \\(u^{-1}(Y)\\) is still fiber by co-dimensional fiber \\(\\geqslant c\\), then</p>\n<div class=\"displaymath\" id=\"disp-IV:2-23\">\n\\[\n\\operatorname{cl}\\left(u^{-1}(Y),\\mathsf{L} u^\\ast\\mathscr{K}\\right) = u^\\ast \\operatorname{cl}(Y,\\mathscr{K}) \\text{.}\n\\]\n</div>\n<p>(iii) either \\(Y'\\subset X\\) fibre per co-dimensional fibre \\(\\geqslant c'\\), \\(\\mathscr{K}'\\) weight on \\(Y'\\) and assume that \\(Y\\cap Y'\\) is fibre per co-dimensional fibre \\(\\geqslant c+c'\\).</p>\n<div class=\"displaymath\" id=\"disp-IV:2-24\">\n\\[\n\\operatorname{cl}\\left(Y\\cap Y',\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes} \\mathscr{K}'\\right) = \\operatorname{cl}(Y,\\mathscr{K}) \\smallsmile \\operatorname{cl}(Y',\\mathscr{K}') \\text{.}\n\\]\n</div></div>\n</div>"
+    },
+    {
+     "id": "sub-IV:2-25",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-25\">(A)</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Given \\(Y\\subset X/S\\) as said, it results from semi-purety (<a class=\"ref\" href=\"#IV:2-2-6\">2.2.6</a>, <a class=\"ref\" href=\"#IV:2-2-8\">2.2.8</a>) that to verify that two classes in \\(\\underline{\\operatorname{H}}_Y^{2 c}\\left(X,\\mathbb{Z}/n(c)\\right)\\) coincide, it is sufficient to verify locally at the generic points of \\(Y\\), or even after any change of bottom \\(s\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\) (\\(s\\) generic geometric point of \\(S\\)), at the generic points of \\(Y\\).</p>"
+    },
+    {
+     "id": "sub-IV:2-26",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-26\">(B) Proof of (ii) for \\(S=S'\\) and \\(u\\) a closed dive</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By localization (A) it can be assumed that \\(X'\\) is the reciprocal image of the section \\(0\\) by a smooth morphism \\(v:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{A}_S^{N'}\\)</p>"
+    },
+    {
+     "id": "disp-IV:2-27",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-27\">\n\\[\n\\xymatrix{\n  X' \\ar[r]^-u \\ar[d] \n    &amp; X \\ar[d]^-v \\\\\n  S \\ar[r]^-0 \n    &amp; \\mathbb{A}_S^{N'} \\ar[r]^-\\pi \n    &amp; S\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We're applying <a class=\"ref\" href=\"#IV:2-3-5\">2.3.5</a> to \\(g=\\pi v\\) and <a class=\"ref\" href=\"#IV:2-3-7\">2.3.7</a> to the basic change \\(S\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{A}_S^{N'}\\).</p>"
+    },
+    {
+     "id": "sub-IV:2-28",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-28\">(C) In a product situation:</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(X=X'\\times_S X''\\), \\(Y=Y'\\times_S Y''\\), \\(\\mathscr{K}=\\mathscr{K}\\overset{\\mathsf{L}}{\\otimes}_S \\mathscr{K}''\\), we have \\(\\operatorname{cl}(Y,\\mathscr{K}) = \\operatorname{cl}(Y,\\mathscr{K}')\\smallsmile \\operatorname{cl}(Y'',\\mathscr{K}'')\\) (outdoor product, i.e. \\(\\operatorname{pr}_1^\\ast \\operatorname{cl}(Y',\\mathscr{K}')\\smallsmile \\operatorname{pr}_2^\\ast \\operatorname{cl}(Y'',\\mathscr{K}'')\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Functional properties of \\(\\operatorname{tr}_g\\) <span class=\"cite\">[<a class=\"cite-src\" id=\"sga4-cite-32\" href=\"#sga4\">2</a>]</span> results of the commutativity of</p>"
+    },
+    {
+     "id": "disp-IV:2-29",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-29\">\n\\[\n\\xymatrix@=0.5cm{\n  \\underline{\\operatorname{H}}_{X'}^{2c'}\\otimes \\underline{\\operatorname{H}}_{X''}^{2 c''}\\ar[r] \\ar[d] \n    &amp; \\hom_S\\left(\\mathsf{R} f_!' \\mathbb{Z}/n(d')[2 d'],\\mathsf{R} g_!'\\mathbb{Z}/n(N')[2 N']\\right)\\otimes \\cdots \\ar[r] \\ar[d] \n    &amp; \\hom_S\\left(\\mathsf{R}^{2 d'} f_!' \\mathbb{Z}/n,\\mathbb{Z}/n\\right) \\otimes \\cdots \\ar[d] \\\\\n  \\underline{\\operatorname{H}}_X^{2 c} \\ar[r] \n    &amp; \\hom_S\\left(\\mathsf{R} f_!\\mathbb{Z}/n(d)[2 d],\\mathsf{R} g_!\\mathbb{Z}/n(N)[2 N]\\right) \\ar[r] \n    &amp; \\hom_S\\left(\\mathsf{R}^{2 d}f_!\\mathbb{Z}/n,\\mathbb{Z}/n\\right)\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and we check that \\(\\operatorname{tr}_f\\) is the image of \\(\\operatorname{tr}_{f'}\\otimes \\operatorname{tr}_{f''}\\) hence the assertion.</p>"
+    },
+    {
+     "id": "sub-IV:2-30",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-30\">Proof of (ii)</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(<a class=\"ref\" href=\"#IV:2-3-7\">2.3.7</a>) and a preliminary change of base leads us to assume that \\(S=S'\\). Bills \\(u\\) by his graph:</p>"
+    },
+    {
+     "id": "disp-IV:2-31",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-31\">\n\\[\n\\xymatrix{\n  X' \\ar[r]^-{(\\text{id},u)} \n    &amp; X'\\times X \\ar[r]^-{\\operatorname{pr}_2} \n    &amp; X .\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This leads us to treat separately \\(\\operatorname{pr}_2\\), justiciable from (C) for \\(X'=X'\\), \\(\\mathscr{K}'=\\mathscr{O}_{x'}\\) (with \\(\\operatorname{cl}(Y')=1\\in \\underline{\\operatorname{H}}^0(X,\\mathbb{Z}/n)\\)), and \\((\\text{id},u)\\), justiciable from (B).</p>"
+    },
+    {
+     "id": "sub-IV:2-32",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-32\">Proof of (iii)</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(\\delta:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\times_S X\\) diagonal inclusion. The formula \\(\\delta^\\ast(Y_1\\times_S Y_2) = Y_1\\cap Y_2\\) is used to reduce to (B) and (C).</p>"
+    },
+    {
+     "id": "sub-IV:2-33",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"sub-IV:2-33\">Proof of (i)</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The basic change \\(S_\\text{red}\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\) replaces \\(X\\) by \\(X_\\text{red}\\); this brings us back to the assumption \\(X\\) and \\(S\\) reduced. A location near the generic points of \\(Y\\) nour then returns to the case where \\(Y_\\text{red}\\) is irreducible and the complete intersection of \\(c\\) divisors \\(D_i\\). The same location, and the definition of \\(\\operatorname{tr}\\) in the quasi-finished case. then shows that \\(\\operatorname{cl}(Y,\\mathscr{K})=\\operatorname{lg}\\operatorname{cl}(Y_\\text{red},\\mathscr{O}_{Y_\\text{red}})\\), where \\(\\operatorname{lg}\\) is the length of \\(\\mathscr{K}\\) to the generic point of \\(Y\\). According to (iv), we have therefore</p>"
+    },
+    {
+     "id": "disp-IV:2-34",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-34\">\n\\[\n\\operatorname{cl}(Y,\\mathscr{K}) = \\operatorname{lg} \\prod_i \\operatorname{cl}(D_i,\\mathscr{O}_{D_i})\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and we conclude by <a class=\"ref\" href=\"#IV:2-3-6\">2.3.6</a>.</p>"
+    },
+    {
+     "id": "IV:2-3-9",
+     "type": "heading",
+     "label": "2.3.9",
+     "title": null,
+     "html": "<h3 id=\"IV:2-3-9\">2.3.9 Note</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(S\\) the spectrum of a field, and the class of a cycle being defined as in <a class=\"ref\" href=\"#IV:2-2-10\">2.2.10</a>, the assertion (iii) says that if two cycles \\(Y'\\) and \\(Y''\\) cut with the right dimension, then</p>"
+    },
+    {
+     "id": "disp-IV:2-35",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:2-35\">\n\\[\n\\operatorname{cl}(Y'\\cap Y'') = \\operatorname{cl}(Y')\\smallsmile \\operatorname{cl}(Y'')\\text{,}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>provided that the multiplicity of the components of \\(Y'\\cap Y''\\) are calculated as alternating amounts of \\(\\operatorname{Tor}\\).</p>"
+    },
+    {
+     "id": "IV:2-3-10",
+     "type": "heading",
+     "label": "2.3.10",
+     "title": null,
+     "html": "<h3 id=\"IV:2-3-10\">2.3.10 Note</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Either \\(X/\\operatorname{Spec}(k)\\), \\(k\\) algebraically closed. If two co-dimensional cycles \\(c\\) in \\(X\\) are algebraically equivalent, it follows from the existence of the above relative theory that the images in \\(\\underline{\\operatorname{H}}^{2 c}(X,\\mathbb{Z}/n(c))\\) of their classes are the fibres, in two points of \\(S\\) related suitable, of a section on \\(S\\) of the constant sheaf \\(\\underline{\\operatorname{H}}^{2 c}(X,\\mathbb{Z}/n(c))\\) (the sheaf \\(\\mathsf{R}^{2 c} f_\\ast \\mathbb{Z}/n(c)\\) for \\(f=\\operatorname{pr}_2:X\\times S\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} S\\)): two algebraically equivalent cycles are even classed in \\(\\underline{\\operatorname{H}}^{2 c}(X,\\mathbb{Z}/n(c))\\).</p>"
+    }
+   ],
+   "footnotes": [],
+   "bibliography": []
+  },
+  {
+   "id": "IV:3",
+   "title": "Application: the Lefschetz trace formula in the clean and smooth case",
+   "html": "<h2 id=\"IV:3\">3 Application: Lefschetz trace formula in the clean and smooth case</h2>\n<h3 id=\"IV:3-1\">3.1 </h3>\n<p>It consists of \\(X\\) and \\(Y\\) clean and smooth algebraic varieties on an algebraically closed field \\(k\\), purely of dimensions \\(N\\) and \\(M\\). Through the isomorphism of Künneth \\(\\underline{\\operatorname{H}}^\\bullet(X\\times Y)=\\underline{\\operatorname{H}}^\\bullet(X)\\otimes \\underline{\\operatorname{H}}^\\bullet(Y)\\), trace morphism \\(\\underline{\\operatorname{H}}^\\bullet(X\\times Y)(M)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X)\\) is none other than \\(\\underline{\\operatorname{H}}^\\bullet(X)\\otimes (\\)morphism trace \\(\\underline{\\operatorname{H}}^\\bullet(Y)(M)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{Q}_\\ell)\\). Since morphism is homogenous of even degree, there is no problem of sign. It is noted \\(\\int_Y\\).</p>\n<h3 id=\"IV:3-2\">3.2 </h3>\n<p>A class \\(\\eta\\in \\underline{\\operatorname{H}}^{2 q}(X\\times Y)(q)\\) defines a degree morphism \\(2(q-N)\\) \\(\\eta_{XY}:\\underline{\\operatorname{H}}^\\bullet(Y)(N-q)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X)\\), by the formula</p>\n<div class=\"displaymath\" id=\"disp-IV:3-1\">\n\\[\n\\beta \\mapsto \\int_Y \\eta\\cdot \\operatorname{pr}_2^\\ast \\beta \\text{.}\n\\]\n</div>\n<div class=\"thm thm-plain proposition_\" id=\"IV:3-3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-3\"></span>\nBe \\(p\\) and \\(q\\) two integers, with \\(p+q=N+M\\), and \\(\\varepsilon\\in \\underline{\\operatorname{H}}^{2 p}(X\\times Y)(p)\\), \\(\\eta\\in \\underline{\\operatorname{H}}^{2 q}(X\\times Y)(p)\\). The trace of \\(\\eta_{X Y}\\varepsilon_{Y X}:\\underline{\\operatorname{H}}^\\bullet(X)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X)\\) being understood as <a class=\"ref\" href=\"#IV:1-3\">1.3</a>, then we have</p>\n<div class=\"displaymath\" id=\"disp-IV:3-2\">\n\\[\n\\operatorname{tr}_{X\\times Y}(\\eta\\cdot \\varepsilon) = \\operatorname{tr}\\left(\\eta_{X Y}\\varepsilon_{Y X},\\underline{\\operatorname{H}}^\\bullet(X)\\right) \\text{.}\n\\]\n</div></div>\n</div>\n<p>To exorcise the signs, it is worth remembering from the graduation of \\(\\underline{\\operatorname{H}}^\\bullet\\) only the \\(\\mathbb{Z}/2\\)-graduation underlying. To avoid dragging the twists to the Tate with oneself, one is also fixed an isomorphism \\(\\mathbb{Q}_\\ell(1)=\\mathbb{Q}_\\ell\\). Either \\(\\alpha_Y\\) homomorphism \\(\\underline{\\operatorname{H}}^\\bullet(Y)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(Y)^\\vee\\) (an isomorphism) making the diagram commutative</p>\n<div class=\"displaymath\" id=\"disp-IV:3-3\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^\\bullet(Y)\\otimes \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r] \\ar[d]^-{\\alpha_Y\\otimes 1} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r]^-{\\operatorname{tr}} \n    &amp; \\mathbb{Q}_\\ell \\ar@{=}[d] \\\\\n  \\underline{\\operatorname{H}}^\\bullet(Y)^\\vee \\otimes \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[rr]^-{\\text{(1.3.1)}} \n    &amp; &amp; \\mathbb{Q}_\\ell .\n}\n\\]\n</div>\n<p>The application \\(\\eta_{X Y}\\) is the image of \\(\\eta\\) by</p>\n<div class=\"displaymath\" id=\"disp-IV:3-4\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^\\bullet(X\\times Y) = \\underline{\\operatorname{H}}^\\bullet(X)\\otimes \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r]^-{\\alpha_Y} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(X) \\otimes \\underline{\\operatorname{H}}^\\bullet(Y)^\\vee \\ar@{=}[r]^-{\\text{(1.3.2)}} \n    &amp; \\hom\\left(\\underline{\\operatorname{H}}^\\bullet(X),\\underline{\\operatorname{H}}^\\bullet(Y)\\right) ,\n}\n\\]\n</div>\n<p>and the same for \\(\\varepsilon\\). The definition <a class=\"ref\" href=\"#IV:eq:1-3-4\">1.3.4</a> of the trace then brings back <a class=\"ref\" href=\"#IV:3-3\">3.3</a> to the formula \\(\\operatorname{tr}_{X\\times Y}=\\operatorname{tr}_X\\otimes \\operatorname{tr}_Y\\).</p>\n<h3 id=\"IV:3-4\">3.4. Note</h3>\n<p>Evidence of <a class=\"ref\" href=\"#IV:3-4\">3.4</a> does not use that \\(\\alpha_X\\) and \\(\\alpha_Y\\) are isomorphisms. It is worthless to assume \\(X\\) and \\(Y\\) smooth. However, apart from the smooth case, it is difficult to find classes of <em>cohomology</em> \nto which one wishes to apply <a class=\"ref\" href=\"#IV:3-3\">3.3</a>.</p>\n<h3 id=\"IV:3-5\">3.5 Note</h3>\n<p>If \\(\\varepsilon,\\eta\\) are the cohomology classes of algebraic cycles \\(A\\) and \\(B\\) on \\(X\\times Y\\), co-dimension \\(p\\) and \\(q\\), and \\(A\\cap B\\) is of dimension \\(0\\), then \\(\\operatorname{tr}_{X\\times Y}(\\eta\\varepsilon)\\) is the multiplicity of intersection \\(A\\cdot B\\), calculated by an alternate sum of \\(\\operatorname{Tor}\\)(<a class=\"ref\" href=\"#IV:2-3-9\">2.3.9</a>).</p>\n<div class=\"thm thm-plain proposition_\" id=\"IV:3-6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-6\"></span>\nFor \\(q=M\\) and \\(\\eta=\\operatorname{cl}(B)\\) the class of a sub-scheme \\(B\\subset X\\times Y\\), finished on \\(X\\), the application \\(\\eta_{X Y}\\) is the compound</p>\n<div class=\"displaymath\" id=\"disp-IV:3-5\">\n\\[\n\\xymatrix{\n  \\eta_{X Y} : \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r]^-{\\operatorname{pr}_2^\\ast} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(B) \\ar[r]^-{\\operatorname{tr}_{B/X}} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(X) .\n}\n\\]\n</div></div>\n</div>\n<p>Based on <a class=\"ref\" href=\"#IV:3-2\">3.2</a> and (<a class=\"ref\" href=\"#IV:eq:2-3-3-1\">2.3.3.1</a>) for \\(\\mathscr{K}=\\mathscr{O}_B\\), we have in fact</p>\n<div class=\"displaymath\" id=\"disp-IV:3-6\">\n\\[\n\\eta_{X Y}(\\beta) = \\operatorname{tr}_{X\\times Y/X}\\left(\\operatorname{cl}(B)\\cdot \\operatorname{pr}_2^\\ast\\beta\\right) = \\operatorname{tr}_{B/X}\\left(\\operatorname{pr}_2^\\ast \\beta\\right) \\text{.}\n\\]\n</div>\n<p>The most important case is where \\(B\\) is the graph of an application \\(f:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Y\\). In this case, <a class=\"ref\" href=\"#IV:3-6\">3.6</a> shows that \\(\\eta_{X Y}=f^\\ast\\).</p>\n<div class=\"thm thm-plain corollary_\" id=\"IV:3-7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-7\"></span>\nEither \\(f\\) an endomorphism of \\(X\\) clean and smooth on an algebraically closed field \\(k\\). It is assumed that the fixed points of \\(f\\) are isolated. So the trace \\(\\sum (-1)^i \\operatorname{tr}(f^\\ast,\\underline{\\operatorname{H}}^i(X))\\) is the number of fixed points of \\(f\\), each counted with its multiplicity.</p></div>\n</div>\n<p>In <a class=\"ref\" href=\"#IV:3-5\">3.5</a>, we take \\(A=\\)identity graph, \\(B=\\)graph of \\(f\\) and apply <a class=\"ref\" href=\"#IV:3-3\">3.3</a>, <a class=\"ref\" href=\"#IV:3-6\">3.6</a>.</p>\n<div class=\"thm thm-plain corollary_\" id=\"IV:3-8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-8\"></span>\nBe \\(X\\) a curve on \\(k\\) algebraically closed, deduced by extension of the scalar of \\(X_0\\) on \\(\\mathbb{F}_q\\), and \\(f\\) the morphism of Frobenius. So \\(\\sum (-1)^i \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(X)\\right)\\) is the number of fixed points of \\(f\\).</p></div>\n</div>\n<p>We can replace \\(X\\) by \\(X_\\text{red}\\), so assume \\(X\\) reduced. Either \\(U\\) the opening of \\(X\\) where \\(X\\) is smooth in size \\(1\\), and \\(\\overline{U}\\) the projective and smooth completion of \\(U\\). The exact long cohomology suites for \\((X,U)\\) and \\((\\overline{U},U)\\) give</p>\n<div class=\"displaymath\" id=\"disp-IV:3-7\">\n\\[\n\\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(X)\\right) = \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(U)\\right) + \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(X\\setminus U)\\right)\n\\]\n</div>\n<p>and</p>\n<div class=\"displaymath\" id=\"disp-IV:3-8\">\n\\[\n\\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(\\overline{U})\\right) = \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(U)\\right) + \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(\\overline{U}\\setminus U)\\right) \\text{.}\n\\]\n</div>\n<p>The same formula applies to fixed point numbers. \n<a class=\"ref\" href=\"#IV:3-8\">3.8</a> being clear for a dimension diagram \\(0\\), this brings to prove <a class=\"ref\" href=\"#IV:3-8\">3.8</a> for \\(\\overline{U}\\). This case is justiciable from <a class=\"ref\" href=\"#IV:3-7\">3.7</a>. The fact that \\(d f=0\\) ensures that fixed points are all multiplicity one.</p>\n<h3 id=\"IV:3-9\">3.9. Note</h3>\n<p>For \\(X\\) of dimension \\(\\leqslant 1\\) on \\(k\\) algebraically closed, and \\(f:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\) such as \\(d f=0\\), it is not difficult to verify that \n<a class=\"ref\" href=\"#IV:3-8\">3.8</a> is still valid.</p>",
+   "blocks": [
+    {
+     "id": "IV:3",
+     "type": "heading",
+     "label": "3",
+     "title": null,
+     "html": "<h2 id=\"IV:3\">3 Application: Lefschetz trace formula in the clean and smooth case</h2>"
+    },
+    {
+     "id": "IV:3-1",
+     "type": "heading",
+     "label": "3.1",
+     "title": null,
+     "html": "<h3 id=\"IV:3-1\">3.1 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It consists of \\(X\\) and \\(Y\\) clean and smooth algebraic varieties on an algebraically closed field \\(k\\), purely of dimensions \\(N\\) and \\(M\\). Through the isomorphism of Künneth \\(\\underline{\\operatorname{H}}^\\bullet(X\\times Y)=\\underline{\\operatorname{H}}^\\bullet(X)\\otimes \\underline{\\operatorname{H}}^\\bullet(Y)\\), trace morphism \\(\\underline{\\operatorname{H}}^\\bullet(X\\times Y)(M)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X)\\) is none other than \\(\\underline{\\operatorname{H}}^\\bullet(X)\\otimes (\\)morphism trace \\(\\underline{\\operatorname{H}}^\\bullet(Y)(M)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\mathbb{Q}_\\ell)\\). Since morphism is homogenous of even degree, there is no problem of sign. It is noted \\(\\int_Y\\).</p>"
+    },
+    {
+     "id": "IV:3-2",
+     "type": "heading",
+     "label": "3.2",
+     "title": null,
+     "html": "<h3 id=\"IV:3-2\">3.2 </h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A class \\(\\eta\\in \\underline{\\operatorname{H}}^{2 q}(X\\times Y)(q)\\) defines a degree morphism \\(2(q-N)\\) \\(\\eta_{XY}:\\underline{\\operatorname{H}}^\\bullet(Y)(N-q)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X)\\), by the formula</p>"
+    },
+    {
+     "id": "disp-IV:3-1",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:3-1\">\n\\[\n\\beta \\mapsto \\int_Y \\eta\\cdot \\operatorname{pr}_2^\\ast \\beta \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": "IV:3-3",
+     "type": "proposition_",
+     "label": "3.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition_\" id=\"IV:3-3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-3\"></span>\nBe \\(p\\) and \\(q\\) two integers, with \\(p+q=N+M\\), and \\(\\varepsilon\\in \\underline{\\operatorname{H}}^{2 p}(X\\times Y)(p)\\), \\(\\eta\\in \\underline{\\operatorname{H}}^{2 q}(X\\times Y)(p)\\). The trace of \\(\\eta_{X Y}\\varepsilon_{Y X}:\\underline{\\operatorname{H}}^\\bullet(X)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(X)\\) being understood as <a class=\"ref\" href=\"#IV:1-3\">1.3</a>, then we have</p>\n<div class=\"displaymath\" id=\"disp-IV:3-2\">\n\\[\n\\operatorname{tr}_{X\\times Y}(\\eta\\cdot \\varepsilon) = \\operatorname{tr}\\left(\\eta_{X Y}\\varepsilon_{Y X},\\underline{\\operatorname{H}}^\\bullet(X)\\right) \\text{.}\n\\]\n</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To exorcise the signs, it is worth remembering from the graduation of \\(\\underline{\\operatorname{H}}^\\bullet\\) only the \\(\\mathbb{Z}/2\\)-graduation underlying. To avoid dragging the twists to the Tate with oneself, one is also fixed an isomorphism \\(\\mathbb{Q}_\\ell(1)=\\mathbb{Q}_\\ell\\). Either \\(\\alpha_Y\\) homomorphism \\(\\underline{\\operatorname{H}}^\\bullet(Y)\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} \\underline{\\operatorname{H}}^\\bullet(Y)^\\vee\\) (an isomorphism) making the diagram commutative</p>"
+    },
+    {
+     "id": "disp-IV:3-3",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:3-3\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^\\bullet(Y)\\otimes \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r] \\ar[d]^-{\\alpha_Y\\otimes 1} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r]^-{\\operatorname{tr}} \n    &amp; \\mathbb{Q}_\\ell \\ar@{=}[d] \\\\\n  \\underline{\\operatorname{H}}^\\bullet(Y)^\\vee \\otimes \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[rr]^-{\\text{(1.3.1)}} \n    &amp; &amp; \\mathbb{Q}_\\ell .\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The application \\(\\eta_{X Y}\\) is the image of \\(\\eta\\) by</p>"
+    },
+    {
+     "id": "disp-IV:3-4",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:3-4\">\n\\[\n\\xymatrix{\n  \\underline{\\operatorname{H}}^\\bullet(X\\times Y) = \\underline{\\operatorname{H}}^\\bullet(X)\\otimes \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r]^-{\\alpha_Y} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(X) \\otimes \\underline{\\operatorname{H}}^\\bullet(Y)^\\vee \\ar@{=}[r]^-{\\text{(1.3.2)}} \n    &amp; \\hom\\left(\\underline{\\operatorname{H}}^\\bullet(X),\\underline{\\operatorname{H}}^\\bullet(Y)\\right) ,\n}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and the same for \\(\\varepsilon\\). The definition <a class=\"ref\" href=\"#IV:eq:1-3-4\">1.3.4</a> of the trace then brings back <a class=\"ref\" href=\"#IV:3-3\">3.3</a> to the formula \\(\\operatorname{tr}_{X\\times Y}=\\operatorname{tr}_X\\otimes \\operatorname{tr}_Y\\).</p>"
+    },
+    {
+     "id": "IV:3-4",
+     "type": "heading",
+     "label": "3.4",
+     "title": null,
+     "html": "<h3 id=\"IV:3-4\">3.4. Note</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Evidence of <a class=\"ref\" href=\"#IV:3-4\">3.4</a> does not use that \\(\\alpha_X\\) and \\(\\alpha_Y\\) are isomorphisms. It is worthless to assume \\(X\\) and \\(Y\\) smooth. However, apart from the smooth case, it is difficult to find classes of <em>cohomology</em> \nto which one wishes to apply <a class=\"ref\" href=\"#IV:3-3\">3.3</a>.</p>"
+    },
+    {
+     "id": "IV:3-5",
+     "type": "heading",
+     "label": "3.5",
+     "title": null,
+     "html": "<h3 id=\"IV:3-5\">3.5 Note</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(\\varepsilon,\\eta\\) are the cohomology classes of algebraic cycles \\(A\\) and \\(B\\) on \\(X\\times Y\\), co-dimension \\(p\\) and \\(q\\), and \\(A\\cap B\\) is of dimension \\(0\\), then \\(\\operatorname{tr}_{X\\times Y}(\\eta\\varepsilon)\\) is the multiplicity of intersection \\(A\\cdot B\\), calculated by an alternate sum of \\(\\operatorname{Tor}\\)(<a class=\"ref\" href=\"#IV:2-3-9\">2.3.9</a>).</p>"
+    },
+    {
+     "id": "IV:3-6",
+     "type": "proposition_",
+     "label": "3.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition_\" id=\"IV:3-6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-6\"></span>\nFor \\(q=M\\) and \\(\\eta=\\operatorname{cl}(B)\\) the class of a sub-scheme \\(B\\subset X\\times Y\\), finished on \\(X\\), the application \\(\\eta_{X Y}\\) is the compound</p>\n<div class=\"displaymath\" id=\"disp-IV:3-5\">\n\\[\n\\xymatrix{\n  \\eta_{X Y} : \\underline{\\operatorname{H}}^\\bullet(Y) \\ar[r]^-{\\operatorname{pr}_2^\\ast} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(B) \\ar[r]^-{\\operatorname{tr}_{B/X}} \n    &amp; \\underline{\\operatorname{H}}^\\bullet(X) .\n}\n\\]\n</div></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Based on <a class=\"ref\" href=\"#IV:3-2\">3.2</a> and (<a class=\"ref\" href=\"#IV:eq:2-3-3-1\">2.3.3.1</a>) for \\(\\mathscr{K}=\\mathscr{O}_B\\), we have in fact</p>"
+    },
+    {
+     "id": "disp-IV:3-6",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:3-6\">\n\\[\n\\eta_{X Y}(\\beta) = \\operatorname{tr}_{X\\times Y/X}\\left(\\operatorname{cl}(B)\\cdot \\operatorname{pr}_2^\\ast\\beta\\right) = \\operatorname{tr}_{B/X}\\left(\\operatorname{pr}_2^\\ast \\beta\\right) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The most important case is where \\(B\\) is the graph of an application \\(f:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} Y\\). In this case, <a class=\"ref\" href=\"#IV:3-6\">3.6</a> shows that \\(\\eta_{X Y}=f^\\ast\\).</p>"
+    },
+    {
+     "id": "IV:3-7",
+     "type": "corollary_",
+     "label": "3.7",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary_\" id=\"IV:3-7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-7\"></span>\nEither \\(f\\) an endomorphism of \\(X\\) clean and smooth on an algebraically closed field \\(k\\). It is assumed that the fixed points of \\(f\\) are isolated. So the trace \\(\\sum (-1)^i \\operatorname{tr}(f^\\ast,\\underline{\\operatorname{H}}^i(X))\\) is the number of fixed points of \\(f\\), each counted with its multiplicity.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In <a class=\"ref\" href=\"#IV:3-5\">3.5</a>, we take \\(A=\\)identity graph, \\(B=\\)graph of \\(f\\) and apply <a class=\"ref\" href=\"#IV:3-3\">3.3</a>, <a class=\"ref\" href=\"#IV:3-6\">3.6</a>.</p>"
+    },
+    {
+     "id": "IV:3-8",
+     "type": "corollary_",
+     "label": "3.8",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary_\" id=\"IV:3-8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p><span class=\"label-anchor\" id=\"IV:3-8\"></span>\nBe \\(X\\) a curve on \\(k\\) algebraically closed, deduced by extension of the scalar of \\(X_0\\) on \\(\\mathbb{F}_q\\), and \\(f\\) the morphism of Frobenius. So \\(\\sum (-1)^i \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(X)\\right)\\) is the number of fixed points of \\(f\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We can replace \\(X\\) by \\(X_\\text{red}\\), so assume \\(X\\) reduced. Either \\(U\\) the opening of \\(X\\) where \\(X\\) is smooth in size \\(1\\), and \\(\\overline{U}\\) the projective and smooth completion of \\(U\\). The exact long cohomology suites for \\((X,U)\\) and \\((\\overline{U},U)\\) give</p>"
+    },
+    {
+     "id": "disp-IV:3-7",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:3-7\">\n\\[\n\\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(X)\\right) = \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(U)\\right) + \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(X\\setminus U)\\right)\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": "disp-IV:3-8",
+     "type": "displaymath",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"displaymath\" id=\"disp-IV:3-8\">\n\\[\n\\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(\\overline{U})\\right) = \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(U)\\right) + \\operatorname{tr}\\left(f^\\ast,\\underline{\\operatorname{H}}_c^\\bullet(\\overline{U}\\setminus U)\\right) \\text{.}\n\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The same formula applies to fixed point numbers. \n<a class=\"ref\" href=\"#IV:3-8\">3.8</a> being clear for a dimension diagram \\(0\\), this brings to prove <a class=\"ref\" href=\"#IV:3-8\">3.8</a> for \\(\\overline{U}\\). This case is justiciable from <a class=\"ref\" href=\"#IV:3-7\">3.7</a>. The fact that \\(d f=0\\) ensures that fixed points are all multiplicity one.</p>"
+    },
+    {
+     "id": "IV:3-9",
+     "type": "heading",
+     "label": "3.9",
+     "title": null,
+     "html": "<h3 id=\"IV:3-9\">3.9. Note</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(X\\) of dimension \\(\\leqslant 1\\) on \\(k\\) algebraically closed, and \\(f:X\\mathchoice{\\longrightarrow}{\\rightarrow}{\\rightarrow}{\\rightarrow} X\\) such as \\(d f=0\\), it is not difficult to verify that \n<a class=\"ref\" href=\"#IV:3-8\">3.8</a> is still valid.</p>"
+    }
+   ],
+   "footnotes": [],
+   "bibliography": []
+  }
+ ]
+}

@@ -1,0 +1,2382 @@
+{
+ "chapter_id": "10",
+ "title": "INTERSECTIONS SUR LES SURFACES RÉGULIÈRES",
+ "number": "X",
+ "pages": [
+  {
+   "id": "10",
+   "title": "INTERSECTIONS SUR LES SURFACES RÉGULIÈRES",
+   "blocks": [
+    {
+     "id": "10",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"10\">EXPOSÉ X<br><u>INTERSECTIONS SUR LES SURFACES RÉGULIÈRES</u><span class=\"author\"><u>par P. Deligne</u></span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la première partie de cet exposé, après quelques préliminaires de théorie des\nintersections (contenus dans [5] ∪ [7]), on donne la démonstration d'après Artin d'un cas\nparticulier d'un théorème de Raynaud [9] (1.13), et une démonstration a priori d'un théorème\nque Néron [8] vérifiait cas par cas (1.15). De (1.13) résultent assez aisément les théorèmes\nde [9] utilisés dans [2] et par là dans IX.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la seconde partie, je poursuis sur ma lancée et raconte comment les \"italiens\" [1],\n[3] calculaient les nombres d'intersections, sur les surfaces. Les résultats principaux 2.9\net 2.11 se trouvent par ailleurs dans Northcott [12] et [13]. Pour terminer, je donne en\n2.27, 2.30, 2.34 une relation conjecturale entre la dimension du schéma formel versel des\nmodules d'une singularité d'une courbe réduite, l'invariant \\(\\delta\\) de la singularité et\nun invariant mesurant sa symétrie.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cet exposé ne sera pas utilisé dans la suite du séminaire.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "10-1",
+   "title": "1. Nombres d'intersection sur les surfaces arithmétiques",
+   "blocks": [
+    {
+     "id": "10.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"10.1\">1. <u>Nombres d'intersection sur les surfaces arithmétiques</u></h2>"
+    },
+    {
+     "id": "10.1.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.1.0\"><strong>1.0.</strong> On suppose donné dans ce § un schéma régulier \\(X\\) de\ndimension 2, un diviseur réduit \\(Y\\) de \\(X\\), et un sous-corps \\(k\\) de\n\\(H^0(Y,\\mathcal O_Y)\\). On suppose que \\(Y\\) est une courbe (EGA II 7.4.1) propre sur\n\\(k\\). Voici trois exemples de cette situation.</p>"
+    },
+    {
+     "id": "10.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.1.1\"><strong><u>Exemple 1.1.</u></strong> Soit \\((S,\\eta,s)\\) un trait et \\(X\\) un\n\\(S\\)-schéma \\(f:X\\longrightarrow S\\), régulier, propre et plat sur \\(S\\), à fibres purement\nde dimension un. On prend \\(Y=(f^{-1}(s))_{\\mathrm{red}}\\) et \\(k=k(s)\\). On se restreindra\nà ce cas à partir de 1.10.</p>"
+    },
+    {
+     "id": "10.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.1.2\"><strong><u>Exemple 1.2.</u></strong> Soient \\(X_0\\) le spectre d'un anneau local\nnormal de dimension 2, \\(s\\) le point fermé de \\(X_0\\) et \\(f:X\\longrightarrow X_0\\) un\n\\(X_0\\)-schéma régulier et connexe, propre sur \\(X_0\\), distinct de \\(X_0\\) mais coïncidant\navec \\(X_0\\) au-dessus de \\(X_0-\\{s\\}\\). On prend \\(Y=(f^{-1}(s))_{\\mathrm{red}}\\) et\n\\(k=k(s)\\).</p>"
+    },
+    {
+     "id": "10.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.1.3\"><strong><u>Exemple 1.3.</u></strong> On prend pour \\(X\\) une surface régulière\ncomplète sur un corps \\(k\\) et pour \\(Y\\) une courbe réduite tracée sur \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons le lemme suivant (SGA 6 IV ex. 1.9).</p>"
+    },
+    {
+     "id": "10.1.4",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 1.4.",
+     "html": "<div class=\"thm lemma\" id=\"10.1.4\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 1.4.</u></span></div>\n<div class=\"thm-body\"><p><u>Soit \\(Z_0\\) un sous-schéma fermé d'un schéma noethérien \\(Z\\).\nAlors, l'inclusion de \\(Z_0\\) dans \\(Z\\) induit un isomorphisme du groupe de Grothendieck de\nla catégorie des faisceaux cohérents de \\(\\mathcal O_{Z_0}\\)-modules dans le groupe de\nGrothendieck de la catégorie des faisceaux cohérents sur \\(Z\\) à support dans \\(Z_0\\).</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce lemme permet de définir la caractéristique d'Euler-Poincaré \\(\\chi(\\mathcal F)\\) d'un\nfaisceau cohérent \\(\\mathcal F\\) sur \\(X\\) à support dans \\(Y\\), de façon à ce que,</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> Si \\(\\mathcal F\\) est un faisceau cohérent de\n\\(\\mathcal O_Y\\)-modules, alors\n\\[\\chi(\\mathcal F)=\\dim_k H^0(\\mathcal F)-\\dim_k H^1(\\mathcal F)\\tag{1.4.1}\\]</li>\n<li><span class=\"item-label\">(ii)</span> \\(\\chi\\) est additif relativement aux suites exactes\ncourtes.</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si les faisceaux de cohomologie d'un complexe \\(K\\) de \\(\\mathcal O_X\\)-modules sont des\nfaisceaux cohérents à support dans \\(Y\\), on pose\n\\[\\chi(K)=\\sum_i(-1)^i\\chi(\\underline H^i(K)).\\tag{1.4.2}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\mathcal F\\) est localisé en un point \\(y\\) de \\(Y\\), on a\n\\[\\chi(\\mathcal F)=\\lg_{\\mathcal O_y}(\\mathcal F_y)\\cdot[k(y):k].\\tag{1.4.3}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sous les hypothèses (1.1), (1.2) ou (1.3), on a\n\\[\\chi(\\mathcal F)=\\lg f_*\\mathcal F-\\lg R^1f_*\\mathcal F.\\tag{1.4.4}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(D\\) un diviseur \\(\\geq0\\) concentré sur \\(Y\\), et \\(\\mathcal L\\) un faisceau\ninversible sur \\(D\\). Il y a alors une et une seule façon de définir le degré\n\\(\\deg_D(\\mathcal L)\\) de sorte que\n\\[\\begin{cases}\n\\deg_D(\\mathcal L'\\otimes\\mathcal L'')=\\deg_D(\\mathcal L')+\\deg_D(\\mathcal L''),\\\\\n\\text{pour }\\mathcal L\\subseteq\\mathcal O,\\quad \\deg_D(\\mathcal L)=-\\chi(\\mathcal O/\\mathcal L).\n\\end{cases}\\tag{1.4.5}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a alors la formule de Riemann-Roch sur \\(D\\)\n\\[\\chi(\\mathcal L)=\\chi(\\mathcal O_D)+\\deg_D(\\mathcal L).\\tag{1.4.6}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(D=\\sum n_iD_i\\) la décomposition de \\(D\\) en diviseurs irréductibles réduits ; on a\n\\[\\deg_D(\\mathcal L)=\\sum n_i\\deg_{D_i}(\\mathcal L).\\tag{1.4.7}\\]</p>"
+    },
+    {
+     "id": "10.1.5",
+     "type": "definition",
+     "label": null,
+     "title": "Définition 1.5.",
+     "html": "<div class=\"thm definition\" id=\"10.1.5\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Définition 1.5.</u></span></div>\n<div class=\"thm-body\"><p><u>Soient \\(D\\) et \\(E\\) deux diviseurs \\(\\geq0\\) sur \\(X\\), et\nsupposons \\(D\\) concentré sur \\(Y\\). On définit le nombre d'intersection de \\(D\\) et \\(E\\)\n(relativement au corps \\(k\\) (1.0)) par :</u>\n\\[(D,E)=\\chi(\\mathcal O_D\\mathbin{\\mathop\\otimes^{\\mathbf L}}\\mathcal O_E)\n=\\chi(\\mathcal O_D\\otimes\\mathcal O_E)-\n\\chi(\\operatorname{Tor}^1(\\mathcal O_D,\\mathcal O_E)).\\]</p>\n<p>Sous les hypothèses faites, on a en effet\n\\(\\operatorname{Tor}^2(\\mathcal O_D,\\mathcal O_E)=0\\).</p></div>\n</div>"
+    },
+    {
+     "id": "10.1.6",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 1.6.",
+     "html": "<div class=\"thm proposition\" id=\"10.1.6\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 1.6.</u></span> <u>Sous les\nhypothèses 1.5, on a :</u></div>\n<div class=\"thm-body\">\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>Le nombre d'intersection \\((D,E)\\) est additif en les\ndiviseurs \\(D\\) et \\(E\\) ; ceci permet, par linéarité, de définir le nombre d'intersection de\ndeux diviseurs non nécessairement positifs.</u></li>\n<li><span class=\"item-label\">(ii)</span> \\((D,E)=\\deg_D(\\mathcal O(E))\\).</li>\n<li><span class=\"item-label\">(iii)</span> <u>Si \\(D\\) et \\(E\\) ne se coupent qu'en un nombre\nfini de points, alors</u> \\((D,E)=\\chi(\\mathcal O_D\\otimes\\mathcal O_E)\\geq0\\), <u>l'égalité\nne pouvant avoir lieu que si \\(D\\) et \\(E\\) sont disjoints.</u></li>\n<li><span class=\"item-label\">(iv)</span> <u>Si \\(D\\) et \\(E\\) sont concentrés sur \\(Y\\), alors\n\\((D,E)=(E,D)\\).</u></li>\n<li><span class=\"item-label\">\\(v\\)</span> <u>Si \\(N\\) est le faisceau conormal à \\(D\\), alors</u>\n\\[(D)^2=(D,D)=-\\deg_D(N).\\]</li>\n<li><span class=\"item-label\">(vi)</span> <u>Si \\(E\\), non nécessairement positif, est le\ndiviseur d'une fonction méromorphe sur \\(X\\), alors \\((D,E)=0\\).</u></li>\n</ol>\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Preuve.</u> Soit la suite exacte\n\\[0\\longrightarrow\\mathcal O(-E)\\longrightarrow\\mathcal O_X\n\\longrightarrow\\mathcal O_E\\longrightarrow0,\\]\nelle fournit, par (1.4.5),\n\\[\\begin{aligned}\n(D,E)&amp;\\mathrel{\\mathop=^{\\mathrm{dfn}}}\n\\chi(\\mathcal O_D\\mathbin{\\mathop\\otimes^{\\mathbf L}}\\mathcal O_E)\\\\\n&amp;=\\chi(\\mathcal O_D\\mathbin{\\mathop\\otimes^{\\mathbf L}}\\mathcal O_X)\n-\\chi(\\mathcal O_D\\mathbin{\\mathop\\otimes^{\\mathbf L}}\\mathcal O(-E))\\\\\n&amp;=\\chi(\\mathcal O_D)-\\chi(\\mathcal O(-E)|D)\n=-\\deg_D(\\mathcal O(-E))=\\deg_D(\\mathcal O(E)).\n\\end{aligned}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci prouve (ii), (vi) et la biadditivité en vertu de (1.4.5) et (1.4.7). Sous les\nhypothèses (iii), on a \\(\\operatorname{Tor}^1(\\mathcal O_D,\\mathcal O_E)=0\\), d'où la\nconclusion. Sous les hypothèses \\(v\\), on a\n\\[\\mathcal O_D\\otimes\\mathcal O_D=\\mathcal O_D\\quad\\text{et}\\quad\n\\operatorname{Tor}^1(\\mathcal O_D,\\mathcal O_D)\\simeq N\\quad\\text{(SGA 6 VII 2.5)},\\]\nd'où\n\\[(D,D)=\\chi(\\mathcal O_D)-\\chi(N)=-\\deg_D(N).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, (iv) résulte de la symétrie du produit tensoriel.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On notera que (ii), (iv) et (vi) restent vrais sans supposer les diviseurs positifs.</p>"
+    },
+    {
+     "id": "10.1.7",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 1.7.",
+     "html": "<div class=\"thm proposition\" id=\"10.1.7\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 1.7.</u></span></div>\n<div class=\"thm-body\"><p><u>Soient \\((Y_i)_{1\\leq i\\leq k}\\) les composantes irréductibles\nde \\(Y\\), \\(f\\) une fonction méromorphe sur \\(X\\), et</u>\n\\[\\operatorname{div}(f)=\\sum_i n_iY_i+Z\\]\n<u>son diviseur, avec \\(|Z|\\cap Y\\) fini. Alors, posant \\(D_i=n_iY_i\\), on a, pour\n\\((a_i)\\in\\mathbb Q^k\\) :</u>\n\\[\\left(\\sum_i a_iD_i\\right)^2\n=-\\sum_{i&lt;j}(a_i-a_j)^2(D_i,D_j)-\\sum_i a_i^2(D_i,Z).\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Preuve (d'après [7]).</u> En vertu de 1.6 \\(v\\) (vi), on a\n\\[\\begin{aligned}\n\\left(\\sum_i a_iD_i\\right)^2\n&amp;=\\sum_i a_i\\left(D_i,\\sum_j a_jD_j\\right)\n=\\sum_i a_i\\left(D_i,\\sum_j a_jD_j-a_i\\operatorname{div}f\\right)\\\\\n&amp;=\\sum_i a_i\\left(D_i,\\sum_{j\\ne i}(a_j-a_i)D_j-a_iZ\\right)\\\\\n&amp;=\\sum_{i\\ne j}a_i(a_j-a_i)(D_i,D_j)-\\sum_i a_i^2(D_i,Z)\\\\\n&amp;=-\\sum_{i&lt;j}(a_i-a_j)^2(D_i,D_j)-\\sum_i a_i^2(D_i,Z).\n\\end{aligned}\\]</p>"
+    },
+    {
+     "id": "10.1.8",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 1.8.",
+     "html": "<div class=\"thm corollary\" id=\"10.1.8\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 1.8.</u></span></div>\n<div class=\"thm-body\"><p><u>Sous les hypothèses de l'exemple 1.1, prenons pour \\(f\\) une\nuniformisante \\(\\pi\\) de \\(S\\). Ici, \\(Z=0\\) et</u>\n\\[\\left(\\sum_i k_iY_i\\right)^2\n=-\\sum_{i&lt;j}\\frac1{n_in_j}(k_in_j-k_jn_i)^2(Y_i,Y_j)\\ ;\\]\n<u>donc la forme d'intersection est négative, et si \\(Y\\) est connexe, son noyau est réduit\naux multiples de \\(\\operatorname{div}(\\pi)\\).</u></p></div>\n</div>"
+    },
+    {
+     "id": "10.1.9",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 1.9.",
+     "html": "<div class=\"thm corollary\" id=\"10.1.9\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 1.9.</u></span> (Mumford [7]).</div>\n<div class=\"thm-body\"><p><u>Sous les hypothèses de l'exemple 1.2, prenons pour \\(f\\) un élément\nnon nul de l'idéal maximal de l'anneau local \\(\\mathcal O_s\\). Ici, \\(Z&gt;0\\), de sorte que la\nforme d'intersection est définie négative.</u></p></div>\n</div>"
+    },
+    {
+     "id": "10.1.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.1.10\"><strong>1.10.</strong> <u>On se restreint, pour la suite, au cas considéré dans l'exemple (1.1).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lichtenbaum [5] a prouvé que, dans ce cas, \\(X\\) est automatiquement projectif sur \\(S\\),\nde sorte qu'il n'est pas fatigant de définir le complexe \\(Rf^!\\mathcal O_S\\) ([4] III 8.7 p. 190).\nPuisque \\(f\\) est de dimension relative 1 et que \\(X\\) et \\(S\\) sont réguliers (Gorenstein\nsuffirait) il existe ([4] V 8.3 et V 9.1) <strong>un faisceau</strong> inversible\n\\(\\omega_{X/S}\\) sur \\(S\\), unique à isomorphisme unique près, tel que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(1.10.1)\\qquad Rf^!\\mathcal O_S\\mathrel{\\sim}\\omega_{X/S}[1].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On désigne par \\(K\\) un quelconque diviseur (effectif ou non) tel que\n\\(\\omega\\mathrel{\\sim}\\mathcal O(K)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(D\\) un diviseur \\(\\geq0\\) concentré sur \\(Y\\) et \\(N\\) son faisceau conormal :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccc}\nD&amp;\\xrightarrow{\\ i\\ }&amp;X\\\\[-2pt]\n&amp;\\searrow\\scriptstyle g&amp;\\downarrow\\scriptstyle f\\\\[-2pt]\n&amp;&amp;S\n\\end{array}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(1.10.2)\\qquad Rg^!\\mathcal O_S=Ri^!Rf^!\\mathcal O_S\n=Ri^!\\omega_{X/S}[1]=\\omega_{X/S}|D\\otimes N^\\vee[0].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu du théorème de dualité ([4] V 11.1 p. 210),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(1.10.3)\\qquad Rg_*Rg^!\\mathcal O_S\\mathrel{\\sim}\nR\\operatorname{Hom}(Rg_*\\mathcal O_D,\\mathcal O_S).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De plus, pour tout \\(\\mathcal O_S\\)-module \\(M\\) concentré au point fermé, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(1.10.4)\\qquad \\chi(R\\operatorname{Hom}(M,\\mathcal O_S))=-\\chi(M)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu'ici, utilisant (1.4.4) et (1.10.3), on obtient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\chi(Rg^!\\mathcal O_S)=-\\chi(\\mathcal O_D).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque (1.4.6)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\chi(Rg^!\\mathcal O_S)=\\chi(\\mathcal O_D)+\\deg_D(Rg^!\\mathcal O_S),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on en conclut par (1.10.2) que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[-2\\chi(\\mathcal O_D)=\\deg_D(Rg^!\\mathcal O_S)\n=\\deg_D(\\omega|D\\otimes N^\\vee)=\\deg_D(\\omega)-\\deg_D(N),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui, par 1.6 (ii) et \\(v\\) se réécrit</p>"
+    },
+    {
+     "id": "10.1.11",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 1.11.",
+     "html": "<div class=\"thm proposition\" id=\"10.1.11\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 1.11.</u></span> <u>Sous les hypothèses (1.1), quelque soit le diviseur \\(D\\geq0\\)\nconcentré sur \\(Y\\), on a</u></div>\n<div class=\"thm-body\">\n\\[\\chi(\\mathcal O_D)=-\\frac12(D,D+K).\\]\n</div>\n</div>"
+    },
+    {
+     "id": "10.1.12",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.1.12\"><strong>1.12.</strong> On désignera par \\(d\\) le pgcd des multiplicités géométriques des composantes\nirréductibles de \\(X_s=f^{-1}(s)\\), i.e. le pgcd des longueurs des anneaux locaux des points\nmaximaux de la fibre spéciale géométrique de \\(f\\). Si \\(X_\\eta\\) a un point rationnel,\ni.e. si \\(f:X\\longrightarrow S\\) a une section \\(x\\), alors \\(d=1\\) ; plus précisément \\(f\\)\nest lisse en \\(x(s)\\). En effet, \\(x\\) est une immersion fermée de schémas réguliers, donc est\nune immersion régulière et on applique EGA IV 17.12.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Voici la démonstration, d'après M. Artin, d'un cas particulier d'un théorème de M. Raynaud\n[9], qui suppose seulement \\(d\\) premier à la caractéristique \\(p\\) de \\(k\\).</p>"
+    },
+    {
+     "id": "10.1.13",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 1.13.",
+     "html": "<div class=\"thm theorem\" id=\"10.1.13\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 1.13.</u></span> <u>Avec les notations précédentes, si \\(Y\\) est géométriquement\nconnexe et si \\(d=1\\), alors \\(X\\) est cohomologiquement plat sur \\(S\\) en dimension 0\n(EGA III 7.8.1), plus précisément (EGA III 7.6.9 (ii)) on a</u></div>\n<div class=\"thm-body\">\n\\[k\\mathrel{\\sim}\\longrightarrow H^0(X_s,\\mathcal O_{X_s}).\\]\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On se ramène aisément au cas où \\(S\\) est strictement local. Comme \\(Y\\) est\ngéométriquement connexe, \\(H^0(Y,\\mathcal O_Y)\\) est une extension radicielle de \\(k\\), et\npuisque \\((d,p)=1\\), une au moins des composantes irréductibles de \\(Y\\) est géométriquement\nréduite, et on en déduit facilement que \\(H^0(Y,\\mathcal O_Y)=k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(D\\) un diviseur sur \\(X\\) tel que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[Y\\leq D&lt;X_s.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(d=1\\), \\(D\\) n'est pas multiple rationnel de \\(X_s\\), donc par 1.8</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(D,X_s-D)=-(D,D)&gt;0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le diviseur \\(Y\\) a donc une composante irréductible \\(E\\) telle que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0&lt;E\\leq X_s-D\\quad\\text{et}\\quad(D,E)&gt;0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons le diagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccccccccc}\n0&amp;\\longrightarrow&amp;\\mathcal O(-D-E)&amp;\\longrightarrow&amp;\\mathcal O&amp;\\longrightarrow&amp;\\mathcal O_{D+E}&amp;\\longrightarrow&amp;0\\\\\n&amp;&amp;\\downarrow\\scriptstyle\\varphi&amp;&amp;\\Vert&amp;&amp;\\downarrow\\scriptstyle\\psi\\\\\n0&amp;\\longrightarrow&amp;\\mathcal O(-D)&amp;\\longrightarrow&amp;\\mathcal O&amp;\\longrightarrow&amp;\\mathcal O_D&amp;\\longrightarrow&amp;0,\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le diagramme du serpent fournit un isomorphisme entre \\(\\operatorname{Ker}(\\psi)\\) et\n\\(\\operatorname{Coker}(\\varphi)\\). Ce conoyau n'est autre que la restriction de\n\\(\\mathcal O(-D)\\) à \\(E\\), d'où une suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow\\mathcal O(-D)|E\\longrightarrow\\mathcal O_{D+E}\n\\longrightarrow\\mathcal O_D\\longrightarrow0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par construction \\(\\deg_E(\\mathcal O(-D))=-(D,E)&lt;0\\), donc\n\\(H^0(\\mathcal O(-D)|E)=0\\), et la flèche de restriction</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow H^0(\\mathcal O_{D+E})\\longrightarrow H^0(\\mathcal O_D)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est injective. Ceci permet de construire par récurrence une suite de diviseurs</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[Y=D_0\\leq D_1\\leq\\cdots\\leq D_n=X_s\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>telle que \\(H^0(\\mathcal O_{D_i})\\) s'injecte dans \\(H^0(\\mathcal O_{D_{i-1}})\\), donc\n\\(H^0(\\mathcal O_{X_s})=H^0(\\mathcal O_Y)=k\\), ce qui achève la démonstration de 1.13.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le fait suivant est prouvé dans [5] ou [10].</p>"
+    },
+    {
+     "id": "10.1.14",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 1.14.",
+     "html": "<div class=\"thm theorem\" id=\"10.1.14\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 1.14.</u></span> (Castelnuovo, Enriques,....). <u>Sous les hypothèses (1.1),\nsoit \\(D\\) un diviseur réduit irréductible contenu dans \\(Y\\). Supposons que\n\\(H^1(D,\\mathcal O_D)=0\\) et que, posant \\(k'=H^0(D,\\mathcal O_D)\\), on ait</u></div>\n<div class=\"thm-body\">\n\\[(D,D)=-[k':k].\\]\n<p><u>Alors, \\(D\\) est une droite projective sur \\(k'\\) et il existe un \\(S\\)-schéma régulier\n\\(X_1\\), un point fermé \\(x_1\\) de \\(X_1\\) de corps résiduel \\(k'\\) et un isomorphisme entre\n\\(X\\) et le \\(S\\)-schéma déduit de \\(X_1\\) par éclatement de \\(x_1\\), cet isomorphisme\nidentifiant \\(D\\) à la fibre de \\(x_1\\) dans \\(X_1\\).</u></p>\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On appelle un diviseur \\(D\\) possédant ces propriétés une <u>courbe exceptionnelle de\npremière espèce</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Je ne résiste pas au plaisir de démontrer la proposition suivante de Néron [8] prop 1'\np. 90 :</p>"
+    },
+    {
+     "id": "10.1.15",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 1.15.",
+     "html": "<div class=\"thm proposition\" id=\"10.1.15\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 1.15.</u></span> <u>Supposons que \\(X_\\eta\\) soit une courbe elliptique (en particulier\nait une section) et que \\(X\\) ne contienne aucune courbe exceptionnelle de première espèce.\nAlors, avec la notation (1.10.1), on a</u></div>\n<div class=\"thm-body\">\n\\[f^*f_*\\omega_{X/S}\\mathrel{\\sim}\\longrightarrow\\omega_{X/S}\\]\n<p><u>universellement.</u></p>\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(d=1\\) (1.12), il suffit, d'après (1.13), de prouver que \\(\\omega_{X/S}\\) est\nisomorphe à \\(\\mathcal O_X\\) ; puisque \\(\\omega_{X/S}\\) est trivial sur la courbe elliptique\n\\(X_\\eta\\), on sait a priori que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\omega_{X/S}\\mathrel{\\sim}\\mathcal O\\left(\\sum n_iY_i\\right),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où les \\(Y_i\\) sont les composantes irréductibles de \\(Y\\), et puisque\n\\(\\operatorname{div}(\\pi)\\sim0\\), on peut supposer les \\(n_i\\) positifs. Si\n\\(\\sum n_iY_i\\) est proportionnel au diviseur \\(\\operatorname{div}(\\pi)\\), il est multiple\nentier de \\(\\operatorname{div}(\\pi)\\) et on a gagné. Sinon, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\left(\\sum n_iY_i\\right)^2&lt;0,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>il existe \\(i\\) tel que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\left(Y_i,\\sum n_jY_j\\right)&lt;0,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on applique le lemme suivant :</p>"
+    },
+    {
+     "id": "10.1.16",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 1.16.",
+     "html": "<div class=\"thm lemma\" id=\"10.1.16\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 1.16.</u></span> <u>Sous les hypothèses 1.1, supposons que \\(Y\\) soit connexe et que \\(Y\\)\nsoit réductible, ou que \\(\\chi(\\mathcal O_Y)\\leq0\\). Alors, pour qu'une composante irréductible\n\\(Y_i\\) de \\(Y\\) soit une courbe exceptionnelle de première espèce, il faut et il suffit que\n\\((Y_i,K)&lt;0\\).</u></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(k'=H^0(Y_i,\\mathcal O_{Y_i})\\). La formule de Riemann-Roch 1.11 fournit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\chi(\\mathcal O_{Y_i})=[k':k]\\left(1-\\dim_{k'}H^1(Y_i,\\mathcal O_{Y_i})\\right)\n=-\\frac12\\left((Y_i,Y_i)+(Y_i,K)\\right).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(Y_i\\) est exceptionnelle de première espèce, on a donc\n\\((Y_i,K)=-[k':k]&lt;0\\). Réciproquement, si \\((Y_i,K)&lt;0\\), alors\n\\(\\chi(\\mathcal O_{Y_i})&gt;0\\), ce qui implique que\n\\(\\chi(\\mathcal O_{Y_i})=[k':k]\\) et que \\(Y\\) soit réductible, de sorte que par 1.8,\n\\((Y_i,Y_i)&lt;0\\). Les nombres négatifs \\((Y_i,Y_i)\\) et \\((Y_i,K)\\) sont divisibles par\n\\([k':k]\\), de sorte qu'on doit avoir</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(Y_i,Y_i)=(Y_i,K)=-[k':k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Exercice \\(a\\).</u> Sous les hypothèses (1.1), on suppose que \\(X_\\eta\\) est un espace\nprincipal homogène sous une courbe elliptique et que \\(X\\) ne contienne aucune courbe\nexceptionnelle de première espèce. Montrer que sur \\(X\\), la formule de Riemann-Roch (1.11)\ns'écrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\chi(\\mathcal O_D)=-\\frac12(D,D)\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Exercice \\(b\\).</u> Supposons en outre le corps résiduel \\(k(s)\\) algébriquement clos. Montrer\nque le diagramme des composantes irréductibles de \\(X_s\\) est multiple de l'un\ndes diagrammes considérés par Néron [8] p. 124–125, 4è colonne (cas a à c 8).\nCe diagramme détermine les genres des composantes irréductibles réduites,\nleur multiplicité dans \\(X_s\\), la nature et la disposition des singularités de\n\\((X_s)_{\\mathrm{red}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On traitera d'abord le cas où \\(X_s\\) est irréductible ; ce cas exclus,\non prouvera que toute composante irréductible réduite est une droite projective\nde self-intersection \\(-2\\). Si \\(X_s=\\sum n_iD_i\\) est la décomposition de\n\\(X_s\\) en diviseurs irréductibles réduits, on réécrira cette condition</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(*)\\qquad n_i=\\frac12\\sum_{j\\ne i}n_j(D_i,D_j).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part, \\(X_s\\) est connexe, de sorte que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((**)\\) Quels que soient \\(i\\) et \\(j\\), il existe une chaîne\n\\(i=i_1,i_2,\\ldots,i_n=j\\) avec \\((D_{i_k},D_{i_{k+1}})\\ne0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On cherchera alors toutes les solutions en nombres entiers de\n\\((*)+(**)\\). On montrera d'abord que, sauf dans les cas b2 et c2 de Néron,\nles nombres d'intersection \\((D_i,D_j)\\) sont égaux à zéro ou un.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "10-2",
+   "title": "2. Intersections italiennes",
+   "blocks": [
+    {
+     "id": "10.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"10.2\"><u>2. Intersections italiennes</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(S'\\) et \\(S\\) deux surfaces projectives lisses sur un corps \\(k\\)\net \\(f:S'\\longrightarrow S\\) un morphisme birationnel. Si \\(D\\) et \\(E\\) sont deux diviseurs\nsur \\(S\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(D,E)=(f^*D,f^*E),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>comme on le voit, par exemple, en faisant bouger \\(D\\) et \\(E\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il s'impose donc de donner une expression « birationnelle » pour\nle nombre d'intersection. On se propose d'expliquer comment procédaient\nles italiens pour ce faire. Ma principale source de renseignements est [1]\noù se trouve une longue bibliographie. Voir aussi Manin [6], et Northcott [12], [13].</p>"
+    },
+    {
+     "id": "10.2.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.0\">(2.0) Soient \\(S\\) le spectre d'un anneau local régulier de dimension 2, \\(s\\) le point\nfermé de \\(S\\) et \\(k\\) un sous-corps de \\(k(s)\\) dont \\(k(s)\\) soit une extension finie. Les\nnombres d'intersections et les caractéristiques d'Euler-Poincaré seront calculés en terme de \\(k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce §, un \\(S\\)-schéma \\(p:S'\\longrightarrow S\\) sera dit être un <u>transformé\nbirationnel</u> de \\(S\\) s'il est régulier, connexe, et si \\(p\\) est propre et induit\nun isomorphisme de \\(S'\\setminus p^{-1}(s)\\) sur \\(S\\setminus\\{s\\}\\). Tout ce qui sera dit de \\(S\\)\ns'appliquera encore aux localisés de ses transformés birationnels en un point fermé.</p>"
+    },
+    {
+     "id": "10.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.1\">(2.1) Soit \\(f:(S'',p'')\\longrightarrow(S',p')\\) un morphisme de \\(S\\)-schémas entre transformés\nbirationnels de \\(S\\). On sait alors [5] qu'il existe une et une seule factorisation de \\(f\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f=f_n\\cdots f_1,\\qquad f_i:S_{i+1}\\longrightarrow S_i\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>telle que \\(S_{i+1}\\) se déduise de \\(S_i\\) par éclatement d'un ensemble fini \\(X_i\\) de points fermés, et que\n\\(f_i(X_{i+1})\\subset X_i\\). L'ensemble \\(X_i\\) est l'ensemble des points de \\(S_i\\) en lesquels la projection de\n\\(S''\\) sur \\(S_i\\) n'est pas un isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, \\(f\\) induit un isomorphisme au-dessus du complémentaire d'une partie finie de \\(S'\\), qui contient\nles points génériques des composantes irréductibles de \\(p'^{-1}(s)\\). Dès lors, \\(f\\) définit une injection\nde l'ensemble \\(\\operatorname{Irr}(p'^{-1}(s))\\) des composantes irréductibles de \\(p'^{-1}(s)\\) dans\n\\(\\operatorname{Irr}(p''^{-1}(s))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les transformés birationnels de \\(S\\) n'ont pas de \\(S\\)-automorphisme.\nOn désignera ici par \\(I\\) l'ensemble des classes de \\(S\\)-isomorphie des transformés\nbirationnels de \\(S\\), ordonné par la relation de domination. L'ensemble \\(I\\)\nest filtrant à droite, et de plus petit élément \\(S\\).</p>"
+    },
+    {
+     "id": "10.2.2",
+     "type": "definition",
+     "label": null,
+     "title": "Définition 2.2.",
+     "html": "<div class=\"thm definition\" id=\"10.2.2\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Définition 2.2.</u></span> <u>L'ensemble \\(S^*\\) des points de \\(S\\) infiniment voisins de \\(s\\) est\nl'ensemble limite inductive</u></div>\n<div class=\"thm-body\">\\[S^*=\\varinjlim_I\\operatorname{Irr}(p^{-1}(s)).\\]</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si un élément \\(t\\in S^*\\) est représenté sur un transformé birationnel\n\\(S'\\) de \\(S\\) par une courbe complète réduite irréductible \\(T\\), le corps\n\\(H^0(T,\\mathcal O_T)\\) ne dépend que de \\(t\\), et non du choix de \\(S'\\) ; on l'appelle le <u>corps résiduel</u>\n\\(k(t)\\) de \\(t\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(S_1\\) l'éclaté de \\(S\\) le long de \\(s\\). La droite projective \\(s^*\\)\nimage réciproque de \\(\\{s\\}\\) dans \\(S_1\\) s'appelle la <u>curvetta</u> de \\(s\\) et définit un\nélément \\(s^*\\) de \\(S^*\\) de corps résiduel \\(k(s)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(S'\\) un transformé birationnel de \\(S\\), \\(t\\) un point fermé de\n\\(S'\\) et \\(S'_t\\) le spectre de l'anneau local de \\(S'\\) en \\(t\\). On définit de façon évidente\nune injection de \\(S_t'^*\\) dans \\(S^*\\) ; en particulier, \\(t\\) définit un élément\n\\(t^*\\) de \\(S^*\\), de même corps résiduel. On désigne par \\(S'^{**}\\) la réunion dans \\(S^*\\)\ndes \\(S_t'^*\\) pour \\(t\\) fermé dans \\(S'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition suivante résulte de la description 2.1 des transformés birationnels de \\(S\\) :</p>"
+    },
+    {
+     "id": "10.2.3",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 2.3.",
+     "html": "<div class=\"thm proposition\" id=\"10.2.3\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 2.3.</u></span> <u>Quel que soit \\(t\\in S^*\\), il existe une et une seule suite\nde transformés birationnels de \\(S\\), \\((S_i)_{0\\leq i\\leq n+1}\\), et de points fermés\n\\(t_i\\in S_i\\), \\((0\\leq i\\leq n)\\), telle que</u></div>\n<div class=\"thm-body\">\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>\\(S_0=S\\), et \\(S_{i+1}\\) est l'éclaté de \\(S_i\\) le long de \\([t_i]\\) ;</u></li>\n<li><span class=\"item-label\">(ii)</span> <u>\\(t_{i+1}\\in t_i^*\\), \\((0\\leq i&lt;n)\\), et \\(t=t_n^*\\).</u></li>\n</ol>\n<p><u>De plus, quel que soit le transformé birationnel \\((S',p')\\) de \\(S\\),\npour que \\(t\\) appartienne à l'image de \\(\\operatorname{Irr}(p'^{-1}(s))\\) dans \\(S^*\\), il faut et il\nsuffit que \\(S'\\) domine \\(S_{n+1}\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On appelle \\(n\\) l'ordre de \\(t\\). On désignera ici par \\(S(t)\\) (resp. par\n\\(S_+(t)\\)) le transformé birationnel \\(S_n\\) (resp. \\(S_{n+1}\\)) de \\(S\\). Par abus de notation, on désignera encore par \\(t\\) le point fermé \\(t_n\\) de \\(S_n\\) et par \\(t^*\\) son image réciproque \\(t_n^*\\) dans \\(S_{n+1}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On munit \\(S^*\\) de l'ordre suivant :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[t_1\\prec t_2\\quad\\Longleftrightarrow\\quad S_+(t_2)\\text{ domine }S_+(t_1).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(t_1\\prec t_2\\), alors \\(k(t_2)\\) est une extension de \\(k(t_1)\\). L'ensemble ordonné \\(S^*\\)\na pour plus petit élément \\(s^*\\), et toute partie majorée de \\(S^*\\) est finie et\ntotalement ordonnée (\\(S^*\\) est un « arbre de souche \\(s^*\\) »). De plus, l'ordre \\(n\\) de \\(t\\in S^*\\)\nest la distance, dans l'arbre \\(S^*\\), de \\(s^*\\) à \\(t\\) (\\(n=\\# [s^*,t[\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition suivante explicite la description 2.1 des transformés birationnels de \\(S\\).</p>"
+    },
+    {
+     "id": "10.2.4",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 2.4.",
+     "html": "<div class=\"thm proposition\" id=\"10.2.4\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 2.4.</u></span> <u>La fonction qui à un transformé birationnel \\(p:S'\\longrightarrow S\\)\nde \\(S\\) associe la partie \\(\\operatorname{Irr}(p^{-1}(s))\\) de \\(S^*\\) induit une bijection entre l'ensemble\n\\(I\\) (2.1) et l'ensemble des parties finies de \\(S^*\\) qui, avec tout élément,\ncontiennent ses prédécesseurs.</u></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(D\\) est un diviseur \\(\\geq0\\) sur \\(S\\) et \\(t\\in S^*\\). On dit que \\(t\\) <u>appartient</u>\nà \\(D\\) si le point fermé \\(t\\) de \\(S(t)\\) (2.3) appartient au transformé pur\n(= adhérence schématique de \\(D-\\{s\\}\\)) de \\(D\\) sur \\(S(t)\\).</p>"
+    },
+    {
+     "id": "10.2.5",
+     "type": "definition",
+     "label": null,
+     "title": "Définition 2.5.",
+     "html": "<div class=\"thm definition\" id=\"10.2.5\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Définition 2.5.</u></span> <u>Soient \\(t,t'\\in S^*\\). On dit que \\(t'\\) est proche de \\(t\\) si \\(t'\\in S_+(t)^*\\)\n(2.2) et appartient à la curvetta \\(t^*\\) de \\(t\\) (2.3).</u></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(t'\\) est un successeur immédiat de \\(t\\), alors \\(t'\\) est proche de \\(t\\) ;\nsi dans une suite \\((t_i)_{0\\leq i\\leq n}\\) chaque \\(t_{i+1}\\) est successeur immédiat de \\(t_i\\), et\nsi \\(t_n\\) est proche de \\(t_0\\), alors \\(t_i\\) est proche de \\(t_0\\) pour \\(0&lt;i\\leq n\\) et \\(t_n\\) n'est\npas proche de \\(t_i\\) pour \\(0&lt;i\\leq n-1\\).</p>"
+    },
+    {
+     "id": "10.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.6\">(2.6) Soient \\(A\\) un anneau local noethérien de dimension \\(n\\), \\(T\\) son spectre,\n\\(m\\) son idéal maximal, \\(k=A/m\\) son corps résiduel et \\(P=\\sum_{0\\leq i\\leq n}a_iX^i\\) son\npolynôme de Hilbert-Samuel :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[P(r)=\\dim_k(m^r/m^{r+1})\\qquad\\text{pour }r\\text{ grand}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons que la multiplicité \\(\\mu_s\\) dans \\(T\\) du point fermé \\(s\\) vérifie par définition</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[a_{n-1}=\\mu_s/(n-1)!\\, .\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque \\(n=1\\), on a donc simplement</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mu_s=\\dim_k m^r/m^{r+1}\\qquad\\text{pour }r\\text{ grand}.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En termes géométriques, \\(\\mu_s\\) peut se définir comme le degré, dans l'espace\nprojectif sur \\(k\\), \\(\\mathbb P_k(m/m^2)\\), de la fibre spéciale de l'éclaté de \\(T\\) le long\ndu sous-schéma \\(\\{s\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons que si \\(Y\\) et \\(Z\\) sont deux sous-schémas fermés d'un schéma\n\\(X\\), alors, le transformé pur de \\(Y\\) dans l'éclaté \\(\\widetilde X\\) de \\(X\\) le long de \\(Z\\), adhérence\nschématique de \\(Y\\setminus Z\\) dans \\(\\widetilde X\\), n'est autre que l'éclaté de \\(Y\\) le long\nde \\(Y\\cap Z\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que \\(T\\) soit un sous-schéma fermé d'un schéma régulier \\(U\\).\nSoient \\(p:U_1\\longrightarrow U\\) l'éclaté de \\(U\\) le long de \\(\\{s\\}\\), \\(s^*\\) l'image réciproque de\n\\(s\\) dans \\(U_1\\) et \\(T'\\) le transformé pur de \\(T\\) dans \\(U_1\\). Ce qui précède montre que la\nmultiplicité de \\(T\\) en \\(s\\) est le degré dans l'espace projectif \\(s^*\\) du sous-schéma\n\\(s^*\\cap T'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons en outre que \\(T\\) soit un diviseur de \\(U\\), soit \\(T^*\\) son transformé\ntotal dans \\(U_1\\) (le diviseur image réciproque) et définissons \\(\\nu\\) par la\nformule \\(T^*=\\nu s^*+T'\\). Si \\(X\\) est une droite de \\(s^*\\), et si on calcule les\ncaractéristiques d'Euler-Poincaré comme sommes alternées de dimension sur \\(k\\),\non sait que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.6.1)\\qquad (X,s^*)=\\chi\\left(X\\mathbin{\\overset{\\mathbb L}{\\otimes}}\\mathcal O_{s^*}\\right)\n=\\deg_X\\mathcal O(s^*)=-1\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on a vérifié que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.6.2)\\qquad (X,T')=\\chi\\left(X\\mathbin{\\overset{\\mathbb L}{\\otimes}}\\mathcal O_{T'}\\right)\n=\\deg_{s^*}(s^*\\cap T')=\\mu_s.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La formule de projection</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[Rp_*\\left(\\mathcal O_X\\mathbin{\\overset{\\mathbb L}{\\otimes}}\\mathcal O_{T^*}\\right)\n=Rp_*\\left(\\mathcal O_X\\mathbin{\\overset{\\mathbb L}{\\otimes}}Lp^*\\mathcal O_T\\right)\n=Rp_*\\mathcal O_X\\mathbin{\\overset{\\mathbb L}{\\otimes}}\\mathcal O_T\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et son corollaire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(X,T^*)=\\nu(X,s^*)+(X,T')=0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>fournit, par (2.6.1), (2.6.2), l'identité</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.6.3)\\qquad \\mu_s=\\nu.\\]\n\n</p>"
+    },
+    {
+     "id": "10.2.7",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 2.7.",
+     "html": "<div class=\"thm proposition\" id=\"10.2.7\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 2.7.</u></span> <u>Soient \\(T\\) un diviseur \\(\\geq0\\) dans un schéma régulier \\(U\\), \\(s\\) un\npoint fermé de \\(U\\), \\(U_1\\) l'éclaté de \\(U\\) le long de \\(\\{s\\}\\), \\(s^*\\) l'image réciproque\nde \\(s\\) dans \\(U_1\\), \\(T'\\) le transformé pur de \\(T\\) sur \\(U_1\\) et \\(T^*\\) son transformé total.\nIl y a identité entre</u></div>\n<div class=\"thm-body\">\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>La multiplicité, au sens de Samuel, du point \\(s\\) de \\(T\\).</u></li>\n<li><span class=\"item-label\">(ii)</span> <u>Le degré, dans l'espace projectif \\(s^*\\), de \\(s^*\\cap T'\\).</u></li>\n<li><span class=\"item-label\">(iii)</span> <u>La multiplicité de \\(s^*\\) dans le diviseur \\(T^*\\).</u></li>\n</ol>\n</div></div>"
+    },
+    {
+     "id": "10.2.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.8\"><strong>2.8.</strong> Reprenons les hypothèses de 2.0. Soit \\(D\\) un diviseur \\(\\geq0\\) sur \\(S\\) et\n\\(t\\in S^*\\). La <u>multiplicité</u> \\(\\mu_t(D)\\) de \\(D\\) en \\(t\\) est, par définition, la multiplicité\nen \\(t\\) du transformé pur de \\(D\\) sur \\(S(t)\\) (2.3). La fonction de \\(t\\), \\(\\mu_t(D)\\) a\npour support l'ensemble des points infiniment voisins de \\(s\\) qui appartiennent\nà \\(D\\) (2.4). Lorsque \\(D\\) est régulier, les nombres \\(\\mu_t(D)\\cdot[k(t):k(s)]\\)\nsont égaux à zéro ou un : en effet, les transformés purs \\(D'\\) de \\(D\\) sont isomorphes à \\(D\\), et on applique la définition (2.6) des multiplicités.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les nombres d'intersections se calculent en termes de multiplicités :</p>"
+    },
+    {
+     "id": "10.2.9",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 2.9.",
+     "html": "<div class=\"thm theorem\" id=\"10.2.9\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 2.9.</u></span> <u>Si les diviseurs \\(D\\) et \\(E\\) ne se coupent qu'en \\(s\\), on a</u></div>\n<div class=\"thm-body\">\n\\[(D,E)=\\sum_{t\\in S^*}\\mu_t(D)\\mu_t(E)[k(t):k]\\]\n<p><u>la somme étant étendue aux points infiniment voisins de \\(s\\) communs à \\(D\\) et \\(E\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Preuve.</u> Soit \\(p:S'\\longrightarrow S\\) un transformé birationnel de \\(S\\). On désigne par\n\\(D^*\\) et \\(E^*\\) (resp. par \\(D'\\) et \\(E'\\)) les transformés totaux (resp. purs) de \\(D\\) et \\(E\\).</p>"
+    },
+    {
+     "id": "10.2.9.1",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 2.9.1.",
+     "html": "<div class=\"thm lemma\" id=\"10.2.9.1\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 2.9.1.</u></span></div>\n<div class=\"thm-body\">\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>Le transformé total \\(D^*\\) est caractérisé par :</u>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">\\(a\\)</span> <u>\\(D^*-D'\\) est concentré sur \\(f^{-1}(s)\\)</u></li>\n  <li><span class=\"item-label\">\\(b\\)</span> <u>si \\(X\\) est concentré sur \\(f^{-1}(s)\\), alors \\((D^*,X)=0\\).</u></li>\n  </ol>\n</li>\n<li><span class=\"item-label\">(ii)</span> <u>\\((D,E)=(D^*,E^*)=(D^*,E')=(D',E^*)\\).</u></li>\n</ol>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'assertion (i)\\(a\\) est triviale, et (i)\\(b\\) résulte de 1.6 (vi).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Que \\(a\\) et \\(b\\) déterminent \\(D^*\\) résulte de 1.9. Par construction, le conoyau\nde la flèche de \\(\\mathcal O_E\\) dans \\(f_*\\mathcal O_{E'}\\) est fini, d'où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(D^*,E')=\\chi\\left(f^*\\mathcal O_D\\mathbin{\\overset{\\mathbb L}{\\otimes}}\\mathcal O_{E'}\\right)\n=\\chi\\left(\\mathcal O_D\\mathbin{\\overset{\\mathbb L}{\\otimes}}f_*\\mathcal O_{E'}\\right)\n=\\chi\\left(\\mathcal O_D\\mathbin{\\overset{\\mathbb L}{\\otimes}}\\mathcal O_E\\right)=(D,E)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui, par (i), entraîne (ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prenons pour \\(S'\\) l'éclaté de \\(S\\) en \\(s\\). D'après (2.9.1), (2.6.3) et\n2.7, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.9.2)\\qquad (D,E)=(D^*,E')=(D'+\\mu_s(D)s^*,E')\\]\n\\[=(D',E')+\\mu_s(D)(s^*,E')=(D',E')+\\mu_s(D)\\mu_s(E)[k(s):k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Le théorème 2.9. se prouve maintenant par récurrence sur \\((D,E)\\),</strong> par une\napplication itérée de (2.9.2).</p>"
+    },
+    {
+     "id": "10.2.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.10\"><strong>(2.10)</strong> Soient \\(A\\) un anneau local noethérien réduit de dimension un, \\(s\\) le\npoint fermé de \\(\\operatorname{Spec}(A)\\), \\(\\widetilde A\\) le normalisé de \\(A\\) et \\(k\\) un corps dont \\(k(s)\\) soit\nextension finie. Supposons que \\(\\widetilde A\\) soit fini sur \\(A\\) (i.e. que le complété \\(\\widehat A\\)\nsoit réduit). On appellera <u>invariant \\(\\delta\\) de la singularité de \\(\\operatorname{Spec}(A)\\) en \\(s\\)</u>\nla longueur, calculée sur \\(k\\), du \\(A\\)-module \\(\\widetilde A/A\\).</p>"
+    },
+    {
+     "id": "10.2.11",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 2.11.",
+     "html": "<div class=\"thm theorem\" id=\"10.2.11\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 2.11.</u></span> <u>Soit \\(D\\) une courbe réduite tracée sur \\(S\\). Alors :</u></div>\n<div class=\"thm-body\">\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>Quel que soit \\(t\\in S^*\\), on a, avec les notations 2.8</u>\n\\[\\mu_t(D)=\\sum_{t'\\text{ proche de }t}\\mu_{t'}(D)[k(t'):k(t)].\\]</li>\n<li><span class=\"item-label\">(ii)</span> <u>Supposons le normalisé \\(\\widetilde D\\) de \\(D\\) fini sur \\(D\\), et soit\n\\(\\delta=\\chi(\\mathcal O_{\\widetilde D}/\\mathcal O_D)\\) l'invariant de la singularité de \\(D\\) en \\(s\\). Pour tous les \\(t\\in S^*\\), à l'exception\nd'un nombre fini, \\(\\mu_t(D)\\) est égal à zéro ou un, et on a</u>\n\\[\\delta=\\sum_{t\\in S^*}\\frac12\\mu_t(D)(\\mu_t(D)-1)[k(t):k].\\]</li>\n</ol>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(p:S_1\\longrightarrow S\\) l'éclaté de \\(S\\) le long de \\(\\{s\\}\\), \\(D^*\\) le transformé\ntotal de \\(D\\) et \\(D'\\) son transformé pur. En vertu de (2.7), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.1)\\qquad D^*=D'+\\mu_s(D)s^*\\qquad\\text{et}\\]\n\\[(2.11.2)\\qquad \\mu_s(D)=(s^*,D')\\cdot[k(s):k]^{-1}.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La curvetta \\(s^*\\) est non singulière, de sorte que, par 2.8 et la\ndéfinition 2.5, la formule 2.9, appliquée aux diviseurs \\(s^*\\) et \\(D'\\) de \\(S_1\\),\ns'écrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.3)\\qquad (s^*,D')=\\sum_{t'\\text{ proche de }s}\\mu_{t'}(D)[k(t'):k].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'assertion (i) pour \\(s=t\\) résulte de (2.11.2) et (2.11.3), et le cas général\ns'obtient en appliquant ce résultat au localisé en \\(t\\) de \\(S(t)\\) (2.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(m\\) l'idéal maximal qui définit \\(\\{s\\}\\), et soit \\(n\\geq0\\).\nOn sait (SGA VII 3.5) que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.4)\\qquad p_*\\mathcal O_{S_1}(-ns^*)=m^n\\quad\\text{et}\\quad\nR^ip_*\\mathcal O_{S_1}(-ns^*)=0\\quad(i&gt;0).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On déduit de là, et de la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow\\mathcal O_{S_1}(-ns^*)\\longrightarrow\\mathcal O_{S_1}\n\\longrightarrow\\mathcal O_{ns^*}\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.5)\\qquad p_*\\mathcal O_{ns^*}=\\mathcal O_S/m^n\\quad\\text{et}\\quad\nR^ip_*\\mathcal O_{ns^*}=0\\quad(i&gt;0)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.6)\\qquad \\chi(\\mathcal O_{ns^*})=\\chi(\\mathcal O_S/m^n)\n=\\frac{n(n+1)}2[k(s):k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Faisons \\(n=0\\) dans (2.11.4). Quel que soit le complexe \\(K\\) de\nfaisceaux cohérents sur \\(S\\), on a par la « formule de projection »</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K\\mathrel{\\sim}\\longrightarrow Rp_*Lp^*K\n\\quad(\\simeq K\\mathbin{\\overset{\\mathbb L}{\\otimes}}Rp_*\\mathcal O_{S_1}).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, puisque \\(Lf^*\\mathcal O_D=f^*\\mathcal O_D=\\mathcal O_{D^*}\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.7)\\qquad p_*\\mathcal O_{D^*}=\\mathcal O_D\\quad\\text{et}\\quad\nR^ip_*\\mathcal O_{D^*}=0\\quad(i&gt;0).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons \\(E=\\mu_s(D)s^*\\). D'après (2.11.1), (2.9.1) (i) b et (2.6.1) on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.8)\\qquad \\chi(\\mathcal O_{D'\\cap E})=(D',E)=(D^*-E,E)=-(E,E)\n=-\\mu_s(D)^2(s^*,s^*)\\]\n\\[=\\mu_s(D)^2[k(s):k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow\\mathcal O_{D^*}\\longrightarrow\\mathcal O_{D'}\\oplus\\mathcal O_E\n\\longrightarrow\\mathcal O_{D'\\cap E}\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>fournit par image directe, grâce à (2.11.7) des suites exactes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow\\mathcal O_D\\longrightarrow f_*\\mathcal O_{D'}\\oplus f_*\\mathcal O_E\n\\longrightarrow f_*\\mathcal O_{D'\\cap E}\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow f_*\\mathcal O_D/\\mathcal O_D\\longrightarrow f_*\\mathcal O_E\n\\longrightarrow f_*\\mathcal O_{D'\\cap E}\\longrightarrow0.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après (2.11.6) et (2.11.8), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.11.9)\\qquad \\chi(f_*\\mathcal O_{D'}/\\mathcal O_D)\n=\\frac12\\mu_s(D)(\\mu_s(D)+1)[k(s):k]-\\mu_s(D)^2[k(s):k]\\]\n\\[=\\frac12\\mu_s(D)(\\mu_s(D)-1)[k(s):k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les schémas \\(D\\) et \\(D'\\) sont réduits, ne diffèrent qu'en \\(s\\), et \\(D'\\)\nest fini sur \\(D\\). Ces schémas ont donc même normalisé, et l'invariant \\(\\delta\\) de\nla singularité de \\(D\\) en \\(s\\) est somme de \\(\\chi(f_*\\mathcal O_{D'}/\\mathcal O_D)\\) et de la somme des invariants\n\\(\\delta\\) des singularités de \\(D'\\) en les points de \\(D'\\cap s^*\\). Prouvons 2.11 (ii)\npar récurrence sur \\(\\delta\\). Si \\(\\mu_s(D)&gt;1\\), l'hypothèse de récurrence s'applique\nà \\(D'\\), et 2.11 (ii) résulte de (2.11.9). Si \\(\\mu_s(D)=1\\), alors \\((D',s^*)=1\\)\net \\(D'\\cap s^*\\) est un diviseur régulier de \\(D'\\) ; par (EGA IV 19.1.1), \\(D'\\) est\nrégulier ; par (2.11.9), \\(D=D'\\) est lui-même régulier et 2.11 (ii) résulte\nde 2.8.</p>"
+    },
+    {
+     "id": "10.2.12",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.12\"><strong>2.12.</strong> Soit \\(t\\in S^*\\) et \\(S'\\) un transformé birationnel de \\(S\\) qui domine \\(S_+(t)\\) (2.3).\nOn appellera <u>transformé total de \\(t\\) sur \\(S'\\)</u>, et on désignera encore par \\(t^*\\),\nle transformé total sur \\(S'\\) du diviseur \\(t^*\\) de \\(S_+(t)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\nu\\) une fonction à support fini de \\(S^*\\) dans \\(\\mathbb N\\) et supposons que\n\\(\\nu\\) vérifie, quel que soit \\(t\\in S^*\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.12.1)\\qquad \\nu(t)\\geq\n\\sum_{t'\\text{ proche de }t}\\nu(t')[k(t'):k(t)]\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(inégalité des points proches). Soient \\(f:S'\\longrightarrow S\\) un transformé birationnel\nde \\(S\\) qui domine les \\(S_+(t)\\) pour \\(t\\) dans le support de \\(\\nu\\), et \\(\\nu^*\\) le diviseur\n\\[\\sum_{t\\in S^*}\\nu(t)t^*\\quad\\text{sur }S'.\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On désignera par \\(I(\\nu)\\) l'idéal de \\(\\mathcal O_S\\) image directe par \\(f\\) de l'idéal\nde \\(\\mathcal O_{S'}\\) qui définit le diviseur \\(\\nu^*\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[I(\\nu)=f_*\\mathcal O(-\\nu^*).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après (2.11.4), cet idéal ne dépend pas du choix de \\(S'\\). Les idéaux de \\(S\\)\nobtenus par ce procédé sont ceux que Zariski [11] appelle « complets ».</p>"
+    },
+    {
+     "id": "10.2.13",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 2.13.",
+     "html": "<div class=\"thm theorem\" id=\"10.2.13\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 2.13.</u></span> <u>Sous les hypothèses précédentes, on a</u></div>\n<div class=\"thm-body\">\n\\[\\chi(\\mathcal O_S/I(\\nu))=\\sum_{t\\in S^*}\\frac{\\nu(t)(\\nu(t)+1)}2[k(t):k]\\]\n<p><u>et</u></p>\n\\[R^if_*\\mathcal O_{S'}(-\\nu^*)=0\\quad\\text{pour }i&gt;0.\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vieux français, on exprime ceci, brièvement, en disant que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>« exiger qu'une courbe plane passe \\(n\\) fois par un point \\(t\\), projectif ou infiniment\nvoisin, impose \\(\\frac{n(n+1)}2\\) conditions, en général indépendantes, aux\ncoefficients de son équation ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons tout d'abord le lemme</p>"
+    },
+    {
+     "id": "10.2.14",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 2.14.",
+     "html": "<div class=\"thm lemma\" id=\"10.2.14\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 2.14.</u></span> <u>Soient \\(p:S_1\\longrightarrow S\\) l'éclaté de \\(S\\) le long de \\(\\{s\\}\\), \\(T\\) un sous-schéma fermé de \\(S_1\\), d'idéal \\(q\\), \\(D\\) un diviseur, \\(n\\) un entier, \\(J=\\mathcal O(-s^*)\\) l'idéal de \\(S_1\\) qui définit le diviseur \\(s^*\\), \\(Y=\\operatorname{Spec}(\\mathcal O_{S_1}/J^nq)\\), \\(D\\) un diviseur régulier sur \\(S\\) et \\(D'\\) son transformé pur sur \\(S_1\\). On suppose \\(T\\cap s^*\\) et \\(T\\cap D'\\) finis.</u></div>\n<div class=\"thm-body\"><ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <u>Si \\(\\lg_{k(s)}(T\\cap s^*)\\leq n+1\\), on a</u>\n\\[R^ip_*(qJ^n)=0\\quad\\text{pour }i&gt;0\\quad\\text{et, pour }T\\text{ artinien},\\]\n\\[\\lg_{k(s)}(\\mathcal O_S/p_*(qJ^n))=\\frac{n(n+1)}2+\\lg_{k(s)}(T).\\]</li>\n<li><span class=\"item-label\">(ii)</span> <u>Si \\(\\lg_{k(s)}(T\\cap s^*)\\leq n\\), on a</u>\n\\[\\lg_{k(s)}\\bigl(D\\cap\\operatorname{Spec}(\\mathcal O_S/p_*(qJ^n))\\bigr)\n=n+\\lg_{k(s)}(D'\\cap T).\\]</li>\n</ol></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit la suite exacte sur \\(S_1\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.14.1)\\qquad0\\longrightarrow J^nq\\longrightarrow J^n\n\\xrightarrow{u}J^n\\otimes\\mathcal O_T\\longrightarrow0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour prouver que \\(R^ip_*J^nq=0\\) \\((i&gt;0)\\), il suffit par (2.11.4), de montrer\nque la flèche \\(p_*(u)\\) est surjective. D'après le théorème des fonctions\nholomorphes, il suffit de prouver que les flèches</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[u_k:p_*(J^n\\otimes\\mathcal O/J^k)\\longrightarrow\np_*(J^n\\otimes\\mathcal O_T\\otimes\\mathcal O/J^k)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont surjectives.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On désignera par \\(\\operatorname{Gr}_J\\) un gradué associé pour la filtration \\(J\\)-adique.\nLe module \\(J^m/J^{m+1}\\) est isomorphe à \\(\\mathcal O_{s^*}(m)\\) ; on a donc \\(R^1p_*J^m/J^{m+1}=0\\) et\nla flèche de \\(p_*(J^n/J^{n+k+1})\\) dans \\(p_*(J^n/J^{n+k})\\) est surjective. Pour prouver,\npar récurrence sur \\(k\\), que les flèches \\(u_k\\) sont surjectives, il suffit donc\nde prouver, la surjectivité des \\(v_k\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[v_k:p_*(J^n\\otimes\\operatorname{Gr}_J^k(\\mathcal O))\\longrightarrow\np_*(J^n\\otimes\\operatorname{Gr}_J^k(\\mathcal O_T))\\qquad(k\\geq0).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le module \\(\\operatorname{Gr}_J^k(\\mathcal O_T)\\) est un quotient de \\(J^k/J^{k+1}\\otimes\\mathcal O_T\\) ; il est donc de longueur\nsur \\(k(s)\\) au plus \\(n+1\\). Le noyau \\(N\\) de la flèche surjective</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[v'_k:J^n\\otimes\\operatorname{Gr}_J^k(\\mathcal O)\\simeq\\mathcal O_{s^*}(n+k)\n\\longrightarrow J^n\\otimes\\operatorname{Gr}_J^k(\\mathcal O_T)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est donc un faisceau inversible sur la droite projective \\(s^*\\), de degré \\(\\geq-1\\).\nOn a \\(R^1p_*N=0\\) et \\(v_k=p_*(v'_k)\\) est surjectif.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(T\\) est artinien, de la suite exacte (2.14.1), on déduit maintenant que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lg_{k(s)}(p_*J^n/p_*(J^nq))=\\lg_{k(s)}(\\mathcal O_T),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et 2.14 (i) résulte de (2.11.4) et (2.11.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(I_{D'\\cap T}\\) l'idéal (monogène de \\(\\mathcal O_D\\)) qui définit \\(D'\\cap T\\). Sous les\nhypothèses (ii), la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow I_{D'\\cap T}\\longrightarrow\\mathcal O_{D'}\n\\longrightarrow\\mathcal O_{D'\\cap T}\\longrightarrow0\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>montre que \\(D'\\cap T\\) vérifie l'hypothèse (i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La projection \\(p\\) établit un isomorphisme entre \\(D\\) et \\(D'\\) ; par cet\nisomorphisme, à l'idéal de \\(\\mathcal O_D\\) qui définit le sous-schéma \\(D\\cap\\operatorname{Spec}(\\mathcal O_S/p_*(qJ^n))\\)\nde \\(D\\) correspond l'idéal de \\(D'\\) engendré par les sections globales de \\(qJ^n\\)\nsur \\(S_1\\). Cet idéal est contenu dans l'idéal de \\(D'\\) qui définit \\(D'\\cap Y\\). Il\nlui est en fait égal, car toute section de \\(\\mathcal O_{D'\\cup Y}\\) se prolonge en une section\nde \\(\\mathcal O_{S_1}\\) : si \\(I_{D'\\cup Y}\\) est l'idéal qui définit \\(D'\\cup Y\\), l'obstruction au\nprolongement se trouve dans \\(R^1p_*(I_{D'\\cup Y})\\). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[I_{D'\\cup Y}=\\mathcal O(-D')\\cap qJ^n=(\\mathcal O(-D')\\cap J^n)\\cap qJ^n\n=\\mathcal O(-D')J^n\\cap qJ^n\\]\n\\[=(\\mathcal O(-D')\\cap q)\\cdot J^n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, d'après (i) appliqué à \\(D'\\cup T\\), il n'y a pas d'obstruction.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.14.2)\\qquad\\lg_{k(s)}\\bigl(D\\cap\\operatorname{Spec}(\\mathcal O_S/p_*(qJ^n))\\bigr)\n=\\lg_{k(s)}(D'\\cap Y).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De l'isomorphie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[J^n\\otimes\\mathcal O_{D'}/q\\mathcal O_{D'}\n\\xrightarrow{\\sim}\\mathcal O_{D'}J^n/\\mathcal O_{D'}qJ^n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on déduit que la suite suivante est exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0\\longrightarrow J^n\\otimes\\mathcal O_{D'\\cap T}\n\\longrightarrow\\mathcal O_{D'\\cap Y}\\longrightarrow\\mathcal O_{D'\\cap n s^*}\\longrightarrow0,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.14.3)\\qquad\\lg_{k(s)}(D'\\cap Y)=n(D',s^*)+\\lg_{k(s)}(D'\\cap T).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\((D',s^*)=1\\), 2.14 (ii) résulte de (2.14.2) et (2.14.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons maintenant, par récurrence sur le nombre d'éléments dans\nle support de \\(\\nu\\), les assertions de 2.13 et l'assertion suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.14.4)\\qquad\\text{Si }D\\text{ est un diviseur régulier sur }S,\\text{ alors,}\\]\n\\[\\chi(D\\cap\\operatorname{Spec}(\\mathcal O_S/I(\\nu)))\n=\\sum_{t\\text{ sur }D}\\nu(t)[k(t):k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\nu=0\\), alors \\(\\nu^*=0\\), \\(I(\\nu)=\\mathcal O_S\\) et 2.13 et (2.14.4) sont triviaux\n(la seconde assertion de (2.13) résulte d'une application itérée de\n(2.11.4) pour \\(n=0\\)). Sinon, on a \\(\\nu(s)&gt;0\\), et il existe un \\(S\\)-morphisme\n\\(g:S'\\longrightarrow S_1\\). Pour chaque point fermé \\(a\\) de \\(S_1\\), soient \\(S_{1a}\\) le localisé de\n\\(S_1\\) en \\(a\\), \\(\\nu_a\\) la restriction de \\(\\nu\\) à \\(S_{1a}^*\\), \\(S'_a\\) le localisé \\(S'=S'\\times_{S_1}S_{1a}\\),\n\\[I(\\nu_a)=g_*\\mathcal O_{S'}(-\\nu_a^*),\\qquad T_a=\\operatorname{Spec}(\\mathcal O_{S_1}/I(\\nu_a)),\\qquad\nT=\\bigcup T_a\\quad\\text{(réunion finie disjointe)}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et \\(q\\) l'idéal de \\(T\\). On a, avec les notations de 2.14</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.14.5)\\qquad g_*\\mathcal O(-\\nu^*)=qJ^{\\nu(s)}.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'hypothèse de récurrence s'applique aux \\((S_{1a},S'_a,\\nu_a)\\).\nOn a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.14.6)\\qquad R^ig_*\\mathcal O_{S'}(-\\nu^*)=0\\quad\\text{pour }i&gt;0\\]\n\\[(2.14.7)\\qquad \\chi(T)=\n\\sum_{t\\in S^*-\\{s\\}}\\frac{\\nu(t)(\\nu(t)+1)}2[k(t):k]\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, d'après (2.14.4) appliqué au diviseur \\(s^*\\) de \\(S_1\\) et l'hypothèse (2.12.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lg_{k(s)}(T\\cap s^*)=\n\\sum_{t\\text{ proche de }s}\\nu(t)[k(t):k(s)]\\leq\\nu(s).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette inégalité nous permet d'appliquer 2.14 ; de (2.14.5), on tire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R^ip_*g_*\\mathcal O(-\\nu^*)=0\\quad\\text{pour }i&gt;0\\]\n\\[\\lg_{k(s)}(\\mathcal O_S/p_*g_*\\mathcal O(-\\nu^*))=\n\\frac{\\nu(s)(\\nu(s)+1)}2+\\lg_{k(s)}(T)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que les assertions (2.13) résultent de (2.14.6) et (2.14.7).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin, 2.14 (ii) fournit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\lg_{k(s)}(D\\cap\\operatorname{Spec}(\\mathcal O_S/I(\\nu)))=\n\\nu(s)+\\lg_{k(s)}(D'\\cap T),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit par (2.14.4) appliqué à \\(D'\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\chi(D\\cap\\operatorname{Spec}(\\mathcal O_S/I(\\nu)))=\n\\nu(s)[k(s):k]+\\sum_{t\\text{ sur }D'}\\nu(t)[k(t):k]\n=\\sum_{t\\text{ sur }D}\\nu(t)[k(t):k].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci achève la démonstration de 2.13.</p>"
+    },
+    {
+     "id": "10.2.15",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.15\"><strong>(2.15)</strong> Des bribes de ce qui précède se généralisent en dimension supérieure.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(S\\) le spectre d'un anneau local régulier de dimension \\(n\\) de point fermé\n\\(s\\), \\(k(s)\\) étant une extension finie de \\(k\\). On peut encore considérer l'ensemble\n\\(I\\) des schémas \\(f:S'\\longrightarrow S\\) déduit de \\(S\\) par éclatements successifs de points\nfermés et poser comme en 2.1</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[S^*=\\varinjlim_{S'\\in I}\\operatorname{Irr}(f^{-1}(s)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(S^*\\) s'appellera encore l'ensemble des <u>points de \\(S\\) infiniment voisins de \\(s\\)</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(X\\) est un sous-schéma fermé de \\(S\\), et si \\(t\\in S^*\\), on définit\ncomme en 2.8 la multiplicité de \\(X\\) en \\(t\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(f:S'\\longrightarrow S\\) un composé de morphismes d'éclatement de\npoints fermés, \\(D\\) un diviseur sur \\(S\\), \\(D^*=f^*D\\) son transformé total sur \\(S'\\),\n\\(E\\) une courbe sur \\(S\\), \\(E'\\) son transformé pur sur \\(S'\\) et supposons que \\(D\\cap E\\)\nsoit réduit à \\(s\\). La formule de projection donne encore</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.16)\\qquad (D,E)=(D^*,E')\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Procédant comme en 2.9, on prouve à l'aide de (2.16) que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.17)\\qquad (D,E)=\\sum_{t\\in S^*}\\mu_t(D)\\,\\mu_t(E)[k(t):k].\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Définissons les points proches comme en 2.5. Procédant comme\nen 2.11, on vérifie que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.18)\\qquad \\mu_t(E)=\\sum_{t'\\text{ proche de }t}\\mu_{t'}(E)[k(t'):k].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par contre, la formule 2.11 (ii) devient fausse en général (voir les exemples 2.25).</p>"
+    },
+    {
+     "id": "10.2.19",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.19\"><strong>2.19.</strong> Soit \\(S\\) une surface projective et régulière sur un corps \\(k\\). On désigne\npar \\(S^*\\) la somme disjointe, étendue aux points fermés de \\(S\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[S^*=\\coprod_{s\\in S}\\operatorname{Spec}(\\mathcal O_{S,s})^*\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on appelle \\(S^*\\) l'ensemble des <u>points infiniment voisins des points de \\(S\\)</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(I\\) l'ensemble des surfaces déduites de \\(S\\) par éclatements\nsuccessifs de points fermés. L'ensemble \\(I\\) est cofinal dans l'ensemble des\nmodèles réguliers du corps des fonctions de \\(S\\), ordonné par domination. Pour\n\\(i\\in I\\), on désigne par \\(S_i\\) la surface correspondante, munie de \\(p_i:S_i\\longrightarrow S\\).\nOn désignera par \n\\(\\operatorname{Div}^{\\pm}(S_i)\\) le groupe des diviseurs, positifs ou non, sur \\(S_i\\).</p>"
+    },
+    {
+     "id": "10.2.20",
+     "type": "definition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm definition\" id=\"10.2.20\"><div class=\"thm-head\"><u>Définition 2.20.</u></div><div class=\"thm-body\">\n<p>(i) <u>Le groupe des « courbes » sur \\(S\\) est l'ensemble limite inductive</u></p>\n\\[\\varinjlim_{i\\in I}\\operatorname{Div}^{\\pm}(S_i).\\]\n<p>(ii) <u>La catégorie des « faisceaux inversibles » sur \\(S\\) est la limite inductive\n(SGA 4 VI 6) des catégories de faisceaux inversibles sur les \\((S_i)_{i\\in I}\\)</u>.</p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces objets sont des invariants birationnels de \\(S\\).</p>"
+    },
+    {
+     "id": "10.2.21",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.21\"><u>Exemple 2.21.</u> (i) Chaque « courbe » \\(C\\) sur \\(S\\) définit un « faisceau inversible »\n\\(\\mathcal O(C)\\) sur \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) Chaque diviseur \\(C\\) sur \\(S\\) définit une « courbe » sur \\(S\\), qu'on désignera\npar \\(C^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) Si \\(t\\in S^*\\), on définit comme en 2.3 la surface \\(S_+(t)\\) et le diviseur\n\\(t^*\\) sur \\(S_+(t)\\) ; on désigne encore par \\(t^*\\) la « courbe » définie par \\(t^*\\).</p>"
+    },
+    {
+     "id": "10.2.22",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.22\"><strong>(2.22)</strong> On vérifie facilement qu'une « courbe » \\(C\\) (resp. un « faisceau inver-\nsible » \\(\\mathcal L\\)) s'écrit d'une et d'une seule façon sous la forme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[C=C_0^*-\\sum_{t\\in S^*}i_t\\,t^*\n\\qquad\\text{resp.}\\qquad\n\\mathcal L=\\mathcal L_0\\otimes\\mathcal O\\!\\left(-\\sum_{t\\in S^*}i_t\\,t^*\\right)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(C_0\\) (resp. \\(\\mathcal L_0\\)) est un diviseur (resp. un faisceau inversible) sur \\(S\\) et\noù les \\(i_t\\) sont des nombres entiers presque tous nuls. On dit que \\(C\\) (resp. \\(\\mathcal L\\))\nest la courbe \\(C_0\\), (resp. le faisceau inversible \\(\\mathcal L_0\\)) affectée de multipli-\ncités virtuelles \\(i_t\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le complété \\(\\widehat{\\operatorname{Div}}{}^{\\pm}(S)\\times\\mathbb Z^{S^*}\\) du groupe\n\\(\\operatorname{Div}^{\\pm}(S)\\times\\mathbb Z^{(S^*)}\\) des « courbes »\nsur \\(S\\) est encore un invariant birationnel de \\(S\\) ; on l'appelle le groupe des\n« courbes généralisées » sur \\(S\\). Sur \\(S\\), une « courbe généralisée » \\(C\\) se repré-\nsente par un diviseur \\(C_0\\), affecté d'un nombre pouvant être infini de mul-\ntiplicités virtuelles.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit de même les « faisceaux inversibles généralisés » sur \\(S\\).</p>"
+    },
+    {
+     "id": "10.2.23",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.23\"><u>Exemple 2.23.</u> Supposons \\(k\\) parfait. Alors, le faisceau inversible \\(\\Omega^2_{S/k}\\),\naffecté d'une multiplicité virtuelle (-1) en chaque point \\(t\\in S^*\\), est un\ninvariant birationnel de \\(S\\), soit \\(\\Omega^{2*}_{S/k}\\).</p>"
+    },
+    {
+     "id": "10.2.24",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.24\"><u>Exemple 2.24.</u> Soit \\(f:S_1\\longrightarrow S_2\\) un morphisme dominant de surfaces pro-\njectives régulières sur \\(k\\). On définit sans difficulté l'image inverse d'une\n« courbe » ou d'un « faisceau inversible » sur \\(S_2\\), en passant à un modèle de \\(S_2\\)\noù cette « courbe » ou « faisceau inversible » est diviseur ou faisceau inver-\nsible usuel. Par passage à la limite (je n'ai pas vérifié si ce passage à\nla limite était possible), on définit de même l'image réciproque d'une\n« courbe généralisée », ou d'un « faisceau inversible généralisé ». Supposons\n\\(k\\) parfait et \\(f\\) génériquement étale. La <u>différente</u> \\(\\mathfrak D(f)\\) de \\(f\\) est alors le\ndiviseur positif sur \\(S_1\\) qui vérifie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f^*\\Omega^2_{S_2/k}(\\mathfrak D(f))\\mathrel{\\sim}\\Omega^2_{S_1/k}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette différente n'est pas un invariant birationnel de \\(f\\) ; pour obtenir\nun invariant birationnel, il faut considérer la « courbe généralisée » de\ncodifférences</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathfrak D^*(f)=\\mathfrak D(f)+\\sum_{t\\in S_1^*}t^*-f^*\\!\\left(\\sum_{t\\in S_2^*}t^*\\right)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit, brièvement</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathfrak D^*(f)=\\Omega^{2*}_{S_1/k}-f^*\\Omega^{2*}_{S_2/k}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette « courbe généralisée » a un support contenu dans le fermé de \\(S_2\\) où \\(f\\)\nn'est pas étale.</p>"
+    },
+    {
+     "id": "10.2.25",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.25\"><strong>(2.25) <u>Exemple.</u></strong></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(k\\) un corps algébriquement clos et \\(\\mathbb E_n\\) l'espace affine à\n\\(n\\) dimensions sur \\(k\\). Soit \\(C\\) une courbe réduite dans \\(\\mathbb E_n\\), présentant une sin-\ngularité à l'origine. À cette singularité on associe son « diagramme d'Enriques »\n(cf. [3]), qui est le graphe de sommets les points infiniment voisins de (0)\n<u>sur \\(C\\)</u> (2.4 et 2.15), chaque sommet étant joint par un trait à ceux qui lui\nsont proches (2.5 et 2.19). Ce diagramme détermine les multiplicités de\nces points sur \\(C\\) (2.11 et 2.18) et, pour \\(n=2\\), l'invariant \\(\\delta\\) (2.10 et 2.11)\nde la singularité de \\(C\\) à l'origine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour les singularités planes les plus simples, on trouve :</p>"
+    },
+    {
+     "id": null,
+     "type": "table",
+     "label": null,
+     "title": null,
+     "html": "<table style=\"margin:1em auto;border-spacing:1.5em .35em\">\n<tr><th>Dessin</th><th>équation</th><th>\\(\\delta\\)</th><th>diagramme (avec multiplicités)</th></tr>\n<tr><td>────</td><td>\\(y=0\\)</td><td>0</td><td><u>1　1　1　1　1　1　1</u>……</td></tr>\n<tr><td>╳</td><td>\\(xy=0\\)</td><td>1</td><td>2　╱<u>1　1　1　1</u>……<br>　╲<u>1　1　1　1</u>……</td></tr>\n<tr><td>⌣</td><td>\\(y(y-x^2)=0\\)</td><td>2</td><td>2　2　╱<u>1　1　1</u>……<br>　　　╲<u>1　1　1</u>……</td></tr>\n<tr><td>⌁</td><td>\\(y^2=x^3\\)</td><td>1</td><td>2　1　1　1　1　……</td></tr>\n</table>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(n&gt;2\\), l'invariant \\(\\delta\\) n'est plus déterminé par ce diagramme.\nAinsi, la réunion de 3 droites concourantes coplanaires (resp. non coplanaires)\na un invariant \\(\\delta=3\\) (resp. \\(\\delta=2\\)), alors que le diagramme d'Enriques est\nle même. J'ignore si ce phénomène se présente aussi pour des courbes\nunibranches.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Voici deux exemples de diagrammes, relatifs au cas \\(n=3\\), qui\nne peuvent se présenter pour des courbes planes (cf. 2.5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On donne successivement les équations de la courbe, les équations\nde la transformée pure après éclatement de l'origine, des équations para-\nmétriques de la courbe, l'invariant \\(\\delta\\) et le diagramme d'Enriques.</p>"
+    },
+    {
+     "id": "10.2.25.1",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div id=\"10.2.25.1\">\n\\[(2.25.1)\\qquad\n\\left\\{\\begin{array}{l}y^2=z^4\\\\z^3=x^2\\end{array}\\right.,\\qquad\n\\left\\{\\begin{array}{l}(y/z)^2=(x/z)^3\\\\z=(x/z)^2\\end{array}\\right.,\\qquad\n\\left\\{\\begin{array}{l}x=u^6\\\\y=u^7\\\\z=u^4\\end{array}\\right.,\\qquad \\delta=5,\n\\]\n<pre style=\"text-align:center\">4──2\n├╲╲│\n│ ╲1\n│  │\n╲──1\n   1──1──…</pre>\n</div>"
+    },
+    {
+     "id": "10.2.25.2",
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div id=\"10.2.25.2\">\n\\[(2.25.2)\\qquad\n\\left\\{\\begin{array}{l}y^2=x^3\\\\z^3=y^2\\end{array}\\right.,\\qquad\n\\left\\{\\begin{array}{l}(y/z)^2=(x/z)^3\\\\z=(y/z)^2\\end{array}\\right.,\\qquad\n\\left\\{\\begin{array}{l}x=u^8\\\\y=u^9\\\\z=u^6\\end{array}\\right.,\\qquad \\delta=10.\n\\]\n<pre style=\"text-align:center\">6──2\n├╲╲│\n│╲╲1\n│ ╲1\n│  1\n╲──1\n   1──1──…</pre>\n</div>"
+    },
+    {
+     "id": "10.2.26",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.26\"><strong>2.26.</strong> Le théorème 2.27 ci-dessous était énoncé sous la forme d'une conjec-\nture fausse dans la première version (diffusée par l'IHES) de cet exposé.\nIl doit beaucoup à des conversations avec D. S. Rim, dont il englobe\ncertains résultats (D. S. Rim, torsion differentials and deformations,\ntheorem 2.7 (i)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C\\) une courbe projective réduite sur un corps algébriquement\nclos \\(k\\), et \\(s\\in C(k)\\). On désignera par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(A_s\\) : l'anneau local de \\(C\\) en \\(s\\) (ou son complété, cela reviendrait au\nmême pour ce qui suit) ;<br>\n\\(\\widetilde A_s\\) : le normalisé de \\(A_s\\) ;<br>\n\\(\\delta(s):\\dim_k(\\widetilde A_s/A_s)\\) ;<br>\n\\(m_0(s)\\) : la dimension du schéma versel formel \\(T\\) des déformations de \\(\\operatorname{Spec}(A_s)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(E\\) une composante irréductible de \\(T\\), on posera encore\n\\[m_0^E(s)=\\dim(E).\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les modules \\(\\tau^{\\sim}\\) des dérivations de \\(\\widetilde A_s\\) et \\(\\tau\\) des dérivations\nde \\(A_s\\) sont sans torsion ; ils s'injectent dans le module des dérivations\ndu corps des fractions de \\(A_s\\), pour \\(A_s\\) intègre, et dans le module des\ndérivations de l'anneau total des fractions de \\(A_s\\) (un produit de corps)\ndans le cas général. De plus, via ces inclusions, \\(\\tau\\) et \\(\\tau^{\\sim}\\) sont\ncommensurables : \\(\\tau/\\tau\\cap\\tau^{\\sim}\\) et \\(\\tau^{\\sim}/\\tau\\cap\\tau^{\\sim}\\) sont de dimension finie sur \\(k\\).\nOn pose</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[m_1(s)=[\\tau^{\\sim}:\\tau]=_{\\mathrm{dfn}}\n\\dim_k(\\tau^{\\sim}/\\tau\\cap\\tau^{\\sim})-\\dim_k(\\tau/\\tau\\cap\\tau^{\\sim}).\\]\n\n</p>"
+    },
+    {
+     "id": "10.2.27",
+     "type": "theorem",
+     "label": null,
+     "title": "Théorème 2.27.",
+     "html": "<div class=\"thm theorem\" id=\"10.2.27\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Théorème 2.27.</u></span>\n<u>Soit \\(E\\) une composante irréductible du schéma formel versel \\(T\\) des déformations de \\(A_s\\). Si « la déformation de \\(A_s\\) au-dessus du point générique \\(e\\) de \\(E\\) est lisse », i.e. si l'image du sous-schéma formel de non lissité (défini par un idéal jacobien : VI 5), fini sur \\(T\\), ne contient pas \\(e\\), alors</u></div>\n\\[3\\,\\delta(s)=m_0^E(s)+m_1(s).\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La validité de 2.27 ne dépend que du complété de \\(A_s\\).\nRemplaçant \\((C,s)\\) par \\((C',s)\\) formellement isomorphe à \\((C,s)\\) en \\(s\\),\non peut supposer que les conditions suivantes sont vérifiées</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\"><li><span class=\"item-label\">\\(a\\)</span> \\(s\\) est le seul point singulier de \\(C\\) ;</li>\n<li><span class=\"item-label\">\\(b\\)</span> \\(C\\) n'a pas d'automorphismes infinitésimaux.</li></ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La condition \\(b\\) nous garantit que le foncteur des déformations\nde \\(C\\) est proreprésentable. Il est même effectivement pro-représentable,\ncar il n'y a pas d'obstruction à relever un faisceau inversible (ample)\ndonné sur \\(C\\). Soit \\(f:X_0\\longrightarrow T_0\\) la déformation universelle de \\(C\\)\net \\(t_0\\) le point fermé de \\(T_0\\) : \\(C\\simeq X_0{}_{t_0}\\).</p>"
+    },
+    {
+     "id": "10.2.28",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 2.28.",
+     "html": "<div class=\"thm lemma\" id=\"10.2.28\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 2.28.</u></span>\n<u>Il existe un schéma de type fini sur \\(k\\), \\(T_1\\), \\(t_1\\in T_1(k)\\)\net \\(f:X_1\\longrightarrow T_1\\), propre et plat, de fibre \\(C\\) en \\(t_1\\) et tel que\npour tout \\(u\\in T_1(k)\\), le complété de \\(T_1\\) en \\(u\\) soit un schéma formel\nde modules pour la fibre \\(X_{1u}\\).</u></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Voici une démonstration directe de ce corollaire de résultats\ngénéraux d'Artin. Soit \\(\\mathcal L\\) un faisceau inversible très ample sur \\(C\\),\ntel que \\(H^1(C,\\mathcal L)=0\\), et \\(\\mathbb P=\\mathbb P(H^0(C,\\mathcal L))\\). On a \\(v:C\\hookrightarrow\\mathbb P\\). Soit \\(T_2\\)\nle schéma de Hilbert, classifiant les sous-variétés de \\(\\mathbb P\\) de même\npolynôme de Hilbert que \\(v(C)\\subset\\mathbb P\\). Soit \\(t_2\\in T_2\\) correspondant à \\(v(C)\\).\nLe complété \\(\\widehat T_2\\) de \\(T_2\\) en \\(t_2\\) est lisse sur \\(S_0\\), le fibré tangent\nvertical de \\(\\widehat T_2/T_0\\) se déduisant du sous-fibré \\(L\\) du fibré tangent de \\(T_2\\)\nimage de \\(\\operatorname{Lie}(\\operatorname{Aut}(\\mathbb P))\\) pour l'action de \\(\\operatorname{Aut}(\\mathbb P)\\) sur \\(T_2\\). Au voisinage\nde \\(t_2\\), soit \\(f_1,\\ldots,f_n\\), \\(n=\\dim\\operatorname{Aut}(\\mathbb P)\\), équations définissant un\nsous-schéma \\(T'_1\\) de \\(T_2\\) passant par \\(t_2\\) et de complété en \\(t_2\\) étale sur \\(T_0\\).\nOn prend pour \\(T_1\\) un voisinage de \\(t_2\\) dans \\(T'_1\\) où le fibré tangent soit\ntransverse à \\(L\\).</p>"
+    },
+    {
+     "id": "10.2.29",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.29\"><strong>2.29.</strong> Au morphisme de foncteur\n\\[(\\text{déformations de }C)\\longrightarrow(\\text{déformations de }A_s)\\]\ncorrespond un morphisme \\(p:T_0\\longrightarrow T\\). D'après VI 2.10, \\(p\\)\nest lisse. Soit \\(t\\) le point fermé de \\(T\\). L'espace tangent de Zariski\nde \\(p^{-1}(t)\\) en \\(t_0\\) classifie les déformations localement triviales de\n\\(C\\) sur \\(k[\\varepsilon]\\) (\\(\\varepsilon^2=0\\)). Posant \\(E_0=p^{-1}(E)\\), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.29.1)\\qquad \\dim(E_0)=\\dim(E)+\\dim H^1(C,\\mathcal T^1_{C/k}).\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(X_0/T_0\\) est plat, les fibres de \\(X_0/T_0\\) ont toutes\nle même genre arithmétique \\(p\\) (\\(1-p=\\chi(\\mathcal O)\\)). Par hypothèse, la fibre\nau point générique de \\(E_0\\) est lisse ; le schéma formel des modules d'une\ncourbe propre et lisse étant lisse de dimension \\(3p-3\\), on déduit de\n2.28 que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.29.2)\\qquad \\dim(E)=3p-3.\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(C^{\\sim}\\) la normalisée de \\(C\\), de genre arithmétique\n\\(p^{\\sim}=p-\\delta(s)\\). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(2.29.3)\\qquad \\dim H^1(C,\\mathcal T^1_{C/k})=-\\chi(C,\\mathcal T^1_{C/k})\n=-\\chi(C^{\\sim},\\mathcal T^1_{C^{\\sim}/k})+m_1(s)\n=-[3(p-\\delta(s))-3]+m_1(s).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les formules (2.29.1) (2.29.2) (2.29.3) prouvent 2.27.</p>"
+    },
+    {
+     "id": "10.2.30",
+     "type": "conjecture",
+     "label": null,
+     "title": "Conjecture 2.30.",
+     "html": "<div class=\"thm conjecture\" id=\"10.2.30\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Conjecture 2.30.</u></span>\n<u>Toute courbe propre réduite a une déformation lisse.</u></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette conjecture implique, par 2.27 et 2.28, que le schéma formel\nversel des déformations de \\(A_s\\) est toujours équidimensionnel, de\ndimension \\(3\\delta(s)-m_1(s)\\).</p>"
+    },
+    {
+     "id": "10.2.31",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"10.2.31\"><strong>2.31.</strong> Soit \\(C\\) une courbe propre réduite sur \\(k\\), de genre arithmétique \\(p\\).\nOn désignera par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(M_0\\) : la dimension du schéma formel versel \\(T\\) des déformations de \\(C\\) ;<br>\n\\(M_1\\) : la dimension de l'algèbre de Lie de \\(\\operatorname{Aut}(C)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(E\\) une composante irréductible de \\(T\\), on notera \\(M_0^E\\)\nla dimension de \\(E\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'analogue global de 2.27 est le suivant.</p>"
+    },
+    {
+     "id": "10.2.32",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 2.32.",
+     "html": "<div class=\"thm proposition\" id=\"10.2.32\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 2.32.</u></span>\n<u>Si la déformation de \\(C\\) au-dessus du point générique de \\(E\\) est lisse, on a</u></div>\n\\[3p-3=M_0^E-M_1.\\]\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\subset C(k)\\) un ensemble fini de points lisses de \\(C\\), tel\nque tout champ de vecteur sur \\(C\\), s'annulant en tout point \\(x\\in X\\), soit\nnul. Le foncteur des déformations de \\((C,X)\\) est proreprésentable, et\nvérifie une variante de 2.28. Le schéma formel des modules de \\((C,X)\\)\nest lisse sur \\(T\\), de dimension relative \\(\\#X-M_1\\), et de l'analogue\nde 2.28 on déduit que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[M_0+(\\#X-M_1)=3p-3+\\#X,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où 2.32.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons \\(k\\) de caractéristique 0. On a alors \\(M_1=\\dim\\operatorname{Aut}(C)\\).\nVoici une interprétation analogue de \\(m_1(s)\\).</p>"
+    },
+    {
+     "id": "10.2.33",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 2.33.",
+     "html": "<div class=\"thm lemma\" id=\"10.2.33\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 2.33.</u></span>\n<u>Si \\(k\\) est de caractéristique 0, toute dérivation de \\(A_s\\)\nse prolonge en une dérivation de \\(\\widetilde A_s\\).</u></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(D\\) est une dérivation de \\(A_s\\), \\(\\exp(Dt)=\\sum D^n t^n/n!\\) est\nun automorphisme du complété en \\((s,0)\\) de \\(A_s\\otimes_k k[t]\\). Par transport de\nstructure, cet automorphisme agit sur le normalisé \\((\\widetilde A_s\\otimes_k k[t])^\\wedge\\) de\ncet anneau. Réduisant mod \\(t^2\\), on trouve un automorphisme \\(1+Dt\\) de\n\\(\\widetilde A_s{}^\\wedge\\otimes_k k[t]/(t^2)\\), et \\(D\\) se trouve ainsi prolongé en une dérivation\nde \\(\\widetilde A_s{}^\\wedge\\). Puisqu'il se prolonge aussi au corps des fractions de \\(A_s\\)\n(anneau total des fractions si \\(A_s\\) n'est pas intègre), il se prolonge à \\(\\widetilde A_s\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons \\(s\\) singulier. Un argument analogue montre alors que\nle champ de vecteur sur \\(\\operatorname{Spec}(\\widetilde A_s)\\) défini par \\(D\\) s'annulle en tout\npoint au-dessus de \\(s\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(c\\) un idéal de \\(\\widetilde A_s\\) contenu dans le conducteur de \\(\\widetilde A_s/A_s\\).\nSoit \\(\\widetilde G_c=\\operatorname{Aut}(\\widetilde A_s/c)\\) et soit \\(G_c\\) le sous-groupe de \\(\\widetilde G_c\\) qui stabilise\nla sous-algèbre \\(A_s/c\\). Pour \\(d\\subset c\\), \\(\\widetilde G_d\\) stabilise \\(c/d\\) et s'envoie\nsur \\(\\widetilde G_c\\) (remarquer que \\(g\\in\\widetilde G_c\\) est déterminé par \\(g(t)\\), pour \\(t\\) une\nuniformisante, et que \\(g(t)\\) est n'importe quelle uniformisante). L'espace\nhomogène pointé \\(\\widetilde G_c/G_c\\) est donc indépendant de \\(c\\). On note \\(\\widetilde G/G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\widetilde\\tau_0\\) le \\(\\widetilde A_s\\)-module des champs de vecteurs sur \\(\\operatorname{Spec}(\\widetilde A_s)\\)\nqui s'annullent en les points au-dessus de \\(s\\). Pour \\(s\\) singulier, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\dim_k(\\widetilde\\tau/\\widetilde\\tau_0)=\\text{nombre de branches}\\ ;\n\\]\n\\[\n\\widetilde\\tau_0/\\tau\\simeq\\text{espace tangent à l'origine de }\\widetilde G/G.\n\\]\n\n</p>"
+    },
+    {
+     "id": "10.2.34",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 2.34.",
+     "html": "<div class=\"thm proposition\" id=\"10.2.34\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 2.34.</u></span>\n<u>En caractéristique 0 et pour \\(s\\) singulier, l'entier\n\\(m_1(s)\\) est somme du nombre de branches et de la dimension de \\(\\widetilde G/G\\).</u></div></div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "10-bibliographie",
+   "title": "BIBLIOGRAPHIE",
+   "blocks": [
+    {
+     "id": "10.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"10.bibliographie\"><u>BIBLIOGRAPHIE</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] P. Defrise. Étude locale des correspondances rationnelles entre\nsurfaces algébriques — Thèse d'agrégation — Bruxelles 1949.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] P. Deligne et D. Mumford. The irreducibility of the space of curves\nof a given genus — Publ. Math. IHES <u>36</u> (1969) p. 75–110.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] Enriques — Chisini. Lezioni sulla teoria geometrica delle equazioni\net delle funzioni algebriche — ed Zanichelli — Bologne 1924.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] R. Hartshorne. Residues and duality — Lectures Notes in Math. <u>20</u> —\nSpringer 1966.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] S. Lichtenbaum. Curves over discrete valuation rings — Am. J. of Math.\n15 n° 2 April 1968. p. 380–405.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[6] I. Manin. Rational surfaces over perfect fields — Publ. Math. IHES n° 30.\np. 55–114.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[7] D. Mumford. The topology of normal singularities of an algebraic\nsurfaces and a criterion for simplicity — Publ. Math. IHES\nn° 9 p. 5–22.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[8] A. Néron. Modèles minimaux des variétés abéliennes sur les corps\nlocaux et globaux — Publ. Math. n° 21.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[9] M. Raynaud. Spécialisation du foncteur de Picard. Critères numériques\nde représentabilité — CR Acad. Sci. Paris t. 264 p. 1001–1004 —\nJuin 1967.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[10] Saint-Donat. Sur un théorème de G. Castelnuovo et F. Enriques — Thèse\nde 3° cycle — Lyon.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[11] O. Zariski. On polynomial ideals defined by infinitely near base points\nAm. J. Math. vol. 60–1938 p. 151.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[12] D.G. Northcott. On the genus formula for plane curves. J. London\nMath. Soc. 30 1955 — p. 376–382.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[13] D.G. Northcott. Abstract dilatations and infinitely near points.\nProc. Cambridge Philos. Soc. 52 1956 — p. 178–197.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La notion de \"point infiniment voisin\" est discutée dans l'appendice\npar Lipman au chapitre II de</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[14] O. Zariski. Algebraic surfaces — Ergebnisse <u>61</u>, Springer Verlag.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par P. Deligne"
+}

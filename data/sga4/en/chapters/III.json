@@ -1,0 +1,802 @@
+{
+ "chapter_id": "III",
+ "title": "PRESENTATION III FUNCTIONALITY OF BEAM CATEGORIES",
+ "number": "III",
+ "pages": [
+  {
+   "id": "III",
+   "title": "PRESENTATION III FUNCTIONALITY OF BEAM CATEGORIES",
+   "blocks": [
+    {
+     "id": "III",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"III\">PRESENTATION III<br>FUNCTIONALITY OF BEAM CATEGORIES<span class=\"author\">by J.L. Verdier</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In I 5, we studied the behavior of the pre-bundle categories in relation to\nto functors between argument categories. In this presentation, we extend this study to\ncase of sites and categories of beams (No. 1 and 2). After introducing the topology\ninduced (n° 3), we approach in n° 4 the comparison lemma which will play an important role\nin Exp. IV. In number 5, we study, for the patient reader, certain diagrams\ncommutative functions linked to localized categories (of the type \\(C/X\\)). In Theorem 5.1 we do\nassumptions of smallness on the categories considered. These hypotheses are not, in\ngeneral, satisfied by the sites encountered in practice (\\(\\mathcal{U}\\)-sites). This requires\nsome contortions (4.2, 4.3, 4.4).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-1",
+   "title": "1. Continuous functors",
+   "blocks": [
+    {
+     "id": "III.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.1\">1. Continuous functors</h2>"
+    },
+    {
+     "id": "III.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) and \\(C'\\) be two \\(\\mathcal{U}\\)-sites and \\(u : C \\to C'\\) be a functor\nbetween the underlying categories. We say that \\(u\\) is <em>continuous</em> if for any sheaf of sets\n\\(F\\) on \\(C'\\), the pre-beam \\(X \\mapsto F \\circ u(X)\\) on \\(C\\) is a beam.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This notion of continuity depends a priori on the universe \\(\\mathcal{U}\\) for which the two sites\nare \\(\\mathcal{U}\\)-sites. Proposition 1.5 shows that it does not depend on it.</p>"
+    },
+    {
+     "id": "III.1.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.1.1\">1.1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us denote by \\(i : \\widetilde{C} \\to \\widehat{C}\\) (resp. \\(i' : \\widetilde{C}' \\to \\widehat{C}'\\)) the functor\ncanonical inclusion of the bundles in the pre-sheaves. According to definition 1.1, the functor \\(u\\) is\ncontinuous if and only if there exists a functor \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\) such that we have the equality \\(i u_s = u^* i'\\)\n(with \\(u^* F = F \\circ u\\) (I 5.0)).</p>"
+    },
+    {
+     "id": "III.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a small site, \\(C'\\) be a \\(\\mathcal{U}\\)-site and \\(u : C \\to C'\\)\na functor between the underlying categories. The following properties are equivalent:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>The functor \\(u\\) is continuous.</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>For any object \\(X\\) of \\(C\\) and any sieve \\(R \\hookrightarrow X\\) covering \\(X\\), the morphism\n\\(u_! R \\to u(X)\\) is bicovering in \\(\\widehat{C}'\\) (II 5.2 and I 5.1).<sup class=\"footnote-ref\"><a id=\"III-fn1ref\" href=\"#III-fn1\">(∗)</a></sup></p></li>\n  <li><span class=\"item-label\">iii)</span> <p>For any bi-covering family \\(H_i \\to K\\), \\(i \\in I\\), of \\(\\widehat{C}\\), the family of\n\\(u_! H_i \\to u_! K\\), \\(i \\in I\\), is bicovering in \\(\\widehat{C}'\\).</p></li>\n  <li><span class=\"item-label\">iv)</span> <p>There exists a functor \\(u^s : \\widetilde{C} \\to \\widetilde{C}'\\), commuting at inductive limits\nand “extending \\(u\\)”, i.e. such as the canonical functor diagram\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nis commutative up to isomorphism.</p></li>\n  </ol>\n  <p>Moreover, when \\(C\\) is no longer necessarily a small site, but a \\(\\mathcal{U}\\)-site, we have\nalways i) \\(\\Longleftrightarrow\\) iv) and the functor \\(u^s\\) of iv) is necessarily an adjoint to the left of\nfunctor \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\), and is subsequently determined up to a unique isomorphism.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof:</strong> The proof of i) \\(\\Longleftrightarrow\\) iv) when \\(C\\) is a \\(\\mathcal{U}\\)-site\nwill be done in 4.2. Assume \\(C\\) small. It is clear that iii) \\(\\Longrightarrow\\) ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) iii): Let \\(H_i \\to K\\), \\(i \\in I\\), a bicovering family of \\(\\widehat{C}\\). For\nany beam \\(F\\) on \\(C'\\), the pre-beam \\(u^* F\\) (I 5.0) is a beam on \\(C\\).\nTherefore (II 5.3) the canonical application\n\\[\n\\mathrm{Hom}(K, u^* F) \\longrightarrow \\prod_i \\mathrm{Hom}(H_i, u^* F) ,\n\\]\nis bijective. By addition (I 5.1), we deduce that the application\ncanonical\n\\[\n\\mathrm{Hom}(u_! K, F) \\longrightarrow \\prod_i \\mathrm{Hom}(u_! H_i, F)\n\\]\nis bijective. Consequently (II 5.3) the family \\(u_! H_i \\to u_! K\\), \\(i \\in I\\), is\ndouble covering.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ii) \\(\\Longrightarrow\\) i): Let \\(X\\) be an object of \\(C\\), \\(R \\hookrightarrow X\\) a covering sieve, \\(F\\) a\nbeam to \\(C'\\). According to (II 5.3), the application\n\\[\n\\mathrm{Hom}(u_! X, F) \\longrightarrow \\mathrm{Hom}(u_! R, F)\n\\]\nis bijective. By addition (I 5.1), we deduce that the application\n\\[\n\\mathrm{Hom}(X, u^* F) \\longrightarrow \\mathrm{Hom}(R, u^* F)\n\\]\nis bijective. Therefore \\(u^* F\\) is a sheaf.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) iv): Let's use the usual notations \\(a\\) and \\(i\\) (resp. \\(a'\\) and \\(i'\\))\nfor the functors “associated bundle” and “inclusion in presheaves”.\nFor any beam \\(G\\) on \\(C\\), let us set \\(u^s G = a' u_! i G\\). For any beam \\(F\\)\non \\(C'\\), we have the sequence of natural isomorphisms:\n\\[\n\\mathrm{Hom}(G, u_s F) \\simeq \\mathrm{Hom}(iG, i u_s F) \\simeq \\mathrm{Hom}(iG, u^* i'F) \\simeq \\mathrm{Hom}(u_! iG, i'F) \\simeq \\mathrm{Hom}(a' u_! iG, F) .\n\\]\n(The first isomorphism comes from \\(i\\) being fully faithful;\nthe second isomorphism comes from the definition of \\(u_s\\); the third\nand fourth isomorphism are obtained by addition). As a result \\(u^s\\)\nis deputy on the left to \\(u_s\\). In particular \\(u^s\\) switches to inductive limits\ntives. For any pre-beam \\(K\\) on \\(C\\) and any beam \\(F\\) on \\(C'\\), we have\nthe sequence of natural isomorphisms:\n\\[\n\\mathrm{Hom}(u^s a K, F) \\simeq \\mathrm{Hom}(a K, u_s F) \\simeq \\mathrm{Hom}(K, i u_s F) \\simeq \\mathrm{Hom}(K, u^* i'F) \\simeq \\mathrm{Hom}(u_! K, i'F) \\simeq \\mathrm{Hom}(a' u_! K, F)\n\\]\n(the third isomorphism comes from the definition of \\(u_s\\); the others are obtained-\nnent by addition); hence a functorial isomorphism \\(u^s a K \\simeq a' u_! K\\).\nIn particular, using this isomorphism when \\(K\\) is representable,\nwe obtain, taking into account I 5.4 3), a commutative diagram with isomor-\nphism near:\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>iv) \\(\\Longrightarrow\\) ii): Let \\(h : C \\to \\widehat{C}\\) (resp. \\(h' : C' \\to \\widehat{C}'\\)) be the functor which\nassociates the pre-beam that it represents with an object. Let's consider the\ndiagram:\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{h} &amp; C' \\ar[d]^-{h'} \\\\\n\\widehat{C} \\ar[r]^-{u_!} \\ar[d]_-{a} &amp; \\widehat{C}' \\ar[d]^-{a'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' .\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The top square is commutative (I 5.4 3)) and we have \\(a h = \\varepsilon_C\\), \\(a' h' = \\varepsilon_{C'}\\).\nFor any object \\(K\\) of \\(\\widehat{C}\\), we have a canonical isomorphism (I 3.4):\n\\[\n\\varinjlim_{(h(X) \\to K)\\, \\in\\, \\mathrm{ob}(C/K)} h(X) \\xrightarrow{\\ \\sim\\ } K .\n\\]\nAs the functors \\(u_!\\), \\(u^s\\), \\(a\\) and \\(a'\\) commute at inductive limits,\nwe deduce isomorphisms:\n\\[\n\\varinjlim_{(h(X) \\to K)\\, \\in\\, \\mathrm{ob}(C/K)} u^s a h(X) \\xrightarrow{\\ \\sim\\ } u^s a K ,\n\\]\n\\[\n\\varinjlim_{(h(X) \\to K)\\, \\in\\, \\mathrm{ob}(C/K)} a' u_! h(X) \\xrightarrow{\\ \\sim\\ } a' u_! K .\n\\]\nWe have \\(u_! h = h' u\\) and, by hypothesis, we have an isomorphism \\(a' h' u \\simeq u^s a h\\), hence\nan isomorphism:\n\\[\nu^s a K \\simeq a' u_! K ,\n\\]\nwhich we immediately verify that it is functorial in \\(K\\). The diagram\n\\[\n\\xymatrix{\n\\widehat{C} \\ar[r]^-{u_!} \\ar[d]_-{a} &amp; \\widehat{C}' \\ar[d]^-{a'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' ,\n}\n\\]\nis therefore commutative up to isomorphism. As \\(a i\\) is isomorphic to the functor\nidentical, we have an isomorphism \\(u^s \\simeq a' u_! i\\), hence the uniqueness of \\(u^s\\). Either\n\\(v : H \\to K\\) a bicovering morphism of \\(\\widehat{C}\\). Then \\(a(v)\\) is an isomorphism\n(II 5.3) and consequently \\(a' u_!(v)\\) (isomorphic to \\(u^s a(v)\\)) is an isomorphism.\nSo \\(u_!(v)\\) is transformed by \\(a'\\) into an isomorphism, and consequently \\(u_!(v)\\)\nis two-covering (II 5.3), hence ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The additional assertion, in the case \\(C\\) small, was proven in\ndemonstration course, cqfd.</p>"
+    },
+    {
+     "id": "III.1.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.2.1\">1.2.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The functor \\(u^s : \\widetilde{C} \\to \\widetilde{C}'\\) of 1.2 iv) can be interpreted\noften as a “reciprocal image” functor by a “topos morphism”\n\\(\\widetilde{C}' \\to \\widetilde{C}\\), cf. IV 4.9. Its properties are summarized in the proposition\nnext:</p>"
+    },
+    {
+     "id": "III.1.3",
+     "type": "proposition",
+     "label": "1.3",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(u : C \\to C'\\) be a continuous functor between a small\nsite \\(C\\) and a \\(\\mathcal{U}\\)-site \\(C'\\).</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>The functor \\(u^s\\) is left adjoint to the functor \\(u_s\\).</p></li>\n  <li><span class=\"item-label\">2)</span> <p>We have a canonical isomorphism \\(u^s \\simeq a' u_! i\\).</p></li>\n  <li><span class=\"item-label\">3)</span> <p>We have a canonical isomorphism \\(u^s a \\simeq a' u_!\\).</p></li>\n  <li><span class=\"item-label\">4)</span> <p>The functor \\(u^s\\) commutes at inductive limits.</p></li>\n  <li><span class=\"item-label\">5)</span> <p>When the functor \\(u_!\\) is left-exact (cf. I 5.4 4)), the functor\n\\(u^s\\) is too. More generally the functor \\(u^s\\) commutes to the types of\nfinite projective limits to which the functor \\(u_!\\) commutes.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof:</strong> Assertions 1), 2), 3), 4) have been proven in the course of\ndemonstration of 1.2. Assertion 5) results from isomorphism 2), takes into account\ngiven that \\(i\\) commutes at projective limits and that \\(a'\\) commutes\nwith finite projective limits (II 4.1).</p>"
+    },
+    {
+     "id": "III.1.4",
+     "type": "remarque",
+     "label": "1.4",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remark\" id=\"III.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\">\n  <p>By combining I 5.4 3) and 1.3 3) we obtain a diagram:\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{h} &amp; C' \\ar[d]^-{h'} \\\\\n\\widehat{C} \\ar[r]^-{u_!} \\ar[d]_-{a} &amp; \\widehat{C}' \\ar[d]^-{a'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' ,\n}\n\\]\nwhere the top square is commutative and the bottom square is commutative to\nnear isomorphism. But the functors \\(a\\), \\(a'\\), \\(u_!\\), \\(u^s\\) are only defined at\nnear isomorphism. The reader will be able to verify that we can choose the\nfunctors \\(a\\), \\(a'\\) and \\(u^s\\) so that:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>The compound functors \\(a h\\) and \\(a' h'\\) are injective on the\nsets of objects;</p></li>\n  <li><span class=\"item-label\">2)</span> <p>the diagram\n\\[\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{a h} &amp; C' \\ar[d]^-{a' h'} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nis commutative.</p></li>\n  </ol>\n  <p>More precisely, we can choose the functors \\(a\\) and \\(a'\\) so\nto fulfill condition 1). The functors \\(a\\) and \\(a'\\) being chosen, we can\nchoose the functor \\(u^s\\) so as to satisfy condition 2).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.5",
+     "type": "proposition",
+     "label": "1.5",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(\\mathcal{U} \\subset \\mathcal{V}\\) be two universes, \\(C\\) and \\(C'\\) two \\(\\mathcal{U}\\)-sites,\n\\(u : C \\to C'\\) a functor between the underlying categories. Then \\(u\\) is continuous relative to\ntively to \\(\\mathcal{U}\\) if and only if it is continuous relative to \\(\\mathcal{V}\\). Moreover,\nwhen \\(u\\) is continuous, let us denote by \\(u^s_{\\mathcal{U}}\\) (resp. \\(u^s_{\\mathcal{V}}\\)) the functor between\ncategories of \\(\\mathcal{U}\\)-bundles (resp. \\(\\mathcal{V}\\)-bundles) introduced in 1.2 iv). So\nthe diagram\n\\[\n(1.5.1) \\qquad\n\\xymatrix{\n\\widetilde{C}_{\\mathcal{U}} \\ar[r]^-{u^s_{\\mathcal{U}}} \\ar[d] &amp; \\widetilde{C}'_{\\mathcal{U}} \\ar[d] \\\\\n\\widetilde{C}_{\\mathcal{V}} \\ar[r]_-{u^s_{\\mathcal{V}}} &amp; \\widetilde{C}'_{\\mathcal{V}} ,\n}\n\\]\nwhere the vertical functors are the canonical inclusion functors,\nis commutative up to canonical isomorphism.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> We will only prove in the case where \\(C\\) is \\(\\mathcal{U}\\)-small.\nThe general case will be demonstrated in 4.3. It is clear that if the functor \\(u^*\\)\ntransforms all \\(\\mathcal{V}\\)-beam on \\(C'\\) into \\(\\mathcal{V}\\)-beam on \\(C\\), it transforms everything\n\\(\\mathcal{U}\\)-beam on \\(C'\\) to \\(\\mathcal{U}\\)-beam on \\(C\\). Suppose that \\(u^*\\) transforms everything\n\\(\\mathcal{U}\\)-beam on \\(C'\\) to \\(\\mathcal{U}\\)-beam on \\(C\\). Let us denote \\(\\widehat{C}_{\\mathcal{U}} \\hookrightarrow \\widehat{C}_{\\mathcal{V}}\\) (resp. \\(\\widehat{C}'_{\\mathcal{U}} \\hookrightarrow \\widehat{C}'_{\\mathcal{V}}\\))\nthe categories of \\(\\mathcal{U}\\)-prebundles and \\(\\mathcal{V}\\)-prebundles, \\(u_{\\mathcal{U}!}\\) and \\(u_{\\mathcal{V}!}\\) the\n“reciprocal image” functors for \\(\\mathcal{U}\\)-presheaves and \\(\\mathcal{V}\\)-presheaves\nrespectively. We have a commutative diagram (cf. the explicit construction\nfrom \\(u_!\\) in I 5.1):\n\\[\n(*) \\qquad\n\\xymatrix{\n\\widehat{C}_{\\mathcal{U}} \\ar[r]^-{u_{\\mathcal{U}!}} \\ar[d] &amp; \\widehat{C}'_{\\mathcal{U}} \\ar[d] \\\\\n\\widehat{C}_{\\mathcal{V}} \\ar[r]_-{u_{\\mathcal{V}!}} &amp; \\widehat{C}'_{\\mathcal{V}} .\n}\n\\]\nThe inclusion functors of \\(\\mathcal{U}\\)-pre-sheaves in \\(\\mathcal{V}\\)-pre-sheaves\nare fully faithful and commute at projective limits. It results\nthen from (II 5.1 i)) that a bicovering morphism of \\(\\mathcal{U}\\)-presheaves is\na bicovering morphism of \\(\\mathcal{V}\\)-presheaves. Let then \\(R \\hookrightarrow X\\) be a sieve\ncovering an object \\(X\\) of \\(C\\). According to 1.2 ii), the morphism \\(u_{\\mathcal{U}!} R \\to u_{\\mathcal{U}!} X\\)\nis double covering. Using the commutativity of (*) and the above,\nwe deduce that the morphism \\(u_{\\mathcal{V}!} R \\to u_{\\mathcal{V}!} X\\) is bicovering. As a result\n(1.2), the functor \\(u^*\\) transforms the \\(\\mathcal{V}\\)-sheaves on \\(C'\\) into \\(\\mathcal{V}\\)-sheaves\non \\(C\\). The commutativity of 1.5.1 then results from the commutativity of (*),\nof II 3.6 and 1.3 2).</p>"
+    },
+    {
+     "id": "III.1.6",
+     "type": "proposition",
+     "label": "1.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) and \\(C'\\) be two \\(\\mathcal{U}\\)-sites, \\(u : C \\to C'\\) a functor\nbetween the underlying categories. Let's consider the conditions:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>\\(u\\) is continuous (see 1.1 and 1.2).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>For any covering family \\((X_i \\to X)\\), \\(i \\in I\\), of \\(C\\), the family\n\\((u X_i \\to u X)\\), \\(i \\in I\\), of \\(C'\\), is covering.</p></li>\n  </ol>\n  <p>We have the implication i) \\(\\Longrightarrow\\) ii).</p>\n  <p>Suppose that the topology of \\(C\\) can be defined by a pretopology\n\\(T\\) (II 1.3) and that the functor \\(u\\) commutes to the fibered products.<sup class=\"footnote-ref\"><a id=\"III-fn2ref\" href=\"#III-fn2\">(∗)</a></sup> Then the\nconditions i) and ii) are equivalent and are equivalent to the con-\nnext wording:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">iii)</span> <p>The functor \\(u\\) transforms the covering families of \\(T\\) into families\ncoverings of \\(C'\\).</p></li>\n  </ol>\n  <p>In particular, suppose that in \\(C\\) the fiber products are\nrepresentable and that the functor \\(u\\) commutes to fiber products. So\nconditions i) and ii) are equivalent.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> Let us show that i) \\(\\Longrightarrow\\) ii). Let \\(X_i \\to X\\), \\(i \\in I\\), be a covering family\nfrom \\(C\\). For any beam \\(F\\) over \\(C'\\), \\(u^* F\\) is a beam. As a result, the app-\napplication\n\\[\n\\mathrm{Hom}(X, u^* F) \\longrightarrow \\prod_i \\mathrm{Hom}(X_i, u^* F)\n\\]\nis injective (II 5.1). Hence an injective application\n\\[\n\\mathrm{Hom}(u_! X, F) \\longrightarrow \\prod_i \\mathrm{Hom}(u_! X_i, F) .\n\\]\nSo the family \\(u_! X_i \\to u_! X\\), \\(i \\in I\\), is covering in \\(C'\\) (II 5.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Every covering family of the pretopology \\(T\\) is a family\ncovering of \\(C\\), hence ii) \\(\\Longrightarrow\\) iii). Let us show that iii) \\(\\Longrightarrow\\) i). Let \\(X\\) be a\nobject of \\(C\\) and \\(X_i \\to X\\), \\(i \\in I\\), a covering family of \\(\\mathrm{Cov}(X)\\) (II 1.3).\nThe morphisms \\(X_i \\to X\\) are quatable and the functor \\(u\\) commutes to\nfiber products. As a result, the fiber products \\(u(X_i) \\times_{u(X)} u(X_j)\\) are\nrepresentable and canonically isomorphic to \\(u(X_i \\times_X X_j)\\). Let \\(F\\) be a\nbeam to \\(C'\\). Then the set diagram:\n\\[\nF(u(X)) \\longrightarrow \\prod_i F(u(X_i)) \\rightrightarrows \\prod_{i,j} F(u(X_i \\times_X X_j))\n\\]\nis correct (II 2.1, I 3.5 and I 2.12). Therefore the diagram\nof sets\n\\[\nu^* F(X) \\longrightarrow \\prod_i u^* F(X_i) \\rightrightarrows \\prod_{i,j} u^* F(X_i \\times_X X_j)\n\\]\nis correct. Therefore \\(u^* F\\) is a sheaf (II 2.4), hence i). The last asser-\ntion of 1.6 results from the above and from the fact that, when the products\nfibers are representable in \\(C\\), all covering families of \\(C\\)<sup class=\"footnote-ref\"><a id=\"III-fn3ref\" href=\"#III-fn3\">(1)</a></sup>\ndefine on \\(C\\) a pretopology whose associated topology is the\ntopology of \\(C\\).</p>"
+    },
+    {
+     "id": "III.1.7",
+     "type": "proposition",
+     "label": "1.7",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.7</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a small site, \\(C'\\) be a \\(\\mathcal{U}\\)-site and \\(u : C \\to C'\\)\na continuous functor. Let \\(\\gamma\\) be an algebraic structure defined by limits\nfinite projectives, such as in the category of \\(\\gamma\\)-objects of \\(\\mathcal{U}\\text{-Ens}\\)\nthe \\(\\mathcal{U}\\)-inductive limits are representable.<sup class=\"footnote-ref\"><a id=\"III-fn4ref\" href=\"#III-fn4\">(2)</a></sup> We use the\nnotations of proposition II 6.4. The functor \\(u_s\\) commutes at the limits\nprojectives and therefore defines a functor \\(u_s^\\gamma : \\widetilde{C}'_\\gamma \\to \\widetilde{C}_\\gamma\\). The\nfunctor \\(u_s^\\gamma\\) admits a left adjoint \\(u^s_\\gamma\\) which has the properties\nfollowing:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>We have a canonical isomorphism \\(u^s_\\gamma \\xrightarrow{\\ \\sim\\ } a'_\\gamma u_{\\gamma !} i_\\gamma\\), and \\(u^s_\\gamma\\) commutes\nto the finite projective limits to which \\(u_{\\gamma !}\\) commutes.</p></li>\n  <li><span class=\"item-label\">2)</span> <p>We have a canonical isomorphism \\(u^s_\\gamma a_\\gamma \\xrightarrow{\\ \\sim\\ } a'_\\gamma u_{\\gamma !}\\).</p></li>\n  <li><span class=\"item-label\">3)</span> <p>The functor \\(u^s_\\gamma\\) commutes at inductive limits.</p></li>\n  <li><span class=\"item-label\">4)</span> <p>If \\(u^s\\) is exact on the left, the diagram (notation of II 6.3.0)\n\\[\n\\xymatrix{\n\\widetilde{C}_\\gamma \\ar[r]^-{u^s_\\gamma} \\ar[d]_-{\\mathrm{esj}^\\sim} &amp; \\widetilde{C}'_\\gamma \\ar[d]^-{\\mathrm{esj}'^\\sim} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nis commutative up to isomorphism and the functor \\(u^s_\\gamma\\) is exact.</p></li>\n  <li><span class=\"item-label\">5)</span> <p>Suppose that the functor \\(\\mathrm{esj}^\\sim\\) (resp. \\(\\mathrm{esj}'^\\sim\\)) has an adjoint to\nleft \\(\\mathrm{Lib}^\\sim\\) (resp. \\(\\mathrm{Lib}'^\\sim\\)) (II 6.5). We have a canonical isomorphism:\n\\[\nu^s_\\gamma \\mathrm{Lib}^\\sim \\xrightarrow{\\ \\sim\\ } \\mathrm{Lib}'^\\sim u^s .\n\\]</p></li>\n  </ol>\n  <p>Also, when \\(C\\) is not necessarily a small site but\na \\(\\mathcal{U}\\)-site, the functor \\(u_s^\\gamma\\) admits a left adjoint \\(u^s_\\gamma\\). Finally if \\(\\mathcal{V}\\) is\na universe containing \\(\\mathcal{U}\\) and if \\(u^s_{\\gamma, \\mathcal{U}}\\) (resp. \\(u^s_{\\gamma, \\mathcal{V}}\\)) designates the adjoint of\nleft of \\(u_s\\) relative to the universe \\(\\mathcal{U}\\) (resp. \\(\\mathcal{V}\\)), the following diagram,\nanalogous to diagram 1.5.1:\n\\[\n(1.7.1) \\qquad\n\\xymatrix{\n\\widetilde{C}_{\\gamma, \\mathcal{U}} \\ar[r]^-{u^s_{\\gamma, \\mathcal{U}}} \\ar[d] &amp; \\widetilde{C}'_{\\gamma, \\mathcal{U}} \\ar[d] \\\\\n\\widetilde{C}_{\\gamma, \\mathcal{V}} \\ar[r]_-{u^s_{\\gamma, \\mathcal{V}}} &amp; \\widetilde{C}'_{\\gamma, \\mathcal{V}}\n}\n\\]\nis commutative up to canonical isomorphism.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> The demonstration, in the case where \\(C\\) is a small site, is left\nto the reader. It will be completed in 4.3 in the case where \\(C\\) is a \\(\\mathcal{U}\\)-site.</p>"
+    },
+    {
+     "id": "III.1.8",
+     "type": "notation",
+     "label": "1.8",
+     "title": "Rating",
+     "html": "<div class=\"thm thm-remark notation\" id=\"III.1.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Rating</span> <span class=\"thm-num\">1.8</span></div>\n  <div class=\"thm-body\">\n  <p>We will now use the notation \\(u_s\\) to designate\nthe functor \\(u_s^\\gamma\\). This notation is not likely to cause confusion,\nbecause the functor \\(u_s\\) (defined on the set sheaves) commutes to\nfinite projective limits.</p>\n  <p>Similarly, when \\(u^s\\) is left-exact, we will use the\nnotation \\(u^s\\) to denote the functor \\(u^s_\\gamma\\). This abuse of notation is just\ntified by 1.7 4).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.9.1",
+     "type": "exemple",
+     "label": "1.9.1",
+     "title": "Example",
+     "html": "<div class=\"thm thm-remark example\" id=\"III.1.9.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Example</span> <span class=\"thm-num\">1.9.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(X\\) be a small topological space. Let us denote by \\(\\mathrm{Ouv}(X)\\)\nthe open category of \\(X\\) (the objects of \\(\\mathrm{Ouv}(X)\\) are the subsets\nopen of \\(X\\), the morphisms of \\(\\mathrm{Ouv}(X)\\) are the inclusions) provided with the\ncanonical topology. A family \\((U_i \\subset U)\\), \\(i \\in I\\), is covering if and only-\nment if the open \\(U_i\\) covers \\(U\\) (II 2.6). The assembly harnesses\nbles on \\(\\mathrm{Ouv}(X)\\) are therefore the sheaves of sets in the sense of [TF].\nLet \\(f : X \\to Y\\) be a continuous application. We deduce a functor\n\\(f^{-1} : \\mathrm{Ouv}(Y) \\to \\mathrm{Ouv}(X)\\): for all open \\(U\\) of \\(Y\\), \\(f^{-1}(U)\\) is the image\nreciprocal of \\(U\\) by the application \\(f\\). The functor \\(f^{-1}\\) is a functor\ncontinuous (1.6). The functor \\(f^{-1}_s : \\mathrm{Ouv}(X)^{\\sim} \\to \\mathrm{Ouv}(Y)^{\\sim}\\) is the functor\ndirect image for the beams, in the sense of [TF]. The functor\n\\((f^{-1})^s : \\mathrm{Ouv}(Y)^{\\sim} \\to \\mathrm{Ouv}(X)^{\\sim}\\) is the reciprocal image functor for\nbeams within the meaning of [TF]. The functor \\((f^{-1})^s\\) commutes at the limits\nfinite projectives, thanks to 1.3 5).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.9.2",
+     "type": "exemple",
+     "label": "1.9.2",
+     "title": "Example",
+     "html": "<div class=\"thm thm-remark example\" id=\"III.1.9.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Example</span> <span class=\"thm-num\">1.9.2</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(X\\) be a topological space and \\(Y \\hookrightarrow X\\) be an open space of \\(X\\).\nAny open of \\(Y\\) is an open of \\(X\\), hence a functor \\(\\varphi : \\mathrm{Ouv}(Y) \\to \\mathrm{Ouv}(X)\\).\nThe functor \\(\\varphi\\) is continuous (1.6). The functor \\(\\varphi_s : \\mathrm{Ouv}(X)^{\\sim} \\to \\mathrm{Ouv}(Y)^{\\sim}\\) is\nthe “restriction to \\(Y\\)” functor. The functor \\(\\varphi^s_{\\mathrm{ab}} : \\mathrm{Ouv}(Y)^{\\sim} \\to \\mathrm{Ouv}(X)^{\\sim}\\)\n(II 6.3.3, I 1.7) is the “extension by zero outside \\(Y\\)” functor introduced\nin [TF]. The functor \\(\\varphi^s : \\mathrm{Ouv}(Y)^{\\sim} \\to \\mathrm{Ouv}(X)^{\\sim}\\) (1.3) is analogous to the\nfunctor “extend by zero”; for any beam \\(H\\) on \\(Y\\) and all\npoint \\(y \\in Y\\), the fiber at \\(y\\) of \\(\\varphi^s H\\) is canonically isomorphic to the fiber\nin \\(y\\) from \\(H\\); for any point \\(x \\in X\\), \\(x \\notin Y\\), the fiber at \\(x\\) of \\(\\varphi^s H\\) is empty.\nThe functor \\(\\varphi^s\\) is called the “vacuum extension” functor.\noutside of \\(Y\\)”. The functor \\(\\varphi^s\\) commutes to fiber products and products\nfinite on a non-empty set of indices, but it does not transform\nthe final object of \\(\\mathrm{Ouv}(Y)^{\\sim}\\) to the final object of \\(\\mathrm{Ouv}(X)^{\\sim}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.9.3",
+     "type": "exemple",
+     "label": "1.9.3",
+     "title": "Example",
+     "html": "<div class=\"thm thm-remark example\" id=\"III.1.9.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Example</span> <span class=\"thm-num\">1.9.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) and \\(C'\\) be two small sites, \\(u : C \\to C'\\) a functor\nbetween the underlying categories which transforms any covering family\nof \\(C\\) in covering family of \\(C'\\). The functor \\(u\\) is not continuous in general\n(see however 1.6). Here is a counterexample. Let \\(S\\) be a set of\ninfinite cardinal of the universe \\(\\mathcal{U}\\), and \\(C\\) the full subcategory of the category\nsets, whose objects are finite, non-empty subsets,\nfrom \\(S\\). We provide \\(C\\) with the canonical topology. It will be noted that families\ncoverings of \\(C\\) are the surjective families of applications and that the\ncovering families are not empty. We will further notice that there is,\nup to isomorphism, that two constant sheaves on \\(C\\): the sheaf\nof value the empty set and the value bundle the set with one element.\nLet \\(C = C'\\) and let \\(u : C \\to C'\\) be a constant functor. The functor \\(u\\)\ntransforms the covering families of \\(C\\) into covering families of \\(C'\\). The\nfunctor \\(u\\) is not continuous. Indeed, as the pre-beams represent\ntables of \\(C'\\) are sheaves, for any object \\(X\\) of \\(C'\\), there exists a\nbeam \\(F\\) on \\(C'\\) such that the cardinality of the set \\(F(X)\\) is \\(\\geq 2\\), and\nconsequently the pre-beam \\(u^* F\\) is not a beam.</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "III-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) “Covering” instead of “bicovering” was not necessarily enough, cf. example 1.9.3 below. </p>"
+    },
+    {
+     "id": "III-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) In fact, it is enough for \\(u\\) to commute to the fiber products occurring in base changes for morphisms coming from covering families for \\(T\\). </p>"
+    },
+    {
+     "id": "III-fn3",
+     "number": "(1)",
+     "html": "<p>(1) indexed by the sets belonging to a suitable universe. </p>"
+    },
+    {
+     "id": "III-fn4",
+     "number": "(2)",
+     "html": "<p>(2) It can in fact be shown that this condition is always satisfied. </p>"
+    }
+   ]
+  },
+  {
+   "id": "III-2",
+   "title": "2. Cocontinuous functors",
+   "blocks": [
+    {
+     "id": "III.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.2\">2. Cocontinuous functors</h2>"
+    },
+    {
+     "id": "III.2.1",
+     "type": "definition",
+     "label": "2.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) and \\(C'\\) be two \\(\\mathcal{U}\\)-sites and \\(u : C \\to C'\\) be a functor\nbetween the underlying categories. We say that \\(u\\) is <em>cocontinuous</em> if it\nhas the following property:</p>\n  <p>(COC) For any object \\(Y\\) of \\(C\\) and for any screen covering \\(R \\hookrightarrow u(Y)\\),\nthe sieve of \\(Y\\) generated by the arrows \\(Z \\to Y\\) such that \\(u(Z) \\to u(Y)\\)\nfactors by \\(R\\), covers \\(Y\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.2",
+     "type": "proposition",
+     "label": "2.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a small site, \\(C'\\) be a \\(\\mathcal{U}\\)-site and \\(u : C \\to C'\\)\na functor between the underlying categories. Let us note \\(\\widehat{u}_* : \\widehat{C} \\to \\widehat{C}'\\)\nthe right-adjoint functor to the functor \\(F \\mapsto F \\circ u = \\widehat{u}^* F\\) (I 5.1). The\nfunctor \\(u\\) is cocontinuous if and only if for any sheaf \\(G\\) on\n\\(C\\), \\(\\widehat{u}_* G\\) is a beam on \\(C'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> The condition is sufficient. Suppose that for any sheaf\n\\(G\\) on \\(C\\), the pre-beam \\(\\widehat{u}_* G\\) is a beam. Let \\(Y\\) be an object of \\(C\\)\nand \\(R \\hookrightarrow u(Y)\\) a covering sieve. We have an isomorphism\n\\(\\mathrm{Hom}(u(Y), \\widehat{u}_* G) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(R, \\widehat{u}_* G)\\), hence by addition (I 5.1) an iso-\nmorphism \\(\\mathrm{Hom}(\\widehat{u}^* \\circ u(Y), G) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(\\widehat{u}^* R, G)\\). We deduce (II 5.3) that the\nmorphism \\(\\widehat{u}^* R \\to \\widehat{u}^* u(Y)\\) is bicovering. But the functor \\(\\widehat{u}^*\\) commutes to\nprojective limits and consequently the morphism \\(\\widehat{u}^* R \\to \\widehat{u}^* u(Y)\\) is a\nmonomorphism. It is therefore a covering monomorphism. On the other hand we\nhas a canonical morphism \\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y)\\) deduced from the addition morphism\n\\(\\mathrm{id}_C \\to \\widehat{u}^* u\\), (I 5.4 3)). Let's then do the base change \\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y)\\).\nWe obtain a sieve covering \\(Y\\):\n\\[\n\\widehat{u}^* R \\times_{\\widehat{u}^* u(Y)} Y \\longrightarrow Y ,\n\\]\nand when we look for the arrows \\(Z \\to Y\\) which are factorized by this sieve,\nwe obtain the sieve described by the property (COC).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The condition is necessary: Let \\(S\\) be an object of \\(C'\\) and\n\\(R \\hookrightarrow S\\) a sieve covering \\(S\\). We must demonstrate that for any sheaf\n\\(G\\) on \\(C\\) we have an isomorphism\n\\[\n\\mathrm{Hom}(S, \\widehat{u}_* G) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(R, \\widehat{u}_* G) .\n\\]\nThen using proposition II 5.3 and isomorphisms\nof addition, we see that it is enough to demonstrate that the monomorphism\n\\(\\widehat{u}^* R \\to \\widehat{u}^* S\\) is covering. To do this, it is enough to demonstrate (II 5.1)\nthat for any change of base \\(Y \\to \\widehat{u}^* S\\) the sieve \\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} Y\\) is\ncovering, (\\(Y\\) object of \\(C\\)). But, according to the properties of the functors\nadjoints and I 5.4 3), the morphism \\(Y \\to \\widehat{u}^* S\\) is factorized by\n\\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y) \\to \\widehat{u}^* S\\), and consequently the sieve \\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} Y \\to Y\\) is the\ntransformed by the base change \\(Y \\xrightarrow{\\ p\\ } \\widehat{u}^* u(Y)\\) of the monomorphism\n\\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} \\widehat{u}^* u(Y) \\xrightarrow{\\ q\\ } \\widehat{u}^* u(Y)\\). But the functor \\(\\widehat{u}^*\\) commutes at the limits\nprojectives, and consequently the monomorphism \\(q\\) is the transformed by \\(\\widehat{u}^*\\)\nof the sieve \\(R \\times_S u(Y) \\hookrightarrow u(Y)\\), which is covering. The hypothesis (COC)\nthen allows us to say that the sieve \\(\\widehat{u}^* R \\times_{\\widehat{u}^* S} Y \\to Y\\) is covering, cqfd.</p>"
+    },
+    {
+     "id": "III.2.3",
+     "type": "proposition",
+     "label": "2.3",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) and \\(C'\\) be two \\(\\mathcal{U}\\)-sites and \\(u : C \\to C'\\) be a functor\ncocontinuous. Let us denote \\(u^* : \\widetilde{C}' \\to \\widetilde{C}\\) the functor \\(u^* = a \\widehat{u}^* i'\\), where \\(a\\) denotes\nthe “associated bundle” functor for \\(C\\), \\(\\widehat{u}^*\\) the functor \\(F \\mapsto F \\circ u\\), \\(i'\\) the\ninclusion functor \\(\\widetilde{C}' \\to \\widehat{C}'\\).</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>The functor \\(u^*\\) commutes at inductive limits and is exact.</p></li>\n  <li><span class=\"item-label\">2)</span> <p>We have a canonical isomorphism \\(u^* a' \\simeq a \\widehat{u}^*\\), where \\(a'\\) denotes the\n“associated bundle” functor for \\(\\widehat{C}'\\).</p></li>\n  <li><span class=\"item-label\">3)</span> <p>The functor \\(u^*\\) admits a right adjoint \\(u_* : \\widetilde{C} \\to \\widetilde{C}'\\). When \\(C\\)\nis small, the diagram\n\\[\n(2.3.1) \\qquad\n\\xymatrix{\n\\widetilde{C} \\ar[r]^-{u_*} \\ar@{^{(}-&gt;}[d]_-{i} &amp; \\widetilde{C}' \\ar@{^{(}-&gt;}[d]^-{i'} \\\\\n\\widehat{C} \\ar[r]_-{\\widehat{u}_*} &amp; \\widehat{C}'\n}\n\\]\nwhere the bottom functor is right-adjoined to the functor \\(\\widehat{u}^*\\) (I 5.1), is\ncommutative up to canonical isomorphism.</p></li>\n  <li><span class=\"item-label\">4)</span> <p>Let \\(\\mathcal{V} \\supset \\mathcal{U}\\) be a universe. Let us note \\(u_{*\\mathcal{U}} : \\widetilde{C}_{\\mathcal{U}} \\to \\widetilde{C}'_{\\mathcal{U}}\\)\n(resp. \\(u_{*\\mathcal{V}} : \\widetilde{C}_{\\mathcal{V}} \\to \\widetilde{C}'_{\\mathcal{V}}\\)) the right adjoint functor relating to the universe \\(\\mathcal{U}\\) (resp. \\(\\mathcal{V}\\)) whose existence\ntence is asserted in 3). The diagram\n\\[\n(2.3.2) \\qquad\n\\xymatrix{\n\\widetilde{C}_{\\mathcal{U}} \\ar[r]^-{u_{*\\mathcal{U}}} \\ar[d] &amp; \\widetilde{C}'_{\\mathcal{U}} \\ar[d] \\\\\n\\widetilde{C}_{\\mathcal{V}} \\ar[r]_-{u_{*\\mathcal{V}}} &amp; \\widetilde{C}'_{\\mathcal{V}}\n}\n\\]\nis commutative up to isomorphism.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> Assertions 1) and 2) follow immediately from II 3.4. The assertion\n3), when \\(C\\) is small, results from 2.2. When \\(C\\) is a \\(\\mathcal{U}\\)-site, it\nwill be demonstrated in 4.4. Assertion 4), when \\(C\\) is small, results from\nthe analogous commutativity assertion when the topologies on \\(C\\) and \\(C'\\)\nare chaotic and of I 3.5. When the topologies on \\(C\\) and \\(C'\\) are\nchaotic, the commutativity of (2.3.2) is immediately seen on the\nexplicit description of \\(u_*\\) (I 5.1).</p>"
+    },
+    {
+     "id": "III.2.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.2.4\">2.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We will not develop here the considerations relating to\n\\(\\gamma\\) - beam category objects. It will suffice for us to note that\nthe functors \\(u^*\\) and \\(u_*\\) introduced in this number always commute\nwith finite projective limits (contrary to what happened in\nthe previous number for the functor \\(u^s\\)). As a result, they continue\nnaturally into functors defined on the \\(\\gamma\\)-objects, which are adjoint\none from the other and which commute to the “overall bundle” functors\nunderlying”. We will do the notation abuses reported in 1.8, con-\nPlease note by \\(u^*\\) and \\(u_*\\) the extensions to \\(\\gamma\\)-objects.</p>"
+    },
+    {
+     "id": "III.2.5",
+     "type": "proposition",
+     "label": "2.5",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) and \\(C'\\) be two \\(\\mathcal{U}\\)-sites and \\(C \\overset{v}{\\underset{u}{\\rightleftarrows}} C'\\) be a couple\nof functors, where \\(v\\) is adjoint to the left of \\(u\\). The following properties\nare equivalent:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>The functor \\(u\\) is continuous.</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>The functor \\(v\\) is cocontinuous.</p></li>\n  </ol>\n  <p>Moreover, under these equivalent conditions, we have canonical isomorphisms\n\\(v_* \\simeq u_s\\), \\(v^* \\simeq u^s\\). In particular, the functor \\(u^s\\) commutes at the limits\nfinite projectives.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> The property for a functor to be continuous or cocontinuous does not\ndoes not depend on the universe \\(\\mathcal{U}\\) for which \\(C\\) and \\(C'\\) are \\(\\mathcal{U}\\)-sites (this is\nimmediately in the case of a cocontinuous functor, and this follows from 1.5\nin the case of a continuous functor). We can therefore, even if it means increasing\nthe universe, assume that \\(C\\) and \\(C'\\) are small. The proposition then results\nof 2.2 and I 5.6.</p>"
+    },
+    {
+     "id": "III.2.6",
+     "type": "proposition",
+     "label": "2.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(u : C \\to C'\\) be a continuous and cocontinuous functor between\ntwo \\(\\mathcal{U}\\)-sites. Then the functor \\(u^* : \\widetilde{C}' \\to \\widetilde{C}\\) (2.3) commutes to \\(\\mathcal{U}\\)-limits\ninductive and projective. Let us note \\(u_! : \\widetilde{C} \\to \\widetilde{C}'\\) and \\(u_* : \\widetilde{C} \\to \\widetilde{C}'\\)\nthe functors adjoint to \\(u^*\\) on the left and on the right respectively. The\nfunctor \\(u_!\\) is fully faithful if and only if the functor \\(u_*\\) is\nfully faithful. When \\(u\\) is fully faithful, \\(u_!\\) is fully\nfaithful and the converse is true when the topologies of \\(C\\) and \\(C'\\) are\nless fine than the canonical topology.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The functor \\(u^*\\) admits a right adjoint \\(u_*\\) (2.3) and an adjoint\nleft \\(u_!\\) (1.2). The functor \\(u^*\\) therefore commutes at inductive limits\nand projectives (I 2.11). The fact that the functor \\(u_!\\) is fully\nfaithful if and only if the functor \\(u_*\\) is fully faithful is a\ngeneral property of adjoint functors (I 5.7.1). When \\(u\\) is\nfully faithful, the functor \\(\\widehat{u}_* : \\widehat{C}_{\\mathcal{V}} \\to \\widehat{C}'_{\\mathcal{V}}\\) relating to the \\(\\mathcal{V}\\)-presheaves,\nfor a large enough universe \\(\\mathcal{V}\\) is fully faithful (I 5.7). As a result\nthe functor \\(u_* : \\widetilde{C} \\to \\widetilde{C}'\\) is fully faithful by virtue of the commu-\ntativity of (2.3.1) and (2.3.2), so \\(u_!\\) is fully faithful according to\nthe above. The converse is deduced from the existence of the diagram\ncommutative 1.2 iv), taking into account the fact that the functors \\(\\varepsilon_C\\) and \\(\\varepsilon_{C'}\\) are\nfully faithful when the topologies are less fine than the topo-\ncanonical logy, cqfd.</p>"
+    },
+    {
+     "id": "III.2.7",
+     "type": "exemple",
+     "label": "2.7",
+     "title": "Example",
+     "html": "<div class=\"thm thm-remark example\" id=\"III.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Example</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\">\n  <p>With the notations of 1.9.2, the functor\n\\[\n\\varphi : \\mathrm{Ouv}(Y) \\longrightarrow \\mathrm{Ouv}(X)\n\\]\nis continuous (1.9.2) and cocontinuous (2.2). Additionally, be \\(i : Y \\to X\\)\nthe canonical injection and \\(i^{-1} : \\mathrm{Ouv}(X) \\to \\mathrm{Ouv}(Y)\\) the functor that it\nallows you to define (1.9.1). The functor \\(i^{-1}\\) is right adjoint to the functor \\(\\varphi\\).\nWe therefore have a sequence of three adjoint functors:\n\\[\n\\begin{array}{ccc}\n\\varphi^s &amp; , &amp; \\varphi_s \\\\\n &amp; &amp; \\| \\\\\n &amp; &amp; \\varphi^* \\ , \\ \\varphi_*\n\\end{array}\n\\]\nand canonical isomorphisms \\(\\varphi^* \\simeq (i^{-1})^s\\), \\(\\varphi_* \\simeq i^{-1}_s\\).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-3",
+   "title": "3. Induced topology",
+   "blocks": [
+    {
+     "id": "III.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.3\">3. Induced topology</h2>"
+    },
+    {
+     "id": "III.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.3.1\">3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C'\\) be a site, \\(C\\) be a category and \\(u : C \\to C'\\) be a functor.\nFor any universe \\(\\mathcal{U}\\) such that \\(C'\\) is a \\(\\mathcal{U}\\)-site and \\(C\\) is a \\(\\mathcal{U}\\)-small category-\ngorie, let us denote by \\(\\mathscr{C}_{\\mathcal{U}}\\) the finest among the topologies \\(T\\) on \\(C\\) which\nmake \\(u\\) continuous (1.1). (Such a topology exists thanks to II 2.2).\nThe topology \\(\\mathscr{C}_{\\mathcal{U}}\\) does not depend on the universe \\(\\mathcal{U}\\). Indeed, if \\(\\mathcal{V} \\supset \\mathcal{U}\\) is\na universe we have \\(\\mathscr{C}_{\\mathcal{U}} = \\mathscr{C}_{\\mathcal{V}}\\) (1.1 and 1.5). The topology \\(\\mathscr{C}_{\\mathcal{U}}\\) is called\n<em>the topology induced on \\(C\\) by the topology of \\(C'\\) by means of the functor</em> \\(u\\)<sup class=\"footnote-ref\"><a id=\"III-fn5ref\" href=\"#III-fn5\">(1)</a></sup>.</p>"
+    },
+    {
+     "id": "III.3.2",
+     "type": "proposition",
+     "label": "3.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a small category, \\(C'\\) be a \\(\\mathcal{U}\\)-site, \\(u : C \\to C'\\)\na functor, \\(\\mathscr{C}\\) the topology on \\(C\\) induced by \\(u\\). Let \\(X\\) be an object of\n\\(C\\) and \\(R \\hookrightarrow X\\) a screen of \\(X\\). The following properties are equivalent:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>The screen \\(R \\hookrightarrow X\\) is covering for \\(\\mathscr{C}\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>For any change to base \\(Y \\to X\\), where \\(Y\\) is an object of \\(C\\), the\nmorphism \\(u_!(R \\times_X Y) \\to u(Y)\\) is bicovering in \\(\\widehat{C}'\\) (II 5.2).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> i) \\(\\Longrightarrow\\) ii) results from the axiom (T1) of topologies and from 1.2.\nii) \\(\\Longrightarrow\\) i): For any beam \\(F\\) on \\(C'\\), the application\n\\[\n\\mathrm{Hom}(Y, u^* F) \\longrightarrow \\mathrm{Hom}(R \\times_X Y, u^* F)\n\\]\nis isomorphic, by addition (I 5.1), to the application\n\\[\n\\mathrm{Hom}(u(Y), F) \\longrightarrow \\mathrm{Hom}(u_!(R \\times_X Y), F)\n\\]\nwhich is bijective (II 5.3). As a result (II 2.2) the sieve \\(R \\hookrightarrow X\\) is\ncovering for \\(\\mathscr{C}\\).</p>"
+    },
+    {
+     "id": "III.3.3",
+     "type": "corollaire",
+     "label": "3.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"III.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C'\\) be a site, \\(C\\) be a category, \\(u : C \\to C'\\) be a functor,\n\\(\\mathscr{C}\\) the topology on \\(C\\) induced by the topology of \\(C'\\). Or \\((X_i \\to X)\\) \\(i \\in I\\)\na family of quarable morphisms of \\(C\\) and suppose that \\(u\\) commutes to the pro-\nfiber ducts.<sup class=\"footnote-ref\"><a id=\"III-fn6ref\" href=\"#III-fn6\">(∗)</a></sup> The following properties are equivalent:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>The family \\(X_i \\to X\\), \\(i \\in I\\), is covering for \\(\\mathscr{C}\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>The family \\((u(X_i) \\to u(X))\\), \\(i \\in I\\), is covering.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> i) \\(\\Longrightarrow\\) ii) follows from 1.6. ii) \\(\\Longrightarrow\\) i): Let \\(\\mathcal{U}\\) be a universe such that \\(C\\)\neither \\(\\mathcal{U}\\)-small and \\(C'\\) a \\(\\mathcal{U}\\)-site. Let \\(R \\hookrightarrow X\\) be the sieve generated by the\n\\(X_i \\to X\\). The pre-bundle \\(R\\) is the core of the pair of arrows (I 2.12 and I 3.5)\n\\[\n\\coprod_{i,j} X_i \\times_X X_j \\rightrightarrows \\coprod_i X_i\n\\]\n(the direct sum is taken here in \\(\\widehat{C}\\)). As the functor \\(u_!\\) commutes\nat the inductive limits (I 5.4), the pre-bundle \\(u_! R\\) is the co-core of the\npair of arrows\n\\[\n\\coprod_{i,j} u(X_i \\times_X X_j) \\rightrightarrows \\coprod_i u(X_i) .\n\\]\nAs the functor \\(u\\) commutes to fiber products, the presheaf \\(u_! R\\) is\nthe core of the pair of arrows\n\\[\n\\coprod_{i,j} u(X_i) \\times_{u(X)} u(X_j) \\rightrightarrows \\coprod_i u(X_i) ,\n\\]\nand consequently \\(u_! R \\to u(X)\\) is a sieve of \\(u(X)\\) generated by the\n\\(u(X_i) \\to u(X)\\), \\(i \\in I\\). Using once again the fact that \\(u\\) switches to\nfiber products, we show that for any change of base \\(Y \\to X\\), where\n\\(Y\\) is an object of \\(C\\), \\(u_!(R \\times_X Y) \\to u(Y)\\) is a sieve of \\(u(Y)\\) generated\nby \\(u(X_i) \\times_{u(X)} u(Y) \\to u(Y)\\), \\(i \\in I\\). Like the \\(u(X_i) \\to u(X)\\) family,\n\\(i \\in I\\), is covering, the family \\(u(X_i) \\times_{u(X)} u(Y) \\to u(Y)\\), \\(i \\in I\\), is\ncovering. So \\(u_!(R \\times_X Y) \\to u(Y)\\) is a covering sieve and therefore\n(3.2) \\(R \\hookrightarrow X\\) is covering for \\(\\mathscr{C}\\), cqfd.</p>"
+    },
+    {
+     "id": "III.3.4",
+     "type": "corollaire",
+     "label": "3.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"III.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C'\\) be a \\(\\mathcal{U}\\)-site, \\(C\\) be a full subcategory of \\(C'\\),\n\\(u : C \\to C'\\) the inclusion functor. It is assumed that fiber products\nare representable in \\(C\\) and that \\(u\\) commutes to fiber products. The\nfollowing conditions are equivalent:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>a) For any object \\(X\\) of \\(C\\), any covering family \\((Y_j \\to X)\\), \\(j \\in J\\),\nof \\(C'\\) is increased by a covering family \\(X_i \\to X\\), \\(i \\in I\\), where the \\(X_i\\)\nare objects of \\(C\\).</p>\n  <p>b) There exists a small set \\(G\\) of objects of \\(C\\), such that any object\nof \\(C\\) is the goal of a covering family in \\(C'\\) of morphisms whose\nsources are in \\(G\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>The topology induced by the topology of \\(C'\\) is a \\(\\mathcal{U}\\)-topology (II 3.0.2)\nand the functor \\(u\\) is continuous and cocontinuous for this topology.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong>Follows immediately from 3.3 and 2.1.</p>"
+    },
+    {
+     "id": "III.3.5",
+     "type": "proposition",
+     "label": "3.5",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\(\\varepsilon_C : C \\to \\widetilde{C}\\) be the canonical functor\n(II 4.4.0). Let's equip \\(\\widetilde{C}\\) with the canonical topology. So the topology of the site\n\\(C\\) is the topology induced by the topology of \\(\\widetilde{C}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> The covering families of \\(\\widetilde{C}\\) for the canonical topology are the families\nuniversal effective epimorphic families (II 2.5), i.e. (II 4.3) the epimor-families\nphics. Let \\(T\\) be the topology of the site \\(C\\) and \\(\\mathscr{C}_{\\mathcal{U}}\\) be the finest topology of the topo-\nologies \\(T'\\) on \\(C\\) such that for any beam \\(F\\) on \\(\\widetilde{C}\\), \\(F \\circ \\varepsilon_C\\) is a beam\nfor \\(T'\\). It suffices to show that \\(T = \\mathscr{C}_{\\mathcal{U}}\\), because then \\(\\mathscr{C}_{\\mathcal{U}}\\) is a \\(\\mathcal{U}\\)-topology and\nhence \\(\\mathscr{C}_{\\mathcal{U}}\\) is the induced topology.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A) <em>The topology \\(T\\) is finer than \\(\\mathscr{C}_{\\mathcal{U}}\\)</em>: Let \\((X_i \\to X)\\), \\(i \\in I\\), a family\ncovering of \\(\\mathscr{C}_{\\mathcal{U}}\\). Then for any beam \\(F\\) on \\(\\widetilde{C}\\), \\(F(\\varepsilon_C(X)) \\to \\prod_i F(\\varepsilon_C(X_i))\\)\nis injective and consequently (II 5.2) \\((\\varepsilon_C X_i \\to \\varepsilon_C X)\\), \\(i \\in I\\), is covering for the\ncanonical topology of \\(\\widetilde{C}\\), therefore (II 5.2) \\((X_i \\to X)\\), \\(i \\in I\\), is covering for \\(T\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>B) <em>The topology \\(T\\) is less fine than \\(\\mathscr{C}_{\\mathcal{U}}\\)</em>: It is enough to show that \\(\\varepsilon_C : C \\to \\widetilde{C}\\)\nis continuous (1.1). Now we will demonstrate in IV n° 1 that any beam on \\(\\widetilde{C}\\) is represented\nsensible and consequently, for any beam \\(F\\) on \\(\\widetilde{C}\\), \\(F \\circ \\varepsilon_C\\) is a beam on\n\\(C\\). (We will not use 3.5 until IV 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us note two results which will be used in VI 7.</p>"
+    },
+    {
+     "id": "III.3.6",
+     "type": "proposition",
+     "label": "3.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\((C_i)_{i \\in I}\\) be a family of sites, \\(C\\) be a category and for\nany \\(i \\in I\\), \\(u_i : C_i \\to C\\) a functor, \\(\\mathcal{U}\\) a universe such as the categories \\(C_i\\) and\n\\(C\\) are \\(\\mathcal{U}\\)-small. There exists a topology \\(\\mathscr{C}_{\\mathcal{U}}\\) on \\(C\\) which is the thinnest of the to-\npologies for which the \\(u_i\\) are continuous. The topology \\(\\mathscr{C}_{\\mathcal{U}}\\) does not depend on\nthe universe \\(\\mathcal{U}\\) for which the categories considered are small.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The last assertion of 3.6 follows from 1.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(T\\) be a topology on \\(C\\). Then the functors \\(u_i\\) are continuous if and\nonly if for all \\(i \\in I\\) and for all sieve covering \\(R \\hookrightarrow X\\) of an object \\(X\\) of\n\\(C_i\\), the morphism\n\\[\nu_{i!}(R) \\longrightarrow u_i(X)\n\\]\nof \\(\\widehat{C}\\) is bi-covering (1.2 (ii)). So 3.6 is a consequence of</p>"
+    },
+    {
+     "id": "III.3.6.1",
+     "type": "lemme",
+     "label": "3.6.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"III.3.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.6.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a small category, \\((u_i : F_i \\to G_i)_{i \\in I}\\) a family of\narrows of \\(\\widehat{C}\\). Then there exists on \\(C\\) a topology that is the least fine among those which\nmake the morphisms \\(u_i\\) <em>covering</em> (resp. <em>bicovering</em>) (II 5.2).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Saying that \\(u : F \\to G\\) is covering for a given topology \\(T\\) means that\nfor any arrow \\(X \\to G\\), with \\(X \\in \\mathrm{Ob}\\, C\\), the corresponding arrow \\(F \\times_G X \\to X\\)\nis covering, or even that the family of arrows \\(X' \\to X\\) of \\(C\\) which is factori-\nfelt by the previous arrow is covering. The fact that there exists a topology\nleast fine among those for which the \\(u_i : F_i \\to G_i\\) are covering results\ntherefore from I 1.1.6, hence the assertion not respected in 3.6.1. The relevant assertion follows from this\nduit, remembering that a morphism \\(u : F \\to G\\) is bicovering if and only\nif the morphisms \\(u : F \\to G\\) and \\(\\mathrm{diag}_u : F \\to F \\times_G F\\) are covering.</p>"
+    },
+    {
+     "id": "III.3.7",
+     "type": "proposition",
+     "label": "3.7",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\((C_i)_{i \\in I}\\) be a family of sites, \\(C\\) be a category, for all\n\\(i \\in I\\), \\(u_i : C_i \\to C\\) a functor, and \\(\\mathcal{U}\\) a universe such that the categories \\(C_i\\) and\n\\(C\\) are \\(\\mathcal{U}\\)-small. There exists a topology \\(\\mathscr{C}_{\\mathcal{U}}\\) which is the finest for which\nthe \\(u_i\\) are cocontinuous. The topology \\(\\mathscr{C}_{\\mathcal{U}}\\) does not depend on the universe \\(\\mathcal{U}\\) for which\nthe categories considered are small.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\mathcal{U}\\) be a universe for which the categories considered are small. The\nfunctors \\(u_i\\) are cocontinuous for a topology \\(\\mathscr{C}\\) of \\(C\\) if and only if for\nany \\(i \\in I\\) and any beam \\(F\\) on \\(C_i\\) the pre-beam \\(\\widehat{u}_{i*} F\\) is a beam for\n\\(\\mathscr{C}\\) (2.2). It follows that the topology \\(\\mathscr{C}_{\\mathcal{U}}\\) is the finest topology for\nwhich the pre-sheaves \\(\\widehat{u}_{i*} F\\), \\(i \\in I\\), \\(F \\in \\mathrm{ob}\\, C_i\\), are sheaves (II 2.2).\nThe last assertion follows from 2.2.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "III-fn5",
+     "number": "(1)",
+     "html": "<p>(1) When no confusion results this topology is called the topology induced on \\(C\\) by the topology of \\(C'\\). </p>"
+    },
+    {
+     "id": "III-fn6",
+     "number": "(∗)",
+     "html": "<p>(∗) In fact, it is enough that \\(u\\) commutes to fiber products of the form \\(X_i \\times_X X'\\). </p>"
+    }
+   ]
+  },
+  {
+   "id": "III-4",
+   "title": "4. Comparison lemma",
+   "blocks": [
+    {
+     "id": "III.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.4\">4. Comparison Lemma</h2>"
+    },
+    {
+     "id": "III.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"III.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.1</span> (comparison lemma)</div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a small category, \\(C'\\)\na site whose underlying category is a \\(\\mathcal{U}\\)-category and \\(u : C \\to C'\\)\na fully faithful functor. Let's equip \\(C\\) with the topology induced by \\(u\\)\n(3.1). Let's consider the properties:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">i)</span> <p>Any object from \\(C'\\) can be covered by objects from \\(C\\).</p></li>\n  <li><span class=\"item-label\">ii)</span> <p>The functor \\(F \\mapsto F \\circ u\\) induces an equivalence of categories of the\ncategory of beams on \\(C'\\) in the category of beams on \\(C\\).</p></li>\n  </ol>\n  <p>We always have i) \\(\\Longrightarrow\\) ii). When \\(C'\\) is a \\(\\mathcal{U}\\)-site and when\nthe topology of \\(C'\\) is less fine than the canonical topology, we have\nii) \\(\\Longrightarrow\\) i).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.1.1\">4.1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's first prove i) \\(\\Longrightarrow\\) ii). The demonstration is done in two steps.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>First step.</em> For any presheaf \\(H\\) of \\(\\widehat{C}'\\) the addition morphism\n\\(\\varphi : u_! u^* H \\to H\\) (I 5.1) is bicovering (II 5.3) and the functor \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\)\n(1.1.1) is fully faithful.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C/H\\) be the small category whose objects are the objects\n\\(Y\\) of \\(C\\) provided with a morphism \\(u(Y) \\to H\\), and whose morphisms are the\ncommutative diagrams:\n\\[\n\\xymatrix{\nu(Y) \\ar[rr]^-{u(m)} \\ar[dr] &amp; &amp; u(Y') \\ar[dl] \\\\\n &amp; H &amp;\n}\n\\]\nWe have \\(u^* H = \\varinjlim_{Y \\in \\mathrm{ob}\\, C/H} Y\\) (I 3.4) and consequently (I 5.4)\n\\(u_! u^* H = \\varinjlim_{Y \\in \\mathrm{ob}\\, C/H} u(Y)\\). The addition morphism is the morphism\nobvious which results from the description of \\(u_! u^* H\\) as an inductive limit.\nThe morphism \\(\\varphi\\) has the\nfollowing property: (∗) For any object \\(Y\\) of \\(C\\), any morphism \\(m : u(Y) \\to H\\)\nuniquely factors into the canonical morphism \\(\\alpha(m) : u(Y) \\to u_! u^* H\\)\nand the morphism \\(\\varphi\\). It follows immediately from i) that the morphism \\(\\varphi\\)\nis covering (II 5.1), let us show that it is bicovering. Let\n\\(p, q : Z \\rightrightarrows u_! u^* H\\) two morphisms of an object \\(Z\\) of \\(\\widehat{C}'\\), such that\n\\(\\varphi p = \\varphi q\\). For any object \\(Y\\) of \\(C\\) and any morphism \\(n : u(Y) \\to Z\\), we\na \\(\\varphi p n = \\varphi q n\\). The property (∗) then results in \\(p n = q n\\), and as the\n\\(u(Y)\\) covers \\(Z\\), the core of \\((p, q)\\) is a sieve covering \\(Z\\). The mor-\nphisme \\(\\varphi\\) is therefore bicovering (II 5.3). For any beam \\(H\\) on \\(C'\\),\n\\(u^* H\\) is a beam on \\(C\\) denoted \\(u_s H\\) (1.1.1). We also have \\(u^s u_s H = a' u_! u_s H\\)\n(1.3), and the addition morphism \\(u^s u_s H \\to H\\) is obtained by applying the\nfunctor “associated bundle” with the morphism \\(\\varphi : u_! u^* H \\to H\\). As a result\n(II 5.3) the addition morphism \\(u^s u_s H \\to H\\) is an isomorphism.\nTherefore \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\) is fully faithful.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Second step.</em> The functor \\(u\\) is cocontinuous and the functor \\(u^s : \\widetilde{C} \\to \\widetilde{C}'\\)\n(1.2) is fully faithful. Therefore \\(u_s : \\widetilde{C}' \\to \\widetilde{C}\\) is an equivalence.\nLet \\(Y\\) be an object of \\(C\\) and \\(i : R \\hookrightarrow u(Y)\\) be a covering sieve. Like the\nfunctor \\(u^*\\) commutes to projective limits (I 5.5) the morphism\n\\(u^*(i) : u^*(R) \\hookrightarrow u^* u(Y)\\) is a monomorphism. As \\(u\\) is fully faithful,\nwe have \\(u^* u(Y) \\simeq Y\\), hence a sieve of \\(Y\\), \\(u^*(i) : u^*(R) \\to Y\\). To show\nthat \\(u\\) is cocontinuous, it suffices to show that \\(u^*(i) : u^*(R) \\to Y\\) is\na covering screen for the topology induced on \\(C\\) (2.1). For this,\nit suffices to show (3.2) that for any change of base \\(m : X \\to Y\\),\nthe morphism \\(u_!(u^*(R) \\times_Y X) \\to u(X)\\) is bicovering. But as \\(u^*\\) commutes\nat projective limits, we have \\(u^*(R) \\times_Y X = u^*(R \\times_{u(Y)} u(X))\\) and \\(R \\times_{u(Y)} u(X)\\)\nis a sieve covering \\(u(X)\\). It is therefore sufficient to show that for any object \\(Y\\)\nof \\(C\\) and any sieve covering \\(i : R \\hookrightarrow u(Y)\\), the morphism of \\(\\widehat{C}'\\),\n\\(u_! u^*(R) \\xrightarrow{\\ u_! u^*(i)\\ } u(Y)\\), is dual-covering. Now this morphism is factorized\ninto the addition morphism \\(u_! u^*(R) \\to R\\), which is bicovering (first\nnot), and the monomorphism \\(R \\hookrightarrow u(Y)\\) which is covering. It is therefore\ndouble covering (II 5.3). This shows that \\(u\\) is cocontinuous. As \\(u\\) is continuous\nand fully faithful, it results from 2.6 (used in the case where \\(C\\) is small)\nthat \\(u^s\\) (noted \\(u_!\\) in 2.6) is fully faithful. As \\(u^s\\) and \\(u_s\\) are\nassistants of each other and that they are fully faithful, they are\nquasi-inverse functors and hence \\(u_s\\) is an equivalence.</p>"
+    },
+    {
+     "id": "III.4.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.1.2\">4.1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now prove that ii) \\(\\Longrightarrow\\) i). The objects \\(Y\\) of \\(C\\) form\na generating family of \\(\\widetilde{C}\\) (II 4.10) and consequently, for any object\n\\(X\\) of \\(C'\\), there is an epimorphic family (in \\(\\widetilde{C}\\)) \\(v_i : Y_i \\to u_s X\\),\n\\(i \\in I\\). We have \\(u_s u(Y_i) = Y_i\\) and, the functor \\(u_s\\) being an equivalence of\ncategories, we have \\(v_i = u_s(w_i)\\), where the \\(w_i : u(Y_i) \\to X\\) form a\nepimorphic family of \\(\\widetilde{C}'\\). It then follows from II 5.1 that the family\n\\(w_i : u(Y_i) \\to X\\), \\(i \\in I\\), is covering.</p>"
+    },
+    {
+     "id": "III.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.2\">4.2. End of 1.2 demo.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(G\\) be a full subcategory of \\(C\\) whose objects form\na small topologically generating family of \\(C\\) (II 3.0.1). Munitions\n\\(G\\) of the topology induced by the inclusion functor \\(i : G \\to C\\) (3.1).\nThe functor \\((u \\circ i)_s = i_s \\circ u_s\\) (1.1.1) admits a left adjoint according to the\nfirst part of the demonstration of 1.2. As \\(i_s\\) is an equivalence\nof categories (4.1), the functor \\(u_s\\) admits a left adjoint \\(u^s\\) and we\nhas a functorial isomorphism \\(u^s \\simeq (u \\circ i)^s \\circ i_s\\). Let us show that the diagram\n\\[\n(4.2.1) \\qquad\n\\xymatrix{\nC \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}'\n}\n\\]\nis commutative up to isomorphism. For any beam \\(H\\) on \\(C'\\), we have\n\\(\\mathrm{Hom}_{\\widetilde{C}'}(\\varepsilon_{C'} u X, H) \\simeq u_s H(X)\\), for all \\(X \\in \\mathrm{ob}\\, C\\). We also have\n\\(\\mathrm{Hom}_{\\widetilde{C}'}(u^s \\varepsilon_C X, H) \\simeq \\mathrm{Hom}_{\\widetilde{C}}(\\varepsilon_C X, u_s H)\\) by addition, then\n\\(\\mathrm{Hom}_{\\widetilde{C}}(\\varepsilon_C X, u_s H) \\simeq u_s H(X)\\) by definition of \\(\\varepsilon_C\\). Hence an isomorphism\n\\(\\varepsilon_{C'} u X \\simeq u^s \\varepsilon_C X\\) for all \\(X \\in \\mathrm{ob}\\, C\\). This demonstrates i) \\(\\Longrightarrow\\) iv). Let's show\nthat iv) \\(\\Longrightarrow\\) i). We have a commutative diagram\n\\[\n(4.2.2) \\qquad\n\\xymatrix{\nG \\ar[r]^-{i} \\ar[d]_-{\\varepsilon_G} &amp; C \\ar[r]^-{u} \\ar[d]_-{\\varepsilon_C} &amp; C' \\ar[d]^-{\\varepsilon_{C'}} \\\\\n\\widetilde{G} \\ar[r]_-{i^s} &amp; \\widetilde{C} \\ar[r]_-{u^s} &amp; \\widetilde{C}' ,\n}\n\\]\nand consequently, according to the first part of the demonstration, the functor\n\\(i \\circ u : G \\to C'\\) is continuous. We immediately deduce from 4.1 and 1.1 that\n\\(u\\) is continuous, hence iv) \\(\\Longrightarrow\\) i). We further obtain the uniqueness of \\(u^s\\);\nknowing, by the first part of the demonstration, the uniqueness when\n\\(C\\) is small.</p>"
+    },
+    {
+     "id": "III.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.3\">4.3. End of demonstration of 1.5 and 1.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(u : C \\to C'\\) be a functor between two \\(\\mathcal{U}\\)-sites and \\(G\\) be a\nfull subcategory of \\(C\\) whose set of objects is a small\ntopologically generating family of \\(C\\) (II 3.0.1). Let's equip \\(G\\) with\nthe topology induced by the inclusion functor \\(i : G \\to C\\). It results\nimmediately from 4.1 and 1.1 that \\(u\\) is continuous if and only if\n\\(u \\circ i\\) is continuous. From this remark and the first part of the\ndemonstration of 1.5 results in the general case. This remark allows\nalso to reduce the demonstration to 1.7 in case the category \\(C\\) is small.</p>"
+    },
+    {
+     "id": "III.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.4\">4.4. End of 2.3 demo.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(u : C \\to C'\\) be a functor between two \\(\\mathcal{U}\\)-sites, \\(G\\) be a sub-\ncategory full of \\(C\\) whose set of objects is a small family\ntopologically generating \\(C\\) (II 3.0.1), provided with the induced topology\nby the inclusion functor \\(i : G \\to C\\). It results from the demonstration\nfrom 4.1 (4.1.1 second step) that \\(i\\) is cocontinuous. As a result, when \\(u\\)\nis cocontinuous, the functor \\(u \\circ i : G \\to C'\\) is cocontinuous. Moreover,\n\\(i^* : \\widetilde{C} \\to \\widetilde{G}\\) is an equivalence of categories (4.1). So the functor\n\\(u^* : \\widetilde{C}' \\to \\widetilde{C}\\) admits an assistant on the right. This demonstrates 3). To demonstrate\n4), it suffices to note that \\((u \\circ i)_* \\simeq u_* \\circ i_*\\) and that \\(i_*\\) is an equi-\nvalence (4.1). The commutativity of (2.3.2) then results from the commutativity\navoidance of these diagrams when \\(C\\) is small.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-5",
+   "title": "5. Location",
+   "blocks": [
+    {
+     "id": "III.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.5\">5. Location</h2>"
+    },
+    {
+     "id": "III.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.5.1\">5.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\(X\\) be an object of \\(\\widehat{C}\\). Unless otherwise noted\nexpressly to the contrary the category \\(C/X\\) will be provided with the topology \\(\\mathscr{C}\\)\ninduced by the functor \\(j_X : C/X \\to C\\) (3.1). The notation \\(C/X\\) will designate\nthe category \\(C/X\\) with the topology \\(\\mathscr{C}\\). Proposition I 5.11 we\nshows that the functor \\(j_{X!}\\) commutes to fiber products and consequently trans-\nforms any monomorphism into a monomorphism. In particular, for all\nobject \\((Y \\to X)\\) of \\(C/X\\), the functor \\(j_{X!}\\) establishes a one-to-one correspondence\ninvokes between the screens, in the category \\(C/X\\), of the object \\((Y \\to X)\\)\nand the sieves, in \\(C\\), of the object \\(Y\\).</p>"
+    },
+    {
+     "id": "III.5.2",
+     "type": "proposition",
+     "label": "5.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site, \\(X\\) be an object of \\(\\widehat{C}\\) and \\(j_X : C/X \\to C\\)\nthe corresponding continuous functor.</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">1)</span> <p>A screen \\(R\\) of an object \\((Z \\to X)\\) is covering in \\(C/X\\) if\nand only if the screen \\(j_{X!}(R) \\hookrightarrow Z\\) is covering in \\(C\\).</p></li>\n  <li><span class=\"item-label\">2)</span> <p>The functor \\(j_X : C/X \\to C\\) is cocontinuous and continuous.</p></li>\n  <li><span class=\"item-label\">3)</span> <p>Let \\(m : Y \\to X\\) be a morphism of \\(\\widehat{C}\\). We then have the diagram\ncommutative:\n\\[\n\\xymatrix{\nC/Y \\ar[rr]^-{j_m} \\ar[dr]_-{j_Y} &amp; &amp; C/X \\ar[dl]^-{j_X} \\\\\n &amp; C &amp;\n}\n\\]\nThe topology induced by the functor \\(j_Y\\) on \\(C/Y\\) is equal to the\ntopology induced by \\(j_m\\) on \\(C/Y\\).</p></li>\n  <li><span class=\"item-label\">4)</span> <p>The topology induced by \\(j_X : C/X \\to C\\) is a \\(\\mathcal{U}\\)-topology\n(II 3.0.2).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> 1) If the sieve \\(R\\) of \\((Z \\to X)\\) is covering, the sieve \\(j_{X!}(R) \\hookrightarrow Z\\)\nis covering (1.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conversely, if the screen \\(j_{X!}(R) \\to Z\\) is covering in \\(C\\),\nwe see that it is the same for any sieve obtained by making a\nbase change in \\(C/X\\). The screen \\(R\\) is therefore covering (3.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Deduced immediately from 1) by applying 2.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) Can be immediately deduced from the description of the screens\ncoverings given by 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>4) Let \\((G)_i\\), \\(i \\in I\\), a small topologically general family\ntrice of \\(C\\). We immediately check that the little family\n\\((u : G_i \\to X)\\), \\(u \\in \\coprod_{i \\in I} \\mathrm{Hom}_{\\widehat{C}}(G_i, X)\\), is topologically generating in \\(C/X\\).</p>"
+    },
+    {
+     "id": "III.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.5.3\">Terminology and notations 5.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>According to the previous proposition the functor\n\\(j_X\\) is both a continuous and cocontinuous functor. It therefore defines a\nsequence of three adjoint functors (4.3.2) between the categories of sheaves\nof sets (1.3 and 2.3):\n\\[\n\\begin{aligned}\nj_X^s \\ &amp;: \\ (C/X)^{\\sim} \\to \\widetilde{C} \\\\\nj_X^* = j_{X,s} \\ &amp;: \\ \\widetilde{C} \\to (C/X)^{\\sim} \\\\\nj_{X*} \\ &amp;: \\ (C/X)^{\\sim} \\to \\widetilde{C} .\n\\end{aligned}\n\\]\nIn the particular situation of proposition 5.2 we\nWe will use the following terminology and notations:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">1)</span> <p>The functor \\(j_{X*}\\) will be called the <em>direct image functor</em>.</p></li>\n<li><span class=\"item-label\">2)</span> <p>The functor \\(j_{X,s} = j_X^*\\) will be denoted \\(j_X^*\\) and will be called the <em>restricted functor\ntion to \\(C/X\\)</em>.</p></li>\n<li><span class=\"item-label\">3)</span> <p>The functor \\(j_X^s\\) on the set sheaves will be called the <em>“ functor\nextension by the void to the category \\(C\\) »</em> and will be denoted \\(j_{X!}\\) (cf. 1.9.2).</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We therefore have a sequence of three adjoint functors between\n\\((C/X)^{\\sim}\\) and \\(\\widetilde{C}\\):\n\\[\nj_{X!} \\ , \\ j_X^* \\ , \\ j_{X*} .\n\\]</p>"
+    },
+    {
+     "id": "III.5.4",
+     "type": "proposition",
+     "label": "5.4",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\">\n  <p>The functor \\(j_{X!} : (C/X)^{\\sim} \\to \\widetilde{C}\\) is factorized by the\ncategory \\(\\widetilde{C}/aX\\) (\\(a\\) is the associated beam functor):\n\\[\n(C/X)^{\\sim} \\xrightarrow{\\ e_X^{\\sim}\\ } \\widetilde{C}/aX \\to \\widetilde{C} .\n\\]\nThe functor:\n\\[\ne_X^{\\sim} \\ : \\ (C/X)^{\\sim} \\longrightarrow \\widetilde{C}/aX\n\\]\nis an equivalence of categories. The functor restriction to \\(C/X\\), com-\nposed with the equivalence \\(e_X^{\\sim}\\), is isomorphic to the functor “change of\nbase by \\(aX \\to e\\)” (\\(e\\) the final object of \\(\\widetilde{C}\\)): \\(F \\mapsto (F \\times aX \\xrightarrow{\\ \\mathrm{pr}_2\\ } aX)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> The image by \\(j_{X!}\\) of the final object of \\((C/X)^{\\sim}\\) is the object \\(aX\\); hence\nfactorization. To show that the functor \\(e_X^{\\sim}\\) is an equivalence,\nwe will limit ourselves to a few indications. According to I 5.11, a pre-\nbeam on \\(C/X\\) is defined by a pre-beam \\(F\\) on \\(C\\) provided with a morphism\n\\(F \\to X\\). We then demonstrate that the following two properties are equi-\nvalents:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">i)</span> <p>The pre-beam on \\(C/X\\) defined by \\(F \\to X\\) is a beam.</p></li>\n<li><span class=\"item-label\">ii)</span> <p>The following diagram is Cartesian (we denote by \\(i\\) and \\(a\\) the functors\ninjection into the pre-bundles, and associated beam):\n\\[\n\\xymatrix{\nF \\ar[r] \\ar[d] &amp; i a F \\ar[d] \\\\\nX \\ar[r] &amp; i a X ,\n}\n\\]</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We then immediately deduce that \\(e_X^{\\sim}\\) is an equivalence.\nThe last assertion is trivial.</p>"
+    },
+    {
+     "id": "III.5.5",
+     "type": "proposition",
+     "label": "5.5",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\">\n  <p>1) Let \\(C\\) be a \\(\\mathcal{U}\\)-site, \\(X\\) be an object of \\(\\widehat{C}\\). The diagram\nbelow of categories and functors is commutative to isomorphisms\ncanonicals near:\n\\[\n\\xymatrix@C=2.6em{\nC/X \\ar[r]^-{h_X} \\ar@{=}[d] &amp; (C/X)^{\\wedge} \\ar[r]^-{a_X} \\ar[d]^-{e_X^{\\wedge}} &amp; (C/X)^{\\sim} \\ar[r]^-{i_X} \\ar[d]^-{e_X^{\\sim}} &amp; (C/X)^{\\wedge} \\ar[d]^-{e^{\\wedge}/X} &amp; \\\\\nC/X \\ar[r]_-{h/X} &amp; \\widehat{C}/X \\ar[r]_-{a/X} &amp; \\widetilde{C}/aX \\ar[r]_-{i/aX} &amp; \\widehat{C}/iaX \\ar[r]_-{\\pi} &amp; \\widehat{C}/X .\n}\n\\]\nThe notations \\(a_X\\) and \\(i_X\\) denote the “sheaf” functors\nassociated” and injection into the pre-bundles for the site \\(C/X\\). The note-\ntion \\(a/X\\) designates the natural extension of the functor \\(a\\) (associated bundle\nciated for the site \\(C\\)) to the category of goal arrows \\(X\\), the same for\nthe notation \\(i/aX\\). Finally the notation \\(\\pi\\) designates the change functor\nbase by the canonical arrow \\(X \\to iaX\\).</p>\n  <p>2) Let \\(m : Y \\to X\\) be a morphism of \\(\\widehat{C}\\). The\ndiagram below is commutative up to canonical isomorphism:\n\\[\n\\xymatrix@C=3em{\n\\widetilde{C}/aX/aY \\ar@{=}[dd] &amp; &amp; (C/X)^{\\sim}/a_X Y \\ar[ll]_-{f} \\ar[dr]^-{g} &amp; \\\\\n &amp; &amp; &amp; (C/X/Y)^{\\sim} \\ar[dl]^-{e_m^{\\sim}} \\\\\n\\widetilde{C}/aY &amp; &amp; (C/Y)^{\\sim} \\ar[ll]^-{e_Y^{\\sim}} &amp;\n}\n\\]</p>\n  <p>The arrow \\(f\\) is the natural extension of the equivalence\n\\(e^{\\sim}/X\\) to the category of goal arrows \\(a_X Y\\), and is therefore an equi-\nvalence of categories. The arrow \\(g\\) is none other than the equivalence of 5.4\napplied to the situation \\((C/X)/[m]\\).</p>\n  <p>3) Let us denote by \\(j_{aX!} : \\widetilde{C}/aX \\to \\widetilde{C}\\) the functor\n\"let's forget \\(aX\\)\", and by \\(j_{aX}^* : \\widetilde{C} \\to \\widetilde{C}/aX\\) the functor \"produced by \\(aX\\)\".\nThe following diagrams are commutative up to canonical isomorphism:\n\\[\n\\xymatrix{\n(C/X)^{\\sim} \\ar[r]^-{j_{X!}} \\ar[d] &amp; \\widetilde{C} \\ar@{=}[d] \\\\\n\\widetilde{C}/aX \\ar[r]_-{j_{aX!}} &amp; \\widetilde{C}\n}\n\\qquad\n\\xymatrix{\n\\widetilde{C} \\ar[r]^-{j_X^*} \\ar@{=}[d] &amp; (C/X)^{\\sim} \\ar[d]^-{e^{\\sim}/X} \\\\\n\\widetilde{C} \\ar[r]_-{j_{aX}^*} &amp; \\widetilde{C}/aX\n}\n\\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Proof.</strong> The proof of these assertions is immediate from the definition\nequivalences \\(e_X^{\\sim}\\) (5.4) and \\(e_X^{\\wedge}\\) (I 5.11).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-bibliographie",
+   "title": "Bibliography",
+   "blocks": [
+    {
+     "id": "III.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.bibliographie\">Bibliography</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[TF] R. Godement, <em>theory of sheaves</em>, Hermann, 1958. Act. Scient. Indian\nn° 1252, (Paris).</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

@@ -1,0 +1,739 @@
+{
+ "chapter_id": "VII",
+ "title": "SITE ET TOPOS ÉTALES D'UN SCHÉMA",
+ "number": "VII",
+ "pages": [
+  {
+   "id": "VII",
+   "title": "SITE ET TOPOS ÉTALES D'UN SCHÉMA",
+   "blocks": [
+    {
+     "id": "VII",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"VII\">EXPOSÉ VII<br>SITE ET TOPOS ÉTALES D'UN SCHÉMA<span class=\"author\">par A. Grothendieck</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VII-intro",
+   "title": "Introduction",
+   "blocks": [
+    {
+     "id": "VII.intro",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VII.intro\">Introduction</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le présent exposé et le suivant, nous développons les\npropriétés les plus élémentaires relatives à la topologie et la cohomologie\nétales. Les développements du présent exposé concernent certaines propriétés\nvalables pour l'essentiel pour d'autres topologies très différentes, telle\nla \"topologie fppf\". Dans l'exposé suivant seront développées des propriétés\nassez spéciales à la topologie étale, tenant à la nature très particulière\ndes morphismes étales.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous suivons partiellement ici trois exposés oraux de J.E. ROOS\n(qui n'avaient pu être rédigés par lui), notamment dans la démonstration,\nde VIII 6.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sauf mention expresse du contraire, il sera sous-entendu que les\nschémas envisagés dans le présent exposé et les suivants sont éléments\nde l'univers fixé \\(\\mathcal{U}\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VII-1",
+   "title": "1. La topologie étale",
+   "blocks": [
+    {
+     "id": "VII.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VII.1\">1. La topologie étale</h2>"
+    },
+    {
+     "id": "VII.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.1\">1.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous désignerons par (Sch) la catégorie des schémas (éléments\nde l'Univers fixé \\(\\mathcal{U}\\)). Rappelons qu'un morphisme \\(f : X \\to Y\\) dans (Sch)\nest dit <u>étale</u> s'il est localement de présentation finie, plat, et si pour\ntout \\(y \\in Y\\), la fibre \\(X_y\\) est discrète, et ses anneaux locaux sont des\nextensions finies <u>séparables</u> de \\(k(y)\\). Il revient au même de dire que \\(f\\)\nest localement de présentation finie, et que pour tout \\(Y\\)-schéma \\(Y'\\)\nqui est affine (au sens absolu) et pour tout sous-schéma \\(Y'_0\\) défini par\nun Idéal nilpotent, l'application\n\\[\n\\mathrm{Hom}_Y(Y', X) \\to \\mathrm{Hom}_Y(Y'_0, X)\n\\]\nest <u>bijective</u>. Pour les propriétés les plus importantes de cette notion,\nje renvoie à EGA IV §§ 17 et 18, et en attendant à SGA 1 I et IV.</p>"
+    },
+    {
+     "id": "VII.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.2\">1.2</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On appelle <u>topologie étale</u> sur (Sch) la topologie engendrée par\nla prétopologie pour laquelle, pour tout \\(X \\in (\\mathrm{Sch})\\), l'ensemble\nCov \\(X\\) est formé des familles \\((X_i \\xrightarrow{u_i} X)_{i \\in I}\\) (indexées par un\n\\(I \\in \\mathcal{U}\\)), telles que les \\(u_i\\) soient étales et \\(X = \\bigcup_i u_i(X_i)\\) (au sens\nensembliste).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est commode d'associer à tout \\(X\\) la sous-catégorie \\(\\mathrm{Et}/X\\) de\n\\((\\mathrm{Sch})_{/X}\\) formée des flèches \\(X' \\to X\\) qui sont étales. On la munira de la\n\"topologie induite\" (III) par la topologie étale de (Sch), (appelée\nencore \"topologie étale sur \\(X\\)\") et on désignera par \\(X_{\\text{ét}}\\) le site ainsi\nobtenu (\"<u>site étale</u>\" de \\(X\\))<sup class=\"footnote-ref\"><a id=\"VII-fn1ref\" href=\"#VII-fn1\">(∗)</a></sup>. Notons que tout morphisme de \\(\\mathrm{Et}/X\\) est\nétale (SGA 1 I 4.8), d'où s'ensuit qu'une famille \\((X'_i \\xrightarrow{u_i} X')_{i \\in I}\\) dans\n\\(X_{\\text{ét}}\\) est couvrante si et seulement si elle est <u>surjective</u> i.e.\n\\(\\bigcup_i u_i(X'_i) = X'\\). On voit aussitôt (cf. 3.1) que \\(X_{\\text{ét}}\\) est un \\(\\mathcal{U}\\)-site\ndonc les résultats des\nExp. I à VI sont applicables. Le topos \\(\\widetilde{X}_{\\text{ét}}\\) des \\(\\mathcal{U}\\)-faisceaux sur \\(X_{\\text{ét}}\\) est\nle <u>topos étale</u> de \\(X\\).</p>"
+    },
+    {
+     "id": "VII.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.3\">1.3</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la suite, sauf mention expresse du contraire, toutes les notions\ntopologiques que nous envisagerons dans \\(\\mathrm{Et}/X\\) ou (Sch), s'entendent\nau sens de la topologie étale. D'ailleurs, dans le langage et les notations,\non écrira couramment \\(X\\) au lieu de \\(X_{\\text{ét}}\\) ou \\(\\mathrm{Et}/X\\). Ainsi, on appellera\n\"faisceau sur \\(X\\)\" (sous-entendu : pour la topologie étale) un faisceau\nsur le site \\(X_{\\text{ét}}\\). On désignera par \\(\\widetilde{X}_{\\text{ét}}\\) la catégorie de ces faisceaux,\nqui est un \\(\\mathcal{U}\\)-topos. Si \\(F\\) est un faisceau abélien sur \\(X\\), on désignera\npar \\(H^i(X,F)\\) ses groupes de cohomologie, qui seraient notés \\(H^i(X_{\\text{ét}},F)\\) dans\nExp. V.</p>"
+    },
+    {
+     "id": "VII.1.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.4\">1.4</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f : X \\to Y\\) un morphisme de schémas. Alors le foncteur\nimage inverse\n\\[\nf^* : Y' \\mapsto Y' \\times_Y X\n\\]\ninduit un foncteur\n\\[\n(*) \\qquad f^*_{\\text{ét}} : \\mathrm{Et}/Y \\to \\mathrm{Et}/X\n\\]\nqui commute aux \\(\\varprojlim\\) finies et transforme familles couvrantes en familles\ncouvrantes ; c'est par suite un morphisme de sites\n\\[\nf^*_{\\text{ét}} : X_{\\text{ét}} \\to Y_{\\text{ét}} ,\n\\]\ninduisant donc un foncteur sur la catégorie des faisceaux :\n\\[\nf_*^{\\text{ét}} : \\widetilde{X}_{\\text{ét}} \\to \\widetilde{Y}_{\\text{ét}}\n\\]\npar\n\\[\nf_*^{\\text{ét}}(F) = F \\circ f^*_{\\text{ét}} .\n\\]\nDe plus \\(f_*^{\\text{ét}}\\) admet un adjoint à gauche\n\\[\nf_{\\text{ét}}^* : \\widetilde{Y}_{\\text{ét}} \\to \\widetilde{X}_{\\text{ét}}\n\\]\nprolongeant celui envisagé dans (*), et commutant aux \\(\\varinjlim\\) quelconques\net aux \\(\\varprojlim\\) finies i.e. \\(f_{\\text{ét}}^*\\) définit un <u>morphisme de topos</u>\n\\[\nf_{\\text{ét}} : \\widetilde{X}_{\\text{ét}} \\to \\widetilde{Y}_{\\text{ét}}\n\\]\n. Evidemment, pour un composé de deux morphisme de schémas\n\\[\nX \\xrightarrow{f} Y \\xrightarrow{g} Z\n\\]\non a des isomorphismes canoniques\n\\[\n\\left\\{ \\begin{array}{ll}\n(gf)_*^{\\text{ét}} \\simeq g_*^{\\text{ét}} f_*^{\\text{ét}} , &amp; \\text{d'où} \\\\[0.6ex]\n(gf)_{\\text{ét}}^* \\simeq f_{\\text{ét}}^* g_{\\text{ét}}^* , &amp; \\text{i.e. on a un isomorphisme} \\\\[0.6ex]\n(gf)_{\\text{ét}} \\simeq g_{\\text{ét}} f_{\\text{ét}} ,\n\\end{array} \\right.\n\\]\n(de sorte qu'on obtient un \"pseudo-foncteur\" (SGA 1 VI 8) de la catégorie\n(Sch) dans la catégorie \\((\\mathrm{Top})\\) des topos \\(\\in \\mathcal{U}'\\), où \\(\\mathcal{U}'\\) est le plus\npetit univers tel que \\(\\mathcal{U} \\in \\mathcal{U}'\\) ; comparer IV ).</p>"
+    },
+    {
+     "id": "VII.1.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.5\">1.5. Notations</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la suite nous écrirons souvent \\(f^*\\), \\(f_*\\) au lieu\nde \\(f^*_{\\text{ét}}\\), \\(f_*^{\\text{ét}}\\). Si \\(f : X \\to Y\\) est un morphisme de schémas, les foncteurs\n\\(R^i f_*^{\\text{ét}}\\) seront donc simplement notés \\(R^i f_*\\). Rappelons avec ces\nnotations la suite spectrale de Leray pour \\(f\\), et un faisceau abélien\n\\(F\\) sur \\(X\\) (V 5) :\n\\[\nH^*(X,F) \\Longleftarrow E_2^{p,q} = H^p(Y, R^q f_*(F)).\n\\]\nDe même si l'on a deux morphismes \\(f : X \\to Y\\) et \\(g : Y \\to Z\\), on a une\nsuite spectrale de Leray (suite spectrale de foncteurs composés)\n\\[\nR^*(gf)_*(F) \\Longleftarrow E_2^{p,q} = R^p g_*(R^q f_*(F)) .\n\\]</p>"
+    },
+    {
+     "id": "VII.1.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.6\">1.6</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque \\(f : X \\to Y\\) est lui-même un morphisme étale, on peut\nconsidérer \\(X\\) comme objet de \\(Y_{\\text{ét}}\\), et on a un <u>isomorphisme de sites</u>\ncanonique\n\\[\nX_{\\text{ét}} \\xrightarrow{\\ \\sim\\ } (Y_{\\text{ét}})_{/X} .\n\\]\nMoyennant cet isomorphisme, le foncteur \\(f^*_{\\text{ét}} : Y' \\mapsto Y' \\times_Y X\\) de (*)\ns'identifie au foncteur changement de base interne dans la catégorie\n\\(\\mathrm{Et}/Y\\). Il s'ensuit que le foncteur\n\\[\nf^* : \\widetilde{Y}_{\\text{ét}} \\to \\widetilde{X}_{\\text{ét}}\n\\]\nest alors isomorphe au foncteur \"<u>restriction à \\(Y\\)</u>\"\n\\[\nf^*(F) \\simeq F \\circ i_{X/Y} ,\n\\]\noù \\(F\\) est un faisceau sur \\(Y_{\\text{ét}}\\), et \\(i_{X/Y} : X_{\\text{ét}} \\to Y_{\\text{ét}}\\) est le foncteur\névident (consistant à regarder un schéma étale sur \\(X\\), \\(u : X' \\to X\\),\ncomme un schéma étale sur \\(Y\\) par \\(fu : X' \\to Y\\)).</p>"
+    },
+    {
+     "id": "VII.1.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.1.7\">1.7. Questions d'Univers</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On notera que si \\(X \\neq \\varnothing\\), alors \\(X_{\\text{ét}}\\)\nn'est pas élément de l'univers choisi \\(\\mathcal{U}\\). Cependant, comme nous avons\nsignalé, on voit facilement (3.1) que l'on peut trouver une sous-catégorie\npleine \\(C\\) de \\(X_{\\text{ét}}\\), <u>élément de</u> \\(\\mathcal{U}\\), satisfaisant aux conditions du \"lemme\nde comparaison\" (III), de sorte que le foncteur restriction induise une\néquivalence \\(\\widetilde{C} \\to \\widetilde{X}_{\\text{ét}}\\). Ainsi, le <u>topos étale</u> est équivalent à un topos\ndéfini en termes d'un site \\(C \\in \\mathcal{U}\\). En d'autres termes, \\(X_{\\text{ét}}\\) est un \\(\\mathcal{U}\\)-site\ndonc en vertu de loc. cit. les résultats des Exposés I à VI\nsont applicables à ce site.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VII-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) Notons cependant qu'il serait préférable de désigner par \\(X_{\\text{ét}}\\) le topos \\(\\widetilde{X}_{\\text{ét}}\\) défini par le site étale de \\(X\\). Pour des raisons pratiques, nous nous en tiendrons dans ce Séminaire aux notations introduites ici (qui sont celles du séminaire primitif). </p>"
+    }
+   ]
+  },
+  {
+   "id": "VII-2",
+   "title": "2. Exemples de faisceaux",
+   "blocks": [
+    {
+     "id": "VII.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VII.2\">2. Exemples de faisceaux</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Soit \\(F \\in \\mathrm{Ob}\\, (\\mathrm{Sch})_{/X}\\) un schéma sur \\(X\\), et pour tout \\(X'\\) sur \\(X\\),\nposons\n\\[\nF(X') = \\mathrm{Hom}_X(X',F) .\n\\]\nLe foncteur \\((\\mathrm{Sch})^\\circ_{/X} \\to (\\mathrm{Ens})\\) ainsi défini est un faisceau pour la\ntopologie étale (et même pour la topologie plus fine fpqc étudiée dans\nSGA 3 IV). En d'autres termes la topologie étale sur (Sch) est moins fine\nque la topologie canonique. C'est en effet, essentiellement, le contenu de\nSGA 1 VIII 5.1 (cf. aussi SGA 3 IV 6.3.1). A fortiori, la restriction de\nce faisceau à \\(X_{\\text{ét}}\\) est un faisceau. On le désignera encore par \\(F\\),\nlorsqu'aucune confusion n'est à craindre<sup class=\"footnote-ref\"><a id=\"VII-fn2ref\" href=\"#VII-fn2\">(∗)</a></sup>. Noter aussi que le foncteur\nainsi obtenu\n\\[\n(*) \\qquad (\\mathrm{Sch})_{/X} \\to \\widetilde{X}_{\\text{ét}}\n\\]\ncommute aux \\(\\varprojlim\\) finies (c'est trivial). Cela implique par exemple que\nlorsque \\(F\\) est un schéma en groupes (resp...) sur \\(X\\), alors le faisceau\nqu'il définit est un faisceau en groupes (resp...). Notons que le foncteur\n\\(\\mathrm{Et}/X \\to \\widetilde{X}_{\\text{ét}}\\) induit par (*) n'est autre que le foncteur canonique, associant\nà tout \\(X' \\in \\mathrm{Ob}\\, \\widetilde{X}_{\\text{ét}}\\) le foncteur sur \\(X_{\\text{ét}}\\) qu'il représente. C'est\ndonc un isomorphisme de la catégorie \\(\\mathrm{Et}/X\\) sur une sous-catégorie pleine\ndu topos étale \\(\\widetilde{X}_{\\text{ét}}\\), par laquelle nous identifions généralement un\n\\(X \\in \\mathrm{Ob}\\, X_{\\text{ét}}\\) au faisceau correspondant, qui sera noté \\(\\widetilde{X}\\) ou simplement \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Evidemment on aura \\(H^0(X,F) = \\mathrm{Hom}_{(\\mathrm{Sch})_{/X}}(X,F)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donnons également une interprétation de \\(H^1(X,F)\\) lorsque \\(F\\) est un\npréschéma en groupes sur \\(X\\) (commutatif si l'on veut, de sorte que la\ndéfinition de \\(H^1(X,F)\\) relève de Exp. V ; pour le cas général on pourra consulter\nla thèse de J. Giraud<sup>(∗∗)</sup>. Alors les raisonnements bien connus, que je me dispense\nde répéter ici, montrent que \\(H^1(X,F)\\) est canoniquement isomorphe au groupe\ndes classes (mod. isomorphisme) de <u>faisceaux d'ensembles sur \\(X_{\\text{ét}}\\) principaux\nhomogènes sous</u> \\(F\\)<sup class=\"footnote-ref\"><a id=\"VII-fn3ref\" href=\"#VII-fn3\">(∗∗)</a></sup>. Lorsque \\(F\\) est <u>affine</u> sur \\(X\\), alors SGA 1 VIII 2.1\nimplique (toujours par des arguments standards, cf. thèse de J.Giraud) que\n\\(H^1(X,F)\\) est aussi le groupe des classes de schémas \\(P\\) sur \\(X\\), sur lesquels\n\\(F\\) opère à droite et qui sont \"fibrés principaux homogènes sur \\(X\\)\nau sens de la topologie étale\" i. e. localement triviaux dans le sens de la\ntopologie étale<sup class=\"footnote-ref\"><a id=\"VII-fn4ref\" href=\"#VII-fn4\">(∗∗∗)</a></sup>.</p>"
+    },
+    {
+     "id": "VII.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.2.1\">Remarques 2.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On fera attention que si l'on désigne, pour tout schéma\n\\(Z\\) sur \\(X\\), par \\(\\varphi_X(Z)\\) le faisceau associé sur \\(X_{\\text{ét}}\\), et si \\(f : Y \\to X\\)\nest un morphisme de schéma, on a un homomorphisme évident (fonctoriel\nen \\(Z\\))\n\\[\n(*) \\qquad f^*(\\varphi_X(Z)) \\to \\varphi_Y(Z_Y) , \\qquad Z_Y = Z \\times_X Y ,\n\\]\ni.e. un homomorphisme évident\n\\[\n\\varphi_X(Z) \\to f_*(\\varphi_Y(Z_Y)) ,\n\\]\nsavoir l'homomorphisme fonctoriel en \\(X' \\in \\mathrm{Ob}\\, X_{\\text{ét}}\\)\n\\[\n\\mathrm{Hom}_X(X', Z) \\to \\mathrm{Hom}_Y(X'_Y, Z_Y) .\n\\]\nMais on fera attention qu'<u>en général</u> (*) <u>n'est pas un isomorphisme</u>,\ni.e. la <u>formation du faisceau étale associé à un schéma relatif ne\ncommute pas aux foncteurs images inverses</u>. Cependant (*) est un isomorphisme\ndans le cas particulier où \\(Z\\) est étale sur \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De même, le foncteur\n\\[\n\\varphi_X : (\\mathrm{Sch})_{/X} \\to \\widetilde{X}_{\\text{ét}}\n\\]\n<u>n'est pas fidèle</u> si \\(X \\neq \\varnothing\\)<sup class=\"footnote-ref\"><a id=\"VII-fn5ref\" href=\"#VII-fn5\">(∗)</a></sup> ; cependant sa restriction à \\(X_{\\text{ét}}\\), qui n'est\nautre que le foncteur canonique \\(X_{\\text{ét}} \\to \\widetilde{X}_{\\text{ét}}\\), est <u>pleinement fidèle</u>, car en\nvertu de a) la topologie de \\(X_{\\text{ét}}\\) est moins fine que sa topologie canonique.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Notons que (*) commute également aux sommes directes indexées par les\n\\(I \\in \\mathcal{U}\\), comme on vérifie facilement. En particulier, si pour tout ensemble\n\\(I\\), on désigne par \\(I_X\\) le \\(X\\)-schéma constant défini par \\(I\\) (SGA 3 I 1.8),\nsomme directe de \\(I\\) copies de \\(X\\), alors le faisceau associé n'est autre\nque le faisceau constant \\(I_{X_{\\text{ét}}}\\) (somme directe de \\(I\\) copies du faisceau\nfinal sur \\(X_{\\text{ét}}\\)). Comme le foncteur \\(I \\mapsto I_X\\) commute également aux \\(\\varprojlim\\)\nfinies, on voit qu'il transforme groupe en groupe, groupe commutatif en\ngroupe commutatif etc... Si \\(G\\) est un groupe commutatif ordinaire, on\nécrira simplement \\(H^1(X,G)\\) au lieu de \\(H^1(X,G_X)\\). Supposons, par exemple,\nque \\(G\\) soit un groupe fini, alors \\(G_X\\) est fini donc affine sur \\(X\\), donc\nen utilisant la remarque finale de a) on obtient une interprétation de\n\\(H^1(X,G)\\) comme l'ensemble des <u>classes de revêtements principaux galoisiens\nde groupe \\(G\\)</u> (SGA 1 V 2.7). Lorsque \\(X\\) est connexe et muni d'un point\ngéométrique \\(a\\), alors en termes du \"groupe fondamental\" \\(\\pi_1(X,a)\\) (SGA 1 V 7)\non obtient l'isomorphisme canonique\n\\[\n(**) \\qquad H^1(X,G) \\simeq \\mathrm{Hom}(\\pi_1(X, a), G),\n\\]\n(où on a supposé \\(G\\) commutatif).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut dire qu'en passant de la cohomologie de Zariski à la topologie\nétale, \"on a fait ce qu'il fallait\" pour obtenir \"le bon\" \\(H^1\\) (qui figure\nau 2ème membre de (**) pour un groupe de coefficients constant fini \\(G\\). C'est un\nfait remarquable, qui sera démontré par la suite de ce séminaire, que cela\nsuffit également pour trouver les \"bons\" \\(H^i(X,G)\\) pour tout groupe de\ncoefficients de torsion (du moins si \\(G\\) est premier aux caractéristiques\nrésiduelles de \\(X\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) Soit \\(F\\) un \\(O_X\\)-Module sur \\(X\\), au sens de la topologie de Zariski.\nAlors (avec les notations de SGA 3 I 4.6) on définit un foncteur\n\\[\nW(F) : (\\mathrm{Sch})^\\circ_{/X} \\to (\\mathrm{Ens})\n\\]\npar\n\\[\nW(F)(X') = \\Gamma(X', F \\otimes_{O_X} O_{X'}) .\n\\]\nCe foncteur est encore un faisceau pour la topologie étale (et même pour la\ntopologie fpqc) comme il résulte encore de SGA 1 VIII 1.6 et SGA 3 IV 6.3.1.\nA fortiori, la restriction de \\(W(F)\\) à \\(X_{\\text{ét}}\\) est encore un faisceau, qu'on\nnotera encore \\(W(F)\\). Par définition on aura donc \\(H^0(X,W(F)) = \\Gamma(F) = H^0(X,F)\\).\nMais on a mieux si \\(F\\) est quasi-cohérent, cf. 4.3.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VII-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) Mais on fera attention que si \\(X \\neq \\varnothing\\), le foncteur \\(\\varphi\\) qui a \\(F \\in \\mathrm{Ob}(\\mathrm{Sch})_{/X}\\) associe le faisceau correspondant \\(\\varphi(F)\\) n'est <u>pas</u> pleinement fidèle, ni même fidèle, et qu'on ne peut réconstituer \\(F\\) (mod. isom.) connaissant \\(\\varphi(F)\\). Par exemple ; si \\(S = \\operatorname{Spec} k\\), \\(k\\) corps alg. clos, la connaissance de \\(\\varphi(F)\\) équivaut à celle de l'ensemble sous-jacent à \\(F\\) seulement (en vertu de VIII 2.4). Comparer IV </p>"
+    },
+    {
+     "id": "VII-fn3",
+     "number": "(∗∗)",
+     "html": "<p>(∗∗) ou \\(F\\)-<u>torseurs</u> dans la terminologie de loc.cit. </p>"
+    },
+    {
+     "id": "VII-fn4",
+     "number": "(∗∗∗)",
+     "html": "<p>(∗∗∗) ou \\(F\\)-<u>torseurs représentables</u> dans la terminologie maintenant reçue. </p>"
+    },
+    {
+     "id": "VII-fn5",
+     "number": "(∗)",
+     "html": "<p>(∗) Cf. pour ceci la note au bas de la page 6. </p>"
+    }
+   ]
+  },
+  {
+   "id": "VII-3",
+   "title": "3. Générateurs du Topos étale. Cohomologie d'une \\(\\varinjlim\\) de faisceaux",
+   "blocks": [
+    {
+     "id": "VII.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VII.3\">3. Générateurs du Topos étale. Cohomologie d'une \\(\\varinjlim\\) de faisceaux</h2>"
+    },
+    {
+     "id": "VII.3.1",
+     "type": "proposition",
+     "label": "3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VII.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) un schéma, \\(C\\) une sous-catégorie pleine\nde \\(X_{\\text{ét}}\\), telle que pour tout \\(X'\\) étale sur \\(X\\) qui est affine, \\(C\\) contienne\nun objet isomorphe à \\(X'\\). Alors \\(C\\) est une \"famille de générateurs\ntopologiques\" du site \\(X_{\\text{ét}}\\) donc une famille de générateurs\ndu topos \\(\\widetilde{X}_{\\text{ét}}\\), et le foncteur restriction \\(\\widetilde{X}_{\\text{ét}} \\to \\widetilde{C}\\) est une\néquivalence de catégories (où \\(C\\) est muni de la topologie induite par\ncelle de \\(X_{\\text{ét}}\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Trivial à l'aide du \"lemme de comparaison\".</p>"
+    },
+    {
+     "id": "VII.3.2",
+     "type": "corollary",
+     "label": "3.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>Supposons que \\(X\\) soit quasi séparé. Appelons <u>site étale\nrestreint de \\(X\\)</u> la sous-catégorie pleine \\(C\\) de \\(X_{\\text{ét}}\\) formée des schémas\nétales sur \\(X\\) qui sont de présentation finie sur \\(X\\), munie de la topologie\ninduite par \\(X_{\\text{ét}}\\). Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(C\\) est stable par produits fibrés, et est un site de type fini\nsi \\(X\\) est quasi-compact</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Le foncteur restriction \\(\\widetilde{X}_{\\text{ét}} \\to \\widetilde{C}\\) est une équivalence de catégories.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'assertion (i) est triviale, et (ii) résulte de 3.1 car \\(C\\)\nsatisfait à la condition de 3.1 grâce au fait que \\(X\\) est quasi-séparé,\nqui implique que si \\(X'\\) est quasi-compact, par exemple affine, il est\nquasi-compact <u>sur</u> \\(X\\) (EGA IV 1.2.4, où on fait \\(Z = \\operatorname{Spec} \\mathbf{Z}\\)), donc de\nprésentation finie sur \\(X\\) si \\(X'\\) est localement de type fini sur \\(X\\).</p>"
+    },
+    {
+     "id": "VII.3.3",
+     "type": "proposition",
+     "label": "3.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VII.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>Supposons \\(X\\) quasi-compact et quasi-séparé. Alors les\nfoncteurs \\(H^q(X_{\\text{ét}}, F)\\) sur la catégorie des faisceaux abéliens sur \\(X_{\\text{ét}}\\)\ncommutent aux \\(\\varinjlim\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on peut remplacer \\(X_{\\text{ét}}\\) par \\(C\\) en vertu de 3.2 (ii),\nor comme \\(X\\) est quasi-compact on a \\(X \\in \\mathrm{Ob}\\, C\\), et la conclusion résulte de\n3.2 (i) et VI § 6 1.2 (3).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VII-4",
+   "title": "4. Comparaison avec d'autres topologies",
+   "blocks": [
+    {
+     "id": "VII.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VII.4\">4. Comparaison avec d'autres topologies</h2>"
+    },
+    {
+     "id": "VII.4.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.4.0\">4.0</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Tout d'abord notons que les exemples de faisceaux sur \\(X_{\\text{ét}}\\)\nconsidérés au N° 2 sont en fait de façon naturelle des <u>restrictions</u> de\nfaisceaux définis sur \\((\\mathrm{Sch})_{/X}\\) muni de sa topologie étale (ou même de la\ntopologie fpqc). Soit de façon générale\n\\[\nu^* : X_{\\text{ét}} \\to (\\mathrm{Sch})_{/X}\n\\]\nle foncteur d'inclusion, qui est continu (III) et commute aux \\(\\varprojlim\\) finies,\ndonc définit un <u>morphisme de sites</u> :\n\\[\nu : (\\mathrm{Sch})_{/X} \\to X_{\\text{ét}} ,\n\\]\nd'où un foncteur\n\\[\nu_* : \\widetilde{(\\mathrm{Sch})_{/X}} \\to \\widetilde{X}_{\\text{ét}}\n\\]\nsur les catégories de faisceaux associées :\n\\[\nu_*(F) = F \\circ u^* ,\n\\]\net un foncteur adjoint à gauche<sup class=\"footnote-ref\"><a id=\"VII-fn6ref\" href=\"#VII-fn6\">(1)</a></sup> de ce dernier\n\\[\nu^* : \\widetilde{X}_{\\text{ét}} \\to \\widetilde{(\\mathrm{Sch})_{/X}}\n\\]\nCeci posé :</p>"
+    },
+    {
+     "id": "VII.4.1",
+     "type": "proposition",
+     "label": "4.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VII.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\">\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>Le foncteur \\(u^*\\) est <u>pleinement fidèle</u>, donc pour\ntout faisceau \\(G\\) <u>sur</u> \\(X_{\\text{ét}}\\), l'homomorphisme canonique \\(G \\mapsto u_* u^*(G)\\) est\nun isomorphisme.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Soient \\(G\\) (resp. \\(F\\)) un faisceau abélien sur \\(X_{\\text{ét}}\\)\n(resp. \\((\\mathrm{Sch})_{/X}\\)). Alors les homomorphismes canoniques (définis par exemple\ncomme edge-homomorphismes de la suite spectrale de Leray suivants</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sont des isomorphismes :\n\\[\nH^*(X_{\\text{ét}},F \\circ u^*) \\xrightarrow{\\ \\sim\\ } H^*((\\mathrm{Sch})_{/X}, F)\n\\]\n\\[\nH^*(X_{\\text{ét}},G) \\xrightarrow{\\ \\sim\\ } H^*((\\mathrm{Sch})_{/X}, u^*(G)) .\n\\]\nEn effet, le foncteur \\(u\\) est un comorphisme et on\npeut alors appliquer (III).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ainsi, (i) montre que pour l'étude de la cohomologie des\nfaisceaux, il est essentiellement équivalent de travailler avec le \"petit\"\nsite étale \\(X_{\\text{ét}}\\), ou le \"gros\" site étale \\((\\mathrm{Sch})_{/X}\\).</p>"
+    },
+    {
+     "id": "VII.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.4.2\">4.2</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part, il y a lieu d'introduire dans (Sch) (donc dans les\n\\((\\mathrm{Sch})_{/X}\\)) diverses autres topologies que la topologie étale, dont les plus\nutiles sont définies dans SGA 3 IV 6.3. La plus grossière parmi ces dernières\nest la <u>topologie de Zariski</u> (Zar), définie par la prétopologie où les familles\ncouvrantes sont les familles surjectives d'immersions ouvertes ; elle est\nmoins fine que la topologie étale. La plus fine de ces topologies est la\n<u>topologie \"fidèlement plate quasi-compacte\"</u>, en abrégé (fpqc), qui est la\nmoins fine des topologies pour lesquelles les familles couvrantes au sens\nde Zariski, ainsi que les morphismes fidèlement plats quasi-compacts, sont\ncouvrants ; la topologie fpqc est plus fine que la topologie étale. Comme\nnous l'avons déjà remarqué, les divers exemples de faisceaux sur \\((\\mathrm{Sch})_{/X}\\)\nenvisagés au N° 2 sont en fait déjà des faisceaux pour la topologie fpqc.</p>"
+    },
+    {
+     "id": "VII.4.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.4.2.1\">4.2.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On fera attention cependant que pour un faisceau abélien\n\\(F\\) sur \\((\\mathrm{Sch})_{/X}\\) pour la topologie (fpqc), (ou une topologie, telle fppf,\nenvisagée dans SGA 3), les groupes de cohomologie de \\(F\\) pour la\ntopologie fpqc (resp....) ne sont pas toujours isomorphes aux groupes de\ncohomologie pour la topologie étale, et ceci même si \\(X\\) est le spectre\nd'un corps \\(k\\), et \\(F\\) est représentable par un groupe algébrique sur \\(k\\),\nmême en ce qui concerne le \\(H^1\\). De façon générale, on peut montrer que\nla topologie étale donne les \"bons\" groupes de cohomologie pour les groupes\nde coefficients qui sont des schémas en groupes <u>étales</u>, ou plus généralement\n<u>lisses</u>, sur \\(X\\)<sup class=\"footnote-ref\"><a id=\"VII-fn7ref\" href=\"#VII-fn7\">(∗)</a></sup>, mais il n'en est plus de même pour des schémas en groupes\ntels que les groupes <u>radiciels</u> sur \\(S\\), pour lesquels il y a lieu de remplacer\nla topologie étale, encore trop grossière, par la topologie fpqc,\nou fppf.</p>"
+    },
+    {
+     "id": "VII.4.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.4.2.2\">4.2.2</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme exemple des relations entre les cohomologies relatives à\ndes topologies différentes, signalons ici le cas des topologies de Zariski\net de la topologie étale. Nous désignerons par \\(X_{\\mathrm{Zar}}\\) le site des ouverts\nde Zariski de \\(X\\), de sorte qu'on a un foncteur d'inclusion canonique\n\\[\nu^* : X_{\\mathrm{Zar}} \\to X_{\\text{ét}}\n\\]\nqui définit un morphisme de sites\n\\[\nu : X_{\\text{ét}} \\to X_{\\mathrm{Zar}} ,\n\\]\nd'où des foncteurs correspondants image directe\n\\[\nf_* : \\widetilde{X}_{\\text{ét}} \\to \\widetilde{X}_{\\mathrm{Zar}} \\qquad (f_*(F) = F \\circ u^*) ,\n\\]\net image inverse\n\\[\nf^* : \\widetilde{X}_{\\mathrm{Zar}} \\to \\widetilde{X}_{\\text{ét}} ,\n\\]\nadjoints l'un de l'autre ; géométriquement, il y a lieu d'interpréter le\ncouple \\((f_*, f^*)\\) comme un morphisme de topos\n\\[\nf : \\widetilde{X}_{\\text{ét}} \\to \\widetilde{X}_{\\mathrm{Zar}} .\n\\]\nOn en déduit un homomorphisme de foncteurs cohomologiques\n\\[\nH^*(X_{\\mathrm{Zar}}, f_*(F)) \\to H^*(X_{\\text{ét}},F)\n\\]\net une suite spectrale de Leray\n\\[\nH^*(X_{\\text{ét}},F) \\Longleftarrow H^p(X_{\\mathrm{Zar}},R^q f_*(F)) ,\n\\]\noù \\(F\\) est un faisceau abélien sur \\(X_{\\text{ét}}\\). Cette suite spectrale résume les\nrelations générales entre cohomologie étale et cohomologie de Zariski.\nBien entendu, pour des faisceaux de coefficients \\(F\\) tel que des faisceaux\nde coefficients constants, cette suite spectrale en général est loin d'être\ntriviale, i.e. en général on aura \\(R^q f_*(F) \\neq 0\\) (prendre notamment le cas\noù \\(X\\) est le spectre d'un corps). Cependant :</p>"
+    },
+    {
+     "id": "VII.4.3",
+     "type": "proposition",
+     "label": "4.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VII.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(F\\) un faisceau de modules variable sur le\npréschéma \\(X\\) (faisceau au sens de la topologie de Zariski), d'où un faisceau\n\\(F_{\\text{ét}}\\) sur \\(X_{\\text{ét}}\\) (cf. 2, c) et un homomorphisme de foncteurs cohomologiques\n\\[\nH^*(X,F) \\to H^*(X_{\\text{ét}}, F_{\\text{ét}}) .\n\\]\nLorsque \\(F\\) est quasi-cohérent, l'homomorphisme précédent est un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, le premier membre n'est autre que \\(H^*(X_{\\mathrm{Zar}}, f_*(F_{\\text{ét}}))\\),\net avec les notations précédentes, il suffit de prouver qu'on a\n\\[\nR^q f_*(F) = 0 \\qquad \\text{pour } q &gt; 0 .\n\\]\nCela résulte aussitôt, grâce au procédé de calcul des \\(R^q f_*\\)\net grâce au fait que les ouverts affines forment une base de la topologie\nde \\(X\\), du</p>"
+    },
+    {
+     "id": "VII.4.4",
+     "type": "corollary",
+     "label": "4.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Si \\(X\\) est affine, on a\n\\[\nH^q(X_{\\text{ét}}, F_{\\text{ét}}) = 0 \\qquad \\text{pour } q &gt; 0 .\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour le voir, soient \\(C = X_{\\text{ét}}\\), \\(C'\\) la sous-catégorie pleine\nformée des \\(X'\\) affines, alors en vertu de 3.1 on aura\n\\[\nH^q(C,F) \\simeq H^q(C',F|C') .\n\\]\nIl suffit donc de prouver que \\(F|C'\\) est \\(C'\\)-acyclique (V 4.1) ou\nencore satisfait la condition de V 4.3 i.e. que pour tout \\(X' \\in \\mathrm{Ob}\\, C'\\)\net toute famille couvrante \\(R = (X'_i \\to X')_i\\) dans \\(C'\\), on a\n\\(H^q(R, F) = 0\\) pour \\(q &gt; 0\\). Or on peut supposer \\((X'_i)_i\\) fini, puis, quitte\nà remplacer les \\(X'_i\\) par leur somme, que la famille couvrante consiste en\nun morphisme \\(X'_i \\to X'\\) qui est couvrant, i.e. (étale et) surjectif. Donc\non est ramené à prouver que si \\(f : X \\to Y\\) est un morphisme étale surjectif\nde schéma affines et \\(F\\) un module quasi-cohérent sur \\(X\\), alors\n\\[\n(*) \\qquad H^q(X/Y,F) = 0 \\qquad \\text{pour } q &gt; 0 .\n\\]\nOr ceci est démontré dans TDTE I, B, 1.1, (dans FGA, cf. réf [4] de IX).</p>"
+    },
+    {
+     "id": "VII.4.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.4.5\">Remarques 4.5</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En fait, par loc. cit., pour avoir (*) il suffit que\n\\(X \\to Y\\) soit surjectif, et plat (au lieu d'étale). Cela permet de montrer\npar la démonstration précédente, qu'on a encore des isomorphismes analogues\nà celui de 3.3, en y remplaçant le site étale \\(X_{\\text{ét}}\\) par \\((\\mathrm{Sch})_{/X}\\), muni\nd'une quelconque des topologies plus fines que celle de Zariski envisagées\ndans SGA 3 IV 6.3, par exemple la topologie fpqc.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VII-fn6",
+     "number": "(1)",
+     "html": "<p>(1) En toute rigueur, comme \\((\\mathrm{Sch})_{/X}\\) est une \\(\\mathcal{U}\\)-catégorie mais <u>pas</u> un \\(\\mathcal{U}\\)-site on ne peut invoquer III pour l'existence de \\(u^*\\) ; Cependant, on construit facilement \\(u^*\\) par \\(u^*(F)(X') = (p_{X'})_{\\text{ét}}^*(F)(X')\\) (\\(X' \\in \\mathrm{Ob}\\, \\mathrm{Sch}_{/X}\\)), où \\(p_{X'}\\) désigne le morphisme structural \\(X' \\to X\\). D'autre part, pour donner un sens à 4.1 (ii) et justifier la démonstration indiquée de 4.1, il y a lieu d'introduire un univers \\(\\mathcal{V}\\) tel que \\(\\mathcal{U} \\in \\mathcal{V}\\), et de considérer les faisceaux intervenant dans les formules 4.1 (i) comme des faisceaux à valeurs dans \\(\\mathcal{V}\\)-(Ens). On peut aussi, si on ne veut travailler qu'avec des U-sites, remplacer \\((\\mathrm{Sch})_{/X}\\) par une sous-catégorie pleine \\((\\mathrm{Sch})_{/X}\\) stable par \\(\\varprojlim\\) finies, contenant \\(C\\) de 3.1, et qui soit U-petite. </p>"
+    },
+    {
+     "id": "VII-fn7",
+     "number": "(∗)",
+     "html": "<p>(∗) Cf. A. Grothendieck, Le groupe de Brauer III, th. 11.7, in \"Dix exposés sur la topologie des schémas, North Holland Pub. Cie. </p>"
+    }
+   ]
+  },
+  {
+   "id": "VII-5",
+   "title": "5. Cohomologie d'une limite projective de schémas",
+   "blocks": [
+    {
+     "id": "VII.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VII.5\">5. Cohomologie d'une limite projective de schémas</h2>"
+    },
+    {
+     "id": "VII.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.5.1\">5.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(I\\) un ensemble préordonné filtrant croissant,\n\\[\n\\mathscr{X} = (X_i)_{i \\in I}\n\\]\nun système projectif de schémas, les morphismes de transition\n\\(u_i : X_i \\to X_j\\) \\((i \\geq j)\\) étant <u>affines</u>. Rappelons (EGA IV 8...) que sous\nces conditions, la limite projective\n\\[\nX = \\varprojlim X_i\n\\]\nexiste dans la catégorie des schémas, (et même dans la catégorie des\nespaces annelés en anneaux locaux) et peut se construire ainsi :\non choisit \\(i_0 \\in I\\), de sorte que pour \\(i \\geq i_0\\), on a un \\(X_{i_0}\\)-isomorphisme\n(EGA II 1.2 et 1.3)\n\\[\nX_i = \\operatorname{Spec} \\mathcal{A}_i ,\n\\]\noù \\(\\mathcal{A}_i\\) est une Algèbre quasi-cohérente sur \\(X_{i_0}\\), les \\(\\mathcal{A}_i\\) \\((i \\geq i_0)\\) formant\ndonc un système inductif de telles Algèbres. Posant\n\\[\n\\mathcal{A} = \\varinjlim_i \\mathcal{A}_i ,\n\\]\non peut prendre\n\\[\nX = \\operatorname{Spec} \\mathcal{A} .\n\\]\nD'ailleurs, désignant par esp \\(S\\) l'espace topologique sous-jacent à un\nschéma \\(S\\), on montre (EGA IV 8...) que l'application canonique\n\\[\n\\mathrm{esp}\\, X \\to \\varprojlim \\mathrm{esp}(X_i)\n\\]\nest un <u>homéomorphisme</u> et que l'homomorphisme canonique de faisceaux\nd'anneaux\n\\[\n\\varinjlim_i \\gamma_i^{-1}(\\mathcal{O}_{X_i}) \\to \\mathcal{O}_X\n\\]\nest bijectif, où \\(\\gamma_i : X \\to X_i\\) est l'application continue canonique.</p>"
+    },
+    {
+     "id": "VII.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.5.2\">5.2</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De façon imagée, on peut résumer le contenu de EGA IV 8,9 en\ndisant que, <u>lorsque \\(X_{i_0}\\) est quasi-compact et quasi-séparé</u>, alors \"toute\ndonnée de nature schématique sur \\(X\\), de présentation finie sur \\(X\\)\", est\néquivalente à une donnée de même nature sur un des \\(X_i\\), \"pour \\(i\\) assez\ngrand\". Ainsi, on prouve (EGA IV 8...) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) si \\(i_1 \\in I\\) et si \\(X'_{i_1}\\), \\(X''_{i_1}\\) sont deux schémas de présentation finie\nsur \\(X_{i_1}\\), alors posant pour tout \\(i \\geq i_1\\)\n\\[\nX'_i = X'_{i_1} \\times_{X_{i_1}} X_i , \\qquad X' = X'_{i_1} \\times_{X_{i_1}} X ,\n\\]\net définissant de même \\(X''_i\\), \\(X''\\), l'application canonique\n\\[\n\\varinjlim_{i \\geq i_1} \\mathrm{Hom}_{X_i}(X'_i, X''_i) \\to \\mathrm{Hom}_X(X', X'')\n\\]\nest bijective.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Pour tout schéma \\(X'\\) de présentation finie sur \\(X\\), il existe un\nindice \\(i_1 \\in I\\), un schéma \\(X'_{i_1}\\) de présentation finie sur \\(X_{i_1}\\), et\nun \\(X\\)-isomorphisme\n\\[\nX' \\simeq X'_{i_1} \\times_{X_{i_1}} X .\n\\]</p>"
+    },
+    {
+     "id": "VII.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.5.3\">5.3</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut exprimer le résultat précédent, et les résultats de\nnature analogue contenus dans EGA IV 8, dans le langage des \\(\\varinjlim\\) de\ncatégories fibrées introduit dans VI. Pour ceci, considérons la catégorie\n\\(\\mathscr{F}\\) des morphismes \\(f : T \\to S\\) de présentation finie de schémas, et le\n\"foncteur but\"\n\\[\n\\pi : \\mathscr{F} \\to (\\mathrm{Sch}) ,\n\\]\nqui est évidemment un <u>foncteur fibrant</u>, les catégories fibres étant d'ailleurs\néquivalentes à des catégories \\(\\mathcal{U}\\)-petites. Considérons\nl'image inverse de la catégorie fibrée \\(\\mathscr{F}/(\\mathrm{Sch})\\) par le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\ni \\mapsto X_i : \\mathrm{cat}(I) \\to (\\mathrm{Sch})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(où \\(\\mathrm{cat}(I)\\) est la catégorie associée à \\(I\\), avec \\(\\mathrm{Hom}(i,j) \\neq \\varnothing\\) si et\nseulement si \\(i \\geq j\\)), d'où une catégorie fibrée\n\\[\n\\pi_{\\mathscr{X}} : \\mathscr{F}_{\\mathscr{X}} \\to \\mathrm{cat}(I) ,\n\\]\ndont la fibre en chaque \\(i \\in I\\) est canoniquement isomorphe à la sous-catégorie\npleine \\(\\mathscr{F}_{X_i}\\) de \\((\\mathrm{Sch})_{/X_i}\\) formée des schémas de présentation\nfinie sur \\(X_i\\), le morphisme de changement de base \\(\\mathscr{F}_i \\to \\mathscr{F}_j\\) relatif à\n\\(j \\geq i\\) n'étant autre que \\(X'_i \\mapsto X'_j = X'_i \\times_{X_i} X_j\\). Ceci posé, associant\nà tout \\(X'_i\\) de présentation finie sur \\(X_i\\) son image inverse sur \\(X\\)\n\\[\n\\varphi(X'_i) = X'_i \\times_{X_i} X ,\n\\]\non trouve un foncteur naturel\n\\[\n\\varphi : \\mathscr{F}_{\\mathscr{X}} \\to \\mathscr{F}_X ,\n\\]\nqui transforme évidemment morphisme cartésien de \\(\\mathscr{F}_{\\mathscr{X}}\\) en isomorphisme,\ndonc par définition se factorise de façon unique par un foncteur canonique\n\\[\n(*) \\qquad \\psi : \\varinjlim_{\\mathscr{F}_{\\mathscr{X}}/\\mathrm{cat}\\, I} \\mathscr{F}_{\\mathscr{X}} \\to \\mathscr{F}_X .\n\\]\nCompte tenu de la description du premier membre, le résultat\nde EGA IV 8 rappelé plus haut peut s'énoncer alors en disant que (*)\nest une <u>équivalence de catégories</u>.</p>"
+    },
+    {
+     "id": "VII.5.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.5.4\">5.4</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'énoncé a) de 5.2 ci-dessus peut se préciser de diverses\nfaçons, en introduisant quelque ensemble \\((\\mathcal{M})\\) de morphismes de schémas,\nstable par changement de base, et en énonçant que pour un \\(X_{i_1}\\)-morphisme\ndonné \\(u_{i_1} : X'_{i_1} \\to X''_{i_1}\\), le morphisme correspondant \\(u' : X' \\to X''\\)\nest \\(\\in (\\mathcal{M})\\) si et seulement s'il existe \\(i \\geq i_1\\) tel que le \\(X_i\\)-morphisme\n\\(u_i : X'_i \\to X''_i\\) soit \\(\\in (\\mathcal{M})\\). L'énoncé obtenu ainsi est vrai par exemple\nlorsque \\((\\mathcal{M})\\) est l'un des ensembles de flèches suivants : morphismes\npropres (respectivement projectifs, resp. quasi projectifs, resp. affines,\nresp. quasi affines, resp. finis, resp. quasi finis, resp. radiciels,\nresp. surjectifs, resp. plats, resp. lisses, resp. étales, resp. non\nramifiés). Le lecteur trouvera les énoncés correspondants dans EGA IV\npar. 8 (pour les 9 premiers) par. 11 (pour le cas plat) par. 17 (pour les\ntrois derniers cas).</p>"
+    },
+    {
+     "id": "VII.5.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.5.5\">5.5</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remplaçons alors \\(\\mathscr{F} \\to (\\mathrm{Sch})\\) par la sous catégorie fibrée \\(\\mathscr{G}\\)\nformée des <u>morphismes étales</u> de présentation finie, dont la catégorie\nfibre \\(\\mathscr{G}_S\\), pour tout schéma \\(S\\), n'est autre que la catégorie des\nschémas étales de présentation finie sur \\(S\\), et formons de même la\ncatégorie fibrée \\(\\mathscr{G}_{\\mathscr{X}}\\) sur \\(\\mathrm{cat}(I)\\), dont la catégorie fibre en tout\n\\(i \\in I\\) est la catégorie \\(\\mathscr{G}_{X_i}\\). En vertu de 3.2 (ii), les topos étales\n\\(\\widetilde{X}_{i,\\text{ét}}\\), \\(\\widetilde{X}_{\\text{ét}}\\) sont aussi canoniquement équivalents à \\(\\widetilde{\\mathscr{G}}_{X_i}\\), \\(\\widetilde{\\mathscr{G}}_X\\), (où tout\n\\(\\mathscr{G}_S\\) est muni de la topologie induite par \\(S_{\\text{ét}}\\)). De plus, par 3.2 (i),\nchaque \\(\\mathscr{G}_{X_i}\\) est un site de type fini, d'ailleurs équivalent à un site\n\\(\\mathcal{U}\\)-petit. Compte tenu des topologies sur les \\(\\mathscr{G}_{X_i}\\), \\(\\mathscr{G}\\) devient un <u>site\nfibré</u> sur \\(\\mathrm{cat}(I)\\). Ceci posé, on peut énoncer le</p>"
+    },
+    {
+     "id": "VII.5.6",
+     "type": "lemma",
+     "label": "5.6",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"VII.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\"><p>Le foncteur canonique\n\\[\n\\varinjlim_{\\mathscr{G}_{\\mathscr{X}}/\\mathrm{cat}(I)} \\mathscr{G}_{\\mathscr{X}} \\to \\mathscr{G}_X\n\\]\ndéfinit une équivalence, respectant les topologies, du site \\(\\varinjlim\\)\ndes sites étales restreints (3.2) des \\(X_i\\), avec le site étale\nrestreint de \\(X = \\varprojlim_i X_i\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le fait qu'on obtient une équivalence de catégories est l'un\ndes énoncés rappelés dans 5.4 (celui où \\((\\mathcal{M})\\) est l'ensemble des morphismes\nétales dans (Sch)). L'assertion relative aux topologies s'obtient\nde même en prenant \\((\\mathcal{M})\\) = ensemble des morphismes surjectifs dans (Sch).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le résultat précédent nous permet d'appliquer les résultats de\nà la situation présente. On trouve en particulier</p>"
+    },
+    {
+     "id": "VII.5.7",
+     "type": "theorem",
+     "label": "5.7",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"VII.5.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathscr{X} = (X_i)_{i \\in I}\\) un système projectif de schémas,\navec \\(I\\) ensemble préordonné filtrant croissant. Supposons que les morphismes\nde transition \\(u_{ij} : X_j \\to X_i\\) sont affines (de sorte que le schéma\n\\(X = \\varprojlim X_i\\) est défini (5.1)), et que les \\(X_i\\) sont quasi-compacts et\nquasi-séparés. Considérons le site fibré \\(\\mathscr{G}\\) sur \\(\\mathrm{cat}(I)\\) explicité dans\n5.5, dont la fibre \\(\\mathscr{G}_i\\) en \\(i \\in I\\) est canoniquement isomorphe au\n\"site étale restreint\" de \\(X_i\\) (formé des schémas étales de présentation\nfinie sur \\(X_i\\)). Soit \\(F\\) un faisceau abélien sur \\(\\mathscr{G}\\) (i.e.\n(3) un foncteur \\(\\mathscr{G}^\\circ \\to (\\mathrm{Ab})\\) dont la restriction \\(F_i\\) à chaque \\(\\mathscr{G}_i\\)\nest un faisceau, i.e. un faisceau sur \\(X_i\\)). Soit \\(F_\\infty = \\varinjlim_i u_i^*(F_i)\\) le\nfaisceau induit sur \\(X\\), où \\(u_i : X \\to X_i\\) est le morphisme canonique. Alors\nles homomorphismes canoniques\n\\[\n\\varinjlim_i H^n(X_i,F_i) \\to H^n(X,F_\\infty)\n\\]\nsont des isomorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de 5.6, cela résulte de la conjonction de VI 7.3\net VI 8.5.2. On appliquera surtout 5.7 dans le cas\nparticulier suivant, explicité également dans</p>"
+    },
+    {
+     "id": "VII.5.8",
+     "type": "corollary",
+     "label": "5.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.8</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses et notations précédentes pour\n\\((X_i)_{i \\in I}\\), \\(X\\), \\(u_{ij}\\), \\(u_i\\), soit \\(i_0 \\in I\\), et soit \\(F_{i_0}\\) un faisceau abélien\nsur \\(X_{i_0}\\). Pour tout \\(i \\geq i_0\\), soit \\(F_i = u_{i,i_0}^*(F_{i_0})\\), soit de plus\n\\(F_\\infty = u_{i_0}^*(F_{i_0})\\). Sous ces conditions, les homomorphismes canoniques\n\\[\n\\varinjlim_i H^n(X_i,F_i) \\to H^n(X,F_\\infty)\n\\]\nsont des isomorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Voici cependant un cas parfois utile qui relève de 5.7 et non\nde 5.8 :</p>"
+    },
+    {
+     "id": "VII.5.9",
+     "type": "corollary",
+     "label": "5.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.5.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.9</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses et notations de 5.7 pour\n\\((X_i)_{i \\in I}\\), \\(X\\), \\(u_{ij}\\), \\(u_i\\), soit \\(G_{i_0}\\) un schéma en groupes commutatifs localement\nde présentation finie sur \\(X_{i_0}\\) (où \\(i_0 \\in I\\) est donné). Pour tout\n\\(i \\geq i_0\\), soit \\(G_i = G_{i_0} \\times_{X_{i_0}} X_i\\), et soit de même \\(G_\\infty = G_{i_0} \\times_{X_{i_0}} X\\). Alors les\nhomomorphismes canoniques\n\\[\n\\varinjlim_i H^n(X_i,G_i) \\to H^n(X,G_\\infty)\n\\]\nsont des isomorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, nous savons que \\(G_{i_0}\\) définit un faisceau sur \\((\\mathrm{Sch})_{/X_{i_0}}\\)\n(cf. 2 (a)), et supposant que \\(i_0\\) est un plus petit objet pour \\(I\\) (ce\nqui est loisible), d'où un foncteur canonique \\(\\mathscr{G} \\to (\\mathrm{Sch})_{/X_{i_0}}\\), on trouve\npar composition un foncteur contravariant \\(F\\) sur \\(\\mathscr{G}\\), dont la restriction à\n\\(\\mathscr{G}_i\\) est canoniquement isomorphe au faisceau sur \\(X_i\\) défini par \\(G_i\\).\nEn particulier \\(F\\) est un faisceau sur \\(\\mathscr{G}\\), et nous pouvons lui appliquer\n5.7. L'hypothèse que \\(G_{i_0}\\) est localement de présentation finie sur \\(X_{i_0}\\)\nsert à assurer que le faisceau \\(F_\\infty\\) de 5.7 est isomorphe, par l'homomorphisme\nnaturel \\(F_\\infty \\to \\mathrm{faisc}(G_\\infty)\\), au faisceau \\(\\mathrm{faisc}(G_\\infty)\\) défini par\n\\(G_\\infty\\) (comme il résulte en effet aussitôt de EGA IV 8.8.2 (i), en regardant\nles valeurs des faisceaux envisagés sur les objets du site étale\nrestreint de \\(G_\\infty\\) et appliquant 5.6). Cela achève de prouver 5.9.</p>"
+    },
+    {
+     "id": "VII.5.10",
+     "type": "corollary",
+     "label": "5.10",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.5.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.10</span></div>\n  <div class=\"thm-body\"><p>Avec les hypothèses et notations de 5.7 pour \\((X_i)_{i \\in I}\\),\n\\(X\\), \\(u_{ij}\\), \\(u_i\\), soit \\(F\\) un faisceau en groupes commutatifs sur \\(X\\), alors les\nhomomorphismes canoniques\n\\[\n\\varinjlim_i H^n(X_i,u_{i*}(F)) \\to H^n(X,F)\n\\]\nsont des isomorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les énoncés 5.7 à 5.10 se généralisent en des énoncés correspondants\npour les \\(\\operatorname{Ext}^i\\) de faisceaux de Modules, grâce à VI 8.7.9, que\nnous nous dispensons de répéter dans le cas particulier présent. Nous\nallons par contre expliciter, pour références ultérieures, les variantes\nde 5.8 et 5.9 en termes de foncteurs \\(R^n f_*\\).</p>"
+    },
+    {
+     "id": "VII.5.11",
+     "type": "corollary",
+     "label": "5.11",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.5.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.11</span></div>\n  <div class=\"thm-body\"><p>Soient \\(I\\) un ensemble préordonné filtrant croissant,\n\\((X_i)_{i \\in I}\\) et \\((Y_i)_{i \\in I}\\) deux systèmes projectifs de schémas, à morphismes\nde transition affines, \\(X = \\varprojlim_i X_i\\), \\(Y = \\varprojlim_i Y_i\\), \\((f_i)_{i \\in I}\\) un système projectif\nde morphismes \\(f_i : X_i \\to Y_i\\) quasi-compacts et quasi-séparés,\n\\(i_0 \\in I\\), \\(F_{i_0}\\) un faisceau sur \\(X_{i_0}\\). Pour tout \\(i \\geq i_0\\), soit \\(F_i\\) le\nfaisceau sur \\(X_i\\) image inverse de \\(F_{i_0}\\). Soit de même \\(f: X \\to Y\\) déduit de\n\\((f_i)\\) et \\(F\\) le faisceau sur \\(X\\) image inverse de \\(F_{i_0}\\). Sous ces conditions,\nl'homomorphisme canonique\n\\[\n\\varinjlim_i u_i^*(R^n f_{i*}(F_i)) \\to R^n f_*(F)\n\\]\nest un isomorphisme (où \\(u_i : X \\to X_i\\) est le morphisme canonique).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut supposer que \\(i_0\\) est un plus petit objet de \\(I\\), et\nla question étant locale sur \\(Y_{i_0}\\), que \\(Y_{i_0}\\) est affine, de sorte que\nles \\(Y_i\\) et les \\(X_i\\) sont quasi-compacts et quasi-séparés. On est alors\nsous les conditions d'application de VI 8.7.3 (où on se ramène à\n5.8, compte tenu du calcul des \\(R^n f_*\\) comme faisceaux associés à des\npréfaisceaux, On prouve de même :</p>"
+    },
+    {
+     "id": "VII.5.12",
+     "type": "corollary",
+     "label": "5.12",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.5.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.12</span></div>\n  <div class=\"thm-body\"><p>Même énoncé que 5.11, à cela près que maintenant \\(F_{i_0}\\)\ndésigne un schéma en groupes commutatifs localement de présentation\nfinie sur \\(X_{i_0}\\), et \\(F_i,F\\) ses images réciproques (au sens du changement\nde base pour les schémas).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On fera attention que 5.9 (resp. 5.12) n'est pas un cas particulier\nde 5.8 (resp. 5.11), cf. 2 a) remarque 2.1.</p>"
+    },
+    {
+     "id": "VII.5.13",
+     "type": "corollary",
+     "label": "5.13",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"VII.5.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.13</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de 5.11, soit \\(F\\) un faisceau en\ngroupes abéliens sur \\(X\\). Alors les homomorphismes canoniques\n\\[\n\\varinjlim_i v_i^*(R^n f_{i*}(u_{i*}(F))) \\to R^n f_*(F)\n\\]\nsont des isomorphismes, (où \\(u_i : X \\to X_i\\) et \\(v_i : Y \\to Y_i\\) sont les\nhomomorphismes canoniques).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est essentiellement la même que précédemment.</p>"
+    },
+    {
+     "id": "VII.5.14",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VII.5.14\">Remarques 5.14</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Les résultats de passage à la limite précédents sont\nvalables pour le \\(H^0\\) resp. les \\(f_*\\), pour des faisceaux <u>d'ensembles</u> (au\nlieu de faisceaux abéliens), et pour le \\(H^1\\) resp. les \\(R^1 f_*\\) pour des\nfaisceaux de groupes (non nécessairement commutatifs), - où les \\(H^1\\) et\n\\(R^1 f_*\\) non commutatifs sont définis comme d'habitude en termes de torseurs (ou\nfibrés principaux homogènes) (cf. thèse de Giraud<sup class=\"footnote-ref\"><a id=\"VII-fn8ref\" href=\"#VII-fn8\">(∗)</a></sup>). Cela peut se vérifier directement\ndans le contexte général de . Il est certainement\npossible (et sans doute utile) de donner également une variante\npour les \\(H^2\\) non commutatifs de \"liens\", étudiés par Giraud.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Les résultats de passage à la limite pour les sites\nfibrés développés dans VI supposaient seulement que la catégorie base\nétait une catégorie filtrante sans qu'il ait été nécessaire\nde supposer qu'elle soit associée à un ensemble préordonné filtrant.\nLe cas d'une catégorie d'indices filtrante arbitraire est également le cadre\nnaturel pour les énoncés développés dans le présent n°. Si nous nous\nsommes placés dans un cadre trop restrictif, cela était pour pouvoir donner\ndes références correctes à EGA IV, où l'on suppose malencontreusement\ndans les questions de passage à la limite (à partir du par. 8) que la\ncatégorie d'indices est définie en termes d'un ensemble préordonné filtrant.\nNous admettrons cependant par la suite que tous les résultats utilisés de\nEGA IV sont valables pour des catégories d'indices filtrantes quelconques,\n(les démonstrations données dans loc. cit. étant valables, essentiellement\nsans changement, dans ce cas plus général). Aussi, nous utiliserons également\nsans autre commentaire les résultats du présent n° dans le cas où \\(I\\)\nest remplacé par une catégorie d'indices filtrante arbitraire.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "VII-fn8",
+     "number": "(∗)",
+     "html": "<p>(∗) citée p.7, note de bas de page (∗). </p>"
+    }
+   ]
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. Grothendieck"
+}

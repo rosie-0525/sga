@@ -1,0 +1,1449 @@
+{
+ "chapter_id": "III",
+ "title": "EXPOSÉ III INFINITESIMAL EXTENSIONS",
+ "number": "III",
+ "pages": [
+  {
+   "id": "III",
+   "title": "EXPOSÉ III INFINITESIMAL EXTENSIONS",
+   "blocks": [
+    {
+     "id": "III",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"III\">EXPOSÉ III<br>INFINITESIMAL EXTENSIONS<span class=\"author\">by M. Demazure</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this exposé, we place ourselves in the following general situation. We have a scheme S and a coherent nilpotent ideal \\(I\\) on S. We denote by \\(S_n\\) the closed subscheme of S defined by the ideal \\(I^{n+1}\\) (\\(n \\geqslant 0\\)). In particular \\(S_0\\) is defined by \\(I\\). As \\(I\\) is nilpotent, \\(S_n\\) is equal to S for n large enough and the \\(S_i\\) have the same underlying topological space. A typical example of this situation is the following: S is the spectrum of an Artinian local ring A, \\(I\\) is the ideal defined by the radical of A, so \\(S_0\\) is the spectrum of the residue field of A.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the preceding situation, we are given a certain number of data over \\(S_0\\) and we look for data over S lifting them, that is, giving them back by base change from S to \\(S_0\\). This is done step by step, through the intermediary of the \\(S_n\\). At each step, we propose to define the obstructions encountered and to classify, when they exist, the solutions obtained.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The passage from \\(S_n\\) to \\(S_{n+1}\\) can be generalized as follows: we have a scheme S, two ideals \\(I\\) and \\(J\\) with \\(I \\supset J\\), \\(I \\cdot J = 0\\) (in the preceding case S, \\(I\\) and \\(J\\) are respectively \\(S_{n+1}\\), \\(I/I^{n+2}\\), \\(I^{n+1}/I^{n+2}\\)). We denote by \\(S_0\\) (resp. \\(S_J\\)) the closed subscheme of S defined by \\(I\\) (resp. \\(J\\)) and we pose an extension problem from \\(S_J\\) to S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In SGA 1 III the problems of extension of morphisms of schemes and of extension of schemes were treated. We shall here pose the problems of extension of group morphisms, of extension of group structures and of extension of subgroups.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have collected in Section 0 the results of SGA 1 III which will be useful to us, in order to put them in the form most convenient for our purpose, and to spare the reader from having to refer constantly to SGA 1 III. Section 1 collects computations of group cohomology which will be useful later on and which have nothing to do with the theory of schemes. Sections 2 and 3 treat respectively the <em>extension of group morphisms</em> and the <em>extension of group structures</em>. In Section 4, we have quickly recalled the proof of a result stated in TDTE IV concerning the extension of subschemes, and applied this result to the problem of extension of subgroups. For the sequel of the Seminar, only the result of Section 2, concerning the extension of group morphisms, will be indispensable.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The idea of reducing the infinitesimal extension problems to the usual cohomology computations in group extensions was suggested by J. GIRAUD at the time of the oral exposé (whose computations were distinctly more complicated and less transparent). Unfortunately, it seems that this method applies well only to the first two problems studied, and we have not been able to escape rather painful computations in the case of extensions of subgroups.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To simplify the language, we shall call a Y-functor, resp. Y-scheme, …, a functor, resp. scheme, …, equipped with a morphism into the functor Y, thereby extending the definitions of Exposé I (which concerned only the case of a representable Y).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-0",
+   "title": "0. Reminders from SGA 1 III and various remarks",
+   "blocks": [
+    {
+     "id": "III.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.0\">0. Reminders from SGA 1 III and various remarks</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first state a general definition.</p>"
+    },
+    {
+     "id": "III.0.1",
+     "type": "definition",
+     "label": "0.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.0.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">0.1</span></div>\n  <div class=\"thm-body\">\n    <p>Let \\(\\mathscr{C}\\) be a category, X an object of \\(\\widehat{\\mathscr{C}}\\), G a \\(\\widehat{\\mathscr{C}}\\)-group acting on X. We say that X is <em>formally principal homogeneous</em> under G if the following equivalent conditions are satisfied:</p>\n  <p>(i) for each object S of \\(\\mathscr{C}\\), the set \\(X(S)\\) is empty or principal homogeneous under \\(G(S)\\);</p>\n  <p>(ii) the morphism of functors \\(G \\times X \\to X \\times X\\) defined set-theoretically by \\((g,x) \\mapsto (gx,x)\\) is an isomorphism.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This done, we shall put the results of SGA 1 III into the form which will be most useful to us. We shall employ the following general notation throughout this section. We have a scheme S and on S two quasi-coherent ideals \\(I\\) and \\(J\\) such that\n\\[\nI \\supset J \\qquad \\text{and} \\qquad I \\cdot J = 0.\n\\]\nWe shall thus have in particular \\(J^2 = 0\\). We denote by \\(S_0\\) (resp. \\(S_J\\)) the closed subscheme of S defined by the ideal \\(I\\) (resp. \\(J\\)). For every S-functor X, we shall systematically denote by \\(X_0\\) and \\(X_J\\) the functors obtained by base change from S to \\(S_0\\) and \\(S_J\\). Same notation for a morphism.</p>"
+    },
+    {
+     "id": "III.0.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"III.0.1.2\">Let X be an S-functor. Define a functor \\(X^+\\) over S by the formula:\n\\[\n\\mathrm{Hom}_S(Y, X^+) = \\mathrm{Hom}_{S_J}(Y_J, X_J)\n\\]\nfor a variable S-scheme Y. In the notation of <a class=\"ref\" href=\"#II.1\">Exp. II, 1</a>, we have\n\\[\nX^+ \\simeq \\prod_{S_J/S} X_J.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The identity morphism of \\(X_J\\) defines by construction an S-morphism \\(p_X : X \\longrightarrow X^+\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now remark that if X is an S-group functor, then \\(X_J\\) is an \\(S_J\\)-group functor, and the defining formula of \\(X^+\\) endows it with a structure of S-group functor. We then have\n\\[\n\\mathrm{Hom}_{S\\text{-gr.}}(Y, X^+) = \\mathrm{Hom}_{S_J\\text{-gr.}}(Y_J, X_J)\n\\]\nfor every S-group functor Y. The morphism \\(p_X\\) is therefore a morphism of S-group functors.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now return to the general case, but suppose that X is an S-<em>scheme</em>. An S-morphism from a variable S-scheme Y to \\(X^+\\) being by definition an \\(S_J\\)-morphism \\(g_J\\) from \\(Y_J\\) to \\(X_J\\), we define an \\(X^+\\)-functor in abelian groups \\(\\mathrm{L}_X\\), by setting for every \\(X^+\\)-scheme Y\n\\[\n\\mathrm{Hom}_{X^+}(Y, \\mathrm{L}_X) = \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(g_0^*(\\Omega^1_{X_0/S_0}), J\\mathscr{O}_Y),\n\\]\nwhere \\(\\Omega^1_{X_0/S_0}\\) denotes the Module of relative differentials of \\(X_0\\) with respect to \\(S_0\\) (SGA 1, I.1), and where we regard \\(J\\mathscr{O}_Y\\) as an \\(\\mathscr{O}_{Y_0}\\)-module thanks to the fact that it is annihilated by \\(I\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The \\(X^+\\)-functor \\(\\mathrm{L}_X\\) is an abelian \\(X^+\\)-group. Moreover it depends functorially on X: let \\(f : X \\longrightarrow Y\\) be an S-morphism; from it we deduce by functoriality an S-morphism\n\\[\nf^+ : X^+ \\longrightarrow Y^+\n\\]\ncompatible with \\(f\\), that is, such that the following diagram is commutative:\n\\[\n\\xymatrix{\nX \\ar[r]^-{f} \\ar[d]_-{p_X} &amp; Y \\ar[d]^-{p_Y} \\\\\nX^+ \\ar[r]_-{f^+} &amp; Y^+\n}\n\\]\nLet us define an S-morphism \\(\\mathrm{L}_f : \\mathrm{L}_X \\to \\mathrm{L}_Y\\) compatible with \\(f^+\\), hence such that we have a commutative diagram:\n\\[\n\\xymatrix{\n\\mathrm{L}_X \\ar[r]^-{\\mathrm{L}_f} \\ar[d] &amp; \\mathrm{L}_Y \\ar[d] \\\\\nX^+ \\ar[r]_-{f^+} &amp; Y^+\n}\n\\]\nwe have a morphism of \\(\\mathscr{O}_{X_0}\\)-Modules (SGA 1 II, 4)\n\\[\nf_0^*(\\Omega^1_{Y_0/S_0}) \\longrightarrow \\Omega^1_{X_0/S_0}\n\\]\nwhich for every \\(X^+\\)-scheme Z defines a morphism of abelian groups, functorial in Z\n\\[\n\\mathrm{Hom}_{X^+}(Z, \\mathrm{L}_X) \\longrightarrow \\mathrm{Hom}_{Y^+}(Z, \\mathrm{L}_Y),\n\\]\nwhich gives us the desired morphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If X and \\(X'\\) are two S-schemes, we have a commutative diagram\n\\[\n\\xymatrix{\n\\mathrm{L}_X \\times_S \\mathrm{L}_{X'} \\ar[d] \\ar[r]^-{\\simeq} &amp; \\mathrm{L}_{X\\times_S X'} \\ar[d] \\\\\nX^+ \\times_S X'^+ \\ar[r]_-{\\simeq} &amp; (X \\times_S X')^+\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We can now state:</p>"
+    },
+    {
+     "id": "III.0.2",
+     "type": "proposition",
+     "label": "0.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.0.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">0.2</span></div>\n  <div class=\"thm-body\">\n    <p>For every S-scheme X, one can define an action of the abelian \\(X^+\\)-group \\(\\mathrm{L}_X\\) on the \\(X^+\\)-object X (on the left), such that:</p>\n  <p>(i) this action makes X a formally principal homogeneous object under \\(\\mathrm{L}_X\\) over \\(X^+\\): the morphism\n  \\[\n  \\mathrm{L}_X \\underset{X^+}{\\times} X \\longrightarrow X \\underset{X^+}{\\times} X\n  \\]\n  is an isomorphism;</p>\n  <p>(ii) this action is functorial in the S-scheme X: for every S-morphism \\(f : X \\to Y\\), the following diagram is commutative:\n  \\[\n  \\xymatrix{\n  \\mathrm{L}_X \\underset{X^+}{\\times} X \\ar[r] \\ar[d]_-{\\mathrm{L}_f\\times_{f^+} f} &amp; X \\ar[d]^-{f} \\\\\n  \\mathrm{L}_Y \\underset{Y^+}{\\times} Y \\ar[r] &amp; Y\n  }\n  \\]</p>\n  <p>(iii) this action \"commutes with fibre products\": for all S-schemes X and \\(X'\\), the following diagram is commutative\n  \\[\n  \\xymatrix{\n  (\\mathrm{L}_{X'}\\times_{X'^+}X')\\times_S(\\mathrm{L}_X\\times_{X^+}X) \\ar[rr] \\ar[d]_-{\\simeq} &amp; &amp; X'\\times_S X \\\\\n  (\\mathrm{L}_{X'}\\times_S \\mathrm{L}_X)\\times_{(X'^+\\times_S X^+)}(X'\\times_S X) \\ar[r]_-{\\simeq} &amp; \\mathrm{L}_{X'\\times_S X}\\times_{(X'\\times_S X)^+}(X'\\times_S X) \\ar[ur]_-{\\simeq} &amp;\n  }\n  \\]</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In SGA III 5.1 the following is proved: for every S-scheme Y and every \\(S_J\\)-morphism \\(g_J : Y_J \\to X_J\\), the set of S-morphisms \\(g : Y \\longrightarrow X\\) reducing to \\(g_J\\) is empty or principal homogeneous under the commutative group\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_{Y_J}}(h^*(\\Omega^1_{X/S}), J\\mathscr{O}_Y),\n\\]\nwhere \\(h\\) is the composite morphism \\(Y_J \\xrightarrow{\\ g_J\\ } X_J \\to X\\). Translated into our language, this means exactly that for every \\(X^+\\)-scheme Y, the set \\(\\mathrm{Hom}_{X^+}(Y,X)\\) is empty or principal homogeneous under the above group. Let us first show that this group is none other than\n\\[\n\\mathrm{Hom}_{X^+}(Y, \\mathrm{L}_X) = \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(g_0^*(\\Omega^1_{X_0/S_0}), J\\mathscr{O}_Y).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For this it suffices to remark that \\(J\\cdot\\mathscr{O}_Y\\) is annihilated by \\(I\\mathscr{O}_Y\\), hence that we may replace \\(h^*(\\Omega^1_{X/S})\\) by the sheaf it induces on \\(Y_0\\), which one sees without difficulty to be isomorphic to \\(g_0^*(\\Omega^1_{X_0/S_0})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This done, to complete the proof one would have to verify that the construction of SGA 1, III 5.1 is functorial in the \\(X^+\\)-scheme Y, and then that the action thus defined does enjoy the functorial properties required in (ii) and (iii). We shall not do so; the sceptical reader will consult EGA IV on this subject, where he will perhaps find some elements of a proof.</p>"
+    },
+    {
+     "id": "III.0.3",
+     "type": "remarque",
+     "label": "0.3",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">0.3</span></div>\n  <div class=\"thm-body\">\n  <p>Suppose the \\(X^+\\)-scheme Y <em>flat</em> over S (SGA IV). One can then write\n  \\[\n  \\mathrm{Hom}_{X^+}(Y, \\mathrm{L}_X) = \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(g_0^*(\\Omega^1_{X_0/S_0}), J \\otimes_{\\mathscr{O}_{S_0}} \\mathscr{O}_{Y_0}).\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.4",
+     "type": "remarque",
+     "label": "0.4",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">0.4</span></div>\n  <div class=\"thm-body\">\n  <p>Suppose that \\(\\Omega^1_{X_0/S_0}\\) is the inverse image on \\(X_0\\) of an \\(\\mathscr{O}_{S_0}\\)-Module denoted \\(\\omega^1_{X_0/S_0}\\) (this case will occur in particular when \\(X_0\\) is an \\(S_0\\)-group, cf. <a class=\"ref\" href=\"#II.4.11\">II, 4.11</a>). If we define a functor \\(\\mathrm{L}'_X\\) over S by the formula\n  \\[\n  \\mathrm{Hom}_S(Y, \\mathrm{L}'_X) = \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(\\omega^1_{X_0/S_0} \\otimes_{\\mathscr{O}_{S_0}} \\mathscr{O}_{Y_0}, J\\mathscr{O}_Y),\n  \\]\n  we shall have\n  \\[\n  \\mathrm{Hom}_{X^+}(Y, \\mathrm{L}_X) = \\mathrm{Hom}_S(Y, \\mathrm{L}'_X)\n  \\]\n  for every \\(X^+\\)-scheme Y, that is,\n  \\[\n  \\mathrm{L}_X = \\mathrm{L}'_X \\underset{S}{\\times} X^+.\n  \\]\n  The morphism of \\(X^+\\)-group functors \\(\\mathrm{L}_X \\to \\underline{\\mathrm{Aut}}_{X^+}(X)\\) will translate into a morphism of S-group functors \\(\\mathrm{L}'_X \\to \\underline{\\mathrm{Aut}}_S(X)\\), the actions of \\(\\mathrm{L}'_X\\) on X respecting the morphism \\(p_X : X \\to X^+\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.5",
+     "type": "remarque",
+     "label": "0.5",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">0.5</span></div>\n  <div class=\"thm-body\">\n  <p>Under the preceding conditions, suppose moreover that Y is an S-scheme <em>flat</em> over S. We then have\n  \\[\n  \\mathrm{Hom}_{X^+}(Y, \\mathrm{L}_X) = \\mathrm{Hom}_S(Y, \\mathrm{L}'_X) = \\mathrm{Hom}_{S_0}(Y_0, \\mathrm{L}_{0X}),\n  \\]\n  where the \\(S_0\\)-functor in abelian groups \\(\\mathrm{L}_{0X}\\) is defined by the following identity (with respect to the variable \\(S_0\\)-scheme T):\n  \\[\n  \\mathrm{Hom}_{S_0}(T, \\mathrm{L}_{0X}) = \\mathrm{Hom}_{\\mathscr{O}_T}(\\omega^1_{X_0/S_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_T, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_T).\n  \\]\n  In the notation of <a class=\"ref\" href=\"#II.1\">II, 1</a>, we have thus shown that the functors \\(\\mathrm{L}'_X\\) and \\(\\prod_{S_0/S} \\mathrm{L}_{0X}\\) have the same restriction to the full subcategory of \\((\\mathrm{Sch})_{/S}\\) whose objects are the S-schemes Y flat over S.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.6",
+     "type": "remarque",
+     "label": "0.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">0.6</span></div>\n  <div class=\"thm-body\">\n  <p>Suppose now that \\(\\omega^1_{X_0/S_0}\\) admits a finite presentation (EGA 0, 5.2.5), which will in particular be the case if \\(X_0\\) is locally of finite presentation over \\(S_0\\). One can write\n  \\[\n  \\mathrm{Hom}_{S_0}(T,\\mathrm{L}_{0X}) = \\Gamma(T, \\mathscr{H}om_{\\mathscr{O}_T}(\\omega^1_{X_0/S_0}\\otimes\\mathscr{O}_T, J\\otimes\\mathscr{O}_T))\n  \\]\n  (the tensor products being taken over \\(\\mathscr{O}_{S_0}\\)). If T is flat over \\(S_0\\), it follows from EGA \\(0_{\\mathrm I}\\), 6.7.6 that this can also be written\n  \\[\n  \\Gamma(T, \\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J)\\otimes\\mathscr{O}_T).\n  \\]\n  Introducing the notation \\(\\mathbf{W}(\\ )\\) of <a class=\"ref\" href=\"#I.4.6.1\">I, 4.6.1</a>, we have thus proved that for every \\(S_0\\)-scheme T flat over \\(S_0\\), we have\n  \\[\n  \\mathrm{Hom}_{S_0}(T,\\mathrm{L}_{0X}) = \\mathrm{Hom}_{S_0}(T, \\mathbf{W}(\\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J))).\n  \\]\n  In summary, if \\(\\omega^1_{X_0/S_0}\\) admits a finite presentation, and if we restrict to the category of S-schemes flat over S, we have\n  \\[\n  \\mathrm{L}'_X = \\prod_{S_0/S} \\mathbf{W}(\\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J))\n  \\]\n  (the sheaf of which we take the \\(\\mathbf{W}\\) being quasi-coherent by EGA I, 9.1.1). Let us remark finally that if \\(\\omega^1_{X_0/S_0}\\) is moreover locally free (of finite rank), for example if \\(X_0\\) is smooth over \\(S_0\\) (in which case it is automatically locally of finite presentation over \\(S_0\\)), we have\n  \\[\n  \\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J) \\simeq \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J,\n  \\]\n  where, by abuse of language (\\(X_0\\) not necessarily being an \\(S_0\\)-group), we denote by \\(\\mathscr{L}ie(X_0/S_0)\\) the dual of the \\(\\mathscr{O}_{S_0}\\)-Module \\(\\omega^1_{X_0/S_0}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The preceding proposition has an important corollary:</p>"
+    },
+    {
+     "id": "III.0.7",
+     "type": "corollaire",
+     "label": "0.7",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.0.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">0.7</span></div>\n  <div class=\"thm-body\">\n  <p>Let X be an S-scheme. Every S-endomorphism of X inducing the identity on \\(X_J\\) is an automorphism. We have an exact sequence of groups\n  \\[\n  0 \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{X_0}}(\\Omega^1_{X_0/S_0}, J\\mathscr{O}_X) \\xrightarrow{\\ i\\ } \\mathrm{Aut}_S(X) \\longrightarrow \\mathrm{Aut}_{S_J}(X_J).\n  \\]\n  Moreover, if we let \\(\\mathrm{Aut}_S(X)\\) act on the first group by transport of structure, we have the following relation\n  \\[\n  i(um) = u\\,i(m)\\,u^{-1}\n  \\]\n  for all \\(u \\in \\mathrm{Aut}_S(X)\\) and \\(m \\in \\mathrm{Hom}_{\\mathscr{O}_{X_0}}(\\Omega^1_{X_0/S_0}, J\\mathscr{O}_X)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By (i), \\(\\mathrm{Hom}_{X^+}(X,X)\\) is a principal homogeneous set under \\(\\mathrm{Hom}_{X^+}(X,\\mathrm{L}_X)\\), for it is certainly non-empty; indeed it contains a marked point: the identity automorphism of X. Thanks to this marked point, one defines an isomorphism of sets\n\\[\n\\mathrm{Hom}_{X^+}(X, \\mathrm{L}_X) \\longrightarrow \\mathrm{Hom}_{X^+}(X, X).\n\\]\nApplying now (ii) to an endomorphism of X over \\(X^+\\), that is, an S-endomorphism of X inducing the identity on \\(X_J\\), one sees easily that the preceding map respects the composition laws of the two sides. It follows first that every element of \\(\\mathrm{Hom}_{X^+}(X,X)\\) is invertible, which is the first assertion of the statement, and then that we have an exact sequence\n\\[\n0 \\longrightarrow \\mathrm{Hom}_{X^+}(X, \\mathrm{L}_X) \\xrightarrow{\\ i\\ } \\mathrm{Aut}_S(X) \\longrightarrow \\mathrm{Aut}_{S_J}(X_J),\n\\]\nwhich is the second.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now remark that the morphism \\(i\\) defined above is functorial in X for isomorphisms, for it is defined in structural terms from the action of \\(\\mathrm{L}_X\\) on X over \\(X^+\\), itself functorial in X by assertion (ii) of Proposition <a class=\"ref\" href=\"#III.0.2\">0.2</a>. So let \\(u\\) be an automorphism of X over S. It defines a map\n\\[\nh : \\mathrm{Hom}_{X^+}(X,\\mathrm{L}_X) \\longrightarrow \\mathrm{Hom}_{X^+}(X,\\mathrm{L}_X)\n\\]\nby transport of structure and a map\n\\[\nf : \\mathrm{Aut}_S(X) \\longrightarrow \\mathrm{Aut}_S(X)\n\\]\nlikewise by transport of structure, that is, by the commutative diagram\n\\[\n\\xymatrix{\nX \\ar[r]^-{a} \\ar[d]_-{u} &amp; X \\ar[d]^-{u} \\\\\nX \\ar[r]_-{f(a)} &amp; X\n}\n\\]\nWriting \\(i(h(m)) = f(i(m))\\), one finds the desired formula.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let X be an S-scheme such that \\(X_J\\) is an \\(S_J\\)-group. Suppose there exists an S-morphism\n\\[\n\\mathrm{P} : X \\underset{S}{\\times} X \\longrightarrow X\n\\]\nsuch that the morphism obtained by base change\n\\[\n\\mathrm{P}_J : X_J \\underset{S_J}{\\times} X_J \\longrightarrow X_J\n\\]\nis the group law of \\(X_J\\). (An important special case of the preceding situation will be the case where X is an S-group and where we take for P its group law). From it we deduce a morphism\n\\[\n\\mathrm{L}_{\\mathrm{P}} : \\mathrm{L}_X \\underset{S}{\\times} \\mathrm{L}_X \\longrightarrow \\mathrm{L}_X\n\\]\nwhich, in fact, does not depend on P, for it can be computed by means of the group law \\(\\mathrm{P}_J\\) of \\(X_J\\), as we shall now see. The morphism\n\\[\n\\mathrm{P}_0^*(\\Omega^1_{X_0/S_0}) \\longrightarrow \\Omega^1_{X_0\\times_{S_0}X_0/S_0}\n\\]\ntranslates in \\(\\mathrm{T}_{X_0/S_0}\\) (<a class=\"ref\" href=\"#II.4.1\">II 4.1</a>) into the group law of the latter, which one writes down immediately with the help of the decomposition of \\(\\mathrm{T}_{X_0/S_0}\\) as a semi-direct product of \\(\\mathscr{L}ie(X_0/S_0)\\) by \\(X_0\\). Using (ii) and (iii) of <a class=\"ref\" href=\"#III.0.2\">0.2</a>, one obtains, after all the computations:</p>"
+    },
+    {
+     "id": "III.0.8",
+     "type": "proposition",
+     "label": "0.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.0.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">0.8</span></div>\n  <div class=\"thm-body\">\n    <p>Let \\(\\mathrm{P} : X\\times_S X \\to X\\) be an S-morphism such that \\(\\mathrm{P}_J\\) endows \\(X_J\\) with a structure of \\(S_J\\)-group. Denote by \\((m,x)\\mapsto mx\\) the morphism\n  \\[\n  \\mathrm{L}'_X \\underset{S}{\\times} X \\longrightarrow X\n  \\]\n  defining the action of \\(\\mathrm{L}'_X\\) (defined in <a class=\"ref\" href=\"#III.0.4\">0.4</a>) on X. Denote by \\(\\mathrm{Ad} : X^+ \\longrightarrow \\mathrm{Aut}_{S\\text{-gr.}}(\\mathrm{L}'_X)\\) the action of \\(X^+\\) on \\(\\mathrm{L}'_X\\) deduced from the adjoint action of \\(X_0\\) on \\(\\omega^1_{X_0/S_0}\\). For every \\(S' \\to S\\) and all \\(x,x' \\in X(S')\\), \\(m,m' \\in \\mathrm{L}'_X(S')\\), we have:\n  \\[\n  \\mathrm{P}(mx, m'x') = (m\\cdot \\mathrm{Ad}\\,p_X(x)(m'))\\,\\mathrm{P}(x,x').\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.9",
+     "type": "corollaire",
+     "label": "0.9",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.0.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">0.9</span></div>\n  <div class=\"thm-body\">\n  <p>Let X be an S-group. Then \\(X^+\\) is naturally equipped with a structure of S-group, \\(p_X\\) is a morphism of S-groups and the S-morphism \\(i : \\mathrm{L}'_X \\longrightarrow X\\) defined set-theoretically by \\(m \\mapsto me\\) (where \\(e\\) is the unit section of G) is an isomorphism of S-groups from \\(\\mathrm{L}'_X\\) onto the kernel of \\(p_X : X \\to X^+\\).</p>\n  <p>The first two assertions have already been proved. As X is formally principal homogeneous over \\(X^+\\) under \\(\\mathrm{L}_X = \\mathrm{L}'_X \\times_S X^+\\), the stated morphism is indeed an isomorphism (of S-functors) from \\(\\mathrm{L}'_X\\) onto the kernel of \\(p_X\\). The fact that it respects the group structures follows from the explicit formula of <a class=\"ref\" href=\"#III.0.8\">0.8</a>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.10",
+     "type": "corollaire",
+     "label": "0.10",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.0.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">0.10</span></div>\n  <div class=\"thm-body\">\n  <p>With the preceding notation, for every \\(S' \\to S\\) and all \\(x \\in X(S')\\) and \\(m \\in \\mathrm{L}'_X(S')\\), we have\n  \\[\n  x\\,i(m)\\,x^{-1} = i(\\mathrm{Ad}\\,p_X(x)\\,m).\n  \\]\n  This follows from the formula given above and from \\(i(m)x = mx\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When X is an S-group, we have thus determined explicitly the kernel of \\(X \\to X^+\\) and the action of the inner automorphisms of X on this kernel. We shall now see that one can do the same for certain S-group functors which are not necessarily representable. One case will be useful to us, that of the functors \\(\\underline{\\mathrm{Aut}}\\) (<a class=\"ref\" href=\"#I.1.7\">I 1.7</a>). Let us state right away:</p>"
+    },
+    {
+     "id": "III.0.11",
+     "type": "proposition",
+     "label": "0.11",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.0.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">0.11</span></div>\n  <div class=\"thm-body\">\n    <p>Let E be an S-scheme. Set \\(X = \\underline{\\mathrm{Aut}}_S(E)\\). The kernel of the morphism of S-group functors \\(p_X : X \\longrightarrow X^+\\) is canonically identified with the S-functor in commutative groups \\(\\mathrm{L}'_X\\) defined by\n  \\[\n  \\mathrm{Hom}_S(Y, \\mathrm{L}'_X) = \\mathrm{Hom}_{\\mathscr{O}_{E_0\\times_{S_0}Y_0}}(\\Omega^1_{E_0/S_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0}, J\\mathscr{O}_{E\\times_S Y})\n  \\]\n  where Y denotes a variable S-scheme.</p>\n  <p>Indeed, if Y is a variable S-scheme, we have:\n  \\[\n  \\mathrm{Hom}_S(Y,X) = \\mathrm{Aut}_Y(E\\times_S Y), \\qquad\n  \\mathrm{Hom}_S(Y,X^+) = \\mathrm{Hom}_{S_J}(Y_J,X_J) = \\mathrm{Aut}_{Y_J}(E\\underset{S}{\\times}Y_J) = \\mathrm{Aut}_{Y_J}((E\\underset{S}{\\times}Y)\\underset{Y}{\\times}Y_J).\n  \\]\n  Applying <a class=\"ref\" href=\"#III.0.7\">0.7</a> to the Y-scheme \\(E\\times_S Y\\), we obtain an isomorphism of S-groups\n  \\[\n  \\mathrm{Hom}_S(Y,\\mathrm{L}'_X) \\simeq \\mathrm{Ker}\\bigl(\\mathrm{Hom}_S(Y,X)\\longrightarrow \\mathrm{Hom}_S(Y,X^+)\\bigr),\n  \\]\n  an isomorphism which one easily verifies to be functorial in the S-scheme Y, which completes the proof.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.12",
+     "type": "remarque",
+     "label": "0.12",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">0.12</span></div>\n  <div class=\"thm-body\">\n  <p>There is a natural action \\(f\\) of X on \\(\\mathrm{L}'_X\\), defined in the following manner: for every \\(Y \\to S\\), we have \\(\\mathrm{Hom}_S(Y,X) = \\mathrm{Aut}_Y(\\mathrm{F})\\) and\n  \\[\n  \\mathrm{Hom}_S(Y,\\mathrm{L}'_X) = \\mathrm{Hom}_{\\mathscr{O}_{F_0}}(\\Omega^1_{F_0/Y_0}, J\\mathscr{O}_F),\n  \\]\n  where F is the Y-scheme \\(E\\times_S Y\\); the first group acts on the second by transport of structure and this action is indeed functorial in Y. We then have the formula\n  \\[\n  x\\,i(m)\\,x^{-1} = i(f(x)m),\n  \\]\n  for every \\(Y \\to S\\) and all \\(x \\in \\mathrm{Hom}_S(S', X)\\), \\(m \\in \\mathrm{Hom}_S(S', \\mathrm{L}'_X)\\); it suffices indeed to apply <a class=\"ref\" href=\"#III.0.7\">0.7</a> to the Y-scheme F.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.13",
+     "type": "remarque",
+     "label": "0.13",
+     "title": "Reminder",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Reminder</span> <span class=\"thm-num\">0.13</span></div>\n  <div class=\"thm-body\">\n  <p>The direct image of a quasi-coherent module under a morphism of <em>finite presentation</em> is quasi-coherent. Under the same conditions, the formation of the direct image commutes with <em>flat</em> base change: in the situation\n  \\[\n  \\xymatrix{\n  T \\ar[d]_-{f} &amp; T' = T\\times_S S' \\ar[l]_-{g'} \\ar[d]^-{f'} \\\\\n  S &amp; S' \\ar[l]^-{g}\n  }\n  \\]\n  if we suppose \\(f\\) (and hence \\(f'\\)) of finite presentation and \\(g\\) (and hence \\(g'\\)) flat, we have for every quasi-coherent \\(\\mathscr{O}_T\\)-module \\(\\mathscr{F}\\)\n  \\[\n  f_*(\\mathscr{F})\\otimes_{\\mathscr{O}_S}\\mathscr{O}_{S'} = f'_*(\\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{O}_{S'}),\n  \\]\n  or, more aesthetically,\n  \\[\n  g^*(f_*(\\mathscr{F})) = f'_*(g'^*(\\mathscr{F})).\n  \\]\n  These two facts are more generally valid for a quasi-compact and quasi-separated morphism (cf. EGA III.1.4.15 in the quasi-compact separated case and EGA III 6.9.10).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.14",
+     "type": "remarque",
+     "label": "0.14",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.0.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">0.14</span></div>\n  <div class=\"thm-body\">\n  <p>In the notation of <a class=\"ref\" href=\"#III.0.11\">0.11</a>, suppose E of finite presentation over S and Y flat over S. We then have successively\n  \\[\n  \\mathrm{Hom}_S(Y,\\mathrm{L}'_X) = \\Gamma(E\\times_S Y, \\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E)\\otimes_{\\mathscr{O}_S}\\mathscr{O}_Y)\n  \\]\n  \\[\n  = \\Gamma(Y, g_*(\\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E)\\otimes_{\\mathscr{O}_S}\\mathscr{O}_Y))\n  \\]\n  \\[\n  = \\Gamma(Y, f_*(\\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E))\\otimes_{\\mathscr{O}_S}\\mathscr{O}_Y)\n  \\]\n  \\[\n  = \\mathbf{W}(f_*(\\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E)))(Y)\n  \\]\n  where \\(f\\) and \\(g\\) are the structural morphisms\n  \\[\n  g : E\\times_S Y \\to Y \\ , \\qquad f : E \\longrightarrow S.\n  \\]\n  We have thus shown that we have\n  \\[\n  \\mathrm{L}'_X = \\mathbf{W}(f_*(\\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E)))\n  \\]\n  on the category of S-schemes flat over S. Note moreover that the Module of which we take the \\(\\mathbf{W}\\) is quasi-coherent.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us finally extract from SGA 1 III the following two propositions.</p>"
+    },
+    {
+     "id": "III.0.15",
+     "type": "proposition",
+     "label": "0.15",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.0.15\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">0.15</span></div>\n  <div class=\"thm-body\">\n  <p>(SGA 1 III, 6.8) For every \\(S_J\\)-scheme smooth over \\(S_J\\) and affine, there exists an S-scheme X smooth over S reducing to \\(X_J\\), and such an X is unique up to (non-unique) isomorphism.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.16",
+     "type": "proposition",
+     "label": "0.16",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.0.16\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">0.16</span></div>\n  <div class=\"thm-body\">\n  <p>(SGA 1 III, 5.5) Let X be an S-scheme smooth over S. For every affine S-scheme Y, the canonical map\n  \\[\n  \\mathrm{Hom}_S(Y,p_X) : \\mathrm{Hom}_S(Y,X) \\longrightarrow \\mathrm{Hom}_S(Y,X^+) = \\mathrm{Hom}_{S_J}(Y_J,X_J)\n  \\]\n  is surjective.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.0.17",
+     "type": "corollaire",
+     "label": "0.17",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.0.17\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">0.17</span></div>\n  <div class=\"thm-body\">\n    <p>Let E be an S-scheme affine over S and smooth over S; set \\(X = \\underline{\\mathrm{Aut}}_S(E)\\). For every affine S-scheme Y, the canonical map\n  \\[\n  \\mathrm{Hom}_S(Y,p_X) : \\mathrm{Hom}_S(Y,X) \\longrightarrow \\mathrm{Hom}_S(Y,X^+)\n  \\]\n  is surjective.</p>\n  <p>Indeed, \\(Y\\times_S E\\) is affine over Y, which is itself affine, hence affine. Applying <a class=\"ref\" href=\"#III.0.16\">0.16</a>, we deduce that every \\(S_J\\)-morphism \\(Y_J\\times_{S_J}E_J \\to E_J\\) extends to an S-morphism \\(Y\\times_S E \\to E\\). In other words, every \\(S_J\\)-morphism \\(Y_J \\to \\underline{\\mathrm{End}}_{S_J}(E)\\) extends to an S-morphism \\(Y \\to \\underline{\\mathrm{End}}_S(E)\\). But <a class=\"ref\" href=\"#III.0.7\">0.7</a> shows that the same holds when \\(\\underline{\\mathrm{End}}_S(E)\\) is replaced by \\(\\underline{\\mathrm{Aut}}_S(E)\\), which is the announced property.</p>\n  \n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-1",
+   "title": "1. Extensions and cohomology",
+   "blocks": [
+    {
+     "id": "III.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.1\">1. Extensions and cohomology</h2>"
+    },
+    {
+     "id": "III.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.1\">1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\mathscr{C}\\) be a category. Let S be an object of \\(\\mathscr{C}\\), G an S-group (representable) and F an S-functor in commutative groups on which G acts. We defined in <a class=\"ref\" href=\"#I.5.1\">I, 5.1</a> the cohomology groups \\(\\mathrm{H}^n(G,F)\\). Recall that these are the homology groups of a complex denoted \\(\\mathrm{C}^*(G,F)\\) where\n\\[\n\\mathrm{C}^n(G,F) = \\mathrm{Hom}_S((G/S)^n, F).\n\\]\nAs G is representable, we also have\n\\[\n\\mathrm{C}^n(G,F) = F((G/S)^n)\\, ;\n\\]\nfrom this, and from the definition of the boundary operator, one sees that the complex \\(\\mathrm{C}^*(G,F)\\) depends only on the restriction of F to the full subcategory of \\(\\mathscr{C}/S\\) whose objects are the cartesian powers of G over S. Consequently, we have the</p>"
+    },
+    {
+     "id": "III.1.1.1",
+     "type": "lemme",
+     "label": "1.1.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.1.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.1.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(\\mathscr{C}\\) be a category, S an object of \\(\\mathscr{C}\\), G a representable S-group. Denote by \\(\\mathscr{C}(G)\\) the full subcategory of \\(\\mathscr{C}/S\\) whose objects are the cartesian powers of G over S. Let F and \\(F'\\) be two S-functors in commutative groups on which G acts. If F and \\(F'\\) have the same restriction to \\(\\mathscr{C}(G)\\), there is a canonical isomorphism\n  \\[\n  \\mathrm{H}^*(G,F) \\xrightarrow{\\ \\sim\\ } \\mathrm{H}^*(G,F').\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us state another comparison result. Now let \\(T \\to S\\) be a morphism of \\(\\mathscr{C}\\). If F is a T-functor in commutative groups, then\n\\[\nF_1 = \\prod_{T/S} F \\qquad (\\text{Exp. II, 1})\n\\]\nis an S-functor in commutative groups and we have a morphism of S-group functors\n\\[\nu : \\prod_{T/S} \\underline{\\mathrm{Aut}}_{T\\text{-gr.}}(F) \\longrightarrow \\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(F_1).\n\\]\nNow let G be an S-group functor and let \\(G_T \\longrightarrow \\underline{\\mathrm{Aut}}_{T\\text{-gr.}}(F)\\) be an action of \\(G_T\\) on F. By definition of the functor \\(\\prod\\), we deduce from it a morphism\n\\[\nG \\longrightarrow \\prod_{T/S} \\underline{\\mathrm{Aut}}_{T\\text{-gr.}}(F),\n\\]\nwhence, by composition with \\(u\\), an action of G on \\(F_1\\).</p>"
+    },
+    {
+     "id": "III.1.1.2",
+     "type": "lemme",
+     "label": "1.1.2",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.1.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.1.2</span></div>\n  <div class=\"thm-body\">\n  <p>Under the preceding conditions, there is a canonical isomorphism\n  \\[\n  \\mathrm{H}^*\\Bigl(G, \\prod_{T/S} F\\Bigr) \\simeq \\mathrm{H}^*(G_T, F).\n  \\]</p>\n  <p>Indeed, by the definition of cohomology, the standard complexes are canonically isomorphic.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.2\">1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Following the general principles, we make the following definition:</p>"
+    },
+    {
+     "id": "III.1.2.1",
+     "type": "definition",
+     "label": "1.2.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.1.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.2.1</span></div>\n  <div class=\"thm-body\">\n    <p>Let \\(1 \\to M \\xrightarrow{\\ u\\ } E \\xrightarrow{\\ v\\ } G\\) be a sequence of morphisms of \\(\\widehat{\\mathscr{C}}\\)-groups. We say that it is <em>exact</em> if the following equivalent conditions are satisfied:</p>\n  <p>(i) for every \\(S \\in \\mathrm{Ob}\\,\\mathscr{C}\\), the sequence of ordinary groups\n  \\[\n  1 \\longrightarrow M(S) \\xrightarrow{\\ u(S)\\ } E(S) \\xrightarrow{\\ v(S)\\ } G(S)\n  \\]\n  is exact;</p>\n  <p>(ii) for every object H of \\(\\widehat{\\mathscr{C}}\\), the sequence of ordinary groups\n  \\[\n  1 \\longrightarrow \\mathrm{Hom}(H,M) \\longrightarrow \\mathrm{Hom}(H,E) \\longrightarrow \\mathrm{Hom}(H,G)\n  \\]\n  is exact.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Taking in particular \\(H = G\\) in (ii), one sees that the set of sections of \\(v\\) (not a priori respecting the group structures) is empty or principal homogeneous under \\(\\mathrm{Hom}(H,M)\\). Suppose it non-empty; so let \\(s : G \\longrightarrow E\\) be a section of \\(v\\). Then for every \\(S \\in \\mathrm{Ob}\\,\\mathscr{C}\\) and every \\(x \\in G(S)\\), the element \\(s(x)\\) of \\(E(S)\\) defines an inner automorphism of \\(E_S\\) which normalizes \\(M_S\\) (more correctly, the image of \\(M_S\\) under \\(u_S\\)), hence an automorphism of \\(M_S\\); if M is commutative, one sees \"set-theoretically\" that this automorphism does not depend on the section chosen, but only on \\(x\\), and that it depends on it multiplicatively. In summary, to every exact sequence\n\\[\n\\text{(E)} \\qquad 1 \\longrightarrow M \\xrightarrow{\\ u\\ } E \\xrightarrow{\\ v\\ } G\n\\]\nsuch that M is commutative and \\(v\\) has a section, is associated a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups \\(G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\widehat{\\mathscr{C}}\\text{-gr.}}(M)\\), which is called the <em>action of G on M defined by the extension (E)</em>. We saw in <a class=\"ref\" href=\"#I.2.3.7\">I, 2.3.7</a> that \\(v\\) has a section which is a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups if and only if the extension (E) is isomorphic (\"as an extension\") to the semi-direct product of M by G relative to the preceding action. Such a section of \\(v\\) will be called a <em>section of the extension (E)</em>. If \\(s\\) is a section of (E) and if \\(m \\in \\Gamma(M) \\simeq \\mathrm{Ker}(\\Gamma(E) \\to \\Gamma(G))\\) (for the definition of \\(\\Gamma\\), see <a class=\"ref\" href=\"#I.1.2\">I, 1.2</a>), then the morphism \\(G \\to E\\) defined by \\(x \\mapsto u(m)\\,x\\,u(m)^{-1}\\) is also a section of (E), said to be <em>deduced from \\(s\\) by the inner automorphism defined by \\(m\\)</em> (or by \\(u(m)\\)).</p>"
+    },
+    {
+     "id": "III.1.2.2",
+     "type": "lemme",
+     "label": "1.2.2",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.1.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.2.2</span></div>\n  <div class=\"thm-body\">\n    <p>Let (E): \\(1 \\to M \\xrightarrow{\\ u\\ } E \\xrightarrow{\\ v\\ } G\\) be an exact sequence of \\(\\widehat{\\mathscr{C}}\\)-groups such that M is commutative and \\(v\\) has a section. Let G act on M in the manner defined by (E).</p>\n  <p>(i) The extension (E) canonically defines a class \\(c(E) \\in \\mathrm{H}^2(G,M)\\) whose vanishing is necessary and sufficient for the existence of a section of (E).</p>\n  <p>(ii) If \\(c(E) = 0\\), the set of sections of (E) is principal homogeneous under the group \\(\\mathrm{Z}^1(G,M)\\); the set of sections of (E) modulo the action of the inner automorphisms defined by the elements of \\(\\Gamma(M)\\) is principal homogeneous under the group \\(\\mathrm{H}^1(G,M)\\).</p>\n  <p>The proof proceeds exactly as in the case of ordinary groups, the fact that one starts from a section of \\(v\\) ensuring the functoriality of the set-theoretic computations. Let us briefly indicate the main steps of the proof.</p>\n  <p>a) To every section \\(s\\) of \\(v\\) we associate the morphism \\(\\mathrm{D}s : G\\times G \\longrightarrow M\\), defined set-theoretically by\n  \\[\n  u(\\mathrm{D}s(x,y)) = s(xy)s(y)^{-1}s(x)^{-1}.\n  \\]\n  One shows that \\(\\mathrm{D}s\\) is a 2-cocycle by computing\n  \\[\n  \\partial\\mathrm{D}s(x,y,z) = s(x)\\mathrm{D}s(y,z)^{-1}s(x)^{-1}\\mathrm{D}s(x,yz)^{-1}\\mathrm{D}s(xy,z)\\mathrm{D}s(x,y)\\, ;\n  \\]\n  it suffices to substitute the definition of \\(\\mathrm{D}s\\) into this formula to find (without using any commutativity) \\(\\mathrm{D}s \\in \\mathrm{Z}^2(G,M)\\).</p>\n  <p>b) If \\(s\\) and \\(s'\\) are two sections of \\(v\\), we have seen that there exists \\(m : G \\longrightarrow M\\) such that \\(s(x) = m(x)s'(x)\\). We then have\n  \\[\n  \\mathrm{D}s'(x,y) = m^{-1}(xy)\\mathrm{D}s(x,y)s(x)m(y)s(x)^{-1}m(x),\n  \\]\n  that is,\n  \\[\n  \\mathrm{D}s' = \\mathrm{D}s \\cdot \\partial m.\n  \\]</p>\n  <p>c) If \\(s\\) and \\(s'\\) are two sections of \\(v\\) deduced from one another by an inner automorphism of E defined by an element \\(m \\in \\Gamma(M)\\), then \\(s(x) = m^{-1}s'(x)m\\) implies\n  \\[\n  s(x) = m^{-1}s'(x)m\\,s'(x)^{-1}s'(x),\n  \\]\n  that is, \\(s = \\partial m \\cdot s'\\).</p>\n  <p>d) The reasoning is now the usual one: to find an \\(s\\) which is a group morphism, one must find an \\(s\\) such that \\(\\mathrm{D}s = e\\), …</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let again\n\\[\n\\text{(E)} \\qquad 1 \\longrightarrow M \\xrightarrow{\\ u\\ } E \\xrightarrow{\\ v\\ } G\n\\]\nbe an exact sequence of \\(\\widehat{\\mathscr{C}}\\)-groups with M commutative. Let \\(f : H \\longrightarrow G\\) be a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups. Consider \\(E_f = H\\times_G E\\); it is a \\(\\widehat{\\mathscr{C}}\\)-group and the projection \\(v_f : E_f \\to H\\) is a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups. Likewise for \\(e_f : E_f \\to E\\). On the other hand, if we send M into E by \\(u\\) and into H by the unit morphism, we define a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups \\(u_f : M \\to E_f\\). We have thus constructed a commutative diagram of \\(\\widehat{\\mathscr{C}}\\)-groups:\n\\[\n\\xymatrix{\n(\\mathrm{E}) &amp; 1 \\ar[r] &amp; M \\ar[r]^-{u} &amp; E \\ar[r]^-{v} &amp; G \\\\\n(\\mathrm{E}_f) &amp; 1 \\ar[r] &amp; M \\ar[r]_-{u_f} \\ar[u]^-{\\mathrm{id}} &amp; E_f \\ar[r]_-{v_f} \\ar[u]_-{e_f} &amp; H \\ar[u]_-{f}\n}\n\\]\nWe have immediately:</p>"
+    },
+    {
+     "id": "III.1.2.3",
+     "type": "lemme",
+     "label": "1.2.3",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.1.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.2.3</span></div>\n  <div class=\"thm-body\">\n    <p>(i) The sequence \\((\\mathrm{E}_f)\\) is exact.</p>\n  <p>(ii) The map \\(s \\mapsto e_f\\circ s = f'\\) establishes a one-to-one correspondence between the morphisms \\(s : H \\longrightarrow E_f\\) such that \\(v_f\\circ s = \\mathrm{id}\\) (that is, the sections of \\(v_f\\)) and the morphisms \\(f' : H \\longrightarrow E\\) such that \\(v\\circ f' = f\\) (that is, the morphisms \\(f'\\) \"lifting\" \\(f\\)).</p>\n  <p>(iii) In the preceding correspondence, sections of \\((\\mathrm{E}_f)\\) and group morphisms \\(f'\\) lifting \\(f\\) correspond to one another.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Applying Lemma <a class=\"ref\" href=\"#III.1.2.2\">1.2.2</a> to the extension \\((\\mathrm{E}_f)\\) and taking account of <a class=\"ref\" href=\"#III.1.2.3\">1.2.3</a>, we obtain the following proposition (which formally contains 1.2.2):</p>"
+    },
+    {
+     "id": "III.1.2.4",
+     "type": "proposition",
+     "label": "1.2.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2.4</span></div>\n  <div class=\"thm-body\">\n    <p>Let (E): \\(1 \\to M \\to E \\xrightarrow{\\ v\\ } G\\) be an exact sequence of \\(\\widehat{\\mathscr{C}}\\)-groups with M commutative. Let\n  \\[\n  f : H \\longrightarrow G\n  \\]\n  be a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups; suppose that it lifts to a morphism (not necessarily of groups) \\(f' : H \\to E\\). Let H act on M by the composite morphism (multiplicative and independent of the choice of \\(f'\\)),\n  \\[\n  H \\xrightarrow{\\ f'\\ } E \\xrightarrow{\\ \\mathrm{int}\\ } \\underline{\\mathrm{Aut}}_{\\widehat{\\mathscr{C}}\\text{-gr.}}(M).\n  \\]</p>\n  <p>(i) The morphism \\(f\\) canonically defines a class \\(c(f) \\in \\mathrm{H}^2(H,M)\\) whose vanishing is necessary and sufficient for the existence of a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups \\(f' : H \\longrightarrow E\\) lifting \\(f\\).</p>\n  <p>(ii) If \\(c(f) = 0\\), the set of morphisms of \\(\\widehat{\\mathscr{C}}\\)-groups \\(f'\\) lifting \\(f\\), modulo the action of the inner automorphisms defined by the elements of \\(\\Gamma(M)\\) (i.e. by the elements \\(m\\) of \\(\\Gamma(E)\\) such that \\(v(m)=e\\)), is principal homogeneous under \\(\\mathrm{H}^1(H,M)\\).</p>\n  <p>(iii) If \\(f' : H \\to E\\) is a group morphism lifting \\(f\\), the set of transforms of \\(f'\\) by the inner automorphisms defined by the elements of \\(\\Gamma(M)\\) is isomorphic to \\(\\Gamma(M)/\\Gamma(M^H) = \\Gamma(M)/\\mathrm{H}^0(H,M)\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.1.3\">1.3. Extensions of group laws.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider the following situation: we have a morphism of \\(\\widehat{\\mathscr{C}}\\)\n\\[\np : X \\longrightarrow Y\n\\]\nand a commutative \\(\\widehat{\\mathscr{C}}\\)-group M acting on X, such that X is formally principal homogeneous over Y under \\(M_Y\\). If \\(g : Y \\to Z\\) is an arbitrary morphism of \\(\\widehat{\\mathscr{C}}\\), then \\(g\\circ p : X \\to Z\\) is invariant under M: for each \\(S \\in \\mathrm{Ob}\\,\\mathscr{C}\\), \\(g\\circ p(S)\\) is invariant under the action of \\(M(S)\\) acting on \\(X(S)\\). We shall assume that the following condition is satisfied for \\(n=1,2,3,4\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((+)_n\\): Every morphism from \\(X^n\\) to M, invariant under the action of \\(M^n\\) acting on \\(X^n\\), factors in a unique way through \\(p^n : X^n \\to Y^n\\) (where the powers \\(n\\) denote cartesian powers).</p>"
+    },
+    {
+     "id": "III.1.3.1",
+     "type": "lemme",
+     "label": "1.3.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.1.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.3.1</span></div>\n  <div class=\"thm-body\">\n  <p>If \\(h\\) is a morphism from Y to M, the automorphism of X defined set-theoretically by \\(x \\mapsto h(p(x))x\\) commutes with \\(p\\) and with the actions of M on X. This construction establishes a bijective correspondence between morphisms from Y to M and automorphisms of X commuting with \\(p\\) and with the actions of M.</p>\n  <p>The first part is clear. Conversely, an automorphism \\(u\\) of X commuting with \\(p\\) can be written set-theoretically as \\(x \\mapsto g(x)x\\), where \\(g\\) is a certain morphism from X to M. If \\(u\\) commutes with the actions of M, this morphism is invariant under M and one concludes by condition \\((+)_1\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We now suppose given, in addition, a group law on Y and an action of Y on M, that is, a morphism of \\(\\widehat{\\mathscr{C}}\\)-groups:\n\\[\nf : Y \\longrightarrow \\underline{\\mathrm{Aut}}_{\\widehat{\\mathscr{C}}\\text{-gr.}}(M).\n\\]</p>"
+    },
+    {
+     "id": "III.1.3.2",
+     "type": "definition",
+     "label": "1.3.2",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.1.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.3.2</span></div>\n  <div class=\"thm-body\">\n    <p>A composition law on X\n  \\[\n  \\mathrm{P} : X\\times X \\longrightarrow X\n  \\]\n  is called <em>admissible</em> if it satisfies the following two conditions:</p>\n  <p>(i) P lifts the group law of Y, i.e. the diagram\n  \\[\n  \\xymatrix{\n  X\\times X \\ar[r]^-{\\mathrm{P}} \\ar[d]_-{(p,p)} &amp; X \\ar[d]^-{p} \\\\\n  Y\\times Y \\ar[r] &amp; Y\n  }\n  \\]\n  is commutative.</p>\n  <p>(ii) For every \\(S \\in \\mathrm{Ob}\\,\\mathscr{C}\\) and all \\(x,y \\in X(S)\\), \\(m,n \\in M(S)\\), we have the following relation\n  \\[\n  (++) \\qquad \\mathrm{P}(mx,ny) = (m\\cdot f(p(x))n)\\,\\mathrm{P}(x,y).\n  \\]</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.3.3",
+     "type": "proposition",
+     "label": "1.3.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3.3</span></div>\n  <div class=\"thm-body\">\n    <p>For a group law on X to be admissible, it is necessary and sufficient that the following conditions be satisfied:</p>\n  <p>(i) \\(p : X \\to Y\\) is a group morphism.</p>\n  <p>(ii) The morphism \\(i : M \\to X\\) defined by \\(i(m) = me_X\\) is an isomorphism of groups from M onto \\(\\mathrm{Ker}(p)\\), that is: we have set-theoretically \\(me_X\\cdot ne_X = mne_X\\).</p>\n  <p>(iii) We have \\(mx = (me_X)\\cdot x\\) for each \\(m \\in M(S)\\), \\(x \\in X(S)\\).</p>\n  <p>(iv) The inner automorphisms of X act on \\(\\mathrm{Ker}(p)\\) according to the set-theoretic formula:\n  \\[\n  x\\,i(m)\\,x^{-1} = i(f(p(x))m).\n  \\]</p>\n  <p>The proof is immediate.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.3.4",
+     "type": "lemme",
+     "label": "1.3.4",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.1.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.3.4</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(u\\) be an automorphism of X of the type described in <a class=\"ref\" href=\"#III.1.3.1\">1.3.1</a>. If P and \\(\\mathrm{P}'\\) are two composition laws on X deduced from one another via \\(u\\) (by \\(\\mathrm{P}(ux,uy) = u\\mathrm{P}'(x,y)\\)), P is an admissible composition law (resp. an admissible group law) if and only if \\(\\mathrm{P}'\\) is one.</p>\n  <p>Trivial.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.3.5",
+     "type": "definition",
+     "label": "1.3.5",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"III.1.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.3.5</span></div>\n  <div class=\"thm-body\">\n  <p>Two admissible composition laws deduced from one another by the procedure of <a class=\"ref\" href=\"#III.1.3.4\">1.3.4</a> are called <em>equivalent</em>.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.1.3.6",
+     "type": "proposition",
+     "label": "1.3.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.1.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3.6</span></div>\n  <div class=\"thm-body\">\n    <p>Suppose there exists an admissible composition law on X. Then:</p>\n  <p>(i) There exists a class \\(c \\in \\mathrm{H}^3(Y,M)\\) (canonically determined), whose vanishing is necessary and sufficient for the existence of an associative admissible composition law on X.</p>\n  <p>(ii) If \\(c=0\\), the set of admissible and associative composition laws (resp. of equivalence classes of admissible and associative composition laws) on X is principal homogeneous under \\(\\mathrm{Z}^2(G,M)\\) (resp. \\(\\mathrm{H}^2(G,M)\\)).</p>\n  <p>The proof proceeds in several steps.</p>\n  <p>a) Let P be an admissible composition law on X. As P lifts the composition law of Y, which is associative, there exists a unique morphism \\(a : X^3 \\to M\\) such that\n  \\[\n  \\mathrm{P}(x,\\mathrm{P}(y,z)) = a(x,y,z)\\,\\mathrm{P}(\\mathrm{P}(x,y),z).\n  \\]\n  Applying condition (ii), one sees at once that \\(a\\) is invariant under the action of \\(M^3\\) on \\(X^3\\), whence, applying hypothesis \\((+)_3\\), the following result:</p>\n  <p>(1) There exists a unique morphism \\(\\mathrm{DP} : Y^3 \\to M\\) such that\n  \\[\n  \\mathrm{P}(x,\\mathrm{P}(y,z)) = \\mathrm{DP}(p(x),p(y),p(z))\\,\\mathrm{P}(\\mathrm{P}(x,y),z),\n  \\]\n  and P is associative if and only if \\(\\mathrm{DP} = 0\\).</p>\n  <p>b) If one computes step by step \\(\\mathrm{P}(\\mathrm{P}(\\mathrm{P}(x,y),z),t)\\) using the preceding formula, one finds, setting \\(p(x)=u\\), \\(p(y)=v\\), \\(p(z)=w\\), \\(p(t)=h\\),\n  \\[\n  \\mathrm{DP}(u,v,w)\\cdot\\mathrm{DP}(u,vw,h)\\cdot f(u)\\mathrm{DP}(v,w,h)\\cdot\\mathrm{DP}(u,v,wh)^{-1}\\cdot\\mathrm{DP}(uv,w,h)^{-1} = e_M.\n  \\]\n  We therefore have \\(\\partial\\mathrm{DP}(u,v,w,h) = e_M\\). Since, on the other hand, the left-hand side of the preceding formula can be written, using P and \\(a\\), as the expression in \\((x,y,z,t)\\) of a certain morphism \\(X^4 \\to M\\), it follows from the uniqueness hypothesis in \\((+)_4\\) that DP and \\(e\\), which factorize the same morphism, are equal, hence</p>\n  <p>(2) DP is a cocycle: we have \\(\\mathrm{DP} \\in \\mathrm{Z}^3(Y,M)\\).</p>\n  <p>c) If P and \\(\\mathrm{P}'\\) are two admissible composition laws on X, there exists a unique morphism \\(b : X^2 \\longrightarrow M\\) such that \\(\\mathrm{P}'(x,y) = b(x,y)\\mathrm{P}(x,y)\\). One sees as usual that \\(b\\) is invariant under \\(M^2\\), whence:</p>\n  <p>(3) For every pair of admissible composition laws \\((\\mathrm{P},\\mathrm{P}')\\), there exists a unique \\(d(\\mathrm{P},\\mathrm{P}') : Y^2 \\to M\\) with\n  \\[\n  \\mathrm{P}'(x,y) = d(\\mathrm{P},\\mathrm{P}')(p(x),p(y))\\,\\mathrm{P}(x,y),\n  \\]\n  and the set of admissible composition laws thus becomes principal homogeneous under \\(\\mathrm{Hom}(Y^2,M) = \\mathrm{C}^2(G,M)\\).</p>\n  <p>d) Under the preceding conditions, we have the formula:</p>\n  <p>(4) \\(\\mathrm{DP}' - \\mathrm{DP} = \\partial d(\\mathrm{P},\\mathrm{P}')\\).</p>\n  <p>e) P and \\(\\mathrm{P}'\\) are equivalent if and only if there exists a morphism \\(u \\in \\mathrm{C}^1(Y,M) = \\mathrm{Hom}(Y,M)\\) with \\(d(\\mathrm{P},\\mathrm{P}') = \\partial u\\); this follows easily from the definition of equivalence.</p>\n  <p>f) It only remains to conclude: we seek a P such that \\(\\mathrm{DP} = e\\). Now DP is a cocycle whose class in \\(\\mathrm{H}^3(Y,M)\\) does not depend on the admissible composition law P chosen (by (3) and (4)). This class is the required obstruction \\(c\\). One will be able to choose a \\(\\mathrm{P}'\\) satisfying the conditions if and only if \\(c=0\\); indeed, choosing an arbitrary P, one will have to solve, by (1):\n  \\[\n  0 = \\mathrm{DP}' = \\mathrm{DP} + \\partial d(\\mathrm{P},\\mathrm{P}'),\n  \\]\n  which is possible, by (3) and (4), if and only if \\(c=0\\). The set of associative P's is principal homogeneous under \\(\\mathrm{Z}^2(Y,M)\\), again by (3) and (4). The set of associative P's up to equivalence is principal homogeneous under \\(\\mathrm{H}^2(Y,M)\\) by (e).</p>\n  \n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-2",
+   "title": "2. Infinitesimal extensions of a morphism of group schemes",
+   "blocks": [
+    {
+     "id": "III.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.2\">2. Infinitesimal extensions of a morphism of group schemes</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us resume the notation of Section 0. Let Y and X be two S-group functors. Let M be the kernel of the group morphism \\(p_X : X \\to X^+\\). We thus have an exact sequence of S-group functors\n\\[\n1 \\longrightarrow M \\longrightarrow X \\xrightarrow{\\ p_X\\ } X^+.\n\\]\nBy definition of \\(X^+\\), we have isomorphisms\n\\[\n\\mathrm{Hom}_S(Y,X^+) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{S_J}(Y_J,X_J), \\qquad\n\\mathrm{Hom}_{S\\text{-gr.}}(Y,X^+) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{S_J\\text{-gr.}}(Y_J,X_J),\n\\]\nthe morphism \\(\\mathrm{Hom}_S(Y,p_X) : \\mathrm{Hom}_S(Y,X) \\to \\mathrm{Hom}_S(Y,X^+)\\) associating with an S-morphism \\(f : Y \\to X\\) the S-morphism \\(f^+ : Y \\to X^+\\) corresponding, under the preceding isomorphisms, to the \\(S_J\\)-morphism \\(f_J : Y \\to X\\) obtained from \\(f\\) by base change. If M is <em>commutative</em>, we can apply Proposition <a class=\"ref\" href=\"#III.1.2.4\">1.2.4</a> to this situation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In practice, we shall be interested in the following case: Y is flat over S, X is either representable (case (a)), or of the form \\(\\underline{\\mathrm{Aut}}_S(E)\\) where E is representable (case (b)). The corresponding S-group functors M were computed in <a class=\"ref\" href=\"#III.0.9\">0.9</a> (resp. <a class=\"ref\" href=\"#III.0.11\">0.11</a>), the actions of the inner automorphisms of X on M in <a class=\"ref\" href=\"#III.0.10\">0.10</a> (resp. <a class=\"ref\" href=\"#III.0.12\">0.12</a>). On the other hand, Y being assumed flat, we may by <a class=\"ref\" href=\"#III.1.1.1\">1.1.1</a> content ourselves with knowing the values of M on the S-schemes flat over S and the action of X on M when we regard X and M as functors on the category of S-schemes flat over S. Finally, in case (a), M is (on this category) of the form \\(\\prod_{S_0/S} N\\) where N is a certain \\(S_0\\)-functor in abelian groups (<a class=\"ref\" href=\"#III.0.5\">0.5</a>); we shall therefore have by <a class=\"ref\" href=\"#III.1.1.2\">1.1.2</a> isomorphisms \\(\\mathrm{H}^i(Y,M) \\xrightarrow{\\ \\sim\\ } \\mathrm{H}^i(Y_0,N)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Applying <a class=\"ref\" href=\"#III.1.2.4\">1.2.4</a>, we obtain the</p>"
+    },
+    {
+     "id": "III.2.1",
+     "type": "theoreme",
+     "label": "2.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"III.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme, \\(I\\) and \\(J\\) two quasi-coherent ideals such that \\(I \\supset J\\) and \\(I\\cdot J = 0\\), defining the closed subschemes \\(S_0\\) and \\(S_J\\). For every S-functor Z, let \\(Z_0\\) and \\(Z_J\\) be the functors obtained by base change. Let X be an S-group functor of one of the following two kinds:</p>\n  <p>a) X is an S-group scheme,</p>\n  <p>b) \\(X = \\underline{\\mathrm{Aut}}_S(E)\\) where E is an S-scheme, of finite presentation over S.</p>\n  <p>Let</p>\n  <p>a) \\(\\mathrm{L}_0\\) be the \\(S_0\\)-functor in commutative groups defined by\n  \\[\n  \\mathrm{Hom}_{S_0}(T,\\mathrm{L}_0) = \\mathrm{Hom}_{\\mathscr{O}_T}(\\omega^1_{X_0/S_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_T, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_T)\n  \\]\n  on which \\(X_0\\) acts via its adjoint representation on \\(\\omega^1_{X_0/S_0}\\).</p>\n  <p>b) L be the functor in abelian groups on the category of S-schemes flat over S defined by\n  \\[\n  \\mathrm{Hom}_S(T,\\mathrm{L}) = \\Gamma(T, f_*(\\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E))\\otimes_{\\mathscr{O}_S}\\mathscr{O}_T)\n  \\]\n  (\\(f\\) denotes the structural morphism \\(E \\to S\\)), on which X, considered as a functor on the same category, acts as we saw in <a class=\"ref\" href=\"#III.0.12\">0.12</a>.</p>\n  <p>Let Y be an S-group scheme flat over S and \\(f_J : Y_J \\to X_J\\) a morphism of \\(S_J\\)-groups. In case (a), let \\(Y_0\\) act on \\(\\mathrm{L}_0\\) through \\(f_0 : Y_0 \\to X_0\\). Then:</p>\n  <p>(i) For \\(f_J\\) to lift to a morphism of S-groups \\(Y \\to X\\), it is necessary and sufficient that the two following conditions be satisfied:</p>\n  <p>\\((\\mathrm{i}_1)\\) \\(f_J\\) lifts to a morphism of S-functors \\(Y \\to X\\), which in case (b) allows one to let Y act on L through the lifting \\(Y \\to X\\) (an action which, as we have seen, is independent of the lifting chosen).</p>\n  <p>\\((\\mathrm{i}_2)\\) A certain obstruction \\(c(f_J)\\), canonically defined by \\(f_J\\), is zero, where \\(c(f_J)\\) is a class in (a) \\(\\mathrm{H}^2(Y_0,\\mathrm{L}_0)\\), (b) \\(\\mathrm{H}^2(Y,\\mathrm{L})\\).</p>\n  <p>(ii) If the conditions of (i) are satisfied, the set of morphisms of S-group functors \\(Y \\to X\\) extending \\(f_J\\), modulo the action of the inner automorphisms of X defined by the sections of X over S inducing the unit section of \\(X_J\\) over \\(S_J\\), is principal homogeneous under (a) \\(\\mathrm{H}^1(Y_0,\\mathrm{L}_0)\\), (b) \\(\\mathrm{H}^1(Y,\\mathrm{L})\\).</p>\n  <p>(iii) If \\(f : Y \\to X\\) is a morphism of S-group functors extending \\(f_J\\), the set of morphisms \\(Y \\to X\\) transformed from \\(f\\) by the inner automorphisms defined by the sections of X over S inducing the unit section of \\(X_J\\) over \\(S_J\\), is isomorphic to (a) \\(\\Gamma(\\mathrm{L}_0)/\\mathrm{H}^0(Y_0,\\mathrm{L}_0)\\), (b) \\(\\Gamma(\\mathrm{L})/\\mathrm{H}^0(Y,\\mathrm{L})\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.2",
+     "type": "remarque",
+     "label": "2.2",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\">\n  <p>Suppose moreover, in (a), that X is locally of finite presentation over S. Applying then <a class=\"ref\" href=\"#III.0.6\">0.6</a>, we obtain\n  <br>a) \\(\\mathrm{H}^i(Y_0,\\mathrm{L}_0) = \\mathrm{H}^i(Y_0, \\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J))\\),\n  <br>b) \\(\\mathrm{H}^i(Y,\\mathrm{L}) = \\mathrm{H}^i(Y, f_*(\\mathscr{H}om_{\\mathscr{O}_E}(\\Omega^1_{E/S}, J\\mathscr{O}_E)))\\),\n  <br>the modules whose cohomology we take being quasi-coherent.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.3",
+     "type": "remarque",
+     "label": "2.3",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\">\n  <p>By <a class=\"ref\" href=\"#III.0.16\">0.16</a> and <a class=\"ref\" href=\"#III.0.17\">0.17</a>, condition \\((\\mathrm{i}_1)\\) is automatically satisfied when\n  <br>a) X is smooth over S and Y is affine;\n  <br>b) E is smooth over S, affine over S and Y is affine.\n  <br>Moreover, under these conditions, one can write in case (a)\n  \\[\n  \\mathrm{H}^i(Y_0,\\mathrm{L}_0) = \\mathrm{H}^i(Y_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J).\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now state a certain number of corollaries concerning the case where Y is a <em>diagonalizable</em> group (<a class=\"ref\" href=\"#I.4.4\">I, 4.4</a>); we then know (loc. cit. 5.3.3) that if S is affine, the cohomology of Y with values in any quasi-coherent \\(\\mathscr{O}_S\\)-Module is zero. First a special case:</p>"
+    },
+    {
+     "id": "III.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme and \\(S_0\\) a closed subscheme defined by a nilpotent ideal. Let Y be a diagonalizable S-group and let:</p>\n  <p>a) X be an S-group locally of finite presentation over S,</p>\n  <p>b) \\(X = \\underline{\\mathrm{Aut}}_S(E)\\) where E is an S-scheme locally of finite presentation.</p>\n  <p>Let \\(f : Y \\to X\\) be a morphism of S-groups such that the morphism \\(f_0 : Y_0 \\to X_0\\) obtained by base change is the unit morphism. Then \\(f\\) is the unit morphism.</p>\n  <p>Indeed, the question is local on S and (in (b)) on E. We may therefore suppose S affine and (in (b)) E of finite presentation over S. Introducing now the closed subschemes \\(S_n\\) of S defined by the powers of the ideal defining \\(S_0\\), we are reduced to the case where \\(S_0\\) is defined by an ideal of square zero, and in this case the stated assertion follows from the theorem, via <a class=\"ref\" href=\"#III.2.2\">2.2</a>.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the case where one does not necessarily suppose that \\(f_0\\) is the unit morphism, we have:</p>"
+    },
+    {
+     "id": "III.2.5",
+     "type": "corollaire",
+     "label": "2.5",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\">\n    <p>Let S and \\(S_0\\) be as in <a class=\"ref\" href=\"#III.2.4\">2.4</a>. Suppose moreover S affine. Let Y be a diagonalizable S-group, X an S-group functor and \\(f_0 : Y_0 \\to X_0\\) a morphism of \\(S_0\\)-group functors.</p>\n  <p>(i) Suppose we have one of the two following properties: (a) X is an S-group locally of finite presentation over S; (b) \\(X = \\underline{\\mathrm{Aut}}_S(E)\\) where E is of finite presentation over S. Then \\(f_0\\) extends to a morphism of S-groups \\(Y \\to X\\) if and only if it extends to a morphism of S-functors \\(Y \\to X\\).</p>\n  <p>(ii) Suppose we have one of the two following properties: (a) X is an S-group smooth over S; (b) \\(X = \\underline{\\mathrm{Aut}}_S(E)\\) where E is smooth and affine over S. Then \\(f_0\\) extends to a morphism of S-groups \\(Y \\to X\\), and two such extensions are conjugate by an inner automorphism of X defined by a section of X over S inducing the unit section of \\(X_0\\) over \\(S_0\\).</p>\n  <p>Introducing the \\(S_n\\) as above, (i) follows step by step from part (ii) of the theorem. For (ii), one reasons in the same way, remarking that the conditions of <a class=\"ref\" href=\"#III.2.1\">2.1</a> (i) are automatically satisfied by <a class=\"ref\" href=\"#III.2.3\">2.3</a> (note that a scheme smooth over S is necessarily locally of finite presentation over S, hence a scheme smooth and affine over S is necessarily of finite presentation); moreover every section of \\(X_{S_n}\\) over \\(S_n\\) lifts to a section of \\(X_{S_{n+1}}\\) over \\(S_{n+1}\\) (by the definition of \"smooth over S\" for (a), and by 0.16 for (b)); if \\(f\\) and \\(f'\\) are two liftings of \\(f_0\\), one may suppose step by step that \\(f_n = f'_n\\) by lifting the inner automorphism whose existence is asserted by part (ii) of the theorem, which completes the proof.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Reasoning in the same way, we obtain, taking account of Remark 2.3:</p>"
+    },
+    {
+     "id": "III.2.6",
+     "type": "corollaire",
+     "label": "2.6",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme, \\(I\\) a nilpotent ideal defining the closed subscheme \\(S_0\\), Y an S-group flat over S and affine, X an S-group smooth over S.</p>\n  <p>(i) If, for every \\(n \\geqslant 0\\), we have \\(\\mathrm{H}^2(Y_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} I^{n+1}/I^{n+2}) = 0\\), every morphism of \\(S_0\\)-groups \\(f_0 : Y_0 \\to X_0\\) lifts to a morphism of S-groups \\(f : Y \\to X\\).</p>\n  <p>(ii) If, for every \\(n \\geqslant 0\\), we have \\(\\mathrm{H}^1(Y_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} I^{n+1}/I^{n+2}) = 0\\), two such liftings are conjugate by an inner automorphism of X defined by a section of X over S inducing the unit section of \\(X_0\\) over \\(S_0\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now we have the following lemma:</p>"
+    },
+    {
+     "id": "III.2.7",
+     "type": "lemme",
+     "label": "2.7",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be an affine scheme, G an affine S-group, \\(\\mathscr{F}\\) a quasi-coherent \\(\\mathscr{O}_S\\)-module, \\(\\mathscr{L}\\) a locally free \\(\\mathscr{O}_S\\)-module. Suppose we have an action of G on \\(\\mathscr{F}\\) in the sense of Exposé I, which defines an action of G on \\(\\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{L}\\). Denote by A the ring of S, and by L the A-module defining \\(\\mathscr{L}\\) (which is therefore a projective module). There is a canonical isomorphism\n  \\[\n  \\mathrm{H}^*(G, \\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{L}) \\simeq \\mathrm{H}^*(G,\\mathscr{F})\\otimes_A \\mathrm{L}.\n  \\]</p>\n  <p>Indeed, in the situation of the statement, the cohomology groups of G with values in \\(\\mathscr{F}\\) are computed as the groups of sections of the cohomology sheaves \\(\\underline{\\mathrm{H}}^n(G,\\mathscr{F})\\) (I, 5.3). Now it follows immediately from the definition of these cohomology sheaves that their formation commutes with tensor product by a locally free sheaf. Taking sections (we are over an affine base), we find the announced result.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Using the lemma, one transforms <a class=\"ref\" href=\"#III.2.6\">2.6</a> into:</p>"
+    },
+    {
+     "id": "III.2.8",
+     "type": "corollaire",
+     "label": "2.8",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.8</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be an affine scheme, \\(I\\) a nilpotent ideal on S defining the closed subscheme \\(S_0\\). Suppose the \\(I^{n+1}/I^{n+2}\\) locally free on \\(S_0\\). Let Y be an S-group flat over S and affine, X an S-group smooth over S, and \\(f_0 : Y_0 \\to X_0\\) a morphism of \\(S_0\\)-groups.</p>\n  <p>(i) If \\(\\mathrm{H}^2(Y_0,\\mathscr{L}ie(X_0/S_0)) = 0\\), \\(f_0\\) lifts to a morphism of S-groups \\(Y \\to X\\).</p>\n  <p>(ii) If \\(\\mathrm{H}^1(Y_0,\\mathscr{L}ie(X_0/S_0)) = 0\\), two such liftings are conjugate by an inner automorphism of X defined by a section of X over S inducing the unit section of \\(X_0\\) over \\(S_0\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular, taking \\(Y = X\\):</p>"
+    },
+    {
+     "id": "III.2.9",
+     "type": "corollaire",
+     "label": "2.9",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\">\n    <p>Let S and \\(S_0\\) be as above. Let X be an S-group smooth over S and affine.</p>\n  <p>(i) If \\(\\mathrm{H}^1(X_0,\\mathscr{L}ie(X_0/S_0)) = 0\\), every endomorphism of X over S inducing the identity on \\(X_0\\) is the inner automorphism defined by a section of X over S inducing the unit section of \\(X_0\\) over \\(S_0\\).</p>\n  <p>(ii) If \\(\\mathrm{H}^2(X_0,\\mathscr{L}ie(X_0/S_0)) = 0\\), every \\(S_0\\)-automorphism of \\(X_0\\) extends to an S-automorphism of X.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.10",
+     "type": "remarque",
+     "label": "2.10",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.2.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">2.10</span></div>\n  <div class=\"thm-body\">\n  <p>The assertions concerning the \\(\\mathrm{H}^1\\) have converses, by the theorem. Let us mention the following one as an example: if \\(S = I_{S_0}\\) is the scheme of dual numbers over \\(S_0\\) (II, 2.1) and if X is a flat S-group such that every automorphism of X over S inducing the identity on \\(S_0\\) is the inner automorphism defined by a section of X over S inducing the unit section of \\(X_0\\) over \\(S_0\\), then \\(\\mathrm{H}^1(X_0,\\mathscr{L}ie(X_0/S_0)) = 0\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.11",
+     "type": "corollaire",
+     "label": "2.11",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.11</span></div>\n  <div class=\"thm-body\">\n    <p>Let S, \\(I\\) and \\(J\\) be as in <a class=\"ref\" href=\"#III.2.1\">2.1</a>. Let Y be an S-group scheme flat over S, X an S-group scheme, and \\(f : Y \\to X\\) a morphism of S-groups. The set of morphisms from Y to X deduced from \\(f\\) by conjugation by those \\(x \\in X(S)\\) inducing the unit of \\(X(S_J)\\) is isomorphic to the quotient\n  \\[\n  \\mathrm{E} = \\mathrm{Hom}_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J)\\big/\\mathrm{Hom}_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J)^{\\mathrm{ad}(Y_0)},\n  \\]\n  where the second group consists of the \\(\\mathscr{O}_{S_0}\\)-morphisms \\(\\omega^1_{X_0/S_0} \\to J\\) which, by every base change \\(S' \\to S_0\\), give morphisms \\(\\omega^1_{X_0/S_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{S'} \\to J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{S'}\\) invariant under the action of \\(Y_0(S')\\) on the first factor.</p>\n  <p>By 2.1 (iii), we know that the set sought is isomorphic to \\(\\Gamma(\\mathrm{L}_0)/\\mathrm{H}^0(Y_0,\\mathrm{L}_0)\\). Now \\(\\Gamma(\\mathrm{L}_0) = \\mathrm{Hom}_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0},J)\\) and \\(\\mathrm{H}^0(Y_0,\\mathrm{L}_0)\\) is obviously none other than \\(\\Gamma(\\mathrm{L}_0)^{\\mathrm{ad}(Y_0)}\\) in the sense of the preceding statement.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.12",
+     "type": "corollaire",
+     "label": "2.12",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.12</span></div>\n  <div class=\"thm-body\">\n  <p>Under the conditions of <a class=\"ref\" href=\"#III.2.11\">2.11</a>, suppose moreover \\(\\omega^1_{X_0/S_0}\\) locally free (of finite type). Then\n  \\[\n  \\mathrm{E} \\simeq \\Gamma(S_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J)\\big/\\mathrm{H}^0(Y_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J).\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.13",
+     "type": "corollaire",
+     "label": "2.13",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.13</span></div>\n  <div class=\"thm-body\">\n    <p>Suppose moreover \\(Y_0\\) diagonalizable. Then\n  \\[\n  \\mathrm{E} \\simeq \\Gamma(S_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J)\\big/\\Gamma(S_0, \\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\otimes_{\\mathscr{O}_{S_0}} J)\n  \\]\n  where \\(\\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\) may be constructed as the factor of the decomposition of <a class=\"ref\" href=\"#I.4.7.3\">I, 4.7.3</a> corresponding to the zero character of \\(Y_0\\). Indeed, if \\(Y_0 \\simeq \\mathbf{D}_{S_0}(M)\\), we have by loc. cit. a direct sum decomposition:\n  \\[\n  \\mathscr{L}ie(X_0/S_0) = \\mathscr{L}ie(X_0/S_0)_0 \\oplus \\coprod_{\\substack{m\\in M\\\\ m\\neq 0}} \\mathscr{L}ie(X_0/S_0)_m.\n  \\]\n  Tensoring with \\(J\\), we find an analogous decomposition for \\(\\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J\\), whence the relation\n  \\[\n  \\mathrm{H}^0(Y_0, \\mathscr{L}ie(X_0/S_0)\\otimes J) \\simeq \\Gamma(S_0, \\mathscr{L}ie(X_0/S_0)_0 \\otimes_{\\mathscr{O}_{S_0}} J).\n  \\]</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.2.14",
+     "type": "corollaire",
+     "label": "2.14",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.2.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.14</span></div>\n  <div class=\"thm-body\">\n  <p>Suppose moreover \\(S_0\\) affine. Then\n  \\[\n  \\mathrm{E} \\simeq \\Gamma\\Bigl(S_0, \\bigl[\\mathscr{L}ie(X_0/S_0)/\\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\bigr]\\otimes_{\\mathscr{O}_{S_0}} J\\Bigr).\n  \\]</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-3",
+   "title": "3. Infinitesimal extensions of a group scheme",
+   "blocks": [
+    {
+     "id": "III.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.3\">3. Infinitesimal extensions of a group scheme</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Still in the notation of Section 0 (S, \\(I\\), \\(J\\), etc.), let us give ourselves an S-scheme X and suppose \\(X_J\\) equipped with a group structure. We propose to find the S-group structures on X inducing the given structure on \\(X_J\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From now on, we suppose X <em>flat</em> over S. Let \\(\\mathscr{C}\\) be the category of S-schemes flat over S. We thus have \\(X \\in \\mathrm{Ob}\\,\\mathscr{C}\\). We shall denote by Y, resp. M, the functor on \\(\\mathscr{C}\\) defined by \\(X^+\\), resp. \\(\\mathrm{L}'_X\\). The canonical morphism \\(p_X : X \\to X^+\\) defines a morphism of \\(\\widehat{\\mathscr{C}}\\)\n\\[\np : X \\longrightarrow Y\n\\]\nand the action of \\(\\mathrm{L}'_X\\) on X in \\(\\widehat{(\\mathrm{Sch})_{/S}}\\) defines an action of M on X in \\(\\widehat{\\mathscr{C}}\\). One verifies at once that X does thus become formally principal homogeneous under \\(M_Y\\) over Y (cf. <a class=\"ref\" href=\"#III.0.2\">0.2</a> (i) and <a class=\"ref\" href=\"#III.0.4\">0.4</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The action of \\(X^+\\) on \\(\\mathrm{L}'_X\\) defined in <a class=\"ref\" href=\"#III.0.8\">0.8</a> (denoted \\(\\mathrm{Ad}\\) in loc. cit.) defines an action, denoted \\(f\\), of Y on M. We know, on the other hand (0.8), that\n\\[\n\\mathrm{Hom}_{\\widehat{\\mathscr{C}}}(Z,M) \\simeq \\mathrm{Hom}_{S_0}(Z_0, \\mathrm{L}_0), \\qquad Z\\in \\mathrm{Ob}\\,\\mathscr{C},\n\\]\nwhere \\(\\mathrm{L}_0\\) is the functor defined in 0.5.</p>"
+    },
+    {
+     "id": "III.3.1",
+     "type": "lemme",
+     "label": "3.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\">\n    <p>(i) Condition \\((+)_n\\) of <a class=\"ref\" href=\"#III.1.3\">1.3</a> is satisfied for every positive integer \\(n\\).</p>\n  <p>(ii) If we let the \\(S_0\\)-group \\(X_0\\) act on the \\(S_0\\)-functor \\(\\mathrm{L}_0\\) through its adjoint representation, there is a canonical isomorphism\n  \\[\n  \\mathrm{H}^*(X_0,\\mathrm{L}_0) \\simeq \\mathrm{H}^*(Y,M),\n  \\]\n  (the first cohomology is computed in \\((\\mathrm{Sch})_{/S_0}\\), the second in \\(\\mathscr{C}\\)).</p>\n  <p>The two parts of the lemma follow from the relation:\n  \\[\n  \\mathrm{Hom}_{\\widehat{\\mathscr{C}}}(Y,M) \\simeq \\mathrm{Hom}_{\\widehat{(\\mathrm{Sch})_{/S_0}}}(X^+\\underset{S}{\\times}S_0, \\mathrm{L}_0) \\simeq \\mathrm{Hom}_{S_0}(X_0,\\mathrm{L}_0) \\simeq \\mathrm{Hom}_{\\widehat{\\mathscr{C}}}(X,M)\n  \\]\n  which comes at once from the definition of M as a \\(\\prod_{S_0/S}\\). This relation being more generally satisfied with X, Y replaced by \\(X^n\\), \\(Y^n\\), we deduce that every morphism \\(X^n \\to M\\) factors in a unique way through \\(Y^n\\), which implies \\((+)_n\\). We also deduce the relation \\(\\mathrm{C}^*(Y,M) = \\mathrm{C}^*(X_0,\\mathrm{L}_0)\\), which implies (ii).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We may therefore apply the constructions of <a class=\"ref\" href=\"#III.1.3\">1.3</a>. In particular:</p>"
+    },
+    {
+     "id": "III.3.2",
+     "type": "lemme",
+     "label": "3.2",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n    <p>Let \\(\\mathrm{P} : X\\times_S X \\to X\\) be a morphism. For P to lift the group law of \\(X_J\\), it is necessary and sufficient that P be an admissible composition law on X.</p>\n  <p>Indeed, for P to lift the group law of \\(X_J\\), it is necessary and sufficient that P lift the group law of \\(X^+\\), or again that of Y. It thus only remains to show that every morphism P lifting the group law of \\(X_J\\) satisfies the identity \\((++)\\) of <a class=\"ref\" href=\"#III.1.3.2\">1.3.2</a>, which is exactly what we saw in <a class=\"ref\" href=\"#III.0.8\">0.8</a>.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.3",
+     "type": "proposition",
+     "label": "3.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme and \\(S_0\\) a closed subscheme defined by a nilpotent ideal. Let X be an S-scheme, flat, and quasi-compact or locally of finite presentation over S. Let \\(\\mathrm{P} : X\\times_S X \\to X\\) be a composition law on X. For P to be a group law, it is necessary and sufficient that the two following conditions be satisfied:</p>\n  <p>(i) P is associative.</p>\n  <p>(ii) P induces on \\(X_0 = X\\times_S S_0\\) a group law.</p>\n  <p>These conditions are obviously necessary. Let us show that they are sufficient. Suppose first that X has a section over S. As \\(X(S')\\) is then non-empty for each \\(S' \\to S\\), it suffices (Bourbaki, <em>Algèbre</em>, Ch. I, exercise 2, b)) to show that every translation by an element of \\(X(S')\\) is an isomorphism. We may obviously suppose \\(S' = S\\); this translation induces on \\(X_0\\) a translation, which is therefore an automorphism of \\(X_0\\). One concludes by flatness (SGA 1 III 4.2).</p>\n  <p>No longer supposing now that X has a section over S, suppose there exists an \\(S' \\to S\\) such that \\(X_{S'}\\) has a section over \\(S'\\). Then \\(X_{S'}\\) is an \\(S'\\)-group by what we have just seen; consider its unit section \\(e'\\). The inverse image of \\(e'\\) under \\(\\mathrm{pr}_i : S'\\times_S S' \\to S'\\) (\\(i=1,2\\)) is the unit section of \\(X_{S''}\\) for the group law inverse image of \\(\\mathrm{P}_{S'}\\) under \\(\\mathrm{pr}_i\\). But as P is \"defined over S\", these two group laws coincide, hence so do their unit sections. We thus have \\(\\mathrm{pr}_1^*(e') = \\mathrm{pr}_2^*(e')\\). If \\(S' \\to S\\) is a descent morphism, there will exist a section of X giving \\(e'\\) by extension of the base, and we shall be done. As \\(X\\times_S X\\) has a section over X (the diagonal section), we see that it now suffices to prove that \\(X \\to S\\) is a descent morphism. Now it is flat and surjective, and quasi-compact or locally of finite presentation, hence covering for (fpqc), hence a descent morphism (Exposé IV, no. 6).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.3.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.3.3.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span></div>\n  <div class=\"thm-body\">\n  <p>In fact the hypothesis \\(X \\to S\\) quasi-compact or locally of finite presentation is superfluous, by virtue of the following result, which the reader will prove as an exercise on Exposé IV: Under the conditions of the text on S and \\(S_0\\), if \\(X \\to S\\) is a flat morphism and \\(X_0 \\to S_0\\) a morphism covering for (fpqc), then \\(X \\to S\\) is a descent morphism.</p>\n  <p></p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.4",
+     "type": "lemme",
+     "label": "3.4",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\">\n    <p>For two admissible composition laws on X to be equivalent, it is necessary and sufficient that they be deduced from one another by an automorphism of X over S inducing the identity on \\(X_J\\).</p>\n  <p>Indeed, the morphisms constructed in <a class=\"ref\" href=\"#III.1.3.1\">1.3.1</a> are exactly those of the preceding statement (by <a class=\"ref\" href=\"#III.0.7\">0.7</a>).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Taking account of all the preceding results, Proposition <a class=\"ref\" href=\"#III.1.3.6\">1.3.6</a> gives:</p>"
+    },
+    {
+     "id": "III.3.5",
+     "type": "theoreme",
+     "label": "3.5",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"III.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme, \\(I\\) and \\(J\\) two ideals on S such that \\(I \\supset J\\), \\(I\\cdot J = 0\\), and \\(S_0\\) and \\(S_J\\) the closed subschemes of S they define. Let X be an S-scheme flat over S (and locally of finite presentation or quasi-compact over S), and \\(X_0\\) and \\(X_J\\) the schemes obtained by base change. Suppose \\(X_J\\) equipped with a structure of \\(S_J\\)-group and denote by \\(\\mathrm{L}_0\\) the \\(S_0\\)-functor in abelian groups defined by the formula\n  \\[\n  \\mathrm{Hom}_{S_0}(T,\\mathrm{L}_0) = \\mathrm{Hom}_{\\mathscr{O}_T}(\\omega^1_{X_0/S_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_T, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_T)\n  \\]\n  on which \\(X_0\\) acts through its adjoint representation.</p>\n  <p>(i) For there to exist a structure of S-group on X inducing the given structure on \\(X_J\\), it is necessary and sufficient that the following conditions be satisfied:</p>\n  <p>\\((\\mathrm{i}_1)\\) There exists a morphism of S-schemes \\(X\\times_S X \\to X\\) inducing the group law of \\(X_J\\).</p>\n  <p>\\((\\mathrm{i}_2)\\) A certain obstruction belonging to \\(\\mathrm{H}^3(X_0,\\mathrm{L}_0)\\) (canonically defined by the data of X and of the group law of \\(X_J\\)) is zero.</p>\n  <p>(ii) If the conditions of (i) are satisfied, the set of group laws on X inducing the given law on \\(X_J\\), modulo the S-automorphisms of X inducing the identity on \\(X_J\\), is a principal homogeneous set under \\(\\mathrm{H}^2(X_0,\\mathrm{L}_0)\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.6",
+     "type": "remarque",
+     "label": "3.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(X_J\\) be an \\(S_J\\)-scheme smooth over \\(S_J\\) and affine. By <a class=\"ref\" href=\"#III.0.15\">0.15</a>, there exists, up to isomorphism, a unique S-scheme X, smooth over S, reducing to \\(X_J\\). If \\(X_J\\) is equipped with a structure of \\(S_J\\)-group, it follows from <a class=\"ref\" href=\"#III.0.16\">0.16</a> that condition \\((\\mathrm{i}_1)\\) is automatically satisfied. Moreover, by 0.6 the definition of \\(\\mathrm{L}_0\\) simplifies and we obtain:</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.7",
+     "type": "corollaire",
+     "label": "3.7",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\">\n    <p>Let S, \\(I\\) and \\(J\\) be as in <a class=\"ref\" href=\"#III.3.1\">3.1</a>. Let \\(X_J\\) be an \\(S_J\\)-group smooth over \\(S_J\\) and affine.</p>\n  <p>(i) The set of S-groups smooth over S and reducing to \\(X_J\\), up to isomorphism (inducing the identity on \\(X_J\\)), is empty or principal homogeneous under the group \\(\\mathrm{H}^2(X_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J)\\).</p>\n  <p>(ii) There exists an S-group smooth over S reducing to \\(X_J\\) if and only if a certain obstruction in \\(\\mathrm{H}^3(X_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} J)\\) is zero.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From this one deduces as usual the following corollaries:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "III.3.8",
+     "type": "corollaire",
+     "label": "3.8",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme and \\(S_0\\) a closed subscheme defined by a nilpotent ideal \\(I\\). Let \\(X_0\\) be an \\(S_0\\)-group smooth over S and affine.</p>\n  <p>(i) If \\(\\mathrm{H}^2(X_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} I^{n+1}/I^{n+2}) = 0\\) for every \\(n \\geqslant 0\\), two S-groups smooth over S reducing to \\(X_0\\) are isomorphic (by an isomorphism inducing the identity on \\(X_0\\)).</p>\n  <p>(ii) If \\(\\mathrm{H}^3(X_0, \\mathscr{L}ie(X_0/S_0)\\otimes_{\\mathscr{O}_{S_0}} I^{n+1}/I^{n+2}) = 0\\) for every \\(n \\geqslant 0\\), there exists an S-group smooth over S, reducing to \\(X_0\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.9",
+     "type": "corollaire",
+     "label": "3.9",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.3.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.9</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be an affine scheme and \\(S_0\\) a closed subscheme defined by a nilpotent ideal \\(I\\). Suppose the \\(I^{n+1}/I^{n+2}\\) locally free on \\(S_0\\). Let \\(X_0\\) be an \\(S_0\\)-group smooth and affine over \\(S_0\\).</p>\n  <p>(i) If \\(\\mathrm{H}^2(X_0,\\mathscr{L}ie(X_0/S_0)) = 0\\), two S-groups smooth over S reducing to \\(X_0\\) are isomorphic.</p>\n  <p>(ii) If \\(\\mathrm{H}^3(X_0,\\mathscr{L}ie(X_0/S_0)) = 0\\), there exists an S-group smooth over S reducing to \\(X_0\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.3.10",
+     "type": "corollaire",
+     "label": "3.10",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.3.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">3.10</span></div>\n  <div class=\"thm-body\">\n    <p>Let \\(S_0\\) be a scheme and \\(S = I_{S_0}\\) the scheme of dual numbers over \\(S_0\\). Let \\(X_0\\) be an \\(S_0\\)-group smooth over \\(S_0\\). In order that every S-group Y, smooth over S, such that Y is \\(S_0\\)-isomorphic to \\(X_0\\), be S-isomorphic to \\(X = X_0\\times_{S_0} S\\), it is necessary and sufficient that \\(\\mathrm{H}^2(X_0,\\mathscr{L}ie(X_0/S_0)) = 0\\).</p>\n  <p>Indeed, by virtue of <a class=\"ref\" href=\"#III.3.5\">3.5</a> the set of classes, up to an isomorphism of S-groups \"inducing the identity on \\(X_0\\)\", of such groups Y, is in one-to-one correspondence with \\(\\mathrm{H}^2(X_0,\\mathscr{L}ie(X_0/S_0))\\), hence the set of classes, up to an arbitrary isomorphism of S-groups, is in one-to-one correspondence with \\(\\mathrm{H}^2(X_0,\\mathscr{L}ie(X_0/S_0))/\\Gamma_0\\), where \\(\\Gamma_0 = \\mathrm{Aut}_{S_0\\text{-gr.}}(X_0)\\) (which acts in the obvious way on the \\(\\mathrm{H}^2\\)). The conclusion follows at once from this.</p>\n  \n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "III-4",
+   "title": "4. Infinitesimal extensions of closed subgroups",
+   "blocks": [
+    {
+     "id": "III.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"III.4\">4. Infinitesimal extensions of closed subgroups</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first state a result valid in an arbitrary abelian category.</p>"
+    },
+    {
+     "id": "III.4.1",
+     "type": "lemme",
+     "label": "4.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\">\n    <p>Let\n  \\[\n  0 \\longrightarrow A' \\xrightarrow{\\ i\\ } A \\xrightarrow{\\ p\\ } A'' \\longrightarrow 0\n  \\]\n  be an exact sequence, \\(\\phi : A' \\to Q\\) a morphism and \\(\\pi : A'' \\to P\\) an epimorphism with kernel C. Let E be the set (up to isomorphism) of quadruples \\((\\mathrm{B},f,g,h)\\) such that the sequence\n  \\[\n  0 \\longrightarrow Q \\xrightarrow{\\ f\\ } \\mathrm{B} \\xrightarrow{\\ g\\ } P \\longrightarrow 0\n  \\]\n  is exact and the diagram below commutative:\n  \\[\n  \\xymatrix{\n  0 \\ar[r] &amp; A' \\ar[r]^-{i} \\ar[d]_-{\\phi} &amp; A \\ar[r]^-{p} \\ar[d]^-{h} &amp; A'' \\ar[r] \\ar[d]^-{\\pi} &amp; 0 \\\\\n  0 \\ar[r] &amp; Q \\ar[r]_-{f} &amp; \\mathrm{B} \\ar[r]_-{g} &amp; P \\ar[r] &amp; 0\n  }\n  \\]</p>\n  <p>(i) For E to be non-empty, it is necessary and sufficient that the image in \\(\\mathrm{Ext}^1(\\mathrm{C},Q)\\) of the element A of \\(\\mathrm{Ext}^1(A'',A')\\) be zero.</p>\n  <p>(ii) Under these conditions, E is a principal homogeneous set under the abelian group \\(\\mathrm{Hom}(\\mathrm{C},Q)\\).</p>\n  <p>Let us introduce the amalgamated sum \\(\\mathrm{B}' = A\\coprod_{A'}Q\\). We then have a commutative diagram in which the rows are exact:\n  \\[\n  \\xymatrix{\n  0 \\ar[r] &amp; A' \\ar[r]^-{i} \\ar[d]_-{\\phi} &amp; A \\ar[r]^-{p} \\ar[d] &amp; A'' \\ar[r] \\ar[d]^-{=} &amp; 0 \\\\\n  0 \\ar[r] &amp; Q \\ar[r]_-{j} &amp; \\mathrm{B}' \\ar[r] &amp; A'' \\ar[r] &amp; 0\n  }\n  \\]\n  and it is clear that the category of solutions of the problem posed is canonically isomorphic to the category of solutions of the corresponding problem for the sequence\n  \\[\n  0 \\longrightarrow Q \\longrightarrow \\mathrm{B}' \\longrightarrow A'' \\longrightarrow 0\n  \\]\n  and the morphisms \\(\\mathrm{id}_Q\\) and \\(\\pi : A'' \\to P\\). We are thus reduced to proving the lemma in the case where \\(A' \\to Q\\) is an isomorphism. In that case, the set E is obviously in one-to-one correspondence with the set of subobjects N of A such that \\(A \\to A''\\) induces an isomorphism of N with the kernel C of \\(A'' \\to P\\), that is, the set of morphisms \\(\\mathrm{C} \\to A\\) lifting the canonical morphism \\(\\mathrm{C}\\to A''\\); which gives the desired result.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From (ii) one deduces immediately:</p>"
+    },
+    {
+     "id": "III.4.2",
+     "type": "proposition",
+     "label": "4.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\">\n    <p>Let \\((\\mathrm{X},\\mathscr{O}_{\\mathrm X})\\) be a ringed space, \\(\\mathscr{J}\\) an ideal of square zero of \\(\\mathscr{O}_{\\mathrm X}\\), and \\(\\mathscr{F}\\) an \\(\\mathscr{O}_{\\mathrm X}\\)-module. Set \\(\\mathscr{F}_0 = \\mathscr{F}/\\mathscr{J}\\mathscr{F}\\) and let \\(\\mathscr{G}_0\\) be a quotient module of \\(\\mathscr{F}_0\\). Let us give ourselves a morphism of \\(\\mathscr{O}_{\\mathrm X}/\\mathscr{J}\\)-modules\n  \\[\n  f : \\mathscr{J}\\otimes_{\\mathscr{O}_{\\mathrm X}/\\mathscr{J}}\\mathscr{G}_0 \\longrightarrow \\mathscr{Q}.\n  \\]</p>\n  <p>Let \\(\\mathscr{E}\\) be the sheaf on X defined as follows: for each open set U of X, \\(\\mathscr{E}(\\mathrm U)\\) is the set of quotient modules \\(\\mathscr{G}\\) of \\(\\mathscr{F}|_{\\mathrm U}\\) such that \\(\\mathscr{G}/(\\mathscr{J}|_{\\mathrm U})\\mathscr{G} = \\mathscr{G}_0|_{\\mathrm U}\\) and such that there exists an isomorphism (obviously unique)\n  \\[\n  (\\mathscr{J}|_{\\mathrm U})\\mathscr{G} \\simeq \\mathscr{Q}|_{\\mathrm U}\n  \\]\n  making the following diagram commutative\n  \\[\n  \\xymatrix{\n  (\\mathscr{J}|_{\\mathrm U}) \\otimes (\\mathscr{G}_0|_{\\mathrm U}) \\ar[r]^-{f|_{\\mathrm U}} \\ar[d]_-{\\mathrm{can.}} &amp; \\mathscr{Q}|_{\\mathrm U} \\\\\n  (\\mathscr{J}|_{\\mathrm U})\\mathscr{G} \\ar[ur]_-{\\simeq} &amp;\n  }\n  \\]</p>\n  <p>Then \\(\\mathscr{E}\\) is a sheaf formally principal homogeneous under the sheaf of commutative groups\n  \\[\n  \\mathscr{A} = \\mathscr{H}om_{\\mathscr{O}_{\\mathrm X}/\\mathscr{J}}(\\mathscr{H}_0,\\mathscr{Q}),\n  \\]\n  where we have set \\(\\mathscr{G}_0 = \\mathscr{F}_0/\\mathscr{H}_0\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.3",
+     "type": "proposition",
+     "label": "4.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\">\n    <p>(TDTE IV 5.1) Let S be a scheme, \\(S_0\\) a closed subscheme defined by the quasi-coherent ideal \\(J\\) of square zero, X an S-scheme, \\(\\mathscr{F}\\) a quasi-coherent \\(\\mathscr{O}_{\\mathrm X}\\)-module, \\(X_0 = X\\times_S S_0\\), \\(\\mathscr{F}_0 = \\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{O}_{S_0}\\). Let \\(\\mathscr{G}_0 = \\mathscr{F}_0/\\mathscr{H}_0\\) be a quasi-coherent quotient module of \\(\\mathscr{F}_0\\), flat over \\(S_0\\). For every open set U of X, let \\(\\mathbf{E}(\\mathrm U)\\) be the set of quotient modules \\(\\mathscr{G}\\) of the \\(\\mathscr{O}_{\\mathrm U}\\)-module \\(\\mathscr{F}|_{\\mathrm U}\\), flat over S and such that \\(\\mathscr{G}\\otimes_{\\mathscr{O}_S}\\mathscr{O}_{S_0} \\simeq \\mathscr{G}_0|_{\\mathrm U}\\) (which are necessarily quasi-coherent, being extensions of two quasi-coherent modules, cf. EGA III, 1.4.17). Then the \\(\\mathbf{E}(\\mathrm U)\\) form a sheaf \\(\\mathbf{E}\\) on X, which is formally principal homogeneous under the sheaf of commutative groups\n  \\[\n  \\mathscr{A} = \\mathscr{H}om_{\\mathscr{O}_{X_0}}(\\mathscr{H}_0, \\mathscr{G}_0\\otimes_{\\mathscr{O}_{S_0}}J).\n  \\]</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By the fundamental criterion of flatness (see for example SGA 1 IV, 5.1), \\(\\mathscr{G}\\) is flat over S if and only if \\(\\mathscr{G}_0\\) is flat over \\(S_0\\) and the canonical morphism \\(J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{G}_0 \\to J\\mathscr{G}\\) is an isomorphism. It thus suffices to apply the preceding proposition, taking for \\(f\\) the identity morphism of \\(J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{G}_0 = J\\mathscr{O}_{\\mathrm X}\\otimes_{\\mathscr{O}_{\\mathrm X}}\\mathscr{G}_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Taking now \\(\\mathscr{F} = \\mathscr{O}_{\\mathrm X}\\) and reasoning as usual, one deduces from this:</p>"
+    },
+    {
+     "id": "III.4.4",
+     "type": "corollaire",
+     "label": "4.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\">\n    <p>Let S, \\(S_0\\), \\(J\\), X, \\(X_0\\) be as above. Let \\(Y_0\\) be a closed subscheme of \\(X_0\\), flat over \\(S_0\\). Let E be the set of closed subschemes Y of X, flat over S, such that \\(Y\\times_S S_0 = Y_0\\).</p>\n  <p>(i) The set E is empty or principal homogeneous under\n  \\[\n  \\mathrm{Hom}_{\\mathscr{O}_{X_0}}(\\mathscr{I}_{Y_0}, \\mathscr{O}_{Y_0}\\otimes_{\\mathscr{O}_{S_0}}J)\n  \\]\n  where \\(\\mathscr{I}_{Y_0}\\) is the Ideal defining \\(Y_0\\) in \\(X_0\\).</p>\n  <p>(ii) For E to be non-empty, it is necessary and sufficient that the two following conditions be satisfied:</p>\n  <p>(a) There exists locally on X a solution of the problem.</p>\n  <p>(b) A certain obstruction is zero, which lies in\n  \\[\n  \\mathrm{H}^1(X_0, \\mathscr{H}om_{\\mathscr{O}_{X_0}}(\\mathscr{I}_{Y_0}, \\mathscr{O}_{Y_0}\\otimes_{\\mathscr{O}_{S_0}}J)).\n  \\]</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now carry out a certain number of transformations. As \\(J\\) is of square zero, we may also write\n\\[\n\\mathscr{A}_0 = \\mathscr{H}om_{\\mathscr{O}_{X_0}}(\\mathscr{I}_{Y_0}, \\mathscr{O}_{Y_0}\\otimes_{\\mathscr{O}_{S_0}}J) = \\mathscr{H}om_{\\mathscr{O}_{X_0}}(\\mathscr{I}_{Y_0}/\\mathscr{I}_{Y_0}^2, \\mathscr{O}_{Y_0}\\otimes_{\\mathscr{O}_{S_0}}J).\n\\]\nAs \\(\\mathscr{I}_{Y_0}/\\mathscr{I}_{Y_0}^2\\) is annihilated by \\(\\mathscr{I}_{Y_0}\\), we may regard it as a sheaf on \\(Y_0\\), which we denote by \\(\\mathscr{N}_{Y_0/X_0}\\), the conormal sheaf of \\(Y_0\\) in \\(X_0\\). Setting\n\\[\n\\mathscr{A}' = \\mathscr{H}om_{\\mathscr{O}_{Y_0}}(\\mathscr{N}_{Y_0/X_0}, \\mathscr{O}_{Y_0}\\otimes_{\\mathscr{O}_{S_0}}J),\n\\]\nwe shall have \\(\\mathrm{H}^i(X_0,\\mathscr{A}) = \\mathrm{H}^i(Y_0,\\mathscr{A}')\\), \\(i\\geqslant 0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Introducing now two ideals \\(I\\) and \\(J\\), reasoning as in <a class=\"ref\" href=\"#III.0.2\">0.2</a>, and removing in the usual manner the hypothesis \"Y closed\", we obtain</p>"
+    },
+    {
+     "id": "III.4.5",
+     "type": "proposition",
+     "label": "4.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme, \\(S_0\\) and \\(S_J\\) the closed subschemes defined by the quasi-coherent ideals \\(I\\) and \\(J\\), such that \\(I\\supset J\\) and \\(I\\cdot J = 0\\). Let X be an S-scheme and \\(Y_J\\) a subscheme of \\(X_J\\), flat over \\(S_J\\). Let \\(\\mathscr{A}_0\\) be the \\(\\mathscr{O}_{Y_0}\\)-module defined by\n  \\[\n  \\mathscr{A}_0 = \\mathscr{H}om_{\\mathscr{O}_{Y_0}}(\\mathscr{N}_{Y_J/X_J}\\otimes_{\\mathscr{O}_{Y_J}}\\mathscr{O}_{Y_0}, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0}).\n  \\]</p>\n  <p>(i) For there to exist a subscheme Y of X, reducing to \\(Y_J\\), flat over S, it is necessary and sufficient that the following conditions be satisfied:</p>\n  <p>(a) Such a Y exists locally on X.</p>\n  <p>(b) A certain obstruction in \\(\\mathrm{R}^1\\Gamma(Y_0,\\mathscr{A}_0)\\) is zero.</p>\n  <p>(ii) Under these conditions, the set of Y satisfying the required conditions is principal homogeneous under the commutative group \\(\\Gamma(Y_0,\\mathscr{A}_0)\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.6",
+     "type": "remarque",
+     "label": "4.6",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\">\n  <p>If X is flat over S and if \\(Y_J\\) is locally a complete intersection in \\(X_J\\), then condition (a) is always satisfied, and every S-flat Y lifting \\(Y_J\\) is then locally a complete intersection in X. If moreover \\(Y_0\\) is affine, condition (b) is also satisfied.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.7",
+     "type": "remarque",
+     "label": "4.7",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\">\n  <p>It follows from <a class=\"ref\" href=\"#III.4.5\">4.5</a> (ii) that, for every pair \\((Y,Y')\\) of closed subschemes of X, flat over S and reducing to \\(Y_J\\), there is given a <em>deviation</em>\n  \\[\n  d(Y,Y') \\in \\mathrm{H}^0(Y_0,\\mathscr{A}_0) = \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(\\mathscr{N}_{Y_J/X_J}\\otimes_{\\mathscr{O}_{Y_J}}\\mathscr{O}_{Y_0}, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0}).\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.8",
+     "type": "proposition",
+     "label": "4.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\">\n    <p>Let S, \\(I\\), \\(J\\) and X be as in <a class=\"ref\" href=\"#III.4.5\">4.5</a>, with \\(I\\) nilpotent. Let Y be a subscheme of X.</p>\n  <p>(i) Let T be an S-scheme and \\(f : \\mathrm{T}\\to X\\) an S-morphism such that \\(f_J : \\mathrm{T}_J \\to X_J\\) factors through \\(Y_J\\). One can then define an obstruction\n  \\[\n  c(X,Y,f) \\in \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{\\mathrm T})\n  \\]\n  whose vanishing is necessary and sufficient for the existence of a factorization of \\(f\\) through Y.</p>\n  <p>(ii) Suppose in particular Y flat over S and let \\(Y'\\) be a subscheme of X, flat over S, such that \\(Y'_J = Y_J\\). Consider the canonical morphism\n  \\[\n  u : \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(\\mathscr{N}_{Y_J/X_J}\\otimes_{\\mathscr{O}_{Y_J}}\\mathscr{O}_{Y_0}, J\\mathscr{O}_{Y}) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}, J\\mathscr{O}_{Y}).\n  \\]\n  If we denote by \\(i' : Y' \\to X\\) the canonical immersion, we have\n  \\[\n  c(X,Y,i') = u(d(Y,Y')),\n  \\]\n  where \\(d(Y,Y')\\) is the deviation of <a class=\"ref\" href=\"#III.4.7\">4.7</a>.</p>\n  <p>(iii) Consider the canonical morphism (SGA 1 II, formula 4.3)\n  \\[\n  \\mathscr{N}_{Y/X} \\xrightarrow{\\ \\mathrm D\\ } \\Omega^1_{X/S}\\otimes_{\\mathscr{O}_{\\mathrm X}}\\mathscr{O}_Y\n  \\]\n  It induces, for every \\(f_0 : \\mathrm T_0 \\to X_0\\) factoring through \\(Y_0\\), a morphism:\n  \\[\n  v_{f_0} : \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*(\\Omega^1_{X_0/S_0}), J\\mathscr{O}_{\\mathrm T}) \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{\\mathrm T}),\n  \\]\n  (The left-hand side is none other than \\(\\mathrm{Hom}_{X^+}(\\mathrm T,\\mathrm{L}_X)\\), cf. <a class=\"ref\" href=\"#III.0.2\">0.2</a>). Let \\(a \\in \\mathrm{Hom}_{X^+}(\\mathrm T,\\mathrm{L}_X)\\); consider the composite morphism\n  \\[\n  g : \\mathrm T \\xrightarrow{\\ a\\times f\\ } \\mathrm{L}_X\\underset{X^+}{\\times}X \\longrightarrow X,\n  \\]\n  where \\(f : \\mathrm T \\to X\\) is a morphism of the kind studied in (i). Then\n  \\[\n  c(X,Y,g) - c(X,Y,f) = v_{f_0}(a).\n  \\]</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall prove part (i) of the proposition, leaving to the reader the care of (not) verifying assertions (ii) and (iii); this verification is done by reduction to the affine case, then by comparison of the explicit definitions.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us then prove (i). As T, \\(\\mathrm T_J\\) and \\(\\mathrm T_0\\) on the one hand, and X, \\(X_J\\) and \\(X_0\\) on the other, have the same underlying topological space, the continuous maps underlying \\(f\\), \\(f_J\\) and \\(f_0\\) are the same. Denote by \\(f(\\mathscr{O}_{\\mathrm T}) = f_0(\\mathscr{O}_{\\mathrm T})\\) the (set-theoretic) direct image of the sheaf of rings \\(\\mathscr{O}_{\\mathrm T}\\) by the preceding continuous map. The morphism \\(f : \\mathrm T \\to X\\) defines a morphism of sheaves of rings \\(\\mathscr{O}_{\\mathrm X}\\to f(\\mathscr{O}_{\\mathrm T})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As usual, we may restrict to the case where Y is closed, hence defined by a sheaf of ideals \\(\\mathscr{I}_Y\\). For \\(f\\) to factor through Y, it is necessary and sufficient that the composite map \\(\\mathscr{I}_Y \\to \\mathscr{O}_{\\mathrm X} \\to f(\\mathscr{O}_{\\mathrm T})\\) be zero. As \\(f_J\\) factors through \\(Y_J\\), the composite map \\(\\mathscr{I}_{Y_J} \\to \\mathscr{O}_{X_J} \\to f(\\mathscr{O}_{T_J})\\) is zero. Consider the commutative diagram in which the first row is exact\n\\[\n\\xymatrix{\n0 \\ar[r] &amp; f(J\\mathscr{O}_{\\mathrm T}) \\ar[r] &amp; f(\\mathscr{O}_{\\mathrm T}) \\ar[r] &amp; f(\\mathscr{O}_{T_J}) \\\\\n&amp; \\mathscr{O}_{\\mathrm X} \\ar[u] \\ar[r] &amp; \\mathscr{O}_{X_J} \\ar[u] \\\\\n&amp; \\mathscr{I}_Y \\ar[u] \\ar[ur]^-{h} \\ar[r] &amp; \\mathscr{I}_{Y_J} \\ar[u]\n}\n\\]\nit is completed by a morphism\n\\[\nh : \\mathscr{I}_Y \\longrightarrow f(J\\mathscr{O}_{\\mathrm T}).\n\\]\nBut, as \\(J^2=0\\) and \\(IJ=0\\), we have a factorization\n\\[\n\\xymatrix{\n\\mathscr{I}_Y \\ar[rr]^-{h} \\ar[dr]_-{\\mathrm{surj.}} &amp; &amp; f(J\\mathscr{O}_{\\mathrm T}) = f^0(J\\mathscr{O}_{\\mathrm T}) \\\\\n&amp; \\mathscr{I}_Y/\\mathscr{I}_Y^2\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0} \\ar[ur]_-{h'} &amp;\n}\n\\]\nBy definition of the direct image, \\(h'\\) defines a morphism\n\\[\nf_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}) \\longrightarrow J\\mathscr{O}_{\\mathrm T}\n\\]\nwhich is the desired obstruction \\(c(X,Y,f)\\).</p>"
+    },
+    {
+     "id": "III.4.9",
+     "type": "remarque",
+     "label": "4.9",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.4.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.9</span></div>\n  <div class=\"thm-body\">\n  <p>This obstruction is computed locally on T. If we suppose T affine, say \\(\\mathrm T = \\mathrm{Spec}\\,\\mathrm C\\), and likewise \\(X = \\mathrm{Spec}\\,\\mathrm B\\), \\(Y = \\mathrm{Spec}\\,\\mathrm B/\\mathrm I_Y\\), \\(S = \\mathrm{Spec}\\,A\\), \\(S_J = \\mathrm{Spec}\\,A/J\\), \\(S_0 = \\mathrm{Spec}\\,A/I\\), it is computed by the following commutative diagram:\n  \\[\n  \\xymatrix{\n  \\mathrm I_Y \\ar[r] \\ar[d] &amp; \\mathrm B \\ar[r]^-{f} &amp; \\mathrm C \\ar[d]^-{c} \\\\\n  \\mathrm I_Y/\\mathrm I_Y^2 \\ar[r] &amp; \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm C_0 \\ar[r]_-{c} &amp; J\\mathrm C\n  }\n  \\]\n  The obstruction \\(c\\) is thus defined as the unique morphism of \\(\\mathrm C_0\\)-modules\n  \\[\n  \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm C_0 \\longrightarrow J\\mathrm C\n  \\]\n  such that, with the obvious notation, we have \\(c(\\overline x\\otimes 1) = f(x)\\) for every \\(x\\in \\mathrm I_Y\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.10",
+     "type": "remarque",
+     "label": "4.10",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.10</span></div>\n  <div class=\"thm-body\">\n  <p>If \\(Y_0\\) is locally a complete intersection in \\(X_0\\) (which implies that Y is one in X), we have \\(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0} = \\mathscr{N}_{Y_0/X_0}\\). More precisely, we have in any case a surjective morphism of \\(\\mathscr{O}_{Y_0}\\)-Modules\n  \\[\n  \\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0} \\xrightarrow{\\ \\mathrm{surj.}\\ } \\mathscr{N}_{Y_0/X_0}\n  \\]\n  which is also injective if Y is locally a complete intersection in X (as follows at once from the fact that Y and \\(\\mathscr{N}_{Y/X}\\) are flat over S). In the \"affine\" case of the preceding remark, this translates into a morphism\n  \\[\n  \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm B_0 \\xrightarrow{\\ \\mathrm{surj.}\\ } \\mathrm I_{Y_0}/\\mathrm I_{Y_0}^2,\n  \\]\n  hence a morphism\n  \\[\n  \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm C_0 \\xrightarrow{\\ \\mathrm{surj.}\\ } \\mathrm I_{Y_0}/\\mathrm I_{Y_0}^2\\otimes_{\\mathrm B_0}\\mathrm C_0\n  \\]\n  which is bijective if Y is locally a complete intersection in X.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.11",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.11\">4.11.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We now propose to study the following situation: we have, as in <a class=\"ref\" href=\"#III.4.8\">4.8</a>, S, \\(S_J\\) and \\(S_0\\); we have two S-schemes X and \\(X'\\), a subscheme Y (resp. \\(Y'\\)) of X (resp. \\(X'\\)), an S-scheme T, and morphisms \\(f : \\mathrm T \\to X'\\) and \\(g : X' \\to X\\).\n\\[\n\\xymatrix{\n&amp; Y' \\ar@{^{(}-&gt;}[d]^-{i'} &amp; &amp; Y \\ar@{^{(}-&gt;}[d]^-{i} \\\\\n\\mathrm T \\ar[r]_-{f} &amp; X' \\ar[rr]_-{g} &amp; &amp; X\n}\n\\]\nWe suppose that, upon reduction modulo \\(J\\), this diagram is completed into a commutative diagram\n\\[\n\\xymatrix{\n&amp; Y'_J \\ar@{--&gt;}[rr] \\ar@{^{(}-&gt;}[d]^-{i'_J} &amp; &amp; Y_J \\ar@{^{(}-&gt;}[d]^-{i_J} \\\\\n\\mathrm T_J \\ar[r]_-{f_J} &amp; X'_J \\ar[rr]_-{g_J} &amp; &amp; X_J\n}\n\\]\nBy 4.8, we thus have obstructions:\n\\[\nc(X,Y,g\\circ i) \\in \\mathrm{Hom}_{\\mathscr{O}_{Y_0'}}(i_0'^*g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{Y'}),\n\\]\n\\[\nc(X',Y',f) \\in \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*(\\mathscr{N}_{Y'/X'}\\otimes_{\\mathscr{O}_{Y'}}\\mathscr{O}_{Y_0'}), J\\mathscr{O}_{\\mathrm T}),\n\\]\n\\[\nc(X,Y,g\\circ f) \\in \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{\\mathrm T}),\n\\]\nwhose relations we seek to compute.</p>"
+    },
+    {
+     "id": "III.4.12",
+     "type": "lemme",
+     "label": "4.12",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.4.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.12</span></div>\n  <div class=\"thm-body\">\n    <p>(i) Suppose \\(Y'\\) flat over \\(S'\\). We then have a natural morphism\n  \\[\n  b_{f_0} : \\mathrm{Hom}_{\\mathscr{O}_{Y_0'}}(i_0'^*g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{Y'}) \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{\\mathrm T}).\n  \\]</p>\n  <p>(ii) Suppose moreover \\(Y_0'\\) locally a complete intersection in \\(X_0'\\). We then have a natural morphism\n  \\[\n  a_{g_0} : \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*(\\mathscr{N}_{Y'/X'}\\otimes_{\\mathscr{O}_{Y'}}\\mathscr{O}_{Y_0'}), J\\mathscr{O}_{\\mathrm T}) \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(f_0^*g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}), J\\mathscr{O}_{\\mathrm T}).\n  \\]</p>\n  <p>To construct \\(b_{f_0}\\), it suffices to exhibit an \\(\\mathscr{O}_{T_0}\\)-morphism\n  \\[\n  f_0^*(J\\mathscr{O}_{Y'}) \\longrightarrow J\\mathscr{O}_{\\mathrm T}\\, ;\n  \\]\n  in any case we have a diagram\n  \\[\n  \\xymatrix{\n  f_0^*(J\\mathscr{O}_{Y'}) \\ar@{--&gt;}[r] &amp; J\\mathscr{O}_{\\mathrm T} \\\\\n  f^*(J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0'}) \\ar[u] \\ar[r]_-{\\sim} &amp; J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{T_0} \\ar[u]\n  }\n  \\]\n  If \\(Y'\\) is flat over \\(S'\\), the first vertical arrow is an isomorphism, and we complete the square immediately.</p>\n  <p>In the same manner, one constructs \\(a_{g_0}\\) by exhibiting an \\(\\mathscr{O}_{Y_0'}\\)-morphism\n  \\[\n  g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}) \\longrightarrow \\mathscr{N}_{Y'/X'}\\otimes_{\\mathscr{O}_{Y'}}\\mathscr{O}_{Y_0'}\\, ;\n  \\]\n  now in any case we have a diagram\n  \\[\n  \\xymatrix{\n  g_0^*(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0}) \\ar@{--&gt;}[r] \\ar[d] &amp; \\mathscr{N}_{Y'/X'}\\otimes_{\\mathscr{O}_{Y'}}\\mathscr{O}_{Y_0'} \\\\\n  g_0^*(\\mathscr{N}_{Y_0/X_0}) \\ar[r] &amp; \\mathscr{N}_{Y_0'/X_0'} \\ar[u]\n  }\n  \\]\n  if \\(Y_0'\\) is locally a complete intersection in \\(X_0'\\), the second vertical arrow is an isomorphism and we complete the diagram.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.13",
+     "type": "proposition",
+     "label": "4.13",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.4.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.13</span></div>\n  <div class=\"thm-body\">\n    <p>Suppose \\(Y'\\) flat over S and \\(Y_0'\\) locally a complete intersection in \\(X_0'\\). We then have the formula:\n  \\[\n  c(X,Y,g\\circ f) = a_{g_0}(c(X',Y',f)) + b_{f_0}(c(X,Y,g\\circ i')).\n  \\]</p>\n  <p>As the definition of the various obstructions and of the morphisms \\(a_{g_0}\\) and \\(b_{f_0}\\) is local, one sees easily that it suffices to verify the given formula when the various schemes involved are affine. So write \\(S = \\mathrm{Spec}\\,\\Lambda\\), \\(S_J = \\mathrm{Spec}\\,\\Lambda/J\\), \\(S_0 = \\mathrm{Spec}\\,\\Lambda/I\\), \\(\\mathrm T = \\mathrm{Spec}\\,\\mathrm C\\), \\(X = \\mathrm{Spec}\\,A\\), \\(Y = \\mathrm{Spec}\\,A/\\mathrm I_Y = \\mathrm{Spec}\\,\\mathrm B\\), \\(X' = \\mathrm{Spec}\\,A'\\), \\(Y' = \\mathrm{Spec}\\,A'/\\mathrm I_{Y'} = \\mathrm{Spec}\\,\\mathrm B'\\).</p>\n  <p>We thus have a diagram of rings and ideals\n  \\[\n  \\xymatrix{\n  &amp; \\mathrm B' \\ar[d]^-{\\pi'} &amp; \\mathrm B \\ar[d]^-{\\pi} \\\\\n  \\mathrm C &amp; A' \\ar[l]^-{f} &amp; A \\ar[l]_-{g} \\\\\n  &amp; \\mathrm I_{Y'} \\ar[u] &amp; \\mathrm I_Y \\ar[u]\n  }\n  \\]</p>\n  <p>Let us study the various terms of the formula to be proved. First \\(c = c(X,Y,g\\circ f)\\). We have seen that it is the unique \\(\\mathrm C_0\\)-morphism \\(\\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm C_0 \\to J\\mathrm C\\) such that \\(c(\\overline x\\otimes 1) = f(g(x))\\) for every \\(x\\in \\mathrm I_Y\\). So let \\(x\\in \\mathrm I_Y\\); set \\(x' = g(x) \\in \\mathrm I_{Y'} + JA'\\). Write \\(x' = y' + \\sum \\lambda_i a_i'\\), \\(y'\\in \\mathrm I_{Y'}\\), \\(\\lambda_i\\in J\\), \\(a_i'\\in A'\\). We thus have\n  \\[\n  c(X,Y,g\\circ f)(\\overline x\\otimes 1) = f(x') = f(y') + \\sum \\lambda_i f(a_i').\n  \\]</p>\n  <p>Consider now \\(a_{g_0}(c(X',Y',f))\\). According to the definitions laid down, it is defined by the diagram\n  \\[\n  \\xymatrix{\n  \\mathrm I_{Y'} \\ar@{^{(}-&gt;}[r] \\ar[d] &amp; A' \\ar[r]^-{f} &amp; \\mathrm C \\\\\n  \\mathrm I_{Y'}/\\mathrm I_{Y'}^2\\otimes_{B'}\\mathrm C_0 \\ar[r]^-{\\sim} &amp; \\mathrm I_{Y_0'}/\\mathrm I_{Y_0'}^2\\otimes_{B_0'}\\mathrm C_0 \\ar[d]^-{g_0} \\ar[u] &amp; \\\\\n  \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm C_0 \\ar[r] \\ar[uu] \\ar[d]_-{a_{g_0}(c(X',Y',f))} &amp; \\mathrm I_{Y_0}/\\mathrm I_{Y_0}^2\\otimes_{B_0}\\mathrm C_0 \\ar[r] &amp; J\\mathrm C \\ar[uu] \\\\\n  J\\mathrm C &amp; &amp;\n  }\n  \\]\n  We thus have \\(a_{g_0}(c(X',Y',f))(\\overline x\\otimes 1) = f(u)\\), where \\(u\\) is an element of \\(\\mathrm I_{Y'}\\) lifting \\(g_0(x_0) = (g(x))_0 = y_0'\\). We therefore take \\(u = y'\\) and we find\n  \\[\n  a_{g_0}(c(X',Y',f))(\\overline x\\otimes 1) = f(y').\n  \\]</p>\n  <p>Consider finally \\(b_{f_0}(c(X,Y,g\\circ i'))\\). It is defined by the diagram\n  \\[\n  \\xymatrix{\n  \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}B_0' \\ar[r]^-{\\overline g} \\ar[d] &amp; J\\mathrm B' \\ar[d] \\\\\n  \\mathrm I_Y/\\mathrm I_Y^2\\otimes_{\\mathrm B}\\mathrm C_0 \\ar[r] \\ar[dr]_-{b_{f_0}(c(X,Y,g\\circ i'))} &amp; J\\mathrm B'\\otimes_{B_0'}\\mathrm C_0 \\ar[d] &amp; J\\otimes_{\\Lambda_0}\\mathrm C_0 \\ar[l]_-{\\sim} \\\\\n  &amp; J\\mathrm C &amp;\n  }\n  \\]\n  We thus obtain at once\n  \\[\n  b_{f_0}(c(X,Y,g\\circ i'))(\\overline x\\otimes 1) = f(\\overline g(x)) = \\sum \\lambda_i f(a_i').\n  \\]</p>\n  <p>Comparison of the three explicit results gives the desired formula.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.14",
+     "type": "corollaire",
+     "label": "4.14",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.14</span></div>\n  <div class=\"thm-body\">\n    <p>Let Y and \\(Y'\\) be two flat subschemes of X reducing to \\(Y_J\\), and suppose \\(Y_0\\) locally a complete intersection in \\(X_0\\). If \\(\\mathrm T \\xrightarrow{\\ f\\ } X\\) is an S-morphism such that \\(f_J\\) factors through \\(Y_J \\to X_J\\), we have the formula\n  \\[\n  c(X,Y',f) - c(X,Y,f) = f^*(d(Y',Y))\n  \\]\n  where \\(f^*\\) is the natural morphism\n  \\[\n  \\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(\\mathscr{N}_{Y_0/X_0}, J\\mathscr{O}_{Y}) \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{T_0}}(\\mathscr{N}_{Y_0/X_0}, J\\mathscr{O}_{\\mathrm T}).\n  \\]</p>\n  <p>Indeed, it suffices to apply the preceding formula to the diagram\n  \\[\n  \\xymatrix{\n  &amp; Y' \\ar@{^{(}-&gt;}[d]^-{i'} &amp; &amp; Y \\ar@{^{(}-&gt;}[d]^-{i} \\\\\n  \\mathrm T \\ar[r]_-{f} &amp; X \\ar[rr]_-{\\mathrm{id}} &amp; &amp; X\n  }\n  \\]\n  and to use the relation \\(c(X,Y,i') = d(Y,Y')\\) (cf. 4.8 (ii)).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.14.nota",
+     "type": "remarque",
+     "label": null,
+     "title": "Nota",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.4.14.nota\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Nota</span></div>\n  <div class=\"thm-body\">\n  <p>Taking \\(f = i'\\) in the preceding formula, one recovers the relation given in 4.8 (ii).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.15",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.15\">4.15.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall now consider the case where X is an S-group <em>smooth</em> over S. Let us note first that every sub-S-group Y <em>flat</em> over S is <em>locally a complete intersection</em> in X. Let us sketch the proof of this fact. By virtue of general results (cf. in particular SGA 1 IV 5.7), as X and Y are flat, we are reduced to verifying the assertion on the geometric fibres of S, hence when S is the spectrum of an algebraically closed field. One remarks next that we are dealing with groups, so that it suffices to verify the assertion at the origin. Finally, to verify that Y is, at the origin, a complete intersection in X, we may content ourselves with doing so for the formal groups \\(\\widehat X\\) and \\(\\widehat Y\\) corresponding to X and Y. As X is smooth, the hyperalgebra of \\(\\widehat X\\) is a polynomial algebra, and one concludes with the help of the structure theorem of DIEUDONNÉ, which shows that the hyperalgebra of \\(\\widehat Y\\) is obtained by \"truncating\" that of X, hence is a complete intersection in it (cf. Exp. VII). Of course, when Y is also smooth over S, it suffices simply to invoke SGA 1 II 4.15.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now give ourselves a sub-\\(S_J\\)-group \\(Y_J\\) of \\(X_J\\), flat and locally of finite presentation over \\(S_J\\). We know first that \\(Y_J\\) is locally a complete intersection in X, hence (4.6) that every S-scheme Y lifting \\(Y_J\\) is locally a complete intersection in X, and that such a Y exists if in addition \\(Y_0\\) is affine.</p>"
+    },
+    {
+     "id": "III.4.16",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.16\">4.16.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moreover, we have \\(\\mathscr{N}_{Y/X}\\otimes_{\\mathscr{O}_Y}\\mathscr{O}_{Y_0} = \\mathscr{N}_{Y_J/X_J}\\otimes_{\\mathscr{O}_{Y_J}}\\mathscr{O}_{Y_0} = \\mathscr{N}_{Y_0/X_0}\\). As \\(Y_0\\) and \\(X_0\\) are \\(S_0\\)-groups, one sees easily that if we denote by \\(\\mathfrak{n}_{Y_0/X_0}\\) the inverse image of \\(\\mathscr{N}_{Y_0/X_0}\\) by the unit section of \\(Y_0\\) (it is a quasi-coherent \\(\\mathscr{O}_{S_0}\\)-Module), we also have\n\\[\n\\mathscr{N}_{Y_0/X_0} = \\mathfrak{n}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0}.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The deviations and obstructions of 4.7 and 4.8 are thus elements, respectively, of the groups\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_{Y_0}}(\\mathfrak{n}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0}, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0})\n\\]\nand\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_{T_0}}(\\mathfrak{n}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{T_0}, J\\mathscr{O}_{\\mathrm T}).\n\\]\nConsider the functor in commutative groups N over \\(S_0\\) defined by\n\\[\n\\mathrm{Hom}_{S_0}(\\mathrm Z,\\mathrm N) = \\mathrm{Hom}_{\\mathscr{O}_{\\mathrm Z}}(\\mathfrak{n}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{\\mathrm Z}, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{\\mathrm Z}), \\qquad \\mathrm Z\\in \\mathrm{Ob}\\,(\\mathbf{Sch})_{/S_0}.\n\\]\nWe know that the set of sub-S-schemes of X, flat over S, lifting \\(Y_J\\), is empty or principal homogeneous under \\(\\mathrm{Hom}_{S_0}(Y_0,\\mathrm N) = \\mathrm C^1(Y_0,\\mathrm N)\\).</p>"
+    },
+    {
+     "id": "III.4.17",
+     "type": "lemme",
+     "label": "4.17",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.4.17\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.17</span></div>\n  <div class=\"thm-body\">\n    <p>Under the preceding hypotheses, consider for each Y lifting \\(Y_J\\) the obstruction\n  \\[\n  \\mathrm{D}Y \\in \\mathrm{Hom}_{S_0}(Y_0\\times_{S_0}Y_0, \\mathrm N) = \\mathrm C^2(Y_0,\\mathrm N)\n  \\]\n  defined by \\(\\mathrm D Y = c(X,Y,\\pi\\circ(i,i))\\):\n  \\[\n  \\xymatrix{\n  Y\\underset{S}{\\times}Y \\ar[d]_-{(i,i)} &amp; &amp; Y \\ar@{^{(}-&gt;}[d]^-{i} \\\\\n  X\\underset{S}{\\times}X \\ar[rr]_-{\\pi} &amp; &amp; X\n  }\n  \\]</p>\n  <p>(i) For Y to be a sub-S-group of X, it is necessary and sufficient that \\(\\mathrm D Y = 0\\).</p>\n  <p>(ii) If we let \\(Y_0\\) act on N by functoriality starting from the inner automorphisms of \\(Y_0\\), then \\(\\mathrm D Y \\in \\mathrm Z^2(Y_0,\\mathrm N)\\).</p>\n  <p>(iii) If Y and \\(Y'\\) are two subschemes of X, flat over S, lifting \\(Y_J\\) (so that the deviation \\(d(Y,Y')\\in \\mathrm C^1(Y_0,\\mathrm N)\\) is defined), we have \\(\\mathrm D Y - \\mathrm D Y' = \\partial d(Y,Y')\\).</p>\n  <p>Let us prove these various assertions in succession.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.18",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.18\">4.18.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof of 4.17 (i). If \\(\\mathrm D Y = 0\\), then there exists a commutative diagram\n\\[\n\\xymatrix{\nY\\underset{S}{\\times}Y \\ar[r] \\ar[d] &amp; Y \\ar[d] \\\\\nX\\underset{S}{\\times}X \\ar[r] &amp; X\n}\n\\]\nhence Y is stable under the group law of X. For it to be a subgroup of X, it is necessary and sufficient that it be a group for the induced law; now the latter is associative, and reduces modulo \\(J\\) to the law induced on \\(X_J\\), which is a group law. As Y is flat, one concludes by <a class=\"ref\" href=\"#III.3.3\">3.3</a>.</p>"
+    },
+    {
+     "id": "III.4.19",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.19\">4.19.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof of 4.17 (ii). This is done by comparing the two values of \\(u = c(X,Y,\\pi_3\\circ(i,i,i))\\) computed in the two following diagrams \\(\\mathrm D_j\\), \\(j=1,2\\):\n\\[\n(\\mathrm D_j)\\qquad\n\\xymatrix{\nY\\times_S Y\\times_S Y \\ar[d]_-{(i,i,i)} &amp; Y\\times_S Y \\ar[d]^-{(i,i)} &amp; Y \\ar[d]^-{i} \\\\\nX\\times_S X\\times_S X \\ar[r]_-{f_j} &amp; X\\times_S X \\ar[r]_-{\\pi} &amp; X\n}\n\\]\nwhere \\(f_1=(1,\\pi)\\), \\(f_2=(\\pi,1)\\), \\(\\pi\\circ f_j = \\pi_3 : X\\times X\\times X \\to X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Each time one applies 4.13. We thus have\n\\[\nu = a_{1,\\pi_0}((0,\\mathrm D Y)) + b_{f_{1_0}}(\\mathrm D Y) = a_{2,\\pi_0}((\\mathrm D Y,0)) + b_{f_{2_0}}(\\mathrm D Y).\n\\]\nThe first thing one notices is that \\(b_{f_{j_0}}\\) is none other than \\(\\mathrm{Hom}_{S_0}(f_{j_0},\\mathrm N)\\), that is, the morphism deduced from \\(f_{j_0}\\) by functoriality. The identity above thus becomes, writing \\(a_{j,\\pi_0}=a_j\\):\n\\[\na_j : \\mathrm{Hom}_{\\mathscr{O}_{Y_0^3}}(f_{j_0}^*(\\mathscr{N}_{Y_0\\times Y_0/X_0\\times X_0}), J\\otimes\\mathscr{O}_{Y_0^3}) \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{Y_0^3}}(\\pi_3^*(\\mathscr{N}_{Y_0/X_0}), J\\otimes\\mathscr{O}_{Y_0^3}),\n\\]\n\\[\n-a_1((0,\\mathrm D Y)) + \\mathrm{Hom}((\\pi,1),\\mathrm N)(\\mathrm D Y) - \\mathrm{Hom}((1,\\pi),\\mathrm N)(\\mathrm D Y) + a_2((\\mathrm D Y,0)) = 0.\n\\]\nOne recognizes the two middle terms: they are the parts \"\\(\\mathrm D Y(xy,z)\\)\" and \"\\(\\mathrm D Y(x,yz)\\)\" of the formula for the 2-coboundary. It thus only remains to identify the two other terms.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We must first compute the map \\(a_j\\). Now it comes, by inverse image under \\(f_{j_0}\\), from the morphism of \\(\\mathscr{O}_{Y_0^2}\\)-modules\n\\[\n\\mathrm P : \\mathfrak{n}_{Y_0/X_0}\\otimes\\mathscr{O}_{Y_0^2} \\longrightarrow (\\mathfrak{n}_{Y_0/X_0}\\oplus\\mathfrak{n}_{Y_0/X_0})\\otimes\\mathscr{O}_{Y_0^2}\n\\]\ninduced by the product in \\(Y_0\\). Now this morphism can be described in the following manner: consider the vector bundle \\(\\mathbf V(\\mathfrak{n}_{Y_0/X_0}) = \\mathrm V\\). By duality, P gives a morphism\n\\[\n\\mathbf V(\\mathrm P) : \\mathrm V\\underset{S_0}{\\times}\\mathrm V\\underset{S_0}{\\times}Y_0\\underset{S_0}{\\times}Y_0 \\longrightarrow \\mathrm V\\underset{S_0}{\\times}Y_0\\underset{S_0}{\\times}Y_0\n\\]\nwhich is expressed set-theoretically by\n\\[\n\\mathbf V(\\mathrm P)(u,v,a,b) = (u+\\mathrm{Ad}(a)v,\\,a,\\,b).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This is proved exactly like the corresponding fact for Lie Algebras, that is, for the Module \\(\\omega^1_{Y_0/S_0}\\). One remarks first that V is endowed, by functoriality in \\(Y_0\\), with a group structure in the category of vector bundles over \\(S_0\\); by virtue of the lemma already used for Lie Algebras (Exposé II, 3.10), this structure coincides with the group structure underlying its \\(\\mathscr{O}_S\\)-module structure. One sees next that \\(\\mathbf V(\\mathfrak{n}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{Y_0}) = \\mathbf V(\\mathscr{N}_{Y_0/X_0})\\) is itself also endowed with an \\(S_0\\)-group structure, which is none other than the semi-direct product of that of V by that of \\(Y_0\\). It only remains to identify the actions of \\(Y_0\\) on V to establish the desired formula.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now compute the two remaining terms. Consider first \\(a_1((0,\\mathrm D Y))\\). It is computed by the diagram\n\\[\n\\xymatrix{\n\\mathfrak{n}\\otimes\\mathscr{O}_{Y_0^2} \\ar[r]^-{\\mathrm P} \\ar[d]_-{f_{1_0}^*} &amp; (\\mathfrak{n}+\\mathfrak{n})\\otimes\\mathscr{O}_{Y_0^2} \\ar[d]^-{f_{1_0}^*} \\\\\n\\mathfrak{n}\\otimes\\mathscr{O}_{Y_0^3} \\ar[dr]_-{a_1((0,\\mathrm D Y))} &amp; (\\mathfrak{n}+\\mathfrak{n})\\otimes\\mathscr{O}_{Y_0^3} \\ar[d]^-{(0,\\mathrm D Y)} \\\\\n&amp; J\\otimes\\mathscr{O}_{Y_0^3}\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considering now the vector bundles defined by these various modules as so many schemes over \\(S_0\\), and taking points with values in anything whatsoever, we have, denoting by \\((u,x,y,z)\\) a point of \\(\\mathbf V(J)\\times Y_0^3\\): for the point \\((u,x,y,z)\\), the image under \\(\\mathbf V(\\mathrm P)\\) on the component \\((0+\\mathrm D Y_{y,z}(u),x,y,z)\\) gives \\((0+\\mathrm D Y_{y,z}(u),x,yz)\\) on the one hand, and by the adjoint action \\((\\mathrm{Ad}(x)\\,\\mathrm D Y_{y,z}(u),x,yz)\\) on the other, these two expressions coinciding by construction of the morphism \\(a_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have thus obtained \\(a_1((0,\\mathrm D Y))(x,y,z) = \\mathrm{Ad}(x)\\,\\mathrm D Y(y,z)\\), which is indeed the first term of the coboundary. One would similarly have \\(a_2((\\mathrm D Y,0))(x,y,z) = \\mathrm D Y(x,y)\\), whence\n\\[\n0 = -\\mathrm{Ad}(x)\\,\\mathrm D Y(y,z) + \\mathrm D Y(xy,z) - \\mathrm D Y(x,yz) + \\mathrm D Y(x,y) = \\partial\\mathrm D Y(x,y,z).\n\\]</p>"
+    },
+    {
+     "id": "III.4.20",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.20\">4.20.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof of 4.17 (iii). One considers the diagram\n\\[\n\\xymatrix{\nY'\\times Y' \\ar[d] &amp; Y\\times Y \\ar[d] &amp; Y \\ar[d] &amp; Y' \\ar[d] \\\\\nX\\times X \\ar[r] &amp; X\\times X \\ar[r] &amp; X \\ar[r] &amp; X\n}\n\\]\nwhich allows one to compute \\(\\mathrm D Y'\\) from \\(\\mathrm D Y\\) and \\(d(Y,Y')\\). The computation is done exactly as before; we leave the details to the reader. One finds\n\\[\n\\mathrm D Y'(x,y) = d(Y',Y)(xy) + \\mathrm D Y(x,y) - d(Y',Y)(x) - \\mathrm{Ad}(x)\\,d(Y',Y)(y)\n\\]\nthat is,\n\\[\n\\mathrm D Y'(x,y) - \\mathrm D Y(x,y) = -\\mathrm{Ad}(x)\\,d(Y',Y)(y) + d(Y',Y)(xy) - d(Y',Y)(x) = \\partial d(Y',Y)(x,y).\n\\]</p>"
+    },
+    {
+     "id": "III.4.21",
+     "type": "theoreme",
+     "label": "4.21",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"III.4.21\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.21</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme, \\(I\\) and \\(J\\) two nilpotent ideals on S such that \\(I\\supset J\\), \\(I\\cdot J=0\\). Let X be an S-group smooth over S and \\(Y_J\\) a sub-\\(S_J\\)-group of \\(X_J\\), flat and locally of finite presentation over \\(S_J\\). Consider the \\(S_0\\)-functor in commutative groups \\(\\mathrm N_0\\) defined by\n  \\[\n  \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm N_0) = \\mathrm{Hom}_{\\mathscr{O}_{\\mathrm T}}(\\mathfrak{n}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{\\mathrm T}, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{\\mathrm T}), \\qquad \\mathrm T\\in \\mathrm{Ob}\\,(\\mathbf{Sch})_{/S_0},\n  \\]\n  on which \\(Y_0\\) acts through the inner automorphisms of \\(X_0\\).</p>\n  <p>(i) For there to exist a sub-S-group of X, flat over S, reducing to \\(Y_J\\), it is necessary and sufficient that the two following conditions be satisfied:</p>\n  <p>\\((\\mathrm i_1)\\) There exists a subscheme Y of X, flat over S, lifting \\(Y_J\\) (a condition automatically satisfied if \\(Y_0\\) is affine, cf. 4.6).</p>\n  <p>\\((\\mathrm i_2)\\) A certain canonical obstruction, an element of \\(\\mathrm H^2(Y_0,\\mathrm N_0)\\), is zero.</p>\n  <p>(ii) If the conditions of (i) are satisfied, the set of sub-S-groups Y of X, flat over S and reducing to \\(Y_J\\), is a principal homogeneous set under the group \\(\\mathrm Z^1(Y_0,\\mathrm N_0)\\).</p>\n  <p>Indeed, condition \\((\\mathrm i_1)\\) is necessary. Suppose it satisfied and let Y be a flat lifting of \\(Y_J\\). We must look for a \\(Y'\\) also lifting \\(Y_J\\) such that \\(\\partial\\mathrm D Y' = 0\\) (4.17 (i)). But that amounts to looking for a \\(d(Y,Y')\\in \\mathrm C^1(Y_0,\\mathrm N_0)\\) such that \\(\\mathrm D Y = \\partial d(Y,Y')\\) (4.17 (iii)).</p>\n  <p>Let \\(c\\in \\mathrm H^2(Y_0,\\mathrm N_0)\\) be the class image of \\(\\mathrm D Y\\), which is a cocycle by 4.17 (ii). It does not depend on the choice of Y, by 4.17 (iii), and its vanishing is necessary and sufficient for the existence of a \\(d(Y,Y')\\) satisfying the preceding equation. This proves (i). If we have now chosen Y such that \\(\\mathrm D Y = 0\\), the equation to be solved reads \\(\\partial d(Y,Y') = 0\\), which proves (ii).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.22",
+     "type": "remarque",
+     "label": "4.22",
+     "title": "Remark",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"III.4.22\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remark</span> <span class=\"thm-num\">4.22</span></div>\n  <div class=\"thm-body\">\n  <p>Note that \\(\\mathfrak{n}_{Y_0/X_0}\\) is of finite presentation over \\(S_0\\). Hence the functor \\(\\mathrm N_0\\) can be written, on the category of S-flat schemes,\n  \\[\n  \\mathrm N_0 = \\mathbf W(\\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\mathfrak{n}_{Y_0/X_0}, J)).\n  \\]\n  From this result isomorphisms:\n  \\[\n  \\mathrm H^2(Y_0,\\mathrm N_0) \\simeq \\mathrm H^2(Y_0, \\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\mathfrak{n}_{Y_0/X_0}, J)),\n  \\]\n  \\[\n  \\mathrm Z^1(Y_0,\\mathrm N_0) \\simeq \\mathrm Z^1(Y_0, \\mathscr{H}om_{\\mathscr{O}_{S_0}}(\\mathfrak{n}_{Y_0/X_0}, J)).\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.23",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.23\">4.23.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Still under the hypotheses of 4.21, we shall now study how the set of Y lifting \\(Y_J\\) behaves with respect to conjugation by sections of X. If \\(x\\) is a section of X over S inducing the unit section of \\(X_J\\), the inner automorphism \\(\\mathrm{Int}(x)\\) defined by \\(x\\) transforms flat subgroups of X lifting \\(Y_J\\) into flat subgroups of X lifting \\(Y_J\\). Now, under the conditions of 4.21 (ii), the set of these subgroups is principal homogeneous under \\(\\mathrm Z^1(Y_0,\\mathrm N_0)\\); we shall see that there then exists a subgroup of \\(\\mathrm Z^1(Y_0,\\mathrm N_0)\\) such that two subgroups of X, flat over S and lifting \\(Y_J\\), are conjugate (by those \\(x\\in X(S)\\) inducing the unit of \\(X(S_J)\\)) if and only if their \"difference\" in \\(\\mathrm Z^1(Y_0,\\mathrm N_0)\\) is an element of this subgroup. In the best cases, we shall show that the latter is none other than \\(\\mathrm B^1(Y_0,\\mathrm N_0)\\), hence that the set of subgroups of X, flat over S, lifting \\(Y_J\\), modulo conjugation by the \\(x\\in X(S)\\) inducing the unit of \\(X(S_J)\\), is empty or principal homogeneous under \\(\\mathrm H^1(Y_0,\\mathrm N_0)\\) (Proposition 4.36).</p>"
+    },
+    {
+     "id": "III.4.24",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.24\">4.24.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let Y be a flat subgroup of X, reducing to \\(Y_J\\). Recall that we introduced in 0.5 the functor \\(\\mathrm L_{0X}\\) (resp. \\(\\mathrm L_{0Y}\\)) defined by the following identity, with respect to the variable \\(S_0\\)-scheme T:\n\\[\n\\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0X}) = \\mathrm{Hom}_{\\mathscr{O}_{\\mathrm T}}(\\omega^1_{X_0/S_0}\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{\\mathrm T}, J\\otimes_{\\mathscr{O}_{S_0}}\\mathscr{O}_{\\mathrm T})\n\\]\n(resp. the same with X replaced by Y), as well as the functor \\(\\mathrm L'_X = \\prod_{S_0/S}\\mathrm L_{0X}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now we have:</p>"
+    },
+    {
+     "id": "III.4.25",
+     "type": "lemme",
+     "label": "4.25",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.4.25\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.25</span></div>\n  <div class=\"thm-body\">\n    <p>There exists a canonical exact sequence of \\(Y_0\\)-modules\n  \\[\n  (+) \\qquad \\mathfrak{n}_{Y_0/X_0} \\xrightarrow{\\ d\\ } \\omega^1_{X_0/S_0}\\longrightarrow \\omega^1_{Y_0/S_0}\\longrightarrow 0,\n  \\]\n  having the following properties:</p>\n  <p>(i) By inverse image on Y, \\(d\\) gives the morphism D of 4.8 (iii).</p>\n  <p>(ii) If \\(X_0\\) and \\(Y_0\\) are smooth over \\(S_0\\), then \\(d\\) is injective. As the two \\(\\omega^1\\) are then locally free of finite type, the same holds for \\(\\mathfrak{n}_{Y_0/X_0}\\), and the sequence is locally split.</p>\n  <p>By SGA 1 II, formula (4.3), there exists a canonical exact sequence of \\(\\mathscr{O}_{Y_0}\\)-modules\n  \\[\n  \\mathscr{N}_{Y_0/X_0} \\xrightarrow{\\ \\mathrm D\\ } \\Omega^1_{X_0/S_0}\\otimes_{\\mathscr{O}_{X_0}}\\mathscr{O}_{Y_0} \\longrightarrow \\Omega^1_{Y_0/S_0}\\longrightarrow 0.\n  \\]\n  As this sequence is invariant under the translations of \\(Y_0\\), it comes from a sequence (+) over \\(S_0\\) by inverse image under the projection of \\(Y_0\\) onto \\(S_0\\). Letting now the inner automorphisms of \\(Y_0\\) act, one sees that (+) is an exact sequence of \\(Y_0\\)-modules. As (+) becomes exact after tensoring with \\(\\mathscr{O}_{Y_0}\\), it is already exact (\\(Y_0\\) being faithfully flat over \\(S_0\\)). For the same reason, \\(d\\) is injective if and only if D is. The rest follows from SGA 1 II 4.10.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.26",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.26\">4.26.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every \\(S_0\\)-scheme T, (+) gives by functoriality an exact sequence of abelian groups\n\\[\n0 \\longrightarrow \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0Y}) \\longrightarrow \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0X}) \\xrightarrow{\\ d_{\\mathrm T}\\ } \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm N_0).\n\\]\nIn particular, taking for T the cartesian powers of \\(Y_0\\), we deduce an exact sequence of complexes of abelian groups:\n\\[\n0 \\longrightarrow \\mathrm C^*(Y_0,\\mathrm L_{0Y}) \\longrightarrow \\mathrm C^*(Y_0,\\mathrm L_{0X}) \\xrightarrow{\\ d^*\\ } \\mathrm C^*(Y_0,\\mathrm N_0),\n\\]\nand in particular a commutative diagram\n\\[\n\\xymatrix{\n0 \\ar[r] &amp; \\mathrm C^0(Y_0,\\mathrm L_{0Y}) \\ar[r] \\ar[d]_-{\\partial} &amp; \\mathrm C^0(Y_0,\\mathrm L_{0X}) \\ar[r]^-{d^0} \\ar[d]_-{\\partial} &amp; \\mathrm C^0(Y_0,\\mathrm N_0) \\ar[d]^-{\\partial} \\\\\n0 \\ar[r] &amp; \\mathrm C^1(Y_0,\\mathrm L_{0Y}) \\ar[r] &amp; \\mathrm C^1(Y_0,\\mathrm L_{0X}) \\ar[r]_-{d^1} &amp; \\mathrm C^1(Y_0,\\mathrm N_0)\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us remark that \\(\\mathrm C^0(Y_0,\\mathrm L_{0Y})\\) (resp. \\(\\mathrm C^0(Y_0,\\mathrm L_{0X})\\)) is none other than \\(\\mathrm{Hom}_{S_0}(S_0,\\mathrm L_{0Y})\\) (resp. \\(\\cdots\\)), that is, the group of sections of Y (resp. X) over S inducing the unit section of \\(X_J\\). Note also that \\(d^1\\) is none other than the morphism \\(v_{i_{Y_0}}\\) of 4.8 (iii), where \\(i_{Y_0} : Y_0 \\to X_0\\) is the canonical immersion.</p>"
+    },
+    {
+     "id": "III.4.27",
+     "type": "lemme",
+     "label": "4.27",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"III.4.27\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">4.27</span></div>\n  <div class=\"thm-body\">\n    <p>Under the conditions of 4.21 for S, \\(I\\), \\(J\\) and X, let Y be a subgroup of X, flat over S and lifting \\(Y_J\\). Let \\(x \\in \\mathrm C^0(Y_0,\\mathrm L_{0X})\\) be a section of X over S inducing the unit section of \\(X_J\\). Then \\(d(Y,\\mathrm{Int}(x)Y) \\in \\mathrm C^1(Y_0,\\mathrm N_0)\\) is given by the formula\n  \\[\n  d(\\mathrm{Int}(x)Y,Y) = \\partial\\,d^0 x = d^1\\partial x.\n  \\]</p>\n  <p>Indeed, set \\(Y' = \\mathrm{Int}(x)Y\\). By the formula\n  \\[\n  xyx^{-1} = xyx^{-1}y^{-1}y = (x-\\mathrm{Ad}(y)x)y = -(\\partial x)(y)\\cdot y,\n  \\]\n  one sees that \\(Y'\\) can be described as the image of Y under the composite morphism (cf. 4.8 (iii)):\n  \\[\n  Y \\xrightarrow{\\ (-\\partial x,\\,i_Y)\\ } \\mathrm L'_X\\underset{S}{\\times}X \\longrightarrow X.\n  \\]</p>\n  <p>If \\(i_Y\\) denotes the canonical immersion of Y into X, we have, by 4.8 (iii) and the preceding result:\n  \\[\n  c(X,Y',\\mathrm{Int}(x)\\circ i_Y) - c(X,Y',i_Y) = -d^1\\partial x.\n  \\]\n  But \\(\\mathrm{Int}(x)\\circ i_Y\\) factors through \\(Y'\\) by definition and the first term is zero; by 4.8 (ii), we have \\(c(X,Y',i_Y) = d(Y',Y)\\). This implies \\(d(Y',Y) = d^1\\partial x\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.28",
+     "type": "corollaire",
+     "label": "4.28",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.28\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.28</span></div>\n  <div class=\"thm-body\">\n  <p>For two subgroups Y and \\(Y'\\) of G, flat over S and lifting \\(Y_J\\), to be conjugate by a section of X over S inducing the unit section of \\(X_J\\), it is necessary and sufficient that \\(d(Y,Y')\\in \\partial\\,d^0\\,\\mathrm C^0(Y_0,\\mathrm L_{0X})\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.29",
+     "type": "corollaire",
+     "label": "4.29",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.29\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.29</span></div>\n  <div class=\"thm-body\">\n  <p>If \\(d^0\\) is surjective, Y and \\(Y'\\) as above are conjugate by a section of X over S inducing the unit section of \\(X_J\\) if and only if \\(d(Y,Y')\\in \\mathrm B^1(Y_0,\\mathrm N_0)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.30",
+     "type": "corollaire",
+     "label": "4.30",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.30\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.30</span></div>\n  <div class=\"thm-body\">\n    <p>Let Y be as in 4.27; the set of conjugates of Y by sections of X over S inducing the unit section of \\(X_J\\) is isomorphic to:\n  \\[\n  d^1\\partial\\,\\mathrm C^0(Y_0,\\mathrm L_{0X}) = \\mathrm C^0(Y_0,\\mathrm L_{0X})\\big/\\mathrm{Ker}\\,d^1\\partial.\n  \\]</p>\n  <p>Let us now remark that \\(\\mathrm C^0(Y_0,\\mathrm L_{0X})/\\mathrm{Ker}\\,d^1\\partial\\) is computed solely by means of the left-hand square of the commutative diagram of 4.26. It follows in particular that one may also compute it in any diagram of the same type having the same left-hand square. Consider in particular the functor \\(\\mathrm L_{0X}/\\mathrm L_{0Y}\\) over \\(S_0\\) defined by\n  \\[\n  \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0X}/\\mathrm L_{0Y}) = \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0X})/\\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0Y}).\n  \\]\n  We have a commutative diagram\n  \\[\n  \\xymatrix{\n  0 \\ar[r] &amp; \\mathrm C^0(\\mathrm L_{0Y}) \\ar[r] \\ar[d]_-{\\partial} &amp; \\mathrm C^0(\\mathrm L_{0X}) \\ar[r] \\ar[d]_-{\\partial} &amp; \\mathrm C^0(\\mathrm L_{0X}/\\mathrm L_{0Y}) \\ar[r] \\ar[d]^-{\\partial} &amp; 0 \\\\\n  0 \\ar[r] &amp; \\mathrm C^1(\\mathrm L_{0Y}) \\ar[r] &amp; \\mathrm C^1(\\mathrm L_{0X}) \\ar[r] &amp; \\mathrm C^1(\\mathrm L_{0X}/\\mathrm L_{0Y}) \\ar[r] &amp; 0\n  }\n  \\]\n  whence, by the preceding remark:</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.31",
+     "type": "corollaire",
+     "label": "4.31",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.31\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.31</span></div>\n  <div class=\"thm-body\">\n  <p>Let Y be as in 4.27; the set of conjugates of Y by sections of X over S inducing the unit section of \\(X_J\\) is isomorphic to\n  \\[\n  \\mathrm E = \\partial\\,\\mathrm C^0(\\mathrm L_{0X}/\\mathrm L_{0Y}) = \\mathrm C^0(\\mathrm L_{0X}/\\mathrm L_{0Y})\\big/\\mathrm H^0(Y_0,\\mathrm L_{0X}/\\mathrm L_{0Y}).\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.32",
+     "type": "corollaire",
+     "label": "4.32",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.32\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.32</span></div>\n  <div class=\"thm-body\">\n    <p>Suppose moreover \\(S_0\\) affine and \\(\\mathscr{L}ie(Y_0/S_0)\\) locally free. If we set \\(\\mathscr{F}_0 = [\\mathscr{L}ie(X_0/S_0)/\\mathscr{L}ie(Y_0/S_0)]\\otimes_{\\mathscr{O}_{S_0}}J\\), we have \\(\\mathrm E = \\Gamma(S_0,\\mathscr{F}_0)/\\mathrm H^0(Y_0,\\mathscr{F}_0)\\).</p>\n  <p>Indeed, for every T over \\(S_0\\) we have an exact sequence\n  \\[\n  0 \\longrightarrow \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0Y}) \\longrightarrow \\mathrm{Hom}_{S_0}(\\mathrm T,\\mathrm L_{0X}) \\longrightarrow \\mathbf W(\\mathscr{F}_0)(\\mathrm T).\n  \\]\n  By the reasoning that served us to prove 4.31, we may compute E as the image of \\(\\mathrm C^0(Y_0,\\mathrm L_{0X})\\) in \\(\\mathrm C^1(Y_0,\\mathbf W(\\mathscr{F}))\\). But as \\(S_0\\) is affine, \\(\\mathrm C^0(Y_0,\\mathrm L_{0X}) \\to \\mathrm C^0(Y_0,\\mathbf W(\\mathscr{F}))\\) is surjective, and we indeed find the announced result.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.33",
+     "type": "corollaire",
+     "label": "4.33",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.33\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.33</span></div>\n  <div class=\"thm-body\">\n    <p>Let S, \\(I\\), \\(J\\) and X be as in 4.21. Suppose S affine. Let Y be a diagonalizable subgroup of X. The set of subgroups of X conjugate to Y by a section of X over S inducing the unit section of \\(X_J\\) is isomorphic to\n  \\[\n  \\mathrm E = \\Gamma\\Bigl(S_0, \\mathscr{L}ie(X_0/S_0)/\\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\Bigr)\\otimes_{\\Gamma(S_0,\\mathscr{O}_{S_0})} \\Gamma(S_0,J).\n  \\]</p>\n  <p>Indeed, one writes, by I 4.7.3 (cf. 2.13),\n  \\[\n  \\mathscr{L}ie(X_0/S_0) = \\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)} \\oplus \\mathscr{R}.\n  \\]\n  As \\(Y_0\\) is commutative, we have \\(\\mathscr{L}ie(Y_0/S_0) \\subset \\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\), hence\n  \\[\n  \\mathscr{F}_0 = \\Bigl(\\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\big/\\mathscr{L}ie(Y_0/S_0)\\Bigr)\\otimes J \\oplus \\mathscr{R}\\otimes J,\n  \\]\n  \\[\n  \\mathscr{F}_0^{\\mathrm{ad}(Y_0)} = \\Bigl(\\mathscr{L}ie(X_0/S_0)^{\\mathrm{ad}(Y_0)}\\big/\\mathscr{L}ie(Y_0/S_0)\\Bigr)\\otimes J.\n  \\]</p>\n  <p>By 4.32, we thus have \\(\\mathrm E \\simeq \\Gamma(S_0,\\mathscr{R}\\otimes J)\\). Going back to the definition of \\(\\mathscr{R}\\), we are done.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.34",
+     "type": "corollaire",
+     "label": "4.34",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.34\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.34</span></div>\n  <div class=\"thm-body\">\n    <p>Let S, \\(I\\), \\(J\\) and X be as in 4.21. Suppose S affine. Let Y be a diagonalizable subgroup of X. If \\(x\\in X(S)\\) induces the unit section of \\(X_J\\) and normalizes Y, then it centralizes Y.</p>\n  <p>This follows immediately from a comparison of the preceding corollary with 2.14. Indeed, 4.33 shows that the elements of \\(\\mathrm C^0(Y_0,\\mathrm L_{0X})\\) which preserve Y globally are the elements of \\(\\mathrm H^0(Y_0,\\mathrm L_{0X})\\), and we saw in 2.14 that these are exactly the ones that act trivially on the canonical immersion \\(Y \\to X\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.35",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.35\">4.35.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us return to the general situation of 4.21 and suppose \\(Y_J\\) smooth over \\(S_J\\). Then (SGA 1 II 4.10), every subscheme Y of X lifting \\(Y_J\\) and flat will be smooth over S. Moreover, by 4.25 (ii), we have an isomorphism of \\(Y_0\\)-modules:\n\\[\n\\mathfrak{n}^{\\vee}_{Y_0/X_0} = \\mathscr{L}ie(X_0/S_0)/\\mathscr{L}ie(Y_0/S_0).\n\\]</p>"
+    },
+    {
+     "id": "III.4.36",
+     "type": "proposition",
+     "label": "4.36",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"III.4.36\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.36</span></div>\n  <div class=\"thm-body\">\n    <p>Under the hypotheses of 4.21, suppose moreover \\(Y_J\\) smooth over \\(S_J\\) and \\(S_0\\) affine. The set of sub-S-groups Y of X flat (or smooth) over S, reducing to \\(Y_J\\), modulo conjugation by sections of X over S inducing the unit section of \\(X_J\\), is either empty, or a principal homogeneous set under the group\n  \\[\n  \\mathrm H^1\\bigl(Y_0,[\\mathscr{L}ie(X_0/S_0)/\\mathscr{L}ie(Y_0/S_0)]\\otimes_{\\mathscr{O}_{S_0}}J\\bigr).\n  \\]</p>\n  <p>It suffices for us to verify that Corollary 4.29 applies, that is, that\n  \\[\n  d^0 : \\mathrm{Hom}_{\\mathscr{O}_{S_0}}(\\omega^1_{X_0/S_0}, J) \\longrightarrow \\mathrm{Hom}_{\\mathscr{O}_{S_0}}(\\mathfrak{n}_{Y_0/X_0}, J)\n  \\]\n  is surjective. Now this follows from the fact that the sequence (+) of 4.25 (ii) is split, \\(S_0\\) being affine.</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us finally state a corollary common to 4.21 and 4.36, which will be, in fact, the only form in which we shall use the general results of this section in the sequel.</p>"
+    },
+    {
+     "id": "III.4.37",
+     "type": "corollaire",
+     "label": "4.37",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"III.4.37\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.37</span></div>\n  <div class=\"thm-body\">\n    <p>Let S be a scheme and \\(S_0\\) the closed subscheme defined by a nilpotent ideal \\(I\\). Let X be an S-group smooth over S, and \\(Y_0\\) a sub-\\(S_0\\)-group of \\(X_0\\), flat over \\(S_0\\).</p>\n  <p>(i) If \\(S_0\\) is affine, \\(Y_0\\) smooth over \\(S_0\\), and if\n  \\[\n  \\mathrm H^1\\bigl(Y_0,[\\mathscr{L}ie(X_0/S_0)/\\mathscr{L}ie(Y_0/S_0)]\\otimes_{\\mathscr{O}_{S_0}}I^{n+1}/I^{n+2}\\bigr) = 0\n  \\]\n  for every \\(n\\geqslant 0\\), two sub-S-groups of X, flat (or smooth) over S, reducing to \\(Y_0\\), are conjugate by a section of X over S inducing the unit section of \\(X_0\\).</p>\n  <p>(ii) If \\(Y_0\\) is affine and of finite presentation and if\n  \\[\n  \\mathrm H^2\\bigl(Y_0,\\mathfrak{n}^{\\vee}_{Y_0/X_0}\\otimes_{\\mathscr{O}_{S_0}}I^{n+1}/I^{n+2}\\bigr) = 0\n  \\]\n  for every \\(n\\geqslant 0\\), there exists a sub-S-group of X, flat over S, reducing to \\(Y_0\\).</p>\n  \n  </div>\n</div>"
+    },
+    {
+     "id": "III.4.38",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"III.4.38\">4.38.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains for us to relate the three constructions we have made in this exposé. To avoid inessential complications, we shall place ourselves in the following situation: \\(S_0\\) is the spectrum of a field \\(k\\), S is the spectrum of the dual numbers \\(\\mathrm D(k)\\), X is an S-group smooth over S, Y a sub-S-group, affine and smooth over S. We have an exact sequence of \\(k\\)-vector spaces:\n\\[\n0 \\longrightarrow \\mathscr{L}ie\\,Y_0 \\xrightarrow{\\ i\\ } \\mathscr{L}ie\\,X_0 \\xrightarrow{\\ d\\ } \\mathfrak{n}^{\\vee}_{Y_0/X_0} \\longrightarrow 0,\n\\]\ngiving rise to an exact cohomology sequence (where we write \\(\\mathrm H^i(\\ )\\) for \\(\\mathrm H^i(Y_0,\\ )\\)):\n\\[\n0 \\to \\mathrm H^0(Y_0,\\mathscr{L}ie\\,Y_0) \\xrightarrow{i^0} \\mathrm H^0(Y_0,\\mathscr{L}ie\\,X_0) \\xrightarrow{d^0} \\mathrm H^0(Y_0,\\mathscr{L}ie\\,X_0/\\mathscr{L}ie\\,Y_0)\n\\]\n\\[\n\\xrightarrow{\\partial^0} \\mathrm H^1(Y_0,\\mathscr{L}ie\\,Y_0) \\xrightarrow{i^1} \\mathrm H^1(Y_0,\\mathscr{L}ie\\,X_0) \\xrightarrow{d^1} \\mathrm H^1(Y_0,\\mathfrak{n}^{\\vee}_{Y_0/X_0}) \\xrightarrow{\\partial^1} \\mathrm H^2(Y_0,\\mathscr{L}ie\\,Y_0).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now these various groups all have a geometric meaning.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) \\(\\mathrm H^0(Y_0,\\mathscr{L}ie\\,Y_0) = \\mathscr{L}ie\\,\\underline{\\mathrm{Centr}}(Y)_0\\) by (Exp. II 5.2.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \\(\\mathrm H^0(Y_0,\\mathscr{L}ie\\,X_0) = \\mathscr{L}ie\\,\\underline{\\mathrm{Centr}}_X(Y)_0\\), (id.).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) \\(\\mathrm H^0(Y_0,\\mathscr{L}ie\\,X_0/\\mathscr{L}ie\\,Y_0) = \\mathscr{L}ie\\,\\underline{\\mathrm{Norm}}_X(Y)_0/\\mathscr{L}ie\\,Y_0\\), (id.).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d) \\(\\mathrm H^1(Y_0,\\mathscr{L}ie\\,Y_0) = \\mathscr{L}ie\\,\\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(Y)_0/\\mathrm{Im}(\\mathscr{L}ie\\,Y_0)\\), where \\(\\mathrm{Im}(\\mathscr{L}ie\\,Y_0)\\) denotes the image of \\(\\mathscr{L}ie\\,Y_0\\) under \\(\\mathscr{L}ie(\\mathrm{Int})_0\\) deduced from\n\\[\n\\mathrm{Int} : Y_0 \\longrightarrow \\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(Y)\\, ;\n\\]\nthis follows at once from 2.1 and II 4.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>e) \\(\\mathrm H^1(\\mathscr{L}ie\\,X_0)\\) = the group of deviations between homomorphisms \\(Y \\to X\\) extending the canonical immersion \\(i_0 : Y_0 \\to X_0\\), modulo the deviations obtained by the action of the inner automorphisms of X defined by elements of X(S) giving the unit of \\(X(S_0)\\) (that is, elements of \\(\\mathscr{L}ie\\,X_0\\)). (cf. 2.1 and 1.2.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>f) \\(\\mathrm H^1(\\mathfrak{n}^{\\vee}_{Y_0/X_0})\\) = the group of deviations between subgroups \\(Y'\\) of X, flat over S, extending \\(Y_0\\), modulo the deviations obtained by the action of the inner automorphisms of X constructed as before. (cf. proof of 4.21).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>g) \\(\\mathrm H^2(\\mathscr{L}ie\\,Y_0)\\) = the group of deviations between group structures on Y extending that of \\(Y_0\\), modulo the S-automorphisms of Y inducing the identity on \\(Y_0\\) (cf. 3.5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We now propose to show how one can make explicit the 6 morphisms of the preceding exact sequence in the geometric interpretation we have just given.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) \\(i^0\\) and \\(d^0\\) are none other than the morphisms obtained by passage to the Lie Algebra (then by passage to the quotient for \\(d^0\\)), from the canonical monomorphisms:\n\\[\n\\underline{\\mathrm{Centr}}(Y) \\longrightarrow \\underline{\\mathrm{Centr}}_X(Y) \\longrightarrow \\underline{\\mathrm{Norm}}_X(Y).\n\\]\nThis is indeed what follows immediately from the definition of the identifications (a), (b), and (c).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) One constructs \\(\\partial^0\\) as follows. Let \\(\\overline x \\in \\mathscr{L}ie\\,\\underline{\\mathrm{Norm}}_X(Y)_0/\\mathscr{L}ie\\,Y_0\\). Let us lift it to an \\(x\\in \\mathscr{L}ie\\,\\underline{\\mathrm{Norm}}_X(Y)_0 \\subset \\underline{\\mathrm{Norm}}_X(Y)\\). Then \\(\\mathrm{Int}(x)\\) defines an automorphism of Y inducing the identity on \\(Y_0\\), hence an element of \\(\\mathscr{L}ie\\,\\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(Y)_0\\). Denote by \\(\\overline{\\mathrm{Int}(x)}\\) the image of this element in \\(\\mathscr{L}ie\\,\\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(Y)_0/\\mathrm{Im}(\\mathscr{L}ie\\,Y_0)\\). Then we have:\n\\[\n\\partial^0(x) = -\\overline{\\mathrm{Int}(x)} = \\overline{\\mathrm{Int}(x^{-1})}.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, let us compute the element of \\(\\mathscr{L}ie\\,\\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(Y)_0\\) defined by \\(\\mathrm{Int}(x)\\). It will correspond, by definition, to an element \\(a\\) of \\(\\mathrm Z^1(Y_0,\\mathscr{L}ie\\,Y_0)\\) such that\n\\[\nxyx^{-1} = a(y_0)y, \\qquad y\\in Y(S'),\\ S'\\longrightarrow S.\n\\]\nBut this can also be written \\(a(y_0) = xyx^{-1}y^{-1} = x - \\mathrm{ad}(y)x = -\\partial x(y_0)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) Let \\(\\overline u\\) be an element of \\(\\mathrm H^1(Y_0,\\mathscr{L}ie\\,Y_0)\\), the canonical image of a\n\\[\nu \\in \\mathscr{L}ie\\,\\underline{\\mathrm{Aut}}_{S\\text{-gr.}}(Y)_0 \\subset \\mathrm{Aut}_{S\\text{-gr.}}(Y).\n\\]\nThen, if \\(i : Y \\to X\\) is the canonical immersion, we have:\n\\[\ni^1(\\overline u) = d(i,u\\circ i).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, \\(d(i,u\\circ i)\\) is defined as the image of an element \\(d\\in \\mathrm Z^1(Y_0,\\mathscr{L}ie\\,X_0)\\) such that\n\\[\niu(y) = d(y_0)i(y).\n\\]\nNow \\(\\overline u\\) is defined as the image of the element \\(v\\in \\mathrm Z^1(Y_0,\\mathscr{L}ie\\,Y_0)\\) such that\n\\[\nu(y) = v(y_0)y.\n\\]\nWe may therefore choose \\(d(y_0) = iv(y_0)\\), which proves the stated relation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>4) Let \\(\\overline d(i,i')\\) be the image of the deviation \\(d(i,i')\\) in \\(\\mathrm H^1(Y_0,\\mathscr{L}ie\\,X_0)\\), where \\(i' : Y \\to X\\) is a group homomorphism lifting \\(i_0\\). Let \\(\\overline d(Y,i'(Y))\\) be the image of the deviation \\(d(Y,i'(Y))\\) in \\(\\mathrm H^1(Y_0,\\mathfrak{n}^{\\vee}_{Y_0/X_0})\\). Then\n\\[\nd^1(\\overline d(i,i')) = \\overline d(Y,i'(Y)).\n\\]\nThis follows without difficulty from 4.8 (ii) and (iii), reasoning as in the proof of 4.27.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>5) Finally, let \\(Y'\\) be a subgroup of X, flat over S and lifting \\(Y_0\\). We have supposed that \\(Y_0\\) is <em>affine</em>. Then we know that Y and \\(Y'\\) are isomorphic as S-schemes extending \\(Y_0\\) (3.6), hence that there exists an isomorphism of S-schemes\n\\[\nf : Y \\longrightarrow Y'\n\\]\ninducing the identity on \\(Y_0\\). Let us transport the group structure of \\(Y'\\) by \\(f\\), and let \\(Y_1\\) be the group obtained (which therefore has Y as underlying scheme). Then\n\\[\n\\partial^1\\overline d(Y,Y') = \\overline d(Y,Y_1).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, \\(d(Y,Y_1)\\) is defined as the image of a \\(b\\in \\mathrm Z^2(Y_0,\\mathscr{L}ie\\,Y_0)\\) such that\n\\[\nf^{-1}(f(y)f(y')) = b(y_0,y_0')\\,yy'.\n\\]\nOn the other hand, \\(d(Y,Y')\\) is defined as the image in \\(\\mathrm H^1(Y_0,\\mathscr{L}ie\\,X_0/\\mathscr{L}ie\\,Y_0)\\) of an \\(a\\in \\mathrm Z^1(Y_0,\\mathscr{L}ie\\,X_0)\\) such that \\(f(y) = a(y_0)y\\). Computing \\(b\\), one finds at once:\n\\[\nb(y_0,y_0') = a(y_0y_0')^{-1}\\,a(y_0)\\,y\\,a(y_0')\\,y'\\,(yy')^{-1} = \\partial a(y_0,y_0').\n\\]</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

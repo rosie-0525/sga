@@ -1,0 +1,2970 @@
+{
+ "chapter_id": "22",
+ "title": "UNE FORMULE DE CONGRUENCE POUR LA FONCTION ζ",
+ "number": "XXII",
+ "pages": [
+  {
+   "id": "22",
+   "title": "UNE FORMULE DE CONGRUENCE POUR LA FONCTION ζ",
+   "blocks": [
+    {
+     "id": "22",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"22\">EXPOSÉ XXII<br>UNE FORMULE DE CONGRUENCE POUR LA FONCTION ζ<span class=\"author\">par N. KATZ</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "22.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.0\">0. <u>Introduction</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\) un schéma propre sur \\(\\mathbb F_q\\). Sa fonction zêta,\nconsidérée comme élément de \\(\\mathbb Z[[T]]\\), peut-être réduite modulo \\(p\\) ;\non veut la calculer modulo \\(p\\). On trouve une expression du type auquel on\npouvait s’attendre depuis les formules de points fixes du type « Woods Hole »,\ncomme produit alterné de polynômes caractéristiques d’un « Frobenius »\nconvenable agissant sur l’un quelconque des trois espaces de cohomologie\nsuivants :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">1)</span> la cohomologie cohérente \\(H^i(X,\\mathcal O_X)\\) (3.1.1)</li>\n<li><span class=\"item-label\">2)</span> la cohomologie de De Rham \\(H^i_{\\mathrm{DR}}(X)=\\mathbb H^i(X,\\Omega_X^\\bullet)\\) (3.1.1)</li>\n<li><span class=\"item-label\">3)</span> la cohomologie étale \\(H^i_{\\mathrm{et}}(X,\\mathbb Z/p\\mathbb Z)\\) (3.1.2).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette expression doit être vue comme une amélioration d’un cas spécial de\nla formule des traces de Woods Hole : celui du faisceau structural et de\nl’endomorphisme de Frobenius. Ce cas est, en effet, un corollaire de la\nformule de congruence (cf. 3.2.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La méthode de cet exposé est complètement naïve : elle consiste à se\nramener au cas d’une hypersurface, ensuite à « réduire modulo \\(p\\) »</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le calcul de DWORK pour la vraie fonction zêta d’une hypersurface. En\n« réduisant » soigneusement, on trouve l’amélioration 5.0.6 due à AX [1]\n(et également à DWORK dans le cas lisse [4, § 7]) du théorème bien connu de\nWARNING-CHEVALLEY [8].</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Une autre méthode, entièrement cohomologique et dans l’esprit de SGA 5,\ns’appliquant également à des « coefficients tordus », vient d’être trouvée par\nDELIGNE, et devrait figurer dans la réédition de SGA 5 ; elle repose sur la\nformule des traces type « Woods Hole », et la « formule de Künneth symétrique »\nde DELIGNE (SGA 4 XVII 5.5.21).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-1",
+   "title": "1. Un rappel sur les opérations « p-linéaires »",
+   "blocks": [
+    {
+     "id": "22.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.1\">1. <u>Un rappel sur les opérations « p-linéaires »</u></h2>"
+    },
+    {
+     "id": "22.1.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.1.0\"><strong>1.0.</strong> Soit \\(V\\) un espace vectoriel de dimension\nfinie sur un corps \\(k\\) de caractéristique \\(p&gt;0\\). Désignons par \\(q\\) une\npuissance de \\(p\\). Une application</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.1}\\varphi:V\\longrightarrow V\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>s’appelle <u>q-linéaire</u> si elle est additive et si elle vérifie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.2}\\varphi(\\lambda v)=\\lambda^q\\varphi(v)\n\\qquad \\forall\\ \\lambda\\in k,\\ v\\in V.\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.1.0.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.1.0.3\"><strong>1.0.3.</strong> On fera attention au fait que l’itéré\n\\(n\\)-ième \\(\\varphi^n\\) d’un endomorphisme \\(q\\)-linéaire est\n\\(q^n\\)-linéaire, et que, si \\(k\\) n’est pas parfait, l’image \\(\\varphi(V)\\)\nd’un endomorphisme \\(q\\)-linéaire n’est pas nécessairement un \\(k\\)-sous-espace\nvectoriel.</p>"
+    },
+    {
+     "id": "22.1.0.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.1.0.4\"><strong>1.0.4.</strong> Pour chaque extension \\(K/k\\), un\nendomorphisme \\(q\\)-linéaire \\(\\varphi\\) de \\(V\\) donne lieu à un unique\nendomorphisme \\(q\\)-linéaire \\(\\varphi_K\\) de \\(V_K=V\\otimes_kK\\), satisfaisant\nà la formule</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.5}\\varphi_K(\\mu\\otimes v)=\\mu^q\\varphi(v)\n\\qquad\\text{pour }\\mu\\in K,\\ v\\in V.\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.1.0.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.1.0.6\"><strong>1.0.6.</strong> On dit qu’un endomorphisme\n\\(q\\)-linéaire \\(\\varphi\\) de \\(V\\) est <u>semi-simple</u> si son image\n<u>engendre</u> \\(V\\) comme \\(k\\)-vectoriel, et qu’il est nilpotent s’il\nadmet un itéré nul.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit des \\(k\\)-sous-espaces stables par \\(\\varphi\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.7}V_{\\mathrm{ss}}=\\bigcap_{n\\geq1}\n(\\text{le }k\\text{-sous-espace engendré par }\\varphi^n(V))\n\\]\n\\[\n\\tag{1.0.8}V_{\\mathrm{nilp}}=\\bigcup_{n\\geq1}\n(\\text{le noyau de }\\varphi^n:V\\longrightarrow V).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Évidemment, \\(\\varphi\\) restreint à \\(V_{\\mathrm{ss}}\\) est semi-simple,\net \\(\\varphi\\) restreint à \\(V_{\\mathrm{nilp}}\\) est nilpotent. Si \\(k\\)\nest <u>parfait</u>, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.9}V=V_{\\mathrm{ss}}\\oplus V_{\\mathrm{nilp}},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>mais, si \\(k\\) n’est pas parfait, (1.0.9) devient inexact, car il y a des\nendomorphismes \\(q\\)-linéaires qui sont injectifs sans être semi-simples.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour une extension \\(K/k\\) quelconque, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.10}(V_K)_{\\mathrm{ss}}=V_{\\mathrm{ss}}\\otimes_kK.\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.1.1",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"22.1.1\"><div class=\"thm-head\"><u>Proposition 1.1.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(\\varphi\\) un endomorphisme \\(q\\)-linéaire d’un espace vectoriel\n\\(V\\) de dimension finie sur un corps séparablement clos \\(k\\). Si\n\\(\\varphi\\) est semi-simple alors, posant</u></p>\n\\[\nV^{1-\\varphi}=\\text{le }\\mathbb F_q\\text{-vectoriel formé des points fixes de }\\varphi\n=\\operatorname{Ker}(1-\\varphi),\n\\]\n<p><u>on a</u></p>\n\\[\n\\tag{1.1.1}V\\xleftarrow{\\sim}(V^{1-\\varphi})\\otimes_{\\mathbb F_q}k.\n\\]\n</div></div>"
+    },
+    {
+     "id": "22.1.1.2",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"22.1.1.2\"><div class=\"thm-head\"><u>Corollaire 1.1.2.</u></div><div class=\"thm-body\">\n\\[\nV^{1-\\varphi^n}\\xleftarrow{\\sim}(V^{1-\\varphi})\\otimes_{\\mathbb F_q}\\mathbb F_{q^n}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> (LANG, cf. [6], p. 119).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(e\\) une \\(k\\)-base de \\(V\\), et écrivons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.3}\\varphi(e)=Ae,\\qquad A\\in\\operatorname{GL}(n,k).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.4}F:\\operatorname{GL}(n,k)\\longrightarrow\\operatorname{GL}(n,k)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la flèche « élévation des coordonnées à la \\(q\\)’ième puissance ». Alors\npour \\(g\\in\\operatorname{GL}(n,k)\\), \\(ge\\) est une base de \\(V\\) formée de\npoints fixes de \\(\\varphi\\) si et seulement si</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.5}F(g)Ag^{-1}=1.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(\\bar k\\) une clôture algébrique de \\(k\\). Le groupe\n\\(\\operatorname{GL}(n,\\bar k)\\) agit sur la variété\n\\(\\operatorname{GL}(n,\\bar k)\\) par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.6}\\begin{aligned}\n\\operatorname{GL}(n,\\bar k)\\times\\operatorname{GL}(n,\\bar k)&amp;\\longrightarrow\n\\operatorname{GL}(n,\\bar k)\\\\\n(g,A)&amp;\\longmapsto F(g)Ag^{-1}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(A\\) fixe, la flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.7}g\\longmapsto F(g)Ag^{-1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est étale comme on voit en calculant son application tangente, donc les\norbites sont ouvertes. Comme \\(\\operatorname{GL}(n,\\bar k)\\) est\nirréductible, il n’y a qu’une orbite ; autrement dit, la flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.8}\\begin{aligned}\n\\operatorname{GL}(n,\\bar k)&amp;\\longrightarrow\\operatorname{GL}(n,\\bar k)\\\\\ng&amp;\\longmapsto F(g^{-1})g\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est surjective. Parce qu’elle est aussi étale, il s’ensuit, \\(k\\) étant\nséparablement clos que la flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.9}\\begin{aligned}\n\\operatorname{GL}(n,k)&amp;\\longrightarrow\\operatorname{GL}(n,k)\\\\\ng&amp;\\longmapsto F(g^{-1})g\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est surjective, ce qui veut dire que \\(V\\) admet une \\(k\\)-base formée des\npoints fixes de \\(\\varphi\\). Il est alors clair, \\(\\varphi\\) étant\n\\(q\\)-linéaire, que tout point fixe de \\(\\varphi\\) se trouve dans le\n\\(\\mathbb F_q\\)-vectoriel engendré par une \\(k\\)-base formée des points fixes\nde \\(\\varphi\\), ce qui prouve 1.1.</p>"
+    },
+    {
+     "id": "22.1.1.10",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"22.1.1.10\"><div class=\"thm-head\"><u>Corollaire 1.1.10.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(\\varphi\\) un endomorphisme \\(q\\)-linéaire d’un espace vectoriel\n\\(V\\) de dimension finie sur un corps séparablement clos \\(k\\). Alors on a un\nisomorphisme canonique</u></p>\n\\[\n\\tag{1.1.11}V_{\\mathrm{ss}}\\xleftarrow{\\sim}\nV^{1-\\varphi}\\otimes_{\\mathbb F_q}k.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit en effet d’appliquer 1.1 à \\(V_{\\mathrm{ss}}\\).</p>"
+    },
+    {
+     "id": "22.1.2",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"22.1.2\"><div class=\"thm-head\"><u>Proposition 1.2.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(\\varphi\\) un endomorphisme \\(q\\)-linéaire d’un espace vectoriel de\ndimension finie sur un corps séparablement clos \\(k\\). Alors l’application\nadditive</u></p>\n\\[\n1-\\varphi:V\\longrightarrow V\n\\]\n<p><u>est surjective.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a une suite exacte de groupes abéliens</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow V_{\\mathrm{ss}}\\longrightarrow V\\longrightarrow\nV/V_{\\mathrm{ss}}\\longrightarrow0,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sur laquelle agit \\(1-\\varphi\\). Par le « lemme du serpent », il suffit de\ntraiter \\(V_{\\mathrm{ss}}\\), évident par 1.1 en employant une base formée des\npoints fixes, et \\(V/V_{\\mathrm{ss}}\\), sur lequel \\(\\varphi\\) est nilpotente,\ndonc sur lequel \\(1-\\varphi\\) est inversible.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-2",
+   "title": "2. Cohomologie cohérente et cohomologie étale",
+   "blocks": [
+    {
+     "id": "22.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.2\">2. <u>Cohomologie cohérente et cohomologie étale</u></h2>"
+    },
+    {
+     "id": "22.2.0",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"22.2.0\"><div class=\"thm-head\"><u>Proposition 2.0.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(\\bar X\\) un schéma propre sur un corps \\(k\\) séparablement clos,\net désignons par</u></p>\n\\[\n\\tag{2.0.1}\\overline{\\mathcal F}_p:H^i(\\bar X,\\mathcal O_{\\bar X})\\longrightarrow\nH^i(\\bar X,\\mathcal O_{\\bar X})\n\\]\n<p><u>l’application \\(p\\)-linéaire induite par</u></p>\n\\[\n\\tag{2.0.2}\\overline{\\mathcal F}_p:\\mathcal O_{\\bar X}\\longrightarrow\\mathcal O_{\\bar X},\n\\qquad \\overline{\\mathcal F}_p(f)=f^p.\n\\]\n<p><u>Désignons par \\(H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\\) les\ngroupes de cohomologie étales à coefficients dans le faisceau constant\n\\(\\mathbb Z/p\\mathbb Z\\). Alors on a des isomorphismes canoniques :</u></p>\n\\[\n\\tag{2.0.3}H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\\simeq\n(H^i(\\bar X,\\mathcal O_{\\bar X}))^{1-\\overline{\\mathcal F}_p}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a une suite exacte de faisceaux sur\n\\(\\bar X_{\\mathrm{et}}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.4}0\\longrightarrow\\mathbb Z/p\\mathbb Z\\longrightarrow\n\\mathcal O_{\\bar X}\\xrightarrow{1-\\overline{\\mathcal F}_p}\\mathcal O_{\\bar X}\n\\longrightarrow0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui donne une suite exacte de cohomologie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.5}\\cdots\\longrightarrow H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\longrightarrow H^i_{\\mathrm{et}}(\\bar X,\\mathcal O_{\\bar X})\n\\xrightarrow{1-\\overline{\\mathcal F}_p}H^i_{\\mathrm{et}}(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow\\cdots.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a \\(H^i_{\\mathrm{et}}(\\bar X,\\mathcal O_{\\bar X})\\simeq\nH^i(\\bar X,\\mathcal O_{\\bar X})\\) ; c’est un \\(k\\)-vectoriel de dimension\nfinie, \\(\\bar X\\) étant propre. En appliquant 1.2, on trouve des suites\nexactes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.6}0\\longrightarrow H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X})\n\\xrightarrow{1-\\overline{\\mathcal F}_p}H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow0,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>cqfd. Utilisant 1.1.10, on conclut de (2.0) :</p>"
+    },
+    {
+     "id": "22.2.1",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"22.2.1\"><div class=\"thm-head\"><u>Corollaire 2.1.</u></div><div class=\"thm-body\">\n<p><u>Pour \\(\\bar X\\) propre sur un corps séparablement clos \\(k\\),</u></p>\n\\[\n\\tag{2.1.1}H^i(\\bar X,\\mathcal O_{\\bar X})_{\\mathrm{ss}}\n\\xleftarrow{\\sim}H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\otimes_{\\mathbb F_p}k.\n\\]\n</div></div>"
+    },
+    {
+     "id": "22.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.2.2\"><strong>2.2.</strong> Soit maintenant\n\\(f:X\\longrightarrow\\operatorname{Spec}(\\mathbb F_q)\\) un schéma propre sur\n\\(\\mathbb F_q\\). Désignons par \\(k\\) une clôture algébrique de \\(\\mathbb F_q\\),\net posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.1}\\bar X=X\\times_{\\mathbb F_q}k.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le faisceau étale \\(R^if_*(\\mathbb Z/p\\mathbb Z)\\) sur\n\\(\\operatorname{Sp}(\\mathbb F_q)\\) s’identifie à\n\\(H^i(\\bar X,\\mathbb Z/p\\mathbb Z)\\), vu comme\n\\(\\operatorname{Gal}(k/\\mathbb F_q)\\) module. Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.2}\\mathcal F_q:H^i(X,\\mathcal O_X)\\longrightarrow H^i(X,\\mathcal O_X)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l’opération linéaire (elle est \\(q\\)-linéaire, mais on est sur\n\\(\\mathbb F_q\\) !) induite par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.3}\\mathcal F_q:\\mathcal O_X\\longrightarrow\\mathcal O_X,\n\\qquad\\mathcal F_q(f)=f^q.\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.2.2.4",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"22.2.2.4\"><div class=\"thm-head\"><u>Proposition 2.2.4.</u></div><div class=\"thm-body\">\n<p><u>Désignons par \\(\\varphi_q\\in\\operatorname{Gal}(k/\\mathbb F_q)\\)\nl’élément de « Frobenius », \\(\\varphi_q(\\lambda)=\\lambda^q\\) et soit\n\\(i\\in\\mathbb Z\\). On a une identité de polynômes caractéristiques</u></p>\n\\[\n\\tag{2.2.4.1}\\det_{\\mathbb F_p}\\!\\left(1-t\\varphi_q^{-1}\\mid\nH^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\\right)\n=\\det_{\\mathbb F_q}\\!\\left(1-t\\mathcal F_q\\mid H^i(X,\\mathcal O_X)\\right).\n\\]\n<p><u>où le premier membre est le polynôme caractéristique de l’élément\n\\(\\varphi_q^{-1}\\) dans \\(\\pi_1(\\operatorname{Sp}(\\mathbb F_q))\\) agissant\nsur le module galoisien \\(H^i(\\bar X,\\mathbb Z/p\\mathbb Z)\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, 2.2.4 est un corollaire de la</p>"
+    },
+    {
+     "id": "22.2.2.5",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"22.2.2.5\"><div class=\"thm-head\"><u>Proposition 2.2.5.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(X\\) propre sur \\(\\operatorname{Spec}(\\mathbb F_q)\\). Il y a un isomorphisme\ncanonique</u></p>\n\\[\n\\tag{2.2.6}H^i(X,\\mathcal O_X)_{\\mathrm{ss}}\\otimes_{\\mathbb F_q}k\n\\xleftarrow{\\sim}H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\otimes_{\\mathbb F_p}k\n\\]\n<p><u>qui transforme l’automorphisme \n\\(\\mathcal F_q\\otimes_{\\mathbb F_q}k\\) du premier membre en l’automorphisme\n\\(\\varphi_q^{-1}\\otimes_{\\mathbb F_p}k\\) du second (qu’on peut aussi interpréter\ncomme l’endomorphisme \\(\\operatorname{Fr}_q^{X*}\\otimes_{\\mathbb F_p}k\\), où\n\\(\\operatorname{fr}_q^X:\\bar X\\longrightarrow\\bar X\\) est le\n\\(k\\)-endomorphisme de Frobenius. cf. SGA 5, XVIII, 2.3.4).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.7}H^i(\\bar X,\\mathcal O_{\\bar X})\\xleftarrow{\\sim}\nH^i(X,\\mathcal O_X)\\otimes_{\\mathbb F_q}k,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a, par 1.0.10,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.8}H^i(\\bar X,\\mathcal O_{\\bar X})_{\\mathrm{ss}}\n\\xleftarrow{\\sim}H^i(X,\\mathcal O_X)_{\\mathrm{ss}}\\otimes_{\\mathbb F_q}k,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu’on obtient l’isomorphisme 2.2.6 en composant les isomorphismes\n2.2.8 et 2.1.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de 2.2.7 l’opération \\(q\\)-linéaire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.9}\\mathcal F_q:H^i(X,\\mathcal O_X)\\longrightarrow H^i(X,\\mathcal O_X)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>admet une extension \\(q\\)-linéaire (cf. 1.0.5)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.10}\\widetilde{\\mathcal F}_q:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et admet aussi une extension \\(k\\)-linéaire, notée encore\n\\(\\mathcal F_q\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.11}\\mathcal F_q:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X}).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On désigne par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.12}\\varphi_q:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l’opération \\(q\\)-linéaire dont les points fixes sont\n\\(H^i(X,\\mathcal O_X)\\). Les opérateurs\n\\(\\mathcal F_q,\\varphi_q\\) et \\(\\widetilde{\\mathcal F}_q\\), moyennant\n(2.2.7), s’écrivent aussi \\(\\mathcal F_q\\otimes\\operatorname{id}_k\\),\n\\(\\operatorname{id}\\otimes\\varphi_q\\),\n\\(\\mathcal F_q\\otimes\\varphi_q\\), donc commutent entre eux, et on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.13}\\widetilde{\\mathcal F}_q\n=\\varphi_q\\mathcal F_q=\\mathcal F_q\\circ\\varphi_q,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et ils commutent tous à \\(\\widetilde{\\mathcal F}_p\\), de sorte que\n\\(\\mathcal F_q\\) et \\(\\varphi_q\\) agissent sur\n\\(H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_q}\\) et sur\n\\(H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_p}\\). Or,\n\\(\\mathcal F_q\\) et \\(\\varphi_q\\) sont des inverses l’une à l’autre sur\n\\(H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_q}\\), par\n(2.2.13). Donc l’opération de \\(\\mathcal F_q\\) sur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^i(\\bar X,\\mathcal O_{\\bar X})_{\\mathrm{ss}}\n\\xleftarrow{\\sim}\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_q}\n\\otimes_{\\mathbb F_q}k\\qquad\\text{(cf. 1.1.11)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est l’inverse de l’opération de \\(\\varphi_q\\otimes k\\) sur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_q}\n\\otimes_{\\mathbb F_q}k.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Écrivant</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.2.14}H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_q}\n\\xleftarrow{\\sim}\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l’automorphisme \\(\\varphi_q\\) de\n\\(H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_q}\\) devient,\nvia 2.2.14, l’automorphisme \\(\\varphi_q\\otimes F_q\\) de\n\\(H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\widetilde{\\mathcal F}_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q\\), de sorte que l’automorphisme\n\\(\\varphi_q\\otimes k\\) de \\(H^i(\\bar X,\\mathcal O_{\\bar X})_{\\mathrm{ss}}\\)\ndevient, via 2.1.1, l’automorphisme \\(\\varphi_q\\otimes k\\) de\n\\(H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\\otimes_{\\mathbb F_p}k\\),\nce qui achève la démonstration (2.2.5).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-3",
+   "title": "3. La formule de congruence : énoncés et équivalences élémentaires",
+   "blocks": [
+    {
+     "id": "22.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.3\">3. <u>La formule de congruence : énoncés et équivalences élémentaires</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Je tiens à remercier Grothendieck et Deligne pour m’avoir expliqué les\nvariantes (6.1.2), (3.1.1.2) et (3.1.3) de (3.1.1).</p>"
+    },
+    {
+     "id": "22.3.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.3.0\"><strong>3.0.</strong> Soit \\(X\\) un schéma de type fini sur\n\\(\\mathbb F_q\\). On définit le degré d’un point fermé \\(y\\in X\\) comme le\ndegré de son corps résiduel \\(\\mathbb F_q(y)/\\mathbb F_q\\). On définit la\nfonction zêta de \\(X/\\mathbb F_q\\) comme élément de \\(\\mathbb Z[[t]]\\), par\nla formule (cf. aussi SGA 5 XIII 3.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.0.1}Z(t,X/\\mathbb F_q)=\\prod_y(1-t^{\\deg(y)})^{-1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par la « fonction zêta modulo \\(p\\) » on veut dire toujours l’image de\n\\(Z(t,X/\\mathbb F_q)\\) dans \\(\\mathbb F_q[[t]]\\) par la flèche de\n« réduction modulo \\(p\\mathbb Z[[t]]\\) »</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathbb Z[[t]]\\longrightarrow\\mathbb F_q[[t]].\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.3.1",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"22.3.1\"><div class=\"thm-head\"><u>Théorème 3.1.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(X\\) un schéma propre sur \\(\\mathbb F_q\\). Alors</u></p>\n\\[\n\\tag{3.1.1}Z(t,X/\\mathbb F_q)\\equiv\n\\prod_{i\\geq0}\\det\\left(1-t\\mathcal F_q\\mid H^i(X,\\mathcal O_X)\\right)^{(-1)^{i+1}}\n\\pmod p\n\\]\n<p><u>ou, ce qui est équivalent par (2.2.4),</u></p>\n\\[\n\\tag{3.1.2}Z(t,X/\\mathbb F_q)\\equiv\n\\prod_{i\\geq0}\\det\\left(1-t\\varphi_q^{-1}\\mid\nH^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\\right)^{(-1)^{i+1}}\n\\pmod p.\n\\]\n</div></div>"
+    },
+    {
+     "id": "22.3.2",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"22.3.2\"><div class=\"thm-head\"><u>Corollaire 3.2.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(X\\) un schéma propre sur \\(\\mathbb F_q\\). Alors</u></p>\n\\[\n\\tag{3.2.1}\\sum_{i\\geq0}(-1)^i\\operatorname{trace}\n(\\mathcal F_q\\mid H^i(X,\\mathcal O_X))\\equiv\\#X(\\mathbb F_q)\\pmod p\n\\]\n<p><u>ou, ce qui est équivalent par (2.2.4)</u></p>\n\n<!-- Source PDF page 11 (printed page 411) -->\n\\[\n\\tag{3.2.2}\\sum_{i\\geq0}(-1)^i\\operatorname{tr}\n(\\varphi_q^{-1}\\mid H^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z))\n\\equiv\\#X(\\mathbb F_q)\\pmod p.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On prend les coefficients de \\(t\\) dans les congruences (3.1.1) et\n(3.1.2).</p>"
+    },
+    {
+     "id": "22.3.3",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"22.3.3\"><div class=\"thm-head\"><u>Théorème 3.3.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(X\\) un schéma propre sur \\(\\mathbb F_q\\), on désigne par\n\\(H^i_{\\mathrm{DR}}(X/\\mathbb F_q)\\) les \\(\\mathbb F_q\\)-vectoriels\n\\(H^i(X,\\Omega^\\bullet_{X/\\mathbb F_q})\\), sur lesquels \\(\\mathcal F_q\\)\nagit. On a</u></p>\n\\[\n\\tag{3.3.1}Z(t,X/\\mathbb F_q)\\equiv\n\\prod_{i\\geq0}\\det(1-t\\mathcal F_q\\mid H^i_{\\mathrm{DR}}(X/\\mathbb F_q))^{(-1)^{i+1}}\n\\pmod p.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, utilisant la suite spectrale</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.2}E_1^{p,q}=H^q(X,\\Omega^p_{X/\\mathbb F_q})\n\\Longrightarrow H^{p+q}_{\\mathrm{DR}}(X/\\mathbb F_q)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>sur laquelle \\(\\mathcal F_q\\) agit (via l’endomorphisme\n\\(\\mathcal F_p=\\operatorname{Fr}_p^{X*}\\) déduit de\n\\(\\operatorname{fr}_q^X:X\\longrightarrow X\\)) en tuant \\(E_1^{p,q}\\) pour\n\\(q\\neq0\\), on voit que (3.3.1) équivaut à (3.1.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donnons un petit complément.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La formation de la « partie semi-simple » (cf. 1.0.7) étant un foncteur\nexact, on déduit de (3.3.2) une suite spectrale</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.3}(E_1^{p,q})_{\\mathrm{ss}}\\Longrightarrow\nH^{p+q}_{\\mathrm{DR}}(X/\\mathbb F_q)_{\\mathrm{ss}}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\((E_1^{p,q})_{\\mathrm{ss}}=0\\) pour \\(q\\neq0\\), on en déduit pour\ntout \\(i\\) un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.4}H^i_{\\mathrm{DR}}(X/\\mathbb F_q)_{\\mathrm{ss}}\n\\longrightarrow H^i(X,\\mathcal O_X)_{\\mathrm{ss}},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>commutant à \\(\\mathcal F_q\\), d’où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.5}\\det(1-t\\mathcal F_q\\mid H^i_{\\mathrm{DR}}(X/\\mathbb F_q))\n=\\det(1-t\\mathcal F_q\\mid H^i(X,\\mathcal O_X)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.3.4",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"22.3.4\"><div class=\"thm-head\"><u>Théorème 3.4.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(X\\) un schéma séparé de type fini sur \\(\\mathbb F_q\\). Alors\ndésignant par \\(H_c^i\\) la cohomologie étale à supports propres (SGA 4 XVII\n5.1.9 (iii)), on a</u></p>\n\\[\n\\tag{3.4.1}Z(t,X/\\mathbb F_q)\\equiv\n\\prod_{i\\geq0}\\det(1-t\\varphi_q^{-1}\\mid\nH_c^i(\\bar X,\\mathbb Z/p\\mathbb Z))^{(-1)^{i+1}}\\pmod p.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Commençons par démontrer l’équivalence de (3.4.1) et (3.1.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Écrivons, pour le moment</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.4.2}Z(X)\\quad\\text{au lieu de }Z(t,X/\\mathbb F_q)\n\\]\n\\[\n\\tag{3.4.3}Z'(X)\\quad\\text{au lieu de }\n\\prod_i\\det(1-t\\varphi_q^{-1}\\mid\nH_c^i(\\bar X,\\mathbb Z/p\\mathbb Z))^{(-1)^{i+1}}.\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.3.5",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.3.5\"><div class=\"thm-head\"><u>Lemme 3.5.</u></div><div class=\"thm-body\">\n<p><u>Si \\(\\{U_i\\}\\) est un recouvrement fini de \\(X\\) par des sous-schémas\nouverts on a</u></p>\n\\[\n\\tag{3.5.1}Z'(X)=\\prod_{j\\geq0}\\prod_{1\\leq i_0&lt;\\cdots&lt;i_j\\leq n}\nZ'(U_{i_0}\\cap\\cdots\\cap U_{i_j})^{(-1)^j}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Résulte facilement de la suite spectrale de\nlocalisation (SGA 4 XVII 6.2.10)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE_1^{a,b}=\\bigoplus_{i_0&lt;\\cdots&lt;i_b}\nH_c^a(\\bar U_{i_0}\\cap\\cdots\\cap\\bar U_{i_b},\\mathbb Z/p\\mathbb Z)\n\\Longrightarrow H_c^{a+b}(\\bar X,\\mathbb Z/p\\mathbb Z).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut aussi l’obtenir par récurrence sur \\(n\\), en appliquant 3.6\nci-dessous.</p>"
+    },
+    {
+     "id": "22.3.6",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.3.6\"><div class=\"thm-head\"><u>Lemme 3.6.</u></div><div class=\"thm-body\">\n<p><u>Si \\(U\\) est un ouvert de \\(X\\), \\(Y\\) le fermé \\(X-U\\),</u></p>\n\\[\n\\tag{3.6.1}Z'(X)=Z'(U)Z'(Y).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Résulte de la suite exacte de cohomologie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.6.2}\\longrightarrow H_c^i(\\bar U,\\mathbb Z/p\\mathbb Z)\n\\longrightarrow H_c^i(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\longrightarrow H_c^i(\\bar Y,\\mathbb Z/p\\mathbb Z)\\longrightarrow.\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.3.7",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.3.7\"><div class=\"thm-head\"><u>Lemme 3.7 (Moebius).</u></div><div class=\"thm-body\">\n<p><u>Soit \\(B\\) un ensemble fini, \\(\\{A_i\\}\\) un recouvrement fini par des\nsous-ensembles. Alors</u></p>\n\\[\n\\tag{3.7.1}\\operatorname{card}(B)=\\sum_{j\\geq0}(-1)^j\n\\sum_{i_0&lt;\\cdots&lt;i_j}\\operatorname{card}(A_{i_0}\\cap\\cdots\\cap A_{i_j}).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a la suite spectrale de Leray pour la cohomologie\nrationnelle de l’espace discret \\(B\\) et le recouvrement ouvert \\(\\{A_i\\}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE_1^{p,q}=\\bigoplus_{i_0&lt;\\cdots&lt;i_q} H^p(A_{i_0}\\cap\\cdots\\cap A_{i_q},\\mathbb Q)\n\\Longrightarrow H^{p+q}(B,\\mathbb Q)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on calcule la caractéristique d’Euler-Poincaré de \\(B\\).</p>"
+    },
+    {
+     "id": "22.3.8",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.3.8\"><div class=\"thm-head\"><u>Lemme 3.8.</u></div><div class=\"thm-body\">\n<p><u>Si \\(\\{U_i\\}\\) est un recouvrement fini de \\(X\\) par des sous-schémas,\nalors</u></p>\n\\[\n\\tag{3.8.1}Z(X)=\\prod_{j\\geq0}\\prod_{i_0&lt;\\cdots&lt;i_j}\nZ(U_{i_0}\\cap\\cdots\\cap U_{i_j})^{(-1)^j}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a la formule</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.8.2}\\operatorname{card}(X(\\mathbb F_{q^n}))=\n\\sum_{r\\mid n}r\\cdot\\operatorname{card}\\{y\\in X\\mid\\deg(y)=r\\}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui entraîne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.8.3}Z(X)=\\exp\\left(\\sum_{n\\geq1}\n\\operatorname{card}(X(\\mathbb F_{q^n}))\\frac{t^n}{n}\\right),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on conclut par 3.7.1.</p>"
+    },
+    {
+     "id": "22.3.9",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.3.9\"><div class=\"thm-head\"><u>Lemme 3.9.</u></div><div class=\"thm-body\">\n<p><u>Supposons que la formule (3.4.1) (ou ce qui revient au même, (3.1.2)\ni.e. (3.1.1)) soit vraie pour \\(X\\) une hypersurface projective. Alors elle\nest vraie pour tout \\(X\\) séparé de type fini.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par 3.8 et 3.6, (3.4.1) est vraie pour le complémentaire\nd’une hypersurface, \\(\\mathbb P^n-H\\). Compte tenu de ce que\n\\(\\bigcap(\\mathbb P^n-H_i)=\\mathbb P^n-\\bigcup H_i\\) est encore le complément\nd’une hypersurface, le recouvrement ouvert \\(\\{\\mathbb P^n-H_i\\}\\) de\n\\(\\mathbb P^n-\\bigcap H_i\\) permet d’appliquer 3.8 et 3.5 pour déduire (3.1.3)\npour \\(\\mathbb P^n-\\bigcap H_i\\). Par 3.8 et 3.6, (3.4.1) est vrai pour\n\\(\\bigcap H_i\\), i.e. pour tout \\(X\\) projectif. Une nouvelle application de\n3.8 et 3.5 donne 3.1.3 pour tout \\(X\\) quasi-projectif, en particulier pour\ntout \\(X\\) affine. Finalement, pour \\(X\\) séparé de type fini, on prend un\nrecouvrement fini par des ouverts affines, et on applique 3.8 et 3.5.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-4",
+   "title": "4. Le calcul de la fonction zêta d’une hypersurface à la Dwork",
+   "blocks": [
+    {
+     "id": "22.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.4\">4. Le calcul de la fonction zêta d’une hypersurface à la Dwork</h2>"
+    },
+    {
+     "id": "22.4.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.4.0\"><strong>4.0.</strong> Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.1}f(X)=f(X_1,\\ldots,X_{n+2})\\in\\mathbb F_q[X]\n\\quad\\text{homogène de degré }d,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont l’annulation définit l’hypersurface \\(V\\subset\\mathbb P^{n+1}\\), et\ndésignons par \\(V^*\\) l’ouvert de \\(V\\) où \\(\\prod_{i=1}^{n+2}X_i\\) est\ninversible, \\(V^*_{\\mathrm{aff}}\\) le cône affine de \\(V^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Choisissons un caractère additif non-trivial</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.2}\\chi:\\mathbb F_q\\longrightarrow\\mu_p(\\mathbb C),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\mathbb C\\) étant un corps alg. clos fixé de car. nulle (p.ex.\n\\(\\mathbb C=\\mathbb C\\)), de sorte qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.3}\\text{pour }x\\in\\mathbb F_{q^\\nu}\\quad\n\\sum_{y\\in\\mathbb F_{q^\\nu}}\\chi(xy)=\n\\begin{cases}q^\\nu&amp;\\text{si }x=0,\\\\0&amp;\\text{si }x\\neq0.\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(x=(x_1,\\ldots,x_{n+2})\\in(\\mathbb F_{q^\\nu}^*)^{n+2}\\), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.4}1+\\sum_{x_0\\in\\mathbb F_{q^\\nu}^*}\\chi(x_0f(x))\n=\\sum_{x_0\\in\\mathbb F_{q^\\nu}}\\chi(x_0f(x))\n=\\begin{cases}q^\\nu&amp;\\text{si }f(x)=0,\\\\0&amp;\\text{sinon.}\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En sommant (4.0.4) sur \\(x\\in(\\mathbb F_{q^\\nu}^*)^{n+2}\\), on obtient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.5}\\operatorname{card}V^*_{\\mathrm{aff}}(\\mathbb F_{q^\\nu})\n=\\frac1{q^\\nu}\\sum_{x\\in(\\mathbb F_{q^\\nu}^*)^{n+2}}\n\\left\\{1+\\sum_{x_0\\in\\mathbb F_{q^\\nu}^*}\\chi(x_0f(x))\\right\\}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.6}\\operatorname{card}V^*_{\\mathrm{aff}}(\\mathbb F_{q^\\nu})\n=(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(4.0.5) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.7}(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}+\\frac1{q^\\nu}\n\\sum_{(x_0,x)\\in(\\mathbb F_{q^\\nu}^*)^{n+3}}\\chi(x_0f(x)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Écrivons explicitement la forme \\(f(X)\\) comme somme de monômes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.8}f(X)=\\sum_w a_wX^w,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(w=(w_1,\\ldots,w_{n+2})\\) avec \\(\\sum w_i=d\\),\n\\(X^w\\mathrel{\\mathop=\\limits^{\\mathrm{dfn}}}X_1^{w_1}\\cdots X_{n+2}^{w_{n+2}}\\),\nde sorte que (4.0.7) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.0.9}(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}+\\frac1{q^\\nu}\n\\sum_{(x_0,x)\\in(\\mathbb F_{q^\\nu}^*)^{n+3}}\n\\prod_w\\chi(a_wx_0x^w).\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.4.1\"><strong>4.1.</strong> Il faut maintenant expliciter notre\n« caractère additif à valeurs en caractéristique zéro ». On a envie de prendre\nsimplement</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.0}\\chi:x\\longmapsto\n\\exp(2\\pi i\\,\\operatorname{tr}_{\\mathbb F_{q^\\nu}/\\mathbb F_p}(x))\n=\\zeta_p^{\\operatorname{tr}_{\\mathbb F_{q^\\nu}/\\mathbb F_p}(x)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.1}\\Omega\\quad\\text{la clôture algébrique de }\\mathbb Q_p\n\\]\n\\[\n\\tag{4.1.2}\\operatorname{ord}:\\Omega^*\\longrightarrow\\mathbb Q\n\\quad\\text{l’ordinal, normalisé par }\\operatorname{ord}(p)=1\n\\]\n\\[\n\\tag{4.1.3}\\zeta_p\\in\\Omega\\quad\\text{une racine \\(p\\)-ième primitive de l’unité.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On constate (cf. [2]) qu’il existe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.4}\\pi\\in\\mathbb Q_p(\\zeta_p),\\qquad\n\\operatorname{ord}(\\pi)=\\frac1{p-1}\n\\]\n\\[\n\\tag{4.1.5}\\text{tel que}\\qquad\n\\sum_{n\\geq0}\\frac{\\pi^{p^n}}{p^n}=0,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(NB. On constate aussitôt que le premier membre converge dans\n\\(\\mathbb Q_p(\\zeta_p)\\).)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit <u>l’exponentielle d’Artin-Hasse</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.6}E(X)=\\exp\\left(\\sum_{n\\geq0}\\frac{X^{p^n}}{p^n}\\right)\n\\in\\mathbb Q_p[[X]]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui, ô miracle, se trouve dans \\(\\mathbb Z_p[[X]]\\). On définit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.7}\\Theta(X)=E(\\pi X),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont les propriétés fondamentales sont résumées dans le lemme suivant :</p>"
+    },
+    {
+     "id": "22.4.2",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.4.2\"><div class=\"thm-head\"><u>Lemme 4.2.</u></div><div class=\"thm-body\">\n\\[\n\\tag{4.2.1}\\Theta(X)=\\sum B_nX^n,\\qquad B_0=1,\\quad A_1=\\pi,\n\\quad\\operatorname{ord}(B_n)\\geq\\frac n{p-1}.\n\\]\n\\[\n\\tag{4.2.2}\\Theta(1)=\\zeta_p,\\quad\\text{une racine \\(p\\)-ième primitive de l’unité.}\n\\]\n<p><u>(4.2.3) Soit \\(t\\in\\Omega\\), et supposons que, pour un entier \\(a&gt;0\\)\ndonné, \\(t=t^{p^a}\\) (i.e. \\(t\\) est un « représentant de Teichmüller » dans\n\\(W(\\mathbb F_{q^a})\\subset\\Omega\\)). Alors \\(\\sum_{j=0}^{a-1}t^{p^j}\n\\in\\mathbb Z_p\\), de sorte qu’on peut définir la série formelle</u></p>\n\n<!-- Source PDF page 17 (printed page 417) -->\n\\[\n(\\Theta(X))^{\\sum_{j=0}^{a-1}t^{p^j}},\n\\]\n<p><u>et on a une identité de séries formelles</u></p>\n\\[\n\\tag{4.2.3.1}\\prod_{j=0}^{a-1}\\Theta(t^{p^j}X)\n=(\\Theta(X))^{\\sum_{j=0}^{a-1}t^{p^j}}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Compte tenu de ce que \\(E(X)\\in\\mathbb Z_p[[X]]\\),\n(4.2.1) se déduit de la définition. Quant à (4.2.2), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.2.4}\\log(\\Theta(1))=0\\qquad\\text{par le choix de \\(\\pi\\) (4.1.5)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.2.5}\\operatorname{ord}(\\Theta(1)-1)=\\frac1{p-1}\n\\qquad\\text{par (4.2.1).}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (4.2.4), il existe un entier \\(n\\geq0\\) tel que\n\\(\\Theta(1)^{p^n}=1\\), (c’est la caractérisation du noyau du logarithme) et\n(4.2.5) entraîne que \\(n=1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Quant à (4.2.3.1), en prenant les logarithmes, il résulte d’un calcul\névident, une fois prouvé que l’on a bien\n\\(\\sum_{j=0}^{a-1}t^{p^j}\\in\\mathbb Z_p\\). Or on voit aussitôt que les\n\\(t^{p^j}\\) \\((0\\leq j\\leq a-1)\\) sont les conjugués de\n\\(t\\in W(\\mathbb F_{q^a})\\) sur \\(\\mathbb Z_p\\), donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\sum_{j=0}^{a-1}t^{p^j}=\\operatorname{Tr}_{W(\\mathbb F_{q^a})/\\mathbb Z_p}(t)\n\\in\\mathbb Z_p.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En prenant la valeur en \\(X=1\\) des deux membres de (4.2.3.1) nous\ntrouvons le</p>"
+    },
+    {
+     "id": "22.4.3",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"22.4.3\"><div class=\"thm-head\"><u>Corollaire 4.3.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(t\\in\\Omega\\) vérifiant \\(t^{p^a}=t\\). Désignons par\n\\(\\bar t\\in\\mathbb F_{p^a}\\) sa classe résiduelle. Alors on a</u></p>\n\\[\n\\tag{4.3.1}\\prod_{j=0}^{a-1}\\Theta(t^{p^j})\n=\\zeta_p^{\\operatorname{tr}_{\\mathbb F_{p^a}/\\mathbb F_p}(\\bar t)}.\n\\]\n</div></div>"
+    },
+    {
+     "id": "22.4.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.4.4\"><strong>4.4.</strong> Rappelons que le corps résiduel de l’anneau des entiers de\n\\(\\mathbb Q_p(\\zeta_p)\\) est \\(\\mathbb F_p\\). Soient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.4.0}K=\\text{l’extension non-ramifiée de }\\mathbb Q_p(\\zeta_p)\\text{ à corps résiduel }\\mathbb F_q,\n\\]\n\\[\n\\tag{4.4.1}\\tau\\in\\operatorname{Gal}(K/\\mathbb Q_p(\\zeta_p))\\text{ le « Frobenius », i.e. l’automorphisme}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>se réduisant suivant l’automorphisme de Frobenius de\n\\(\\mathbb F_q/\\mathbb F_p\\), \\(x\\longmapsto x^p\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.4.2}\\text{Soit }F(X)=\\sum_w A_wX^w\\text{ le relèvement en }K[X_1,\\ldots,X_{n+2}]\n\\text{ de}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(f(X)\\) dont les coefficients vérifient \\(A_w^q=A_w\\). Mettant ensemble\n(4.3.1) et (4.0.9), on trouve (compte tenu de la définition (4.1.0) de\n\\(\\chi\\)) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.4.3}\n\\begin{aligned}\n&amp;(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n-\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}\\\\\n&amp;\\qquad=\\frac1{q^\\nu}\n\\sum_{(X_0,X)\\in(\\mu_{q^\\nu-1}(\\Omega))^{n+3}}\n\\prod_w\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}\n\\Theta(A_w^{p^j}X_0^{p^j}X^{p^jw}).\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Définissons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH(X)=H(X_0,\\ldots,X_{n+2})\\in K[[X_0,\\ldots,X_{n+2}]]\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.4.4}H(X)=\\prod_w\\Theta(A_wX_0X_1^{w_1}\\cdots X_{n+2}^{w_{n+2}}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous faisons agir \\(\\operatorname{Gal}(K/\\mathbb Q_p(\\zeta_p))\\) sur\n\\(K[[X_0,\\ldots,X_{n+2}]]\\) à travers son action sur les coefficients ;\nl’action composante de \\(\\sigma\\in\\operatorname{Gal}(K/\\mathbb Q_p(\\zeta_p))\\)\nsera notée</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.4.5}G(X)\\longmapsto G^\\sigma(X).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a en particulier</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{\\tau^j}(X)=\\prod_w\\Theta(A_w^{\\tau^j}X_0X_1^{w_1}\\cdots X_{n+2}^{w_{n+2}}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que \\(A_w^{\\tau^j}=A_w^{p^j}\\), (4.4.3) se récrit\nalors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.4.6}(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}+\\frac1{q^\\nu}\n\\sum_{(X_0,X)\\in(\\mu_{q^\\nu-1}(\\Omega))^{n+3}}\n\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}H^{\\tau^j}(X^{p^j}).\n\\]\n\n</p>"
+    },
+    {
+     "id": "22.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"22.4.5\"><strong>4.5.</strong> Nous allons maintenant exprimer la\nsomme dans (4.4.6) comme une trace.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour chaque \\(b\\in\\mathbb Q\\), on définit une \\(K\\)-algèbre de Banach\n\\(p\\)-adique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.1}L(b)=\\text{le sous-anneau de }K[[X_0,\\ldots,X_{n+2}]]\n\\text{ formé des séries}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui s’écrivent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.2}\\sum_{dU_0=\\sum_{i\\geq1}U_i}\nB_UX_0^{U_0}X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}}\n\\qquad(U=(U_0,\\ldots,U_{n+2}))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et qui vérifient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.3}\\inf_U(\\operatorname{ord}(B_U)-bU_0)&gt;-\\infty.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C’est une <strong>algèbre</strong> de Banach \\(p\\)-adique pour la fonction\nd’ordinal (l’opposé du logarithme de la norme)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.4}\\inf_U(\\operatorname{ord}(B_U)-bU_0)\n=\\operatorname{ord}\\left(\\sum B_UX^U\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On vérifie sur (4.4.4) et (4.2.1) que l’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH(X)\\in L\\left(\\frac1{p-1}\\right).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Introduisons des opérateurs.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour chaque entier \\(k&gt;0\\), on introduit un opérateur continu d’espaces de\nBanach sur \\(K\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.5}\n\\begin{gathered}\n\\psi_k:L(b)\\longrightarrow L(kb),\\\\\n\\psi_k\\left(\\sum B_UX^U\\right)=\\sum B_{kU}X^U.\n\\end{gathered}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour chaque couple \\((b,b')\\), \\(b'&lt;b\\), il y a un <u>opérateur de\n« restriction »</u> qui est complètement continu (i.e. une limite uniforme\ndes opérateurs de rang fini)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.6}\n\\begin{gathered}\nL(b)\\xrightarrow{\\text{« restriction »}}L(b'),\\\\\n\\sum B_UX^U\\longmapsto\\sum B_UX^U.\n\\end{gathered}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Chaque élément \\(G\\) de l’algèbre \\(L(b)\\) donne l’endomorphisme continu\nde la multiplication par \\(G\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.7}\n\\begin{gathered}\nG:L(b)\\longrightarrow L(b),\\\\\n\\eta\\longmapsto\\eta G.\n\\end{gathered}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces opérateurs sont liés par le lemme suivant, dont la démonstration se\ntrouve dans [2] (cf. aussi [4]).</p>"
+    },
+    {
+     "id": "22.4.5.8",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"22.4.5.8\"><div class=\"thm-head\"><u>Lemme 4.5.8\n(ou lemme de la trace (DWORK)).</u></div><div class=\"thm-body\">\n<p><u>Soient \\(b\\in\\mathbb Q\\), \\(b&gt;0\\), \\(k\\in\\mathbb Z\\), \\(k\\geq2\\),\net \\(G\\in L(b/k)\\). Alors le composé</u></p>\n\\[\nL(b)\\xrightarrow{\\text{« restriction »}}L(b/k)\n\\xrightarrow{\\times G}L(b/k)\\xrightarrow{\\psi_k}L(b),\n\\]\n<p><u>noté \\(\\psi_k\\circ G\\), est complètement continu, et sa trace\n[cf. [4]] est donnée par la formule</u></p>\n\\[\n\\tag{4.5.9}\\operatorname{tr}(\\psi_k\\circ G)\n=\\frac1{(k-1)^{n+2}}\\sum_{X\\in(\\mu_{k-1}(\\Omega))^{n+3}}G(X).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Appliquant ce lemme au cas</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\left\\{\\begin{aligned}\nk&amp;=q^\\nu,\\\\\nG(X)&amp;=\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}H^{\\tau^j}(X^{p^j})\n\\in L\\left(\\frac p{(p-1)q^\\nu}\\right),\\\\\nb&amp;=\\frac1{p-1},\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(4.4.6) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.10}(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}\n+\\frac{(q^\\nu-1)^{n+3}}{q^\\nu}\n\\operatorname{tr}\\left(\\psi_{q^\\nu}\\circ\n\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}H^{\\tau^j}(X^{p^j})\n\\mathrel{\\big|}L\\left(\\frac1{p-1}\\right)\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(L^0(b)\\) l’idéal des éléments de \\(L(b)\\) qui « s’annulent en\n0 », i.e. « sans terme constant ». Il est stable sous \\(\\psi_k\\circ G\\), et\non a évidemment</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.11}\\operatorname{tr}(\\psi_k\\circ G)\n=G(0)+\\operatorname{tr}(\\psi_k\\circ G\\mid L^0).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que \\(H(0)=1\\), (4.5.10) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.12}\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=(q^\\nu-1)^{n+1}+\\frac{(q^\\nu-1)^{n+2}}q\n\\operatorname{tr}\\left(\\psi_{q^\\nu}\\circ\n\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}H^{\\tau^j}(X^{p^j})\n\\mathrel{\\big|}L^0\\left(\\frac1{p-1}\\right)\\right).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons maintenant l’opérateur \\(\\tau^{-1}\\)-linéaire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.13}\\tau^{-1}\\circ\\psi_p\\circ H(X):L(b)\\longrightarrow L(b).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On constate que ses itérés sont donnés par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.4.14}(\\tau^{-1}\\circ\\psi_p\\circ H(X))^a\n=\\tau^{-a}\\circ\\psi_{p^a}\\circ H(X)H^\\tau(X^p)\\cdots\nH^{\\tau^{a-1}}(X^{p^{a-1}}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on note que, si \\(\\operatorname{ord}(q)\\mid a\\), on a\n\\(\\tau^{-a}=\\operatorname{id}\\). Ceci posé, on définit une opération\n\\(\\tau^{-1}\\)-linéaire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.15}\n\\begin{gathered}\n\\alpha:L^0\\left(\\frac1{p-1}\\right)\\longrightarrow\nL^0\\left(\\frac1{p-1}\\right),\\\\\n\\alpha=\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ H(X),\n\\end{gathered}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (4.5.12) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.16}\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=(q^\\nu-1)^{n+1}+(q^\\nu-1)^{n+2}\n\\operatorname{tr}\\left((\\alpha)^{\\operatorname{ord}(q^\\nu)}\n\\mathrel{\\big|}L^0\\left(\\frac1{p-1}\\right)\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.17}S=\\text{l’ensemble }\\{1,\\ldots,n+2\\}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout sous-ensemble \\(A\\subset S\\), \\(A\\neq\\varnothing\\), on\ndéfinit un sous-espace de \\(L(b)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.18}L^A(b)=\\text{ensemble des séries }\\sum B_UX^U\\in L(b)\n\\text{ telles que, pour chaque}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>monôme \\(X^U\\) avec \\(B_U\\neq0\\), les \\(U_i&gt;0\\) sont exactement\n\\(U_0\\) et les \\(U_j\\), \\(j\\in A\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.19}L^0(b)=\\bigoplus_{\\substack{A\\subset S\\\\A\\neq\\varnothing}}L^A(b).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, pour chaque sous-ensemble</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nB\\subset S,\\qquad B\\neq\\varnothing,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.20}\n\\bigoplus_{A\\supset B}L^A(b)=L(b)\\cap\n\\text{ l’idéal }\\left(\\prod_{i\\in B}X_i\\right)K[[X]].\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Évidemment chaque sous-espace \\(\\displaystyle\\bigoplus_{A\\supset B}L^A(b)\\)\nest stable par \\(\\alpha\\) ; il en résulte qu’il en est de même pour\n\\(\\displaystyle\\bigoplus_{A\\not\\supset B}L^A(b)\\), qui est somme de sous-espaces du type précédent.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.21}\\alpha_B=\\text{l’endomorphisme }\\tau^{-1}\\text{-linéaire induit par }\\alpha\\text{ sur}\n\\]\n\\[\n\\bigoplus_{A\\supset B}L^A\\left(\\frac1{p-1}\\right)\n\\Big/\\bigoplus_{\\substack{A\\supsetneqq B}}L^A\\left(\\frac1{p-1}\\right)\n\\simeq L^B\\left(\\frac1{p-1}\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Explicitement, on obtient \\(\\alpha_B\\) par la formule</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.22}\\alpha_B=\\frac{\\tau^{-1}}p\\,\\psi_p\\,H_B(X),\n\\quad\\text{opération sous laquelle }L^B\\text{ est stable},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(H_B(X)\\) se déduit de \\(H(X)\\) en y faisant la substitution\n\\(X_i=0\\) pour \\(i\\notin\\{0\\}\\cup B\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Récrivons encore (4.5.16)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.23}\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n=(q^\\nu-1)^{n+1}+(q^\\nu-1)^{n+2}\n\\sum_{\\substack{A\\subset S\\\\A\\neq\\varnothing}}\n\\operatorname{tr}\\bigl((\\alpha_A)^{\\operatorname{ord}(q^\\nu)}\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Définissons, pour \\(A\\subset S\\), \\(A\\neq\\varnothing\\), l’hypersurface</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.24}V_A\\subset\\mathbb P^{\\operatorname{card}(A)-1}\n\\simeq\\mathbb P^{n+1}\\cap\\{X_i=0\\ \\ \\forall i\\notin A\\}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>définie par \\(f_A(X)\\), le polynôme déduit de \\(f(X)\\) y faisant la substitution\nen \\(X_i=0\\) pour \\(i\\notin A\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de la compatibilité de la formation de la série \\(H\\) à partir\nde \\(f(X)\\) à l’opération de substitution de 0 pour certaines des variables,\n(4.5.23) donne, pour chaque \\(A\\subset S\\), \\(A\\neq\\varnothing\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.25}\\operatorname{card}(V_A^*(\\mathbb F_{q^\\nu}))\n=(q^\\nu-1)^{\\operatorname{card}(A)-1}\n+(q^\\nu-1)^{\\operatorname{card}(A)}\n\\sum_{B\\subset A}\\operatorname{tr}\\bigl((\\alpha_B)^{\\operatorname{ord}(q^\\nu)}\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.26}\\operatorname{card}V(\\mathbb F_{q^\\nu})\n=\\sum_{\\substack{A\\subset S\\\\A\\neq\\varnothing}}\n\\operatorname{card}V_A^*(\\mathbb F_{q^\\nu}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Après une sommation facile, (4.5.25) donne alors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.27}\\begin{aligned}\n\\operatorname{card}V(\\mathbb F_{q^\\nu})={}&amp;1+q^\\nu+q^{2\\nu}+\\cdots\n+q^{\\nu(\\operatorname{card}(S)-1)}\\\\\n&amp;+\\sum_{\\substack{B\\subset S\\\\B\\neq\\varnothing}}\n(q^\\nu-1)^{\\operatorname{card}(B)}q^{\\nu\\operatorname{card}(S-B)}\n\\operatorname{tr}\\bigl((\\alpha_B)^{\\operatorname{ord}(q^\\nu)}\\bigr).\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons que \\(\\alpha\\) donc les \\(\\alpha_B\\) étant \\(\\tau^{-1}\\) linéaire,\nles \\(\\alpha_B^{\\operatorname{ord}(q)}\\) sont \\(K\\)-linéaires.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Définissons alors les séries caractéristiques</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Delta_B(t)\\in1+tK[[t]]\n\\]\n\\[\n\\tag{4.5.28}\\Delta_B(t)=\\det\\left(1-t\\alpha_B^{\\operatorname{ord}(q)}\n\\mathrel{\\big|}L^B\\left(\\frac1{p-1}\\right)\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Introduisons des endomorphismes de \\(1+tK[[t]]\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.29}\\varphi:g(t)\\longmapsto g^\\varphi(t)=g(qt)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.30}\\delta=1-\\varphi:g(t)\\longmapsto g^\\delta(t)=g(t)/g(qt).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.31}Z(t,V/\\mathbb F_q)=\n\\exp\\left(\\sum_{\\nu\\geq1}\\operatorname{card}V(\\mathbb F_{q^\\nu})\\frac{t^\\nu}{\\nu}\\right)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.32}\\det(1-t\\alpha_B^{\\operatorname{ord}(q)})\n=\\exp\\left(-\\sum_{\\nu\\geq1}\\operatorname{tr}((\\alpha_B)^{\\nu\\operatorname{ord}(q)})\n\\frac{t^\\nu}{\\nu}\\right),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(4.5.27) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.5.33}Z(t,V/\\mathbb F_q)\\prod_{i=0}^{n+1}(1-q^it)\n=\\prod_{j=1}^{n+2}\\left(\n\\prod_{\\substack{B\\subset S\\\\\\operatorname{card}(B)=j}}\\Delta_B(t)\n\\right)^{-(-\\delta)^j\\varphi^{n+2-j}}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>4.6.</strong> Nous allons étudier maintenant l’intégralité des séries\n\\(\\Delta_B\\). Posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.1}\\mathcal O=\\text{l’anneau des entiers de }K\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et définissons une <u>filtration</u> sur \\(1+t\\mathcal O[[t]]\\) par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.2}\\begin{aligned}\nF^i(1+t\\mathcal O[[t]])&amp;=1+q^it\\mathcal O[[q^it]]\\\\\n&amp;=\\varphi^i(1+t\\mathcal O[[t]]).\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.3}\\varphi(F^i)\\subset F^{i+1},\n\\qquad\n\\tag{4.6.4}\\delta(F^i)\\subset F^i,\n\\]\n\\[\n\\tag{4.6.5}\\delta\\text{ induit l’identité sur }F^i/F^{i+1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\"><div class=\"thm-head\"><u>Lemme 4.6.6.</u></div><div class=\"thm-body\">\n<p><u>\\(\\Delta_B(t)\\in1+t\\mathcal O[[t]]\\), et si un entier \\(j\\) vérifie</u></p>\n\\[\n\\tag{4.6.7}jd&lt;\\operatorname{card}(B)\n\\]\n<p><u>alors on a</u></p>\n\\[\n\\tag{4.6.8}\\Delta_B(t)\\in F^j(1+t\\mathcal O[[t]]).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Les espaces de Banach\n\\(L^B\\left(\\frac1{p-1}\\right)\\) sont tous « du type \\(B(I)\\) » au sens\nde Serre [7], i.e. ils admettent des « bases orthonormales », à savoir, les monômes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.9}\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui y appartiennent. Que c’est une base « orthonormale » veut dire par\ndéfinition qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.10}\\operatorname{ord}\\left(\\sum_U C_U\n\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}\\right)\n=\\min_U\\operatorname{ord}(C_U).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.11}R_B=\\text{le }\\mathcal O\\text{-sous-module de }\nL^B\\left(\\frac1{p-1}\\right)\\text{ formé des éléments d’ordinal }\\geq0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour démontrer le lemme, il suffit de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.12}\\text{si }jd&lt;\\operatorname{card}(B),\\text{ alors }\n(\\alpha_B)^{\\operatorname{ord}(q)}R_B\\subset q^jR_B\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ou, a fortiori, de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.13}\\text{si }jd&lt;\\operatorname{card}(B),\\text{ alors }\n\\alpha_B(R_B)\\subset p^jR_B.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, on a (4.5.22)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.14}\\alpha_B=\\frac{\\tau^{-1}}p\\,\\psi_p\\circ H_B(X).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.15}H(X)\\in L\\left(\\frac1{p-1}\\right),\\qquad\n\\operatorname{ord}(H(X))\\geq0\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.16}H_B(X)\\cdot R_B\\subset R_B\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et évidemment</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.17}\\tau^{-1}(R_B)=R_B,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (4.6.13) sera conséquence de</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.18}\\text{si }jd&lt;\\operatorname{card}(B),\\text{ alors }\n\\psi_p(R_B)\\subset p^{j+1}R_B.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Vérifions (4.6.18) monôme par monôme. On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.19}\\left\\{\\begin{aligned}\n\\psi_p(\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}})&amp;=0,\n&amp;&amp;\\text{sauf si }\\forall i\\quad p\\mid U_i,\\\\\n\\psi_p(\\pi^{pU_0}X_0^{pU_0}\\cdots X_{n+2}^{pU_{n+2}})\n&amp;=\\pi^{(p-1)U_0}\\cdot\n\\underbrace{\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}}_{\\in R_B}.\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, les conditions pour que l’on ait\n\\(X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}\\in L^B\\left(\\frac1{p-1}\\right)\\)\nsont</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.20}\\left\\{\\begin{aligned}\ndU_0&amp;=\\sum_{i\\geq1}U_i,\\\\\n\\text{pour }i\\geq1,\\text{ on a }U_i&gt;0&amp;\\Longleftrightarrow i\\in B,\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où, en particulier,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.21}dU_0\\geq\\operatorname{card}(B).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.22}\\operatorname{ord}(\\pi^{(p-1)U_0})\n=U_0\\geq\\frac{\\operatorname{card}(B)}d&gt;j\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, comme \\(U_0\\in\\mathbb Z\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.6.23}\\operatorname{ord}(\\pi^{(p-1)U_0})=U_0\\geq j+1.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mettant ceci ensemble avec (4.6.19), on trouve (4.6.18).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-5",
+   "title": "5. Un théorème d’AX [1], (cf. aussi [4], section 7).",
+   "blocks": [
+    {
+     "id": "22.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.5\">5. Un théorème d’AX [1], (cf. aussi [4], section 7).</h2>"
+    },
+    {
+     "id": null,
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\"><div class=\"thm-head\"><u>Théorème 5.0.</u></div><div class=\"thm-body\">\n<p><u>Soient \\(V\\) une hypersurface dans \\(mathbb P^{n+1}\\) de degré \\(d&gt;0\\),\ndéfinie sur \\(mathbb F_q\\), et \\(j\\) un entier : si on a</u></p>\n\\[\n\\tag{5.0.1}jd&lt;n+2,\n\\]\n<p><u>alors</u></p>\n\\[\n\\tag{5.0.2}Z(t,V/\\mathbb F_q)\\prod_{i=0}^{n+1}(1-q^it)\n\\in 1+q^jt\\,\\mathbb Z[[q^jt]],\n\\]\n<p><u>et l’inverse de tout zéro ou pôle de</u></p>\n\\[\n\\tag{5.0.3}Z(t,V/\\mathbb F_q)\\prod_{i=0}^{n+1}(1-q^it)\n\\]\n<p><u>est de la forme (q^jcdot(\text{un entier algébrique})).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\"><div class=\"thm-head\"><u>Théorème 5.0.bis.</u></div><div class=\"thm-body\">\n<p><u>Soit \\(V_{mathrm{aff}}\\) une hypersurface dans \\(mathbb A^{n+2}\\) définie par une\nforme homogène de degré \\(d\\), définie sur \\(mathbb F_q\\). Si on a</u></p>\n\\[\n\\tag{5.0.7}jd&lt;n+2\n\\]\n<p><u>alors</u></p>\n\\[\n\\tag{5.0.5}Z(t,V_{\\mathrm{aff}}/\\mathbb F_q)\\in1+q^jt\\,\\mathbb Z[[q^jt]].\n\\]\n<p><u>En particulier,</u></p>\n\\[\n\\tag{5.0.6}\\operatorname{card}(V_{\\mathrm{aff}}(\\mathbb F_q))\\equiv0\\pmod {q^j},\n\\]\n<p><u>et par suite</u></p>\n\\[\n\\tag{5.0.6\\,bis}\\operatorname{card}(V(\\mathbb F_q))\\geq\\frac{q^j-1}{q-1}&gt;0\n\\]\n<p><u>(ce qui améliore le th. de CHEVALLEY-WARNING [8]).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> L’implication (5.0.5) \\(\\Longrightarrow\\) (5.0.6) est claire, en prenant\nle coefficient de \\(t\\) dans la fonction zêta. Les assertions (5.0.4) et (5.0.2)\nsont équivalentes, compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.7}\\operatorname{card}V_{\\mathrm{aff}}(\\mathbb F_{q^\\nu})\n=1+(q^\\nu-1)\\operatorname{card}V(\\mathbb F_{q^\\nu}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.8}Z(t,V_{\\mathrm{aff}}/\\mathbb F_q)\n=\\frac{Z(t,V/\\mathbb F_q)}{Z(qt,V/\\mathbb F_q)(1-t)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.9}Z(t,V/\\mathbb F_q)=\\prod_{i\\geq0}\n\\left[(1-q^it)Z(q^it,V_{\\mathrm{aff}}/\\mathbb F_q)\\right].\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les énoncés (5.0.2) et (5.0.3) sont équivalents encore, par le théorème de\nFatou [3], grâce à la rationalité de la fonction zêta. Comme on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.10}Z(t,V/\\mathbb F_q)\\in\\mathbb Z[[t]],\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>il suffira de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.11}Z(t,V/\\mathbb F_q)\\prod_{i=0}^{n+1}(1-q^it)\n\\in F^j(1+t\\,\\mathcal O[[t]]).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de (4.5.33) et (4.6.4) – (4.6.5), il suffit de démontrer, pour\n\\(B\\subset\\{1,\\ldots,n+2\\}\\), \\(B\\neq\\varnothing\\), qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.12}\\Delta_B(t)\\in F^{j+\\operatorname{card}(B)-(n+2)}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous pourrons terminer la démonstration en appliquant le lemme (4.4.6),\nune fois démontrée l’assertion :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.13}\\text{si }jd&lt;n+2,\\text{ alors }\n(j+\\operatorname{card}(B)-(n+2))d&lt;\\operatorname{card}(B),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.14}\\text{si }jd&lt;n+2,\\text{ alors }\n(j-(n+2))d&lt;\\operatorname{card}(B)(1-d).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\inf_{\\substack{B\\subset\\{1,\\ldots,n+2\\}\\\\B\\neq\\varnothing}}\n\\operatorname{card}(B)(1-d)=(n+2)(1-d),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu’il suffit de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.0.15}\\text{si }jd&lt;n+2,\\text{ alors }\n(j-(n+2))d&lt;(n+2)(1-d),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui est vrai.</p>"
+    },
+    {
+     "id": null,
+     "type": "remark",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm remark\"><div class=\"thm-head\"><u>Remarque 5.1.</u></div><div class=\"thm-body\">\n<p>La condition</p>\n\\[\n\\tag{5.1.1}jd&lt;n+2\n\\]\n<p>admet une interprétation cohomologique. Soit \\(V\\) une hypersurface <u>lisse</u>\nde degré \\(d\\) et de dimension \\(n\\). Posons, comme dans XI 2.1, pour \\(a+b=n\\)</p>\n\\[\n\\tag{5.1.2}h_0^{a,b}=\\dim H^b(V,\\Omega_V^a)-\\delta_{a,b}\n=\\dim E^{a,b}(V)\n\\]\n<p>où \\(E^{a,b}(V)\\) est la composante de bidegré \\((a,b)\\) de la « cohomologie\névanescente de Hodge » (comparer XVII 5.4.4)</p>\n\\[\n\\tag{5.1.3}E^{a,b}(V)=\\operatorname{Coker}\n\\left(H^b(\\mathbb P^{n+1},\\Omega_{\\mathbb P^{n+1}}^a)\n\\longrightarrow H^b(V,\\Omega_V^a)\\right).\n\\]\n<p>Alors, par XI, 2.8,</p>\n\\[\n\\tag{5.1.4}jd&lt;n+2\\quad\\Longleftrightarrow\\quad\n\\left[h_0^{a,n-a}=0\\text{ pour }a&lt;j\\text{ et }a&gt;n-j\\right],\n\\]\n<p>i.e. la condition signifie que le « niveau de Hodge » (XI 2.7) de la\n« cohomologie de Hodge évanescente » de \\(V\\) :</p>\n\n<!-- Source PDF page 31 (printed page 431) -->\n\\[\nE_{\\mathrm{DR}}^n(V)=\\operatorname{Coker}\n\\left(H_{\\mathrm{Hdg}}^n(\\mathbb P^{n+1})\\longrightarrow H_{\\mathrm{Hdg}}^n(V)\\right),\n\\]\n<p>est (leq n-2j), i.e. son co-niveau est (geq j). D’autre part, la conclusion\nsignifie aussi que les valeurs propres du Frobenius \\(mathcal F_q\\) opérant sur la\ncohomologie évanescente (ell)-adique \\((\\ell\\neq p)\\) sont des entiers algébriques\n(XXI A.2) <u>divisibles</u> par \\(q^j\\). Le résultat de AX 5.0. vient donc à l’appui\nde la conjecture suivante, suggérée par le yoga du niveau des motifs, et\nqui met en relations les classiques conjectures de HODGE [5] et de TATE [5] :</p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "conjecture",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm conjecture\"><div class=\"thm-head\"><u>Conjecture 5.2.</u></div><div class=\"thm-body\">\n<p><u>Soient \\(f:X\\longrightarrow S\\) un morphisme propre et lisse, avec\n\\(S\\) intègre, de type fini sur \\(operatorname{Spec}(\\mathbb Z)\\) et dominant\n\\(operatorname{Spec}(\\mathbb Z)\\), \\(i,j\\) des entiers. Supposons que le co-niveau\nde Hodge du \\(H^i\\) de la fibre générique de \\(f\\) soit (geq j). Alors pour tout\npoint \\(s\\in S\\), le coniveau (XX 2.0.6) de \\(H^i(X_s,\\mathbb Q_\\ell)\\) est\n(geq j), donc (XX 2.2) si \\(s\\) est un point fermé de \\(S\\), les valeurs propres\nde Frobenius opérant sur \\(H^i(X_s,\\mathbb Q_\\ell)\\) sont des entiers algébriques\ndivisibles par \\(q^j\\), où \\(q=\\operatorname{card}(k(s))\\).</u></p>\n</div></div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-6",
+   "title": "6. Fin de la démonstration de la formule de congruence.",
+   "blocks": [
+    {
+     "id": "22.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"22.6\">6. Fin de la démonstration de la formule de congruence.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de (4.6.6) et (4.6.3)–(4.6.4), (4.5.24) donne une\nformule de congruence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.1}Z(t,V/\\mathbb F_q)(1-t)\\equiv\n\\Delta_S(t)^{(-1)^{n+1}}\\pmod {1+qt\\,\\mathcal O[[t]]}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Passons au calcul de \\(Delta_S(t)\\) modulo \\(\\pi\\,\\mathcal O[[t]]\\). Définissons (cf. (4.6.11)) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.2}W_S=R_S\\otimes_{\\mathcal O}\\mathbb F_q,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.3}\\bar\\alpha_S:W_S\\longrightarrow W_S,\n\\text{ l’opération }\\bar\\tau^{-1}\\text{-linéaire induite par }\\alpha_S,\n\\]\n\\[\n\\tag{6.0.4}R_S(i)\\text{ le sous-module de }R_S\\text{ formé des éléments de degré }i\\text{ en }X_0,\n\\]\n\\[\n\\tag{6.0.5}W_S(i)=R_S(i)\\otimes_{\\mathcal O}\\mathbb F_q.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\"><div class=\"thm-head\"><u>Proposition 6.0.6.</u> <u>On a l’inclusion</u></div><div class=\"thm-body\">\n\\[\n\\alpha_S(R_S)\\subset R_S(1)+pR_S.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On a la factorisation (4.6.14)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.7}\\alpha_S=\\tau^{-1}\\circ\\frac1p\\psi_p\\circ H(X).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On sait (cf. (4.6.15))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.8}H(X)\\cdot R_S\\subset R_S,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et évidemment</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.9}\\tau^{-1}(R_S(1)+pR_S)=R_S(1)+pR_S,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte qu’il suffit de vérifier</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.0.10}\\frac1p\\psi_pR_S\\subset R_S(1)+pR_S,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui est clair par (4.6.19).</p>"
+    },
+    {
+     "id": null,
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\"><div class=\"thm-head\"><u>Corollaire 6.0.11.</u> <u>On a l’inclusion</u></div><div class=\"thm-body\">\n\\[\n\\bar\\alpha_S W_S\\subset W_S(1).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\"><div class=\"thm-head\"><u>Corollaire 6.0.12.</u> <u>On a la congruence</u></div><div class=\"thm-body\">\n\\[\n\\Delta_S(t)\\equiv\\det(1-t(\\bar\\alpha_S)^{\\operatorname{ord}(q)}\\mid W_S(1))\n\\pmod {\\pi\\,\\mathcal O[[t]]}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\"><div class=\"thm-head\"><u>Proposition 6.1.</u> <u>L’opération \\(\\tau^{-1}\\)-linéaire\n\\(\\bar\\alpha_S:W_S(1)\\longrightarrow W_S(1)\\) est égale à l’opération</u></div><div class=\"thm-body\">\n\\[\n\\tag{6.1.1}\\tau^{-1}\\frac1p\\psi_p\\circ(X_0f(X))^{p-1}.\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Écrivons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.2}H(X)=1+\\sum_{i\\geq1}H_i(X)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.3}H_i(X)\\text{ est de degré }i\\text{ en }X_0.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’après (4.6.19) encore, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.4}\\frac1p\\psi_pR_S(i)\\subset pR_S\\quad\\text{si }i\\neq p.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.5}H_i(X)\\cdot R_S(j)\\subset R_S(i+j),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.6}\\left(\\alpha_S-\\tau^{-1}\\frac1p\\psi_pH_{p-1}(X)\\right)(R_S(1))\n\\subset pR_S.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.7}\\left[(\\alpha_S)^{\\operatorname{ord}(q)}-\n\\left(\\tau^{-1}\\frac1p\\psi_pH_{p-1}(X)\\right)^{\\operatorname{ord}(q)}\\right]R_S(1)\n\\subset pR_S.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Calculons maintenant \\(H_{p-1}(X)\\). On a (cf. (4.4.4))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n\\tag{6.1.8}H(X)\n&amp;=\\prod_w\\Phi(\\widehat A_wX_0X^w)\\\\\n&amp;=\\prod_w\\exp\\left(\\sum_{n\\geq0}\\frac{(\\pi\\widehat A_wX_0X^w)^{p^n}}{p^n}\\right)\\\\\n&amp;=\\prod_w\\prod_{n\\geq0}\\exp\\left(\\frac{(\\pi\\widehat A_wX_0X^w)^{p^n}}{p^n}\\right)\\\\\n&amp;\\equiv\\prod_w\\exp(\\pi\\widehat A_wX_0X^w)\\pmod{\\text{degré }p}\\\\\n&amp;\\equiv\\exp\\left(\\pi\\sum_w\\widehat A_wX_0X^w\\right)\\pmod{\\text{degré }p}\\\\\n&amp;\\equiv\\exp(\\pi X_0F(X))\\pmod{\\text{degré }p},\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.9}H_{p-1}(X)=\\frac{\\pi^{p-1}X_0^{p-1}}{(p-1)!}F(X)^{p-1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On constate facilement que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.10}\\frac{\\pi^{p-1}}p\\equiv-1\\pmod p\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.1.11}\\frac1pH_{p-1}(X)\\equiv(X_0f(X))^{p-1}\\pmod p,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui achève la démonstration de 6.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\"><div class=\"thm-head\"><u>Corollaire 6.1.12.</u> <u>L’opérateur linéaire</u></div><div class=\"thm-body\">\n\\[\n(\\bar\\alpha_S)^{\\operatorname{ord}(q)}:W_S(1)\\longrightarrow W_S(1)\n\\]\n<p><u>n’est autre que</u> \\(\\psi_q\\circ(X_0f(X))^{q-1}\\).</p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> D’après (6.1.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n(\\bar\\alpha_S)^{\\operatorname{ord}(q)}\n&amp;=(\\tau^{-1}\\psi_p\\circ(X_0f(X))^{p-1})^{\\operatorname{ord}(q)}\\\\\n&amp;=\\psi_q\\circ\\prod_{j=0}^{\\operatorname{ord}(q)-1}\n(X_0^{p^j}f^{\\tau^j}(X^{p^j}))^{p-1}\\\\\n&amp;=\\psi_q\\circ\\prod_{j=0}^{\\operatorname{ord}(q)-1}(X_0f(X))^{p^j(p-1)}\\\\\n&amp;=\\psi_q\\circ(X_0f(X))^{q-1}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mettant ensemble (6.1.12) (6.0.12), et (6.0.1), on trouve,</p>"
+    },
+    {
+     "id": null,
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\"><div class=\"thm-head\"><u>Corollaire 6.1.13.</u> <u>On a la congruence mod \\(p\\) :</u></div><div class=\"thm-body\">\n\\[\nZ(t,V/\\mathbb F_q)\\equiv\n\\frac{\\det(1-t\\psi_q(X_0f(X))^{q-1}\\mid W_S(1))^{(-1)^{n+1}}}{1-t}.\n\\]\n</div></div>"
+    },
+    {
+     "id": "22.6.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"22.6.2\">6.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à calculer les groupes de cohomologie de \\(\\mathcal O_V\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.1}\\mathcal F_q=\\text{l’opération « élévation à la puissance }q\\text{-ième » dans }\\mathcal O_V.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous avons une suite exacte de faisceaux sur \\(\\mathbb P^{n+1}=\\mathbb P\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.2}0\\longrightarrow\\mathcal O_{\\mathbb P}(-d)\\xrightarrow{f}\n\\mathcal O_{\\mathbb P}\\longrightarrow\\mathcal O_V\\longrightarrow0,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et le diagramme suivant est commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.3}\n\\xymatrix{\n0\\ar[r]&amp;\\mathcal O_{\\mathbb P}(-d)\\ar[r]^f\\ar[d]_{f^{q-1}\\mathcal F_q}&amp;\n\\mathcal O_{\\mathbb P}\\ar[r]\\ar[d]_{\\mathcal F_q}&amp;\\mathcal O_V\\ar[r]\\ar[d]_{\\mathcal F_q}&amp;0\\\\\n0\\ar[r]&amp;\\mathcal O_{\\mathbb P}(-d)\\ar[r]^f&amp;\\mathcal O_{\\mathbb P}\\ar[r]&amp;\\mathcal O_V\\ar[r]&amp;0.\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.4}\\left\\{\n\\begin{aligned}\nH^0(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P})&amp;\\simeq\\mathbb F_q,\\\\\nH^i(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P})&amp;=0&amp;&amp;i\\neq0,\\\\\nH^i(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d))&amp;=0&amp;&amp;i\\neq0,n+1,\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la suite exacte longue de cohomologie associée à (6.2.2), donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.5}\\left\\{\n\\begin{aligned}\nH^0(V,\\mathcal O_V)&amp;\\simeq\\mathbb F_q,\\\\\nH^i(V,\\mathcal O_V)&amp;=0&amp;&amp;\\text{si }i\\neq0,n,\\\\\nH^n(V,\\mathcal O_V)&amp;\\simeq H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d)).\n\\end{aligned}\\right.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le diagramme commutatif (6.2.3) donne alors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.6}\\det(1-t\\mathcal F_q\\mid H^0(V,\\mathcal O_V))=1-t\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.7}\\det(1-t\\mathcal F_q\\mid H^n(V,\\mathcal O_V))=\n\\det(1-t(f^{q-1}\\mathcal F_q)\\mid H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d))).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il ne reste qu’à établir</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.2.8}\\det(1-t(f^{q-1}\\mathcal F_q)\\mid H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d)))\n=\\det(1-t(\\psi_q\\circ(X_0f(X))^{q-1}\\mid W_S(1)))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui est une conséquence de la</p>"
+    },
+    {
+     "id": null,
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\"><div class=\"thm-head\"><u>Proposition 6.3.</u> <u>Il y a un isomorphisme</u></div><div class=\"thm-body\">\n\\[\n\\tag{6.3.1}W_S(1)\\simeq\\operatorname{Hom}_{\\mathbb F_q}\n(H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d)),\\mathbb F_q)\n\\]\n<p><u>par rapport auquel l’opérateur</u></p>\n\\[\n\\tag{6.3.2}\\psi_q\\circ(X_0f(X))^{q-1}:W_S(1)\\longrightarrow W_S(1)\n\\]\n\n<!-- Source PDF page 37 (printed page 437) -->\n<p><u>est le transposé de</u></p>\n\\[\n\\tag{6.3.3}f(X)^{q-1}\\mathcal F_q:H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d))\n\\longrightarrow H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d)).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> En calculant le groupe \\(H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d))\\)\nà l’aide du recouvrement standard de \\(\\mathbb P^{n+1}\\), on trouve</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n\\tag{6.3.4}H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d))\n&amp;=\\text{le }\\mathbb F_q\\text{-vectoriel de base des monômes }\nX_1^{W_1}\\cdots X_{n+2}^{W_{n+2}}\\\\\n&amp;\\quad\\text{les }W_i\\in\\mathbb Z\\text{ vérifiant }\\sum W_i=-d\\\\\n&amp;=\\text{le }\\mathbb F_q\\text{-sous-vectoriel de base des monômes }\nX_1^{W_1}\\cdots X_{n+2}^{W_{n+2}}\\\\\n&amp;\\quad\\text{qui vérifient en plus : }\\nexists i\\text{ tel que }W_i\\geq0.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part, \\(W_S(1)=R_S(1)\\otimes_{\\mathcal O}\\mathbb F_q\\), et on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.3.5}R_S(1)=\\text{le }\\mathcal O\\text{-module libre de base les monômes }\n(\\pi X_0)X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}}\n\\text{ vérifiant }\\sum U_i=d,\\quad U_i&gt;0\\ \\forall i.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L’accouplement</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.3.6}(\\ ,\\ ):W_S(1)\\times H^{n+1}(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P}(-d))\n\\longrightarrow\\mathbb F_q\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>défini par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{6.3.7}\n(\\operatorname{classe\\ de}\\ \\pi X_0X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}},\nX_1^{W_1}\\cdots X_{n+2}^{W_{n+2}})\n=\\begin{cases}1&amp;\\text{si }U_i=-W_i\\text{ pour tout }i,\\\\0&amp;\\text{sinon}\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est évidemment une dualité parfaite de \\(\\mathbb F_q\\)-vectoriels, et on constate\nfacilement que \\(\\psi_q\\circ(X_0f(X))^{q-1}\\) est la transposée de\n\\(f(X)^{q-1}\\mathcal F_q\\), ce qui prouve 6.3.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "22-s9",
+   "title": "Bibliographie",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>Bibliographie</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] AX, J.   Zeroes of Polynomials Over Finite Fields, <i>Amer. J. Math.</i>\n86, 1964, 255–261.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] DWORK, B.   On the Rationality of the Zeta Function of an Algebraic\nVariety, <i>Amer. J. Math.</i> 82, 1960, 631–648.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] DWORK, B.   An Algebraic Variety, in Proc. of the Woods-Hole\nSummer Institute 1964 (miméo).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] DWORK, B.   On the Zeta Function of Hypersurface II, <i>Ann. Math.</i> (2),\n80, 1964, 227–299.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] GROTHENDIECK, A.,   Le Groupe de Brauer III, dans <i>Dix Exposés sur la\nCohomologie des Schémas</i>, North Holland Pub. Co, 1968.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[6] SERRE, J.P.   Groupes Algébriques et Corps de Classes, Hermann,\nParis, 1959.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[7] SERRE, J.P.   Endomorphismes Complètement Continus des Espaces de\nBanach p-Adiques, <i>Pub. Math. I.H.E.S.</i> n° 12, 1962.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[8] CHEVALLEY, C.   Démonstration d’une hypothèse de M. Artin, <i>Abhandlungen\nMath. Sem. Hamburg</i>, 11, 1936, 73–75.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par N. KATZ"
+}

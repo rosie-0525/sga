@@ -1,0 +1,1122 @@
+{
+ "chapter_id": "I",
+ "title": "STRUCTURES ALGÉBRIQUES. COHOMOLOGIE DES GROUPES",
+ "number": "I",
+ "pages": [
+  {
+   "id": "I",
+   "title": "STRUCTURES ALGÉBRIQUES. COHOMOLOGIE DES GROUPES",
+   "blocks": [
+    {
+     "id": "I",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"I\">EXPOSÉ I<br>STRUCTURES ALGÉBRIQUES. COHOMOLOGIE DES GROUPES<span class=\"author\">par M. Demazure</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cet exposé se compose de deux parties ; la première rassemble un certain nombre\nde définitions générales et pose des notations qui seront souvent utilisées par la suite,\nla seconde traite de la cohomologie des groupes et aboutit au théorème 5.3.3 (nullité\nde la cohomologie des groupes diagonalisables).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous choisissons une fois pour toutes un Univers. Toutes les définitions posées et\ntoutes les constructions effectuées seront relatives à cet Univers. Nous nous\npermettrons systématiquement l'abus de langage suivant : pour définir un foncteur\n\\(f : \\mathscr{C} \\to \\mathscr{C}'\\), nous nous contenterons de définir l'objet \\(f(S)\\) de \\(\\mathscr{C}'\\) pour tout objet S\nde \\(\\mathscr{C}\\), chaque fois qu'il n'y aura aucune ambiguïté sur la manière de définir \\(f(h)\\) pour\nune flèche \\(h\\) de \\(\\mathscr{C}\\). En pratique, nous dirons : soit \\(f : \\mathscr{C} \\to \\mathscr{C}'\\) le foncteur défini par\n\\(f(S) = \\cdots\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-1",
+   "title": "1. Généralités",
+   "blocks": [
+    {
+     "id": "I.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.1\">1. Généralités</h2>"
+    },
+    {
+     "id": "I.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.1\">1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathscr{C}\\) une catégorie. On notera \\(\\widehat{\\mathscr{C}}\\) la catégorie \\(\\mathrm{Hom}(\\mathscr{C}^{\\circ}, (\\mathrm{Ens}))\\) des foncteurs\ncontravariants de \\(\\mathscr{C}\\) dans la catégorie \\((\\mathrm{Ens})\\) des ensembles. Il existe un foncteur\ncanonique \\(h : \\mathscr{C} \\to \\widehat{\\mathscr{C}}\\) qui associe à tout \\(X \\in \\mathrm{Ob}(\\mathscr{C})\\) le foncteur \\(h_X\\) tel que\n\\[\nh_X(S) = \\mathrm{Hom}(S, X).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout foncteur \\(F \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\), on définit (cf. par exemple EGA 0.8.1) une bijection\n\\[\n\\mathrm{Hom}(h_X, F) \\xrightarrow{\\ \\sim\\ } F(X).\n\\]\nEn particulier, pour tout couple \\(X, Y\\) d'objets de \\(\\mathscr{C}\\), l'application canonique\n\\[\n\\mathrm{Hom}(X, Y) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}(h_X, h_Y)\n\\]\nest bijective ; le foncteur \\(h\\) est <em>pleinement fidèle</em>. Il définit donc un isomorphisme de\n\\(\\mathscr{C}\\) sur une sous-catégorie pleine de \\(\\widehat{\\mathscr{C}}\\), et une équivalence de \\(\\mathscr{C}\\) avec la sous-catégorie\npleine de \\(\\widehat{\\mathscr{C}}\\) formée des foncteurs <em>représentables</em> (i.e. isomorphes à un foncteur de la\nforme \\(h_X\\)). Dans la suite, nous identifierons souvent X et \\(h_X\\). Les numéros suivants\nont pour but de montrer que cette identification peut se faire sans danger.</p>"
+    },
+    {
+     "id": "I.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.2\">1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un monomorphisme de \\(\\widehat{\\mathscr{C}}\\) n'est autre qu'un morphisme \\(F \\to G\\) tel que pour\n\\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), l'application d'ensembles correspondante \\(F(S) \\to G(S)\\) soit injective. On\ndira que F est un <em>sous-objet</em> (ou un <em>sous-foncteur</em>) de G si \\(F(S)\\) est un sous-ensemble\nde \\(G(S)\\) pour chaque S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans \\(\\widehat{\\mathscr{C}}\\) les limites projectives « quelconques » existent et se calculent par\n\\[\n(\\varprojlim_i F_i)(S) = \\varprojlim_i F_i(S),\n\\]\nen particulier les produits fibrés par\n\\[\n(F \\underset{G}{\\times} F')(S) = F(S) \\underset{G(S)}{\\times} F'(S).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous choisirons comme objet final de \\(\\widehat{\\mathscr{C}}\\) le foncteur \\(\\underline{e}\\) tel que \\(\\underline{e}(S) = \\{\\varnothing\\}\\). Tout\n\\(F \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\) possède un morphisme unique dans \\(\\underline{e}\\) et on pose\n\\[\nF \\times F' = F \\underset{\\underline{e}}{\\times} F'.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(F \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\) on pose\n\\[\n\\Gamma(F) = \\mathrm{Hom}(\\underline{e}, F);\n\\]\nun élément de \\(\\Gamma(F)\\) est donc une famille \\((\\gamma_S)_{S \\in \\mathrm{Ob}(\\mathscr{C})}\\), \\(\\gamma_S \\in F(S)\\) telle que pour toute\nflèche \\(f : S' \\to S''\\) de \\(\\mathscr{C}\\), on ait \\(F(f)(\\gamma_{S''}) = \\gamma_{S'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur \\(h\\) commute aux limites projectives ; en particulier pour que \\(X \\times X'\\)\nexiste (\\(X, X' \\in \\mathrm{Ob}(\\mathscr{C})\\)), resp. pour que \\(\\mathscr{C}\\) admette un objet final \\(e\\), il faut et il suffit\nque \\(h_X \\times h_{X'}\\) soit représentable, resp. \\(\\underline{e}\\) soit représentable, et on a\n\\[\nh_X \\times h_{X'} \\simeq h_{X \\times X'} \\ , \\qquad h_e \\simeq \\underline{e}.\n\\]\nOn pose \\(\\Gamma(X) = \\Gamma(h_X)\\) pour \\(X \\in \\mathrm{Ob}(\\mathscr{C})\\). Si \\(\\mathscr{C}\\) a un objet final \\(e\\), on a donc un\nisomorphisme \\(\\Gamma(X) \\simeq \\mathrm{Hom}(e, X)\\).</p>"
+    },
+    {
+     "id": "I.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.3\">1.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\). On dénote par \\(\\mathscr{C}_{/S}\\) la catégorie des objets de \\(\\mathscr{C}\\) au-dessus de\nS, c'est-à-dire la catégorie dont les objets sont les flèches \\(f : T \\to S\\) de \\(\\mathscr{C}\\), l'ensemble\n\\(\\mathrm{Hom}(f, f')\\) étant le sous-ensemble de \\(\\mathrm{Hom}(T, T')\\) formé des u tels que \\(f = f' \\circ u\\).\nSi \\(\\mathscr{C}\\) possède un objet final \\(e\\), alors \\(\\mathscr{C}_{/e}\\) est isomorphe à \\(\\mathscr{C}\\). La catégorie \\(\\mathscr{C}_{/S}\\) possède\nun objet final : la flèche identique \\(S \\to S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(f : T \\to S\\) est un objet de \\(\\mathscr{C}_{/S}\\), alors on peut former la catégorie \\((\\mathscr{C}_{/S})_{/f}\\) que\nl'on note par abus de langage \\((\\mathscr{C}_{/S})_{/T}\\) et on a un isomorphisme canonique\n\\[\n\\mathscr{C}_{/T} \\simeq (\\mathscr{C}_{/S})_{/T}.\n\\]\nCette construction s'applique en particulier aux catégories \\(\\widehat{\\mathscr{C}}\\), \\(\\widehat{\\mathscr{C}_{/S}}\\), etc…, on définit\nen particulier la catégorie \\(\\widehat{\\mathscr{C}}_{/h_S}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(f : T \\to S\\) est un objet de \\(\\mathscr{C}_{/S}\\), alors \\(\\Gamma(f)\\) s'identifie à l'ensemble \\(\\Gamma(T/S)\\) des\nsections de T au-dessus de S, c'est-à-dire des flèches \\(S \\to T\\) inverses à droite de \\(f\\).\nRemarquons que \\(h_f : h_T \\to h_S\\) est alors un objet de \\(\\widehat{\\mathscr{C}}/h_S\\) et que l'on a :\n\\[\n\\Gamma(h_f) \\simeq \\Gamma(h_T/h_S) \\simeq \\Gamma(T/S) \\simeq \\Gamma(f).\n\\]</p>"
+    },
+    {
+     "id": "I.1.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.4\">1.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On se propose maintenant de définir une équivalence des catégories \\(\\widehat{\\mathscr{C}_{/S}}\\) et\n\\(\\widehat{\\mathscr{C}}/h_S\\), c'est-à-dire de prouver que « se donner un foncteur sur la catégorie des objets\nde \\(\\mathscr{C}\\) au-dessus de S, c'est « la même chose » que se donner un foncteur sur \\(\\mathscr{C}\\) muni\nd'un morphisme dans \\(h_S\\) ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) Construction de \\(\\alpha_S : \\widehat{\\mathscr{C}}/h_S \\to \\widehat{\\mathscr{C}_{/S}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit d'abord \\(H : F \\to h_S\\) un objet de \\(\\widehat{\\mathscr{C}}/h_S\\). On doit définir un foncteur \\(\\alpha_S(H)\\)\nsur \\(\\mathscr{C}_{/S}\\). Soit donc d'abord \\(f : T \\to S\\) un objet de \\(\\mathscr{C}_{/S}\\) ; définissons \\(\\alpha_S(H)(f)\\) comme\nl'image inverse de \\(f \\in h_S(T)\\) par l'application \\(H(T) : F(T) \\to h_S(T)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit ensuite \\(u : f \\to f'\\) une flèche de \\(\\mathscr{C}_{/S}\\) ; alors \\(F(u) : F(T') \\to F(T)\\) induit une\napplication de \\(\\alpha_S(H)(f')\\) dans \\(\\alpha_S(H)(f)\\) que l'on note \\(\\alpha_S(H)(u)\\). On vérifie aussitôt\nque les applications\n\\[\nf \\longmapsto \\alpha_S(H)(f) \\ , \\qquad u \\longmapsto \\alpha_S(H)(u)\n\\]\ndéfinissent bien un foncteur sur \\(\\mathscr{C}_{/S}\\), donc un objet de \\(\\widehat{\\mathscr{C}_{/S}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient enfin \\(H : F \\to h_S\\) et \\(H' : F' \\to h_S\\) deux objets de \\(\\widehat{\\mathscr{C}}/h_S\\) et \\(U : H \\to H'\\) un\nmorphisme de \\(\\widehat{\\mathscr{C}}/h_S\\),\n\\[\n\\xymatrix{\nF \\ar[rr]^-{U} \\ar[dr]_-{H} &amp; &amp; F' \\ar[dl]^-{H'} \\\\\n&amp; h_S &amp;\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Alors pour tout \\(f : T \\to S\\), \\(U(T) : F(T) \\to F'(T)\\) induit une application\n\\[\n\\alpha_S(U)(f) : \\alpha_S(H)(f) \\longrightarrow \\alpha_S(H')(f),\n\\]\nce qui définit un morphisme de foncteurs\n\\[\n\\alpha_S(U) : \\alpha_S(H) \\longrightarrow \\alpha_S(H').\n\\]\nOn vérifie aisément que les applications\n\\[\nH \\longmapsto \\alpha_S(H) \\ , \\qquad U \\longmapsto \\alpha_S(U)\n\\]\ndéfinissent bien un foncteur \\(\\alpha_S : \\widehat{\\mathscr{C}}/h_S \\to \\widehat{\\mathscr{C}_{/S}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii)</p>"
+    },
+    {
+     "id": "I.1.4.1",
+     "type": "proposition",
+     "label": "1.4.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4.1</span></div>\n  <div class=\"thm-body\"><p>Le foncteur \\(\\alpha_S : \\widehat{\\mathscr{C}}/h_S \\to \\widehat{\\mathscr{C}_{/S}}\\) est une équivalence de catégories.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indiquons seulement le principe de la construction d'un foncteur quasi-inverse \\(\\beta_S :\n\\widehat{\\mathscr{C}_{/S}} \\to \\widehat{\\mathscr{C}}/h_S\\). Soit G un foncteur de \\(\\mathscr{C}_{/S}\\) ; pour tout objet T de \\(\\mathscr{C}\\), on pose\n\\[\n\\beta_S(G)(T) = \\text{somme des ensembles } G(f) \\text{ pour } f \\in \\mathrm{Hom}(T, S) = h_S(T),\n\\]\nce qui définit un foncteur \\(\\beta_S(G)\\) sur \\(\\mathscr{C}\\), qui est muni d'une projection évidente sur\n\\(h_S\\).</p>"
+    },
+    {
+     "id": "I.1.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.5\">1.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'équivalence \\(\\alpha_S\\) commute aux foncteurs \\(\\Gamma\\). En d'autres termes, si \\(H : F \\to h_S\\)\nest un objet de \\(\\widehat{\\mathscr{C}}/h_S\\) et \\(\\alpha_S(H)\\) l'objet correspondant de \\(\\widehat{\\mathscr{C}_{/S}}\\), on a\n\\[\n\\Gamma(\\alpha_S(H)) \\simeq \\Gamma(H) \\simeq \\Gamma(F/h_S).\n\\]\nL'équivalence \\(\\alpha_S\\) commute aux foncteurs \\(h\\) : si \\(f : T \\to S\\) est un objet de \\(\\mathscr{C}_{/S}\\),\n\\(h_f : h_T \\to h_S\\) est un objet de \\(\\widehat{\\mathscr{C}}/h_S\\) dont le transformé par \\(\\alpha_S\\) n'est autre que\n\\(h_{\\mathscr{C}_{/S}}(f)\\), où\n\\[\nh_{\\mathscr{C}_{/S}} : \\mathscr{C}_{/S} \\longrightarrow \\widehat{\\mathscr{C}_{/S}}\n\\]\nest le foncteur canonique. En conséquence :</p>"
+    },
+    {
+     "id": "I.1.5.1",
+     "type": "proposition",
+     "label": "1.5.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.5.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(H : F \\to h_S\\) un objet de \\(\\widehat{\\mathscr{C}}/h_S\\). Pour que \\(\\alpha_S(H) : \\mathscr{C}_{/S} \\to\n(\\mathrm{Ens})\\) soit représentable, il faut et il suffit que \\(F : \\mathscr{C} \\to (\\mathrm{Ens})\\) soit représentable ; si\n\\(F \\simeq h_T\\), alors \\(\\alpha_S(H)\\) est représentable par l'objet \\(T \\to S\\) de \\(\\mathscr{C}_{/S}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'équivalence \\(\\alpha_S\\) est transitive en S : si \\(T \\in \\mathrm{Ob}(\\mathscr{C}_{/S})\\), on a un diagramme commutatif d'équivalence\n\\[\n\\xymatrix{\n(\\widehat{\\mathscr{C}}/h_S)_{/h_T} \\ar[rr]^-{\\alpha_S/h_T} \\ar[d]_-{\\simeq} &amp; &amp; (\\widehat{\\mathscr{C}_{/S}})_{/h_T} \\ar[r]^-{\\alpha_{h_T}} &amp; (\\widehat{\\mathscr{C}_{/S}})_{/T} \\ar[d]^-{\\simeq} \\\\\n\\widehat{\\mathscr{C}}/h_T \\ar[rrr]_-{\\alpha_T} &amp; &amp; &amp; \\widehat{\\mathscr{C}_{/T}}\n}\n\\]\noù \\(\\alpha_S/h_T\\) désigne (provisoirement) la restriction (cf. <a class=\"ref\" href=\"#I.1.6\">1.6</a>) du foncteur \\(\\alpha_S\\) aux objets\nau-dessus de \\(h_T\\).</p>"
+    },
+    {
+     "id": "I.1.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.6\">1.6. Changement de base dans un foncteur.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), on a un foncteur canonique\n\\[\ni_S : \\mathscr{C}_{/S} \\longrightarrow \\mathscr{C}\n\\]\ndéfini par \\(i_S(f) = T\\) si \\(f\\) est la flèche \\(T \\to S\\). Si \\(f : T \\to S\\) est un objet de \\(\\mathscr{C}_{/S}\\), on\nnote \\(i_{T/S} = i_f\\) :\n\\[\ni_{T/S} : (\\mathscr{C}_{/S})_{/T} \\longrightarrow \\mathscr{C}_{/S},\n\\]\net on a le diagramme commutatif :\n\\[\n\\xymatrix{\n(\\mathscr{C}_{/S})_{/T} \\ar[r]^-{i_{T/S}} \\ar[d]_-{\\simeq} &amp; \\mathscr{C}_{/S} \\ar[d]^-{i_S} \\\\\n\\mathscr{C}_{/T} \\ar[r]_-{i_T} &amp; \\mathscr{C}\n}\n\\]\nc'est-à-dire, en identifiant \\((\\mathscr{C}_{/S})_{/T}\\) à \\(\\mathscr{C}_{/T}\\) comme nous le ferons désormais\n\\[\ni_S \\circ i_{T/S} = i_T.\n\\]\nDe la même manière, si on identifie \\(\\mathscr{C}\\) et \\(\\mathscr{C}_{/e}\\), lorsque \\(\\mathscr{C}\\) possède un objet final \\(e\\), alors\n\\(i_{S/e} : \\mathscr{C}_{/S} \\to \\mathscr{C}_{/e}\\) s'identifie à \\(i_S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(X \\in \\mathrm{Ob}(\\mathscr{C})\\) (resp. \\(X \\in \\mathrm{Ob}(\\mathscr{C}_{/S})\\)), soit \\(p_S(X)\\) (resp. \\(p_{T/S}(X)\\)) l'objet de \\(\\mathscr{C}_{/S}\\)\n(resp. de \\(\\mathscr{C}_{/T}\\)) lorsqu'il existe, défini par \\(X \\times S\\) (resp. \\(X \\times_S T\\)) muni de sa deuxième\nprojection :\n\\[\n\\xymatrix{ X\\times S \\ar[d]^-{p_S(X)} \\\\ S }\n\\qquad \\text{resp.} \\qquad\n\\xymatrix{ X\\times_S T \\ar[d]^-{p_{T/S}(X)} \\\\ T }\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur (partiellement défini) \\(p_S\\) (resp. \\(p_{T/S}\\)) s'appelle <em>foncteur de changement de\nbase</em>. C'est par définition du produit (resp. du produit fibré) le foncteur adjoint du\nfoncteur \\(i_S\\) (resp. \\(i_{T/S}\\)). On note également\n\\[\np_S(X) = X_S \\ , \\qquad p_{T/S}(X) = X_T.\n\\]\nLe foncteur \\(i_S\\) définit un foncteur (restriction)\n\\[\ni_S^* : \\widehat{\\mathscr{C}} \\longrightarrow \\widehat{\\mathscr{C}_{/S}};\n\\]\noù on note \\(F_S = i_S^*(F) = F \\circ i_S^{\\circ}\\). On a évidemment\n\\[\ni_{T/S}^* \\circ i_S^* = i_T^*,\n\\]\nc'est-à-dire pour tout foncteur \\(F \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\),\n\\[\n(F_S)_T = F_T.\n\\]\nLa notation demande une justification que voici :</p>"
+    },
+    {
+     "id": "I.1.6.1",
+     "type": "proposition",
+     "label": "1.6.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.6.1</span></div>\n  <div class=\"thm-body\"><p>Pour que le foncteur \\((h_X)_S : (\\mathscr{C}_{/S})^{\\circ} \\to (\\mathrm{Ens})\\) soit représentable,\nil faut et il suffit que le produit \\(X \\times S\\) existe. On a alors\n\\[\n(h_X)_S \\simeq h_{X_S}.\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci montre que \\(F_S\\) a deux interprétations : restriction du foncteur F à \\(\\mathscr{C}_{/S}\\), foncteur obtenu par changement de base \\(e \\leftarrow S\\). Ceci conduit à la notation suivante :\n\\[\n\\xymatrix{\nF \\ar@{-}[d] &amp; F_S \\ar@{-}[d] &amp; F_T \\ar@{-}[d] \\\\\ne &amp; S \\ar[l] &amp; T \\ar[l]\n}\n\\]\nqui rend bien compte des deux interprétations précédentes.\nRemarquons que l'on a\n\\[\n\\Gamma(F_S) \\simeq \\mathrm{Hom}(h_S, F) \\simeq F(S),\n\\]\nen particulier\n\\[\n\\Gamma(X_S) \\simeq \\mathrm{Hom}(S, X).\n\\]</p>"
+    },
+    {
+     "id": "I.1.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.7\">1.7. Objets <u>Hom</u>, <u>Isom</u>, ...</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient F et G deux objets de \\(\\widehat{\\mathscr{C}}\\). Nous allons définir\nun autre objet de \\(\\widehat{\\mathscr{C}}\\) de la manière suivante :\n\\[\n\\underline{\\mathrm{Hom}}(F,G)(S) = \\mathrm{Hom}_{\\widehat{\\mathscr{C}_{/S}}}(F_S, G_S) \\simeq \\mathrm{Hom}_{\\widehat{\\mathscr{C}}/h_S}(F\\times h_S, G\\times h_S) \\simeq \\mathrm{Hom}_{\\widehat{\\mathscr{C}}}(F\\times h_S, G).\n\\]\nL'objet \\(\\underline{\\mathrm{Hom}}(F,G)\\) défini ci-dessus possède les propriétés suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> <p>\\(\\underline{\\mathrm{Hom}}(\\underline{e}, G) \\simeq G\\)</p></li>\n<li><span class=\"item-label\">(ii)</span> <p>La formation de \\(\\underline{\\mathrm{Hom}}\\) commute à l'extension de la base :\n\\[\n\\underline{\\mathrm{Hom}}(F_S, G_S) \\simeq \\underline{\\mathrm{Hom}}(F,G)_S.\n\\]</p></li>\n<li><span class=\"item-label\">(iii)</span> <p>\\((F, G) \\mapsto \\underline{\\mathrm{Hom}}(F,G)\\) est un bifoncteur, contravariant en F et covariant en\nG.</p></li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces trois propriétés sont évidentes sur les définitions.\nSoit E un troisième objet de \\(\\widehat{\\mathscr{C}}\\). Nous allons définir un morphisme de trifoncteurs\n\\[\n\\underline{\\mathrm{Hom}}(E \\times F, G) \\longrightarrow \\underline{\\mathrm{Hom}}(E, \\underline{\\mathrm{Hom}}(F,G)).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f : E \\times F \\to G\\) ; nous devons lui associer un morphisme de E dans \\(\\underline{\\mathrm{Hom}}(F,G)\\).\nSoit donc \\(S' \\to S\\) une flèche de \\(\\mathscr{C}\\). On a des applications\n\\[\nE(S) \\times F(S') \\longrightarrow E(S') \\times F(S') \\xrightarrow{\\ f(S')\\ } G(S').\n\\]\nUn élément de \\(E(S)\\) définit donc pour tout \\(S' \\to S\\) une application de \\(F(S') \\to G(S')\\)\nfonctorielle en \\(S'\\), donc un élément de \\(\\underline{\\mathrm{Hom}}(F,G)(S)\\). Nous laissons au lecteur le soin\nde vérifier que l'on a bien construit ainsi un morphisme de trifoncteurs.</p>"
+    },
+    {
+     "id": "I.1.7.1",
+     "type": "proposition",
+     "label": "1.7.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.1.7.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.7.1</span></div>\n  <div class=\"thm-body\"><p>Le morphisme de foncteurs\n\\[\n\\underline{\\mathrm{Hom}}(E \\times F, G) \\longrightarrow \\underline{\\mathrm{Hom}}(E, \\underline{\\mathrm{Hom}}(F,G))\n\\]\nest un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indiquons seulement un principe de démonstration. Considérons les deux membres\ncomme des foncteurs en E. Le résultat annoncé est vrai si \\(E = h_X\\) ; en effet, ce\nn'est autre en ce cas que la définition du foncteur \\(\\underline{\\mathrm{Hom}}(F,G)\\). D'autre part les deux\nmembres comme foncteurs en E transforment limites inductives en limites projectives.\nEnfin, tout objet de \\(\\widehat{\\mathscr{C}}\\) est limite inductive d'objets de la forme \\(h_X\\).</p>"
+    },
+    {
+     "id": "I.1.7.2",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"I.1.7.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>On a \\(\\underline{\\mathrm{Hom}}(E, \\underline{\\mathrm{Hom}}(F,G)) \\simeq \\underline{\\mathrm{Hom}}(F, \\underline{\\mathrm{Hom}}(E,G))\\).\nEn particulier, faisant \\(E = \\underline{e}\\), et compte tenu de \\(\\underline{\\mathrm{Hom}}(\\underline{e},G) \\simeq G\\), on a\n\\[\n\\Gamma(\\underline{\\mathrm{Hom}}(F,G)) \\simeq \\mathrm{Hom}(F,G).\n\\]\nNotons que la composition des \\(\\underline{\\mathrm{Hom}}\\) fournit des morphismes fonctoriels\n\\[\n\\underline{\\mathrm{Hom}}(F,G) \\times \\underline{\\mathrm{Hom}}(G,H) \\longrightarrow \\underline{\\mathrm{Hom}}(F,H).\n\\]\nSi F et G sont deux objets de \\(\\widehat{\\mathscr{C}}\\), on note \\(\\mathrm{Isom}(F,G)\\) le sous-ensemble de\n\\(\\mathrm{Hom}(F,G)\\) formé des isomorphismes de F sur G. On définit alors un sous-objet\n\\(\\underline{\\mathrm{Isom}}(F,G)\\) de \\(\\underline{\\mathrm{Hom}}(F,G)\\) par :\n\\[\n\\underline{\\mathrm{Isom}}(F,G)(S) = \\mathrm{Isom}(F_S, G_S).\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a alors des isomorphismes\n\\[\n\\Gamma(\\underline{\\mathrm{Isom}}(F,G)) \\simeq \\mathrm{Isom}(F,G), \\qquad\n\\underline{\\mathrm{Isom}}(F,G) \\simeq \\underline{\\mathrm{Isom}}(G,F).\n\\]\nDans le cas particulier où \\(F = G\\), on pose\n\\[\n\\underline{\\mathrm{End}}(F) = \\underline{\\mathrm{Hom}}(F,F) \\ , \\qquad \\mathrm{End}(F) = \\mathrm{Hom}(F,F) \\simeq \\Gamma(\\underline{\\mathrm{End}}(F)),\n\\]\n\\[\n\\underline{\\mathrm{Aut}}(F) = \\underline{\\mathrm{Isom}}(F,F) \\ , \\qquad \\mathrm{Aut}(F) = \\mathrm{Isom}(F,F) \\simeq \\Gamma(\\underline{\\mathrm{Aut}}(F)).\n\\]\nLa formation des objets \\(\\underline{\\mathrm{Hom}}\\), \\(\\underline{\\mathrm{Isom}}\\), \\(\\underline{\\mathrm{Aut}}\\), \\(\\underline{\\mathrm{End}}\\) commute aux changements de base.\nRemarquons que l'on peut construire un objet isomorphe à \\(\\underline{\\mathrm{Isom}}(F,G)\\) de la manière suivante : on a un morphisme\n\\[\n\\underline{\\mathrm{Hom}}(F,G) \\times \\underline{\\mathrm{Hom}}(G,F) \\longrightarrow \\underline{\\mathrm{End}}(F);\n\\]\npermutant F et G, on déduit un morphisme\n\\[\n\\underline{\\mathrm{Hom}}(F,G) \\times \\underline{\\mathrm{Hom}}(G,F) \\longrightarrow \\underline{\\mathrm{End}}(F) \\times \\underline{\\mathrm{End}}(G).\n\\]\nD'autre part, le morphisme identique de F est un élément de \\(\\underline{\\mathrm{End}}(F)\\) et définit\ndonc un morphisme \\(\\underline{e} \\to \\underline{\\mathrm{End}}(F)\\). Faisant de même avec G et effectuant le produit,\non trouve un morphisme\n\\[\n\\underline{e} \\longrightarrow \\underline{\\mathrm{End}}(F) \\times \\underline{\\mathrm{End}}(G).\n\\]\nIl est alors immédiat que le produit fibré de \\(\\underline{e}\\) et de \\(\\underline{\\mathrm{Hom}}(F,G) \\times \\underline{\\mathrm{Hom}}(G,F)\\)\nau-dessus de \\(\\underline{\\mathrm{End}}(F) \\times \\underline{\\mathrm{End}}(G)\\) est isomorphe à \\(\\underline{\\mathrm{Isom}}(F,G)\\).\nToutes ces définitions s'appliquent en particulier au cas où \\(F = h_X\\), \\(G = h_Y\\).\nDans le cas où \\(\\underline{\\mathrm{Hom}}(h_X, h_Y)\\) est représentable par un objet de \\(\\mathscr{C}\\), on note cet objet\n\\(\\underline{\\mathrm{Hom}}(X, Y)\\). Il possède la propriété suivante : si \\(Z \\times X\\) existe, alors\n\\[\n\\mathrm{Hom}(Z, \\underline{\\mathrm{Hom}}(X,Y)) \\simeq \\mathrm{Hom}(Z \\times X, Y).\n\\]\nCette propriété le caractérise lorsque les produits existent dans \\(\\mathscr{C}\\).\nOn définit de même (lorsqu'ils veulent bien exister) des objets\n\\[\n\\underline{\\mathrm{Isom}}(X,Y) \\ , \\qquad \\underline{\\mathrm{End}}(X) \\ , \\qquad \\underline{\\mathrm{Aut}}(X);\n\\]\nremarquons simplement que d'après la construction donnée plus haut, \\(\\underline{\\mathrm{Isom}}(X,Y)\\)\nexiste chaque fois que les produits fibrés existent dans \\(\\mathscr{C}\\) et que \\(\\underline{\\mathrm{Hom}}(X,Y)\\), \\(\\underline{\\mathrm{Hom}}(Y,X)\\),\n\\(\\underline{\\mathrm{End}}(X)\\) et \\(\\underline{\\mathrm{End}}(Y)\\) existent.\nCeci s'applique également à des catégories de la forme \\(\\mathscr{C}_{/S}\\). Les objets correspondants\nseront notés de manière aussi explicite que possible par des symboles appropriés :\npar exemple, si T et T' sont deux objets de \\(\\mathscr{C}\\) au-dessus de S, on notera \\(\\underline{\\mathrm{Hom}}_S(T,T')\\)\nl'objet \\(\\underline{\\mathrm{Hom}}_{\\mathscr{C}_{/S}}(T/S, T'/S)\\) qui sera donc un objet de \\(\\mathscr{C}\\) au-dessus de S, ...</p>"
+    },
+    {
+     "id": "I.1.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.1.8\">1.8. Objets constants.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathscr{C}\\) une catégorie où les sommes directes et les produits\nfibrés existent et où les sommes directes commutent aux changements de base (par\nexemple la catégorie des schémas). Pour tout ensemble E et pour tout objet S de \\(\\mathscr{C}\\),\nsoit \\(E_S\\) la somme directe d'une famille \\((S_i)_{i \\in E}\\) d'objets de \\(\\mathscr{C}\\) tous isomorphes à S. Cet\nobjet est caractérisé par la formule\n\\[\n\\mathrm{Hom}(E_S, T) = \\mathrm{Hom}(E, \\mathrm{Hom}(S,T)), \\qquad T \\in \\mathrm{Ob}(\\mathscr{C}),\n\\]\noù le second Hom est pris dans la catégorie des ensembles.\nL'objet \\(E_S\\) est muni d'une projection canonique sur S, de telle façon que \\(E \\mapsto E_S\\)\nest en fait un foncteur de \\((\\mathrm{Ens})\\) dans \\(\\mathscr{C}_{/S}\\). Supposons que, \\(\\varnothing\\) désignant un objet initial\nde \\(\\mathscr{C}\\), le diagramme\n\\[\n\\xymatrix{\n\\varnothing \\ar[r] \\ar[d] &amp; S \\ar[d] \\\\\nS \\ar[r] &amp; S \\sqcup S\n}\n\\]\nsoit cartésien (c'est le cas de la catégorie des schémas). Alors le foncteur \\(E \\mapsto E_S\\)\ncommute aux limites projectives finies. En particulier :\n\\[\nE_S \\underset{S}{\\times} F_S = (E \\times F)_S.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(S' \\to S\\) est une flèche de \\(\\mathscr{C}\\), on a\n\\[\nE_{S'} = (E_S)_{S'}.\n\\]\nEn particulier, si \\(\\mathscr{C}\\) possède un objet final \\(e\\), on a\n\\[\nE_S = (E_e)_S.\n\\]\nUn objet de la forme \\(E_S\\) sera dit <em>objet constant</em>. Remarquons que l'on a un monomorphisme fonctoriel en E :\n\\[\nE \\longrightarrow \\Gamma(E_S/S)\n\\]\nqui associe à chaque \\(i \\in E\\), la section de \\(E_S\\) sur S définie par l'isomorphisme de S sur\n\\(S_i\\).\nSi \\(\\mathscr{C}\\) est la catégorie des schémas, alors \\(\\Gamma(E_S/S)\\) s'identifie aux applications localement constantes de l'espace topologique S dans l'ensemble E, l'application précédente\nassociant à chaque élément de E l'application constante correspondante. Remarquons\nqu'il résulte de ce qu'on vient de dire que \\(E_S\\) peut aussi être défini comme représentant\nle foncteur qui à tout \\(S'\\) au-dessus de S associe l'ensemble des fonctions localement\nconstantes de l'espace topologique \\(S'\\) dans l'ensemble E.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-2",
+   "title": "2. Structures algébriques",
+   "blocks": [
+    {
+     "id": "I.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.2\">2. Structures algébriques</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Étant donnée une espèce de structure algébrique dans la catégorie des ensembles,\nnous nous proposons de l'étendre à la catégorie \\(\\mathscr{C}\\). Traitons d'abord un exemple : le\ncas des groupes.</p>"
+    },
+    {
+     "id": "I.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.2.1\">2.1. Structures de groupe.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous gardons les notations du paragraphe précédent.</p>"
+    },
+    {
+     "id": "I.2.1.1",
+     "type": "definition",
+     "label": "2.1.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.1.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(G \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\). On appelle structure de \\(\\widehat{\\mathscr{C}}\\)-groupe sur G la\ndonnée pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\) d'une structure de groupe sur l'ensemble \\(G(S)\\), de telle\nmanière que pour toute flèche \\(f : S' \\to S''\\) de \\(\\mathscr{C}\\), l'application \\(G(f) : G(S'') \\to G(S')\\)\nsoit un homomorphisme de groupes. Si G et H sont deux \\(\\widehat{\\mathscr{C}}\\)-groupes, on appelle morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes de G dans H tout morphisme \\(u \\in \\mathrm{Hom}(G,H)\\) tel que pour tout\n\\(S \\in \\mathrm{Ob}(\\mathscr{C})\\) l'application d'ensembles \\(u(S) : G(S) \\to H(S)\\) soit un homomorphisme de\ngroupes.\nOn note \\(\\mathrm{Hom}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G,H)\\) l'ensemble des morphismes de \\(\\widehat{\\mathscr{C}}\\)-groupes de G dans H\net \\((\\widehat{\\mathscr{C}}\\text{-Gr.})\\) la catégorie des \\(\\widehat{\\mathscr{C}}\\)-groupes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Exemples.</em> — Soit \\(E \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\) ; l'objet \\(\\underline{\\mathrm{Aut}}(E)\\) est muni de manière évidente d'une\nstructure de \\(\\widehat{\\mathscr{C}}\\)-groupe. L'objet final \\(\\underline{e}\\) possède une structure de \\(\\widehat{\\mathscr{C}}\\)-groupe unique qui\nen fait un objet final de \\((\\widehat{\\mathscr{C}}\\text{-Gr.})\\).\nPour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), soit \\(e_G(S)\\) l'élément unité de \\(G(S)\\). La famille des \\(e_G(S)\\)\ndéfinit un élément \\(e_G \\in \\Gamma(G) = \\mathrm{Hom}(\\underline{e}, G)\\) qui est en fait un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes \\(\\underline{e} \\to G\\) et que l'on appelle <em>section unité</em> de G.\nRemarquons que se donner une structure de \\(\\widehat{\\mathscr{C}}\\)-groupe sur G revient à se donner\nune loi de composition sur G, c'est-à-dire un \\(\\widehat{\\mathscr{C}}\\)-morphisme\n\\[\n\\pi_G : G \\times G \\longrightarrow G\n\\]\ntelle que pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), \\(\\pi_G(S)\\) munisse \\(G(S)\\) d'une structure de groupe.\nDe la même manière, \\(u : G \\to H\\) est un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes si et seulement\nsi le diagramme suivant est commutatif :\n\\[\n\\xymatrix{\nG\\times G \\ar[r]^-{\\pi_G} \\ar[d]_-{(u,u)} &amp; G \\ar[d]^-{u} \\\\\nH\\times H \\ar[r]_-{\\pi_H} &amp; H\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un sous-objet H de G tel que, pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), \\(H(S)\\) soit un sous-groupe de\n\\(G(S)\\) possède évidemment une structure de \\(\\widehat{\\mathscr{C}}\\)-groupe induite par celle de G : c'est la\nseule pour laquelle le monomorphisme \\(H \\to G\\) soit un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes. Le\n\\(\\widehat{\\mathscr{C}}\\)-groupe H muni de cette structure est appelé <em>sous-\\(\\widehat{\\mathscr{C}}\\)-groupe</em> de G.\nSi G et H sont deux \\(\\widehat{\\mathscr{C}}\\)-groupes, le produit \\(G \\times H\\) est muni d'une structure de\n\\(\\widehat{\\mathscr{C}}\\)-groupe évidente : pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), on munit \\(G(S) \\times H(S)\\) de la structure\nde groupe produit des structures de groupes données sur \\(G(S)\\) et \\(H(S)\\). Le \\(\\widehat{\\mathscr{C}}\\)-groupe\n\\(G \\times H\\) muni de cette structure sera dit \\(\\widehat{\\mathscr{C}}\\)-groupe produit de G et de H (c'en est\nd'ailleurs le produit dans la catégorie des \\(\\widehat{\\mathscr{C}}\\)-groupes).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si G est un \\(\\widehat{\\mathscr{C}}\\)-groupe, alors pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), \\(G_S\\) est un \\(\\widehat{\\mathscr{C}_{/S}}\\)-groupe. Si G et\nH sont deux \\(\\widehat{\\mathscr{C}}\\)-groupes, on définira l'objet \\(\\underline{\\mathrm{Hom}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G,H)\\) de \\(\\mathscr{C}\\) par :\n\\[\n\\underline{\\mathrm{Hom}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G,H)(S) = \\mathrm{Hom}_{\\widehat{\\mathscr{C}_{/S}}\\text{-Gr.}}(G_S, H_S)\n\\]\n(<em>Nota</em> : \\(\\underline{\\mathrm{Hom}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}\\) n'est pas en général un \\(\\widehat{\\mathscr{C}}\\)-groupe, ni a fortiori l'objet \\(\\underline{\\mathrm{Hom}}\\) dans\nla catégorie \\((\\widehat{\\mathscr{C}}\\text{-Gr.})\\)).\nOn définit de même les objets\n\\[\n\\underline{\\mathrm{Isom}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G,H) \\ , \\qquad \\underline{\\mathrm{End}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G) \\ , \\qquad \\underline{\\mathrm{Aut}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G).\n\\]</p>"
+    },
+    {
+     "id": "I.2.1.2",
+     "type": "definition",
+     "label": "2.1.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.1.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(G \\in \\mathrm{Ob}(\\mathscr{C})\\). On appelle structure de \\(\\mathscr{C}\\)-groupe sur G une\nstructure de \\(\\widehat{\\mathscr{C}}\\)-groupe sur \\(h_G \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\). On appelle morphisme du \\(\\mathscr{C}\\)-groupe G dans\nle \\(\\mathscr{C}\\)-groupe H un élément \\(u \\in \\mathrm{Hom}(G,H) \\simeq \\mathrm{Hom}(h_G, h_H)\\) qui définit un morphisme\nde \\(\\widehat{\\mathscr{C}}\\)-groupe de \\(h_G\\) dans \\(h_H\\).\nOn note \\((\\mathscr{C}\\text{-Gr.})\\) la catégorie des \\(\\mathscr{C}\\)-groupes. Notons qu'il existe dans \\((\\mathrm{Cat})\\) un\ncarré cartésien\n\\[\n\\xymatrix{\n(\\mathscr{C}\\text{-Gr.}) \\ar[r] \\ar[d] &amp; (\\widehat{\\mathscr{C}}\\text{-Gr.}) \\ar[d] \\\\\n\\mathscr{C} \\ar[r]_-{h} &amp; \\widehat{\\mathscr{C}}\n}\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Toutes les définitions et constructions précédentes se transportent donc aussitôt à\n\\((\\mathscr{C}\\text{-Gr.})\\) chaque fois que les foncteurs qu'elles font intervenir (produits, objets \\(\\underline{\\mathrm{Hom}}\\),\n...) sont représentables. Elles s'appliquent aussi aux catégories \\(\\mathscr{C}_{/S}\\). En ce cas, nous\nnoterons \\(\\underline{\\mathrm{Hom}}_{S\\text{-Gr.}}\\) pour \\(\\underline{\\mathrm{Hom}}_{\\widehat{\\mathscr{C}_{/S}}\\text{-Gr.}}\\), etc...</p>"
+    },
+    {
+     "id": "I.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.2.2\">2.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Plus généralement, si (T) est une espèce de structure sur n ensembles de\nbase définie par limites projectives finies (par exemple, par des commutativités de\ndiagrammes construits avec des produits cartésiens : structures de monoïde, groupe,\nd'ensemble à opérateurs, de module sur un anneau, d'algèbre de Lie sur un anneau...)\nla construction précédente permet de définir la notion de « structure d'espèce (T) sur\nn objets \\(F_1, \\ldots, F_n\\) de \\(\\widehat{\\mathscr{C}}\\) » : une telle structure sera la donnée pour chaque S de \\(\\mathscr{C}\\),\nd'une structure d'espèce (T) sur les ensembles \\(F_1(S), \\ldots, F_n(S)\\) de telle manière que\npour toute flèche \\(S' \\to S''\\) de \\(\\mathscr{C}\\), la famille d'applications \\((F_i(S'')) \\to (F_i(S'))\\) soit un\npoly-homomorphisme pour l'espèce de structure (T). On définit de manière semblable\nles morphismes de l'espèce de structure (T), d'où une catégorie \\((\\widehat{\\mathscr{C}} \\times \\widehat{\\mathscr{C}} \\cdots \\times \\widehat{\\mathscr{C}})^{(T)}\\). Le\nfoncteur pleinement fidèle \\((h \\times h \\times \\cdots \\times h)\\) permet alors de définir par image inverse\nla catégorie \\((\\mathscr{C} \\times \\mathscr{C} \\cdots \\times \\mathscr{C})^{(T)}\\), puis, comme il commute aux limites projectives, d'y\ntransporter toutes les propriétés, notions et notations fonctorielles introduites dans\n\\(\\widehat{\\mathscr{C}}\\). Supposons maintenant que dans \\(\\mathscr{C}\\) les produits fibrés existent, et soit (T) une\nespèce de structure algébrique définie par la donnée de certains morphismes entre\nproduits cartésiens satisfaisant à des axiomes consistant en certaines commutativités\nde diagrammes construits à l'aide des flèches précédentes. Une structure d'espèce (T)\nsur une famille d'objets de \\(\\mathscr{C}\\) sera donc définie par certains morphismes entre produits\ncartésiens satisfaisant à certaines conditions de commutation. Il en résulte que si \\(\\mathscr{C}\\)\net \\(\\mathscr{C}'\\) sont deux catégories possédant des produits et \\(f : \\mathscr{C} \\to \\mathscr{C}'\\) est un foncteur\ncommutant aux produits, alors pour toute famille d'objets \\((F_i)\\) de \\(\\mathscr{C}\\) munie d'une\nstructure d'espèce (T), la famille \\((f(F_i))\\) d'objets de \\(\\mathscr{C}'\\) sera par là-même munie elle\naussi d'une structure d'espèce (T). Tout \\(\\mathscr{C}\\)-groupe sera transformé en \\(\\mathscr{C}'\\)-groupe, tout\ncouple (\\(\\mathscr{C}\\)-anneau, \\(\\mathscr{C}\\)-module sur ce \\(\\mathscr{C}\\)-anneau) en un couple analogue dans \\(\\mathscr{C}'\\)...\nSoit en particulier \\(\\mathscr{C}\\) une catégorie satisfaisant aux conditions énoncées dans <a class=\"ref\" href=\"#I.1.8\">1.8</a> ;\nle foncteur \\(E \\mapsto E_S\\) défini loc. cit. commute aux limites projectives ; il transforme\ndonc groupe en S-groupe (i.e. \\(\\mathscr{C}_{/S}\\) groupe), anneau en S-anneau...</p>"
+    },
+    {
+     "id": "I.2.2.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"I.2.2.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>Il est bon de remarquer que le procédé de construction précédent appliqué à la catégorie \\(\\widehat{\\mathscr{C}}\\) redonne bien les notions que l'on y a déjà définies ; en d'autres\ntermes, il revient de même de se donner sur un objet de \\(\\widehat{\\mathscr{C}}\\) une structure d'espèce (T)\nquand on considère cet objet comme un foncteur sur \\(\\mathscr{C}\\), ou de se donner une structure\nd'espèce (T) sur le foncteur représentable sur \\(\\widehat{\\mathscr{C}}\\) défini par cet objet.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons encore traiter deux cas particuliers de la construction précédente, le\ncas des structures à groupe d'opérateurs et le cas des modules.</p>"
+    },
+    {
+     "id": "I.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.2.3\">2.3. Structures à groupes d'opérateurs.</h3>"
+    },
+    {
+     "id": "I.2.3.1",
+     "type": "definition",
+     "label": "2.3.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(E \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}})\\) et \\(G \\in \\mathrm{Ob}(\\widehat{\\mathscr{C}}\\text{-Gr.})\\). Une structure d'objet à\n\\(\\widehat{\\mathscr{C}}\\)-groupe d'opérateurs G (ou de G-objet) sur E est la donnée sur \\(E(S)\\), pour tout\n\\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), d'une structure d'ensemble à groupes d'opérateurs \\(G(S)\\) de telle manière\nque, pour toute flèche \\(S' \\to S''\\) de \\(\\mathscr{C}\\), l'application d'ensembles \\(E(S'') \\to E(S')\\) soit\ncompatible avec l'homomorphisme d'opérateurs \\(G(S'') \\to G(S')\\).\nComme d'habitude, il revient au même de se donner un morphisme\n\\[\n\\mu : G \\times E \\longrightarrow E\n\\]\nqui pour tout S munisse \\(E(S)\\) d'une structure d'ensemble à opérateurs \\(G(S)\\). Mais\n\\(\\underline{\\mathrm{Hom}}(G \\times E, E) \\simeq \\underline{\\mathrm{Hom}}(G, \\underline{\\mathrm{End}}(E))\\), donc \\(\\mu\\) définit un morphisme \\(G \\to \\underline{\\mathrm{End}}(E)\\)\net il est immédiat que celui-ci applique G dans \\(\\underline{\\mathrm{Aut}}(E)\\) et que c'est un morphisme\nde \\(\\widehat{\\mathscr{C}}\\)-groupes. En conséquence : <em>se donner sur E une structure d'objet à \\(\\widehat{\\mathscr{C}}\\)-groupe\nd'opérateurs G est équivalent à se donner un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes</em>\n\\[\n\\rho : G \\longrightarrow \\underline{\\mathrm{Aut}}(E).\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, tout élément \\(g \\in G(S)\\) définit un automorphisme \\(\\rho(g)\\) du foncteur \\(E_S\\),\nc'est-à-dire un automorphisme de \\(E \\times h_S\\) commutant à la projection \\(E \\times h_S \\to h_S\\),\net en particulier un automorphisme de l'ensemble \\(E(S')\\) pour tout \\(S' \\to S\\).</p>"
+    },
+    {
+     "id": "I.2.3.2",
+     "type": "definition",
+     "label": "2.3.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3.2</span></div>\n  <div class=\"thm-body\"><p>On note \\(E^G\\) le sous-objet de E défini comme suit :\n\\[\nE^G(S) = \\{x \\in E(S) \\mid x_{S'} \\text{ invariant sous } G(S') \\text{ pour tout } S' \\to S\\},\n\\]\noù \\(x_{S'}\\) désigne l'image de \\(x\\) par \\(E(S) \\to E(S')\\).\nAlors \\(E^G\\) (« sous-objet des invariants de G ») est le plus grand sous-objet de E sur\nlequel G opère trivialement.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "I.2.3.3",
+     "type": "definition",
+     "label": "2.3.3",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3.3</span></div>\n  <div class=\"thm-body\"><p>Soit F un sous-objet de E. On note \\(\\underline{\\mathrm{Norm}}_G F\\) et \\(\\underline{\\mathrm{Centr}}_G F\\) les\nsous-\\(\\widehat{\\mathscr{C}}\\)-groupes de G définis par\n\\[\n(\\underline{\\mathrm{Norm}}_G F)(S) = \\{g \\in G(S) \\mid \\rho(g)F_S \\subset F_S\\}\n= \\{g \\in G(S) \\mid \\rho(g)F(S') \\subset F(S'), \\text{ pour tout } S' \\to S\\},\n\\]\n\\[\n(\\underline{\\mathrm{Centr}}_G F)(S) = \\{g \\in G(S) \\mid \\rho(g)|_{F_S} = \\text{identité}\\}\n= \\{g \\in G(S) \\mid \\rho(g)|_{F(S')} = \\text{identité}, \\text{ pour tout } S' \\to S\\},\n\\]\noù la barre verticale après \\(\\rho(g)\\) désigne la restriction.</p></div>\n</div>"
+    },
+    {
+     "id": "I.2.3.4",
+     "type": "definition",
+     "label": "2.3.4",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3.4</span></div>\n  <div class=\"thm-body\"><p>Si G est un \\(\\mathscr{C}\\)-groupe et E un objet de \\(\\widehat{\\mathscr{C}}\\) (resp. E un objet de \\(\\mathscr{C}\\))\nune structure de G-objet sur E (resp. sur E) est une structure de \\(h_G\\)-objet sur E\n(resp. \\(h_E\\)).\nVu cette définition, toutes les notions et notations définies ci-dessus se transportent\nà \\(\\mathscr{C}\\), lorsqu'elles ne font intervenir que des foncteurs représentables : par exemple si\n\\(\\underline{\\mathrm{Norm}}_{h_G}(E)\\) est représentable, alors il existe un et un seul sous-objet de G qui le\nreprésente et qui est alors un sous-\\(\\mathscr{C}\\)-groupe de G, on le note \\(\\mathrm{Norm}_G(E)\\) ...</p></div>\n</div>"
+    },
+    {
+     "id": "I.2.3.5",
+     "type": "definition",
+     "label": "2.3.5",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3.5</span></div>\n  <div class=\"thm-body\"><p>a) On dit que le \\(\\widehat{\\mathscr{C}}\\)-groupe G <em>opère</em> sur le \\(\\widehat{\\mathscr{C}}\\)-groupe H si H est\nmuni d'une structure de G-groupe telle que, pour tout \\(g \\in G(S)\\), l'automorphisme de\n\\(H(S)\\) défini par g soit un automorphisme de groupe.\nIl revient au même de dire que pour tout \\(g \\in G(S)\\), l'automorphisme \\(\\rho(g)\\) de \\(H_S\\)\nest un automorphisme de \\(\\widehat{\\mathscr{C}_{/S}}\\)-groupes, ou encore que le morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes\n\\(G \\to \\underline{\\mathrm{Aut}}(H)\\) applique G dans \\(\\underline{\\mathrm{Aut}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(H)\\).</p>\n<p>b) Dans la situation ci-dessus, il existe sur le produit \\(H \\times G\\) une structure de\n\\(\\widehat{\\mathscr{C}}\\)-groupe unique telle que, pour tout S, \\(H(S) \\times G(S)\\) soit le produit semi-direct des\ngroupes \\(H(S)\\) et \\(G(S)\\) relativement à l'opération donnée de \\(G(S)\\) sur \\(H(S)\\). On notera\nce \\(\\widehat{\\mathscr{C}}\\)-groupe \\(H \\cdot G\\) et l'appellera <em>produit semi-direct</em> de H par G. On a donc par\ndéfinition\n\\[\n(H \\cdot G)(S) = H(S) \\cdot G(S).\n\\]\nSoit G un \\(\\widehat{\\mathscr{C}}\\)-groupe. Pour toute flèche \\(S' \\to S\\) de \\(\\mathscr{C}\\) et tout \\(g \\in G(S)\\), soit \\(\\mathrm{Int}(g)\\)\nl'automorphisme de \\(G(S')\\) défini par \\(\\mathrm{Int}(g)h = ghg^{-1}\\). Cette définition se prolonge en\ncelle d'un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes\n\\[\n\\mathrm{Int} : G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\widehat{\\mathscr{C}}\\text{-Gr.}}(G) \\subset \\underline{\\mathrm{Aut}}(G).\n\\]\nLa définition <a class=\"ref\" href=\"#I.2.3.3\">2.3.3</a> s'applique donc et on a des sous-\\(\\widehat{\\mathscr{C}}\\)-groupes de G\n\\[\n\\underline{\\mathrm{Norm}}_G(E) \\qquad \\text{et} \\qquad \\underline{\\mathrm{Centr}}_G(E)\n\\]\npour tout sous-objet E de G.</p></div>\n</div>"
+    },
+    {
+     "id": "I.2.3.6",
+     "type": "definition",
+     "label": "2.3.6",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.2.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3.6</span></div>\n  <div class=\"thm-body\"><p>On appelle <em>centre</em> de G et on note \\(\\underline{\\mathrm{Centr}}(G)\\) le sous-\\(\\widehat{\\mathscr{C}}\\)-groupe\n\\(\\underline{\\mathrm{Centr}}_G(G)\\) de G. On dit que G est <em>commutatif</em> si \\(\\underline{\\mathrm{Centr}}(G) = G\\) ou, ce qui revient au\nmême, si \\(G(S)\\) est commutatif pour tout S. On dit que le sous-\\(\\widehat{\\mathscr{C}}\\)-groupe H de\nG est <em>invariant</em> dans G si \\(\\underline{\\mathrm{Norm}}_G(H) = G\\), ou, ce qui revient au même, si \\(H(S)\\) est\ninvariant dans \\(G(S)\\) pour tout S.\nBeaucoup de définitions et de propositions de la théorie élémentaire des groupes se\ntransposent aisément ; signalons simplement la suivante qui nous sera utile :</p></div>\n</div>"
+    },
+    {
+     "id": "I.2.3.7",
+     "type": "proposition",
+     "label": "2.3.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.2.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.3.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : W \\to G\\) un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes. Posons \\(H(S) = \\mathrm{Ker}\\, f(S)\\). Soit \\(u : G \\to W\\) un morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes qui soit une section de \\(f\\)\n(et qui est alors nécessairement un monomorphisme). Alors W s'identifie au produit\nsemi-direct de H par G pour l'opération de G sur H définie par \\((g,h) \\mapsto \\mathrm{Int}(u(g))h\\)\npour \\(g \\in G(S)\\), \\(h \\in H(S)\\), \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'ensemble de ces définitions et propositions se transpose comme d'habitude à \\(\\mathscr{C}\\).\nOn définit en particulier le produit semi-direct de deux \\(\\mathscr{C}\\)-groupes H et G (G opérant\nsur H) lorsque le produit cartésien \\(H \\times G\\) existe, et on a l'analogue de la proposition\n<a class=\"ref\" href=\"#I.2.3.7\">2.3.7</a> sous la forme suivante :</p>"
+    },
+    {
+     "id": "I.2.3.8",
+     "type": "proposition",
+     "label": "2.3.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.2.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.3.8</span></div>\n  <div class=\"thm-body\"><p>Soit \\(H \\xrightarrow{\\ i\\ } W \\xrightarrow{\\ f\\ } G\\) une suite de morphismes de \\(\\mathscr{C}\\)-groupes telle\nque, pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), \\((H(S), i(S))\\) soit un noyau de \\(f(S) : W(S) \\to G(S)\\). Soit\n\\(u : G \\to W\\) un morphisme de \\(\\mathscr{C}\\)-groupes qui soit une section de \\(f\\). Alors W s'identifie\nau produit semi-direct de H par G pour l'opération de G sur H définie par : si\n\\(g \\in G(S)\\) et \\(h \\in H(S)\\), on ait\n\\[\n\\mathrm{Int}(u(g))\\, i(h) = i({}^{g}h).\n\\]</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-3",
+   "title": "3. La catégorie des O-modules, la catégorie des G-O-modules",
+   "blocks": [
+    {
+     "id": "I.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.3\">3. La catégorie des O-modules, la catégorie des G-O-modules</h2>"
+    },
+    {
+     "id": "I.3.1",
+     "type": "definition",
+     "label": "3.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Soient O et F deux objets de \\(\\widehat{\\mathscr{C}}\\). On dit que F est un \\(\\widehat{\\mathscr{C}}\\)-module\nsur le \\(\\widehat{\\mathscr{C}}\\)-anneau O, ou en abrégé un O-module, si, pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), on a muni\n\\(O(S)\\) d'une structure d'anneau et \\(F(S)\\) d'une structure de module sur cet anneau de\ntelle manière que pour toute flèche \\(S' \\to S''\\) de \\(\\mathscr{C}\\), \\(O(S'') \\to O(S')\\) soit un homomorphisme\nd'anneaux et \\(F(S'') \\to F(S')\\) un homomorphisme de groupes abéliens compatible avec\ncet homomorphisme d'anneaux.\nSi O est fixé, on définit de manière habituelle un morphisme des O-modules F et\nF', d'où le groupe commutatif \\(\\mathrm{Hom}_O(F,F')\\), et la catégorie des O-modules notée\n\\((O\\text{-Mod.})\\). Remarquons que si \\(O_0\\) est le \\(\\widehat{\\mathscr{C}}\\)-anneau défini par \\(O_0(S) = \\mathbb{Z}\\) (qu'il ne\nfaut pas confondre avec le foncteur associé à l'objet constant \\(\\mathbb{Z}\\)), alors la\ncatégorie des \\(O_0\\)-modules est isomorphe à la catégorie des \\(\\widehat{\\mathscr{C}}\\)-groupes commutatifs. La\ncatégorie \\((O\\text{-Mod.})\\) est abélienne.\nRemarquons que, si F est un O-module, alors pour tout \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\), \\(F_S\\) est un\n\\(O_S\\)-module. On peut donc définir un \\(\\widehat{\\mathscr{C}}\\)-groupe abélien \\(\\underline{\\mathrm{Hom}}_O(F,F')\\) par\n\\[\n\\underline{\\mathrm{Hom}}_O(F,F')(S) = \\mathrm{Hom}_{O_S}(F_S, F'_S).\n\\]\nOn définira de même des objets\n\\[\n\\underline{\\mathrm{Isom}}_O(F,F') \\ , \\qquad \\underline{\\mathrm{End}}_O(F) \\ , \\qquad \\underline{\\mathrm{Aut}}_O(F),\n\\]\nle dernier étant un \\(\\widehat{\\mathscr{C}}\\)-groupe pour la structure induite par la composition des automorphismes.</p></div>\n</div>"
+    },
+    {
+     "id": "I.3.2",
+     "type": "definition",
+     "label": "3.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>Soient O un \\(\\widehat{\\mathscr{C}}\\)-anneau, F un O-module et G un \\(\\widehat{\\mathscr{C}}\\)-groupe. On\nappelle structure de <em>G-O-module</em> sur F une structure de G-objet telle que pour\n\\(S \\in \\mathrm{Ob}(\\mathscr{C})\\) et tout \\(g \\in G(S)\\), l'automorphisme de \\(F(S)\\) défini par g soit un automorphisme\nde sa structure de \\(O(S)\\)-module.\nIl revient au même de dire que le morphisme de \\(\\widehat{\\mathscr{C}}\\)-groupes\n\\[\n\\rho : G \\longrightarrow \\underline{\\mathrm{Aut}}(F)\n\\]\ndéfini en <a class=\"ref\" href=\"#I.2.3\">2.3</a> applique G dans le sous-\\(\\widehat{\\mathscr{C}}\\)-groupe \\(\\underline{\\mathrm{Aut}}_O(F)\\) de \\(\\underline{\\mathrm{Aut}}(F)\\). Se donner une\nstructure de G-O-module sur le O-module F, c'est donc se donner un morphisme de\n\\(\\widehat{\\mathscr{C}}\\)-groupes\n\\[\n\\rho : G \\longrightarrow \\underline{\\mathrm{Aut}}_O(F).\n\\]\nOn définit de manière naturelle le groupe abélien\n\\[\n\\mathrm{Hom}_{G\\text{-}O}(F,F'),\n\\]\ndonc la catégorie additive des G-O-modules notée \\((G\\text{-}O\\text{-Mod.})\\). Le lecteur remarquera\nque cette dernière peut également se définir comme la catégorie des \\(O[G]\\)-modules,\noù \\(O[G]\\) est l'algèbre du \\(\\widehat{\\mathscr{C}}\\)-groupe G sur le \\(\\widehat{\\mathscr{C}}\\)-anneau O, dont la définition est claire.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Toutes les constructions de ce paragraphe se spécialisent aussitôt au cas où G (ou\nO, ou les deux) sont représentables par des objets de \\(\\mathscr{C}\\) qui sont par là-même munis\ndes structures algébriques correspondantes.\nNous avons traité succinctement le cas des principales structures algébriques rencontrées dans la suite de ce séminaire. Pour les autres (structure de O-algèbre de Lie\npar exemple), nous croyons que le lecteur aura eu suffisamment d'exemples dans ce\nparagraphe pour pouvoir dans chaque cas particulier faire fonctionner lui-même le\nmécanisme général esquissé en <a class=\"ref\" href=\"#I.2.2\">2.2</a>.\nNous allons maintenant appliquer ce que nous venons de faire à la catégorie des\nschémas notée (Sch) et plus généralement aux catégories \\((\\mathrm{Sch})_{/S}\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-4",
+   "title": "4. Structures algébriques dans la catégorie des schémas",
+   "blocks": [
+    {
+     "id": "I.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.4\">4. Structures algébriques dans la catégorie des schémas</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous nous permettrons, chaque fois qu'il n'y aura pas d'ambiguïté, les abus de\nlangage suivants : on désignera par T l'objet \\(T \\xrightarrow{f} S\\) de \\(\\mathscr{C}_{/S}\\), la donnée de \\(f\\)\n(« morphisme structural de T ») étant sous-entendue, et on identifiera \\(\\mathscr{C}\\) à une sous-catégorie de \\(\\widehat{\\mathscr{C}}\\). Compte tenu des compatibilités énoncées aux paragraphes précédents, ces identifications peuvent se faire sans danger.\nNous simplifierons d'autre part les appellations sur le modèle suivant : un (Sch)-groupe sera aussi appelé <em>schéma en groupes</em>, un \\((\\mathrm{Sch})_{/S}\\)-groupe <em>schéma en groupes\nsur S</em>, ou <em>S-schéma en groupes</em>, ou <em>S-groupe</em>, ou <em>A-groupe</em> lorsque S sera le spectre de\nl'anneau A.</p>"
+    },
+    {
+     "id": "I.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.1\">4.1. Schémas constants.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La catégorie des schémas satisfait aux conditions exigées\nen <a class=\"ref\" href=\"#I.1.8\">1.8</a>. On peut donc y définir les objets constants ; pour tout ensemble E, on a un\nschéma \\(E_{\\mathbb{Z}}\\) et pour tout schéma S, un S-schéma \\(E_S = (E_{\\mathbb{Z}})_S\\). Rappelons que pour\ntout schéma T, \\(\\mathrm{Hom}(T, E_S)\\) est l'ensemble des applications localement constantes de\nl'espace topologique T dans E.\nLe foncteur\n\\[\nE \\longmapsto E_S\n\\]\ncommute aux limites projectives finies. En particulier si G est un groupe, \\(G_S\\) est un\nS-schéma en groupes ; si O est un anneau, \\(O_S\\) est un S-schéma en anneaux.</p>"
+    },
+    {
+     "id": "I.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.2\">4.2. S-groupes affines.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelons un certain nombre de choses sur les S-schémas\naffines (EGA II, §1). On dit que le S-schéma T est <em>affine sur S</em> si l'image réciproque\nde tout ouvert affine de S est affine. La \\(\\mathscr{O}_S\\)-algèbre \\(f_*(\\mathscr{O}_T)\\), que l'on désigne par\n\\(\\mathscr{A}(T)\\), est alors quasi-cohérente (\\(f\\) désigne le morphisme structural de T). Réciproquement, à toute \\(\\mathscr{O}_S\\)-algèbre quasi-cohérente \\(\\mathscr{A}\\), on peut faire correspondre un S-schéma\naffine sur S noté \\(\\mathrm{Spec}\\ \\mathscr{A}\\). Ces foncteurs \\(T \\mapsto \\mathscr{A}(T)\\) et \\(\\mathscr{A} \\mapsto \\mathrm{Spec}\\ \\mathscr{A}\\) sont des équivalences quasi-inverses l'une de l'autre entre la catégorie des S-schémas affines sur S et la catégorie\nopposée à celle des \\(\\mathscr{O}_S\\)-algèbres quasi-cohérentes.\nIl en résulte que se donner une structure algébrique sur un S-schéma affine T est\néquivalente à se donner la structure correspondante sur \\(\\mathscr{A}(T)\\) dans la catégorie opposée\nà celle des \\(\\mathscr{O}_S\\)-algèbres quasi-cohérentes. En particulier, si G est un S-groupe affine\nsur S, \\(\\mathscr{A}(G)\\) est munie d'une structure de \\(\\mathscr{O}_S\\)-bigèbre augmentée, c'est-à-dire que l'on\na deux morphismes de \\(\\mathscr{O}_S\\)-algèbres\n\\[\n\\Delta : \\mathscr{A}(G) \\longrightarrow \\mathscr{A}(G) \\otimes_{\\mathscr{O}_S} \\mathscr{A}(G) \\ , \\qquad\n\\varepsilon : \\mathscr{A}(G) \\longrightarrow \\mathscr{O}_S,\n\\]\ncorrespondant aux morphismes de S-schémas\n\\[\n\\pi : G \\times G \\longrightarrow G \\ , \\qquad e_G : S \\longrightarrow G.\n\\]\nLes applications \\(\\Delta\\) et \\(\\varepsilon\\) vérifient les conditions suivantes (qui expriment que G est\nun S-monoïde) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(HA 1) \\(\\Delta\\) est <em>co-associatif</em> : le diagramme suivant est commutatif\n\\[\n\\xymatrix{\n&amp; \\mathscr{A}(G) \\otimes_{\\mathscr{O}_S} \\mathscr{A}(G) \\ar[dr]^-{\\mathrm{Id}\\otimes\\Delta} &amp; \\\\\n\\mathscr{A}(G) \\ar[ur]^-{\\Delta} \\ar[dr]_-{\\Delta} &amp; &amp; \\mathscr{A}(G)\\otimes\\mathscr{A}(G)\\otimes\\mathscr{A}(G) \\\\\n&amp; \\mathscr{A}(G) \\otimes_{\\mathscr{O}_S} \\mathscr{A}(G) \\ar[ur]_-{\\Delta\\otimes\\mathrm{Id}} &amp;\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(HA 2) : \\(\\Delta\\) est compatible avec \\(\\varepsilon\\) : les deux composés suivants sont l'identité\n\\[\n\\mathscr{A}(G) \\xrightarrow{\\ \\Delta\\ } \\mathscr{A}(G)\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G) \\xrightarrow{\\ \\mathrm{Id}\\otimes\\varepsilon\\ } \\mathscr{A}(G)\\otimes_{\\mathscr{O}_S}\\mathscr{O}_S \\xrightarrow{\\ \\sim\\ } \\mathscr{A}(G) \\ ,\n\\]\n\\[\n\\mathscr{A}(G) \\xrightarrow{\\ \\Delta\\ } \\mathscr{A}(G)\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G) \\xrightarrow{\\ \\varepsilon\\otimes\\mathrm{Id}\\ } \\mathscr{O}_S\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G) \\xrightarrow{\\ \\sim\\ } \\mathscr{A}(G).\n\\]\nProfitons de la circonstance pour remarquer une fois encore qu'il résulte de la définition d'une structure de S-groupe que, pour se donner une telle structure sur un\nS-schéma G affine sur S, il n'est pas nécessaire de vérifier quoi que ce soit sur \\(\\mathscr{A}(G)\\),\nmais simplement de munir chaque \\(G(S')\\) pour \\(S'\\) au-dessus de S d'une structure de\ngroupe fonctorielle en \\(S'\\). Cette remarque s'applique <em>mutatis mutandis</em> aux morphismes.</p>"
+    },
+    {
+     "id": "I.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.3\">4.3. Les groupes \\(\\mathbb{G}_a\\) et \\(\\mathbb{G}_m\\). L'anneau \\(\\mathbb{O}\\)</h3>"
+    },
+    {
+     "id": "I.4.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.3.1\">4.3.1.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathbb{G}_a\\) le foncteur de \\((\\mathrm{Sch})^{\\circ}\\) dans \\((\\mathrm{Ens})\\) défini par\n\\[\n\\mathbb{G}_a(S) = \\Gamma(S, \\mathscr{O}_S)\n\\]\nmuni de la structure de (Sch)-groupe définie par la structure de groupe additif de\nl'anneau \\(\\Gamma(S,\\mathscr{O}_S)\\). Il est représentable par un schéma affine que l'on notera \\(\\mathbb{G}_a\\), et\nqui est donc un schéma en groupes\n\\[\n\\mathbb{G}_a = \\mathrm{Spec}\\ \\mathbb{Z}[T].\n\\]\nEn effet, \\(\\mathbb{G}_a(S) = \\mathrm{Hom}(S,\\mathbb{G}_a) = \\mathrm{Hom}_{\\mathrm{Alg.}}(\\mathbb{Z}[T], \\Gamma(S,\\mathscr{O}_S)) \\simeq \\Gamma(S,\\mathscr{O}_S)\\).\nPour tout schéma S, on a donc un S-groupe affine sur S \\(\\mathbb{G}_{a,S}\\), qui correspond à la\n\\(\\mathscr{O}_S\\)-bigèbre \\(\\mathscr{O}_S[T]\\), avec l'application diagonale et l'augmentation définies par :\n\\[\n\\Delta(T) = T\\otimes 1 + 1\\otimes T \\ , \\qquad \\varepsilon(T) = 0.\n\\]</p>"
+    },
+    {
+     "id": "I.4.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.3.2\">4.3.2.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathbb{G}_m\\) le foncteur de \\((\\mathrm{Sch})^{\\circ}\\) dans \\((\\mathrm{Ens})\\) défini par\n\\[\n\\mathbb{G}_m(S) = \\Gamma(S,\\mathscr{O}_S)^{\\times},\n\\]\noù \\(\\Gamma(S,\\mathscr{O}_S)^{\\times}\\) désigne le groupe multiplicatif des éléments inversibles de l'anneau\n\\(\\Gamma(S,\\mathscr{O}_S)\\), muni de sa structure naturelle de (Sch)-groupe. Il est représentable par\nun schéma affine noté \\(\\mathbb{G}_m\\)\n\\[\n\\mathbb{G}_m = \\mathrm{Spec}\\ \\mathbb{Z}[T, T^{-1}] = \\mathrm{Spec}\\ \\mathbb{Z}[\\mathbb{Z}],\n\\]\noù \\(\\mathbb{Z}[\\mathbb{Z}]\\) désigne l'algèbre du groupe \\(\\mathbb{Z}\\) sur l'anneau \\(\\mathbb{Z}\\). En effet,\n\\[\n\\mathbb{G}_m(S) = \\mathrm{Hom}_{\\mathrm{Alg.}}(\\mathbb{Z}[T,T^{-1}], \\Gamma(S,\\mathscr{O}_S)) \\simeq \\Gamma(S,\\mathscr{O}_S)^{\\times}.\n\\]\nPour tout schéma S, on a donc un S-groupe affine sur S noté \\(\\mathbb{G}_{m,S}\\) qui correspond à\nla \\(\\mathscr{O}_S\\)-algèbre \\(\\mathscr{O}_S[\\mathbb{Z}]\\), avec l'application diagonale et l'augmentation définies par :\n\\[\n\\Delta(x) = x\\otimes x \\ , \\qquad \\varepsilon(x) = 1, \\qquad x \\in \\mathbb{Z}.\n\\]</p>"
+    },
+    {
+     "id": "I.4.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.3.3\">4.3.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathbb{O}\\) le foncteur \\(\\mathbb{G}_a\\) muni de sa structure de (Sch)-anneau. Il est\nreprésenté par le schéma \\(\\mathrm{Spec}\\ \\mathbb{Z}[T]\\) que l'on notera \\(\\mathbb{O}\\) lorsqu'on le considérera comme\nmuni de sa structure de <em>schéma d'anneaux</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout schéma S, on a donc un S-anneau affine sur S noté \\(\\mathbb{O}_S\\). (<em>Nota</em> : dans EGA\nII 1.7.13, \\(\\mathbb{O}_S\\) est noté \\(S[T]\\)).</p>"
+    },
+    {
+     "id": "I.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.4\">4.4. Groupes diagonalisables</h3>"
+    },
+    {
+     "id": "I.4.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.4.1\">4.4.1.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La construction de \\(\\mathbb{G}_m\\) se généralise comme suit : soit M un groupe\ncommutatif et \\(M_S\\) le S-schéma en groupes qui lui est associé par le procédé de <a class=\"ref\" href=\"#I.4.1\">4.1</a>.\nConsidérons le foncteur défini par\n\\[\n\\mathbf{D}(M)(S) = \\mathrm{Hom}_{\\mathrm{groupes}}(M, \\mathbb{G}_m(S)) \\simeq \\mathrm{Hom}_{S\\text{-Gr.}}(M_S, \\mathbb{G}_{m,S}).\n\\]\nC'est un \\((\\widehat{\\mathrm{Sch}})\\)-groupe commutatif qui est représentable par un <em>schéma en groupes</em>\nque l'on notera \\(\\mathbf{D}(M)\\) ; on aura donc par définition :\n\\[\n\\mathbf{D}(M) \\simeq \\underline{\\mathrm{Hom}}_{(\\mathrm{Sch})\\text{-Gr.}}(M_{\\mathbb{Z}}, \\mathbb{G}_m).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons en effet\n\\[\n\\mathbf{D}(M) = \\mathrm{Spec}\\ \\mathbb{Z}[M],\n\\]\noù \\(\\mathbb{Z}[M]\\) est l'algèbre du groupe M sur l'anneau \\(\\mathbb{Z}\\) ; on a\n\\[\n\\mathbf{D}(M)(S) = \\mathrm{Hom}_{\\mathrm{Alg.}}(\\mathbb{Z}[M], \\Gamma(S,\\mathscr{O}_S)) \\simeq \\mathrm{Hom}_{\\mathrm{groupes}}(M, \\Gamma(S,\\mathscr{O}_S)^{\\times})\n\\]\npar définition même de l'algèbre \\(\\mathbb{Z}[M]\\).</p>"
+    },
+    {
+     "id": "I.4.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.4.2\">4.4.2.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout schéma S on a donc un S-schéma en groupes affine sur S\n\\[\n\\mathbf{D}_S(M) = \\mathbf{D}(M)_S = \\underline{\\mathrm{Hom}}_{(\\mathrm{Sch})\\text{-Gr.}}(M_{\\mathbb{Z}}, \\mathbb{G}_m)_S = \\underline{\\mathrm{Hom}}_{S\\text{-Gr.}}(M_S, \\mathbb{G}_{m,S}).\n\\]\nIl est associé à la \\(\\mathscr{O}_S\\)-bigèbre \\(\\mathscr{O}_S[M]\\), munie de l'application diagonale et de l'augmentation définies par\n\\[\n\\Delta(x) = x\\otimes x \\quad \\text{et} \\quad \\varepsilon(x) = 1, \\qquad x \\in M.\n\\]</p>"
+    },
+    {
+     "id": "I.4.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.4.3\">4.4.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(f : M \\to N\\) est un homomorphisme de groupes commutatifs, on définit\nde manière évidente un morphisme de S-groupes\n\\[\n\\mathbf{D}_S(f) : \\mathbf{D}_S(N) \\longrightarrow \\mathbf{D}_S(M),\n\\]\nd'où un foncteur\n\\[\n\\mathbf{D}_S : M \\longmapsto \\mathbf{D}_S(M)\n\\]\nde la catégorie des <em>groupes abéliens</em> dans la catégorie des S-groupes affines sur S, que\nl'on peut aussi définir comme composé du foncteur \\(M \\mapsto M_S\\) et du foncteur\n\\(M_S \\mapsto \\underline{\\mathrm{Hom}}_{S\\text{-Gr.}}(M_S, \\mathbb{G}_{m,S})\\). Ce foncteur commute aux extensions de la base.\nUn S-groupe isomorphe à un groupe de la forme \\(\\mathbf{D}_S(M)\\) est dit <em>diagonalisable</em>.\nNotons que les éléments de M s'interprètent comme certains caractères de \\(\\mathbf{D}_S(M)\\),\nc'est-à-dire certains éléments de \\(\\mathrm{Hom}_{S\\text{-Gr.}}(\\mathbf{D}_S(M), \\mathbb{G}_{m,S})\\). (<em>Confer</em> <a class=\"ref\" href=\"#VIII\">VIII</a> 1).</p>"
+    },
+    {
+     "id": "I.4.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.4.4\">4.4.4.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donnons quelques exemples de groupes diagonalisables. On a d'abord\n\\[\n\\mathbf{D}(\\mathbb{Z}) = \\mathbb{G}_m \\ , \\qquad \\mathbf{D}(\\mathbb{Z}^r) = (\\mathbb{G}_m)^r.\n\\]\nOn pose\n\\[\n\\boldsymbol{\\mu}_n = \\mathbf{D}(\\mathbb{Z}/n\\mathbb{Z}),\n\\]\net on le nomme <em>groupe des racines n-ièmes de l'unité</em>. En effet, on a\n\\[\n\\boldsymbol{\\mu}_n(S) = \\mathrm{Hom}_{\\mathrm{groupes}}(\\mathbb{Z}/n\\mathbb{Z}, \\Gamma(S,\\mathscr{O}_S)^{\\times}) = \\{f \\in \\Gamma(S,\\mathscr{O}_S), f^n = 1\\}.\n\\]\nLe S-groupe \\(\\boldsymbol{\\mu}_{n,S}\\) correspond à la \\(\\mathscr{O}_S\\)-algèbre \\(\\mathscr{O}_S[T]/(T^n - 1)\\). Supposons en particulier que S soit le spectre d'un corps k de caractéristique \\(p = n\\). En posant \\(T - 1 = s\\), on trouve\n\\[\nk[T]/(T^p - 1) = k[s]/(s^p),\n\\]\nce qui montre que l'espace topologique sous-jacent à \\(\\boldsymbol{\\mu}_{p,k}\\) est réduit à un point, l'anneau local de ce point étant la k-algèbre artinienne \\(k[s]/(s^p)\\). (Dans le même ordre\nd'idées, signalons que les S-schémas \\(\\mathbb{G}_{a,S}\\), \\(\\mathbb{G}_{m,S}\\), \\(\\mathbb{O}_S\\) sont lisses sur S, que \\(\\mathbf{D}_S(M)\\) est\n<em>plat</em> sur S et qu'il est formellement lisse (resp. lisse) sur S si et seulement si aucune\ncaractéristique résiduelle de S ne divise la torsion de M (resp. et si de plus M est de\ntype fini), cf. Exp. VIII, 2.1).</p>"
+    },
+    {
+     "id": "I.4.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.5\">4.5. Autres exemples de groupes.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le procédé précédent s'applique aux\n« groupes classiques » (\\(\\mathrm{GL}_n, \\mathrm{Sp}_n, \\mathrm{O}_n\\dots\\)). On définira par exemple \\(\\mathbb{GL}_n\\) comme représentant le foncteur \\(\\mathbf{GL}_n\\) tel que :\n\\[\n\\mathbf{GL}_n(S) = \\mathrm{GL}(n, \\Gamma(S,\\mathscr{O}_S)) = \\mathrm{Aut}_{\\mathscr{O}_S}(\\mathscr{O}_S^n).\n\\]\nOn pourra le construire par exemple comme l'ouvert de \\(\\mathrm{Spec}\\ \\mathbb{Z}[T_{ij}]\\ 0 \\leqslant i,j \\leqslant n\\)\ndéfini par la fonction \\(f = \\det((T_{ij}))\\), c'est-à-dire \\(\\mathrm{Spec}\\ \\mathbb{Z}[T_{ij}, f^{-1}]\\).</p>"
+    },
+    {
+     "id": "I.4.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.6\">4.6. Foncteurs-modules dans la catégorie des schémas.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous nous proposons d'associer à tout \\(\\mathscr{O}_S\\)-module sur le schéma S, un \\(\\mathbf{O}_S\\)-module (où \\(\\mathbf{O}_S\\) désigne le foncteur-anneau introduit en <a class=\"ref\" href=\"#I.4.3.3\">4.3.3</a>). Ceci\npeut se faire de deux manières différentes. De façon précise</p>"
+    },
+    {
+     "id": "I.4.6.1",
+     "type": "definition",
+     "label": "4.6.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.4.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.6.1</span></div>\n  <div class=\"thm-body\"><p>Soit S un schéma. Pour tout \\(\\mathscr{O}_S\\)-module \\(\\mathscr{F}\\) on note \\(\\mathbf{V}(\\mathscr{F})\\) et\n\\(\\mathbf{W}(\\mathscr{F})\\) les foncteurs sur \\((\\mathrm{Sch})_{/S}\\) définis par :\n\\[\n\\mathbf{V}(\\mathscr{F})(S') = \\mathrm{Hom}_{\\mathscr{O}_{S'}}(\\mathscr{F} \\otimes_{\\mathscr{O}_S} \\mathscr{O}_{S'}, \\mathscr{O}_{S'}) \\ ,\n\\]\n\\[\n\\mathbf{W}(\\mathscr{F})(S') = \\Gamma(S', \\mathscr{F} \\otimes_{\\mathscr{O}_S} \\mathscr{O}_{S'})\n\\]\n(où \\(\\mathscr{F} \\otimes_{\\mathscr{O}_S} \\mathscr{O}_{S'}\\) désigne l'image inverse sur \\(S'\\) du \\(\\mathscr{O}_S\\)-Module \\(\\mathscr{F}\\)).\nAlors \\(\\mathbf{V}(\\mathscr{F})\\) et \\(\\mathbf{W}(\\mathscr{F})\\) sont munis de manière évidente d'une structure de \\(\\mathbf{O}_S\\)-modules (on rappelle que \\(\\mathbf{O}_S(S') = \\Gamma(S',\\mathscr{O}_{S'}) = \\mathbf{W}(\\mathscr{O}_S)(S')\\)), de telle façon que\nl'on a en fait défini deux foncteurs \\(\\mathbf{V}\\) et \\(\\mathbf{W}\\) de la catégorie des \\(\\mathscr{O}_S\\)-modules dans la\ncatégorie des \\(\\mathbf{O}_S\\)-modules, \\(\\mathbf{V}\\) étant contravariant et \\(\\mathbf{W}\\) covariant.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous nous restreignons dans la suite de ce paragraphe au cas où les \\(\\mathscr{O}_S\\)-modules\nen question sont quasi-cohérents, c'est-à-dire que nous considérons \\(\\mathbf{V}\\) et \\(\\mathbf{W}\\) comme\ndes foncteurs de la catégorie \\((\\mathscr{O}_S\\text{-Mod.q.c.})\\) des \\(\\mathscr{O}_S\\)-modules quasi-cohérents dans la\ncatégorie des \\(\\mathbf{O}_S\\)-modules\n\\[\n\\mathbf{V} : (\\mathscr{O}_S\\text{-Mod.q.c.})^{\\circ} \\longrightarrow (\\mathbf{O}_S\\text{-Mod.}), \\qquad\n\\mathbf{W} : (\\mathscr{O}_S\\text{-Mod.q.c.}) \\longrightarrow (\\mathbf{O}_S\\text{-Mod.}).\n\\]\n(<em>Nota</em> : le lecteur remarquera que, dans la suite, toutes les propositions qui ne font\nintervenir que le foncteur \\(\\mathbf{W}\\) sont valables sans cette restriction).</p>"
+    },
+    {
+     "id": "I.4.6.2",
+     "type": "proposition",
+     "label": "4.6.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.6.2</span></div>\n  <div class=\"thm-body\">\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p><em>Les foncteurs \\(\\mathbf{V}\\) et \\(\\mathbf{W}\\) commutent à l'extension de la base</em> : si \\(S'\\) est au-dessus de S et \\(\\mathscr{F}\\) est un \\(\\mathscr{O}_S\\)-Module quasi-cohérent, on a\n\\[\n\\mathbf{V}(\\mathscr{F} \\otimes \\mathscr{O}_{S'}) \\simeq \\mathbf{V}(\\mathscr{F})_{S'} \\ , \\qquad \\mathbf{W}(\\mathscr{F} \\otimes \\mathscr{O}_{S'}) \\simeq \\mathbf{W}(\\mathscr{F})_{S'}.\n\\]</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p><em>Les foncteurs \\(\\mathbf{V}\\) et \\(\\mathbf{W}\\) sont pleinement fidèles</em> : les applications canoniques\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{F}') \\longrightarrow \\mathrm{Hom}_{\\mathbf{O}_S}(\\mathbf{V}(\\mathscr{F}'),\\mathbf{V}(\\mathscr{F}))\n\\]\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{F}') \\longrightarrow \\mathrm{Hom}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F}),\\mathbf{W}(\\mathscr{F}'))\n\\]\nsont bijectives.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p><em>Les foncteurs \\(\\mathbf{V}\\) et \\(\\mathbf{W}\\) sont additifs</em> :\n\\[\n\\mathbf{V}(\\mathscr{F}\\oplus\\mathscr{F}') \\simeq \\mathbf{V}(\\mathscr{F}) \\underset{S}{\\times} \\mathbf{V}(\\mathscr{F}') \\ , \\qquad \\mathbf{W}(\\mathscr{F}\\oplus\\mathscr{F}') \\simeq \\mathbf{W}(\\mathscr{F}) \\underset{S}{\\times} \\mathbf{W}(\\mathscr{F}').\n\\]</p></li>\n  </ol>\n  <p>Les parties (i) et (iii) sont évidentes sur les définitions. Pour (ii), on prend pour \\(S'\\)\ndes ouverts de S. Nous laissons la démonstration au lecteur (pour \\(\\mathbf{V}\\), utiliser EGA\nII, 1.7.14).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "I.4.6.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.6.3\">4.6.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a des morphismes canoniques dans \\((\\mathbf{O}_S\\text{-Mod.})\\) :\n\\[\n\\mathbf{W}(\\mathscr{H}om_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{F}')) \\longrightarrow \\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F}),\\mathbf{W}(\\mathscr{F}')),\n\\]\n\\[\n\\mathbf{W}(\\mathscr{H}om_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{F}')) \\longrightarrow \\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{V}(\\mathscr{F}'),\\mathbf{V}(\\mathscr{F})).\n\\]\nCela résulte immédiatement de (i) et (ii).\nConsidérons maintenant \\(\\mathbf{W}(\\mathscr{F})\\) et \\(\\mathbf{V}(\\mathscr{F})\\) comme des foncteurs au-dessus de S. On\nsait (EGA II, 1.7.8) que \\(\\mathbf{V}(\\mathscr{F})\\) est représentable par un S-schéma affine sur S que\nl'on note \\(\\mathbb{V}(\\mathscr{F})\\) et que l'on appelle <em>fibré vectoriel</em> défini par \\(\\mathscr{F}\\),\n\\[\n\\mathbb{V}(\\mathscr{F}) = \\mathrm{Spec}\\ \\mathscr{S}(\\mathscr{F}),\n\\]\noù \\(\\mathscr{S}(\\mathscr{F})\\) désigne l'algèbre symétrique du \\(\\mathscr{O}_S\\)-module \\(\\mathscr{F}\\).</p>"
+    },
+    {
+     "id": "I.4.6.4",
+     "type": "proposition",
+     "label": "4.6.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.6.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(\\mathscr{F}\\) et \\(\\mathscr{F}'\\) deux \\(\\mathscr{O}_S\\)-modules quasi-cohérents, \\(\\mathscr{A}\\) une \\(\\mathscr{O}_S\\)-algèbre quasi-cohérente. On a un isomorphisme fonctoriel :\n\\[\n\\mathrm{Hom}_S(\\mathrm{Spec}\\ \\mathscr{A}, \\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F}),\\mathbf{W}(\\mathscr{F}'))) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\mathscr{O}_S}(\\mathscr{F}, \\mathscr{A} \\otimes_{\\mathscr{O}_S} \\mathscr{F}').\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, si on note \\(S' = \\mathrm{Spec}\\ \\mathscr{A}\\), le premier membre est canoniquement isomorphe à \\(\\mathrm{Hom}_{\\mathscr{O}_{S'}}(\\mathbf{W}(\\mathscr{F})_{S'}, \\mathbf{W}(\\mathscr{F}')_{S'})\\), c'est-à-dire par définition à\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_{S'}}(\\mathbf{W}(\\mathscr{F}\\otimes\\mathscr{O}_{S'}), \\mathbf{W}(\\mathscr{F}'\\otimes\\mathscr{O}_{S'}))\n\\]\n(cf. 4.6.2 (i)), ce qui par 4.6.2 (ii) peut aussi s'écrire\n\\[\n\\mathrm{Hom}_{\\mathscr{O}_{S'}}(\\mathscr{F}\\otimes\\mathscr{O}_{S'}, \\mathscr{F}'\\otimes\\mathscr{O}_{S'}) = \\mathrm{Hom}_{\\mathscr{O}_S}(\\mathscr{F}, f_*(f^*(\\mathscr{F}'))),\n\\]\noù on note \\(f : S' \\to S\\) le morphisme structural. Mais, par EGA II, 1.4.7, on a\n\\(f_*(f^*(\\mathscr{F}')) \\simeq \\mathscr{F}'\\otimes\\mathscr{A}\\), ce qui achève la démonstration.</p>"
+    },
+    {
+     "id": "I.4.6.4.cor",
+     "type": "corollaire",
+     "label": null,
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"I.4.6.4.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span></div>\n  <div class=\"thm-body\"><p>On a un isomorphisme canonique\n\\[\n\\mathbf{W}(\\mathscr{A}\\otimes\\mathscr{F}) \\simeq \\underline{\\mathrm{Hom}}_S(\\mathrm{Spec}\\ \\mathscr{A}, \\mathbf{W}(\\mathscr{F})).\n\\]\nEn effet, on prend \\(\\mathscr{F} = \\mathscr{O}_S\\) dans la formule précédente ; puis on fait varier S.</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.6.5",
+     "type": "proposition",
+     "label": "4.6.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.6.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.6.5</span></div>\n  <div class=\"thm-body\"><p>Si \\(\\mathscr{F}\\) et \\(\\mathscr{F}'\\) sont deux \\(\\mathscr{O}_S\\)-modules localement libres de type fini,\nles morphismes de 4.6.3 sont des isomorphismes.</p>\n  <p>En effet, pour tout \\(S' \\to S\\), on a\n\\[\n\\mathbf{W}(\\mathscr{H}om_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{F}'))(S') = \\Gamma(S', \\mathscr{H}om_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{F}')\\otimes\\mathscr{O}_{S'}) = \\mathrm{Hom}_{\\mathscr{O}_{S'}}(\\mathscr{F}\\otimes\\mathscr{O}_{S'}, \\mathscr{F}'\\otimes\\mathscr{O}_{S'}).\n\\]\nMais le second membre est bien isomorphe à \\(\\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F}),\\mathbf{W}(\\mathscr{F}'))(S')\\) et à\n\\(\\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{V}(\\mathscr{F}'),\\mathbf{V}(\\mathscr{F}))(S')\\), par 4.6.2 (i) et (ii).</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.6.5.1",
+     "type": "corollaire",
+     "label": "4.6.5.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"I.4.6.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.6.5.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(\\mathscr{F}\\) un \\(\\mathscr{O}_S\\)-module localement libre de type fini. Posons\n\\(\\mathscr{F}^{\\vee} = \\mathscr{H}om_{\\mathscr{O}_S}(\\mathscr{F},\\mathscr{O}_S)\\). On a des isomorphismes canoniques :\n\\[\n\\mathbf{W}(\\mathscr{F}^{\\vee}) \\simeq \\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F}),\\mathbf{O}_S) \\simeq \\mathbf{V}(\\mathscr{F}) \\ ,\n\\]\n\\[\n\\mathbf{V}(\\mathscr{F}^{\\vee}) \\simeq \\underline{\\mathrm{Hom}}_{\\mathbf{O}_S}(\\mathbf{V}(\\mathscr{F}),\\mathbf{O}_S) \\simeq \\mathbf{W}(\\mathscr{F}).\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a enfin la proposition suivante :</p>"
+    },
+    {
+     "id": "I.4.6.6",
+     "type": "proposition",
+     "label": "4.6.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.6.6</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : \\mathscr{F} \\to \\mathscr{F}'\\) un morphisme de \\(\\mathscr{O}_S\\)-modules localement libres\nde rang fini. Pour que \\(\\mathbf{W}(f) : \\mathbf{W}(\\mathscr{F}) \\to \\mathbf{W}(\\mathscr{F}')\\) soit un monomorphisme, il faut et\nil suffit que \\(f\\) identifie \\(\\mathscr{F}\\) localement à un facteur direct de \\(\\mathscr{F}'\\).</p>\n  <p>La proposition directe est essentiellement contenue dans (EGA 0.5.5.5). La proposition réciproque est pratiquement évidente.</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.4.7\">4.7. La catégorie des G-\\(\\mathscr{O}_S\\)-modules.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un S-groupe affine sur S et \\(\\mathscr{F}\\)\nun \\(\\mathscr{O}_S\\)-Module quasi-cohérent ; alors \\(\\mathbf{W}(\\mathscr{F})\\) est muni d'une structure de \\(\\mathbf{O}_S\\)-module.</p>"
+    },
+    {
+     "id": "I.4.7.1",
+     "type": "definition",
+     "label": "4.7.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"I.4.7.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.7.1</span></div>\n  <div class=\"thm-body\"><p>On appelle structure de <em>G-\\(\\mathscr{O}_S\\)-module</em> sur \\(\\mathscr{F}\\) une structure de\n\\(h_G\\text{-}\\mathbf{O}_S\\)-module sur \\(\\mathbf{W}(\\mathscr{F})\\). (cf. <a class=\"ref\" href=\"#I.3.2\">3.2</a>).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un morphisme de G-\\(\\mathscr{O}_S\\)-Modules est par définition un morphisme des \\(h_G\\text{-}\\mathbf{O}_S\\)-modules associés. On peut donc dire que l'on a construit la catégorie \\((G\\text{-}\\mathscr{O}_S\\text{-Mod.})\\)\nque l'on vient de définir par le carré cartésien :\n\\[\n\\xymatrix{\n(G\\text{-}\\mathscr{O}_S\\text{-Mod.}) \\ar[r] \\ar[d] &amp; (h_G\\text{-}\\mathbf{O}_S\\text{-Mod.}) \\ar[d] \\\\\n\\mathscr{O}_S\\text{-Mod.} \\ar[r]_-{\\mathbf{W}} &amp; \\mathbf{O}_S\\text{-Mod.}\n}\n\\]\nLa catégorie \\((G\\text{-}\\mathscr{O}_S\\text{-Mod.})\\) est abélienne.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "I.4.7.2h",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.7.2h\">4.7.2.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Se donner une structure de G-\\(\\mathscr{O}_S\\)-Module sur \\(\\mathscr{F}\\), c'est donc (par <a class=\"ref\" href=\"#I.3.2\">3.2</a>) se\ndonner un morphisme de \\((\\mathrm{Sch})_{/S}\\)-groupes\n\\[\nh_G \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F})).\n\\]\nEn vertu de <a class=\"ref\" href=\"#I.4.6.4\">4.6.4</a>, la donnée d'un morphisme de S-foncteurs\n\\[\n\\rho : h_G \\longrightarrow \\underline{\\mathrm{End}}_{\\mathbf{O}_S}(\\mathbf{W}(\\mathscr{F}))\n\\]\néquivaut à celle d'un morphisme de \\(\\mathscr{O}_S\\)-Modules\n\\[\n\\mu : \\mathscr{F} \\longrightarrow \\mathscr{A}(G) \\otimes_{\\mathscr{O}_S} \\mathscr{F}.\n\\]\nDire que \\(\\rho\\) est un morphisme de \\((\\mathrm{Sch})_{/S}\\)-groupes équivaut alors à dire que \\(\\mu\\) satisfait\naux axiomes suivants :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(CM 1) le diagramme suivant est commutatif\n\\[\n\\xymatrix{\n\\mathscr{F} \\ar[r]^-{\\mu} \\ar[d]_-{\\mu} &amp; \\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G) \\ar[d]^-{\\mathrm{Id}\\otimes\\Delta} \\\\\n\\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G) \\ar[r]_-{\\mu\\otimes\\mathrm{Id}} &amp; \\mathscr{F}\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G)\\otimes_{\\mathscr{O}_S}\\mathscr{A}(G)\n}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(CM 2) le composé\n\\[\n\\mathscr{F} \\xrightarrow{\\ \\mu\\ } \\mathscr{F}\\otimes\\mathscr{A}(G) \\xrightarrow{\\ \\mathrm{Id}\\otimes\\varepsilon\\ } \\mathscr{F}\\otimes\\mathscr{O}_S \\longrightarrow \\mathscr{F}\n\\]\nest l'identité.\nCes axiomes (CM 1) et (CM 2) sont ceux de la structure de <em>comodule</em> sur la bigèbre\n\\(\\mathscr{A}(G)\\). En résumé :</p>"
+    },
+    {
+     "id": "I.4.7.2",
+     "type": "proposition",
+     "label": "4.7.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.7.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.7.2</span></div>\n  <div class=\"thm-body\"><p>La construction précédente fournit une équivalence de la caté-\ngorie des G-\\(\\mathscr{O}_S\\)-modules quasi-cohérents (resp. G-\\(\\mathscr{O}_S\\)-modules) sur la catégorie des\ncomodules quasi-cohérents (resp. comodules) sur la \\(\\mathscr{O}_S\\)-bigèbre \\(\\mathscr{A}(G)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.7.3h",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"I.4.7.3h\">4.7.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant que G soit un <em>groupe diagonalisable</em>, c'est-à-dire\nque \\(\\mathscr{A}(G)\\) soit l'algèbre d'un groupe commutatif M sur le faisceau d'anneaux \\(\\mathscr{O}_S\\). Si\n\\(\\mathscr{F}\\) est un \\(\\mathscr{O}_S\\)-module, on a\n\\[\n\\mathscr{F} \\otimes \\mathscr{A}(G) = \\coprod_{m\\in M} \\mathscr{F} \\otimes m\\mathscr{O}_S.\n\\]\nSe donner un morphisme de \\(\\mathscr{O}_S\\)-modules\n\\[\n\\mu : \\mathscr{F} \\longrightarrow \\mathscr{F} \\otimes \\mathscr{A}(G)\n\\]\nest donc équivalent à se donner des \\(\\mathscr{O}_S\\)-endomorphismes \\((\\mu_m)_{m\\in M}\\) de \\(\\mathscr{F}\\), tels que\npour toute section \\(x\\) de \\(\\mathscr{F}\\) sur un ouvert de S, \\((\\mu_m(x))\\) soit une section de la somme\ndirecte \\(\\coprod_{m\\in M} \\mathscr{F}\\) (cela veut dire que sur tout ouvert suffisamment petit, il n'y ait\nqu'un nombre fini de restrictions des \\(\\mu_m(x)\\) qui soient non nulles).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour que \\(\\mu\\) définie par\n\\[\n\\mu(x) = \\sum_{m\\in M} \\mu_m(x) \\otimes m\n\\]\nvérifie (CM 1) (resp. (CM 2)) il faut et il suffit que l'on ait\n\\[\n\\mu_m \\circ \\mu_{m'} = \\delta_{mm'}\\mu_m, \\qquad \\Big(\\text{resp.} \\sum_{m\\in M} \\mu_m = \\mathrm{Id}_{\\mathscr{F}}\\Big),\n\\]\nce qui signifie que les \\(\\mu_m\\) sont des projecteurs deux à deux orthogonaux de somme\nl'identité. On a donc prouvé :</p>"
+    },
+    {
+     "id": "I.4.7.3",
+     "type": "proposition",
+     "label": "4.7.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.7.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.7.3</span></div>\n  <div class=\"thm-body\"><p>Si \\(G = \\mathbf{D}_S(M)\\) est un S-groupe diagonalisable, la catégorie des\nG-\\(\\mathscr{O}_S\\)-modules quasi-cohérents (resp. des G-\\(\\mathscr{O}_S\\)-modules) est équivalente à la catégorie\ndes \\(\\mathscr{O}_S\\)-Modules quasi-cohérents (resp. des \\(\\mathscr{O}_S\\)-modules) <em>gradués de type M</em>.</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.7.3.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"I.4.7.3.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>Si \\(\\mathscr{F}\\) est muni d'une structure de \\(\\mathscr{O}_S\\)-algèbre conservée par les opérations de G, alors la graduation de G est une graduation d'algèbre. Plus précisément :\nLe foncteur \\(\\mathscr{A} \\mapsto \\mathrm{Spec}\\ \\mathscr{A}\\) induit une équivalence entre la catégorie des \\(\\mathscr{O}_S\\)-algèbres quasi-cohérentes graduées de type M et la catégorie opposée à celle des S-schémas affines sur S à S-schéma en groupes d'opérateurs \\(G = \\mathbf{D}_S(M)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.4.7.4",
+     "type": "proposition",
+     "label": "4.7.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.4.7.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.7.4</span></div>\n  <div class=\"thm-body\"><p>Soit G un S-groupe diagonalisable. Si \\(0 \\to \\mathscr{F}_1 \\to \\mathscr{F}_2 \\to \\mathscr{F}_3 \\to 0\\)\nest une suite exacte de G-\\(\\mathscr{O}_S\\)-modules quasi-cohérents qui se scinde comme suite de\n\\(\\mathscr{O}_S\\)-modules, alors elle se scinde également comme suite de G-\\(\\mathscr{O}_S\\)-modules.</p>\n  <p>En effet chacun des \\(\\mathscr{F}_i\\) est gradué par des \\((\\mathscr{F}_i)_m\\) et pour chaque \\(m \\in M\\) la suite\n\\[\n0 \\longrightarrow (\\mathscr{F}_1)_m \\longrightarrow (\\mathscr{F}_2)_m \\longrightarrow (\\mathscr{F}_3)_m \\longrightarrow 0\n\\]\nde \\(\\mathscr{O}_S\\)-modules est scindée. La proposition précédente entraîne alors le résultat.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "I-5",
+   "title": "5. Cohomologie des groupes",
+   "blocks": [
+    {
+     "id": "I.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"I.5\">5. Cohomologie des groupes</h2>"
+    },
+    {
+     "id": "I.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.5.1\">5.1. Le complexe standard.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\mathscr{C}\\) une catégorie, G un \\(\\widehat{\\mathscr{C}}\\)-groupe, O\nun \\(\\widehat{\\mathscr{C}}\\)-anneau et F un G-O-module. On pose\n\\[\n\\mathrm{C}^n(G,F) = \\mathrm{Hom}(G^n, F) \\ , \\qquad \\underline{\\mathrm{C}}^n(G,F) = \\underline{\\mathrm{Hom}}(G^n, F), \\qquad n \\geqslant 0,\n\\]\noù \\(G^0\\) est l'objet final \\(\\underline{e}\\). Alors \\(\\underline{\\mathrm{C}}^n(G,F)\\) (resp. \\(\\mathrm{C}^n(G,F)\\)) est muni de manière évidente d'une structure de O-module (resp. \\(\\Gamma(O)\\)-module) et on a\n\\[\n\\mathrm{C}^n(G,F) \\cong \\Gamma(\\underline{\\mathrm{C}}^n(G,F)) \\ , \\qquad \\underline{\\mathrm{C}}^n(G,F)(S) = \\mathrm{C}^n(G_S, F_S).\n\\]\nSe donner un élément de \\(\\mathrm{C}^n(G,F)\\), c'est se donner pour chaque \\(S \\in \\mathrm{Ob}(\\mathscr{C})\\) une\nn-cochaîne de \\(G(S)\\) dans \\(F(S)\\), fonctoriellement en S. L'opérateur bord\n\\[\n\\partial : \\mathrm{C}^n(G(S), F(S)) \\longrightarrow \\mathrm{C}^{n+1}(G(S), F(S)),\n\\]\nqui, rappelons-le, est donné par la formule\n\\[\n\\partial f(g_1,\\ldots,g_{n+1}) = g_1 f(g_2,\\ldots,g_{n+1}) + \\sum_{i=1}^{n} (-1)^i f(g_1,\\ldots,g_i g_{i+1},\\ldots,g_n)\n+ (-1)^{n+1} f(g_1,\\ldots,g_n),\n\\]\nest fonctoriel en S et définit donc un homomorphisme :\n\\[\n\\partial : \\mathrm{C}^n(G,F) \\longrightarrow \\mathrm{C}^{n+1}(G,F)\n\\]\ntel que \\(\\partial \\circ \\partial = 0\\). On a donc défini un complexe de groupes abéliens (et même de\n\\(\\Gamma(O)\\)-modules) noté \\(\\mathrm{C}^*(G,F)\\). On définit de la même manière le complexe de\nO-modules \\(\\underline{\\mathrm{C}}^*(G,F)\\) et on a :\n\\[\n\\mathrm{C}^*(G,F) = \\Gamma(\\underline{\\mathrm{C}}^*(G,F)).\n\\]\nOn note \\(\\mathrm{H}^n(G,F)\\) (resp. \\(\\underline{\\mathrm{H}}^n(G,F)\\)) les groupes (resp. les \\(\\widehat{\\mathscr{C}}\\)-groupes) d'homologie\ndu complexe \\(\\mathrm{C}^*(G,F)\\) (resp. \\(\\underline{\\mathrm{C}}^*(G,F)\\)).\nOn a en particulier\n\\[\n\\underline{\\mathrm{H}}^0(G,F) = F^G \\ , \\qquad \\mathrm{H}^0(G,F) = \\Gamma(F^G).\n\\]\nNous nous proposons maintenant de montrer que les foncteurs \\(\\underline{\\mathrm{H}}^n\\) (resp. \\(\\mathrm{H}^n\\)) sont\nbien les foncteurs dérivés de \\(\\underline{\\mathrm{H}}^0\\) (resp. \\(\\mathrm{H}^0\\)). Soit P un O-module ; considérons\nl'objet \\(\\underline{\\mathrm{Hom}}(G,P)\\) de \\(\\widehat{\\mathscr{C}}\\). On peut le munir d'une structure de G-O-module en\nfaisant opérer G sur le premier facteur et O sur le second.\nDe manière précise on a \\(\\underline{\\mathrm{Hom}}(G,P)(S) = \\mathrm{Hom}_S(G_S, P_S)\\), et on fait opérer \\(g \\in G(S)\\)\net \\(a \\in O(S)\\) par les formules :\n\\[\n(gf)(x) = f(xg) \\ , \\qquad (af)(x) = af(x) \\ , \\qquad x \\in G(S').\n\\]\nSoit maintenant F un G-O-module ; notons \\(\\mathrm{E}(F)\\) l'objet \\(\\underline{\\mathrm{Hom}}(G,F)\\) muni de sa\nstructure de G-O-module précédente. Il existe un morphisme de G-O-module\n\\[\n\\mu_F : F \\longrightarrow \\mathrm{E}(F)\n\\]\ndéfini de la manière suivante : à toute flèche \\(S' \\to S''\\) de \\(\\mathscr{C}\\), il faut associer de manière\nfonctorielle une application de \\(F(S')\\) dans l'ensemble \\(\\mathrm{Hom}(G(S'), F(S'))\\) ; pour ce faire,\non associe à tout \\(f \\in F(S')\\) l'application \\(k_f\\) définie par \\(k_f(g) = gf\\). On vérifie aussitôt</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>que \\(\\mu_F\\) est bien compatible avec les structures de G-O-modules et que c'est même un\nmonomorphisme.</p>"
+    },
+    {
+     "id": "I.5.2.1",
+     "type": "proposition",
+     "label": "5.2.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.5.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.2.1</span></div>\n  <div class=\"thm-body\"><p>Si G est représentable, les foncteurs \\(\\mathrm{H}^n(G,\\ )\\) (resp. \\(\\underline{\\mathrm{H}}^n(G,\\ )\\))\nsont les foncteurs dérivés du foncteur exact à gauche \\(\\mathrm{H}^0(G,\\ )\\) (resp. \\(\\underline{\\mathrm{H}}^0(G,\\ )\\)) sur\nla catégorie des G-O-modules.</p>\n  <p>En vertu des résultats généraux bien connus, il suffit de vérifier que les \\(\\mathrm{H}^n(G,\\ )\\)\n(resp. \\(\\underline{\\mathrm{H}}^n(G,\\ )\\)) forment un foncteur cohomologique effaçable en dimensions \\(&gt; 0\\). Or\n\\(\\underline{\\mathrm{C}}^n(G,\\ )\\) considéré comme foncteur sur \\((G\\text{-}O\\text{-Mod.})\\) à valeurs dans la catégorie des\n\\((O\\text{-Mod.})\\) est exact. Ceci montre que les \\(\\underline{\\mathrm{H}}^n(G,\\ )\\) forment bien un foncteur cohomologique. Comme le foncteur \\(\\Gamma\\) est exact, il en est de même pour les \\(\\mathrm{H}^n(G,\\ )\\). Il nous\nsuffira maintenant de démontrer :</p></div>\n</div>"
+    },
+    {
+     "id": "I.5.2.2",
+     "type": "lemme",
+     "label": "5.2.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"I.5.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.2.2</span></div>\n  <div class=\"thm-body\"><p>Pour tout \\(P \\in \\mathrm{Ob}(O\\text{-Mod.})\\), on a :\n\\[\n\\mathrm{H}^n(G, \\underline{\\mathrm{Hom}}(G,P)) = 0, \\qquad \\underline{\\mathrm{H}}^n(G, \\underline{\\mathrm{Hom}}(G,P)) = 0, \\qquad n &gt; 0.\n\\]</p>\n  <p>Il nous suffit de démontrer que \\(\\underline{\\mathrm{C}}^*(G, \\underline{\\mathrm{Hom}}(G,P))\\) et \\(\\mathrm{C}^*(G, \\underline{\\mathrm{Hom}}(G,P))\\) sont\nhomotopiquement triviaux en dimensions \\(&gt; 0\\). Il suffit même de le faire pour le second,\nle résultat correspondant pour le premier s'en déduisant par changement de base. Or\non a l'opérateur d'homotopie suivant :\n\\[\n(sf)(g_1,g_2,\\ldots,g_n)(g) = f(g,g_0,g_1,\\ldots,g_n)(e)\n\\]\noù \\(e\\) désigne l'élément unité de \\(G(S)\\) et \\(f\\) une \\((n+1)\\)-cochaîne de \\(G(S)\\) dans\n\\(\\underline{\\mathrm{Hom}}(G,P)(S)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"I.5.3\">5.3. Cohomologie des G-\\(\\mathscr{O}_S\\)-modules.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un schéma, G un S-groupe affine sur S et \\(\\mathscr{F}\\)\nun G-\\(\\mathscr{O}_S\\)-module quasi-cohérent. On définit les groupes de cohomologie de G à\nvaleurs dans \\(\\mathscr{F}\\) par\n\\[\n\\mathrm{H}^n(G, \\mathscr{F}) = \\mathrm{H}^n(h_G, \\mathbf{W}(\\mathscr{F}))\n\\]\n(pour les notations, cf. <a class=\"ref\" href=\"#I.4.6\">4.6</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Vu la proposition <a class=\"ref\" href=\"#I.4.6.4\">4.6.4</a>, cette cohomologie se calcule de la façon suivante :\n\\(\\mathrm{H}^n(G,\\mathscr{F})\\) est le n-ième groupe d'homologie du complexe \\(\\mathrm{C}^n(G,\\mathscr{F})\\) défini comme\nsuit :\n\\[\n\\mathrm{C}^n(G,\\mathscr{F}) = \\Gamma(S, \\underline{\\mathrm{C}}^n(G,\\mathscr{F})) \\ , \\qquad \\underline{\\mathrm{C}}^n(G,\\mathscr{F}) = \\mathscr{F} \\otimes \\underbrace{\\mathscr{A}(G) \\otimes \\cdots \\otimes \\mathscr{A}(G)}_{n \\text{ fois}}.\n\\]\nSi \\(f\\) (resp. \\(a_i\\)) est une section de \\(\\mathscr{F}\\) (resp. de \\(\\mathscr{A}(G)\\)) sur un ouvert de S, on a\n\\[\n\\partial(f\\otimes a_1\\otimes\\cdots\\otimes a_n) = \\mu_{\\mathscr{F}}(f)\\otimes a_1\\otimes a_2\\otimes\\cdots\\otimes a_n\n\\]\n\\[\n{} + \\sum_{i=1}^{n} (-1)^i f\\otimes a_1\\otimes\\cdots\\otimes \\Delta a_i\\otimes\\cdots\\otimes a_n\n+ (-1)^{n+1} f\\otimes a_1\\otimes a_2\\cdots\\otimes a_n\\otimes 1,\n\\]\noù \\(\\mu_{\\mathscr{F}} : \\mathscr{F} \\to \\mathscr{F}\\otimes\\mathscr{A}(G)\\) et \\(\\Delta : \\mathscr{A}(G) \\to \\mathscr{A}(G)\\otimes\\mathscr{A}(G)\\) décrivent la structure de\ncomodule de \\(\\mathscr{F}\\). Remarquons en passant que la cohomologie de G à valeurs dans \\(\\mathscr{F}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ne dépend donc que de la structure de comodule de \\(\\mathscr{F}\\), et en particulier que de la\nstructure de S-monoïde de G.\nOn a en particulier\n\\[\n\\mathrm{H}^0(G, \\mathscr{F}) = \\Gamma(S, \\mathscr{F}^G),\n\\]\noù \\(\\mathscr{F}^G\\), le <em>faisceau des invariants</em> de \\(\\mathscr{F}\\), est défini comme le faisceau dont les\nsections sur l'ouvert U de S sont les sections de \\(\\mathscr{F}\\) sur U dont l'image inverse dans\ntout \\(S'\\) au-dessus de U est invariante par \\(G(S')\\).</p>"
+    },
+    {
+     "id": "I.5.3.1",
+     "type": "theoreme",
+     "label": "5.3.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"I.5.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.3.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma affine, G un S-groupe affine et plat sur S.\nLes foncteurs \\(\\mathrm{H}^n(G,\\ )\\) sont les foncteurs dérivés de \\(\\mathrm{H}^0(G,\\ )\\) sur la catégorie des\nG-\\(\\mathscr{O}_S\\)-modules quasi-cohérents.</p>\n  <p>Comme S est affine, et comme G est affine et plat, on voit aussitôt que \\(\\mathrm{C}^*(G,\\ )\\)\nest bien un foncteur exact sur la catégorie précédente.\nIl ne reste plus qu'à construire pour tout \\(\\mathscr{F}\\) un monomorphisme de \\(\\mathscr{F}\\) dans un\nG-\\(\\mathscr{O}_S\\)-module \\(\\mathrm{E}(\\mathscr{F})\\) tel que \\(\\mathrm{H}^n(G,\\mathrm{E}(\\mathscr{F})) = 0\\), \\(n &gt; 0\\). Or considérons \\(\\mathrm{E}(\\mathscr{F}) =\n\\mathscr{A}(G) \\otimes \\mathscr{F}\\) muni de la structure de G-\\(\\mathscr{O}_S\\)-module définie par celle de \\(\\mathscr{A}(G)\\).\nConsidérons l'homomorphisme canonique \\(\\mu_{\\mathscr{F}} : \\mathscr{F} \\to \\mathrm{E}(\\mathscr{F})\\) ; l'axiome (CM 1) de\n<a class=\"ref\" href=\"#I.4.7.2\">4.7.2</a> dit exactement que \\(\\mu_{\\mathscr{F}}\\) est un morphisme de G-\\(\\mathscr{O}_S\\)-modules. Il suffit de remarquer maintenant que l'image de \\(\\mu_{\\mathscr{F}}\\) par le foncteur \\(\\mathbf{W}\\) n'est autre que l'effacement\n\\(\\mu_{\\mathbf{W}(\\mathscr{F})} : \\mathbf{W}(\\mathscr{F}) \\to \\mathrm{E}(\\mathbf{W}(\\mathscr{F}))\\) défini dans <a class=\"ref\" href=\"#I.5\">5.2</a> (comparer avec le corollaire 1 à la\nproposition <a class=\"ref\" href=\"#I.4.6.4\">4.6.4</a>).\nRemarquons maintenant que l'axiome (CM 2) montre que, considéré comme\n\\(\\mathscr{O}_S\\)-module, \\(\\mathscr{F}\\) est un facteur direct dans \\(\\mathrm{E}(\\mathscr{F})\\). Cela entraîne :</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": "I.5.3.2",
+     "type": "proposition",
+     "label": "5.3.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"I.5.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.3.2</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma affine et G un S-groupe affine et plat ; supposons\nque toute suite exacte \\(0 \\to \\mathscr{F}_1 \\to \\mathscr{F}_2 \\to \\mathscr{F}_3 \\to 0\\) de G-\\(\\mathscr{O}_S\\)-modules quasi-cohérents, qui se scinde comme suite de \\(\\mathscr{O}_S\\)-modules, se scinde également comme suite de G-\\(\\mathscr{O}_S\\)-modules.\nLes foncteurs \\(\\mathrm{H}^n(G,\\ )\\), \\(n &gt; 0\\), sont nuls (ou ce qui revient au même, le foncteur\n\\(\\mathrm{H}^0(G,\\ )\\) est exact).</p>\n  <p>En effet, d'après l'hypothèse, la suite \\(0 \\to \\mathscr{F} \\to \\mathrm{E}(\\mathscr{F}) \\to \\mathrm{E}(\\mathscr{F})/\\mathscr{F} \\to 0\\) est\nscindée ; \\(\\mathscr{F}\\) est donc facteur direct dans \\(\\mathrm{E}(\\mathscr{F})\\), or la cohomologie de ce dernier est\nnulle.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On tire immédiatement de là et de la proposition <a class=\"ref\" href=\"#I.4.7.4\">4.7.4</a> :</p>"
+    },
+    {
+     "id": "I.5.3.3",
+     "type": "theoreme",
+     "label": "5.3.3",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"I.5.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.3.3</span></div>\n  <div class=\"thm-body\"><p>Soient S un schéma affine et G un S-groupe diagonalisable. Pour tout\nG-\\(\\mathscr{O}_S\\)-module quasi-cohérent \\(\\mathscr{F}\\), on a \\(\\mathrm{H}^n(G,\\mathscr{F}) = 0\\), \\(n &gt; 0\\).</p></div>\n</div>"
+    },
+    {
+     "id": "I.5.3.3.rem",
+     "type": "remarque",
+     "label": null,
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"I.5.3.3.rem\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span></div>\n  <div class=\"thm-body\"><p>La proposition <a class=\"ref\" href=\"#I.5.3.2\">5.3.2</a> reste valable, lorsque G n'est pas nécessairement plat sur S ; la démonstration fait alors appel à la cohomologie relative.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par M. Demazure"
+}

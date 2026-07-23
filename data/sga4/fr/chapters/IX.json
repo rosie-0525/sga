@@ -1,0 +1,1295 @@
+{
+ "chapter_id": "IX",
+ "title": "FAISCEAUX CONSTRUCTIBLES COHOMOLOGIE D'UNE COURBE ALGÉBRIQUE",
+ "number": "IX",
+ "pages": [
+  {
+   "id": "IX",
+   "title": "FAISCEAUX CONSTRUCTIBLES COHOMOLOGIE D'UNE COURBE ALGÉBRIQUE",
+   "blocks": [
+    {
+     "id": "IX",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"IX\">EXPOSÉ IX<br>FAISCEAUX CONSTRUCTIBLES<br>COHOMOLOGIE D'UNE COURBE ALGÉBRIQUE<span class=\"author\">par M. Artin</span></h1>"
+    },
+    {
+     "id": "IX.sommaire",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.sommaire\">Sommaire</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>0. Introduction<br>\n1. Le sorite des faisceaux de torsion<br>\n2. Faisceaux constructibles<br>\n3. Théories de Kummer et d'Artin-Schreier<br>\n4. Cas d'une courbe algébrique<br>\n5. La méthode de la trace.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "IX-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "IX.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.0\">0. Introduction</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On notera qu'à partir du présent exposé, contrairement aux exposés\nprécédents et à la théorie cohomologique classique des espaces topologiques, nous\nsommes obligés, pour la validité des énoncés essentiels, de nous limiter aux\nfaisceaux <u>de torsion</u> (et souvent même, plus précisément, aux faisceaux de torsion\npremiers aux caractéristiques résiduelles).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Signalons qu'en fait une théorie \"raisonnable\" de la cohomologie à\ncoefficients entiers (ou même réels), pour les variétés sur un corps algébriquement\nclos de caractéristique \\(p \\neq 0\\), analogue à la théorie classique pour le cas\n\\(k = \\mathbb{C}\\), n'existe pas (comme l'a remarqué Serre). Plus précisément, il n'existe pas\nde foncteur contravariant \\(H^1\\), défini disons sur la catégorie des schémas projectifs\nlisses sur le corps \\(K\\) alg. clos de car. \\(p &gt; 0\\), à valeurs dans la catégorie\ndes espaces vectoriels de dimension finie sur \\(\\mathbb{R}\\) (ou un sous-corps de \\(\\mathbb{R}\\)),\n\"commutant aux produits\", i.e. tel que \\(H^1(X \\times Y) \\xrightarrow{\\sim} H^1(X) \\times H^1(Y)\\), et tel que\n\\(\\dim H^1(X) = 2\\) si \\(X\\) est une courbe connexe de genre \\(1\\). En effet, il\ns'ensuivrait que si \\(X\\) est une variété abélienne sur \\(k\\), alors l'application\n\\(u \\mapsto u^1\\) de \\(\\operatorname{End}(X)\\) dans \\(\\operatorname{End}(H^1(X))\\) est <u>additive</u>, donc une <u>représentation</u> de\nl'anneau opposé de \\(\\operatorname{End}(X)\\). Mais en caractéristique \\(p\\), il existe des courbes\nelliptiques \\(X\\) ayant comme anneau d'endomorphismes un ordre maximal \\(A\\) d'une\nalgèbre de quaternions définie sur \\(\\mathbb{Z}\\) ([3], p.198), et une telle algèbre n'a\névidemment pas de représentation dans un espace vectoriel de dimension 2 sur \\(\\mathbb{R}\\),\npuisque \\(A \\otimes_{\\mathbb{Z}} \\mathbb{R}\\) est un corps (le corps des quaternions).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "IX-1",
+   "title": "1. Le sorite des faisceaux de torsion",
+   "blocks": [
+    {
+     "id": "IX.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.1\">1. Le sorite des faisceaux de torsion</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(T\\) un topos et \\(F\\) un faisceau abélien sur \\(T\\).\nOn peut multiplier par \\(n\\) dans \\(F\\) (\\(n \\in \\mathbb{Z}\\) un nombre entier), cette\nmultiplication étant induite par l'opération analogue dans \\((\\mathrm{Ab})\\). Notons \\({}_n F\\) le\nnoyau de cette multiplication; donc \\({}_n F(X)\\), pour \\(X \\in \\operatorname{Ob} T\\), est le groupe\ndes sections de \\(F(X)\\) dont l'ordre divise \\(n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On désigne par \\(\\mathbb{P}\\) l'ensemble de tous les nombres premiers.</p>"
+    },
+    {
+     "id": "IX.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"IX.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(p\\) un ensemble de nombres premiers. On dit que \\(F\\) est\n  un faisceau <u>de \\(p\\)-torsion</u>, où un <u>\\(p\\)-faisceau</u>, si le morphisme canonique\n  \\[\n  \\varinjlim_n {}_n F \\longrightarrow F \\quad \\text{est bijectif} ,\n  \\]\n  \\(n\\) parcourant l'ensemble des entiers tels que <u>ass</u> \\(n \\subset p\\), c'est-à-dire, <u>tels</u>\n  <u>que les nombres premiers divisant</u> \\(n\\) <u>soient dans</u> \\(p\\). Si \\(p = \\mathbb{P}\\) est l'en-\n  semble de tous les nombres premiers, on dit simplement que \\(F\\) est de torsion.</p></div>\n</div>"
+    },
+    {
+     "id": "IX.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\">\n  <p>(i) \\(F\\) <u>est de \\(p\\)-torsion si et seulement si</u> \\(F\\) <u>est le faisceau associé à</u>\n  <u>un préfaisceau à valeurs dans des groupes abéliens de \\(p\\)-torsion; on peut</u>\n  <u>prendre</u>\n  \\[\n  P = \\varinjlim_{\\text{ass } n \\subset p}^{(\\text{préf})} {}_n F .\n  \\]</p>\n\n  <p>(ii) <u>Si</u> \\(F\\) <u>est de \\(p\\)-torsion et si</u> \\(X \\in \\operatorname{Ob} T\\) <u>est un objet quasi-compact</u><sup class=\"footnote-ref\"><a id=\"IX-fn1ref\" href=\"#IX-fn1\">(∗)</a></sup>,\n  <u>alors</u> \\(F(X)\\) <u>est un groupe de \\(p\\)-torsion.</u></p>\n\n  <p>(iii) <u>Si</u> \\(T\\) <u>est localement de type fini</u> (VI 1.1), <u>alors</u> \\(F\\) <u>est de</u>\n  <u>\\(p\\)-torsion si et seulement si</u> \\(F(X)\\) <u>est un groupe de \\(p\\)-torsion pour chaque</u>\n  \\(X \\in \\operatorname{Ob} T\\) <u>quasi-compact. Dans ce cas, on a</u>\n  \\[\n  \\varinjlim_{\\text{ass } n \\subset p} H^q(T/X; {}_n F) \\xrightarrow{\\sim} H^q(T/X; F)\n  \\]\n  <u>pour chaque</u> \\(X\\) <u>quasi-compact et tout</u> \\(q\\).</p>\n\n  <p>(iv) <u>Si</u> \\(u : T \\to T'\\) <u>est un morphisme de topos et si</u> \\(F'\\) <u>est de \\(p\\)-torsion</u>\n  <u>sur</u> \\(T'\\), <u>alors l'image inverse</u> \\(u^* F'\\) <u>est un faisceau de \\(p\\)-torsion sur</u> \\(T\\).</p>\n\n  <p>(v) <u>Si</u> \\(u : T \\to T'\\) <u>est un morphisme de topos, avec</u> \\(T\\) <u>et</u> \\(T'\\) <u>localement de</u>\n  <u>type fini et</u> \\(u\\) <u>quasi-compact</u><sup class=\"footnote-ref\"><a id=\"IX-fn1ref\" href=\"#IX-fn1\">(∗)</a></sup>, <u>et si</u> \\(F\\) <u>est un faisceau de \\(p\\)-torsion sur</u>\n  \\(T\\), <u>alors les</u> \\(R^q u_* F'\\) <u>sont des faisceaux de \\(p\\)-torsion sur</u> \\(T\\) <u>pour tout</u> \\(q\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration : (i) Evidemment, si un faisceau \\(F\\) est de \\(p\\)-torsion,\n\\(F\\) est le faisceau associé au préfaisceau \\(P\\) dont le groupe des sections \\(P(X)\\)\nest le sous-groupe des éléments de \\(p\\)-torsion de \\(F(X)\\). Inversement, soit\n\\(F = \\underline{a} P\\) (II) le faisceau associé à \\(P\\), où \\(P\\) est à valeurs dans la catégorie\ndes groupes abéliens de \\(p\\)-torsion. De la suite exacte\n\\[\n0 \\longrightarrow {}_n P \\longrightarrow P \\xrightarrow{\\ n\\ } P\n\\]\non déduit une suite exacte\n\\[\n0 \\longrightarrow \\underline{a}({}_n P) \\longrightarrow F \\xrightarrow{\\ n\\ } F ,\n\\]\nd'où \\(\\underline{a}({}_n P) = {}_n F\\). Comme le foncteur \\(\\underline{a}\\) commute aux limites inductives, on\ndéduit de\n\\[\n\\varinjlim_{\\text{ass } n \\subset p}^{(\\text{préf})} {}_n P \\xrightarrow{\\sim} P\n\\]\nqu'on a aussi\n\\[\n\\varinjlim_{\\text{ass } n \\subset p} {}_n F \\xrightarrow{\\sim} F .\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) Posons \\(P = \\varinjlim^{(\\text{préf})} {}_n F\\). Alors on a \\(P \\subset F\\), donc \\(P\\) est un pré-\nfaisceau séparé, et par suite\n\\[\n\\underline{a} P(X) = \\varinjlim \\left( \\ker\\left( \\textstyle\\prod_i P(X_i) \\rightrightarrows \\right) \\right) ,\n\\]\noù comme d'habitude la limite est prise suivant les familles couvrantes\n\\(\\{ X_i \\longrightarrow X \\}\\). Mais comme \\(X\\) est quasi-compact, il suffit de prendre les\nfamilles couvrantes finies. Pour ces familles \\(\\prod_i P(X_i)\\) est de \\(p\\)-torsion;\ndonc le \\(\\ker\\) l'est aussi. Par suite \\(\\underline{a} P(X) = F(X)\\) est de \\(p\\)-torsion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) Pour vérifier que \\(\\varinjlim_n {}_n F \\longrightarrow F\\) est bijectif, il suffit de le faire\npour les valeurs sur \\(X \\in \\operatorname{Ob} T\\) pour chaque \\(X\\) d'une famille de générateurs.\nOn est donc ramené à (ii) pour la première assertion. La deuxième assertion\nest une conséquence de</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iv) Conséquence de (i) puisque \\(u^*(\\underline{a} P') = \\underline{a}(u' P)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(v) Conséquence facile de (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On aura aussi besoin d'une variante non-abélienne. Mais il y a\ndes problèmes techniques dans la définition (j'ignore s'ils sont sérieux), et\non se contentera donc de donner une définition pour la topologie étale\nd'un schéma.</p>"
+    },
+    {
+     "id": "IX.1.3",
+     "type": "definition",
+     "label": "1.3",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"IX.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(p\\) un ensemble de nombres premiers. On dit qu'un groupe\n  \\(G\\) est un <u>ind-\\(p\\)-groupe</u> si chaque sous-ensemble fini de \\(G\\) engendre un sous-\n  groupe fini d'ordre \\(n\\), <u>avec</u> <u>ass</u> \\(n \\subset p\\). Il revient au même de dire que\n  les sous-groupes finis \\(G_\\alpha\\) d'ordre \\(n_\\alpha\\), <u>avec</u> <u>ass</u> \\(n_\\alpha \\subset p\\), <u>forment un ensemble</u>\n  <u>filtrant, et que</u> \\(G = \\varinjlim G_\\alpha\\). Si \\(p = \\mathbb{P}\\), <u>on dit</u> groupe ind-fini au lieu\n  de ind-\\(p\\)-groupe.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On vérifie immédiatement la</p>"
+    },
+    {
+     "id": "IX.1.4",
+     "type": "proposition",
+     "label": "1.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\">\n  <p>(i) <u>Un sous-groupe ainsi qu'un quotient d'un ind \\(p\\)-groupe est encore un</u>\n  <u>ind \\(p\\)-groupe.</u></p>\n  <p>(ii) <u>Une limite inductive filtrante de ind-\\(p\\)-groupes est un ind-\\(p\\)-groupe.</u></p>\n  <p>(iii) <u>Une limite projective finie de ind-\\(p\\)-groupes est un ind-\\(p\\)-groupe.</u></p>\n  </div>\n</div>"
+    },
+    {
+     "id": "IX.1.5",
+     "type": "definition",
+     "label": "1.5",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"IX.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) un schéma. On dit qu'un faisceau \\(F\\) de groupes\n  sur \\(X\\) est un faisceau de ind-\\(p\\)-groupes (resp. de groupes ind-finis) si pour\n  chaque \\(U \\longrightarrow X\\) étale, avec \\(U\\) quasi-compact, \\(F(U)\\) est un ind \\(p\\)-groupe\n  (resp. un groupe ind-fini).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.1.6",
+     "type": "proposition",
+     "label": "1.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\">\n  <p><u>Soit</u> \\(F\\) <u>un faisceau de groupes sur le schéma</u> \\(X\\).</p>\n  <p>(i) \\(F\\) <u>est un faisceau de ind-\\(p\\)-groupes si et seulement si pour chaque</u>\n  <u>point géométrique</u> \\(\\xi\\) <u>de</u> \\(X\\), <u>la fibre</u> \\(F_\\xi\\) <u>est un ind-\\(p\\)-groupe.</u></p>\n  <p>(ii) <u>Si</u> \\(f : X \\longrightarrow X'\\) <u>est un morphisme et si</u> \\(F'\\) <u>est un faisceau de</u>\n  <u>ind-\\(p\\)-groupes sur</u> \\(X'\\), \\(f^* F'\\) <u>est un faisceau de ind-\\(p\\)-groupes.</u></p>\n  <p>(iii) <u>Si</u> \\(f : X \\longrightarrow X'\\) <u>est un morphisme quasi-compact et</u> \\(F\\) <u>est un faisceau</u>\n  <u>de ind-\\(p\\)-groupes sur</u> \\(X\\), <u>alors</u> \\(f_* F\\) <u>est un faisceau de ind-\\(p\\)-groupes.</u></p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. (i) Supposons que \\(F\\) soit un faisceau de ind-\\(p\\)-groupes,\net soit \\(\\xi\\) un point géométrique de \\(X\\). Alors \\(F = \\varinjlim F(X')\\), où \\(X'\\) parcourt\nun système pseudo-filtrant de schémas étales sur \\(X\\) (VIII 3.9). Il est évident\nque les \\(X'\\) affines (donc quasi-compacts) forment un ensemble cofinal, et que\npar suite \\(F\\) est limite inductive de ind \\(p\\)-groupes, donc est un ind-\\(p\\)-groupe\nd'après 1.4 (ii). Inversement, supposons que pour chaque \\(\\xi\\) la fibre \\(F_\\xi\\)\nsoit un ind-\\(p\\)-groupe et soit \\(U \\longrightarrow X\\) étale, \\(U\\) quasi-compact. Soit \\(S \\subset F(U)\\)\nun sous-ensemble fini. Pour chaque point géométrique \\(\\xi\\) de \\(U\\), l'image de \\(S\\)\ndans \\(F_\\xi\\) engendre un groupe fini. Comme un groupe fini est de présentation\nfinie, on conclut aisément qu'il existe un \\(U_\\xi\\) étale sur \\(U\\), \\(\\xi\\)-ponctué,\ntel que \\(S\\) engendre un groupe fini dans \\(F(U_\\xi)\\) (cf. VIII 4). Un nombre fini\nde tels \\(U_\\xi\\) forment un recouvrement de \\(U\\), soit \\(\\{ U_1, \\ldots, U_n \\}\\). Alors\nl'image de \\(S\\) dans \\(\\prod F(U_i)\\) engendre un sous-groupe fini, et comme\n\\(F(U) \\subset \\prod F(U_i)\\), on a gagné.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'assertion (ii) est triviale à partir de (i), et (iii) est immédiate.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) Un objet \\(X\\) d'un topos est dit quasi-compact si chaque famille couvrante \\(\\{ X_i \\longrightarrow X \\}\\) peut être majorée par une famille couvrante finie. Un morphisme \\(u\\) de topos est quasi-compact si l'image inverse de chaque objet quasi-compact est encore quasi-compacte. </p>"
+    }
+   ]
+  },
+  {
+   "id": "IX-2",
+   "title": "2. Faisceaux constructibles",
+   "blocks": [
+    {
+     "id": "IX.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.2\">2. Faisceaux constructibles</h2>"
+    },
+    {
+     "id": "IX.2.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.2.0\">2.0</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(T\\) un topos. Rappelons qu'à chaque élément \\(S \\in \\operatorname{Ob}(\\mathrm{Ens})\\) on\nassocie le faisceau \\(S_T\\) associé au préfaisceau \\(P\\) tel que \\(P(X) = S\\) pour\nchaque \\(X \\in \\operatorname{Ob}(T)\\). L'objet de \\(T\\) qui représente \\(S_T\\) est\n\\[\n\\coprod_{s \\in S} e = \\text{\"} S \\times e \\text{\"} ,\n\\]\n\\(e\\) l'objet final de \\(T\\). \\(S_T\\) est appelé <u>faisceau constant</u>, de valeur \\(S\\) (IV).\nOn définit d'une manière évidente la notion de faisceau <u>de groupes constant</u>,\n<u>de \\(A\\)-modules constant</u> (\\(A\\) un anneau), et de faisceau <u>abélien constant</u>, de\nvaleur \\(M\\). Un morphisme \\(f_T : S_T \\longrightarrow S'_T\\) de faisceaux constants est dit <u>constant</u>\ns'il provient d'un morphisme d'ensembles \\(f : S \\longrightarrow S'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un faisceau \\(F\\) est dit <u>localement constant</u> s'il existe un recouvrement\n\\(\\{ e_i \\longrightarrow e \\}\\) de l'objet final tel que \\(F\\) devienne constant sur chaque \\(e_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit d'une façon analogue la notion de faisceau <u>de groupes</u> ou de <u>\\(A\\)-modules</u>\n<u>localement constant</u>, et de <u>morphisme localement constant</u> \\(f : F \\to G\\) si\n\\(F\\) et \\(G\\) sont des faisceaux localement constants. Enfin, un faisceau de groupes\nou de \\(A\\)-modules localement constant est dit <u>de type fini</u> (resp. <u>de présentation</u>\n<u>finie</u>) si les valeurs locales sont des groupes ou des \\(A\\)-modules de type fini\n(resp. de présentation finie).</p>"
+    },
+    {
+     "id": "IX.2.1",
+     "type": "lemma",
+     "label": "2.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IX.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\">\n  <p>(i) <u>Soit</u> \\(f : F \\to G\\) <u>un morphisme de faisceaux d'ensembles</u>\n  <u>localement constant sur</u> \\(T\\), <u>et supposons que les valeurs locales de</u> \\(F\\) <u>soient</u>\n  <u>des ensembles finis. Alors</u> \\(f\\) <u>est localement constant.</u></p>\n  <p>(ii) <u>Soit</u> \\(f : F \\longrightarrow G\\) <u>un morphisme de faisceaux de \\(A\\)-modules localement</u>\n  <u>constants, avec</u> \\(F\\) <u>de type fini. Alors</u> \\(f\\) <u>est localement constant, et le noyau</u>\n  <u>et conoyau de</u> \\(f\\) <u>sont localement constants.</u></p>\n  <p>(iii) <u>Soit</u> \\(0 \\to F' \\to F \\to F'' \\to 0\\) <u>une suite exacte de faisceaux de</u>\n  <u>\\(A\\)-modules</u> (resp. <u>de groupes</u>), <u>avec</u> \\(F'\\) <u>et</u> \\(F''\\) <u>localement constants,</u> \\(F''\\)\n  <u>étant de présentation finie. Alors</u> \\(F\\) <u>est localement constant.</u></p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de (i) et (ii). On se ramène sans peine au cas où \\(F\\)\net \\(G\\) sont constants. Traitons (ii) : soit \\(F = M_T\\), \\(G = N_T\\) (\\(M, N\\) des\n\\(A\\)-modules), et soit \\(S \\subset M\\) un sous-ensemble fini de générateurs de \\(M\\). Alors\n\\(f\\) est déterminé par sa restriction à \\(S_T\\) et \\(f\\) sera localement constant si\n\\(f | S_T\\) l'est. On est donc réduit à (i) pour la première assertion de (ii), et\nla deuxième assertion est conséquence triviale de la première.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste donc à démontrer (i). Supposons que \\(F = S_T\\), \\(G = S'_T\\)\nsoient constants, et notons aussi par \\(f\\) le morphisme d'objets \\(f : S \\times e \\longrightarrow S' \\times e\\)\n(notation comme ci-dessus). Soient \\(f_s : e \\longrightarrow S' \\times e\\) (\\(s \\in S\\)) les composants\nde \\(f\\) : puisque \\(S\\) est fini, il suffit évidemment de traiter le cas \\(f = f_s\\),\nc'est-à-dire, où \\(S\\) est un ensemble d'un élément. Soit \\(X_{s'} \\longrightarrow e\\) (\\(s' \\in S'\\))\nla famille des morphismes qui rendent cartésiens les diagrammes\n\\[\n\\xymatrix{\nX_{s'} \\ar[r] \\ar[d] &amp; e \\ar[d]^{i_{s'}} \\\\\ne \\ar[r]_-{f} &amp; S' \\times e\n}\n\\]\noù \\(i_{s'} : e \\longrightarrow S' \\times e\\) est \"l'inclusion\" dans la \\(s'\\)-ième composante. La famille\n\\(\\{ i_{s'} \\}\\) est trivialement couvrante, donc \\(\\{ X_{s'} \\longrightarrow e \\}\\) l'est aussi. On vérifie\nimmédiatement (puisque les sommes directes dans un topos sont disjointes)\nque \\(f\\) devient constant sur \\(X_{s'}\\), et que par suite \\(f\\) est localement\nconstant.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration de (iii). Traitons le cas des faisceaux de \\(A\\)-modules.\nOn peut supposer \\(F'\\) et \\(F''\\) constants, \\(F''\\) de valeur \\(M''\\) un \\(A\\)-module de\nprésentation finie. Si \\(M''\\) est libre, donc admet une base finie \\((e_i)_{1 \\leqslant i \\leqslant n}\\),\nalors les \\(e_i\\) définissent des sections de \\(F''\\), donc se relèvent localement en\ndes sections de \\(F\\), ce qui montre que localement l'extension \\(F\\) de \\(F''\\) par\n\\(F'\\) se scinde, ce qui prouve que \\(F\\) est localement isomorphe à \\(F' \\times F''\\), donc\nest localement constant. Dans le cas général, choisissant un homomorphisme sur-\njectif \\(\\varphi : L'' \\to M''\\), avec \\(L''\\) libre de type fini; le noyau \\(R\\) de \\(\\varphi\\) est\nde type fini, et posant \\(L = L''_T \\times_{M''_T} F\\), \\(F \\simeq L''_T \\times_{F''} F\\); on voit d'une part que \\(L\\)\nest une extension de \\(L''_T\\) par \\(G\\), donc localement constant d'après ce qui\nprécède, d'autre part qu'on a une suite exacte \\(0 \\longrightarrow R_T \\longrightarrow L \\longrightarrow F \\longrightarrow 0\\),\nce qui grâce à (ii) implique que \\(F\\) est localement constant.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A partir de maintenant, on se borne aux topos étales des schémas.</p>"
+    },
+    {
+     "id": "IX.2.2",
+     "type": "lemma",
+     "label": "2.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IX.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) un schéma et \\(F\\) un faisceau sur \\(X\\) qui est loca-\n  lement constant. Alors \\(F\\) est représenté par un \\(Y/X\\) étale. Si de plus les\n  fibres de \\(F\\) sont finies (resp. et non-vides), alors \\(Y\\) est un revêtement\n  étale (resp. et surjectif).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Descente (SGA 1 IX 4.1 si \\(F\\) à fibres finies,\nSGA 3 X 5.4 dans le cas général).</p>"
+    },
+    {
+     "id": "IX.2.3",
+     "type": "definition",
+     "label": "2.3",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"IX.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Un faisceau d'ensembles (resp. de groupes, resp. de\n  \\(A\\)-modules) est dit <u>constructible</u> si pour chaque ouvert affine \\(U \\subset X\\) il existe une\n  décomposition de \\(U\\) en réunion d'un nombre fini de sous-schémas constructibles\n  localement fermés réduits \\(U_i\\) telle que le faisceau induit par \\(F\\) sur chaque \\(U_i\\) soit\n  <u>localement constant</u>, de valeur finie (resp. finie, resp. de présentation finie<sup class=\"footnote-ref\"><a id=\"IX-fn2ref\" href=\"#IX-fn2\">(∗)</a></sup>).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.2.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.2.3.1\">2.3.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'hypothèse de finitude sur les valeurs locales revient à dire que pour\nchaque point géométrique \\(\\xi\\), la fibre \\(F_\\xi\\) est finie (resp. finie, resp. de\nprésentation finie). Il s'ensuit immédiatement de 2.1 (i) qu'un faisceau de\ngroupes \\(F\\) est constructible si et seulement si le faisceau d'ensembles sous-\njacent à \\(F\\) est constructible.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On fera attention que si \\(F\\) est un faisceau abélien, il est construc-\ntible en tant que faisceau de groupes (ou encore, en tant que faisceau d'ensem-\nbles) si et seulement s'il est constructible comme faisceau de \\(\\mathbb{Z}\\)-modules, et\nsi <u>de plus</u> ses fibres sont finies. Ainsi, \\(\\mathbb{Z}_X\\) est constructible comme \\(\\mathbb{Z}\\)-module,\nmais non comme faisceau de groupes.</p>"
+    },
+    {
+     "id": "IX.2.4",
+     "type": "proposition",
+     "label": "2.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\">\n  <p>(i) <u>Soit</u> \\(X\\) <u>quasi-compact et quasi-séparé. Alors un</u>\n  <u>faisceau</u> (resp. <u>faisceau de groupes</u>, resp. <u>faisceau de \\(A\\)-modules) est construc-</u>\n  <u>tible si et seulement s'il existe une décomposition de</u> \\(X\\) <u>en réunion de parties</u>\n  <u>localement fermées constructibles, telle que</u> \\(F\\) <u>devienne localement constant, et</u>\n  <u>fini</u> (resp. <u>fini</u>, resp. <u>de présentation finie), sur chaque</u> \\(X_i\\).</p>\n\n  <p>(ii) <u>Pour vérifier que</u> \\(F\\) <u>est constructible, il suffit de vérifier que</u>\n  \\(F | U_i\\) <u>est constructible pour les</u> \\(U_i\\) <u>d'un recouvrement ouvert donné de</u> \\(X\\).</p>\n\n  <p>(iii) <u>Soit</u> \\(f : Y \\longrightarrow X\\) <u>un morphisme. Alors</u> \\(f^* F\\) <u>est constructible si</u> \\(F\\)\n  <u>l'est.</u></p>\n\n  <p>(iv) <u>L'ensemble des points où la fibre d'un faisceau constructible est non-</u>\n  <u>vide</u> (resp. <u>non-nulle) est un sous-ensemble localement constructible</u> (EGA \\(\\mathrm{O_{III}}\\) 9.1.2).</p>\n\n  <p>(v) <u>Soit</u> \\(X\\) <u>localement noethérien. Alors un faisceau d'ensembles</u> (resp. ...)\n  \\(F\\) <u>sur</u> \\(X\\) <u>est constructible si et seulement si pour chaque</u> \\(x \\in X\\), <u>il existe</u>\n  <u>un ouvert non-vide de l'adhérence</u> \\(\\bar{x}\\) <u>de</u> \\(x\\) <u>tel que</u> \\(F\\) <u>induise un faisceau</u>\n  <u>localement constant de valeur finie</u> (resp. ...) <u>sur</u> \\(U\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Evidemment, si \\(f : Y \\longrightarrow X\\) est un morphisme et s'il\nexiste une décomposition de \\(X\\) en réunion de parties \\(X_i\\) localement fermées et\nconstructibles, telles que \\(F\\) devienne localement constant sur chaque \\(X_i\\), il en est\nde même de \\(Y\\) et \\(f^* F\\) (cf. EGA IV 1.8.2). Cela prouve l'implication \\(\\Longleftarrow\\) de (i).\nSupposons maintenant que \\(X\\) soit quasi-compact et quasi-séparé et soit\n\\(\\{ U_1, \\ldots, U_n \\}\\) un recouvrement ouvert affine de \\(X\\) tel que \\(F | U_i\\) soit construc-\ntible pour chaque \\(i\\). Pour trouver une décomposition de \\(X\\) comme dans (i), il\nsuffit de le faire pour \\(U_n\\) et pour \\(Y = X - U_n\\) (avec la structure induite ré-\nduite), \\(U_n\\) et \\(Y\\) étant constructibles dans \\(X\\) grâce à l'hypothèse \"\\(X\\) quasi-\nséparé\". Or une décomposition existe pour \\(U_n\\) d'après la définition de construc-\ntibilité, et \\(Y\\) est réunion de \\(n-1\\) ouverts affines \\(V_i = Y \\cap U_i\\)\n(\\(i = 1, \\ldots, n-1\\)) avec \\(F | V_i\\) constructible, d'où le résultat (i) par récurrence\nsur \\(n\\). Le même raisonnement démontre (ii) ; en effet, l'hypothèse implique que\n\\(F | U\\) est constructible pour chaque ouvert affine \\(U\\) \"assez petit\", et on peut\nrecouvrir un ouvert affine \\(V\\) arbitraire par un nombre fini de tels ouverts.\nL'assertion (ii) montre que la notion de constructibilité est locale sur \\(X\\), et\n(iii), (iv) s'ensuivent immédiatement. L'implication \\(\\Longrightarrow\\) de (v) est immédiate,\net ne dépend pas de l'hypothèse noethérienne. Si \\(X\\) est noethérien on démontre\nl'implication \\(\\Longleftarrow\\) par la \"récurrence noethérienne\" habituelle.</p>"
+    },
+    {
+     "id": "IX.2.5",
+     "type": "proposition",
+     "label": "2.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) <u>quasi-compact et quasi-séparé, et</u> \\(F\\) <u>un faisceau</u>\n  <u>de groupes ou de \\(A\\)-modules constructible sur</u> \\(X\\). <u>Alors il existe une filtra-</u>\n  <u>tion finie de</u> \\(F\\) <u>dont les quotients successifs sont de la forme</u> \\(i_! G\\), <u>où</u> \\(i : U \\to X\\)\n  <u>est l'inclusion d'une partie localement fermée et constructible, et où</u> \\(G\\) <u>est</u>\n  <u>localement constant et constructible sur</u> \\(U\\). <u>Si</u> \\(X\\) <u>est noethérien, il existe</u>\n  <u>une telle filtration, avec des</u> \\(U\\) <u>irréductibles.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. D'après 2.4 (i), il existe une décomposition de \\(X\\) en\nréunion finie de parties localement fermées constructibles \\(X_i\\) telles que chaque\n\\(F | X_i\\) soit localement constant et fini (resp. de présentation finie). Ecrivons\n\\(X_i = U_i \\cap \\complement V_i\\), où \\(U_i\\) et \\(V_i\\) sont des ouverts constructibles, et soit \\(N\\)\nle nombre d'ouverts de \\(X\\) dans la sous-topologie \\(T\\) engendrée par \\(\\{ U_i, V_i \\}\\).\nRaisonnons par récurrence sur \\(N\\): si \\(W\\) est un élément non-vide minimal de \\(T\\),\nil est évident que \\(F | W\\) est localement constant et de présentation finie.\nSoit \\(i : W \\to X\\) le morphisme d'inclusion et \\(Y = X - W\\). On a la suite exacte\n\\[\n0 \\longrightarrow i_! i^* F \\longrightarrow F \\longrightarrow F | Y \\longrightarrow 0 ,\n\\]\net on se réduit ainsi à la même assertion pour \\(Y\\) et pour le faisceau \\(F | Y\\),\noù on peut appliquer l'hypothèse de récurrence.</p>"
+    },
+    {
+     "id": "IX.2.6",
+     "type": "proposition",
+     "label": "2.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\">\n  <p><u>Supposons que</u> \\(A\\) <u>soit un anneau noethérien.</u></p>\n\n  <p>(i) <u>Une limite projective</u> (resp. <u>inductive) finie de faisceaux de</u>\n  <u>\\(A\\)-modules ou d'ensembles constructibles est constructible. En particulier,</u>\n  <u>le noyau, le conoyau et l'image d'un morphisme de faisceaux de \\(A\\)-modules</u>\n  <u>constructibles sont constructibles.</u></p>\n\n  <p>(ibis) <u>Une limite projective finie de faisceaux d'ensembles</u> (resp. <u>de groupes)</u>\n  <u>constructibles est constructible, et si</u> \\(f : F \\longrightarrow G\\) <u>est un morphisme de</u>\n  <u>faisceaux de groupes constructibles, le noyau, l'image, et le conoyau (si</u>\n  <u>\\(\\operatorname{Im}(f)\\) est un sous-groupe normal) sont constructibles. Une limite inductive</u>\n  <u>finie de faisceaux d'ensembles constructibles est constructible.</u></p>\n\n  <p>(ii) <u>Soit</u> \\(0 \\longrightarrow M' \\longrightarrow M \\longrightarrow M'' \\longrightarrow 0\\) <u>une suite exacte de faisceaux</u>\n  <u>de \\(A\\)-modules</u> (resp. <u>de groupes) avec</u> \\(M'\\), \\(M''\\) <u>constructibles. Alors</u> \\(M\\) <u>est</u>\n  <u>constructible.</u></p>\n\n  <p>(iii) <u>Soit</u> \\(M_1 \\longrightarrow M_2 \\longrightarrow M_3 \\longrightarrow M_4 \\longrightarrow M_5\\) <u>une suite exacte de faisceaux</u>\n  <u>de \\(A\\)-modules. Alors si</u> \\(M_i\\) <u>est constructible pour</u> \\(i = 1,2,4,5\\), <u>il en est de</u>\n  <u>même pour</u> \\(i = 3\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. (i) Nous laissons les assertions ensemblistes et pour\nles groupes au lecteur. Pour le cas des faisceaux de \\(A\\)-modules, il suffit de dé-\nmontrer que le noyau et le conoyau d'un morphisme \\(f : F \\to G\\) de faisceaux de\n\\(A\\)-modules constructibles sont constructibles. L'assertion est locale sur \\(X\\),\net on peut donc supposer \\(X\\) affine, donc quasi-compact et quasi-séparé. Alors\non se réduit au cas où \\(F\\) et \\(G\\) sont localement constants par 2.4. (i), et on\ntermine en utilisant 2.1 (ii) et l'hypothèse noethérienne sur \\(A\\). On prouve\nde façon analogue l'assertion (ii) en utilisant 2.1 (iii). L'assertion (iii)\nest immédiate à partir de (i) et (ii).</p>"
+    },
+    {
+     "id": "IX.2.7",
+     "type": "proposition",
+     "label": "2.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) <u>un schéma quasi-compact et quasi-séparé</u>, \\(F\\)\n  <u>un faisceau d'ensembles</u> (resp. <u>de \\(A\\)-modules). Pour que</u> \\(F\\) <u>soit constructible,</u>\n  <u>il faut et il suffit qu'il soit isomorphe au conoyau d'un couple de morphismes</u>\n  \\(H \\rightrightarrows G\\), <u>où</u> \\(H\\) <u>et</u> \\(G\\) <u>sont des faisceaux d'ensembles représentables par des</u>\n  <u>schémas étales de présentation finie sur</u> \\(X\\) (resp. <u>que</u> \\(F\\) <u>soit isomorphe</u>\n  <u>au conoyau d'un homomorphisme</u> \\(A_{V,X} \\longrightarrow A_{U,X}\\), <u>où</u> \\(U\\) <u>et</u> \\(V\\) <u>sont deux schémas</u>\n  <u>étales de présentation finie sur</u> \\(X\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La suffisance résulte facilement de 2.6 (ibis).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que \\(F\\) soit un faisceau d'ensembles constructibles.\nUtilisant l'existence des sommes infinies dans le site étale sur \\(X\\), on voit\nque l'on peut trouver un épimorphisme \\(G \\to F\\), avec \\(G\\) représentable par un\nschéma étale sur \\(X\\), que l'on peut de plus supposer somme de schémas affines\n\\(G_i\\) (\\(i \\in I\\)), donc séparé sur \\(S\\). Pour toute partie finie \\(J\\) de l'ensemble d'in-\ndices \\(I\\), soit \\(G_J\\) la somme des \\(G_i\\) pour \\(i \\in J\\), \\(F_J\\) son image dans \\(F\\).\nComme \\(G_J\\) et \\(F\\) sont constructibles, il en est de même de \\(F_J\\) (2.6 (ibis)),\ndonc l'ensemble \\(X_J\\) des \\(x \\in X\\) tels que les fibres de \\(F\\) et \\(F_J\\) en un point\ngéométrique de \\(X\\) sur \\(x\\) soient égales, est localement constructible 2.4\n(iv). Comme la famille des \\(X_J\\) est croissante et de réunion \\(X\\), et que \\(X\\)\nest quasi-compact, l'un des \\(X_J\\) est égal à \\(X\\) (EGA IV 1.9.9). Cela montre,\nquitte à remplacer \\(G\\) par \\(G_J\\), que l'on peut supposer \\(G\\) affine, donc séparé\nsur \\(S\\), et quasi-compact sur \\(X\\) puisque \\(X\\) est quasi-séparé (EGA IV 1.2.4).\nSoit alors \\(H = G \\times_X G\\). C'est un sous-faisceau de \\(G \\times_S G\\) qui est représentable,\ndonc est lui-même représentable (VIII 6.1). Comme \\(G\\) est de plus constructible\n(2.6 (ibis)), il résulte encore de l'argument précédent qu'il est quasi-compact,\ndonc (étant séparé sur \\(X\\)) de présentation finie sur \\(X\\). Cela prouve la pre-\nmière assertion de 2.7, et la deuxième se prouve par la même méthode\n(NB il n'est pas nécessaire que \\(A\\) soit noethérien). Signalons en passant que\nla démonstration prouve aussi le corollaire suivant :</p>"
+    },
+    {
+     "id": "IX.2.7.1",
+     "type": "corollary",
+     "label": "2.7.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.2.7.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.7.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) un schéma, \\(F\\) un schéma étale sur \\(X\\).\n  Pour que le faisceau étale correspondant sur \\(X\\) soit constructible, il faut et\n  il suffit que \\(F\\) soit de présentation finie sur \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition 2.7 nous sera surtout utile ici pour déduire certaines\npropriétés de passage à la limite pour les faisceaux constructibles :</p>"
+    },
+    {
+     "id": "IX.2.7.2",
+     "type": "corollary",
+     "label": "2.7.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.2.7.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.7.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) un schéma quasi-compact et quasi-séparé. Alors\n  tout faisceau d'ensembles (resp. de ind-\\(p\\)-groupes, resp. de \\(A\\)-modules) sur \\(X\\)\n  est limite inductive d'un système inductif filtrant de faisceaux d'ensembles\n  (resp. ...) constructibles.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(F\\) est un faisceau d'ensembles, reprenons les notations de la\ndémonstration de 2.7, et soit \\(L\\) l'ensemble des couples \\((J, H')\\), où \\(J\\) est\nune partie finie de \\(I\\) et \\(H'\\) une partie ouverte quasi-compacte de \\(H_J = G_J \\times_F G_J\\).\nOn ordonne \\(L\\) de la façon évidente, et on constate que, puisque \\(F\\) est limite\ndes \\(F_J\\), et que chaque \\(F_J\\) est limite de \\(\\operatorname{Coker}(H' \\rightrightarrows G_J)\\) pour les ouverts\nquasi-compacts \\(H'\\) de \\(H_J\\), que \\(F\\) est limite inductive du système inductif des\n\\(F_\\ell = \\operatorname{Coker}(H' \\rightrightarrows F_J)\\) pour \\(\\ell = (H', J) \\in L\\), d'où le cas ensembliste. Le cas\ndes faisceaux de \\(A\\)-modules se traite essentiellement de la même façon, en com-\nmençant par représenter \\(F\\) comme conoyau d'un homomorphisme \\(A_{V,X} \\longrightarrow A_{U,X}\\),\navec \\(U, V\\) schémas étales et séparés sur \\(X\\). Le cas des ind-\\(p\\)-groupes\ndemande un peu plus d'attention. Reprenant les notations précédentes, nous dé-\nsignons par \\(L(G_J)\\) le faisceau en groupes libre engendré par le faisceau d'en-\nsembles \\(G_J\\), par \\(N_J\\) le noyau de l'homomorphisme \\(L(G_J) \\to F\\) déduit de\n\\(G_J \\to F\\), par \\(L\\) l'ensemble des couples \\((J, N')\\), où \\(N'\\) est un sous-faisceau\nd'ensembles de \\(N_J\\) qui est \"quasi-compact\" i.e. tel qu'il existe un épimorphisme\n\\(P \\to N'\\), avec \\(P\\) représentable par un \\(X\\)-schéma quasi-compact. On ordonne \\(L\\)\nen déclarant que \\((J, N')\\) est plus petit que \\((J_1, N'_1)\\) si \\(J \\subset J_1\\) et si\nl'homomorphisme canonique \\(L(G_J) \\to L(G_{J_1})\\) applique \\(N'\\) dans \\(N'_1\\). Il est\nimmédiat que \\(L\\) est filtrant, et que l'on obtient un système inductif de faisceaux\nen groupes \\(F_\\ell\\), indexé par \\(L\\), en prenant, pour \\(\\ell = (J, N')\\), \\(F_\\ell = \\) faisceau\nen groupes quotient de \\(L(G_J)\\) par le sous-faisceau en groupes invariant engendré\npar \\(N'\\). Il est immédiat de plus que \\(F\\) est isomorphe à la limite inductive\ndes \\(F_\\ell\\), et il reste à prouver qu'il existe une partie \\(L'\\) de \\(L\\), cofinale dans\n\\(L\\), telle que pour \\(\\ell \\in L'\\), \\(F_\\ell\\) soit un faisceau en \\(p\\)-groupes constructible.\nPour ceci, il suffit de prouver que pour tout \\(J\\), on peut trouver un sous-\nfaisceau d'ensembles \\(N'\\) de \\(N_J\\) qui soit quasi-compact, contienne un sous-\nfaisceau d'ensembles quasi-compact donné \\(N'_0\\), et soit tel que le \\(F_\\ell\\) corres-\npondant soit un faisceau en \\(p\\)-groupes constructible. Notons d'abord qu'il suf-\nfit, pour ceci, que les fibres de \\(F_\\ell\\) soient des \\(p\\)-groupes finis : alors \\(F_\\ell\\)\nsera automatiquement constructible, comme le lecteur vérifiera sans peine.\nD'autre part, le lecteur pourra vérifier également que l'ensemble \\(X_{N'}\\) des\npoints \\(x\\) de \\(X\\) tels que la fibre de \\(F_\\ell\\) en un point géométrique au-dessus de\n\\(x\\) soit un \\(p\\)-groupe fini est localement constructible. De plus, les parties\n\\(X_{N'}\\) de \\(X\\) sont fonction croissante de \\(N'\\), enfin leur réunion est \\(X\\) tout\nentier : ce dernier point résulte du fait que la limite inductive des \\(F_\\ell\\),\npour \\(\\ell = (N', J)\\) avec \\(J\\) fixé, est le sous-faisceau en groupes \\(F_J\\) de \\(F\\)\nengendré par le sous-faisceau d'ensembles \\(G_J\\), et \\(F_J\\) est à fibres des \\(p\\)-groupes finis.\nD'autre part, dans un groupe libre à un nombre fini de générateurs, tout sous-groupe d'indice fini est un sous-groupe\nlibre à un nombre fini de générateurs, donc s'il est représenté comme réunion\nfiltrante de ses parties finies, l'une de celles-ci engendre tout le sous-groupe.\nDe là résulte aisément que la réunion des \\(X_{N'}\\) est bien \\(X\\). Utilisant à nouveau\n(EGA IV 1.9.9) on trouve que un des \\(X_{N'}\\) est égal à \\(X\\), ce qui achève la démons-\ntration de 2.7.2.</p>"
+    },
+    {
+     "id": "IX.2.7.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.2.7.2.1\">2.7.2.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons que la démonstration un peu pénible du cas des schémas en grou-\npes met en évidence le manque d'un sorite commode pour les conditions de cons-\ntructibilité pour des faisceaux en groupes à fibres pas nécessairement finies;\nnous nous en excusons auprès du lecteur en l'invitant au besoin à combler cette\nlacune par ses propres moyens, et lui signalons en guise de consolation que dans\n2.9 (iii) nous obtenons une démonstration plus simple lorsque \\(X\\) est noethérien.</p>"
+    },
+    {
+     "id": "IX.2.7.3",
+     "type": "corollary",
+     "label": "2.7.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.2.7.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.7.3</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) un schéma quasi-compact et quasi-séparé, \\(F\\) un\n  faisceau d'ensembles (resp. de \\(A\\)-modules) constructible. Alors le foncteur \\(\\operatorname{Hom}(F,G)\\), où \\(G\\) est un faisceau d'ensembles (resp. ...)\n  variable, commute aux limites inductives en \\(G\\). Dans le cas où \\(F\\) est un fais-\n  ceau de \\(A\\)-modules, \\(A\\) étant noethérien, les foncteurs \\(\\operatorname{Ext}^i(X; F, G)\\) en le\n  \\(A\\)-module \\(G\\) commutent également aux limites inductives.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci résulte de 2.7 et (VII 3.3) par les arguments habituels, qui\nsont laissés au lecteur. De même, la conjonction de 2.7 et des résultats de\n(VII 5) donne aisément :</p>"
+    },
+    {
+     "id": "IX.2.7.4",
+     "type": "corollary",
+     "label": "2.7.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.2.7.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.7.4</span></div>\n  <div class=\"thm-body\"><p>Soit \\(I\\) une catégorie filtrante, \\(i \\mapsto X_i : I^{\\circ} \\to (\\mathrm{Sch})\\) un\n  foncteur qui transforme les flèches en morphismes affines et les objets en des\n  schémas quasi-compacts et quasi-séparés. Pour tout schéma \\(Y\\), soit\n  \\(F_c(Y)\\) la catégorie des faisceaux d'ensembles (resp. de ind-\\(p\\)-groupes, resp. de\n  \\(A\\)-modules) constructibles sur \\(Y\\). Alors on a une équivalence de catégories\n  \\[\n  F_c(X) \\xleftarrow{\\ \\sim\\ } \\varprojlim_i F_c(X_i) ,\n  \\]\n  où \\(X = \\varprojlim_i X_i\\) (VII 5) et où le deuxième membre désigne la catégorie \\(\\varprojlim\\) de\n  catégories fibrées, définie dans . En particulier, tout faisceau d'ensembles\n  (resp. ...) constructible sur \\(X\\) est isomorphe à l'image inverse d'un faisceau de\n  même nature sur un des \\(X_i\\).</p></div>\n</div>"
+    },
+    {
+     "id": "IX.2.8",
+     "type": "proposition",
+     "label": "2.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.8</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\longrightarrow Y\\) <u>un morphisme surjectif et localement de</u>\n  <u>présentation finie, et soit</u> \\(F\\) <u>un faisceau d'ensembles</u> (resp. ...) <u>sur</u> \\(Y\\).\n  <u>Alors</u> \\(F\\) <u>est constructible si et seulement si</u> \\(f^*(F)\\) <u>l'est.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons le</p>"
+    },
+    {
+     "id": "IX.2.8.1",
+     "type": "lemma",
+     "label": "2.8.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IX.2.8.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.8.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\longrightarrow Y\\) <u>un morphisme surjectif et localement de présenta-</u>\n  <u>tion finie, avec</u> \\(Y\\) <u>quasi-compact et quasi-séparé. Alors il existe une partition</u>\n  <u>finie de</u> \\(Y\\) <u>en des sous-schémas</u> \\(Y_i\\) <u>de présentation finie sur</u> \\(Y\\) (<u>en</u>\n  <u>particulier chaque</u> \\(Y_i\\) <u>est constructible dans</u> \\(X\\)) <u>et pour tout</u> \\(i\\), <u>des morphismes</u>\n  <u>finis surjectifs</u> \\(Y''_i \\xrightarrow{\\ g_i\\ } Y'_i \\xrightarrow{\\ h_i\\ } Y_i\\), <u>avec</u> \\(h_i\\) <u>étale et</u> \\(g_i\\) <u>localement libre</u>\n  <u>(i.e. plat et de présentation finie, en plus de la condition</u> \\(g_i\\) <u>fini), et radiciel,</u>\n  <u>et enfin un</u> \\(Y\\)-<u>morphisme</u> \\(Y''_i \\longrightarrow X\\)<sup class=\"footnote-ref\"><a id=\"IX-fn3ref\" href=\"#IX-fn3\">(∗)</a></sup>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisant le fait que \\(Y\\) est quasi-compact et quasi-séparé, on se ramène\naisément au cas où \\(Y\\) est quasi-affine donc séparé (en utilisant un recouvrement\nouvert affine fini \\((U_i)_{1 \\leqslant i \\leqslant n}\\) de \\(Y\\) et considérant les \\(Y_i = U_i - U_i \\cap \\bigcup_{j &lt; i} U_j\\),\npuis au cas \\(Y\\) affine (par le même argument). Le schéma \\(X\\) est réunion d'ou-\nverts affines \\(X_i\\), et l'image \\(T_i\\) de \\(X_i\\) dans \\(Y\\) est constructible (EGA IV\n1.8.4), la réunion des \\(T_i\\) est \\(Y\\) puisque \\(f\\) est surjectif, d'où il s'ensuit\nque \\(X\\) est réunion d'un nombre fini des \\(T_i\\) (EGA IV 1.9.9), de sorte que, rem-\nplaçant \\(X\\) par le schéma somme des \\(X_i\\) correspondants, on peut supposer \\(X\\)\naffine. Alors le procédé de passage à la limite standard (EGA IV 8 8.1.2 c))\nnous permet de supposer de plus \\(Y\\) noethérien. La récurrence noethérienne habituelle,\net le procédé de passage à la limite (EGA IV 8.1.2 a)) nous ramène au cas où \\(Y\\)\nest réduit au spectre d'un corps \\(k\\). Comme alors \\(X \\neq \\emptyset\\), il existe un point fermé\n\\(x \\in X\\), qui correspond à une extension finie \\(k'\\) de \\(k\\), elle-même extension\nradicielle d'une extension séparable \\(k'_s\\) de \\(k\\). On prendra alors\n\\(Y' = \\operatorname{Spec}(k'_s)\\), \\(Y'' = \\operatorname{Spec}(k')\\), ce qui achève la démonstration de 2.8.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La nécessité dans 2.8 étant triviale (2.4 (iii)), prouvons la suffi-\nsance. On est alors ramené, par le lemme précédent, au cas où \\(f\\) est de la forme\n\\(g h\\), où \\(g\\) et \\(h\\) satisfont aux conditions énoncées pour \\(g_i, h_i\\) dans le lemme.\nOn peut donc supposer successivement, soit que \\(f\\) est fini radiciel, cas trivial\npar (VIII 1.1), soit que \\(f\\) est fini étale. Notons d'ailleurs que, utilisant\nl'hypothèse que \\(f^*(F)\\) est constructible et la définition de la constructibilité,\nnous pouvions supposer (quitte à remplacer \\(X\\) par un \\(X\\)-préschéma \\(X' \\simeq \\coprod_i X_i\\) de\nprésentation finie et à morphisme structural surjectif) que \\(f^*(F)\\) est déjà loca-\nlement constant. Mais lorsque \\(f\\) est étale et surjectif, cela implique que \\(F\\)\nest localement constant. Comme de plus toutes les hypothèses faites sur les fibres de\n\\(f^*(F)\\) restent valables pour celles de \\(F\\), \\(f\\) étant surjectif, il s'ensuit bien\nque \\(F\\) est constructible, ce qui achève la démonstration de 2.8.</p>"
+    },
+    {
+     "id": "IX.2.9",
+     "type": "proposition",
+     "label": "2.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(X\\) <u>un schéma noethérien</u>, \\(A\\) <u>un anneau noethérien,</u>\n  <u>et</u> \\(p\\) <u>un ensemble de nombres premiers.</u></p>\n\n  <p>(i) <u>La catégorie des faisceaux d'ensembles</u> (resp. <u>de ind \\(p\\)-groupes</u>, resp.\n  <u>de \\(A\\)-modules) sur</u> \\(X\\) <u>est localement noethérienne, c'est-à-dire, possède un</u>\n  <u>ensemble de générateurs formé d'objets noethériens.</u></p>\n\n  <p>(ii) <u>Un faisceau</u> \\(F\\) <u>d'ensembles</u> (resp. <u>de ind \\(p\\)-groupes</u>, resp. <u>de</u>\n  <u>\\(A\\)-modules) sur</u> \\(X\\) <u>est constructible si et seulement si il est noethérien.</u>\n  <u>Si</u> \\(F\\) <u>est un faisceau de \\(A\\)-modules, alors</u> \\(F\\) <u>est constructible si et seule-</u>\n  <u>ment si il est quotient d'une somme finie de faisceaux de la forme</u>\n  \\(A_{U/X}\\), <u>où</u> \\(U \\longrightarrow X\\) <u>est étale et de type fini</u> (notation de IV.2.4 : \\(A_{U/X} = A_U\\)).</p>\n\n  <p>(iii) <u>Les sous-faisceaux constructibles d'un faisceau</u> \\(F\\) <u>d'ensembles</u>\n  (resp. ...) <u>forment un système inductif, et</u> \\(F\\) <u>est limite inductive de ces</u>\n  <u>sous-faisceaux.</u></p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. On laisse l'assertion ensembliste au lecteur. Traitons\nd'abord le cas d'un faisceau de \\(A\\)-modules. Pour (i) il faut trouver un ensem-\nble de générateurs dont les éléments sont des objets noethériens. Or les faisceaux\nde la forme \\(A_{U/X}\\), \\(U \\longrightarrow X\\) étale et de type fini forment un ensemble de généra-\nteurs dont on voit facilement qu'ils sont constructibles, et il suffit\ndonc de démontrer le lemme suivant :</p>"
+    },
+    {
+     "id": "IX.2.10",
+     "type": "lemma",
+     "label": "2.10",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IX.2.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.10</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) <u>noethérien. Alors tout \\(A\\)-Module constructible est</u>\n  <u>noethérien.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration du lemme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par récurrence noethérienne nous supposons le lemme vrai pour chaque\nsous-schéma \\(X'\\) de \\(X\\) distinct de \\(X\\). Prenons un ouvert non-vide \\(X_0\\) de \\(X\\)\ntel que \\(F\\) induise un faisceau localement constant \\(F_0\\) sur \\(X_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit maintenant \\(\\{ F_i \\}\\), \\(i \\in \\mathbb{N}\\) une suite croissante de sous-faisceaux\nde \\(F_0\\). Comme pour un point géométrique \\(P\\), générique pour une composante irré-\nductible de \\(X_0\\), la fibre de \\(F_0\\) en \\(P\\) est de type fini, la suite des fibres\n\\((F_i)_P\\) est stationnaire, et nous pouvons supposer qu'elle est constante. Or soit\n\\(Q\\) un point géométrique de \\(X_0\\) spécialisation de \\(P\\) (VIII 7.2). Puisque \\(F_0\\) est\nlocalement constant sur \\(X_0\\), on voit immédiatement que le morphisme de spéciali-\nsation \\(F_{0_Q} \\longrightarrow F_{0_P}\\) (VIII.7) est bijectif, donc \\((F_i)_Q \\longrightarrow (F_i)_P\\) est <u>injectif</u>\npour chaque \\(i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(V/X\\) étale et \\(P\\)-ponctué, et \\(s_1, \\ldots, s_n\\) des sections \\(\\in F_1(V)\\)\nqui engendrent \\((F_i)_P\\). Alors les \\(s_i\\) engendrent \\((F_i)_Q\\) pour chaque \\(i\\) et\nchaque point géométrique \\(Q\\) spécialisation de \\(P\\) au-dessus de \\(V\\). La suite\nde faisceaux \\(F_i\\) est donc constante dans un voisinage de l'image de \\(P\\), disons\ndans \\(X' \\neq \\emptyset\\). Soit \\(Y = X - X'\\), il suffit donc de prouver que la suite des \\(F_i | Y\\)\nest stationnaire, ce qui résulte de l'hypothèse de récurrence noethérienne.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les assertions (ii) pour les \\(A\\)-modules sont maintenant immédiates :\nComme les \\(A_{U/X}\\) sont des générateurs noethériens, on a évidemment \\(F\\) noethérien \\(\\Longleftrightarrow F\\)\nest quotient d'une somme finie de faisceaux \\(A_{U/X}\\). Or \\(A_{U/X}\\) est constructible,\net par suite, compte tenu de 2.6, \\(F\\) noethérien \\(\\Longrightarrow F\\) constructible; l'impli-\ncation inverse étant déjà établie (2.10), cela établit (ii). Enfin, l'assertion\n(iii) pour les \\(A\\)-modules est une propriété des catégories localement noethériennes\n(cf. [1], Ch. IV).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Traitons maintenant le cas des ind-\\(p\\)-groupes. Notons d'abord\nqu'un faisceau de groupes constructible \\(F\\) est certainement noethérien.\nEn effet, puisque les fibres sont finies, on peut employer le même argument\nqu'avec les \\(A\\)-modules. On va maintenant démontrer l'assertion (iii) directement,\nce qui impliquera (i) - en effet, cela démontrera que les faisceaux constructibles\nforment un ensemble de générateurs. De plus, un faisceau noethérien quelconque\nsera alors nécessairement constructible, d'où (ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour démontrer (iii), il suffit évidemment de démontrer qu'un sous-\nfaisceau (en groupes) \\(S\\) d'un faisceau \\(F\\) de ind \\(p\\)-groupes engendré par un nombre\nfini de sections \\(s_i \\in F(U_i)\\), \\(U_i \\longrightarrow X\\) étale de type fini, est constructible<sup class=\"footnote-ref\"><a id=\"IX-fn4ref\" href=\"#IX-fn4\">(∗)</a></sup>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(Puisqu'un faisceau constructible est noethérien, il est engendré par un nombre\nfini de sections.) Par récurrence noethérienne, on peut supposer que c'est vrai\npour chaque sous-schéma fermé \\(Y\\) de \\(X\\), distinct de \\(X\\). Or la notion de sous-\nfaisceau engendré par des sections commute avec l'image inverse de faisceaux; en\neffet, soit \\(L_{U/X}\\) le faisceau qui représente le foncteur \\(F \\longmapsto F(U)\\) dans la\ncatégorie des groupes. Alors si \\(f : Y \\longrightarrow X\\), on a \\(f^*(L_{U/X}) = L_{U \\times_X Y/Y}\\). Comme\n\\(S\\) est l'image de la somme des \\(L_{U_i/X}\\), et comme \\(f^*\\) commute aux sommes, il est\nclair que \\(f^* S\\) est le sous-faisceau de \\(f^* F\\) engendré par les sections \\(f^*(S_i)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut donc supposer que \\(S\\) induit un faisceau constructible sur\nchaque fermé \\(Y\\) distinct de \\(X\\), et il suffit ainsi (2.4 (i)) de démontrer que \\(S\\)\ninduit un faisceau constructible sur un ouvert non-vide convenable de \\(X\\).\nEn remplaçant \\(X\\) par un ouvert assez petit, on peut supposer que chaque \\(U_i\\) est\nun revêtement étale de \\(X\\). Il suffit de démontrer qu'alors \\(S\\) est localement\nconstant, à fibres finies sur un ouvert non vide convenable. C'est une assertion\nlocale sur \\(X\\) pour la topologie étale, et on peut donc supposer chaque \\(U_i\\)\nest complètement décomposé, disons \\(U_i = \\coprod_{n_i} X\\) (somme de \\(n_i\\) copies de \\(X\\)).\nSoient \\(s_{ij}\\) (\\(j = 1, \\ldots, n_i\\)) les sections de \\(F(X)\\) telles que \\(s_i\\) \\((s_{i1}, \\ldots, s_{in_i})\\).\nEvidemment, \\(S\\) n'est autre que le sous-faisceau de \\(F\\) engendré par les\n\\(s_{ij} \\in F(X)\\). Comme \\(F(X)\\) est un ind \\(p\\)-groupe (1.5) les \\(s_{ij}\\) engendrent un\nsous-groupe fini 1.3. Donc on peut supposer que l'ensemble des \\(s_i\\) est un sous-\ngroupe fini de \\(F(X)\\), mais alors \\(S\\) est identique au faisceau d'ensembles engendré\npar les \\(s_i\\), qui est constructible en vertu de 2.6 (i) comme faisceau d'ensembles,\ndonc comme faisceau de groupes, cqfd.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans les deux propositions suivantes, nous donnons des critères pour\nqu'un faisceau soit localement constant, ou constructible, en utilisant les homo-\nmorphismes de spécialisation (VIII 7.7).</p>"
+    },
+    {
+     "id": "IX.2.11",
+     "type": "proposition",
+     "label": "2.11",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.11</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) <u>un schéma</u>, \\(F\\) <u>un faisceau d'ensembles</u>\n  (resp. <u>de groupes ind-finis</u>, resp. <u>de \\(A\\)-modules) constructible; dans le cas</u>\n  <u>ensembliste, on suppose de plus</u> \\(F\\) <u>à fibres finies. Soient</u> \\(x \\in X\\), \\(\\bar{x}\\) <u>un point</u>\n  <u>géométrique sur</u> \\(x\\). <u>Pour que</u> \\(F\\) <u>soit localement constant au voisinage de</u> \\(x\\),\n  <u>il faut et il suffit que pour tout point géométrique</u> \\(\\bar{x}'\\) <u>générisation de</u> \\(\\bar{x}\\), <u>et</u>\n  <u>toute flèche de spécialisation</u> \\(\\bar{x}' \\to \\bar{x}\\) (VIII 7.2), <u>l'homomorphisme de spécia-</u>\n  <u>lisation</u> (VIII 7.7) \\(F_{\\bar{x}} \\to F_{\\bar{x}'}\\), <u>soit un isomorphisme.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le cas d'un faisceau en groupes étant un cas particulier de celui d'un\nfaisceau d'ensembles, nous nous contentons de traiter celui-ci; le cas d'un fais-\nceau de modules se traite de façon essentiellement identique. La nécessité de la\ncondition étant triviale, nous nous bornons à établir la suffisance. Comme la fibre\n\\(I = F_{\\bar{x}}\\) est finie, quitte à remplacer \\(X\\) par un schéma \\(X'\\) étale sur \\(X\\) conve-\nnable, on peut supposer que l'on peut trouver un homomorphisme \\(u : I_X \\longrightarrow F\\) du\nfaisceau constant \\(I_X\\) dans \\(F\\), induisant un isomorphisme pour les fibres en \\(\\bar{x}\\).\nUtilisant la constructibilité des deux faisceaux, et 2.6, on voit aisément que\nl'ensemble \\(Z\\) des points \\(z\\) de \\(X\\) tels que l'homomorphisme induit sur les fibres\nen un point géométrique \\(\\bar{z}\\) sur \\(z\\) soit bijective, est une partie localement\nconstructible de \\(X\\). L'hypothèse implique aussitôt qu'elle contient les géné-\nrisations de \\(x\\), donc (EGA IV 1.10.1) c'est un voisinage de \\(x\\), ce qui prouve\nque \\(F\\) est localement constant (en l'occurrence, même constant) au voisinage de\n\\(x\\), cqfd.</p>"
+    },
+    {
+     "id": "IX.2.12",
+     "type": "definition",
+     "label": "2.12",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"IX.2.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.12</span><sup class=\"footnote-ref\"><a id=\"IX-fn5ref\" href=\"#IX-fn5\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>Un schéma \\(X\\) est dit <u>connexe par arcs</u> si pour tout\n  couple \\(P, Q\\) <u>de points géométriques de</u> \\(X\\), <u>il existe des points géométriques</u>\n  \\(P = P_0, \\ldots, P_n\\); \\(Q_1, \\ldots, Q_n = Q\\) <u>et des spécialisations</u> (VIII 7.2) \\(P_i \\longrightarrow Q_i\\) <u>et</u>\n  \\(P_{i-1} \\longrightarrow Q_i\\) (\\(i = 1, \\ldots, n\\)). <u>On dit que</u> \\(X\\) <u>est localement connexe par arcs</u> (<u>pour</u>\n  <u>la topologie étale) si pour chaque</u> \\(U \\longrightarrow X\\) <u>étale il existe un recouvrement</u>\n  <u>étale</u> \\(\\{ U_i \\longrightarrow U \\}\\) <u>de</u> \\(U\\) <u>tel que</u> \\(U_i\\) <u>est connexe par arcs pour chaque</u> \\(i\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On vérifie immédiatement qu'un préschéma localement noethérien est\nlocalement connexe par arcs.</p>"
+    },
+    {
+     "id": "IX.2.13",
+     "type": "proposition",
+     "label": "2.13",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.13</span></div>\n  <div class=\"thm-body\">\n  <p>(i) <u>Soit</u> \\(X\\) <u>localement connexe par arcs et soit</u> \\(F\\) <u>un faisceau d'ensembles</u>\n  (resp. <u>de groupes</u>, resp. <u>de \\(A\\)-modules) sur</u> \\(X\\). <u>Supposons que les fibres de</u> \\(F\\)\n  <u>sont finies</u> (resp. <u>finies</u>, resp. <u>de présentation finie). Alors</u> \\(F\\) <u>est</u>\n  <u>localement constant si et seulement si pour toute spécialisation</u> \\(P \\longrightarrow Q\\)\n  <u>de points géométriques, le morphisme de spécialisation</u> (VIII 7.7)\n  \\(F_Q \\longrightarrow F_P\\) <u>est bijectif.</u></p>\n\n  <p>(ii) <u>Supposons que</u> \\(X\\) <u>soit localement noethérien et que les fibres de</u> \\(F\\)\n  <u>soient finies</u> (resp. <u>finies</u>, resp. <u>de présentation finie). Alors, si pour toute</u>\n  <u>spécialisation</u> \\(P \\longrightarrow Q\\), <u>le morphisme de spécialisation</u> \\(F_Q \\longrightarrow F_P\\) <u>est injec-</u>\n  <u>tif</u>, \\(F\\) <u>est constructible.</u></p>\n\n  <p>(iii) <u>Supposons que</u> \\(X\\) <u>soit localement noethérien et que les fibres du</u>\n  <u>faisceau d'ensembles</u> \\(F\\) <u>soient finies. Soit</u> \\(c : X \\longrightarrow \\mathbb{N}\\) <u>la fonction qui à</u>\n  \\(x \\in X\\) <u>associe le nombre d'éléments de la fibre</u> \\(F_{\\bar{x}}\\) <u>de</u> \\(F\\) <u>en un point géomé-</u>\n  <u>trique</u> \\(\\bar{x}\\) <u>au-dessus de</u> \\(x\\). <u>Alors</u> \\(F\\) <u>est constructible si et seulement si</u> \\(c\\)\n  <u>est une fonction constructible, i.e., si et seulement si</u> \\(c^{-1}(n)\\) <u>est construc-</u>\n  <u>tible pour chaque</u> \\(n \\in \\mathbb{N}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. (i) Soit \\(P\\) un point géométrique de \\(X\\).\nOn va trouver un voisinage étale de \\(P\\), c'est-à-dire, un \\(U \\longrightarrow X\\) étale\n\\(P\\)-ponctué, tel que \\(F\\) devienne constant sur \\(U\\). Soit \\(V'\\) un voisinage étale de\n\\(P\\) tel que \\(F(V) \\longrightarrow F_P\\) soit surjectif. Un tel \\(V'\\) existe d'après l'hypothèse\nde finitude. Soit \\(U \\longrightarrow V'\\) un voisinage étale de \\(P\\) dans \\(V'\\), tel que \\(U\\)\nsoit connexe par arcs. Alors \\(F(U) \\longrightarrow F_P\\) est encore surjectif. Choisissons\nun sous-ensemble \\(S \\subset F(U)\\) qui s'envoie bijectivement sur \\(F_P\\). Si \\(F\\) est un\nfaisceau de groupes (resp. de \\(A\\)-modules), on voit facilement qu'on peut, en chan-\ngeant au besoin \\(U\\), trouver un tel ensemble qui soit de plus un sous-groupe\n(resp. sous-module) de \\(F(U)\\). On déduit un morphisme \\(S_U \\longrightarrow F | U\\), où \\(S_U\\) est\nle faisceau constant à valeur \\(S\\). On a\n\\[\n(S_U)_P \\xrightarrow{\\ \\sim\\ } F_P .\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque chaque morphisme de spécialisation sur les fibres de \\(F\\) (resp. \\(S_U\\)) est\nbijectif, et puisque \\(U\\) est connexe par arc, il s'ensuit que \\(S_U \\xrightarrow{\\sim} F | U\\), d'où le\nrésultat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) L'assertion est locale, et on peut donc supposer \\(X\\) noethérien.\nSoit \\(P\\) un point géométrique au-dessus d'un point maximal de \\(X\\). Il existe\nun voisinage étale irréductible, donc connexe par arcs, \\(U \\longrightarrow X\\) de \\(P\\) tel\nque \\(F(U)\\) s'envoie surjectivement sur \\(F_P\\). Il s'envoie alors surjectivement\nsur \\(F_Q\\) pour chaque point géométrique \\(Q\\) de \\(V\\), ou ce qui revient au même,\npour chaque point géométrique de l'image \\(U\\) de \\(V\\) dans \\(X\\), car un tel point\nest spécialisation de \\(P\\) et \\(F_Q \\longrightarrow F_P\\) est injectif. Donc chaque morphisme de\nspécialisation dans \\(U\\) est bijectif, donc \\(F | U\\) est localement constant. Par\nrécurrence noethérienne on peut supposer que \\(F | X - U\\) est constructible, d'où\nle résultat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) Il suffit évidemment de traiter le cas où la fonction \\(c\\) est cons-\ntante. Soit \\(V \\longrightarrow X\\) un voisinage étale d'un point géométrique \\(P\\) au-dessus\nd'un point maximal de \\(X\\), tel que \\(F(V)\\) s'envoie surjectivement sur \\(F_P\\).\nSoit \\(S\\) un sous-ensemble de \\(F(V)\\) tel que \\(S \\xrightarrow{\\sim} F_P\\). Alors on a, pour le\nfaisceau constant \\(S_V\\) et pour chaque spécialisation \\(P \\longrightarrow Q\\) de points géomé-\ntriques, un diagramme commutatif\n\\[\n\\xymatrix{\n(S_V)_P \\ar[r]^-{\\sim} &amp; F_P \\\\\n(S_V)_Q \\ar[u] \\ar[r] &amp; F_Q \\ar[u]\n}\n\\]\nComme \\(c(F_Q) = c(F_P)\\), la flèche \\(F_Q \\longrightarrow F_P\\) est bijective, donc \\(F\\) est locale-\nment constant dans un voisinage de \\(P\\) d'après (i). Par récurrence noethé-\nrienne, on a gagné.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le résultat (ii) suivant aura une utilité technique dans la suite;\nil permettra de réduire certaines vérifications au cas d'un faisceau constant.</p>"
+    },
+    {
+     "id": "IX.2.14",
+     "type": "proposition",
+     "label": "2.14",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.2.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.14</span></div>\n  <div class=\"thm-body\">\n  <p>Soit \\(X\\) <u>un schéma.</u></p>\n\n  <p>(i) <u>Pour tout morphisme fini et de présentation finie</u> \\(f : X' \\to X\\), <u>et</u>\n  <u>tout faisceau d'ensembles</u> (resp. <u>de groupes ind-finis</u>, resp. <u>de \\(A\\)-modules)</u>\n  <u>constructible sur</u> \\(X'\\), \\(f_*(F)\\) <u>est constructible.</u></p>\n\n  <p>(ii) <u>Supposons</u> \\(X\\) <u>quasi-compact et quasi-séparé, et soit</u> \\(F\\) <u>un faisceau</u>\n  <u>d'ensembles</u> (resp. ...) <u>constructible sur</u> \\(X\\). <u>Alors on peut trouver une famille</u>\n  <u>finie</u> \\((p_i : X'_i \\longrightarrow X)\\) <u>de morphismes finis, pour tout</u> \\(i\\), <u>un faisceau d'en-</u>\n  <u>sembles</u> (resp. ...) <u>constructible constant</u> \\(C_i\\) <u>sur</u> \\(X'_i\\), <u>et un monomorphisme</u>\n  \\[\n  F \\hookrightarrow \\prod_i p_{i*}(C_i) .\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons d'abord (i). Par définition, on peut supposer \\(X\\) affine,\net utilisant alors 2.7.4, le procédé de passage à la limite standard nous\nramène au cas où \\(X\\) est noethérien. Un nouveau passage à la limite, utilisant\nencore 2.7.4, et de plus 2.4. (v), nous ramène au cas où \\(X\\) est le spec-\ntre d'un corps. Alors la conclusion se réduit à l'assertion correspondante sur\nla fibre de \\(f_*(F)\\) en un point géométrique sur \\(X\\), laquelle résulte immédiate-\nment de (VIII 5.5, 5.8).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons (ii). En vertu de 2.4 (i), il existe une partition de \\(X\\)\nen sous-schémas \\(Y_i\\), avec des morphismes d'inclusion \\(u_i : Y_i \\longrightarrow X\\) de\nprésentation finie, tels que la restriction \\(F_i\\) de \\(F\\) à chaque \\(Y_i\\) soit un\nfaisceau localement constant. Il est alors immédiat que les homomorphismes cano-\nniques \\(F \\longrightarrow u_{i*}(F_i)\\) définissent un homomorphisme \\(F \\longrightarrow \\prod_i u_{i*}(F_i)\\) qui est\nun monomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On pouvait même s'arranger dans la construction précédente pour que\nchaque \\(F_i\\) soit, non seulement localement constant, mais de plus <u>isotrivial</u>,\ni.e. qu'il existe un morphisme étale <u>fini</u> surjectif \\(q_i : Y'_i \\longrightarrow Y_i\\) tel que\n\\(q_i^*(F_i)\\) soit un faisceau constant sur \\(Y'_i\\), soit \\(C_{i\\,Y'_i}\\). Cela résulte par\nexemple aisément de la définition de 2.8.1 et de (VIII 1.1). D'autre part,\nil résulte du \"Main Theorem\" sous la forme (EGA IV 8.12.6) qu'il existe un\nmorphisme fini \\(p_i : Z_i \\longrightarrow X\\) et une immersion ouverte \\(v_i : Y'_i \\longrightarrow Z_i\\) de\n\\(X\\)-schémas.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(F_i\\) se plonge dans \\(q_{i*}(q_i^*(F_i)) = q_{i*}(C_{i\\,Y'_i})\\), \\(F\\) se plonge dans le produit des\n\\(u_{i*}(q_{i*}(C_{i\\,Y'_i})) = p_{i*}(v_{i*}(C_{i\\,Y'_i}))\\). Si tout \\(Z_i\\) est normal, alors le lemme\n\\((2.14.1)\\) ci-dessous implique que \\(v_{i*}(C_{i\\,Y'_i}) \\xrightarrow{\\sim} C_{i\\,Z_i}\\), donc \\(F\\) se plonge\ndans le produit des \\(p_{i*}(C_{i\\,Z_i})\\), et on a terminé. Dans le cas général, intro-\nduisons le normalisé \\(\\overline{Z}_i\\) de \\(Z_i\\), l'image inverse \\(\\overline{Y}'_i\\) de \\(Y'_i\\) dans \\(\\overline{Z}_i\\),\nl'immersion \\(\\overline{v}_i : \\overline{Y}'_i \\longrightarrow \\overline{Z}_i\\). On voit aussitôt que \\(\\overline{Y}'_i\\) contient les points\nmaximaux de \\(\\overline{Z}_i\\), donc est dense dans \\(\\overline{Z}_i\\). Si \\(r_i : \\overline{Z}_i \\to Z_i\\) et \\(s_i : \\overline{Y}'_i \\to Y'_i\\)\nsont les projections, comme cette dernière est surjective, il s'ensuit que\n\\(C_{i\\,Y'_i}\\) se plonge dans \\(s_{i*}(C_{i\\,\\overline{Y}'_i})\\), donc \\(v_{i*}(C_{i\\,Y'_i})\\) se plonge dans\n\\(v_{i*}(s_{i*}(C_{i\\,\\overline{Y}'_i})) = r_{i*}(\\overline{v}_{i*}(C_{i\\,\\overline{Y}'_i}))\\), qui est isomorphe à \\(r_{i*}(C_{i\\,\\overline{Z}_i})\\) en vertu\nde \\((2.14.1)\\) ci-dessous. Donc \\(F\\) se plonge dans le produit des\n\\(p_{i*}(r_{i*}(C_{i\\,\\overline{Z}_i})) = t_{i*}(C_{i\\,\\overline{Z}_i})\\), où \\(t_i = p_i r_i\\) est la projection canonique \\(\\overline{Z}_i \\to X\\).\nLorsque ce morphisme est fini pour tout \\(i\\), on a donc terminé. Dans le cas\ngénéral, on peut dire seulement que \\(\\overline{Z}_i\\) est <u>entier</u> sur \\(X\\), donc de la forme\n\\(\\operatorname{Spec}(A_i)\\), où \\(A_i\\) est un faisceau quasi-cohérent de \\(\\mathcal{O}_X\\)-Algèbres, qui est\nentier sur \\(\\mathcal{O}_X\\). Utilisant (EGA IV 1.7.7), on voit que \\(A_i\\) est limite induc-\ntive de ses sous-Algèbres \\(A_{i,j}\\) finies sur \\(X\\), donc \\(\\overline{Z}_i\\) est limite projective\n(VII 5) des préschémas \\(Z_{i\\,j} = \\operatorname{Spec}(A_{ij})\\), finies sur \\(X\\). Appliquant (VII 5.11),\non trouve que \\(t_{i*}(C_{i\\,\\overline{Z}_i})\\) est limite inductive des \\(t_{ij*}(C_{i\\,Z_{ij}})\\) où\n\\(t_{ij} : Z_{ij} \\to X\\) est la projection canonique. En vertu de (2.7.3), l'homomor-\nphisme \\(F \\longrightarrow t_{i*}(C_{i\\,\\overline{Z}_i})\\) se factorise donc par un homomorphisme\n\\(F \\longrightarrow t_{ij*}(C_{i\\,Z_{ij}})\\), pour un \\(j = j(i)\\) convenable. On pose maintenant\n\\(X'_i = Z_{i,j(i)}\\), et on trouve un plongement comme annoncé dans 2.14.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à prouver le</p>"
+    },
+    {
+     "id": "IX.2.14.1",
+     "type": "lemma",
+     "label": "2.14.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IX.2.14.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.14.1</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) <u>un schéma géométriquement unibranche</u> (par exemple\n  <u>normal</u>), \\(i : U \\longrightarrow X\\) <u>une immersion ouverte quasi-compacte. Alors l'adhérence</u>\n  \\(Z\\) <u>de</u> \\(U\\), <u>munie de la structure réduite induite, est également géométriquement</u>\n  <u>unibranche, plus précisément, pour tout</u> \\(z \\in Z\\), <u>on a</u> \\(\\mathcal{O}_{Z,z} \\xleftarrow{\\sim} \\mathcal{O}_{X_{\\text{red}},z}\\).\n  <u>Supposons d'autre part</u> \\(i\\) <u>dominant, et soit</u> \\(C\\) <u>un ensemble</u>, \\(C_U\\) <u>le faisceau</u>\n  <u>constant sur</u> \\(U\\) <u>défini par</u> \\(C\\). <u>Alors l'homomorphisme naturel</u> \\(C_U \\longrightarrow i_*(C_U)\\)\n  <u>est un isomorphisme. Mêmes conclusions si on remplace l'immersion ouverte</u> \\(i\\)\n  <u>par une inclusion</u> \\(i : x \\to X\\), <u>où</u> \\(x\\) <u>est un point maximal de</u> \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisant (EGA IV 2.3.11), on est ramené pour la première assertion\nau cas où \\(X\\) est local, de point fermé \\(z\\), mais alors \\(X_{\\text{red}}\\) est intègre et \\(U\\)\nnon vide, donc \\(Z = X_{\\text{red}}\\) et l'assertion est évidente (il suffisait donc, au\nlieu de \\(X\\) géométriquement unibranche, de supposer ici que les anneaux locaux\nde \\(X_{\\text{red}}\\) sont intègres). Pour la deuxième assertion, regardant fibre par fibre,\non se ramène grâce à (VIII 5.3) et loc. cit. au cas où \\(X\\) est strictement\nlocal, et à prouver alors que \\(H^0(X, C_X) \\longrightarrow H^0(U, C_U)\\) est bijectif. Or ici\nencore, \\(X\\) est irréductible, et \\(U\\) en est un ouvert non vide donc irré-\nductible, et les deux membres de l'application précédente s'identifient à \\(C\\),\nd'où la conclusion voulue. (On a utilisé ici la notion \"géométriquement\nunibranche\" sous la forme de (EGA IV 18.8.14), comme signifiant que les an-\nneaux localisés stricts de \\(X_{\\text{red}}\\) sont intègres. Le cas de l'inclusion d'un\npoint maximal (énoncé ici pour la commodité de références futures) se traite\nexactement de la même façon.</p>"
+    },
+    {
+     "id": "IX.2.14.2",
+     "type": "remark",
+     "label": "2.14.2",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-plain remark\" id=\"IX.2.14.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">2.14.2</span></div>\n  <div class=\"thm-body\"><p>Lorsque \\(X\\) est noethérien, la démonstration donnée (ou une\n  déduction immédiate) montre que dans 2.14 (ii), on peut supposer les \\(X'_i\\) intè-\n  gres; si de plus on suppose \\(X\\) universellement japonais, i.e. les anneaux\n  de ses ouverts affines universellement japonais (EGA \\(\\mathrm{O_{IV}}\\) 23.1.1, IV 7.7.2),\n  on peut de plus supposer les \\(X'_i\\) normaux.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) Lorsque \\(A\\) n'est pas supposé noethérien, il est préférable, pour les besoins de l'Algèbre Homologique, d'exiger ici, au lieu de la seule présentation finie pour le \\(A\\)-module \\(M\\), qu'il ait une résolution gauche par des \\(A\\)-modules libres de type fini. La notion introduite dans (2.3) devrait alors prendre le nom : \\(F\\) est 1-constructible, (plus généralement, on définirait de façon évidente la \\(n\\)-constructibilité, pour tout entier \\(n \\geqslant 0\\)). Nous allons provisoirement pour le présent exposé garder la terminologie sous la forme (2.3), qui est surtout raisonnable dans le cas où \\(A\\) est noethérien, où elle coïncide avec celle qu'on vient de signaler. Comparer SGA 6 I pour des notions de finitude dans des cas non noethériens. </p>"
+    },
+    {
+     "id": "IX-fn3",
+     "number": "(∗)",
+     "html": "<p>(∗) Cet énoncé est aussi donné dans EGA IV 17.16.4. </p>"
+    },
+    {
+     "id": "IX-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) Rappelons la définition de ce faisceau : soit \\(L_{U/X}\\) le faisceau qui représente le foncteur \\(F \\mapsto F(U)\\) dans la catégorie des groupes. La section \\(s_i \\in F(U_i)\\) induit un morphisme \\(L_{U_i/X} \\to F\\), et \\(S\\) est l'image du morphisme somme \\(\\coprod_i L_{U_i/X} \\to F\\). C'est le plus petit sous-faisceau qui \"contient\" les sections \\(s_i\\). </p>"
+    },
+    {
+     "id": "IX-fn5",
+     "number": "(∗)",
+     "html": "<p>(∗) La terminologie est due à S. Lubkin. </p>"
+    }
+   ]
+  },
+  {
+   "id": "IX-3",
+   "title": "3. Théories de Kummer et d'Artin-Schreier",
+   "blocks": [
+    {
+     "id": "IX.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.3\">3. Théories de Kummer et d'Artin-Schreier</h2>"
+    },
+    {
+     "id": "IX.3.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.3.0\">3.0</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On va noter \\((\\mathbb{G}_m)_X\\) le faisceau représenté par le groupe multipli-\ncatif \\(\\operatorname{Spec} \\mathcal{O}_X[t, t^{-1}]\\) sur \\(X\\). Donc pour \\(U \\longrightarrow X\\) étale, les sections de\n\\((\\mathbb{G}_m)_X\\) sur \\(U\\) sont les éléments inversibles \\(\\Gamma(U, \\mathcal{O}^*_U)\\) de \\(\\Gamma(U, \\mathcal{O}_U)\\).\nSoit \\(n \\in \\mathbb{N}\\). Le noyau de la puissance \\(n\\)-ième dans \\((\\mathbb{G}_m)_X\\) est le\n\"faisceau des racines \\(n\\)-ièmes de l'unité\", noté \\((\\mu_n)_X\\). On a donc une\nsuite exacte\n\\[\n(3.1) \\qquad 0 \\longrightarrow (\\mu_n)_X \\longrightarrow (\\mathbb{G}_m)_X \\xrightarrow{\\ n\\ } (\\mathbb{G}_m)_X .\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(n\\) est inversible sur \\(X\\) (c'est-à-dire, si \\(n\\) est premier à chaque carac-\ntéristique résiduelle de \\(X\\)), la puissance \\(n\\)-ième est un morphisme surjectif\n<u>pour les faisceaux</u> :</p>"
+    },
+    {
+     "id": "IX.3.2",
+     "type": "theorem",
+     "label": "3.2",
+     "title": "Théorie de Kummer",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IX.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorie de Kummer</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>On a la suite exacte\n  \\[\n  0 \\longrightarrow (\\mu_n)_X \\longrightarrow (\\mathbb{G}_m)_X \\xrightarrow{\\ n\\ } (\\mathbb{G}_m)_X \\longrightarrow 0\n  \\]\n  si \\(n \\in \\mathbb{N}\\) est inversible sur \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, soit \\(u \\in (\\mathbb{G}_m)_X(U)\\), \\(U \\longrightarrow X\\) étale.\nIl faut trouver un recouvrement étale \\(\\{ U_i \\longrightarrow U \\}\\) de \\(U\\) tel que \\(u\\)\ninduise une puissance \\(n\\)-ième sur chaque \\(U_i\\). Puisque \\(n\\) est inversible sur\n\\(U\\), l'équation\n\\[\nT^n - u = 0\n\\]\nest \"séparable\" sur \\(U\\), i.e.,\n\\[\nU' = \\operatorname{Spec} \\mathcal{O}_U[T]/(T^n - u)\n\\]\nest étale au-dessus de \\(U\\). Comme \\(U' \\longrightarrow U\\) est surjectif, il est couvrant\net \\(u\\) induit une puissance \\(n\\)-ième sur \\(U'\\), on a fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Signalons que lorsque \\(n\\) est inversible sur \\(X\\), \\((\\mu_n)_X\\) est un\nfaisceau localement constant, en fait localement isomorphe au faisceau\n\\((\\mathbb{Z}/n\\mathbb{Z})_X\\), et est constant dans des cas importants. La théorie de Kummer\ndonne donc des renseignements sur la cohomologie de \\(X\\) à valeurs dans cer-\ntains faisceaux constants. En fait, on a par définition\n\\[\nH^0(X, (\\mathbb{G}_m)_X) = \\Gamma(X, \\mathcal{O}^*_X) ,\n\\]\net pour la dimension \\(1\\) on a le</p>"
+    },
+    {
+     "id": "IX.3.3",
+     "type": "theorem",
+     "label": "3.3",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IX.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>(\"théorème 90 de Hilbert\") : On a un isomorphisme\n  \\[\n  H^1(X, (\\mathbb{G}_m)_X) \\xrightarrow{\\sim} \\operatorname{Pic} X ,\n  \\]\n  où \\(\\operatorname{Pic} X\\) est le groupe des classes de faisceaux inversibles sur \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Cela veut dire que le morphisme canonique\n\\[\nH^1(X_{\\text{zar}}, (\\mathbb{G}_m)_X) \\longrightarrow H^1(X_{\\text{ét}}, (\\mathbb{G}_m)_X)\n\\]\nest bijectif, ce qui revient au même que de dire que\n\\[\nR^1 \\varepsilon_*(\\mathbb{G}_m)_X = 0\n\\]\noù \\(\\varepsilon_*\\) est l'image directe pour le morphisme de sites évident\n\\(\\varepsilon : X_{\\text{ét}} \\longrightarrow X_{\\text{zar}}\\) (VIII 4). On est donc réduit au cas où \\(X\\) est affine.\nComme on peut calculer \\(H^1\\) par Čech (V 2.5) et comme il suffit pour un \\(X\\)\nquasi-compact de prendre des recouvrements quasi-compacts, c'est une consé-\nquence immédiate de la théorie de descente pour les faisceaux (cf. FGA 190, ou\nSGA VIII 1).</p>"
+    },
+    {
+     "id": "IX.3.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.3.3.1\">3.3.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons \\(X\\) noethérien et sans composante immergée et soient\n\\(x_j\\) les points maximaux de \\(X\\). Soit \\(R_j\\) l'anneau artinien local de\n\\(X\\) en \\(x_j\\), et \\(i_j : \\operatorname{Spec} R_j \\longrightarrow X\\) le morphisme d'inclusion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a une injection canonique\n\\[\n(\\mathbb{G}_m)_X \\longrightarrow \\prod_j i_{j*}(\\mathbb{G}_m)_{\\operatorname{Spec} R_j}\n\\]\nde faisceaux sur \\(X_{\\text{ét}}\\) (resp. \\(X_{\\text{zar}}\\)). Le conoyau \\(D\\) est appelé le <u>faisceau</u>\n<u>des diviseurs de Cartier</u> sur \\(X_{\\text{ét}}\\) (resp. \\(X_{\\text{zar}}\\))<sup class=\"footnote-ref\"><a id=\"IX-fn6ref\" href=\"#IX-fn6\">(∗)</a></sup>.</p>"
+    },
+    {
+     "id": "IX.3.4",
+     "type": "corollary",
+     "label": "3.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) <u>noethérien et sans composante immergée, soit</u>\n  \\(\\varepsilon : X_{\\text{ét}} \\longrightarrow X_{\\text{zar}}\\) <u>le morphisme de sites canonique, et soit</u> \\(D\\) <u>le faisceau</u>\n  <u>des diviseurs de Cartier sur</u> \\(X_{\\text{ét}}\\). <u>Alors</u> \\(\\varepsilon_* D\\) <u>est le faisceau</u> \\(D_{\\text{zar}}\\) <u>des</u>\n  <u>diviseurs de Cartier sur</u> \\(X_{\\text{zar}}\\), <u>et on a en particulier</u> :\n  \\[\n  H^0(X_{\\text{ét}}, D) \\approx H^0(X_{\\text{zar}}, D_{\\text{zar}}) .\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Si l'on applique \\(\\varepsilon_*\\) à la suite exacte\n\\[\n0 \\longrightarrow (\\mathbb{G}_m)_X \\longrightarrow \\prod_j i_{j*}(\\mathbb{G}_m)_{\\operatorname{Spec} R_j} \\longrightarrow D \\longrightarrow 0 ,\n\\]\non trouve une suite exacte puisque \\(R^1 \\varepsilon_*(\\mathbb{G}_m)_X = 0\\) (3.3), d'où la\npremière assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas où \\(X\\) admet une caractéristique \\(p \\neq 0\\), le résultat\nsuivant remplacera parfois 3.2 pour l'étude des coefficients de \\(p\\)-torsion :</p>"
+    },
+    {
+     "id": "IX.3.5",
+     "type": "theorem",
+     "label": "3.5",
+     "title": "Théorie d'Artin-Schreier",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IX.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorie d'Artin-Schreier</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>On a la suite exacte\n  \\[\n  0 \\longrightarrow (\\mathbb{Z}/p\\mathbb{Z})_X \\longrightarrow \\mathcal{O}_X \\xrightarrow{\\ \\wp\\ } \\mathcal{O}_X \\longrightarrow 0 ,\n  \\]\n  si \\(X\\) est de caractéristique \\(p &gt; 0\\), <u>où</u> \\(\\wp\\) <u>est le morphisme de groupes</u>\n  <u>additifs défini par</u> \\(\\wp(f) = f^p - f\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le noyau de \\(\\wp\\) est le faisceau des sections de \\(\\mathcal{O}_X\\) qui sont\nlocalement dans le corps premier, donc est un faisceau constant. Le morphisme\n\\(\\wp\\) est surjectif pour la topologie étale parce que l'équation \\(T^p - T - a\\)\n(\\(a \\in \\Gamma(U, \\mathcal{O}_U)\\)) est toujours \"séparable\" en caractéristique \\(p\\), i.e. définit\nun revêtement étale de \\(U\\). Pour appliquer cette suite exacte on utilisera\nbien entendu (VII 4.2).</p>"
+    },
+    {
+     "id": "IX.3.6",
+     "type": "proposition",
+     "label": "3.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\">\n  <p>(i) <u>Soit</u> \\(X\\) <u>un schéma et</u> \\(i : x \\longrightarrow X\\) <u>l'inclusion d'un point.</u>\n  <u>Alors</u>\n  \\[\n  H^1(X, i_*(\\mathbb{Z})_x) = 0\n  \\]\n  <u>où</u> \\((\\mathbb{Z})_x\\) <u>est le \"faisceau constant\"</u> (cf. 2.0) <u>de valeur</u> \\(\\mathbb{Z}\\).</p>\n\n  <p>(ii) <u>Si</u> \\(X\\) <u>est irréductible et si pour chaque point géométrique</u> \\(\\bar{x}\\) <u>de</u>\n  \\(X\\) <u>le localisé strict</u> \\(X_{\\bar{x}}\\) <u>de</u> \\(X\\) <u>en</u> \\(\\bar{x}\\) <u>est irréductible</u> (<u>on devrait dire</u>\n  \"\\(X\\) <u>est géométriquement unibranche</u>\" cf. EGA IV 18.8.14) <u>alors on a</u>\n  \\[\n  H^1(X, \\mathbb{Z}_X) = 0 .\n  \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. (i) De la suite spectrale de Leray\n\\[\nE_2^{pq} = H^p(X, R^q i_*(\\mathbb{Z})_x) \\Longrightarrow H^{p+q}(x, (\\mathbb{Z})_x)\n\\]\non déduit une injection \\(H^1(X, i_*(\\mathbb{Z})_x) \\longrightarrow H^1(x, (\\mathbb{Z})_x)\\).\nOr puisque \\(x = \\operatorname{Spec} k(x)\\) est le spectre d'un corps, il est bien connu que\n\\(H^1(x, (\\mathbb{Z})_x) = 0\\) (cela résulte du fait que \\(H^q(x, F)\\) (\\(q &gt; 0\\)) est de torsion en\ntout cas (cf. VII 2.2 et CG), et des suites exactes\n\\(0 \\longrightarrow \\mathbb{Z} \\xrightarrow{\\ n\\ } \\mathbb{Z} \\longrightarrow \\mathbb{Z}/n \\longrightarrow 0\\)), d'où le résultat.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) Soit \\(i : x \\to X\\) l'inclusion du point générique de \\(X\\). On voit\nimmédiatement que sous les conditions de (ii) le morphisme canonique\n\\((\\mathbb{Z})_X \\longrightarrow i_*(\\mathbb{Z})_x\\) est bijectif (la réciproque étant d'ailleurs vraie\négalement!), et (ii) est ainsi réduit à (i).</p>"
+    },
+    {
+     "id": "IX.3.7",
+     "type": "remark",
+     "label": "3.7",
+     "title": "Remarques",
+     "html": "<div class=\"thm thm-plain remark\" id=\"IX.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarques</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>Dans 3.6 (i) et (ii) on peut remplacer \\(\\mathbb{Z}\\) par n'importe\n  quel groupe abélien sans torsion. D'autre part, (ii) devient faux si on y\n  abandonne l'hypothèse que \\(X\\) est géométriquement unibranche, comme on voit\n  par exemple en prenant pour \\(X\\) une courbe algébrique sur un corps \\(K\\),\n  admettant un point double ordinaire (faire le calcul de \\(H^1(X, \\mathbb{Z})\\) dans ce cas!)</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "IX-fn6",
+     "number": "(∗)",
+     "html": "<p>(∗) Dans EGA IV 21, on dit simplement \"diviseurs\" au lieu de \"diviseurs de Cartier\". </p>"
+    }
+   ]
+  },
+  {
+   "id": "IX-4",
+   "title": "4. Cas d'une courbe algébrique",
+   "blocks": [
+    {
+     "id": "IX.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.4\">4. Cas d'une courbe algébrique</h2>"
+    },
+    {
+     "id": "IX.4.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.4.0\">4.0</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\) un schéma noethérien de dimension \\(1\\). Soient \\(R(X)\\)\nl'anneau des fonctions rationnelles sur \\(X\\), et \\(i : \\operatorname{Spec} R(X) \\longrightarrow X\\) le\nmorphisme d'inclusion. L'anneau \\(R(X)\\) est artinien, produit des anneaux\nlocaux de \\(X\\) aux points maximaux, et on peut utiliser les résultats de\n(VIII 2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau abélien sur \\(\\operatorname{Spec} R(X)\\) et considérons les\nfaisceaux \\(R^q i_* F\\), \\(q &gt; 0\\), sur \\(X\\). Il résulte aussitôt de VIII 5.2 que\nla fibre de \\(R^q i_* F\\) en un point géométrique au-dessus d'un point maximal\nde \\(X\\) est nulle. Puisque \\(X\\) est de dimension \\(1\\), un tel faisceau est de\nnature très spéciale :</p>"
+    },
+    {
+     "id": "IX.4.1",
+     "type": "lemma",
+     "label": "4.1",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"IX.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(X\\) <u>noethérien et</u> \\(F\\) <u>un faisceau sur</u> \\(X\\). <u>Les</u>\n  <u>conditions suivantes sont équivalentes</u> (on appellera un faisceau satisfai-\n  sant à ces conditions un \"skyscraper sheaf\") :</p>\n  <p>(i) <u>La fibre de</u> \\(F\\), <u>en tout point géométrique</u> \\(\\bar{x}\\) <u>de</u> \\(X\\) <u>qui est</u>\n  <u>au-dessus d'un point non-fermé</u> \\(x \\in X\\), <u>est nulle.</u></p>\n  <p>(ii) <u>Chaque section</u> \\(s \\in F(X')\\) (\\(X' \\longrightarrow X\\) <u>étale de type fini) est</u>\n  <u>nulle, sauf en un nombre fini de points fermés de</u> \\(X\\).</p>\n  <p>(iii) <u>On a</u> \\(F \\approx \\bigoplus_x i_{x*} i_x^* F\\), <u>où</u> \\(x\\) <u>parcourt l'ensemble des points</u>\n  <u>fermés de</u> \\(X\\) <u>et où</u> \\(i_x : x \\to X\\) <u>est l'inclusion.</u></p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Supposons que (i) soit vrai, et soit\n\\(z \\in F(X')\\) (\\(X' \\longrightarrow X\\) étale de type fini). Alors le support de \\(z\\) (VIII 6.6)\nest une partie fermée de \\(X'\\) formée de points <u>fermés</u>, donc finie (\\(X'\\) étant\nnoethérien), d'où (i) \\(\\Longrightarrow\\) (ii). L'implication (ii) \\(\\Longrightarrow\\) (i) résulte du\ncalcul des fibres (VIII 3.9), et (iii) implique (i), car pour toute famille\n\\((G_x)\\) de faisceaux sur les points fermés \\(x\\) de \\(X\\), le faisceau \\(F = \\bigoplus_x i_{x*}(G_x)\\)\nsur \\(X\\) satisfait (i), comme il résulte du fait que les foncteurs fibres\ncommutent aux sommes directes, et que le support de \\(i_{x*}(G_x)\\) est évidem-\nment contenu dans \\(\\{ x \\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à démontrer que (ii) implique (iii). Considérons le\nmorphisme canonique\n\\[\nF \\longrightarrow \\prod_x i_{x*} i_x^* F ,\n\\]\n\\(x\\) parcourant l'ensemble des points fermés de \\(X\\). D'après (ii), il se\nfactorise par\n\\[\nF \\longrightarrow \\bigoplus_x i_{x*} i_x^* F ,\n\\]\nce qui donne le morphisme cherché. Nous laissons au lecteur la vérification\ndu fait qu'il est bijectif.</p>"
+    },
+    {
+     "id": "IX.4.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.4.1.1\">4.1.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Appliquons le lemme au faisceau \\(R^q i_* F\\) introduit plus haut :\nOn a\n\\[\nR^q i_* F \\xrightarrow{\\ \\sim\\ } \\bigoplus_x i_{x*} i_x^*(R^q i_* F)\n\\]\n(\\(x\\) parcourant l'ensemble des points fermés de \\(X\\)). Or d'après (VIII 5) la\nfibre de \\(R^q i_* F\\) en un point géométrique \\(\\bar{x}\\) de \\(X\\) est\n\\[\n(R^q i_* F)_{\\bar{x}} \\xrightarrow{\\ \\sim\\ } H^q(\\operatorname{Spec} R(X_{\\bar{x}}), F)\n\\]\noù \\(R(X_{\\bar{x}}) \\xrightarrow{\\sim} R(X) \\otimes_{\\mathcal{O}_X} \\mathcal{O}_{X_{\\bar{x}}}\\), \\(X_{\\bar{x}}\\) étant le localisé strict de \\(X\\) en \\(\\bar{x}\\)\n(VIII 4), et où on dénote aussi par \\(F\\) le faisceau induit par \\(F\\) sur\n\\(\\operatorname{Spec} R(X_{\\bar{x}})\\). Supposons maintenant que le corps résiduel de tout point fermé\n\\(x\\) de \\(X\\) soit séparablement clos. On aura donc (cf. aussi (VI. 1))\n\\[\n\\begin{aligned}\nH^p(X, R^q i_* F) &amp;\\xrightarrow{\\ \\sim\\ } H^p\\Big(X, \\bigoplus_x i_{x*} i_x^*(R^q i_* F)\\Big) \\\\\n&amp;\\xrightarrow{\\ \\sim\\ } \\bigoplus_x H^p(X, i_{x*} i_x^*(R^q i_* F)) \\\\\n&amp;\\xrightarrow{\\ \\sim\\ } \\bigoplus_x H^p(x, i_x^*(R^q i_* F)) \\\\\n&amp;\\xrightarrow{\\ \\sim\\ } \\begin{cases} \\bigoplus_x H^q(\\operatorname{Spec} R(X_x), F) &amp; \\text{si } p = 0 \\\\ 0 &amp; \\text{si } p &gt; 0 . \\end{cases}\n\\end{aligned}\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On trouve le</p>"
+    },
+    {
+     "id": "IX.4.2",
+     "type": "corollary",
+     "label": "4.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) <u>un schéma noethérien de dimension</u> \\(1\\), <u>tel</u>\n  <u>que pour tout point fermé</u> \\(x\\) <u>de</u> \\(X\\), <u>le corps résiduel</u> \\(k(x)\\) <u>soit sépara-</u>\n  <u>blement clos. Soit</u> \\(F\\) <u>un faisceau abélien, sur</u> \\(\\operatorname{Spec} R(X)\\) (<u>où</u> \\(R(X) =\\) <u>anneau</u>\n  <u>des fonctions rationnelles sur</u> \\(X\\)). <u>Considérons la suite spectrale de</u>\n  <u>Leray</u> ( ).\n  \\[\n  E_2^{pq} = H^p(X, R^q i_* F) \\Longrightarrow H^{p+q}(\\operatorname{Spec} R(X), F) .\n  \\]\n  <u>On a</u>\n  \\[\n  E_2^{pq} = 0 \\qquad \\text{si } p \\text{ et } q &gt; 0 ,\n  \\]\n  \\[\n  E_2^{0q} = \\bigoplus_x H^q(\\operatorname{Spec} R(X_x), F) \\qquad \\text{si } q &gt; 0 ,\n  \\]\n  <u>où</u> \\(x\\) <u>parcourt l'ensemble des points fermés de</u> \\(X\\), <u>et où</u> \\(X_x\\) <u>est le localisé</u>\n  <u>strict de</u> \\(X\\) <u>au point</u> \\(x\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La suite spectrale donne donc une suite exacte\n\\[\n\\begin{aligned}\n0 \\longrightarrow H^1(X, i_* F) &amp;\\longrightarrow H^1(\\operatorname{Spec} R(X), F) \\longrightarrow \\bigoplus_x H^1(\\operatorname{Spec} R(X_x), F) \\\\\n\\longrightarrow H^2(X, i_* F) &amp;\\longrightarrow H^2(\\operatorname{Spec} R(X), F) \\longrightarrow \\bigoplus_x H^2(\\operatorname{Spec} R(X_x), F) \\\\\n&amp;\\longrightarrow \\cdots .\n\\end{aligned}\n\\]</p>"
+    },
+    {
+     "id": "IX.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.4.3\">4.3</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons maintenant que de plus la \\(\\ell\\)-dimension cohomologique\nde \\(\\operatorname{Spec} R(X)\\), pour un nombre premier \\(\\ell\\) donné, soit au plus égale à \\(1\\)\n(c'est-à-dire qu'on ait \\(H^q(\\operatorname{Spec} R(X), F) = 0\\), \\(q &gt; 1\\), pour chaque faisceau\n\\(F\\) de \\(\\ell\\)-torsion sur \\(\\operatorname{Spec} R(X)\\)). Soient \\(K^1, \\ldots, K^m\\) les corps résiduels\nde l'anneau artinien \\(R(X)\\), i.e. les corps résiduels des points maximaux\nde \\(X\\). Tenant compte du dictionnaire (VIII 2.1) la \\(\\ell\\)-dimension cohomo-\nlogique de \\(\\operatorname{Spec} R(X)\\) est\n\\[\n\\operatorname{cd}_\\ell(\\operatorname{Spec} R(X)) = \\sup_i \\{ \\operatorname{cd}_\\ell(G(\\bar{K}^i/K^i)) \\} ,\n\\]\noù \\(\\operatorname{cd}_\\ell(G)\\) est la \\(\\ell\\)-dimension cohomologique du groupe profini \\(G\\)\n[cf. CG].</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Chaque corps résiduel \\(K_x\\) de \\(R(\\bar{X}(x))\\), pour un localisé strict\n\\(\\bar{X}(x)\\) de \\(X\\), s'identifie évidemment à une extension séparable (infinie)\nd'un des \\(K^i\\), d'où\n\\[\n\\operatorname{cd}_\\ell(G(\\bar{K}_x/K_x)) \\leqslant \\operatorname{cd}_\\ell(G(\\bar{K}^i/K^i))\n\\]\nd'après (CG II 4.1, Prop. 10). Donc la \\(\\ell\\)-dimension cohomologique\n\\(\\operatorname{cd}_\\ell(\\operatorname{Spec} R(\\bar{X}(x)))\\) est aussi \\(\\leqslant 1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En appliquant la suite exacte de 4.2 à un \\(F\\) de \\(\\ell\\)-torsion,\non trouve\n\\[\n(4.3.1) \\qquad\n\\left\\{\n\\begin{aligned}\n&amp;0 \\to H^1(X, i_* F) \\to H^1(\\operatorname{Spec} R(X), F) \\to \\\\\n&amp;\\qquad \\bigoplus_x H^1(\\operatorname{Spec} R(\\bar{X}(x)), F) \\to H^2(X, i_* F) \\to 0 , \\\\\n&amp;H^q(X, i_* F) = 0 \\quad \\text{pour } q &gt; 2 .\n\\end{aligned}\n\\right.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons que l'hypothèse que \\(\\operatorname{cd}_\\ell(\\operatorname{Spec} R(X))\\) soit \\(\\leqslant 1\\) est\nsatisfait si \\(X\\) est une courbe algébrique sur un corps séparablement clos.\n(<u>Théorème de Tsen</u> [6, th.4.3]). Des suites exactes analogues ont été étudiées\ndans ce cas par Ogg [2] et Šafarevič.</p>"
+    },
+    {
+     "id": "IX.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.4.4\">4.4</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que \\(\\ell\\) soit inversible sur \\(X\\) et prenons\n\\(F = (\\mathbb{G}_m)_{R(X)}\\). Appliquant 3.3 et [CG, chap. I, prop. 12], on trouve,\ntoujours sous l'hypothèse que \\(\\operatorname{cd}_\\ell(\\operatorname{Spec} R(X)) \\leqslant 1\\),\n\\[\n(4.4.1) \\qquad\n\\left\\{\n\\begin{aligned}\n&amp;H^1(\\operatorname{Spec} R(X), \\mathbb{G}_m) = 0 \\\\\n&amp;H^q(\\operatorname{Spec} R(X), \\mathbb{G}_m) \\underset{\\ell}{=} 0 \\qquad q \\geqslant 2 ,\n\\end{aligned}\n\\right.\n\\]\noù le \\(\\ell\\) sous l'égalité veut dire que le groupe du premier membre, qui est\nde torsion en tout cas, n'a pas de \\(\\ell\\)-torsion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a le même résultat si on remplace \\(R(X)\\) par \\(R(\\bar{X}(x))\\). Puisque\nle faisceau \\(\\mathbb{G}_m\\) sur \\(\\operatorname{Spec} R(X)\\) induit évidemment le faisceau \\(\\mathbb{G}_m\\) sur\n\\(\\operatorname{Spec} R(\\bar{X}(x))\\), on déduit de 4.2\n\\[\n(4.4.2) \\qquad\n\\left\\{\n\\begin{aligned}\n&amp;H^1(X, i_*(\\mathbb{G}_m)_{R(X)}) = 0 \\\\\n&amp;H^q(X, i_*(\\mathbb{G}_m)_{R(X)}) \\underset{\\ell}{=} 0 , \\qquad \\text{si } q &gt; 1 .\n\\end{aligned}\n\\right.\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or pour tout faisceau \\(F\\) sur \\(X\\), on voit grâce à 4.1 que le noyau \\(P\\) et\nconoyau \\(Q\\) de l'homomorphisme canonique \\(F \\longrightarrow i_* i^* F\\) sont des \"faisceaux\ngratte-ciel\", donc (comme les corps résiduels en les points fermés de \\(X\\)\nsont supposés séparablement clos) on a \\(H^i(X, P) = H^i(X, Q) = 0\\) pour \\(i &gt; 0\\),\nce qui implique aussitôt, par la suite exacte de cohomologie, que\n\\[\nH^i(X, F) \\longrightarrow H^i(X, i_* i^* F)\n\\]\nest un isomorphisme pour \\(i \\geqslant 2\\). Compte tenu de 4.4.2 on en conclut la\nrelation\n\\[\n(4.5) \\qquad H^i(X, \\mathbb{G}_m) \\underset{\\ell}{=} 0 \\qquad \\text{pour } i \\geqslant 2 ,\n\\]\nvalable lorsque \\(X\\) est un préschéma noethérien de dimension \\(1\\), satisfaisant\nà \\(\\operatorname{cd}_\\ell(R(X)) \\leqslant 1\\), et dont les corps résiduels en les points fermés sont\nséparablement clos. Compte tenu de la théorie de Kummer (3.2) et de (3.3)\non en conclut le</p>"
+    },
+    {
+     "id": "IX.4.6",
+     "type": "theorem",
+     "label": "4.6",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"IX.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) <u>noethérien de dimension</u> \\(1\\), \\(n\\) <u>un entier qui</u>\n  <u>est inversible sur</u> \\(X\\), <u>supposons que</u> \\(\\operatorname{cd}_\\ell(R(X)) \\leqslant 1\\) <u>pour chaque nombre</u>\n  <u>premier</u> \\(\\ell\\) <u>qui divise</u> \\(n\\), <u>et que pour tout point fermé</u> \\(x\\) <u>de</u> \\(X\\), <u>le corps</u>\n  <u>résiduel</u> \\(k(x)\\) <u>soit séparablement clos. Alors on a</u>\n  \\[\n  H^q(X, (\\mu_n)_X) = 0 \\quad \\text{si } q &gt; 2 ,\n  \\]\n  <u>et la cohomologie pour</u> \\(q \\leqslant 2\\) <u>est donnée par la suite exacte</u>\n  \\[\n  \\begin{aligned}\n  0 \\longrightarrow H^0(X, (\\mu_n)_X) &amp;\\longrightarrow \\Gamma(X, \\mathcal{O}^*_X) \\xrightarrow{\\ n\\ } \\Gamma(X, \\mathcal{O}^*_X) \\longrightarrow \\\\\n  H^1(X, (\\mu_n)_X) &amp;\\longrightarrow \\operatorname{Pic} X \\xrightarrow{\\ n\\ } \\operatorname{Pic} X \\longrightarrow H^2(X, (\\mu_n)_X) \\longrightarrow 0 .\n  \\end{aligned}\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": "IX.4.7",
+     "type": "corollary",
+     "label": "4.7",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) <u>une courbe complète connexe sur un corps sépara-</u>\n  <u>blement clos</u> \\(k\\), <u>de caractéristique première à</u> \\(n\\). <u>Alors on a</u>\n  \\[\n  H^0(X, (\\mu_n)_X) \\simeq \\mu_n(k) ,\n  \\]\n  \\[\n  H^1(X, (\\mu_n)_X) \\simeq {}_n(\\operatorname{Pic} X) = \\text{ensemble des éléments de } \\operatorname{Pic} X \\text{ dont l'ordre divise } n ,\n  \\]\n  \\[\n  H^2(X, (\\mu_n)_X) \\simeq (\\operatorname{Pic} X)/n \\simeq (\\mathbb{Z}/n\\mathbb{Z})^c ,\n  \\]\n  <u>où</u> \\(c\\) <u>est l'ensemble des composantes irréductibles de</u> \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la dernière assertion, \"rappelons\" que le \"schéma de Picard\"\n[TDTE V] d'un tel \\(X/\\operatorname{Spec} k\\) admet une décomposition\n\\[\n(4.8) \\qquad 0 \\longrightarrow A \\longrightarrow \\operatorname{Pic}_{X/k} \\longrightarrow \\mathbb{Z}^c \\longrightarrow 0\n\\]\noù \\(A\\) est un groupe algébrique connexe sur \\(\\operatorname{Spec} k\\). Or l'application\n\"multiplication par \\(n\\)\" dans un tel \\(A\\) est étale, donc surjectif\npour les points à valeurs dans \\(k\\). Il s'ensuit qu'on a\n\\[\n{}_n(\\operatorname{Pic} X) \\approx {}_n(A(k))\n\\]\net\n\\[\n(\\operatorname{Pic} X)/n \\approx (\\mathbb{Z}/n\\mathbb{Z})^c .\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(X\\) est lisse sur \\(\\operatorname{Spec} k\\), de sorte que la jacobienne \\(A\\) est\nune variété abélienne, le groupe \\({}_n(\\operatorname{Pic} X)\\) est isomorphe à \\((\\mathbb{Z}/n)^{2g}\\), où\n\\(g\\) est le genre de \\(X\\). Bien entendu, on a aussi \\(\\mu_n(k) \\approx \\mathbb{Z}/n\\mathbb{Z}\\), donc les\nrangs des groupes de cohomologie en tant que \\(\\mathbb{Z}/n\\)-modules sont \\(1\\), \\(2g\\), \\(1\\),\nce qui est le résultat auquel on devait s'attendre.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "IX-5",
+   "title": "5. La méthode de la trace",
+   "blocks": [
+    {
+     "id": "IX.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.5\">5. La méthode de la trace</h2>"
+    },
+    {
+     "id": "IX.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.5.1\">5.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\) un schéma, \\(f : X' \\longrightarrow X\\) un revêtement étale, et \\(F\\) un\nfaisceau sur \\(X\\). Alors les formules d'adjonction donnent un morphisme\n<u>de restriction</u>\n\\[\nF \\xrightarrow{\\ \\text{res}\\ } f_* f^* F .\n\\]\nComme \\(f\\) est fini, on a \\(H^q(X, f_* f^* F) \\simeq H^q(X', f^* F)\\) d'où un morphisme,\nappelé également <u>restriction</u> :\n\\[\n(5.1.1) \\qquad H^q(X, F) \\xrightarrow{\\ \\text{res}\\ } H^q(X', f^* F) ,\n\\]\nqui est d'ailleurs le morphisme évident. Mais dans le cas \\(f\\) étale on a\naussi un autre morphisme, appelé <u>morphisme</u> <u>trace</u>\n\\[\n(5.1.2) \\qquad f_* f^* F \\xrightarrow{\\ \\text{tr}\\ } F ,\n\\]\nqui donne des morphismes sur la cohomologie\n\\[\n(5.1.3) \\qquad H^q(X', f^* F) \\xrightarrow{\\ \\text{tr}\\ } H^q(X, F) .\n\\]\nLe morphisme trace est caractérisé par les deux propriétés suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) Il est de caractère local pour la topologie étale.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) Si \\(X'\\) est somme disjointe de \\(d\\) copies de \\(X\\), de sorte que\n\\(f_* f^* F \\simeq F^d\\), la trace est l'application somme \\(F^d \\longrightarrow F\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'unicité est triviale à partir de (i), (ii) puisque tout revê-\ntement étale est localement constant. Ayant l'unicité, l'existence s'ensuit\npar l'argument usuel de descente.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De (ii) on déduit la formule suivante :\n\\[\n(5.1.4) \\qquad \\operatorname{tr}\\circ\\operatorname{res} : F \\longrightarrow F \\text{ est la multiplication par le degré local de } f .\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si le degré est une constante \\(d\\), on en déduit que le morphisme\n\\(\\operatorname{tr}\\circ\\operatorname{res} : H^q(X, F) \\longrightarrow H^q(X, F)\\) est la multiplication par \\(d\\).</p>"
+    },
+    {
+     "id": "IX.5.2",
+     "type": "corollary",
+     "label": "5.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X' \\longrightarrow X\\) <u>un revêtement étale de degré constant</u>\n  \\(d\\). <u>Si</u> \\(F\\) <u>est un faisceau de \\(r\\)-torsion sur</u> \\(X\\) <u>avec</u> \\((r,d)=1\\), <u>alors</u>\n  \\(H^q(X', f^* F) = 0\\) <u>implique que</u> \\(H^q(X, F) = 0\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, la multiplication par \\(d\\) induit un isomorphisme de \\(F\\), donc\nun isomorphisme sur la cohomologie. Si ce dernier isomorphisme se factorise\npar zéro, on a \\(H^q(X, F) = 0\\).</p>"
+    },
+    {
+     "id": "IX.5.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"IX.5.2.1\">5.2.1</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient maintenant \\(i : U \\longrightarrow X\\) une immersion, \\(f : U' \\longrightarrow U\\) un\nrevêtement étale de degré \\(d\\), et supposons \\(f\\) induit par un morphisme\nfini \\(g : X' \\longrightarrow X\\) par changement de base, i.e. on a alors le diagramme\ncartésien\n\\[\n\\xymatrix{\nU' \\ar[r]^{i'} \\ar[d]_{f} &amp; X' \\ar[d]^{g} \\\\\nU \\ar[r]_{i} &amp; X\n}\n\\]\nSoit \\(F\\) un faisceau sur \\(U\\). On a\n\\[\n\\xymatrix{\nF \\ar[r]^-{\\text{res}} \\ar@/_1.8pc/[rr]_{d} &amp; f_* f^* F \\ar[r]^-{\\text{tr}} &amp; F\n} ,\n\\]\ndonc, comme \\(i_* f_* = g_* i'_*\\),\n\\[\n(5.3) \\qquad\n\\xymatrix{\ni_* F \\ar[r]^-{\\text{res}} \\ar@/_1.8pc/[rr]_{d} &amp; g_* i'_* f^* F \\ar[r]^-{\\text{tr}} &amp; i_* F\n} ,\n\\]\net comme \\(i_! f_! \\simeq g_* i'_!\\) (résulte p.ex. de (VIII 5.5)),\n\\[\n(5.4) \\qquad\n\\xymatrix{\ni_! F \\ar[r]^-{\\text{res}} \\ar@/_1.8pc/[rr]_{d} &amp; g_* i'_! f^* F \\ar[r]^-{\\text{tr}} &amp; i_! F\n} ,\n\\]\nd'où\n\\[\n(5.3') \\qquad\n\\xymatrix{\nH^q(X, i_* F) \\ar[r]^-{\\text{res}} \\ar@/_1.8pc/[rr]_{d'} &amp; H^q(X', i'_* f^* F) \\ar[r]^-{\\text{tr}} &amp; H^q(X, i_* F)\n}\n\\]\net\n\\[\n(5.4') \\qquad\n\\xymatrix{\nH^q(X, i_! F) \\ar[r]^-{\\text{res}} \\ar@/_1.8pc/[rr]_{d} &amp; H^q(X', i'_! f^* F) \\ar[r]^-{\\text{tr}} &amp; H^q(X, i_! F)\n} ;\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On déduit de (5.4) les corollaires suivants :</p>"
+    },
+    {
+     "id": "IX.5.5",
+     "type": "proposition",
+     "label": "5.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) <u>un schéma quasi-compact et quasi-séparé</u>,\n  \\(\\ell \\in \\mathbb{P}\\), <u>et soit</u> \\(H\\) <u>un foncteur semi-exact à valeurs dans</u> \\((\\mathrm{Ab})\\), <u>défini</u>\n  <u>sur la catégorie des \\(\\ell\\)-faisceaux sur</u> \\(X\\), <u>et compatible avec les limites</u>\n  <u>inductives filtrantes. Les assertions suivantes sont équivalentes</u> :</p>\n  <p>(i) \\(H = 0\\).</p>\n  <p>(ii) \\(H(f_* i_!(\\mathbb{Z}/\\ell)) = 0\\) <u>pour chaque</u> \\(f : Y \\longrightarrow X\\) <u>fini, et chaque ouvert</u>\n  \\(i : U \\longrightarrow Y\\) <u>de</u> \\(Y\\), <u>tel que</u> \\(U\\) <u>soit de présentation finie sur</u> \\(X\\). <u>Si</u> \\(X\\)\n  <u>est noethérien, on peut même se borner à prendre</u> \\(Y\\) <u>intègre.</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. D'après 2.7.2 et 2.5 il suffit de vérifier\n\\(H(F) = 0\\) pour \\(F\\) de la forme \\(F = i_! G\\), où \\(i : U \\longrightarrow X\\) est l'inclusion d'un\nsous-schéma de \\(X\\) de présentation finie sur \\(X\\), et où \\(G\\) est un\n\\(\\ell\\) faisceau localement constant \"isotrivial\" sur \\(U\\). Soit \\(U'' \\longrightarrow U\\) un\nrevêtement principal, de groupe \\(g\\); tel que \\(g\\) devienne constant sur\n\\(U''\\). Soit \\(A\\) le \\(\\ell\\)-groupe des valeurs de \\(G\\) sur \\(U''\\). Le groupe \\(g\\) opère\nsur \\(A\\), et cette opération détermine la structure de \\(G\\). Soit \\(h\\) un\n\\(\\ell\\)-sous-groupe de Sylow de \\(g\\), et soit \\(U' = U''/h\\) le revêtement de \\(U\\)\ncorrespondant à \\(h\\). Le degré \\(d\\) de \\(U'\\) sur \\(U\\) est premier à \\(\\ell\\).\nPrenons un prolongement de \\(f : U' \\longrightarrow U\\) en un morphisme fini \\(g : X' \\longrightarrow X\\),\nqui existe toujours (EGA IV 8.12.6), et soit \\(i' : U' \\longrightarrow X'\\) l'inclusion.\nEn appliquant 5.4 et le fait que \\(d\\) est premier à \\(\\ell\\), on se réduit à\ndémontrer que \\(H(g_* i'_! f^* G) = 0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or il est bien connu que le seul groupe abélien de \\(\\ell\\)-torsion qui\nest simple pour une opération d'un \\(\\ell\\)-groupe \\(h\\) est \\(\\mathbb{Z}/\\ell\\) avec opération\ntriviale, et il s'ensuit qu'il existe une filtration de \\(A\\) en tant que\n\\(h\\)-module, dont les quotients successifs sont isomorphes à \\(\\mathbb{Z}/\\ell\\) avec opé-\nration triviale. Cette filtration donne une filtration correspondante de\n\\(f^* G\\), et il suffit donc, pour démontrer que \\(H(g_* i'_! f^* G) = 0\\) de démontrer\nque \\(H(g_* i'_! \\mathbb{Z}/\\ell) = 0\\), d'où le résultat.</p>"
+    },
+    {
+     "id": "IX.5.6",
+     "type": "proposition",
+     "label": "5.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"IX.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\"><p>Soient \\(X\\) <u>un schéma noethérien</u>, \\(\\ell \\in \\mathbb{P}\\), <u>et</u> \\(\\varphi\\) <u>une</u>\n  <u>fonction à valeurs dans</u> \\(\\mathbb{N}\\), <u>définie sur l'ensemble des schémas intègres</u>\n  <u>finis sur</u> \\(X\\). <u>Supposons</u> \\(\\varphi(Y_1) \\leqslant \\varphi(Y_2)\\) <u>chaque fois qu'il existe</u>\n  <u>un \\(X\\)-morphisme</u> \\(Y_1 \\longrightarrow Y_2\\), <u>et que l'inégalité est stricte si</u> \\(Y_1\\) <u>est un</u>\n  <u>sous-schéma fermé de</u> \\(Y_2\\), <u>distinct de</u> \\(Y_2\\). <u>Pour tout</u> \\(Y\\) <u>fini sur</u> \\(X\\),\n  <u>posons</u> \\(\\varphi(Y) = \\sup_i \\varphi(Y_i)\\), <u>où les</u> \\(Y_i\\) <u>sont les composantes irréductibles de</u>\n  \\(Y\\), <u>munis de la structure induite réduite. Alors les assertions suivantes</u>\n  <u>sont équivalentes</u> :</p>\n  <p>(i) <u>Pour chaque</u> \\(Y\\) <u>fini sur</u> \\(X\\) <u>et chaque \\(\\ell\\)-faisceau</u> \\(F\\) <u>sur</u> \\(Y\\) <u>on a</u>\n  \\(H^q(Y, F) = 0\\) <u>si</u> \\(q &gt; \\varphi(\\operatorname{Supp} F)\\).</p>\n  <p>(ii) <u>Pour chaque</u> \\(Y\\) <u>intègre fini sur</u> \\(X\\) <u>on a</u> \\(H^q(Y, \\mathbb{Z}/\\ell) = 0\\) <u>si</u> \\(q &gt; \\varphi(Y)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démonstration. Supposons que (ii) soit vrai. On peut appliquer\nla proposition précédente à chaque \\(H^q\\), tenant compte que la cohomologie\ncommute aux limites inductives et aux images directes par morphismes finis,\net on se réduit ainsi pour la vérification de (i) au cas \\(Y\\) intègre\nfini sur \\(X\\), et \\(F\\) de la forme \\(i_!(\\mathbb{Z}/\\ell)_U\\), où \\(i : U \\longrightarrow X\\) est un ouvert\nnon-vide.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or on a une suite exacte\n\\[\n0 \\longrightarrow i_!(\\mathbb{Z}/\\ell)_U \\longrightarrow (\\mathbb{Z}/\\ell)_Y \\longrightarrow (\\mathbb{Z}/\\ell)_Z \\longrightarrow 0\n\\]\noù \\(Z = Y-U\\) donc \\(Z \\neq Y\\). Faisant une récurrence sur la valeur de \\(\\varphi\\), nous\npouvons supposer que \\(H^q(Z, \\mathbb{Z}/\\ell) = 0\\) pour \\(q &gt; \\varphi(Y)-1\\), d'où\n\\(H^q(Y, i_!(\\mathbb{Z}/\\ell)) = 0\\) pour \\(q &gt; \\varphi(Y)\\) grâce à la suite exacte de coho-\nmologie.</p>"
+    },
+    {
+     "id": "IX.5.7",
+     "type": "corollary",
+     "label": "5.7",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"IX.5.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.7</span></div>\n  <div class=\"thm-body\"><p>Soit \\(X\\) <u>une courbe algébrique sur un corps</u> \\(k\\) <u>sépara-</u>\n  <u>blement clos et de caractéristique différente de</u> \\(\\ell\\), \\(\\ell \\in \\mathbb{P}\\). <u>Alors la coho-</u>\n  <u>mologie de</u> \\(X\\) <u>dans un faisceau</u> \\(F\\) <u>de \\(\\ell\\)-torsion est nulle en dimension</u>\n  \\(&gt; 2\\). <u>Si</u> \\(X\\) <u>est affine, la cohomologie est nulle en dimension</u> \\(&gt; 1\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons, pour \\(Y\\) fini intègre sur \\(X\\), \\(\\varphi(Y) = 2 \\dim Y\\) (resp.\n\\(\\varphi(Y) = \\dim Y\\) si \\(X\\), donc \\(Y\\), est affine). D'après 5.6 il suffit de\ndémontrer que \\(H^q(Y, \\mathbb{Z}/\\ell) = 0\\) si \\(q &gt; \\varphi(Y)\\), Or c'est trivial si\n\\(\\dim Y = 0\\). Il reste donc à démontrer que \\(H^q(Y, \\mathbb{Z}/\\ell) = 0\\) si \\(q &gt; 2\\)\n(resp. si \\(q &gt; 1\\) dans le cas affine) pour une courbe intègre \\(Y\\).\nPuisque \\((\\mathbb{Z}/\\ell)_Y \\simeq (\\mu_\\ell)_Y\\), c'est conséquence de 4.6 pour \\(q &gt; 2\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons \\(X\\) affine. Puisque les extensions radicielles n'affectent\npas la cohomologie (VIII 1.1), on se réduit au cas où \\(k\\) est algébriquement\nclos. Soit \\(f : X' \\longrightarrow X\\) la normalisation de \\(X\\), qui est un morphisme\nfini et un isomorphisme en dehors d'un ensemble fini de points, disons \\(S\\).\nOn a une suite exacte de faisceaux sur \\(X\\)\n\\[\n0 \\longrightarrow (\\mathbb{Z}/n)_X \\longrightarrow f_*(\\mathbb{Z}/n)_{X'} \\longrightarrow \\mathscr{E} \\longrightarrow 0 ,\n\\]\noù \\(\\mathscr{E}\\) est concentré sur \\(S\\), donc \\(H^q(X, \\mathscr{E}) = 0\\) pour \\(q &gt; 0\\).\nOn se ramène par (VIII 5.6) à démontrer que\n\\[\nH^q(X, f_*(\\mathbb{Z}/n)_{X'}) \\simeq H^q(X', \\mathbb{Z}/n) = 0\n\\]\nsi \\(q &gt; 1\\), c'est-à-dire, au cas \\(X\\) normale. On peut aussi évidemment\nsupposer \\(X\\) connexe. Soit \\(i : X \\longrightarrow \\bar{X}\\) une immersion ouverte avec \\(\\bar{X}\\) complète\net non-singulière. Puisque \\(X\\) est affine, il manque au moins un point de\n\\(\\bar{X}\\), et on voit immédiatement que par suite le morphisme\n\\[\nA(k) \\longrightarrow \\operatorname{Pic} X\n\\]\nest surjectif, où \\(A\\) est la Jacobienne de \\(\\bar{X}\\) (cf. 4.8).\nPuisque \\(A(k)\\) est divisible par \\(\\ell \\neq \\operatorname{car} k\\), il en est de même de\n\\(\\operatorname{Pic} X\\), d'où \\(H^2(X, \\mu_\\ell) = 0\\) par 4.6, cqfd.</p>"
+    },
+    {
+     "id": "IX.5.8",
+     "type": "remark",
+     "label": "5.8",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remark\" id=\"IX.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.8</span></div>\n  <div class=\"thm-body\"><p>Signalons, pour référence ultérieure, que le raisonnement de\n  5.5 établit en fait le résultat suivant : Soient \\(X\\) un schéma quasi-\n  compact et quasi-séparé, \\(\\ell\\) un nombre premier, \\(C\\) une sous-catégorie strictement\n  pleine de la catégorie des faisceaux abéliens de \\(\\ell\\)-torsion constructibles,\n  stable par facteurs directs et par extensions. Supposons que pour chaque\n  morphisme fini \\(f : Y \\longrightarrow X\\) et chaque ouvert \\(i : U \\longrightarrow Y\\) de \\(Y\\) qui est de\n  présentation finie sur \\(X\\), on ait \\(f_*(i_!(\\underline{\\mathbb{Z}/\\ell\\,\\mathbb{Z}})_U) \\in C\\). Alors \\(C\\) contient\n  tous les faisceaux constructibles de \\(\\ell\\)-torsion.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "IX-biblio",
+   "title": "Bibliographie",
+   "blocks": [
+    {
+     "id": "IX.biblio",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"IX.biblio\">Bibliographie</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] GABRIEL, P. <em>Des Catégories Abéliennes</em>, Thèse, Paris (1962).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] OGG, A. <em>Cohomology of abelian varieties over functions fields</em>,\nAnnals of Math. Vol. 76, No. 2 (1962).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] DEURING, M. <em>Die Typen der Multiplikatorenringe elliptischer\nFunktionenkörper</em>, Hamb. Abh. Bol. 13 (1940) p. 197.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] GROTHENDIECK, A. <em>Fondements de la Géométrie Algébrique</em>, Extraits\ndu Séminaire Bourbaki 1957-1962), Secrétariat mathématique,\n11, rue Pierre Curie, Paris 5ème. (Cité FGA).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] SERRE, J.P. <em>Cohomologie Galoisienne</em>, Lecture Notes n°5, (Springer)\n(Cité CG).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[6] DOUADY, A. <em>Cohomologie des groupes compacts totalement discontinus</em>,\nSéminaire Bourbaki, exp. 189.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par M. Artin"
+}

@@ -1,0 +1,1497 @@
+{
+ "chapter_id": "20",
+ "title": "EXPOSÉ XX THE GRIFFITHS THEOREM",
+ "number": "XX",
+ "pages": [
+  {
+   "id": "20",
+   "title": "EXPOSÉ XX THE GRIFFITHS THEOREM",
+   "blocks": [
+    {
+     "id": "20",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"20\">EXPOSÉ XX<br>THE GRIFFITHS THEOREM<span class=\"author\">by N. KATZ</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "20-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "20.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.0\">0. Introduction</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We prove the theorem of GRIFFITHS [1], which gives a systematic\n(though non-constructive) way of « finding » algebraic\ncycles which are \\(\\mathbb Q_\\ell\\)-cohomologous to zero, but no multiple of which\nis algebraically equivalent to zero. The proof given here\n(due to GROTHENDIECK) is the translation into purely algebraic terms\nof the original, more or less transcendental, proof of\nGRIFFITHS. In both of them, it is the irreducibility theorem\nXVIII 6.7 which is a key point (cf. 3.1.6 and 3.2).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "20-1",
+   "title": "1. The formalism of primitive classes",
+   "blocks": [
+    {
+     "id": "20.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.1\">1. The formalism of primitive classes</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In all that follows, we suppose fixed a prime number \\(\\ell\\). All the\nschemes considered are assumed to have characteristics \\(\\ne\\ell\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider the situation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.0.1}\n\\begin{array}{ccc}\nX&amp;\\xrightarrow{\\ \\pi\\ }&amp;Y\\\\\n&amp;\\searrow_{f}\\quad\\swarrow^{g}&amp;\\\\[-2mm]\n&amp;S&amp;\n\\end{array}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in which we assume</p>"
+    },
+    {
+     "id": "20.1.0.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.1.0.3\"><strong>(1.0.3)</strong> \\(f,g\\) smooth of relative dimensions \\(d_1\\) and \\(d_2\\),</p>"
+    },
+    {
+     "id": "20.1.0.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.1.0.4\"><strong>(1.0.4)</strong> \\(\\pi\\) proper.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Taking into account that \\(X\\) and \\(Y\\) are smooth over \\(S\\), the properness\nof \\(\\pi\\) gives us a <u>Gysin morphism</u> (SGA 5 IV)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.0.5}\n\\pi_*:H^q(X,\\mathbb Q_\\ell(i))\\longrightarrow\nH^{q-2(d_1-d_2)}(Y,\\mathbb Q_\\ell(i-(d_1-d_2))).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Localizing on \\(S\\) (in the étale sense), we also obtain a morphism\nof sheaves on \\(S\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.0.6}\n\\pi_*:R^qf_*\\mathbb Q_\\ell(i)\\longrightarrow\nR^{q-2(d_1-d_2)}g_*\\mathbb Q_\\ell(i-d_1+d_2),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and, applying the functor \\(H^p(S,\\quad)\\), a morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.0.7}\n\\pi_*:H^p(S,R^qf_*\\mathbb Q_\\ell(i))\\longrightarrow\nH^p(S,R^{q-2(d_1-d_2)}g_*\\mathbb Q_\\ell(i-d_1+d_2)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "20.1.0.8",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"20.1.0.8\"><div class=\"thm-head\"><u>Definition 1.0.8.</u></div><div class=\"thm-body\">\n<p><u>Let \\((E_r^{p,q},d_r^{p,q})\\) and \\(({}'E_r^{p,q},{}'d_r^{p,q})\\) be two\nspectral sequences (in a given abelian category), and\n\\((a,b)\\in\\mathbb Z\\times\\mathbb Z\\). The shift of \\(({}'E_r^{p,q},{}'d_r^{p,q})\\) by \\((a,b)\\) is\nthe spectral sequence \\(({}''E_r^{p,q},{}''d_r^{p,q})\\), with</u></p>\n\\[\n\\tag{1.0.9}\n\\left\\{\n\\begin{aligned}\n{}''E_r^{p,q}&amp;={}'E_r^{p+a,q+b},\\\\\n{}''d_r^{p,q}&amp;={}'d_r^{p+a,q+b}.\n\\end{aligned}\n\\right.\n\\]\n</div></div>"
+    },
+    {
+     "id": "20.1.0.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.1.0.10\"><strong>1.0.10.</strong> <u>A morphism of spectral sequences from \n\\((E_r^{p,q},d_r^{p,q})\\) to \\(({}''E_r^{p,q},{}''d_r^{p,q})\\) is called a morphism of bidegree \\((a,b)\\) from\n\\((E_r^{p,q},d_r^{p,q})\\) to \\(({}'E_r^{p,q},{}'d_r^{p,q})\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The following lemma is a trivial consequence of the theory of the\n<u>Gysin morphism</u> (SGA 5, IV).</p>"
+    },
+    {
+     "id": "20.1.1",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"20.1.1\"><div class=\"thm-head\"><u>Lemma 1.1.</u></div><div class=\"thm-body\">\n<p><u>There exists a canonical morphism \\(\\pi_*\\) of bidegree \\((a,-2(d_1-d_2))\\)\nbetween the Leray spectral sequences</u></p>\n\\[\n\\tag{1.1.0}\nR^p\\alpha_*R^qf_*\\mathbb Q_\\ell(i)\\Longrightarrow R^{p+q}(\\alpha f)_*\\mathbb Q_\\ell(i)\n\\]\n<p><u>and</u></p>\n\\[\n\\tag{1.1.1}\nR^p\\alpha_*R^qg_*\\mathbb Q_\\ell(i-d_1+d_2)\\Longrightarrow\nR^{p+q}(\\alpha g)_*\\mathbb Q_\\ell(i-d_1+d_2),\n\\]\n<p><u>which on the term \\(E_2\\) is given by (1.0.7), and on the abutment\nby (1.0.5).</u></p>\n</div></div>"
+    },
+    {
+     "id": "20.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.1.2\"><strong>1.2.</strong> Let us now consider the situation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.1}\n\\begin{array}{ccccc}\n&amp;&amp;X\\times_S Y&amp;&amp;\\\\\n&amp;\\swarrow^{\\mathrm{pr}_1}&amp;&amp;\\searrow^{\\mathrm{pr}_2}&amp;\\\\\nX&amp;&amp;&amp;&amp;Y\\\\\n&amp;\\searrow_f&amp;&amp;\\swarrow_g&amp;\\\\\n&amp;&amp;S&amp;&amp;\\\\\n&amp;&amp;\\downarrow\\alpha&amp;&amp;\\\\\n&amp;&amp;T&amp;&amp;\n\\end{array}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in which \\(S,X,f,Y,g\\) are as in (1.0.2)–(1.0.4),\nbut now assuming also \\(f\\) proper.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.2}\nz\\in H^a(X\\times_S Y,\\mathbb Q_\\ell(b)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Then \\(z\\) induces a map (still denoted \\(z\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.3}\nz:H^q(X,\\mathbb Q_\\ell(i))\\longrightarrow\nH^{q+a-2d_1}(Y,\\mathbb Q_\\ell(i+b-d_1))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>by the formula</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.4}\nz(x)=\\mathrm{pr}_{2*}\\bigl(z\\mathbin\\wedge \\mathrm{pr}_1^*(x)\\bigr),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where \\(\\mathrm{pr}_{2*}\\) is the Gysin homomorphism. By étale localization on \\(S\\),\n\\(z\\) also defines</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.5}\nz:R^qf_*\\mathbb Q_\\ell(i)\\longrightarrow\nR^{q+a-2d_1}g_*\\mathbb Q_\\ell(i+b-d_1),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and, applying \\(H^p(S,\\mathord{-})\\), maps</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.6}\nH^p(S,R^qf_*\\mathbb Q_\\ell(i))\\longrightarrow\nH^p(S,R^{q+a-2d_1}g_*\\mathbb Q_\\ell(i+b-d_1)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "20.1.3",
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma\" id=\"20.1.3\"><div class=\"thm-head\"><u>Lemma 1.3.</u></div><div class=\"thm-body\">\n<p><u>The class \\(z\\) defines a morphism of bidegree \\((0,b-2d_1)\\)\nbetween the Leray spectral sequences</u></p>\n\\[\n\\tag{1.2.7}\nH^p(S,R^qf_*\\mathbb Q_\\ell(i))\\Longrightarrow H^{p+q}(X,\\mathbb Q_\\ell(i))\n\\]\n<p><u>and</u></p>\n\\[\n\\tag{1.2.8}\nH^p(S,R^qg_*\\mathbb Q_\\ell(i+b-d_1))\\Longrightarrow\nH^{p+q}(Y,\\mathbb Q_\\ell(i+b-d_1)),\n\\]\n\n<!-- Source PDF page 5 (printed page 345) -->\n<p><u>which on the terms \\(E_2\\) is given by (1.2.5), and by (1.2.3) on the\nabutments.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> Taking into account the formula (1.2.4) and the fact that\n« multiplication by \\(z\\) » defines a morphism of bidegree \\((0,a)\\) of\nLeray spectral sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.9}\nH^p(S,R^q(\\mathrm{pr}_1f)_*\\mathbb Q_\\ell(i))\\Longrightarrow\nH^{p+q}(X\\times_S Y,\\mathbb Q_\\ell(i))\n\\]\n\\[\n\\tag{1.2.10}\n\\mathrel{\\phantom{H^p(S,R^q(\\mathrm{pr}_1f)_*\\mathbb Q_\\ell(i))}}\n\\mathop{\\downarrow}\\limits^{z}\n\\qquad\nH^p(S,R^{q+a}(\\mathrm{pr}_1f)_*\\mathbb Q_\\ell(i+b))\\Longrightarrow\nH^{p+q+a}(X\\times_S Y,\\mathbb Q_\\ell(i+b)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>we need only apply 1.1 to the situation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.11}\n\\begin{array}{ccc}\nX\\times_S Y&amp;\\xrightarrow{\\ \\mathrm{pr}_2\\ }&amp;Y\\\\\n&amp;\\searrow_{f\\mathrm{pr}_1}\\quad\\swarrow^g&amp;\\\\[-2mm]\n&amp;S.&amp;\n\\end{array}\n\\]\n\n</p>"
+    },
+    {
+     "id": "20.1.4",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"20.1.4\"><div class=\"thm-head\"><u>Corollary 1.4.</u></div><div class=\"thm-body\">\n<p><u>In the situation (1.2.1)–(1.2.2), the morphism (1.2.3)</u></p>\n\\[\n\\tag{1.4.1}\nz:H^q(X,\\mathbb Q_\\ell(i))\\longrightarrow\nH^{q+a-2d_1}(Y,\\mathbb Q_\\ell(i+b-d_1))\n\\]\n<p><u>transforms primitive classes (XVIII 5.8.1) into primitive classes, and\nthe following diagram is commutative.</u></p>\n\\[\n\\tag{1.4.2}\n\\begin{array}{ccc}\n\\operatorname{Prim}^q(X/S,\\mathbb Q_\\ell(i))&amp;\\xrightarrow{\\ z\\ }&amp;\n\\operatorname{Prim}^{q+a-2d_1}(Y/S,\\mathbb Q_\\ell(i+b-d_1))\\\\\n\\big\\downarrow u_f&amp;&amp;\\big\\downarrow u_g\\\\\nH^1(S,R^{q-1}f_*\\mathbb Q_\\ell(i))&amp;\\xrightarrow{\\ z\\ }&amp;\nH^1(S,R^{q+a-2d_1-1}g_*\\mathbb Q_\\ell(i+b-d_1)).\n\\end{array}\n\\]\n\n<!-- Source PDF page 6 (printed page 346) -->\n<p><u>(where \\(u_f,u_g\\) are the canonical homomorphisms of XVIII 5.8.1).</u></p>\n</div></div>"
+    },
+    {
+     "id": "20.1.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.1.5\"><strong>1.5.</strong> Let \\(\\bar\\eta\\) be a geometric point of \\(S\\) (above a point\n\\(\\eta\\) of \\(S\\)), and let</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.5.1}\nz_{\\bar\\eta}\\in H^a(X_{\\bar\\eta}\\times_{k(\\bar\\eta)}Y_{\\bar\\eta},\\mathbb Q_\\ell(b))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>be the class induced by \\(z\\) on the corresponding geometric fiber of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.5.2}\nX\\times_S Y\\longrightarrow S.\n\\]\n\n</p>"
+    },
+    {
+     "id": "20.1.5.3",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"20.1.5.3\"><div class=\"thm-head\"><u>Proposition 1.5.3.</u></div><div class=\"thm-body\">\n<p><u>Suppose \\(f,g\\) proper, \\(S\\) annexed, and let \\(q\\in\\mathbb Z\\). If the class\n\\(z_{\\bar\\eta}\\) induces the zero homomorphism</u></p>\n\\[\n\\tag{1.5.3}\n0=z_{\\bar\\eta}:H^{q-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow\nH^{q+a-2d_1-1}(Y_{\\bar\\eta},\\mathbb Q_\\ell(i+b-d_1)),\n\\]\n<p><u>then, for every \\(x\\in\\operatorname{Prim}^q(X/S,\\mathbb Q_\\ell(i))\\), we have</u></p>\n\\[\n\\tag{1.5.4}\nu_g(z(x))=0\\quad\\text{in}\\quad\nH^1(S,R^{q+a-2d_1-1}g_*\\mathbb Q_\\ell(i+b-d_1)).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> By the commutativity of (1.4.2), it suffices to see\nthat \\(z\\) induces the zero homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.5.5}\nz:R^{q-1}f_*\\mathbb Q_\\ell(i)\\xrightarrow{\\ 0\\ }\nR^{q+a-2d_1-1}g_*\\mathbb Q_\\ell(i+b-d_1).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now \\(f\\) and \\(g\\) being proper and smooth, the sheaves \\(R^\\bullet f_*\\mathbb Q_\\ell(\\bullet)\\) and\n\\(R^\\bullet g_*\\mathbb Q_\\ell(\\bullet)\\) are twisted constant (SGA 4 XVI 2.2), hence equivalent to their\nvalues at \\(\\bar\\eta\\), viewed as modules under \\(\\pi_1(S,\\bar\\eta)\\).</p>"
+    },
+    {
+     "id": "20.1.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"20.1.6\">1.6. A Construction of Manin</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose given two sections of \\(f:X\\longrightarrow S\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.0}\n\\begin{array}{c}\n\\overset{t_1}{\\underset{t_2}{\\rightrightarrows}}\\\\[-2mm]\nS\\ \\underset{f}{\\longleftarrow}\\ X,\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>to each we associate its cohomology class</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.1}\n\\operatorname{cl}(t_i)=t_{i*}(1)\\in H^{2d_1}(X,\\mathbb Q_\\ell(d_1)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If the fibers of \\(f:X\\longrightarrow S\\) are geometrically connected (more\ngenerally if for \\(s\\in S\\), \\(t_1(s)\\) and \\(t_2(s)\\) belong to the same\nconnected component of \\(X_s\\)) one sees easily that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.2}\n\\operatorname{cl}(t_1)-\\operatorname{cl}(t_2)\\in\n\\operatorname{Prim}^{2d_1}(X/S,\\mathbb Q_\\ell(d_1)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We denote by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.3}\nu_f(t_1-t_2)\\in H^1(S,R^{2d_1-1}f_*\\mathbb Q_\\ell(d_1))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>its image under</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.4}\nu_f:\\operatorname{Prim}^{2d_1}(X/S,\\mathbb Q_\\ell(d_1))\\longrightarrow\nH^1(S,R^{2d_1-1}f_*\\mathbb Q_\\ell(d_1)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(It is a \\(\\mu(t_1-t_2)\\)-analogue of this element that Manin studies in\n[5]).</p>"
+    },
+    {
+     "id": "20.1.6.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.1.6.5\"><strong>1.6.5.</strong> Let now \\(z\\) be an algebraic cycle on \\(X\\times_S Y\\) of co-<br>\ndimension \\(\\geq b\\) on each fiber of \\(X\\times_S Y\\)<sup><a href=\"#20-fn-20-1\" id=\"20-fn-20-1ref\">(*)</a></sup>, which determines a\ncohomology class (SGA 5 IV    ):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.6}\n\\operatorname{cl}(z)\\in H^{2b}(X\\times_S Y,\\mathbb Q_\\ell(b)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This class defines a map (cf (1.2.3))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.7}\n\\operatorname{cl}(z):H^{2d_1}(X,\\mathbb Q_\\ell(d_1))\\longrightarrow\nH^{2b}(Y,\\mathbb Q_\\ell(b)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and if the cycles \\(z(t_1)\\) and \\(z(t_2)\\) are defined, we have (thanks to the\ncompatibility SGA 5 IV     of the cup-product with intersections of\ncycles):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.8}\n\\operatorname{cl}(z)\\bigl(\\operatorname{cl}(t_1)-\\operatorname{cl}(t_2)\\bigr)\n=\\operatorname{cl}\\bigl(z(t_1)-z(t_2)\\bigr).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The commutativity of (1.4.2) gives us</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.6.9}\n\\operatorname{cl}(z)\\bigl(u_f(t_1-t_2)\\bigr)\n=u_g\\bigl(\\operatorname{cl}(z(t_1)-z(t_2))\\bigr).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As a corollary of 1.5.3, we then have:</p>"
+    },
+    {
+     "id": "20.1.7",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"20.1.7\"><div class=\"thm-head\"><u>Proposition 1.7.</u></div><div class=\"thm-body\">\n<p><u>Let \\(t_1\\) and \\(t_2\\) be two sections of \\(f:X\\longrightarrow S\\),\nwhere \\(f\\) is assumed to have connected fibers, and let \\(z\\) be an algebraic cycle\non \\(X\\times_S Y\\) of codimension \\(b\\), such that the algebraic cycle</u></p>\n\\[\n\\tag{1.7.1}\nz(t_1)-z(t_2)\n\\]\n<p><u>is defined. Then its cohomology class is primitive (XVIII 5.8.1).\nIf the algebraic cycle \\(z_{\\bar\\eta}\\) on \\(X_{\\bar\\eta}\\times Y_{\\bar\\eta}\\) induces the zero homomorphism</u></p>\n\\[\n\\tag{1.7.2}\nz_{\\bar\\eta}:H^{2d_1-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(d_1))\n\\xrightarrow{ 0 }H^{2b-1}(Y_{\\bar\\eta},\\mathbb Q_\\ell(b))\n\\]\n<p><u>then</u></p>\n\\[\n\\tag{1.7.3}\nu_g\\bigl(z(t_1)-z(t_2)\\bigr)=0\\quad\\text{in}\\quad\nH^1(S,R^{2b-1}g_*\\mathbb Q_\\ell(b)),\n\\]\n<p><u>(where \\(u_g\\) is the homomorphism of XVIII 5.8.1 appearing in 1.4).</u></p>\n</div></div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "number": "(*)",
+     "html": "<p> If \\(S\\) is smooth over a scheme \\(T\\) (e.g. \\(T=\\operatorname{Spec}k\\), \\(k\\) a field), it\nwould suffice to assume \\(z\\) of codimension \\(\\geq b\\) on each fiber above \\(T\\).</p>",
+     "id": "20-fn-20-1"
+    }
+   ]
+  },
+  {
+   "id": "20-2",
+   "title": "2. A reminder on the level (cf. [2], 9.7, 10.1)",
+   "blocks": [
+    {
+     "id": "20.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.2\">2. <u>A reminder on the level (cf. [2], 9.7, 10.1)</u></h2>"
+    },
+    {
+     "id": "20.2.0.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.2.0.1\"><strong>2.0.1.</strong> Let \\(X\\) be proper and smooth over an algebraically closed field \\(k\\).\nWe have seen (1.2.3) that, for every</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.2}\nT\\ \\text{proper, smooth and connected over }k\\ \\text{of dimension }d,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and every</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.3}\n\\text{algebraic cycle }z\\ \\text{of codimension }b\\ \\text{on }T\\times X,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the cohomology class</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.4}\n\\operatorname{cl}(z)\\in H^{2b}(T\\times X,\\mathbb Q_\\ell(b))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>gives rise to the maps</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.5}\n\\operatorname{cl}(z):H^q(T,\\mathbb Q_\\ell(i))\\longrightarrow\nH^{q+2b-2d}(X,\\mathbb Q_\\ell(i+b-d)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We define <u>the filtration by co-level</u> \\((N^j)\\) of \\(H^q(X,\\mathbb Q_\\ell(i))\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.6}\nN^jH^q(X,\\mathbb Q_\\ell(i))=\n\\sum_{(T,z)}\\operatorname{images}\\bigl(\\operatorname{cl}(z):\nH^{q-2j}(T,\\mathbb Q_\\ell(i-j))\\longrightarrow H^q(X,\\mathbb Q_\\ell(i))\\bigr),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the sum being extended over the pairs</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.7}\n\\begin{array}{ll}\n(T,z)&amp;T/k\\ \\text{proper smooth and connected of dimension }d,\\\\\n&amp;z\\ \\text{algebraic cycle on }T\\times X\\ \\text{of codimension }j+d.\n\\end{array}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It should be noted that one sometimes speaks of the increasing filtration \\(F^j\\)\n<u>« by level »</u>, defined by</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.8}\nF^jH^q(X,\\mathbb Q_\\ell(i))=N^{\\left[\\frac{q-j}{2}\\right]}H^q(X,\\mathbb Q_\\ell(i)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Replacing \\((T,z)\\) by \\((\\mathbb P^1\\times T,\\{\\mathrm{pt}\\}\\times z)\\), one sees that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.0.9}\nN^jH^q(X,\\mathbb Q_\\ell(i))\\subset N^{j-1}H^q(X,\\mathbb Q_\\ell(i)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Evidently we have:</p>"
+    },
+    {
+     "id": "20.2.1",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"20.2.1\"><div class=\"thm-head\"><u>Proposition 2.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be proper, smooth and geometrically connected over a field \\(k\\),\n\\(\\bar k\\) an algebraic closure of \\(k\\), \\(X_{\\bar k}=X\\otimes_k\\bar k\\).\nThen \\(\\operatorname{gal}(\\bar k/k)\\), acting on \\(H^q(X_{\\bar k},\\mathbb Q_\\ell(i))\\), preserves the filtration\nby co-level.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Standard arguments (cf [2]) show the following statements.</p>"
+    },
+    {
+     "id": "20.2.2",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"20.2.2\"><div class=\"thm-head\"><u>Proposition 2.2.</u></div><div class=\"thm-body\">\n<p><u>The filtration by level is invariant under extension of algebraically closed fields \\(k'/k\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": "20.2.3",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"20.2.3\"><div class=\"thm-head\"><u>Proposition 2.3.</u></div><div class=\"thm-body\">\n<p><u>Let \\(S\\) be a reduced and irreducible scheme, with generic point \\(\\eta\\), and</u></p>\n\\[\n\\pi:X\\longrightarrow S\n\\]\n<p><u>a proper and smooth morphism, with geometrically connected fibers. If,\nfor given integers \\(j\\) and \\(q\\), we have for the geometric generic fiber \\(X_{\\bar\\eta}\\)</u></p>\n\\[\n\\tag{2.3.1}\nH^q(X_{\\bar\\eta},\\mathbb Q_\\ell)=N^jH^q(X_{\\bar\\eta},\\mathbb Q_\\ell),\n\\]\n<p><u>then there exists a nonempty open set \\(U\\subset S\\) such that at every point\n\\(u\\in U\\), we have for the geometric fiber \\(X_{\\bar u}\\)</u></p>\n\\[\n\\tag{2.3.2}\nH^q(X_{\\bar u},\\mathbb Q_\\ell)=N^jH^q(X_{\\bar u},\\mathbb Q_\\ell).\n\\]\n</div></div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "20-3",
+   "title": "3. Application to Lefschetz pencils",
+   "blocks": [
+    {
+     "id": "20.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.3\">3. <u>Application to Lefschetz pencils</u></h2>"
+    },
+    {
+     "id": "20.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.3.1\"><strong>3.1.</strong> From now on, we fix:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.0}\nk,\\ \\text{an algebraically closed field},\n\\]\n\\[\n\\tag{3.1.1}\nX\\subset\\mathbb P^r,\\quad \\text{a }k\\text{-scheme, projective, smooth and connected, of even dimension }n,\n\\]\n\\[\n\\text{which satisfies (LV) (XVIII 5.2.2)}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us take</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.2}\nD=\\{H_t\\}_{t\\in\\mathbb P^1}\\ \\text{a Lefschetz pencil of hypersurfaces of degree }d,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>with generic fiber</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.3}\nX_\\eta,\\quad \\eta=\\text{the generic point of }\\mathbb P^1.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us set (cf. XVIII 5.4.4)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.4}\nm:X_{\\bar\\eta}\\lhook\\joinrel\\longrightarrow X_{k\\,\\overline{k(\\eta)}}\\quad\\text{the inclusion},\n\\]\n\\[\n\\tag{3.1.5}\nE^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\n=\\text{the orthogonal of }m^*H^{n-1}(X,\\mathbb Q_\\ell(i))\\ \\text{in }\nH^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i)).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have seen (XVIII 6.7.2) that the <u>Picard-Lefschetz formula</u> implies</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.6}\n\\begin{gathered}\n\\text{If }n\\text{ is even, every subgroup of finite index in}\\\\\n\\operatorname{gal}(k(\\bar\\eta)/k(\\eta))\\ \\text{acts irreducibly on}\\\\\nE^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i)).\n\\end{gathered}\n\\]\n\n</p>"
+    },
+    {
+     "id": "20.3.2",
+     "type": "proposition",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm proposition\" id=\"20.3.2\"><div class=\"thm-head\"><u>Proposition 3.2.</u></div><div class=\"thm-body\">\n<p><u>Let \\(D=\\{H_t\\}\\) be a Lefschetz pencil, and suppose \\(n=2m\\) even. Then either</u></p>\n\n<!-- Source PDF page 13 (printed page 353) -->\n\\[\n\\tag{3.2.1}\nH^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))=m^*H^{n-1}(X,\\mathbb Q_\\ell(i))+N^{m-1}H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\n\\]\n<p><u>or else:</u></p>\n<p id=\"20.3.2.2\"><strong>(3.2.2)</strong> <u>For every curve \\(C\\) proper and smooth over \\(k(\\bar\\eta)\\), and every algebraic cycle \\(z\\) on \\(C\\times X_{\\bar\\eta}\\) of codimension \\(m\\), the induced homomorphism (1.2.3)</u></p>\n\\[\n\\tag{3.2.3}\n\\operatorname{cl}(z):H^1(C,\\mathbb Q_\\ell(1+i-m))\\longrightarrow H^{2m-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\n\\]\n<p><u>has its image in \\(m^*H^{2m-1}(X,\\mathbb Q_\\ell(i))\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof.</u> Suppose that the image of such a homomorphism (3.2.3) is not contained in \\(m^*H^{n-1}(X,\\mathbb Q_\\ell(i))\\), or, what amounts to the same thing, that its image in</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nE^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))=H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))/m^*H^{n-1}(X,\\mathbb Q_\\ell(i))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is not zero. As this image is evidently stable under the operations of a subgroup of finite index in \\(\\operatorname{gal}(k(\\bar\\eta)/k(\\eta))\\), the irreducibility (3.1.6) of \\(E^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\\) can be restated by saying</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))=m^*H^{n-1}(X,\\mathbb Q_\\ell(i))+\\text{the image of (3.2.3)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and, by definition,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n\\text{the image of (3.2.3)}&amp;=\\text{the image under }\\operatorname{cl}(z)\\text{ of }H^1(C,\\mathbb Q_\\ell(1+i-m))\\\\\n&amp;\\subset N^{m-1}H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i)),\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>so that we have indeed found</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))=m^*H^{n-1}(X,\\mathbb Q_\\ell(i))+N^{m-1}H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i)).\n\\]\n\n</p>"
+    },
+    {
+     "id": "20.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"20.3.3\">3.3. <u>The condition \\(B\\).</u></h3>"
+    },
+    {
+     "id": "20.3.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.3.3.1\"><strong>3.3.1.</strong> We will say that the inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[m:X_{\\bar\\eta}\\lhook\\joinrel\\longrightarrow X\\times_k k(\\bar\\eta)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>satisfies the condition \\(B\\) if there exists</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.2}\nV_{\\bar\\eta},\\quad\\text{an algebraic cycle of codimension }n-1\\text{ on }X_{\\bar\\eta}\\times(X\\times_k k(\\bar\\eta))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that the map it defines</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.3}\nV_{\\bar\\eta}:H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow H^{n-1}(X,\\mathbb Q_\\ell(i))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a left inverse of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.4}\nm^*:H^{n-1}(X,\\mathbb Q_\\ell(i))\\longrightarrow H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i)),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i.e. such that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.3.5}V_{\\bar\\eta}m^*=\\operatorname{id}.\\]\n\n</p>"
+    },
+    {
+     "id": "20.3.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.3.4\"><strong>(3.4).</strong> This condition \\(B\\) is satisfied if the operation \\(\\Lambda\\) [4, 1.4.2.1] is algebraic (cf. [4, 2.12 (ii)]. It is conjectured that \\(\\Lambda\\) is always algebraic, hence that the condition \\(B\\) is always satisfied, and one knows how to verify it in numerous cases [4]. <u>It is satisfied trivially for \\(X\\) a complete intersection of even dimension</u> since then we know (IX 1.6) that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.4.1}H^{n-1}(X,\\mathbb Q_\\ell(i))=0.\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "20-4",
+   "title": "4. The theorem of GRIFFITHS",
+   "blocks": [
+    {
+     "id": "20.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.4\">4. <u>The theorem of GRIFFITHS</u></h2>"
+    },
+    {
+     "id": "20.4.1",
+     "type": "theorem",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm theorem\" id=\"20.4.1\"><div class=\"thm-head\"><u>Theorem 4.1.</u></div><div class=\"thm-body\">\n<p><u>Let \\(X\\) be projective, smooth and connected over \\(k\\), of even dimension \\(n=2m\\geq4\\). Let \\(D\\) be a Lefschetz pencil of sections by hypersurfaces of degree \\(d\\). We assume</u></p>\n<p><u>(4.1.0) \\(X\\) satisfies (LV) (XVIII 5.2.2),</u></p>\n<p><u>(4.1.1) the pencil \\(D\\) satisfies the hypothesis \\(A\\) (XVIII 5.3)</u></p>\n<p><u>(4.1.2) the pencil \\(D\\) satisfies (3.2.2), i.e. (3.2) the vanishing cohomology \\(E^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell)\\) is not of level \\(\\leq1\\),</u></p>\n<p><u>(4.1.3) the inclusion \\(m^*:X_{\\bar\\eta}\\lhook\\joinrel\\longrightarrow X\\times_k k(\\bar\\eta)\\) satisfies the hypothesis \\(B\\) (3.3).</u></p>\n<p><u>Then, if an algebraic cycle \\(z\\) of codimension \\(m\\) on \\(X\\) is such that its restriction (as an algebraic cycle) to \\(X_{\\bar\\eta}\\) satisfies</u></p>\n\\[\\tag{4.1.4}z_{\\bar\\eta}=z|X_{\\bar\\eta}\\quad\\text{is algebraically equivalent to zero}\\]\n<p><u>Then (4.1.5) \\(z\\) is \\(\\mathbb Q_\\ell\\)-cohomologous to zero, i.e. \\(\\operatorname{cl}(z)\\in H^{2m}(X,\\mathbb Q_\\ell(m))\\) is zero.</u></p>\n</div></div>"
+    },
+    {
+     "id": "20.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.4.2\"><strong>4.2.</strong> <u>A remark on the case where \\(X\\) is a complete intersection.</u> As already remarked (cf. XVIII 5.2.5, and (3.4.1)), the hypotheses (4.1.0) and (4.1.3) are then automatically satisfied. As for the hypothesis (4.1.1), we have seen (XVIII 6.3.4, 6.4) that it is satisfied for a pencil of hypersurfaces of degree \\(d&gt;2m\\). On the other hand, we will prove in the next exposé the condition (4.1.2) for a « general » pencil of hypersurfaces of degree \\(d&gt;2n\\) (XXI 5.2). Hence a « general » pencil of hypersurfaces of degree \\(d&gt;2n\\) satisfies all the hypotheses of Theorem 4.1.</p>"
+    },
+    {
+     "id": "20.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.4.3\"><strong>4.3.</strong> Returning to the case where \\(X\\) is arbitrary, it seems very plausible that for a sufficiently large degree \\(d\\), all the conditions of 4.1 are satisfied for \\(D\\), at least for \\(D\\) sufficiently general. We have already seen that this is the case for (4.1.1) (XVIII 6.4), and we have pointed out that it is conjectured that (4.1.0) and (4.1.3) are satisfied in all cases (and it is true in all cases for (4.1.0) if \\(\\operatorname{car}k=0\\)). As for the condition (4.1.2), it is satisfied (thanks to Hodge theory) for \\(d\\) large if \\(\\operatorname{car}k=0\\), and heuristic arguments (which the reader will find in the appendix to the following exposé) make it plausible that the same still holds if \\(\\operatorname{car}k&gt;0\\). More generally, these arguments (Hodge theory, resp. crystalline cohomology) prove (resp. make plausible) that for a smooth projective variety \\(X\\) of dimension \\(n\\), and for every Lefschetz pencil \\(D\\) of hypersurfaces of sufficiently large degree \\(d\\) (resp. every « sufficiently general » pencil \\(D\\) of hypersurfaces of degree \\(d\\)) the vanishing cohomology \\(E^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell)\\) is of level equal to \\(n-1\\) (i.e. is not of level \\(\\leq n-3\\), i.e. is not of coniveau 1).</p>"
+    },
+    {
+     "id": "20.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"20.4.4\">4.4. <u>Proof of the Griffiths theorem.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(z\\) be an algebraic cycle of codimension \\(m\\) on \\(X\\), such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.1}z_{\\bar\\eta}=z|X_{\\bar\\eta}\\quad\\text{is algebraically equivalent to zero}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By definition, there exist</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.2}\\text{a curve }C_{\\bar\\eta},\\text{ proper, smooth and connected over }k(\\bar\\eta),\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.3}\\text{two sections }t_i(\\bar\\eta):\\operatorname{Sp}(k(\\bar\\eta))\\longrightarrow C,\\quad i=1,2,\\]\n\\[\\tag{4.4.4}\\text{an algebraic cycle }P_{\\bar\\eta}\\text{ on }C_{\\bar\\eta}\\times X_{\\bar\\eta},\\text{ of codimension }m,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.5}z_{\\bar\\eta}=P_{\\bar\\eta}(t_1(\\bar\\eta))-P_{\\bar\\eta}(t_2(\\bar\\eta))\\quad\\text{on }X_{\\bar\\eta}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us consider the cycle \\(P_{\\bar\\eta}\\) as an <u>algebraic correspondence</u> on \\((C_{\\bar\\eta},X_{\\bar\\eta})\\), defining a cohomological correspondence, still denoted \\(P_{\\bar\\eta}\\), or again a homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.6}P_{\\bar\\eta}:H^*(C_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow H^{*+2(m-1)}(X_{\\bar\\eta},\\mathbb Q_\\ell(i+m-1)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us likewise consider the algebraic correspondence \\(V_{\\bar\\eta}\\) (3.3.2) on \\((X_{\\bar\\eta},X\\otimes_k k(\\bar\\eta))\\) given by the hypothesis (3) of (4.1.3), defining</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.7}V_{\\bar\\eta}:H^*(X_{\\bar\\eta},\\mathbb Q_\\ell(i+m-1))\\longrightarrow H^*(X\\otimes_k k(\\bar\\eta),\\mathbb Q_\\ell(i+m-1)),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whence a composite algebraic correspondence \\(Q_{\\bar\\eta}=V_{\\bar\\eta}\\circ P_{\\bar\\eta}\\) on \\((C_{\\bar\\eta},X\\otimes_k k(\\bar\\eta))\\), defining</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.8}Q_{\\bar\\eta}=V_{\\bar\\eta}\\circ P_{\\bar\\eta}:H^*(C_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow H^{*+2(m-1)}(X\\otimes_k k(\\bar\\eta),\\mathbb Q_\\ell(i+m-1)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us consider the inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[m:X_{\\bar\\eta}\\longrightarrow X\\otimes_k k(\\bar\\eta),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>giving the algebraic correspondence \\(m^*\\) on \\((X\\otimes_k k(\\bar\\eta),X_{\\bar\\eta})\\), whence the composite correspondence \\(m^*Q_{\\bar\\eta}\\) on \\((C_{\\bar\\eta},X_{\\bar\\eta})\\), defining</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.9}m^*Q_{\\bar\\eta}=m^*V_{\\bar\\eta}P_{\\bar\\eta}:H^*(C_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow H^{*+2(m-1)}(X_{\\bar\\eta},\\mathbb Q_\\ell(i+m-1)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us consider the algebraic correspondence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.10}R_{\\bar\\eta}=P_{\\bar\\eta}-m^*Q_{\\bar\\eta}=(\\operatorname{id}-m^*V_{\\bar\\eta})P_{\\bar\\eta}:H^*(C_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow H^{*+2(m-1)}(X_{\\bar\\eta},\\mathbb Q_\\ell(i+m-1)).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(V_{\\bar\\eta}\\) is a left inverse of \\(m^*\\), \\((\\operatorname{id}-m^*V_{\\bar\\eta})\\) is a projector in \\(H^*(X_{\\bar\\eta},-)\\), whose image is a complement of \\(\\operatorname{Im}(m^*:H^*(X\\otimes_k k(\\bar\\eta),-)\\longrightarrow H^*(X_{\\bar\\eta},-))\\). Since, by virtue of the hypothesis (4.1.2), the homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.11}R_{\\bar\\eta}:H^1(C_{\\bar\\eta},\\mathbb Q_\\ell(i))\\longrightarrow H^{2m-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i+m-1))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>has its image in \\(\\operatorname{Im}m^*\\), we find that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.12}\\text{the homomorphism (4.4.11) is zero}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now choose a finite extension \\(L/k(\\bar\\eta)\\) over which the objects</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[C_{\\bar\\eta},\\ t_1(\\bar\\eta),\\ t_2(\\bar\\eta),\\ Q_{\\bar\\eta},\\ R_{\\bar\\eta}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>are already defined, and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[U\\quad\\text{an open set }\\ne\\varnothing\\quad\\text{in the normalization of }\\mathbb P^1\\text{ in }L.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Taking \\(U\\) small enough, there exists a relative curve, proper and smooth, with geometrically connected fibers</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[C\\longrightarrow U,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whose geometric generic fiber is \\(C_{\\bar\\eta}\\), and two sections</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[t_i:U\\longrightarrow C\\qquad i=1,2\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>whose values at \\(\\bar\\eta\\) are \\(t_i(\\bar\\eta)\\). Let</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\rho:\\widetilde X\\longrightarrow\\mathbb P^1\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>be the projection (XVIII 3.1.4) whose fibers are the sections of the pencil,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\widetilde X_U=\\widetilde X\\times_{\\mathbb P^1}U,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[M:\\widetilde X_U\\lhook\\joinrel\\longrightarrow X\\times U\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the canonical immersion of \\(\\widetilde X_U\\) into \\(X\\times U\\) (considered as the constant family on \\(U\\) with value \\(X\\)),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[z_U=M^*\\operatorname{pr}_1^*(z),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the algebraic cycle on \\(\\widetilde X_U\\) induced by \\(z\\). Taking \\(U\\) small enough, there exist an algebraic cycle \\(R\\) on \\(C\\times_U\\widetilde X_U\\) whose value at \\(C_{\\bar\\eta}\\times X_{\\bar\\eta}\\) is \\(R_{\\bar\\eta}\\), and an algebraic cycle \\(Q\\) on \\(C\\times X\\times U\\) whose value at \\(C_{\\bar\\eta}\\times(X\\otimes_k k(\\bar\\eta))\\) is \\(Q_{\\bar\\eta}\\), such that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{4.4.13}z_U=R(t_1)-R(t_2)+(\\operatorname{id}\\times M)^*[Q(t_1)-Q(t_2)].\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove the theorem, it will suffice, thanks to the injectivity of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the Griffiths homomorphism « modulo fixed part » (XVIII 5.8.7)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Prim}^{2m}(X,\\mathbb Q_\\ell(m))\\xrightarrow{\\mathrm{grif}}\\frac{H^1(U,R^{2m-1}\\rho_{U*}\\mathbb Q_\\ell(m))}{M^*H^1(U,H^{2m-1}(X,\\mathbb Q_\\ell(m)))},\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>to prove that the image of \\(z_U\\) under</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[u_\\rho:\\operatorname{Prim}^{2m}(\\widetilde X_U/U,\\mathbb Q_\\ell(m))\\longrightarrow H^1(U,R^{2m-1}\\rho_{U*}\\mathbb Q_\\ell(m))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>lies in \\(M^*(H^1(U,H^{2m-1}(X,\\mathbb Q_\\ell(m)))\\). Now, taking into account the decomposition (4.4.13), and the commutativity of (I 4.2)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{CD}\n\\operatorname{Prim}^{2m}(C/U,\\mathbb Q_\\ell(1)) @&gt;{Q}&gt;&gt; \\operatorname{Prim}^{2m}(X\\times U/U,\\mathbb Q_\\ell(m)) @&gt;{M^*}&gt;&gt; \\operatorname{Prim}^{2m}(\\widetilde X_U/U,\\mathbb Q_\\ell(m))\\\\\n@V{u_{\\operatorname{pr}_2}}VV @. @VV{u_\\rho}V\\\\\nH^1(U,H^{2m-1}(X,\\mathbb Q_\\ell(m))) @&gt;{M^*}&gt;&gt; H^1(U,R^{2m-1}\\rho_{U*}\\mathbb Q_\\ell(m)),\n\\end{CD}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>it suffices to prove</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[u_\\rho(R(t_1)-R(t_2))=0\\quad\\text{in }H^1(U,R^{2m-1}\\rho_{U*}\\mathbb Q_\\ell(m)),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which is a consequence of (4.4.12), thanks to I 1.7.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "20-5",
+   "title": "5. The Griffiths Group",
+   "blocks": [
+    {
+     "id": "20.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.5\">5. <u>The Griffiths Group</u></h2>"
+    },
+    {
+     "id": "20.5.0",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.5.0\"><strong>5.0.</strong> Let \\(S\\) be proper and smooth over an algebraically closed field \\(k\\). Denote by</p>"
+    },
+    {
+     "id": "20.5.0.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.5.0.1\"><strong>(5.0.1)</strong> \\(Z^i(S)\\) the group of algebraic cycles of codimension \\(i\\) on \\(S\\),</p>"
+    },
+    {
+     "id": "20.5.0.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.5.0.2\"><strong>(5.0.2)</strong> \\(Z^i_{\\mathrm{alg}}(S)\\) the subgroup of \\(Z^i(S)\\) formed by the cycles algebraically equivalent to zero,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and, for every prime number \\(\\ell\\ne\\operatorname{car}(k)\\)</p>"
+    },
+    {
+     "id": "20.5.0.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.5.0.3\"><strong>(5.0.3)</strong> \\(Z^i_{\\ell\\text{-}\\mathrm{coh}}(S)\\) the subgroup of \\(Z^i(S)\\) formed by the cycles whose cohomology class in \\(H^{2i}(S,\\mathbb Q_\\ell(i))\\) is zero.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(It is conjectured [4] that this group is independent of \\(\\ell\\), which is true at least if \\(\\operatorname{car}k=0\\).) We set</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{5.0.4}\\operatorname{Grif}_\\ell^i(S)=Z^i_{\\ell\\text{-}\\mathrm{coh}}(S)/Z^i_{\\mathrm{alg}}(S).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If moreover \\(S\\) is projective, and equipped with a projective immersion, we set</p>"
+    },
+    {
+     "id": "20.5.0.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.5.0.5\"><strong>(5.0.5)</strong> \\(Z^{i,\\mathrm{prim}}(S)\\) = the subgroup of \\(Z^i(S)\\) formed by the cycles which are primitive (i.e. whose cohomology class is),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{5.0.6}\\operatorname{Prim}^{2i}_{\\mathrm{alg}}(S,\\mathbb Q_\\ell(i))=\\text{the sub-}\\mathbb Q\\text{-vector space of }H^{2i}(S,\\mathbb Q_\\ell(i))\\text{ generated by cohomology classes of primitive algebraic cycles}.\\]\n</p>"
+    },
+    {
+     "id": "20.5.1",
+     "type": "corollary",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm corollary\" id=\"20.5.1\"><div class=\"thm-head\"><u>Corollary 5.1.</u></div><div class=\"thm-body\">\n<p><u>Under the hypotheses of 4.1, we have</u></p>\n\\[\\tag{5.1.1}\\dim_{\\mathbb Q}(\\operatorname{Grif}^n(X_{\\bar\\eta})\\otimes_{\\mathbb Z}\\mathbb Q)\\geq \\dim_{\\mathbb Q_\\ell}(\\operatorname{Prim}^{2n}_{\\mathrm{alg}}(X,\\mathbb Q_\\ell(n))).\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, by 4.1.5, the kernel of the composite arrow</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathbb Q\\otimes_{\\mathbb Z}Z^{n,\\mathrm{prim}}(X)\\xrightarrow{\\mathrm{rest.\\ à}\\ X_{\\bar\\eta}}\\mathbb Q\\otimes_{\\mathbb Z}Z^n_{\\ell\\text{-}\\mathrm{coh}}(X_{\\bar\\eta})\\longrightarrow\\operatorname{Grif}^n(X_{\\bar\\eta})\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is contained in \\(Z^n_{\\ell\\text{-}\\mathrm{coh}}(X)\\otimes_{\\mathbb Z}\\mathbb Q\\), so that \\(\\operatorname{Prim}^{2n}_{\\mathrm{alg}}(X,\\mathbb Q_\\ell(n))\\) is a quotient of a subgroup of \\(\\operatorname{Grif}^n(X_{\\bar\\eta})\\otimes_{\\mathbb Z}\\mathbb Q\\), which completes the proof.</p>"
+    },
+    {
+     "id": "20.5.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"20.5.2\"><u>Remark 5.2.</u> For \\(X\\) a quadric hypersurface in \\(\\mathbb P^{2m+1}\\) we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\dim_{\\mathbb Q_\\ell}(\\operatorname{Prim}^{2m}_{\\mathrm{alg}}(X,\\mathbb Q_\\ell(m)))=1.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>In particular (4.2), for \\(X\\) a quadric in \\(\\mathbb P^5\\), the section of \\(X\\) by a generic hypersurface of degree \\(&gt;5\\) contains a curve, \\(\\mathbb Q_\\ell\\)-cohomologous to zero, no multiple of which is algebraically equivalent to zero.</u></p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "20-references",
+   "title": "REFERENCES",
+   "blocks": [
+    {
+     "id": "20.references",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"20.references\">REFERENCES</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] Griffiths, P. <i>On the Periods of Certain Rational Integrals III</i>, to appear in <i>Annals of Mathematics</i>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] Grothendieck, A. <i>Le Groupe de Brauer III</i> (esp §§ 9, 10) in <i>Dix Exposés sur la Cohomologie des Schémas</i>, North Holland, 1968.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] Jouanolou, J.P. <i>Cohomologie ℓ-adique</i>, Thesis, Paris 1969.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] Kleiman, S. <i>Algebraic Cycles and the Weil Conjectures</i>, in <i>Dix Exposés sur la Cohomologie des Schémas</i>, North Holland, 1968.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] Manin, J. <i>Rational Points of Algebraic Curves over Function Fields</i>, Translations Amer. Math. Soc.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

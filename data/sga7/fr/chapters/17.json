@@ -1,0 +1,2666 @@
+{
+ "chapter_id": "17",
+ "title": "PINCEAUX DE LEFSCHETZ : THÉORÈME D’EXISTENCE",
+ "number": "XVII",
+ "pages": [
+  {
+   "id": "17",
+   "title": "PINCEAUX DE LEFSCHETZ : THÉORÈME D’EXISTENCE",
+   "blocks": [
+    {
+     "id": "17",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"17\">EXPOSÉ XVII<br>PINCEAUX DE LEFSCHETZ : THÉORÈME D’EXISTENCE<span class=\"author\">par N. M. KATZ</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "17.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.0\">0. <u>Introduction</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le présent exposé (qui, dans le séminaire oral, se plaçait avant les exposés XIV, XV consacrés à la formule de Picard-Lefschetz), nous introduisons les « pinceaux de Lefschetz » de sections hyperplanes d’un schéma projectif et lisse, nous en donnons des conditions d’existence ; dans l’exposé suivant, nous en faisons une étude cohomologique élémentaire, basée sur la structure connue de la cohomologie des variétés éclatées. Le fait que certaines hypothèses sur les pinceaux de Lefschetz que nous sommes amenés à introduire sont souvent satisfaites résultera de la formule de Picard-Lefschetz de Exp. XV, de nature moins élémentaire que les résultats du présent exposé et du suivant.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Certains développements du présent exposé et du suivant se trouveront exposés ailleurs dans un cadre plus général (schémas de base généraux, hypothèses de quasi-projectivité au lieu de projectivité, etc.), notamment l’étude pré-cohomologique des pinceaux de sections hyperplanes (et des pinceaux de Lefschetz plus particulièrement) dans EGA V, et l’étude cohomologique des schémas éclatés dans\n<!-- Source PDF page 2 (printed page 213) -->\nl’exposé de JOUANOLOU SGA 5 VII ; le lecteur trouvera également dans EGA V des démonstrations où la chasse aux diagrammes intrinsèque remplace l’usage des coordonnées, qu’affectionne le rédacteur du présent exposé.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Je tiens à remercier P. DELIGNE et P. GRIFFITHS pour l’aide qu’ils m’ont apportée dans la conception de cet exposé. Dans tout cet exposé, \\(k\\) désigne un corps algébriquement clos, sauf mention expresse du contraire.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-1",
+   "title": "1. Un rappel sur les singularités quadratiques (cf VI 6).",
+   "blocks": [
+    {
+     "id": "17.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.1\">1. <u>Un rappel sur les singularités quadratiques</u> (cf VI 6).</h2>"
+    },
+    {
+     "id": "17.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.1.1\"><strong>1.1.</strong> Soit \\(Y\\) un \\(k\\)-schéma purement de dimension \\(n\\). Un point fermé \\(y\\in Y\\) s’appelle une <u>singularité quadratique ordinaire</u> de \\(Y\\) si :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) le complété \\(\\widehat{\\mathcal O}_{Y,y}\\) de l’anneau local de \\(y\\) dans \\(Y\\) est isomorphe au quotient \\(k[[T_1,\\ldots,T_n]]/(Q(T))\\) des séries formelles en \\(n=\\dim_k Y\\) variables par l’idéal engendré par un élément \\(Q(T)\\) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) \\(Q\\) ne commence qu’en degré deux, et la sous-variété de \\(\\mathbb P_k^{n-1}\\) définie par l’annulation de la partie homogène de degré deux de \\(Q(T)\\) est lisse sur \\(k\\) si \\(n\\geq2\\), et la partie homogène de \\(Q(T)\\) de degré deux est non-nulle si \\(n=1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si la caractéristique de \\(k\\) est différente de deux, <u>ou</u> si \\(n\\) est pair, la condition b) équivaut à la condition\n<!-- Source PDF page 3 (printed page 214) -->\nb’) \\(Q\\) ne commence qu’en degré deux, et la matrice hessienne de \\(Q\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\left(\\frac{\\partial^2Q}{\\partial T_i\\partial T_j}(0)\\right)_{1\\leq i,j\\leq n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est inversible.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme on voit en s’appuyant sur le critère jacobienne de lissité.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La « forme standard » pour la partie homogène de degré deux \\(Q_2\\) d’une série \\(Q\\) vérifiant b), forme qui peut être obtenue après un changement de variable linéaire, est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{1.1.1}\n\\begin{cases}\nQ_2(T)=\\displaystyle\\sum_{i=1}^{[n/2]}T_{2i-1}T_{2i},&amp;\\text{si }n\\text{ est pair},\\\\[6pt]\nQ_2(T)=T_n^2+\\displaystyle\\sum_{i=1}^{[(n-1)/2]}T_{2i-1}T_{2i},&amp;\\text{si }n\\text{ est impair},\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>comme on voit par la théorie des formes quadratique (Bourbaki, Alg. X).</p>"
+    },
+    {
+     "id": "17.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.1.2\"><strong>1.2.</strong> Un point fermé \\(y\\in Y\\) qui vérifie a), b) s’appelle <u>singularité quadratique non-dégénérée</u>. Comme le déterminant de la matrice hessienne est identiquement nul en caractéristique deux si \\(n\\) est impair, les singularités quadratiques non-dégénérées en dimension \\(n\\) n’existent que si, ou bien \\(n\\) est pair, ou bien si \\(k\\) est de caractéristique différente de deux cas dans lesquels ce sont exactement les singularités quadratiques ordinaires.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-2",
+   "title": "2. Les pinceaux de Lefschetz : énoncé des résultats",
+   "blocks": [
+    {
+     "id": "17.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.2\">2. <u>Les pinceaux de Lefschetz : énoncé des résultats</u></h2>"
+    },
+    {
+     "id": "17.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.1\"><strong>2.1.</strong> Désignons par \\(\\mathbb P^r\\) l’espace projectif à \\(r\\) dimensions sur \\(k\\), par \\(\\check{\\mathbb P}^{\\,r}\\) l’espace projectif <u>dual</u> des hyperplans dans \\(\\mathbb P^r\\), et par \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\) la variété des droites dans \\(\\check{\\mathbb P}^{\\,r}\\). Un point \\(D\\in\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\) s’appelle un <u>pinceau d’hyperplans</u> dans \\(\\mathbb P^r\\). Considérant \\(D\\) comme une droite dans \\(\\check{\\mathbb P}^{\\,r}\\), on écrit, par abus de notation, \\(D=\\{H_t\\}_{t\\in D}\\), les \\(H_t\\) étant les hyperplans de \\(\\mathbb P^r\\) qui sont les points de la droite \\(D\\). On appelle <u>axe de \\(D\\)</u> la sous-variété linéaire de \\(\\mathbb P^r\\) de codimension deux qui est l’intersection \\(H_o\\cdot H_\\infty\\) de deux éléments distincts quelconques du pinceau. Considérant l’axe de \\(D\\) comme un point de \\(\\operatorname{Gr}(r-2,\\mathbb P^r)\\), la flèche \\(D\\longmapsto\\) l’axe de \\(D\\) n’est autre que l’isomorphisme bien connu d’orthogonalité</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\xrightarrow{\\sim}\\operatorname{Gr}(r-2,\\mathbb P^r).\n\\]\n\n</p>"
+    },
+    {
+     "id": "17.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.2\"><strong>2.2.</strong> Soit \\(X\\) un \\(k\\)-schéma, propre, lisse et irréductible, de dimension \\(n\\geq1\\), muni d’un plongement \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\). Un pinceau \\(D=\\{H_t\\}_{t\\in\\mathbb P^1}\\) d’hyperplans dans \\(\\mathbb P^r\\) s’appelle un <u>pinceau de Lefschetz</u> (par rapport au plongement \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\)) si</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) l’axe de \\(D\\) coupe transversalement \\(X\\) (EGA IV 17.13.7) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) il existe un ouvert dense \\(U\\) de \\(D\\) tel que pour tout \\(t\\in U\\), l’hyperplan \\(H_t\\) coupe transversalement \\(X\\) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) pour \\(t_o\\in D-U\\), \\(H_{t_o}\\) coupe transversalement \\(X\\) sauf en\n<!-- Source PDF page 5 (printed page 216) -->\nun point, qui est un point singulier quadratique ordinaire de \\(X\\cdot H_{t_o}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons voir plus bas (3.2.1) que les pinceaux de Lefschetz forment un <u>ouvert</u> de \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\).</p>"
+    },
+    {
+     "id": "17.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.3\"><strong>2.3.</strong> Le plongement \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\) s’appelle un <u>plongement de Lefschetz</u> si les pinceaux de Lefschetz forment un ouvert dense dans \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\)<sup><a href=\"#17-fn1\" id=\"17-fn1ref\">*)</a></sup>.</p>"
+    },
+    {
+     "id": "17.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.4\"><strong>2.4.</strong> Rappelons maintenant la notion de <u>multiple d’un plongement donné</u> \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\). C’est le composé du plongement donné \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\) et du \\(d\\)-ième plongement de Segre,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nS_d:\\mathbb P^r\\longrightarrow\\mathbb P^{\\binom{r+d}{d}-1}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui s’écrit en termes des coordonnées homogènes \\(X_o,\\ldots,X_r\\) dans \\(\\mathbb P^r\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n(X_o,\\ldots,X_r)\\xrightarrow{S_d}(\\ldots,X^w,\\ldots)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(X^w=X_o^{w_o}\\cdots X_r^{w_r}\\) parcourt les monômes de degré \\(d\\) en \\(X_o,\\ldots,X_r\\). Remarquons qu’une « section de \\(X\\) par une hypersurface de degré \\(d\\) »<sup><a href=\"#17-fn2\" id=\"17-fn2ref\">**)</a></sup> pour un plongement donné n’est autre qu’une</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>« section hyperplane » pour le \\(d\\)-ième multiple de ce plongement.</p>"
+    },
+    {
+     "id": "17.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.5\"><strong><u>Théorème 2.5.</u></strong> <u>Soit \\(X\\) irréductible, propre et lisse sur \\(k\\) de dimension \\(n\\geq1\\), muni d’un plongement \\(i:X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\). Alors</u></p>"
+    },
+    {
+     "id": "17.2.5.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.5.1\"><strong>2.5.1.</strong> <u>Tout multiple \\(d\\)-ième de \\(i\\), avec \\(d\\geq2\\), est un plongement de Lefschetz.</u></p>"
+    },
+    {
+     "id": "17.2.5.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.2.5.2\"><strong>2.5.2.</strong> <u>Si \\(k\\) est de caractéristique nulle, le plongement donné \\(i\\) est un plongement de Lefschetz.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration se coupe en plusieurs morceaux, qui suivent.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "number": "*)",
+     "html": "Ou plus correctement, dans l’ensemble des points fermés de \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\). Nous nous permettrons par la suite de tels abus de langage.",
+     "id": "17-fn1"
+    },
+    {
+     "number": "**)",
+     "html": "En Anglais, on dit plus commodément : hypersurface section of degree \\(d\\).",
+     "id": "17-fn2"
+    }
+   ]
+  },
+  {
+   "id": "17-3",
+   "title": "3. La variété duale",
+   "blocks": [
+    {
+     "id": "17.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.3\">3. <u>La variété duale</u></h2>"
+    },
+    {
+     "id": "17.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.1\"><strong>3.1.</strong> Soit \\(I\\) l’Idéal dans \\(\\mathbb P^r\\) qui définit \\(X\\). On désigne par \\(N\\) le faisceau conormal \\(I/I^2\\), faisceau localement libre de rang \\(r-n\\) sur \\(X\\), et par \\(\\mathbb P(N)\\) le fibré projectif au-dessus de \\(X\\) formé des droites dans \\(\\check N\\). (Pour \\(X=\\mathbb P^r\\), \\(\\mathbb P(N)\\) est vide.)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le fibré \\(\\mathbb P(N)\\) s’identifie à la sous-variété de \\(X\\times\\check{\\mathbb P}^{\\,r}\\) formée des couples \\((x,H)\\) tels que \\(H\\) soit tangent à \\(X\\) en \\(x\\), par la flèche \\(\\mathbb P(N)\\xrightarrow{\\nu}X\\times\\check{\\mathbb P}^{\\,r}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.1.1}\n\\mathbb P_x(I/I^2)\\ni F\\xmapsto{\\nu}\\left(x,\\text{ l’hyperplan d’équation }\\sum_i\\frac{\\partial F}{\\partial X_i}(x)T_i\\right),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(F\\) désignant une section locale de \\(I/I^2\\). On définit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.1.2}\n\\varphi:\\mathbb P(N)\\longrightarrow\\check{\\mathbb P}^{\\,r}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>comme étant le composé \\(\\mathbb P(N)\\xrightarrow{\\nu}X\\times\\check{\\mathbb P}^{\\,r}\\xrightarrow{\\operatorname{pr}_2}\\check{\\mathbb P}^{\\,r}\\).</p>"
+    },
+    {
+     "id": "17.3.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.1.3\"><strong>3.1.3.</strong> On désigne par \\(\\check X\\) l’image de \\(\\varphi\\) ; c’est l’ensemble des hyperplans qui ne coupent pas transversalement \\(X\\), et s’appelle la <u>variété duale</u> de \\(X\\) (plongé dans \\(\\mathbb P^r\\) par \\(i\\)).</p>"
+    },
+    {
+     "id": "17.3.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.1.4\"><strong><u>Proposition 3.1.4.</u></strong> <u>La variété duale \\(\\check X\\) est irréductible et propre de dimension \\(\\leq r-1\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> C’est l’image par \\(\\varphi\\) de \\(\\mathbb P(N)\\), lui-même irréductible de dimension \\(r-1\\) si \\(X\\ne\\mathbb P^r\\), et vide si \\(X=\\mathbb P^r\\).</p>"
+    },
+    {
+     "id": "17.3.1.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.1.5\"><strong><u>Remarque 3.1.5.</u></strong> Il est possible de préciser l’interprétation de \\(\\mathbb P(N)\\) de la façon suivante. Soit \\(Y\\subset X\\times\\check{\\mathbb P}^{\\,r}\\) le sous-schéma de \\(X\\times\\check{\\mathbb P}^{\\,r}\\) « d’incidence », dont la fibre en tout point \\(H\\) de \\(\\check{\\mathbb P}^{\\,r}(k)\\) est \\(X.H\\). Il est immédiat que \\(Y\\) est lisse de dimension \\(n+r-1\\), comme fibré projectif de dimension relative \\(r-1\\) sur \\(X\\), donc \\(Y\\to\\check{\\mathbb P}^{\\,r}\\) fait de \\(Y\\) une intersection complète relative de dimension relative virtuelle \\((n+r-1)-r=n-1\\). Ceci posé, le <u>sous-schéma jacobien</u> \\(J_{n-1}(Y/\\check{\\mathbb P}^{\\,r})\\) (VI 5.2) n’est autre que \\(\\mathbb P(N)\\). Grâce à la compatibilité de la formation du sous-schéma jacobien d’une intersection complète relative avec tout changement de base, on en déduit que pour toute droite \\(D\\) dans \\(\\check{\\mathbb P}^{\\,r}\\), le sous-schéma jacobien \\(J_{n-1}(\\widetilde X/D)\\), où \\(\\widetilde X=Y\\times_{\\check{\\mathbb P}^{\\,r}}D\\), n’est autre que \\(\\mathbb P(N)\\times_{\\check{\\mathbb P}^{\\,r}}D\\).</p>"
+    },
+    {
+     "id": "17.3.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2\"><strong><u>Proposition 3.2.</u></strong> <u>Le sous-ensemble \\(B\\) de \\(\\check X\\) formé des hyperplans \\(H\\) tel que \\(X.H\\) ait un et un seul point singulier, et que ce point</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>soit quadratique ordinaire, est ouvert.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C’est un cas particulier de XV 1.3.2, s’appuyant la théorie des « modules henséliens » de R. ELKIK (XV 1.1.4). Le cas où on se restreint aux points quadratiques <u>non dégénérés</u> (i.e. où \\(\\operatorname{car}(k)\\ne2\\) ou \\(n=\\dim X\\) est paire) est d’ailleurs évident grâce à 3.3 ci-dessous (dont la démonstration n’utilise pas 3.2).</p>"
+    },
+    {
+     "id": "17.3.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.1\"><strong><u>Corollaire 3.2.1.</u></strong> <u>Sous les hypothèses de 3.2, désignons par \\(F\\) le fermé \\(\\check X-B\\) de \\(\\check X\\). Alors les pinceaux de Lefschetz forment un ouvert dans \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\), et les conditions suivantes sont équivalentes :</u></p>"
+    },
+    {
+     "id": "17.3.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.2\"><strong>3.2.2.</strong> <u>Le plongement donné \\(i:X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\) est un plongement de Lefschetz ;</u></p>"
+    },
+    {
+     "id": "17.3.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.3\"><strong>3.2.3.</strong> <u>il existe un pinceau de Lefschetz d’hyperplans (pour le plongement donné).</u></p>"
+    },
+    {
+     "id": "17.3.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.4\"><strong>3.2.4.</strong> <u>La codimension de \\(F\\) dans \\(\\check{\\mathbb P}^{\\,r}\\) est \\(\\geq2\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Une droite \\(D\\) dans \\(\\check{\\mathbb P}^{\\,r}\\) est un pinceau de Lefschetz si et seulement si elle vérifie :</p>"
+    },
+    {
+     "id": "17.3.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.5\"><strong>(3.2.5)</strong> L’axe de \\(D\\) coupe transversalement \\(X\\),</p>"
+    },
+    {
+     "id": "17.3.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.6\"><strong>(3.2.6)</strong> \\(D\\) n’est pas contenue dans \\(\\check X\\),</p>"
+    },
+    {
+     "id": "17.3.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.7\"><strong>(3.2.7)</strong> \\(D\\) ne rencontre pas \\(F\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les conditions (3.2.5) et (3.2.6) définissent des ouverts de \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\), et, \\(F\\) étant fermé, il en est de même pour (3.2.7), donc les pinceaux de Lefschetz forment un ouvert dans \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\). Parce que \\(\\dim\\check X\\leq r-1\\), l’ouvert (3.2.6) est non-vide, et donc dense. L’ouvert (3.2.5) est également non-vide, donc dense. En effet, soit \\(H\\) un hyperplan qui coupe transversalement \\(X\\) ; un tel \\(H\\) existe car \\(\\dim\\check X\\leq r-1\\). Parce que \\(\\dim(\\check X\\cdot G)\\leq r-1\\), il existe un hyperplan \\(G\\) qui coupe transversalement \\(X\\cdot H\\), et par construction la droite \\(D\\) passant par \\(H\\) et \\(G\\) a un axe qui coupe transversalement \\(X\\). Donc le plongement est de Lefschetz si et seulement si l’ouvert (3.2.7) est non-vide (et donc dense). Or, \\(F\\) étant fermé, (3.2.7) est non-vide si et seulement si \\(F\\) est de codimension \\(\\geq2\\) dans \\(\\check{\\mathbb P}^{\\,r}\\) (cf. EGA V, ou Mumford, Introduction to Algebraic Geometry, p. 88, Cor 3).</p>"
+    },
+    {
+     "id": "17.3.2.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.2.8\"><strong><u>Corollaire 3.2.8.</u></strong> <u>Sous les hypothèses de 3.2., supposons que \\(i:X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\) soit un plongement de Lefschetz. Soit \\(H_o\\) un hyperplan qui coupe transversalement \\(X\\), et désignons par \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o}\\) la sous-variété de \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})\\) formée des droites passant par \\(H_o\\). Alors les pinceaux de Lefschetz passant par \\(H_o\\) forment un ouvert dense dans \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o}\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> D’après (3.2.1), les-dits pinceaux forment un ouvert dans \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o}\\). L’argument qu’on vient de donner pour</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>établir que les ouverts (3.2.5) et (3.2.6) sont non-vides démontre que leurs intersections avec \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o}\\) sont également non-vides. Il reste à prouver qu’il y a des droites passant par \\(H_o\\) qui ne rencontrent pas \\(F\\). Pour ceci, soit \\(T\\) un hyperplan dans \\(\\check{\\mathbb P}^{\\,r}\\) qui ne contient pas \\(H_o\\). On a un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o}\\xleftarrow{\\sim}T,\n\\qquad \\text{la droite passant par }H_o\\text{ et }T\\longmapsfrom T,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc \\(\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o}\\) « est » un espace projectif de dimension \\(r-1\\). Les droites là-dedans passant par un point de \\(F\\) y forment un fermé de dimension \\(\\leq r-2\\), étant l’image du morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nF\\longrightarrow\\operatorname{Gr}(1,\\check{\\mathbb P}^{\\,r})_{H_o},\n\\qquad f\\longmapsto\\text{la droite passant par }H_o\\text{ et par }f.\n\\]\n\n</p>"
+    },
+    {
+     "id": "17.3.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.3\"><strong><u>Proposition 3.3.</u></strong> <u>Le morphisme \\(\\varphi:\\mathbb P(N)\\longrightarrow\\check{\\mathbb P}^{\\,r}\\) est net \\(= non ramifié\\) en un point fermé \\((x_o,H)\\) si et seulement si le point \\(x_o\\) est une singularité quadratique non-dégénérée (1.2) de \\(X\\cdot H\\). En particulier, le sous-ensemble de \\(\\mathbb P(N)\\) formé des points \\((x,H)\\) tel que \\(x\\) soit une singularité quadratique non-dégénérée de \\(X\\cdot H\\) est ouvert.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Nous pouvons nous borner au cas \\(X\\ne\\mathbb P^r\\). Les propriétés\nprétendues équivalentes étant indépendantes du choix particulier des\ncoordonnées, on peut les expliciter à l’aide de coordonnées choisies\nd’une façon très particulière. Or, \\(X\\) étant une sous-variété lisse de \\(\\mathbb P^r\\)\nde dimension \\(n\\geq1\\), on peut choisir des coordonnées homogènes\n\\(X_o,\\ldots,X_r\\) dans \\(\\mathbb P^r\\) de telle façon que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.3.1.</strong> le point \\(x_o\\in\\mathbb P^r\\) soit \\((1,0,\\ldots,0)\\) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.3.2.</strong> posant \\(x_i=X_i/X_o\\) pour \\(i=1,\\ldots,r\\), de sorte que le\ncomplété \\(\\widehat{\\mathcal O}_{\\mathbb P^r,x_o}\\) s’identifie à \\(k[[x_1,\\ldots,x_r]]\\), l’idéal définissant\nla trace de \\(X\\) dans \\(\\operatorname{Spec}\\widehat{\\mathcal O}_{\\mathbb P^r,x_o}\\) est engendré par des éléments \\(g_i\\)\n\\((i=1,\\ldots,r-n)\\) dans \\(\\widehat{\\mathcal O}_{\\mathbb P^r,x_o}\\) qui, dans \\(\\widehat{\\mathcal O}_{\\mathbb P^r,x_o}\\), s’écrivent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\ng_i=x_{n+i}-h_i(x_1,\\ldots,x_n),\\qquad i=1,\\ldots,r-n,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où les \\(h_i(x_1,\\ldots,x_n)\\) sont des séries en \\(x_1,\\ldots,x_n\\) seulement qui se\ntrouvent dans le carré de l’idéal maximal de \\(k[[x_1,\\ldots,x_n]]\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.3.3.</strong> l’hyperplan \\(H\\) provient, via (3.1.1) de \\(g_{r-n}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de (3.3.2) que, posant \\(V=\\operatorname{Spec}(\\widehat{\\mathcal O}_{X,x_o})\\), il y a une trivialisation\n\\((I/I^2)|_V\\simeq\\mathcal O_V^{r-n}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.4}\n(\\lambda_1,\\ldots,\\lambda_{r-n})\\longmapsto\\sum_1^{r-n}\\lambda_i g_{n+i}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de ceci et de (3.3.3) qu’il existe un voisinage \\(W\\) de \\((x,H)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dans \\(\\mathbb P(N)|_V\\) tel qu’on ait \\(V\\times\\mathbb A^{r-n-1}\\simeq W\\), l’isomorphisme étant donné\npar</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.5}\n(v,(\\lambda_1,\\ldots,\\lambda_{r-n-1}))\\longmapsto\n\\left(v,\\left(g_{r-n}+\\sum_1^{r-n-1}\\lambda_i g_i\\right)\\in\\mathbb P(I/I^2)|_V\\right)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(où l’on pose \\(\\lambda_i=\\Lambda_i/\\Lambda_{n-r}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, le complété \\(\\widehat{\\mathcal O}_{\\mathbb P(N),(x,H)}\\) de l’anneau local de \\(\\mathbb P(N)\\)\nen \\((x,H)\\) s’identifie à \\(k[[x_1,\\ldots,x_n,\\lambda_1,\\ldots,\\lambda_{r-n-1}]]\\). Exprimons\nmaintenant \\(\\varphi\\) en termes de ces coordonnées, au niveau des complétés :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.6}\n\\begin{aligned}\n\\varphi(x,\\lambda)&amp;=\\varphi(x_1,\\ldots,x_n,\\lambda_1,\\ldots,\\lambda_{r-n-1})\\\\\n&amp;=\\text{l’hyperplan d’équation }\\sum_{i=0}^{n+r}\\varphi_i(x,\\lambda)T_i=0.\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme l’hyperplan image \\(\\sum\\varphi_iT_i\\) contient le point \\((x)\\), point qui\ns’écrit en coordonnées homogènes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.7}\n(x)=(1,x_1,\\ldots,x_n,h_1(x),\\ldots,h_{r-n}(x)),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.8}\n\\varphi_o(x,\\lambda)=-\\sum_{i=1}^n x_i\\varphi_i(x,\\lambda)-\n\\sum_{i=1}^{r-n}h_i(x)\\varphi_{n+i}(x,\\lambda)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dans \\(\\widehat{\\mathcal O}_{\\mathbb P(N),(x_o,H)}\\) et, d’après (3.1.1), pour \\(i\\geq1\\), posant\n\\(D_i=\\frac{\\partial}{\\partial x_i}\\in\\operatorname{Der}_k(\\widehat{\\mathcal O}_{\\mathbb P^r,x_o},\\widehat{\\mathcal O}_{\\mathbb P^r,x_o})\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.9}\n\\varphi_i(x,\\lambda)=D_i\\left(g_{r-n}+\\sum_{i=1}^{r-n-1}\\lambda_i g_i\\right)(x)\n\\quad\\text{dans }\\widehat{\\mathcal O}_{\\mathbb P(N),(x_o,H)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Rappelant \\(g_i=x_{n+i}-h_i(x_1,\\ldots,x_n)\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.10}\n\\varphi_i(x,\\lambda)=-\\frac{\\partial}{\\partial x_i}\n\\left(h_{r-n}+\\sum_{i=1}^{r-n-1}\\lambda_i h_i\\right)\n\\quad\\text{pour }1\\leq i\\leq n,\n\\]\n\n\\[\n\\tag{3.3.11}\n\\varphi_i(x,\\lambda)=\\lambda_i\\quad\\text{pour }1\\leq i\\leq n,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.12}\n\\varphi_r(x,\\lambda)=1.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(m\\) l’idéal maximal de \\(\\widehat{\\mathcal O}_{\\mathbb P(N),(x_o,H)}\\). Compte tenu de\nce que \\(h_i\\equiv0\\bmod m^2\\) pour \\(i=1,\\ldots,r-n\\), on trouve</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.13}\n\\varphi_o(x,\\lambda)\\equiv0\\bmod m^2\n\\]\n\n\\[\n\\tag{3.3.14}\n\\varphi_i(x,\\lambda)\\equiv-\\frac{\\partial h_{r-n}}{\\partial x_i}\\bmod m^2\n\\quad\\text{pour }i=1,\\ldots,n.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mettant ensemble les formules (3.3.11) - (3.3.14), on trouve que la\nmatrice jacobienne de \\(\\varphi\\) en le point \\((x_o,H)\\) est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.3.15}\n\\left(\n\\begin{array}{c|c}\n0&amp;0\\\\ \\hline\n-\\left(\\dfrac{\\partial^2h_{r-n}}{\\partial x_i\\partial x_j}(0)\\right)_{1\\leq i,j\\leq n}&amp;0\\\\ \\hline\n0&amp;I_{r-n-1}\\\\ \\hline\n0&amp;0\n\\end{array}\n\\right).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc \\(\\varphi\\) est net en \\((x_o,H)\\) si et seulement si la matrice hessienne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\left(\\frac{\\partial^2h_{r-n}}{\\partial x_i\\partial x_j}(0)\\right)_{1\\leq i,j\\leq n}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est inversible. D’autre part, (3.3.2) et (3.3.3) nous assurent que le\ncomplété de l’anneau local de \\(x_o\\) en \\(X\\cdot H\\) est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.3.16}\nk[[x_1,\\ldots,x_n]]/(h_{r-n}(x_1,\\ldots,x_n))\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on conclut grâce à la définition (1.2).</p>"
+    },
+    {
+     "id": "17.3.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.4\"><strong><u>Exemple 3.4.</u></strong> Supposons que \\(X\\) soit une hypersurface dans \\(\\mathbb P^r\\), définie\npar une équation homogène \\(F(X_o,\\ldots,X_r)=0\\). Alors \\(\\mathbb P(N)=X\\), et\n\\(\\varphi:X\\longrightarrow\\check{\\mathbb P}^{\\,r}\\) s’exprime, en coordonnées homogènes, par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.4.1}\n\\varphi(X_o,\\ldots,X_r)=\\left(\\frac{\\partial F}{\\partial X_o},\\ldots,\n\\frac{\\partial F}{\\partial X_r}\\right).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C’est le « <u>morphisme de GAUSS</u> ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donnons un exemple où \\(\\varphi\\) est partout ramifié (i.e. non net).\nPour ceci, soit \\(p\\) la caractéristique de \\(k\\), \\(r\\) un entier \\(\\geq1\\), et\nprenons l’hypersurface \\(X\\) d’équation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.4.2}\n\\sum_{i=0}^r X_i^{p^r+1}=0,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour laquelle on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.4.3}\n\\varphi(X_o,\\ldots,X_r)=(X_o^{p^r},\\ldots,X_r^{p^r}),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que \\(\\check X\\) est réduit à un point si \\(p=0\\), et \\(\\check X\\simeq X\\), avec \\(\\varphi\\)\nle morphisme de Frobenius si \\(p&gt;0\\). On observera qu’il résulte de\n3.3 (ou de 3.5.0 plus bas) que si \\(p&gt;2\\), le plongement envisagé n’est\npas un plongement de Lefschetz.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"text-align:center\">Reprenons le cas général.</p>"
+    },
+    {
+     "id": "17.3.5",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 3.5.",
+     "html": "<div class=\"thm proposition\" id=\"17.3.5\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 3.5.</u></span></div>\n<div class=\"thm-body\"><p><u>Supposons que le morphisme</u> \\(\\varphi:\\mathbb P(N)\\longrightarrow\\check{\\mathbb P}^{\\,r}\\) <u>soit\ngénériquement net</u> (i.e. ne soit pas partout ramifié). <u>Alors</u> \\(\\varphi\\) <u>induit\nun morphisme birationnel de</u> \\(\\mathbb P(N)\\) <u>sur</u> \\(\\check X\\). <u>Plus précisément, les trois\nouverts suivants de</u> \\(\\check X\\) <u>sont identiques</u> :</p>\n\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">a)</span> <u>le plus grand ouvert de lissité de</u> \\(\\check X\\),</li>\n<li><span class=\"item-label\">b)</span> <u>le plus grand ouvert</u> \\(V\\) <u>de</u> \\(\\check X\\) <u>tel que</u> \\(\\varphi:\\mathbb P(N)\\longrightarrow\\check X\\) <u>induise\nun isomorphisme</u> \\(\\varphi^{-1}(V)\\overset\\sim\\longrightarrow V\\),</li>\n<li><span class=\"item-label\">c)</span> <u>l’ouvert (cf. 3.2) de</u> \\(\\check X\\) <u>formé des hyperplans</u> \\(H\\) <u>tels que</u> \\(X\\cdot H\\)\n<u>ait un et un seul point singulier, ce dernier étant quadratique non-dégénéré</u>.</li>\n</ol></div>\n</div>"
+    },
+    {
+     "id": "17.3.5.0",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollaire 3.5.0.",
+     "html": "<div class=\"thm corollary\" id=\"17.3.5.0\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Corollaire 3.5.0.</u></span></div>\n<div class=\"thm-body\"><p><u>Supposons</u> \\(\\operatorname{car} k\\ne2\\) <u>ou</u> \\(\\dim X\\) <u>paire. Le plongement\ndonné est un plongement de Lefschetz si et seulement si l’une des deux\nconditions est satisfaite</u> : a) \\(\\varphi\\) <u>est génériquement net, ou</u> b) \\(\\dim\\check X\\leq r-2\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, la suffisance résulte du critère (3.2.4), car, par\n3.5, on a ou \\(F=\\operatorname{lieu\\ sing}(\\check X)\\), donc \\(\\dim F&lt;\\dim(\\check X)=r-1\\), ou\n\\(\\dim(\\check X)\\leq r-2\\). Pour la nécessité, on observe que si \\(D\\) est un pinceau\nde Lefschetz et si \\(\\dim\\check X=r-1\\), il existe \\(x\\in D\\cap\\check X\\), et par 3.3\net la définition (2.2 c)), \\(\\varphi\\) est net en les points de \\(\\varphi^{-1}(x)\\), donc\ngénériquement net, cqfd.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration de 3.5</u>  L’hypothèse implique \\(\\dim\\check X=\\dim\\mathbb P(N)(=r-1)\\),\nd’où résulte (3.2) que \\(\\check X\\) est une hypersurface irréductible dans \\(\\check{\\mathbb P}^{\\,r}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(R\\) le lieu de ramification de \\(\\varphi\\), qui est par hypothèse un fermé\nde \\(\\mathbb P(N)\\) de dimension au plus \\(r-2\\), de sorte que \\(\\varphi(R)\\) est un fermé\nde \\(\\check X\\) de dimension au plus \\(r-2\\). Désignons par \\(V'\\) l’ouvert dense\nde \\(\\check X\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.5.1}\nV'=(\\check X-\\varphi(R))\\cap(\\check X-\\operatorname{lieu\\ sing}(\\check X)),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par \\(F\\) son complémentaire dans \\(\\check X\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.5.1.1}\nF=\\varphi(R)\\cup\\operatorname{lieu\\ sing}(\\check X).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons prouver d’abord que \\(\\varphi\\) induit un isomorphisme de \\(\\varphi^{-1}(V')\\)\navec \\(V'\\) par la méthode naïve de construire un inverse \\(\\psi:V'\\longrightarrow\\varphi^{-1}(V')\\).\nEn effet, considérant \\(\\varphi^{-1}(V')\\) comme plongé dans \\(X\\times V'\\) via (3.1.1),\nde sorte que \\(\\varphi\\) s’identifie à \\(\\operatorname{pr}_2\\), on voit que la construction de \\(\\psi\\)\néquivaut à la construction d’un morphisme \\(\\psi_1:V'\\longrightarrow\\mathbb P^r\\) tel que le\ndiagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.5.2}\n\\begin{xy}\n\\xymatrix{\n\\mathbb P(N)\\supset\\varphi^{-1}(V') \\ar[r]^{\\varphi}\\ar[d] &amp; V'\\ar[d]^{\\psi_1}\\\\\nX \\ar@{^{(}-&gt;}[r] &amp; \\mathbb P^r\n}\n\\end{xy}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit commutatif (on pose \\(\\psi(v)=(\\psi_1(v),v)\\in\\mathbb P^r\\times V'\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour ceci, remarquons que pour une hypersurface quelconque dans un espace\nprojectif, le morphisme de GAUSS (3.4.1) est « défini » en tout point\nlisse. Appliquons ceci à l’hypersurface \\(\\check X\\) dans \\(\\check{\\mathbb P}^{\\,r}\\) ; comme \\(V'\\) est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>contenu dans \\(V\\), l’ouvert de lissité de \\(\\check X\\), le morphisme de GAUSS\nnous donne un morphisme, noté \\(\\psi_1\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.5.3}\n\\psi_1:V'\\longrightarrow\\check{\\check{\\mathbb P}}^{\\,r}\\simeq\\mathbb P^r.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à vérifier la commutativité du diagramme (3.5.2). Soit alors\n\\((x_o,H_o)\\) un point fermé de \\(\\varphi^{-1}(V')\\) ; il faut vérifier que \\(x_o\\), considéré\ncomme étant un hyperplan dans \\(\\check{\\mathbb P}^{\\,r}\\), est tangent à \\(\\check X\\) en \\(H_o\\), i.e. on\nva démontrer que pour \\((x_o,H_o)\\in\\varphi^{-1}(V')\\), \\(H_o\\) tangent à \\(X\\) en \\(x_o\\)\n\\(\\Rightarrow x_o\\) tangent à \\(\\check X\\) en \\(H_o\\). Comme \\(\\varphi\\) est net en \\((x_o,H_o)\\), et \\(\\check X\\)\nest lisse en \\(H_o=\\varphi(x_o,H_o)\\), \\(\\varphi\\) induit un isomorphisme des espaces\ntangents</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.5.4}\nT_{\\mathbb P(N)}((x_o,H_o))\\overset{\\varphi}{\\longrightarrow}T_{\\check X}(H_o),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que la première partie de la démonstration s’achève par le\nlemme suivant.</p>"
+    },
+    {
+     "id": "17.3.6",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 3.6 (EULER).",
+     "html": "<div class=\"thm lemma\" id=\"17.3.6\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Lemme 3.6 (EULER).</u></span></div>\n<div class=\"thm-body\"><p><u>Soit</u> \\((x_o,H_o)\\) <u>un point fermé de</u> \\(\\mathbb P(N)\\), <u>et\ndésignons par</u> \\(T_L\\) <u>le fibré tangent de l’hyperplan</u> \\(L\\) <u>dans</u> \\(\\check{\\mathbb P}^{\\,r}\\) <u>défini\npar</u> \\(x_o\\). <u>Alors dans</u> \\(T_{\\check{\\mathbb P}^{\\,r}}(H_o)\\), <u>on a</u></p>\n\n\\[\n\\varphi\\bigl(T_{\\mathbb P(N)}((x_o,H_o))\\bigr)\\subset T_L(H_o).\n\\]</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u>  Choisissons des coordonnées homogènes \\(X_o,\\ldots,X_r\\) dans\n\\(\\mathbb P^r\\), en termes desquelles \\(x_o\\) devient le point \\(A=(A_o,\\ldots,A_r)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un point de \\(T_X(x_o)\\) est un point de \\(\\mathbb P^r\\) à valeurs dans \\(k[\\epsilon]/(\\epsilon^2)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.1}\nA+\\epsilon B,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que pour toute section locale \\(H\\) de \\(I\\), on ait</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.2}\n\\sum_{i=0}^r B_i\\frac{\\partial H}{\\partial X_i}(A)=0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Choisissons de plus une section locale \\(H\\) de \\(I\\) qui donne lieu à \\(H_o\\)\npar (3.1.1). Par la trivialité locale de \\(\\mathbb P(N)\\) au-dessus de \\(X\\), un\npoint de \\(T_{\\mathbb P(N)}((x_o,H_o))\\) se représente par un point</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.3}\n(A+\\epsilon B,\\ H+\\epsilon F),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(F\\) est une section locale de \\(I\\), et où \\(A\\) et \\(B\\) sont comme\nci-dessus. L’image par \\(\\varphi\\) de (3.6.3) est l’hyperplan à coefficients\ndans \\(k[\\epsilon]/(\\epsilon^2)\\) d’équation (c.f. 3.1.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.4}\n\\sum_{i=0}^r\\frac{\\partial}{\\partial X_i}(H+\\epsilon F)(A+\\epsilon B)T_i,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que le lemme équivaut à la formule</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.5}\n\\sum_{i=0}^r A_i\\frac{\\partial}{\\partial X_i}(H+\\epsilon F)(A+\\epsilon B)=0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Compte tenu de ce que \\(\\epsilon^2=0\\), et la formule de Taylor, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.6}\n\\frac{\\partial}{\\partial X_i}(H+\\epsilon F)(A+\\epsilon B)\n=\\frac{\\partial H}{\\partial X_i}(A)+\\epsilon\\frac{\\partial F}{\\partial X_i}(A)\n+\\epsilon\\sum_{j=0}^r B_j\\frac{\\partial^2H}{\\partial X_j\\partial X_i}(A),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donc il suffit de vérifier les trois formules suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.7}\n\\sum_{i=0}^r A_i\\frac{\\partial H}{\\partial X_i}(A)=0,\n\\]\n\n\\[\n\\tag{3.6.8}\n\\sum_{i=0}^r A_i\\frac{\\partial F}{\\partial X_i}(A)=0,\n\\]\n\n\\[\n\\tag{3.6.9}\n\\sum_{i,j=0}^r A_iB_j\\frac{\\partial^2H}{\\partial X_i\\partial X_j}(A)=0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, \\(H\\) et \\(F\\) étant homogènes de degré zéro, la formule d’Euler donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.10}\n\\sum_i X_i\\frac{\\partial H}{\\partial X_i}=0,\n\\qquad\n\\sum_i X_i\\frac{\\partial F}{\\partial X_i}=0\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, \\(\\dfrac{\\partial H}{\\partial X_j}\\) étant homogène de degré \\(-1\\), cette formule donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\sum_i X_i\\frac{\\partial^2H}{\\partial X_i\\partial X_j}\n=-\\frac{\\partial H}{\\partial X_j},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (3.6.9) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.11}\n-\\sum_j B_j\\frac{\\partial H}{\\partial X_j}(A)=0,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui n’est autre que (3.6.2).<br>\nCeci démontre que \\(\\varphi\\) induit un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.12}\n\\varphi^{-1}(V')\\overset\\sim\\longrightarrow V'.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont l’inverse est \\(\\psi\\). Remarquons maintenant que le morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.13}\n\\begin{cases}\n\\psi:V'\\longrightarrow \\mathbb P^r\\times V'\\subset \\mathbb P^r\\times\\check X,\\\\\n\\psi(v)=(\\psi_1(v),v)\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>s’étend en un morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.14}\n\\begin{cases}\n\\widetilde\\psi:V\\longrightarrow \\mathbb P^r\\times V,\\\\\n\\widetilde\\psi(v)=(\\widetilde\\psi_1(v),v),\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où l’on désigne par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.15}\n\\widetilde\\psi_1:V\\longrightarrow\\mathbb P^r\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le morphisme de GAUSS, vu comme défini sur \\(V\\) tout entier.<br>\nOn vient de démontrer l’inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.16}\n\\psi(V')\\subset\\mathbb P(N)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui implique, \\(V'\\) étant dense dans \\(V\\), et \\(\\mathbb P(N)\\) étant fermé dans\n\\(\\mathbb P^r\\times\\check X\\), l’inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.17}\n\\widetilde\\psi(V)\\subset\\mathbb P(N).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est évident qu’on a même</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.18}\n\\widetilde\\psi(V)\\subset\\varphi^{-1}(V).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Encore par « continuité », les relations</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{cases}\n\\psi\\circ\\varphi=\\operatorname{id}_{\\varphi^{-1}(V')},\\\\\n\\varphi\\circ\\psi=\\operatorname{id}_{V'}\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>impliquent les relations</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\begin{cases}\n\\widetilde\\psi\\circ\\varphi=\\operatorname{id}_{\\varphi^{-1}(V)},\\\\\n\\varphi\\circ\\widetilde\\psi=\\operatorname{id}_V,\n\\end{cases}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui démontre que les ouverts 3.5 d) et 3.5 e) sont identiques.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons que les ouverts 3.5 a) et 3.5 c) sont identiques. On remarque\nd’abord que, d’après 3.3, l’ouvert 3.5 c) est le sous-ensemble \\(U\\) de \\(\\check X\\)\ndéfini par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.6.19}\nU=\\{x\\in\\check X\\mid \\varphi^{-1}(x)\\text{ contient exactement un point, et en ce point }\\varphi\\text{ est net.}\\}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or \\(\\varphi^{-1}(U)\\) est normal (étant lisse) et le morphisme induit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\varphi:\\varphi^{-1}(U)\\longrightarrow U\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est birationnel (on l’a déjà démontré), radiciel (par définition de \\(U\\))\net propre. Donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\varphi:\\varphi^{-1}(U)\\longrightarrow U\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est le <u>normalisé</u> de \\(U\\). En particulier, \\(U\\) est <u>géométriquement\nunibranche</u>. Comme \\(\\varphi:\\varphi^{-1}(U)\\longrightarrow U\\) est net, il s’en déduit\n(EGA IV 18.10.1) qu’il est <u>étale</u>. Par EGA IV 18.10.18, on conclut\nalors que c’est une immersion ouverte, donc un isomorphisme, donc que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(U\\) est lisse, i.e. qu’on a l’inclusion 3.5 c) \\(\\subset\\) 3.5 a). D’autre part,\n(3.6.19) rend évidente l’inclusion 3.5 b) \\(\\subset\\) 3.5 c), et on conclut, compte\ntenu de ce que 3.5 a) = 3.5 b).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous pouvons maintenant démontrer :</p>"
+    },
+    {
+     "id": "17.3.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.7\"><strong><u>3.7.</u></strong>   <u>Le théorème 2.5 est vrai dans le cas \\(\\operatorname{car.}k\\ne2\\), ainsi que\ndans le cas \\(X\\) de dimension paire.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Compte tenu de 3.5.0 et de 3.3, il suffit de vérifier :</p>"
+    },
+    {
+     "id": "17.3.7.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.3.7.1\"><strong>(3.7.1)</strong> Pour tout point fermé \\(x_o\\in X\\), et tout entier \\(d\\geq2\\),\nil existe une hypersurface \\(H\\) de degré \\(d\\) tangente à \\(X\\) en\n\\(x_o\\), telle que \\(x_o\\) soit une singularité quadratique ordinaire de \\(X.H\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, prenant convenablement des coordonnées homogènes \\(X_o,\\ldots,X_r\\), on\npeut supposer que \\(x_o\\) est le point \\((1,0,\\ldots,0)\\), et que les fonctions\n\\(X_i/X_o\\), \\(i=1,\\ldots,n\\), donnent des coordonnées locales sur \\(X\\) dans un\nvoisinage de \\(x_o\\). On prend pour \\(H\\) l’hypersurface d’équation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{3.7.1.1}H=X_o^{d-2}\\sum_{i=1}^nX_i^2\\qquad\\text{si }\\operatorname{car.}(k)\\ne2,\n\\]\n\n\\[\n\\tag{3.7.1.2}H=X_o^{d-2}\\sum_{i=1}^{n/2}X_iX_{n/2+i}\\qquad\\text{si }n\\text{ est pair},\n\\]\n\n\\[\n\\tag{3.7.1.3}H=X_o^{d-2}\\left(X_n^2+\\sum_{i=1}^{[n/2]}X_iX_{[n/2]+i}\\right)\\qquad\\text{si }n\\text{ est impair}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour l’énoncé 2.5.2, remarquons qu’ou bien \\(\\varphi\\) est génériquement net,\net 3.5.0 s’applique, ou bien \\(\\varphi\\) est partout ramifié, ce qui implique\n\\(\\dim X\\leq r-2\\), \\(k\\) étant de caractéristique nulle. Dans ce dernier cas,\nle critère (3.2.4) est trivialement vérifié.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-4",
+   "title": "4. Le cas général",
+   "blocks": [
+    {
+     "id": "17.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.4\">4. <u>Le cas général</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons esquisser une autre méthode de démonstration de\n2.5 valable en toute caractéristique, en admettant l’énoncé suivant,\nvoisin de 3.1, et cas particulier de XV 1.1.4.</p>"
+    },
+    {
+     "id": "17.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.1\"><strong><u>(4.1)</u></strong>   <u>Le sous-ensemble de \\(\\mathbb P(N)\\) formé des points \\((x,H)\\) tels que\n\\(x\\) soit une singularité quadratique ordinaire de \\(X.H\\) est ouvert.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons que 4.1 résulte de 3.3, sauf si \\(\\operatorname{car}(k)=2\\) <u>et</u> \\(\\dim X\\) impaire.</p>"
+    },
+    {
+     "id": "17.4.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.1.1\"><strong>4.1.1.</strong> Désignons par \\(R_1\\) le fermé de \\(\\mathbb P(N)\\) complément de l’ouvert\n4.1, et par \\(F_1\\) son image \\(\\varphi(R_1)\\subset\\check X\\subset\\check{\\mathbb P}^{,r}\\).</p>"
+    },
+    {
+     "id": "17.4.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.1.2\"><strong><u>Lemme 4.1.2.</u></strong>   <u>Si l’ouvert 4.1 est non-vide, alors \\(\\operatorname{codim}_{\\check{\\mathbb P}^{,r}}(F_1)\\geq2\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Par hypothèse, \\(\\dim(R_1)&lt;\\dim\\mathbb P(N)=r-1\\), et\n\\(F_1=\\varphi(R_1)\\).</p>"
+    },
+    {
+     "id": "17.4.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.1.3\"><strong>4.1.3.</strong> Désignons par \\(F_2\\) la partie de \\(\\check X\\) formée des hyperplans qui\nsont tangents à \\(X\\) en au moins deux points. On remarque que \\(F_2\\) n’est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pas fermé, mais qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.1.4}\\text{l’adhérence de }F_2\\subset F_1\\cup F_2,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ceci à cause du fait que \\(F_1\\cup F_2=F\\) (cf. 3.2) est fermé. (L’inclusion\n4.1.4. « dit » qu’une <u>confluence</u> de deux singularités n’est pas\nquadratique ordinaire.) En tout cas la construction de 4.2.4. montrera\nque \\(F_2\\) est constructible. Pour démontrer 2.5.1 nous allons appliquer\nle critère 3.2.4. Pour ceci, il faudra savoir que \\(\\operatorname{codim}_{\\check{\\mathbb P}^{,r}}(F_1)\\geq2\\) et\nque \\(\\operatorname{codim}_{\\check{\\mathbb P}^{,r}}(F_2)\\geq2\\). D’autre part, 3.8.1 et 4.1.2 nous assurent que,\nremplaçant le plongement donné par son \\(d\\)-ième multiple, \\(d\\geq2\\), on\naura \\(\\operatorname{codim}_{\\check{\\mathbb P}^{,r}}(F_2)\\geq2\\). On conclut que 2.5.1 sera prouvé, une fois\nconnue la</p>"
+    },
+    {
+     "id": "17.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.2\"><strong><u>Proposition 4.2.</u></strong>   <u>Soit \\(X\\) une sous-variété lisse et irréductible de\n\\(\\mathbb P^r\\), de dimension \\(n\\geq1\\). Pour tout entier \\(d\\geq2\\), la partie\n\\(F_2\\) de \\(\\check{\\mathbb P}^{\\,N}=\\mathbb P^{\\binom{n+d}{d}-1}\\) formée des hypersurfaces de degré \\(d\\) dans \\(\\mathbb P^r\\)\nqui sont tangentes à \\(X\\) en au moins deux points est de codimension \\(\\geq2\\)\ndans \\(\\check{\\mathbb P}^{\\,N}\\).</u></p>"
+    },
+    {
+     "id": "17.4.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.2.1\"><strong>4.2.1.</strong> Commençons par le cas spécial \\(d=2\\) et \\(X\\) une sous-variété\nlinéaire de \\(\\mathbb P^r\\). Or, il suffira de trouver une droite dans \\(\\check{\\mathbb P}^{\\,N}\\)\nqui ne rencontre pas \\(F\\) (cf. 3.2.4). Choisissons des coordonnées\nhomogènes \\(X_o,\\ldots,X_r\\) dans \\(\\mathbb P^r\\) de telle façon que \\(X\\) soit défini par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(X_{n+1}=\\cdots=X_r=0\\), et des coordonnées homogènes \\((\\lambda,\\mu)\\) dans \\(\\mathbb P^1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(n\\) pair, \\(n=2k\\), on prend le pinceau de quadriques</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.2.2}H_{(\\lambda,\\mu)}=\\lambda X_o^2+(\\lambda X_k+\\mu X_o)X_{2k}\n+\\sum_{i=1}^{k-1}(\\lambda X_i+\\mu X_{i+1})X_{k+i}\\ ;\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour \\(n\\) impair, \\(n=2k+1\\), on prend le pinceau</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.2.3}H_{(\\lambda,\\mu)}=(\\lambda X_1+\\mu X_o)X_o\n+\\sum_{i=1}^{k}(\\lambda X_{2i}+\\mu X_{i})X_{2i+1}\\ .\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans les deux cas, on constate que \\(X\\mathbin{\\cdot}H_{(\\lambda,\\mu)}\\) est lisse pour\n\\((\\lambda,\\mu)\\ne(0,1)\\), et que \\(X\\mathbin{\\cdot}H_{(0,1)}\\) n’a qu’un point singulier, qui est\nmême quadratique ordinaire, et donc que le pinceau ne coupe pas \\(F\\).</p>"
+    },
+    {
+     "id": "17.4.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.2.4\"><strong>4.2.4.</strong> Désignons par \\(\\operatorname{Btg}^d(X)\\) la sous-variété de\n\\(\\check{\\mathbb P}^{\\,N}\\times(X\\times X-\\Delta(X\\times X))\\) formée des triples\n\\((H,x_1,x_2)\\) tels que \\(H\\) est une hypersurface de degré \\(d\\) dans \\(\\mathbb P^r\\)\nqui est tangente à \\(X\\) en \\(x_1\\) et en \\(x_2\\), et \\(x_1\\ne x_2\\). L’image de\n\\(\\operatorname{Btg}^d(X)\\) par \\(\\operatorname{pr}_1\\) est l’ensemble \\(F_2\\) de (4.2),\nde sorte qu’il suffira de démontrer</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.2.5}\\dim\\operatorname{Btg}^d(X)\\leq N-2\\quad\\text{si }d\\geq3,\\text{ ou si }d=2\\text{ et }X\\text{ n’est pas linéaire.}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour ceci, désignons par \\(\\operatorname{Lin}(X\\times X)\\) la sous-variété de\n\\(X\\times X-\\Delta(X\\times X)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.2.6}\\begin{aligned}\n\\operatorname{Lin}(X\\times X)\n&amp;=\\{(x_1,x_2)\\in X\\times X\\mid x_1\\ne x_2,\\ \\text{et la droite engendrée par }x_1,x_2\\\\\n&amp;\\hspace{8em}\\text{est tangente à }X\\text{ en }x_1\\}\\\\\n&amp;=\\{(x_1,x_2)\\in X\\times X\\mid x_1\\ne x_2\\text{ et }x_2\\in X\\cap\\operatorname{Tg}_X(x_1)\\}.\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a évidemment :</p>"
+    },
+    {
+     "id": "17.4.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.2.7\"><strong><u>4.2.7.</u></strong>   <u>Si \\(X\\) n’est pas une sous-variété linéaire de \\(\\mathbb P^r\\), alors</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\dim\\operatorname{Lin}(X\\times X)&lt;2\\dim X.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Donc pour (4.2.5) il suffira de démontrer que les fibres du morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.2.8}\\operatorname{Btg}^d(X)\\xrightarrow{\\operatorname{pr}_{2,3}}X\\times X-\\Delta(X\\times X),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>considérées comme des sous-variétés de \\(\\check{\\mathbb P}^{\\,N}\\), sont</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{4.2.9}\\left\\{\n\\begin{array}{ll}\n\\text{de codimension }\\geq2\\dim(X)+1&amp;\\text{au-dessus de }\\operatorname{Lin}(X\\times X),\\\\\n\\text{de codimension }\\geq2\\dim(X)+2&amp;\\text{au-dessus de }X\\times X-\\Delta(X\\times X)-\\operatorname{Lin}(X\\times X).\n\\end{array}\\right.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L’énoncé (4.2.9) est une conséquence du lemme suivant, en prenant pour\n\\(L_i\\) l’espace tangent à \\(X\\) en \\(x_i\\), \\(i=1,2\\).</p>"
+    },
+    {
+     "id": "17.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.4.3\"><strong><u>Proposition 4.3.</u></strong>   <u>Soient \\(x_1\\) et \\(x_2\\) deux points distincts fermés de\n\\(\\mathbb P^r\\), et \\(L_1\\) et \\(L_2\\) deux sous-espaces linéaires de \\(\\mathbb P^r\\) tels que\n\\(x_1\\in L_1\\) et \\(x_2\\in L_2\\). Dans l’espace \\(\\check{\\mathbb P}^{\\,N}=\\check{\\mathbb P}_d\\) des hypersurfaces\nde degré \\(d\\), le sous-espace linéaire formé des hypersurfaces tangentes\nà \\(L_1\\) en \\(x_1\\) et à \\(L_2\\) en \\(x_2\\) est de codimension</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\left\\{\\begin{array}{ll}\n=\\dim L_1+\\dim L_2+2&amp;\\text{si }d\\geq3,\\text{ ou si }d=2\\text{ et }L_1\\cap L_2\\text{ ne contient pas}\\\\\n&amp;\\text{la droite }(x_1,x_2)\\text{ contenant }x_1,x_2,\\\\[2pt]\n=\\dim L_1+\\dim L_2+1&amp;\\text{si }d=2\\text{ et }L_1\\cap L_2\\text{ contient la droite }(x_1,x_2).\n\\end{array}\\right.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Pour \\(d\\geq3\\), il faut prouver que \\(\\dim L_1+\\dim L_2+2\\)\nconditions linéaires sont indépendantes, de sorte qu’il suffit de traiter\nle cas \\(L_1=L_2=\\mathbb P^r\\), i.e. de trouver « combien » d’hypersurfaces sont\nsingulières en \\(x_1\\) et en \\(x_2\\). Or, en termes de coordonnées homogènes\nchoisies de telle façon que \\(x_1=(1,0,\\ldots,0)\\) et \\(x_2=(0,1,0,\\ldots,0)\\),\nl’hypersurface d’équation \\(\\sum A_WX^W\\) est singulière en \\((1,0,\\ldots,0)\\) si et\nseulement si les coefficients des monômes \\(X_o^{d-1}X_i\\), \\(i=0,\\ldots,r\\), sont tous\nnuls, et elle est singulière en \\((0,1,0,\\ldots,0)\\) si et seulement si les\ncoefficients des monômes \\(X_1^{d-1}X_i\\), \\(i=0,\\ldots,r\\), sont tous nuls. Pour\n\\(d\\geq3\\), les monômes \\(X_o^{d-1}X_i\\), \\(i=0,\\ldots,r\\) et \\(X_1^{d-1}X_i\\), \\(i=0,\\ldots,r\\) sont tous\ndistincts, ce qui donne l’énoncé voulu pour \\(d\\geq3\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(d=2\\), le même calcul donne l’inégalité</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\operatorname{codim}\\geq\\dim L_1+\\dim L_2+1,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(car le monôme \\(X_oX_1\\) est compté deux fois).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Vérifions que si \\(L_1\\cap L_2\\) ne contient pas la droite \\((x_1,x_2)\\), alors les\nconditions de tangentialité sont indépendantes. On se ramène au cas\n\\(L_1=\\mathbb P^r\\), \\(L_2\\) un hyperplan dans \\(\\mathbb P^r\\) qui ne contient pas la droite\n\\((x_1,x_2)\\). On choisit des coordonnées homogènes \\(X_o,\\ldots,X_r\\) de telle façon\nque \\(x_1=(1,0,\\ldots,0)\\), \\(x_2=(0,1,0,\\ldots,0)\\) et \\(L_2\\) soit l’hyperplan\n\\(X_o=0\\). Or, une quadrique \\(\\sum_{i\\leq j}A_{ij}X_iX_j\\) est singulière en \\((1,0,\\ldots,0)\\)\nsi et seulement si \\(A_{oj}=0\\) pour \\(j=0,\\ldots,r\\), et tangente à</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(X_o=0\\) en \\((0,1,\\ldots,0)\\) si et seulement si \\(A_{1j}=0\\) pour \\(j=1,\\ldots,r\\),\nce qui fait ensemble \\(2r+1=\\dim L_1+\\dim L_2+2\\) conditions indépendantes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour le cas où \\(L_1\\cap L_2\\) contient la droite \\((x_1,x_2)\\), on se ramène au\ncas \\(L_1=L_2=\\) la droite \\((x_1,x_2)\\). En termes de coordonnées homogènes\ndans lesquelles \\(x_1=(1,0,\\ldots,0)\\), \\(x_2=(0,1,0,\\ldots,0)\\), la quadrique\n\\(\\sum_{i\\leq j}A_{ij}X_iX_j\\) passe par \\((1,0,\\ldots,0)\\) et y est tangente à \\(L_1\\) si et seulement\nsi \\(A_{oo}=A_{o1}=0\\) ; elle passe par \\((0,1,0,\\ldots,0)\\) et y est tangente\nà \\(L_2\\) si et seulement si \\(A_{11}=A_{o1}=0\\), ce qui ne fait ensemble\nque \\(3=\\dim L_1+\\dim L_2+1\\) conditions.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-5",
+   "title": "5. Le degré de la variété duale par voie « élémentaire »",
+   "blocks": [
+    {
+     "id": "17.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.5\">5. <u>Le degré de la variété duale par voie « élémentaire »</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"text-align:center\">(Cf. XVIII 3.2. pour une autre méthode dans le cas où \\(\\dim X\\)<br>\nest pair ou \\(\\operatorname{car}(k)\\ne2\\).)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous employons toujours les notations de 2.2, donc \\(X\\longrightarrow\\mathbb P^r\\) est une\nsous-variété lisse irréductible de dimension \\(n\\).</p>"
+    },
+    {
+     "id": "17.5.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.1\"><strong>5.1.</strong> Commençons par considérer le morphisme (3.1.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.0}\\nu:\\mathbb P(N)\\longrightarrow X\\times\\check{\\mathbb P}^{\\,r}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’un point de vue plus « fonctoriel ». (Je tiens à remercier S. Kleiman\npour m’avoir signalé la formulation qui suit.) On a une suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de faisceaux cohérents sur \\(X\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.1}0\\longrightarrow\\check N\\longrightarrow\\Omega^1_{\\mathbb P/k}|X\\longrightarrow\\Omega^1_X\\longrightarrow0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part, « écrivant les formes différentielles sur \\(\\mathbb P^r\\) en coordonnées\nhomogènes », on trouve une suite exacte de faisceaux sur \\(\\mathbb P^r\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.2}0\\longrightarrow\\Omega^1_{\\mathbb P^r/k}\\longrightarrow(\\mathcal O_{\\mathbb P}(-1))^{r+1}\\longrightarrow\\mathcal O_{\\mathbb P}\\longrightarrow0\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui, restreinte à \\(X\\), donne alors une suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.3}0\\longrightarrow\\Omega^1_{\\mathbb P^r/k}|X\\longrightarrow(\\mathcal O_X(-1))^{r+1}\\longrightarrow\\mathcal O_{\\mathbb P}\\longrightarrow0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mettant ensemble 5.1.1 et 5.1.3, on trouve une inclusion</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.4}\\check N\\lhook\\joinrel\\longrightarrow(\\mathcal O_X(-1))^{r+1},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui donne, par transposition, une surjection,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.5}\\mathcal O_X(1)^{r+1}\\longrightarrow N\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où une immersion fermée</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.1.6}\\alpha:\\mathbb P(N)\\longrightarrow\\mathbb P(\\mathcal O_X(1)^{r+1})\\simeq X\\times\\check{\\mathbb P}^{\\,r}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui n’est autre que (5.1.0).</p>"
+    },
+    {
+     "id": "17.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"17.5.2\">5.2.   <u>L’idée du calcul.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous supposons à partir de maintenant que \\(\\check X=\\varphi(\\mathbb P(N))\\) est\nde dimension \\(r-1\\), donc que c’est une hypersurface dans \\(\\check{\\mathbb P}^{\\,r}\\). Le\ncalcul de son degré se fait naturellement en introduisant les classes\nde Chern [1].</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour toute variété projective et lisse \\(T\\), nous notons par\n\\(\\operatorname{CH}(T)\\) son anneau de Chow, qui est un anneau gradué (par la codimension\nd’un cycle). Étant donné un élément \\(z\\in\\operatorname{CH}(T)\\), nous notons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\int_T z\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le degré de sa composante de degré zéro (qui est un 0-cycle). La classe\ndans \\(\\operatorname{CH}^1(T)\\) d’un faisceau inversible \\(L\\) sur \\(T\\) sera notée également\n\\(L\\) quand aucun confusion n’est à craindre (par exemple, quand elle se\ntrouve sous le signe d’intégration \\(\\int_T\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci posé, notant par \\(L\\) la classe dans \\(\\operatorname{CH}(\\check{\\mathbb P}^{\\,r})\\) d’une droite, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.1}\\deg(\\check X)=\\int_{\\check{\\mathbb P}^{\\,r}}L\\cdot\\check X.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, \\(\\check X\\) est « ensemblistement » l’image de \\(\\mathbb P(N)\\) par \\(\\varphi\\) (3.1.2).\nMais, du point de vue de l’homomorphisme « image directe »</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\varphi_*:\\operatorname{CH}(\\mathbb P(N))\\longrightarrow\\operatorname{CH}(\\check{\\mathbb P}^{\\,r})\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\varphi_*(\\mathbb P(N))=\\deg(\\varphi)\\cdot\\check X,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que 5.2.1 se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.2}\\deg(\\check X)=\\frac1{\\deg(\\varphi)}\\int_{\\check{\\mathbb P}^{\\,r}}L\\cdot\\varphi_*(\\mathbb P(N));\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par abus de notations, dans \\(\\deg(\\varphi)\\), \\(\\varphi\\) désigne évidemment le\nmorphisme \\(\\mathbb P(N)\\longrightarrow\\check X\\) induit par (3.1.2), qui est un entier \\(\\geq0\\),\nnul si et seulement si \\(\\dim\\check X&lt;r-1\\) \\(= (\\dim\\mathbb P(N))\\).\nPar la formule de projection pour \\(\\varphi\\), ceci se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.3}\\deg(\\check X)=\\frac1{\\deg(\\varphi)}\\int_{\\mathbb P(N)}\\varphi^*(L).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(\\eta\\in\\operatorname{CH}(\\check{\\mathbb P}^{\\,r})\\) la classe d’un hyperplan, de sorte que\n\\(L=\\eta^{r-1}\\), et (5.2.3) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.4}\\deg(\\check X)=\\frac1{\\deg(\\varphi)}\\int_{\\mathbb P(N)}(\\varphi^*(\\eta))^{r-1}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Calculons maintenant la classe \\(\\varphi^*(\\eta)\\) en termes « concrets ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons par \\(\\xi\\) (resp. \\(\\tau\\)) le faisceau inversible canonique\n\\(\\mathcal O_{\\mathbb P(N)}(1)\\) sur \\(\\mathbb P(N)\\) (resp. \\(\\mathcal O_{\\mathbb P(\\mathcal O_X(1)^{r+1})}(1)\\) sur\n\\(\\mathbb P(\\mathcal O_X(1)^{r+1})\\)). Par fonctorialité, nous avons (cf. (5.1.6))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.5}\\alpha^*(\\tau)=\\xi.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part, moyennant l’identification\n\\(\\mathbb P(\\mathcal O_X(1)^{r+1})\\simeq X\\times\\check{\\mathbb P}^{\\,r}\\), on a évidemment, posant\n\\(H=\\mathcal O_X(1)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.6}\\tau=\\operatorname{pr}_1^*(H)\\otimes\\operatorname{pr}_2^*(\\eta).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(\\pi:\\mathbb P(N)\\longrightarrow X\\) le morphisme structural, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\left\\{\\begin{aligned}\n\\pi&amp;=\\operatorname{pr}_1\\circ\\alpha,\\\\\n\\varphi&amp;=\\operatorname{pr}_2\\circ\\alpha,\n\\end{aligned}\\right.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où, appliquant \\(\\alpha^*\\) aux deux membres de (5.2.6), on trouve, par (5.2.5)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.6'}\\xi=\\alpha^*(\\tau)=\\pi^*(H)\\otimes\\varphi^*(\\eta).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans \\(\\operatorname{CH}(\\mathbb P(N))\\), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.7}\\varphi^*(\\eta)=\\xi-\\pi^*(H),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et (5.2.3) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.2.8}\\deg(\\check X)=\\frac1{\\deg(\\varphi)}\\int_{\\mathbb P(N)}(\\xi-\\pi^*(H))^{r-1}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le deuxième membre de 5.2.8 « se calcule » grâce au lemme suivant\n(cf. 5.3.3) :</p>"
+    },
+    {
+     "id": "17.5.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.3\"><strong><u>Lemme 5.3.</u></strong>   <u>Soient \\(X\\) une variété quasi-projective, lisse et connexe\nde dimension \\(n\\), et \\(M\\) un faisceau localement libre de rang fini\n\\(a\\) sur \\(X\\). Notons par \\(\\xi\\) le faisceau inversible \\(\\mathcal O_{\\mathbb P(M)}(1)\\) sur \\(\\mathbb P(M)\\),</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>et par \\(\\pi:\\mathbb P(M)\\longrightarrow X\\) le morphisme structural. On sait que \\(\\operatorname{CH}(\\mathbb P(M))\\)\nest un \\(\\operatorname{CH}(X)\\)-module (via \\(\\pi^*\\)) qui est libre, de base \\(1,\\xi,\\ldots,\\xi^{a-1}\\),\noù \\(\\xi\\) satisfait à l’équation</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.1}\\xi^a-C_1\\xi^{a-1}+C_2\\xi^{a-2}-C_3\\xi^{a-3}\\cdots=0,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>les \\(C_i\\) dénotant les classes de Chern dans \\(\\operatorname{CH}(X)\\) de \\(M\\). On pose\n\\(C(M)=1+C_1+C_2+\\cdots\\), la classe de Chern totale de \\(M\\) ; c’est un élément\ninversible de \\(\\operatorname{CH}(X)\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Alors :</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>(i) On a la formule</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.2}\\pi_*\\left(\\frac{\\xi^{a-1}}{1+\\xi}\\right)=\\frac1{C(M)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>(ii) Soit \\(F(T)\\in\\operatorname{CH}(X)[T]\\) un polynôme à coefficients dans \\(\\operatorname{CH}(X)\\),\ntel que le coefficient de \\(T^i\\) soit un élément homogène de degré\n\\(n+a-1-i\\). Donc \\(F(\\xi)\\) est un élément de degré « maximum » \\(n+a-1=\\dim\\mathbb P(M)\\)\ndans \\(\\operatorname{CH}(\\mathbb P(M))\\). Ceci posé, on a</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.3}\\int_{\\mathbb P(M)}F(\\xi)=(-1)^{a-1}\\int_X\\frac{F(-1)}{C(M)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Commençons par déduire (5.3.3) de (5.3.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Écrivons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.4}\\frac1{C(M)}=\\sum_{j\\geq0}b_j,\\qquad b_0=1,\\quad b_j\\text{ de degré }j\\text{ dans }\\operatorname{CH}(X),\n\\qquad b_j=0\\text{ pour }j&lt;0,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (5.3.2) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.5}\\pi_*(\\xi^{a-1+j})=(-1)^j b_j\\quad\\text{pour }a-1+j\\geq0,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(compte tenu que \\(\\pi_*(\\xi^j)=0\\) si \\(j&lt;a-1\\) pour raison de degrés).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Déduisons-en (5.3.3). Par linéarité, il suffit de traiter le cas\n\\(F(T)=uT^{a-1+j}\\), \\(u\\) homogène de degré \\(n-j\\) dans \\(\\operatorname{CH}(X)\\). Par (5.3.5)\net la formule de projection pour \\(\\pi\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.6}\\int_{\\mathbb P(M)}F(\\xi)=\\int_{\\mathbb P(M)}\\pi^*(u)\\cdot\\xi^{a-1+j}\n=\\int_Xu\\cdot\\pi_*(\\xi^{a-1+j})=(-1)^j\\int_Xu\\cdot b_j.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D’autre part,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.7}(-1)^{a-1}\\int_X\\frac{F(-1)}{C(M)}\n=(-1)^{a-1}\\int_X\\frac{(-1)^{a-1+j}u}{C(M)}\n=(-1)^j\\int_X\\sum_i u\\cdot b_i,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et compte tenu de ce que \\(\\deg(u)=n-j\\), et \\(\\deg(b_i)=i\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\int_Xu\\cdot b_i=0\\quad\\text{si }i\\ne j,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que (5.3.7) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.8}(-1)^{a-1}\\int_X\\frac{F(-1)}{C(M)}=(-1)^j\\int_Xu\\cdot b_j,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d’où l’implication annoncée.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons maintenant (5.3.2), ou ce qui revient au même, (5.3.5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On sait que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\pi_*(\\xi^j)=0\\quad\\text{si }j&lt;a-1\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour une raison de degré, et que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\pi_*(\\xi^{a-1})=1_X\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour une raison géométrique ( \\(\\xi^{a-1}\\) rencontre chaque fibre « en un point »),\nde sorte que, par la formule de projection, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.3.9}\\pi_*\\left(\\sum_{j=0}^{a-1}\\pi^*(U_j)\\,\\xi^j\\right)=U_{a-1}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par (5.3.9), l’énoncé 5.3.5 est conséquence du lemme suivant dans\nlaquelle \\(\\xi\\) devient \\(T\\), et \\(C_i\\) devient \\(S_i\\), compte tenu de l’équation\n5.3.1.</p>"
+    },
+    {
+     "id": "17.5.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.4\"><strong><u>Lemme 5.4.</u></strong>   <u>Soit \\(a\\) un entier \\(&gt;0\\), et désignons par \\(A\\) l’anneau\n\\(\\mathbb Z[[X_1,\\ldots,X_a]]\\) des séries formelles en \\(a\\) indéterminées. Désignons\npar \\(B\\) la \\(A\\)-algèbre</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nB=A[[T]]\\big/\\left(\\prod_{i=1}^a(T-X_i)\\right),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>de sorte que \\(B\\) est un \\(A\\)-module libre, à base \\(1,T,\\ldots,T^{a-1}\\),</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.4.1}B=AT^{a-1}\\oplus AT^{a-2}\\oplus\\cdots\\oplus A.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Désignons par \\(S_i\\in A\\) la \\(i\\)-ième fonction symétrique</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nS_i=\\sum_{1\\leq\\alpha_1&lt;\\cdots&lt;\\alpha_i\\leq a}X_{\\alpha_1}\\cdots X_{\\alpha_i},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>de sorte que</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.4.2}\\sum_{i=0}^a(-1)^iS_iT^{a-i}=0\\quad\\text{dans }B.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>L’élément \\(1+S_1+S_2+\\cdots+S_a\\) est inversible dans \\(A\\), nous écrivons\nson inverse</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.4.3}\\frac1{\\sum_{i=0}^aS_i}=\\sum_{j\\geq0}b_j,\n\\qquad b_j\\text{ homogène de degré }j\\text{ dans }A,\\qquad b_0=1.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>D’autre part, pour tout entier \\(j\\geq0\\) on définit un élément \\(a_j\\in A\\)\nhomogène de degré \\(j\\) en écrivant, par 5.4.1</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.4.4}T^{a-1+j}=a_jT^{a-1}+{}?\\,T^{a-2}+{}?\\,T^{a-3}+\\cdots+{}?,\n\\quad\\text{les }?\\in A.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Ceci posé, on a pour tout \\(j\\geq0\\)</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.4.5}a_j=(-1)^jb_j.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Compte tenu de la définition (5.4.3) des \\(b_j\\), tout\nrevient à démontrer qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{5.4.6}a_0=1,\n\\qquad\\sum_{i=0}^a(-1)^iS_i a_{j-i}=0\\quad\\text{si }j&gt;0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, on a évidemment \\(a_0=1\\), et la deuxième relation (pour \\(j&gt;0\\)\ndonné) n’est autre que celle déduite, en prenant le coefficient de\n\\(T^{a-1}\\) (via 5.4.1), de la relation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.4.7}\\sum_{i=0}^a(-1)^iS_iT^{a-1+j-i}=0\\quad\\text{dans }B,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>relation obtenue en multipliant 5.4.2 par \\(T^{j-1}\\), cqfd.</p>"
+    },
+    {
+     "id": "17.5.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.5\"><strong><u>Corollaire 5.5.</u></strong>   <u>On a la formule</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.5.1}\\deg(\\check X)=\\frac{(-1)^n}{\\deg(\\varphi)}\n\\int_X\\frac{(1+H)^{r-1}}{C(N)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> On applique (5.3.3) (pour \\(M=N\\), le faisceau normal\nde \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\)) à (5.2.8).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Écrivons, pour une variété quasi-projective et lisse \\(S\\), sa classe\nde Chern totale (cf. 5.3)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.5.2}C(S)\\overset{\\mathrm{dfn}}{=}C(T_S)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(T_S\\) désigne le fibré tangent de \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La duale de la suite exacte (5.1.2) montre qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.5.3}C(\\mathbb P^r)=(1+H)^{r+1}\\quad\\text{dans }\\operatorname{CH}(\\mathbb P^r).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La duale de la suite exacte (5.1.1) montre qu’on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.5.4}C(N)\\,C(X)=C(\\mathbb P^r)|_X\\quad\\text{dans }\\operatorname{CH}(X).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mettant ensemble (5.5.3) et (5.5.4), (5.5.1) se récrit</p>"
+    },
+    {
+     "id": "17.5.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.6\"><strong><u>Corollaire 5.6.</u></strong>   <u>On a la formule</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.6.1}\\deg(\\check X)=\\frac{(-1)^r}{\\deg(\\varphi)}\n\\int_X\\frac{C(X)}{(1+H)^2}.\n\\]\n\n</p>"
+    },
+    {
+     "id": "17.5.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.7\"><strong>(5.7)</strong> Pour une variété \\(S\\) projective et lisse, on définit sa caractéristique\nd’Euler-Poincaré par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.7.1}\\chi(S)=\\int_S C(S).\n\\]\n\n</p>"
+    },
+    {
+     "id": "17.5.7.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.5.7.2\"><strong><u>Proposition 5.7.2.</u></strong>   <u>Désignons par \\(Y\\) une section hyperplane lisse de \\(X\\),\net par \\(\\Delta\\) une section lisse de \\(X\\) par un sous-espace linéaire de \\(\\mathbb P^r\\)\nde codimension deux. On a</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.7.3}\\deg(\\check X)=\\frac{(-1)^n}{\\deg(\\varphi)}\n\\bigl[\\chi(X)+\\chi(\\Delta)-2\\chi(Y)\\bigr].\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Notons \\(i:Y\\lhook\\joinrel\\longrightarrow X\\) l’inclusion. On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nN_{Y\\lhook\\joinrel\\longrightarrow X}=H|Y=i^*H,\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que la suite exacte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n0\\longrightarrow T_Y\\longrightarrow i^*T_X\\longrightarrow i^*H\\longrightarrow0\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.7.4}C(Y)=i^*\\left(\\frac{C(X)}{1+H}\\right).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\chi(Y)=\\int_Y i^*\\left(\\frac{C(X)}{1+H}\\right)\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et, en appliquant la formule de projection</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.7.5}\\chi(Y)=\\int_X i_*i^*\\left(\\frac{C(X)}{1+H}\\right)\n=\\int_X\\frac{H\\cdot C(X)}{1+H}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Itérant ce calcul, on trouve pour \\(\\Delta\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\tag{5.7.6}\\chi(\\Delta)=\\int_Y\\frac{H\\,C(Y)}{1+H}\n=\\int_Y i^*\\left(\\frac{H}{1+H}\\cdot\\frac{C(X)}{1+H}\\right)\n=\\int_X\\frac{H^2C(X)}{(1+H)^2},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\begin{aligned}\n\\chi(X)-2\\chi(Y)+\\chi(\\Delta)\n&amp;=\\int_X C(X)\\left[1-\\frac{2H}{1+H}+\\frac{H^2}{(1+H)^2}\\right]\\\\\n&amp;=\\int_X\\frac{C(X)}{(1+H)^2},\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui achève la démonstration, compte tenu de 5.6.1.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-6",
+   "title": "6. Le cas d’une base générale",
+   "blocks": [
+    {
+     "id": "17.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.6\">6. Le cas d’une base générale</h2>"
+    },
+    {
+     "id": "17.6.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.6.1\"><strong>6.1.</strong> Soient \\(S\\) un schéma et \\(\\bar s\\) un point géométrique de \\(S\\), défini\npar une clôture algébrique du corps résiduel \\(k(s)\\) pour \\(s\\in S\\).\nDésignons par \\(\\mathbb P^r\\) l’espace projectif à \\(r\\) dimensions sur \\(S\\), par\n\\(\\check{\\mathbb P}^{\\,r}\\) l’espace projectif dual et par\n\\(I\\subset\\mathbb P^r\\times_S\\check{\\mathbb P}^{\\,r}\\) la variété d’incidence. Soit\n\\(D\\subset\\check{\\mathbb P}^{\\,r}\\) une droite définie par un point à valeurs dans \\(S\\)\nd’une grassmannienne convenable, et \\(\\Delta\\) l’axe du pinceau d’hyperplans correspondant\n(cf. 2.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(X\\) un \\(S\\)-schéma propre et lisse, purement de dimension \\(n\\geq1\\), muni d’un\nplongement projectif \\(X\\lhook\\joinrel\\longrightarrow\\mathbb P^r\\). Soient\n\\(\\widetilde X=(X\\times_S D)\\cap I\\) le schéma sur \\(D\\) de fibres les sections hyperplanes\nde \\(X\\) paramétrées par \\(D\\), et \\(u\\) la projection de \\(\\widetilde X\\) sur \\(D\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons par un indice \\(\\bar s\\) le changement de base par \\(\\bar s\\longrightarrow S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que \\(\\Delta_{\\bar s}\\) soit transverse à \\(X_{\\bar s}\\). Alors, au-dessus d’un\nvoisinage \\(U\\) de \\(s\\) dans \\(S\\), \\(\\Delta\\) est transverse à \\(X\\). On suppose dans ce\nqui suit que \\(U=S\\). Le schéma \\(\\widetilde X\\) est alors lisse sur \\(S\\), et un voisinage\nde l’image réciproque de \\(\\Delta\\) dans \\(\\widetilde X\\) est lisse sur \\(D\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons de plus qu’une des sections hyperplanes de \\(X_{\\bar s}\\) appartenant au\npinceau \\(D_{\\bar s}\\) soit lisse. Alors, après que l’on ait remplacé \\(S\\) par un voisinage\nconvenable de \\(s\\), le sous-schéma \\(F\\) de \\(\\widetilde X\\) défini par l’idéal jacobien\n\\(J^{n-1}(\\widetilde X/D)\\) est fini et plat sur \\(S\\).</p>"
+    },
+    {
+     "id": "17.6.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.6.2\"><strong>6.2.</strong> Le <u>lieu exceptionnel</u> du pinceau \\(D\\) est le diviseur de Cartier relatif\n\\(E\\) de \\(D/S\\) défini par le \\(\\mathcal O_D\\)-Module \\(u_*\\mathcal O_F\\), fini et plat sur\n\\(S\\). Localement sur \\(D\\), si</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\n\\mathcal O_D^n\\xrightarrow{v}\\mathcal O_D^n\\longrightarrow u_*\\mathcal O_F\\longrightarrow0\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est une présentation de \\(u_*\\mathcal O_F\\), \\(E\\) a pour équation \\(\\det(v)=0\\).\nLa formation de \\(E\\) est compatible à tout changement de base.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le diviseur \\(E_{\\bar s}\\) de \\(D_{\\bar s}\\) s’écrit \\(\\sum n(P)\\cdot P\\), pour \\(n(P)\\)\nla somme des colongueurs de l’idéal jacobien \\(J^{n-1}(\\widetilde X/D)\\) en les points\ncritiques de \\(u\\) d’image \\(P\\).</p>"
+    },
+    {
+     "id": "17.6.3",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 6.3.",
+     "html": "<div class=\"thm proposition\" id=\"17.6.3\">\n<div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition 6.3.</u></span></div>\n<div class=\"thm-body\"><p><u>Si \\(D_{\\bar s}\\) est un pinceau de Lefschetz de sections hyperplanes de\n\\(X_{\\bar s}\\), et si \\(\\operatorname{car}k(s)\\ne2\\) ou que \\(n\\) est pair, il existe un\nvoisinage \\(U\\) de \\(s\\) dans \\(S\\) tel que</u></p>\n<p><u>\\(a\\) Pour tout point géométrique \\(\\bar t\\) de \\(U\\), \\(D_{\\bar t}\\) est un pinceau de\nLefschetz de sections hyperplanes de \\(X_{\\bar t}\\).</u></p>\n<p><u>\\(b\\) Au-dessus de \\(U\\), le lieu exceptionnel \\(E\\) est étale sur \\(S\\).</u></p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour prouver \\(a\\) et \\(b\\), il suffit de noter que, sous les hypothèses faites,\n\\(D_{\\bar s}\\) vérifie la condition c) de 2.2 si et seulement si le diviseur\n\\(E_{\\bar s}\\) est réduit. On pourrait, en invoquant 3.3, n’utiliser que la moitié la plus\nfacile (\\(\\Longrightarrow\\)) de cette équivalence.</p>"
+    },
+    {
+     "id": "17.6.3b",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"17.6.3b\"><strong>6.3.</strong> La proposition devient fausse dans le cas d’exception cité. Toutefois, si \\(S\\)\nest de caractéristique 2 et que \\(n\\) est impair, il existe un voisinage \\(U\\), de \\(S\\)\nau-dessus duquel \\(a\\) est vrai, et on peut définir un diviseur \\(E'\\) étale sur \\(U\\) tel\nque \\(E=2E'\\). Nous ne ferons pas usage de ce résultat.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "17-references",
+   "title": "Références",
+   "blocks": [
+    {
+     "id": "17.references",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"17.references\">Références</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] GROTHENDIECK, A.   La théorie des classes de Chern,<br>\n       Bull. Soc. Math. France, 86, 1958, 137–154.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par N. M. KATZ"
+}

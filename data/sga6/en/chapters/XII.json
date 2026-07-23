@@ -1,0 +1,1127 @@
+{
+ "chapter_id": "XII",
+ "title": "EXPOSÉ XII A THEOREM OF RELATIVE REPRESENTABILITY FOR THE PICARD FUNCTOR",
+ "number": "XII",
+ "pages": [
+  {
+   "id": "XII",
+   "title": "EXPOSÉ XII A THEOREM OF RELATIVE REPRESENTABILITY FOR THE PICARD FUNCTOR",
+   "blocks": [
+    {
+     "id": "XII",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XII\">EXPOSÉ XII<br>A THEOREM OF RELATIVE REPRESENTABILITY FOR<br>THE PICARD FUNCTOR<span class=\"author\">by M. Raynaud (written up by S. Kleiman)</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-avertissement",
+   "title": "Foreword",
+   "blocks": [
+    {
+     "id": "XII.avertissement",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.avertissement\"><u>Foreword</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The aim of the two exposés XII, XIII is to give proofs of the nine finiteness theorems for the Picard functor stated by A. Grothendieck in the comments (p. C 07-C 11) of his \"Fondements de la Géométrie Algébrique\" (cited FGA). In the first exposé, we prove the first finiteness theorem in the following form, more precise than the one stated in FGA: let \\(X\\) and \\(Y\\) be two schemes proper over an integral noetherian base \\(S\\), \\(f:X\\longrightarrow Y\\) a surjective \\(S\\)-morphism. Then there exists a non-empty open \\(V\\) of \\(S\\) above which the induced morphism \\(f^*:\\operatorname{Pic}_{Y/S}\\longrightarrow\\operatorname{Pic}_{X/S}\\) is representable by a quasi-affine morphism of finite presentation. In the second exposé, we prove the rest.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The two exposés differ notably in their proof technique. In the first, essential use is made of Oort dévissage, non-flat descent and the representation of unramified functors. In the second, one first reduces to the case where the schemes \\(X/S\\) involved are projective and flat with geometrically integral fibers, or even, if need be, normal or smooth ones, always by applying the first finiteness theorem to a suitable morphism \\(X'\\longrightarrow X\\). Then one uses the tool of \\(b\\)-sheaves forged by I. Castelnuovo and sharpened and used by T. Matsusaka, D. Mumford, Y. Nakai and S. Kleiman. This tool notably makes it possible to get rid of the Chow coordinates, the Frobenius morphism and the Lefschetz theorems used in Grothendieck's initial proofs.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The present exposé XII was presented orally, after Grothendieck, by M. Raynaud, whom the writer wishes to thank for having communicated his personal notes to him.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-1",
+   "title": "1. Statement of the main theorem and applications",
+   "blocks": [
+    {
+     "id": "XII.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.1\">1. <u>Statement of the main theorem and applications</u></h2>"
+    },
+    {
+     "id": "XII.1.1",
+     "type": "theorem",
+     "label": "1.1.",
+     "title": "Theorem",
+     "html": "<div class=\"thm theorem thm-plain\" id=\"XII.1.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Theorem</u></span> <span class=\"thm-num\">1.1.</span></div><div class=\"thm-body\"><p><u>Let \\(S\\) be a noetherian scheme, \\(X\\) and \\(Y\\) two proper \\(S\\)-schemes, \\(f:X\\longrightarrow Y\\) a morphism. We assume \\(S\\) integral and \\(f\\) surjective. Then there exists a non-empty open \\(V\\) of \\(S\\) such that the morphism</u></p>\n<div class=\"display-formula\">\\[f^*:\\operatorname{Pic}_{Y/S}|V\\longrightarrow\\operatorname{Pic}_{X/S}|V\\]</div>\n<p><u>between the Picard functors (localized for the f.p.p.f topology) is representable by a quasi-affine morphism of finite presentation.</u></p></div></div>"
+    },
+    {
+     "id": "XII.1.2",
+     "type": "corollary",
+     "label": "1.2.",
+     "title": "Corollary",
+     "html": "<div class=\"thm corollary thm-plain\" id=\"XII.1.2\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollary</u></span> <span class=\"thm-num\">1.2.</span></div><div class=\"thm-body\"><p><u>Let \\(X\\) be a proper scheme over a noetherian scheme \\(S\\). We assume \\(S\\) integral. Then there exists a non-empty open \\(V\\) of \\(S\\) such that the Picard functor \\(\\operatorname{Pic}_{X/S}|V\\) is representable by a \\(V\\)-group scheme which is a sum of quasi-projective opens of finite type, hence a fortiori separated over \\(V\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, let us recall the following fact (FGA N°232): let \\(S\\) be a scheme, \\(X\\) a projective \\(S\\)-scheme, of finite presentation and integral over \\(S\\) (that is to say flat with geometrically integral fibers). Then the Picard functor is represented by a \\(S\\)-group scheme \\(\\operatorname{Pic}_{X/S}\\), an increasing union of quasi-projective opens of finite presentation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The consideration of \"Hilbert polynomials\" allows us here to decompose \\(\\operatorname{Pic}_{X/S}\\) into a sum of open subschemes \\(\\operatorname{Pic}_{X/S}^q\\), \\(q\\in\\mathbb Q[t]\\). In the following exposé it is proved, under the additional hypothesis that \\(S\\) is noetherian, that the \\(\\operatorname{Pic}_{X/S}^q\\) are of finite type over \\(S\\). It is then known that 1.2 is true in the case where \\(X\\) is moreover projective and integral over \\(S\\); we will deduce the general case from it by using the</p>"
+    },
+    {
+     "id": "XII.1.3",
+     "type": "lemma",
+     "label": "1.3.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma thm-plain\" id=\"XII.1.3\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">1.3.</span></div><div class=\"thm-body\"><p><u>Let \\(X\\) be of finite type over \\(S\\) noetherian and integral. Then there exists a non-empty open subscheme \\(V\\) of \\(S\\), an integral scheme \\(S'\\) and a finite and</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "lemma",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm lemma thm-plain\"><div class=\"thm-body\"><p><u>flat morphism \\(S'\\longrightarrow V\\) such that every irreducible component \\(X_i'\\) of \\(X_{S'}\\), equipped with the induced reduced structure, is integral over \\(S'\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed there exists a finite extension \\(L\\) of the function field \\(k(S)\\) such that every irreducible component of \\((X_L)_{\\mathrm{réd}}\\) is geometrically integral (by EGA IV 4.6.8). Let \\(S_1\\) be an integral \\(S\\)-scheme such that \\(k(S_1)=L\\) and such that there exists a non-empty open subscheme \\(V_1\\) of \\(S\\) and a finite flat morphism \\(h:S_1\\longrightarrow V_1\\). There exists a non-empty open subscheme \\(S_2\\) of \\(S_1\\) such that every irreducible component of \\(X_{S_1}\\), equipped with the induced reduced structure, is integral over \\(S_1\\) (EGA IV 9.7.7). Take \\(V=V_1-h(S_1-S_2)\\) and \\(S'=h^{-1}(V)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us now prove 1.2. Let \\(h:S'\\longrightarrow V_1\\) and \\(X_i'\\) be as in 1.3. For every \\(i\\), let \\(f_i:Z_i\\longrightarrow X_i'\\) be a Chow presentation with \\(Z_i\\) integral and \\(f_i\\) birational. After possibly shrinking \\(V\\) and \\(S'\\), we may assume \\(Z_i\\) is integral over \\(S\\) (EGA IV 9.7.7). Let \\(f:Z=\\coprod_i Z_i\\longrightarrow X'=X_{S'}\\) be the canonical morphism. Then \\(\\operatorname{Pic}_{Z/S'}=\\prod_i\\operatorname{Pic}_{Z_i/S'}\\) is representable by a group scheme which is a sum of quasi-projective open subschemes of finite type.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, 1.1 says that after possibly shrinking \\(V\\) and \\(S'\\), the morphism \\(f^*:\\operatorname{Pic}_{X'/S'}\\longrightarrow\\operatorname{Pic}_{Z'/S'}\\) is representable by a quasi-affine morphism. Consequently \\(\\operatorname{Pic}_{X'/S'}\\) is representable by a group scheme, a sum of quasi-projective open subschemes of finite type; thanks to finite flat descent (SGA 1 VIII 7.6 and EGA II 6.6.1), so is \\(\\operatorname{Pic}_{X/S}|V\\).</p>"
+    },
+    {
+     "id": "XII.1.4",
+     "type": "lemma",
+     "label": "1.4.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma thm-plain\" id=\"XII.1.4\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">1.4.</span></div><div class=\"thm-body\"><p><u>Let \\(k\\) be a field, \\(P\\) and \\(Q\\) two \\(k\\)-group schemes locally of finite type and let \\(f:P\\longrightarrow Q\\) be a quasi-affine morphism. Then \\(f\\) is affine.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed let \\(R=\\operatorname{Ker}(f)\\); \\(R\\) is a \\(k\\)-group scheme of finite type which is quasi-affine; by virtue of (SGA 3 VI<sub>B</sub> 11.11), \\(R\\) is then affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Therefore \\(P\\longrightarrow P/R\\), which makes \\(P\\) a \\(R\\)-torsor over \\(P/R\\), is affine. Moreover it is known (SGA 3 1.4.2) that \\(P/R\\longrightarrow Q\\) is a closed immersion, hence affine, hence the same holds for the composite \\(P\\longrightarrow P/R\\longrightarrow Q\\).</p>"
+    },
+    {
+     "id": "XII.1.5",
+     "type": "corollary",
+     "label": "1.5.",
+     "title": "Corollary",
+     "html": "<div class=\"thm corollary thm-plain\" id=\"XII.1.5\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollary</u></span> <span class=\"thm-num\">1.5.</span></div><div class=\"thm-body\"><p><u>Let \\(k\\) be a field.</u></p>\n<p>a) <u>Let \\(X\\) be a proper \\(k\\)-scheme. Then \\(\\operatorname{Pic}_{X/k}\\) is representable</u> (J.P. Murre).</p>\n<p>b) <u>Let \\(f:X\\longrightarrow Y\\) be a surjective morphism between two proper \\(k\\)-schemes. Then the induced morphism \\(f^*:\\operatorname{Pic}_{Y/k}\\longrightarrow\\operatorname{Pic}_{X/k}\\) is affine.</u></p></div></div>"
+    },
+    {
+     "id": "XII.1.6",
+     "type": "corollary",
+     "label": "1.6.",
+     "title": "Corollary",
+     "html": "<div class=\"thm corollary thm-plain\" id=\"XII.1.6\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollary</u></span> <span class=\"thm-num\">1.6.</span></div><div class=\"thm-body\"><p><u>Let \\(S\\) be an integral noetherian scheme, \\(f:X\\longrightarrow Y\\) a surjective \\(S\\)-morphism between two proper \\(S\\)-schemes.</u></p>\n<p>a) <u>If \\(Y\\) is normal over \\(S\\) (that is, flat with geometrically normal fibers), then, after possibly shrinking \\(S\\), \\(f^*:\\operatorname{Pic}_{Y/S}\\longrightarrow\\operatorname{Pic}_{X/S}\\) is quasi-finite.</u></p>\n<p>b) <u>If \\(\\operatorname{Pic}_{Y/S}\\) is essentially proper over \\(S\\) (that is, if it satisfies the valuative criterion of properness, for example, if \\(Y\\) is smooth over \\(S\\)) then after possibly shrinking \\(S\\), \\(f^*:\\operatorname{Pic}_{Y/S}\\longrightarrow\\operatorname{Pic}_{X/S}\\) is finite (and in particular, affine).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed in a), for every \\(s\\in S\\), \\(R_s=\\operatorname{Ker}(f_s^*)\\) is an affine algebraic group; its identity component is an algebraic group proper over \\(k\\) (FGA 236, Théorème 2.1 (iii)); \\(R_s\\) is therefore finite. In b) \\(f^*\\) is both proper and quasi-affine, hence finite.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remark 1.7.</u> It is not known whether 1.1 remains valid when \"quasi-affine\" is replaced by affine, as 1.5 and 1.6 might suggest.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-2",
+   "title": "2. First reductions",
+   "blocks": [
+    {
+     "id": "XII.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.2\">2. <u>First reductions</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>2.1.</strong> Let us apply 1.3 to \\(X/S\\) and \\(Y/S\\); we find a non-empty open subscheme \\(V\\) of \\(S\\), an integral scheme \\(S'\\) and a finite flat morphism \\(S'\\longrightarrow V\\) such that every irreducible component \\(X_i'\\) of \\(X_{S'}\\) and \\(Y_j'\\) of \\(Y_{S'}\\), equipped with the induced reduced structure, is integral over \\(S'\\). By virtue of f.p.q.c. descent (EGA IV 2.7.1 (xiv) and SGA 1 VIII 7.9), we can replace \\(S\\) by \\(S'\\). It then follows from the following commutative diagram:</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{array}{ccc}\nX_{\\mathrm{réd}}&amp;\\xrightarrow{f_{\\mathrm{réd}}}&amp;Y_{\\mathrm{réd}}\\\\\n{\\scriptstyle i}\\downarrow&amp;&amp;\\downarrow{\\scriptstyle j}\\\\\nX&amp;\\xrightarrow{f}&amp;Y,\n\\end{array}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>implying the commutative diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{array}{ccc}\n\\operatorname{Pic}_{X_{\\mathrm{réd}}/S}&amp;\\longleftarrow&amp;\\operatorname{Pic}_{Y_{\\mathrm{réd}}/S}\\\\\n\\uparrow&amp;&amp;\\uparrow\\\\\n\\operatorname{Pic}_{X/S}&amp;\\longleftarrow&amp;\\operatorname{Pic}_{Y/S},\n\\end{array}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and from trivial sorites on morphisms of functors representable by quasi-affine morphisms (resulting from EGA II 5.1.10 (ii) \\(v\\)) that it suffices to prove the two following assertions:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>I. <u>Theorem 1.1 when \\(f\\) is an immersion (necessarily nilpotent).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>II. <u>Theorem 1.1 when \\(X\\) and \\(Y\\) are reduced and every irreducible component \\(X_i\\) of \\(X\\) and \\(Y_j\\) of \\(Y\\), equipped with the induced reduced structure, is integral over \\(S\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>2.2.</strong> Let us study assertion II. For every \\(i\\), let \\(j=\\varphi(i)\\) be an index such that \\(f(X_i)\\subset Y_j\\), let \\(\\Sigma_j=\\coprod_{\\varphi(i)=j}X_i\\). Then we have the two diagrams</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{array}{ccc}\nY&amp;\\longleftarrow&amp;\\coprod_jY_j\\\\\n\\uparrow&amp;&amp;\\uparrow\\\\\nX&amp;\\longleftarrow&amp;\\coprod_j\\Sigma_j,\n\\end{array}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\begin{array}{ccc}\n\\operatorname{Pic}_{Y/S}&amp;\\xrightarrow{\\textcircled{1}}&amp;\\operatorname{Pic}_{\\coprod_jY_j/S}=\\prod_j\\operatorname{Pic}_{Y_j/S}\\\\\n{\\scriptstyle\\textcircled{2}}\\downarrow&amp;&amp;\\downarrow{\\scriptstyle\\textcircled{4}}\\\\\n\\operatorname{Pic}_{X/S}&amp;\\xrightarrow{\\textcircled{3}}&amp;\\operatorname{Pic}_{\\coprod_j\\Sigma_j/S}=\\prod_j\\operatorname{Pic}_{\\Sigma_j/S}.\n\\end{array}\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>And to establish II, it suffices to see that, after possibly shrinking \\(S\\), \\(\\textcircled{1}\\), \\(\\textcircled{3}\\) and \\(\\textcircled{4}\\) are quasi-affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us consider \\(\\textcircled{4}\\) first. Replacing \\(Y\\) by \\(Y_j\\) and \\(X\\) by \\(\\Sigma_j\\), we reduce to the case \\(Y\\) integral over \\(S\\). Since \\(f\\) is surjective, there exists one of the \\(X_i\\), say \\(X_o\\), which dominates \\(Y\\), and we have the two sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nX_o\\lhook\\joinrel\\longrightarrow\\coprod_iX_i\\longrightarrow Y,\n\\qquad\n\\operatorname{Pic}_{X_o/S}\\longleftarrow\\operatorname{Pic}_{\\coprod_iX_i/S}\\longleftarrow\\operatorname{Pic}_{Y/S}.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If we therefore know that the \\(\\operatorname{Pic}_{X_o/S}\\), hence also \\(\\operatorname{Pic}_{\\coprod_iX_i/S}\\), are representable, and the composite morphism is quasi-affine, we conclude that \\(\\textcircled{4}\\) is quasi-affine. Taking into account the proof of 1.2 we are therefore reduced, for \\(\\textcircled{4}\\), to proving</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>II'. <u>Theorem 1.1 when \\(X\\) and \\(Y\\) are integral over \\(S\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For \\(\\textcircled{1}\\) and \\(\\textcircled{3}\\), we must treat the case of a morphism \\(\\coprod X_i\\longrightarrow X\\) where \\(X\\) is reduced, the \\(X_i\\) are the irreducible components of \\(X\\) and are integral over \\(S\\). Now we may assume \\(X\\) has connected fibers. Indeed, let \\(\\eta\\) be the geometric point of \\(S\\). Then \\(X_\\eta\\) has as irreducible components the \\((X_i)_\\eta\\) and, after possibly shrinking \\(S\\), we may assume that \\(X_i\\cap X_j=\\varnothing\\) if and only if</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((X_i)_\\eta\\cap(X_j)_\\eta=\\varnothing\\). Let \\(Y_k=\\coprod_{i\\in I(k)}X_i\\) be the connected components of \\(X\\); then \\(f\\) decomposes, \\(f=\\coprod_k f_k:\\coprod_k(\\coprod_{i\\in I(k)}X_i)\\longrightarrow\\coprod_kY_k\\), and the assertion follows.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, an immediate induction reduces us to the case of a morphism \\(X_1\\coprod X_2\\longrightarrow X\\). \\(\\textcircled{1}\\) and \\(\\textcircled{3}\\) then follow, after possibly shrinking \\(S\\) by (EGA III 7.8.6), from the</p>"
+    },
+    {
+     "id": "XII.2.3",
+     "type": "proposition",
+     "label": "2.3.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"XII.2.3\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition</u></span> <span class=\"thm-num\">2.3.</span></div><div class=\"thm-body\"><p><u>Let \\(S\\) be a scheme, \\(g:Y\\longrightarrow S\\) a proper morphism and \\(Y_1,Y_2\\) two closed subschemes defined by the ideals \\(I_1,I_2\\). We assume that</u></p>\n<p>a) <u>\\(Y,Y_1,Y_2,Y_1\\cap Y_2\\) are faithfully flat and of finite presentation over \\(S\\).</u></p>\n<p>b) <u>\\(g_*\\mathcal O_Y=\\mathcal O_S\\) and \\((g_i)_*\\mathcal O_{Y_i}=\\mathcal O_S\\) universally (where \\(g_i=g|Y_i\\), \\(i=1,2\\)).</u></p>\n<p>c) <u>\\(I_1\\cap I_2=0\\).</u></p>\n<p><u>Then \\(\\operatorname{Pic}_{Y/S}\\longrightarrow\\operatorname{Pic}_{(Y_1\\coprod Y_2)/S}\\) is representable by an affine morphism of finite presentation.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed let us first note that the hypotheses are stable under any base change. For \\(c\\), this follows from the two exact sequences:</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n0\\longrightarrow I_1+I_2\\longrightarrow\\mathcal O_Y\\longrightarrow\\mathcal O_{Y_1\\cap Y_2}\\longrightarrow0\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n0\\longrightarrow I_1\\cap I_2\\longrightarrow I_1\\oplus I_2\\longrightarrow I_1+I_2\\longrightarrow0\\ ;\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the first shows that \\(I_1+I_2\\) is flat over \\(S\\); then the second that \\(I_1\\cap I_2\\) is stable under base change.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The assertion is local for the f.p.p.f. topology. By making the base change \\(Y_1\\cap Y_2\\longrightarrow S\\), we may therefore assume that \\((Y_1\\cap Y_2)/S\\) possesses a section \\(\\alpha\\), which defines sections \\(\\alpha_i\\) of \\(Y_i\\) and \\(\\beta\\) of \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>After a suitable base change, we are reduced to seeing that every point \\(\\mu:S\\longrightarrow\\operatorname{Pic}_{(Y_1\\coprod Y_2)/S}\\) has as inverse image a subfunctor of</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\operatorname{Pic}_{Y/S}\\) which is representable by an affine scheme over \\(S\\). Now \\(\\mu\\) is defined by an invertible sheaf \\(L_i\\) on \\(Y_i\\) equipped with a rigidification \\(u_i:\\alpha_i^*L_i\\xrightarrow{\\sim}\\mathcal O_S\\) for \\(i=1,2\\). Similarly, a point \\(\\lambda:S\\longrightarrow\\operatorname{Pic}_{Y/S}\\) corresponds to an invertible sheaf \\(L\\) on \\(Y\\) equipped with a rigidification \\(u:\\alpha^*L\\xrightarrow{\\sim}\\mathcal O_S\\). The image of \\(\\lambda\\) in \\(\\operatorname{Pic}_{(Y_1\\coprod Y_2)/S}\\) is \\(\\mu\\) if and only if there exists an isomorphism of rigidified sheaves \\(f_i^*(L)\\xrightarrow{\\sim}L_i\\) where \\(f_i:Y_i\\lhook\\joinrel\\longrightarrow Y\\) is the inclusion for \\(i=1,2\\). Let us remark that these isomorphisms define an isomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\varphi:L_1|Y_1\\cap Y_2\\xrightarrow{\\sim}L_2|Y_1\\cap Y_2\\quad\\text{tel que}\\quad u_1=u_2\\circ\\varphi.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conversely if \\(\\varphi\\) is an isomorphism \\(L_1|Y_1\\cap Y_2\\longrightarrow L_2|Y_1\\cap Y_2\\) such that \\(u_1=u_2\\circ\\varphi\\), there exists a rigidified invertible sheaf \\(L\\) on \\(Y\\) which is obtained by gluing along \\(\\varphi\\); explicitly \\(L\\) is the kernel of the canonical homomorphism \\((f_1)_*L_1\\oplus(f_2)_*L_2\\longrightarrow(f|Y_1\\cap Y_2)_*L_2\\) defined by \\(\\varphi\\). This \\(L\\) then corresponds to a point \\(\\lambda\\) of \\(\\operatorname{Pic}_{Y/S}\\) which maps to \\(\\mu\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally let \\(I\\) be the functor defined, as \\(T\\) ranges over the schemes over \\(S\\), by the sets of isomorphisms \\(\\varphi:(L_1)_T|(Y_1\\cap Y_2)_T\\xrightarrow{\\sim}(L_2)_T|(Y_1\\cap Y_2)_T\\) such that \\((u_1)_T=(u_2)_T\\circ\\varphi\\). We have just established an isomorphism between the inverse image of \\(\\mu\\) in \\(\\operatorname{Pic}_{Y/S}\\) and the functor \\(I\\). It therefore suffices to apply the following lemma (where we take \\(X=Y_1\\cap Y_2\\)):</p>"
+    },
+    {
+     "id": "XII.2.4",
+     "type": "lemma",
+     "label": "2.4.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.2.4\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">2.4.</span></div><div class=\"thm-body\"><p><u>Let \\(X\\) be a scheme flat, proper and of finite presentation over \\(S\\). Let \\(L,M\\) be two invertible sheaves on \\(X\\), \\(\\operatorname{Isom}(L,M)\\) the functor of isomorphisms \\(L_T\\longrightarrow M_T\\) (for \\(T/S\\)). Then</u></p>\n<p>i) <u>\\(\\operatorname{Isom}(L,M)\\) is representable by an affine scheme over \\(S\\) of finite presentation.</u></p>\n<p>ii) <u>If moreover \\(L\\) and \\(M\\) are equipped with rigidifications (relative to a</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>given section of \\(X\\)), the subfunctor of \\(\\operatorname{Isom}(L,M)\\) formed by the isomorphisms compatible with these rigidifications is representable by a closed subscheme of \\(\\operatorname{Isom}(L,M)\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, ii) is clear. As for i), let us recall that the functors \\(T\\longmapsto\\operatorname{Hom}(L_T,M_T)\\) and \\(T\\longmapsto\\operatorname{Hom}(M_T,L_T)\\) are representable by vector bundles \\(V(E)\\) and \\(V(F)\\) (by EGA III 7.7.8). Then, if \\(u\\in\\operatorname{Hom}(L_T,M_T)\\) and \\(v\\in\\operatorname{Hom}(M_T,L_T)\\), the conditions \\(u\\circ v=1\\) and \\(v\\circ u=1\\) define a closed subscheme \\(F\\) of \\(V(E)\\times_SV(F)\\) and it is clear that \\(F\\xrightarrow{\\sim}I\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>2.5.</strong> Finally let us reduce assertion II' to the following assertion:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>II<sup>*</sup>. <u>Theorem 1.1 when \\(X\\) and \\(Y\\) are integral over \\(S\\) and the sequence</u></p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n(*)\\qquad\\mathcal O_Y\\longrightarrow f_*\\mathcal O_X\\rightrightarrows g_*\\bigl(\\mathcal O_{X\\times_YX}\\bigr)\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>(where \\(g:X\\times_YX\\longrightarrow Y\\) is the structural morphism) is exact.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In fact, for this it suffices to prove that there exists a factorization of \\(f\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nX\\xrightarrow{f_o}Y_o\\xrightarrow{f_1}Y_1\\longrightarrow\\cdots\\xrightarrow{f_n}Y_n=Y\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>such that every \\(f_i\\) satisfies (*) and, after possibly shrinking \\(S\\), every \\(Y_i\\) is integral over \\(S\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For this, we set \\(Y_o=\\operatorname{Spec}(f_*\\mathcal O_X)\\), \\(f_o\\) coming from the Stein factorization of \\(f\\) (EGA III 4.3.3), so that \\(f_{o*}(\\mathcal O_X)\\xrightarrow{\\sim}\\mathcal O_{Y_o}\\), and \\(f_o\\) therefore indeed satisfies (*). To factor \\(Y_o\\longrightarrow Y\\) in the same way, we use the</p>"
+    },
+    {
+     "id": "XII.2.6",
+     "type": "lemma",
+     "label": "2.6.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.2.6\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">2.6.</span></div><div class=\"thm-body\"><p><u>Let \\(Y\\) be a noetherian scheme, \\(f:X\\longrightarrow Y\\) a finite epimorphism (i.e. such that \\(\\mathcal O_Y\\longrightarrow f_*\\mathcal O_X\\) is injective); then \\(f\\) factors into a finite sequence of finite morphisms \\(f_i:X\\longrightarrow Y_o\\xrightarrow{f_1}Y_1\\longrightarrow\\cdots\\longrightarrow Y_n=Y\\) which are effective epimorphisms (i.e. such that the sequence</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\n\\mathcal O_{Y_i}\\longrightarrow(f_i)_*\\mathcal O_{Y_{i-1}}\\rightrightarrows(g_i)_*\\bigl(\\mathcal O_{Y_{i-1}\\times_{Y_i}Y_{i-1}}\\bigr)\\quad\\text{soit exacte}).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Set \\(A=\\mathcal O_Y\\), \\(B_o=f_*\\mathcal O_X\\) and define by induction</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nB_i=\\operatorname{Ker}\\bigl(B_{i-1}\\rightrightarrows B_{i-1}\\otimes_A B_{i-1}\\bigr).\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One verifies at once that</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\nB_{i-1}\\otimes_A B_{i-1}\\xrightarrow{\\sim}B_{i-1}\\otimes_{A_i}B_{i-1}.\n\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove that for \\(i\\) large enough, we have \\(B_i=A\\). Indeed consider the decreasing sequence of \\(B\\)-modules \\(M_i=B_i/A\\) and let \\(S_i=\\operatorname{Supp}(M_i)\\). The decreasing sequence of closed subsets \\(S_i\\) of \\(Y\\) is stationary; let \\(S\\) be the stationary value. Let us show that \\(S=\\varnothing\\). Otherwise let \\(s\\) be a maximal point of \\(S\\). After possibly replacing \\(Y\\) by \\(\\operatorname{Spec}\\mathcal O_{Y,s}\\), we may assume \\(Y\\) is local with closed point \\(s\\). In view of the choice of \\(s\\), \\(M_i\\) is artinian for \\(i\\) large enough, so the sequence \\((M_i)\\) is stationary. There exists therefore \\(i\\) such that \\(B_i=B_{i+1}\\). Consequently \\(\\operatorname{Spec}(A_i)\\longrightarrow Y\\) is a monomorphism, hence a closed immersion (Nakayama); since \\(B\\subset A_i\\), we have \\(B=A_i\\), and \\(s\\notin S\\), absurd.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-3",
+   "title": "3. Proof of I: the dévissage of Oort",
+   "blocks": [
+    {
+     "id": "XII.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.3\">3. <u>Proof of I: the dévissage of Oort</u></h2>"
+    },
+    {
+     "id": "XII.3.1",
+     "type": "proposition",
+     "label": "3.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"XII.3.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition</u></span> <span class=\"thm-num\">3.1.</span> (Oort, Bull. soc. math. France, t. 90-1962).</div><div class=\"thm-body\"><p><u>Let \\(S\\) be a locally noetherian scheme, \\(f:X\\longrightarrow S\\) a proper morphism, \\(X'\\subset X\\) a closed subscheme. We assume that:</u></p>\n<p>i) <u>\\(X'\\) is defined by an ideal \\(I\\) contained in the nilradical \\(N\\) of \\(X\\) and \\(N.I=0\\).</u></p>\n<p>ii) <u>\\(X'\\) is flat over \\(S\\) and cohomologically flat over \\(S\\) in dimension 0 (EGA III 7.8.1).</u></p>\n<p>iii) <u>\\(I\\) is flat over \\(S\\) and cohomologically flat over \\(S\\) in dimensions 0 and 1 so that (by EGA III 7.4.6) there exists a coherent \\(\\mathcal O_S\\)-module \\(Q\\) and an isomorphism, functorial in the coherent \\(\\mathcal O_S\\)-module \\(M\\),</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[R^2f_*(I\\otimes f^*M)\\mathbin{\\widetilde\\longrightarrow}\\operatorname{Hom}_{\\mathcal O_S}(Q,M).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>iv) <u>The cokernel \\(E\\) of \\(f_*(\\mathcal O_{X'})\\longrightarrow R^1f_*(I)\\) is a locally free \\(\\mathcal O_S\\)-module.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>v) <u>The homomorphism \\((f_*\\mathcal O_X)_{\\mathrm{réd}}\\longrightarrow(f_*\\mathcal O_{X'})_{\\mathrm{réd}}\\) is surjective.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Then the canonical morphism \\(\\operatorname{Pic}_{X/S}\\longrightarrow\\operatorname{Pic}_{X'/S}\\) is representable by an affine morphism of finite presentation; more precisely, we have a canonical exact sequence of f.p.p.f. sheaves,</u></p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow V(E^\\vee)\\longrightarrow\\operatorname{Pic}_{X/S}\\longrightarrow\\operatorname{Pic}_{X'/S}\\xrightarrow{u}V(Q)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>and, if \\(P=\\operatorname{Ker}(u)\\), the monomorphism \\(P\\longrightarrow\\operatorname{Pic}_{X'/S}\\) is representable by a closed immersion and \\(\\operatorname{Pic}_{X/S}\\) is a torsor over \\(P\\) under the group \\(V(E^\\vee)\\) (that is, the sequence of f.p.p.f. sheaves</u></p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow V(E^\\vee)\\longrightarrow\\operatorname{Pic}_{X/S}\\longrightarrow P\\longrightarrow0\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>is exact).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Consider, for a \\(S\\)-scheme \\(T\\), the two following diagrams with exact rows:</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{array}{ccccccccc}\n0&amp;\\longrightarrow&amp;I_T&amp;\\longrightarrow&amp;\\mathcal O_{X_T}&amp;\\longrightarrow&amp;\\mathcal O_{X'_T}&amp;\\longrightarrow&amp;0\\\\\n&amp;&amp;\\Vert&amp;&amp;\\uparrow&amp;&amp;\\uparrow\\\\\n0&amp;\\longrightarrow&amp;I_T&amp;\\xrightarrow{\\alpha}&amp;\\mathcal O^*_{X_T}&amp;\\longrightarrow&amp;\\mathcal O^*_{X'_T}&amp;\\longrightarrow&amp;0\n\\end{array}\\qquad(\\alpha(i)=1+i)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{array}{ccccc}\n(f_T)_*(\\mathcal O^*_{X'_T})&amp;\\xrightarrow{\\delta_T}&amp;R^1(f_T)_*(I_T)\\\\\n\\uparrow&amp;&amp;\\Vert\\\\\n(f_T)_*(\\mathcal O^*_{X_T})&amp;\\xrightarrow{\\delta_T^*}&amp;R^1(f_T)_*(I_T)&amp;\\longrightarrow&amp;R^1(f_T)_*(\\mathcal O^*_{X_T})\\longrightarrow R^1(f_T)_*(\\mathcal O^*_{X'_T})\\longrightarrow R^2(f_T)_*(I_T).\n\\end{array}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One should note that the left-hand square of this diagram <u>is not necessarily commutative</u>. However we have:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.2.</strong> \\(\\operatorname{Im}\\delta_T^*=\\operatorname{Im}\\delta_T\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed we may obviously assume \\(S\\) and \\(T\\) affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Take an affine covering \\(\\{V_i\\}\\) of \\(X_T\\). Let \\(g\\in\\Gamma(X_T;\\mathcal O^*_{X_T})\\); \\(g_i\\) a lifting of \\(g|V_i\\) in \\(\\Gamma(V_i;\\mathcal O^*_{X_T})\\). Then \\(\\delta_T^*(g)\\) is equal to the class of the 1-cocycle \\(\\delta^*_{ij}=(g_ig_j^{-1}-1)\\); \\(\\delta_T(g)\\), to that of \\(\\delta_{ij}=(g_i-g_j)=g_j\\delta^*_{ij}=g\\,\\delta^*_{ij}\\), so we have</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\delta_T(g)=g\\,\\delta_T^*(g)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>taking into account the action of \\(\\Gamma(X_T,\\mathcal O_{X_T})\\) on \\(I_T\\), hence on \\(H^1(X_T,I_T)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By ii), we have \\(\\Gamma(X'_T;\\mathcal O_{X'_T})=\\Gamma(X';\\mathcal O_{X'})\\otimes_S\\Gamma(T,\\mathcal O_T)\\) and therefore \\(g=\\sum g_\\beta\\otimes t_\\beta\\) for \\(g_\\beta\\in\\Gamma(X',\\mathcal O_{X'})\\) and \\(t_\\beta\\in\\Gamma(T,\\mathcal O_T)\\). Now by \\(v\\) \\((f_*\\mathcal O_X)_{\\mathrm{réd}}\\longrightarrow(f_*\\mathcal O_{X'})_{\\mathrm{réd}}\\) is surjective; consequently \\(g_\\beta=v(h_\\beta)+n_\\beta\\) for \\(h_\\beta\\in\\Gamma(X;\\mathcal O_X)\\), \\(v:\\Gamma(X,\\mathcal O_X)\\to\\Gamma(X',\\mathcal O_{X'})\\) and \\(n_\\beta\\in\\operatorname{nilrad}(\\Gamma(X',\\mathcal O_{X'}))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By i), \\((n_\\beta\\otimes t_\\beta)I_T=0\\). Consequently, \\(\\delta_T(g)=h\\,\\delta_T^*(g)\\) where \\(h=\\sum v(h_\\beta)\\otimes t_\\beta\\in\\Gamma(X_T,\\mathcal O_{X_T})\\), whence \\(\\delta_T^*(g)=h^{-1}\\delta_T(g)=\\delta_T(h^{-1}g)\\), hence \\(\\operatorname{Im}\\delta_T^*\\subset\\operatorname{Im}\\delta_T\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally let \\(g=\\sum g_\\beta\\otimes t_\\beta\\in\\Gamma(X'_T,\\mathcal O_{X'_T})\\). Let \\(g_\\beta=v(h)+n_\\beta\\) where \\(n_\\beta\\in\\operatorname{nilrad}(\\Gamma(X',\\mathcal O_{X'}))\\); we then have \\(\\delta_T(g)=\\delta_T(\\sum n_\\beta\\otimes t_\\beta)=\\delta_T(1+\\sum n_\\beta\\otimes t_\\beta)=\\delta_T^*(1+\\sum n_\\beta\\otimes t_\\beta)\\), whence \\(\\operatorname{Im}\\delta_T\\subset\\operatorname{Im}\\delta_T^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By virtue of 3.2, iii) and iv), we have an exact sequence, functorial in \\(T\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow V(E^\\vee)(T)\\longrightarrow R^1(f_T)_*(\\mathcal O^*_{X_T})\\longrightarrow R^1(f_T)_*(\\mathcal O^*_{X'_T})\\longrightarrow V(Q)(T),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which by passage to the associated f.p.p.f. sheaves gives an exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[0\\longrightarrow V(E^\\vee)\\longrightarrow\\operatorname{Pic}_{X/S}\\longrightarrow\\operatorname{Pic}_{X'/S}\\xrightarrow{u}V(Q).\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(P=\\operatorname{Ker}(u)\\), the monomorphism \\(P\\longrightarrow\\operatorname{Pic}_{X'/S}\\) is obtained by base change from the unit section \\(S\\longrightarrow V(Q)\\); since \\(V(Q)\\) is representable and separated, it follows that \\(P\\longrightarrow\\operatorname{Pic}_{X'/S}\\) is representable by a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>closed immersion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally \\(0\\longrightarrow V(E^\\vee)\\longrightarrow\\operatorname{Pic}_{X/S}\\xrightarrow{w}P\\longrightarrow0\\) is a torsor for f.p.p.f.; a fortiori, thanks to f.p.q.c. descent from a \"splitting\" of the torsor, \\(w\\) is representable by a faithfully flat affine morphism of finite presentation (see: Oort, “Commutative group schemes”, Proposition (17.4)).</p>"
+    },
+    {
+     "id": "XII.3.3",
+     "type": "corollary",
+     "label": "3.3.",
+     "title": "Corollary",
+     "html": "<div class=\"thm corollary\" id=\"XII.3.3\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollary</u></span> <span class=\"thm-num\">3.3.</span></div><div class=\"thm-body\">\n<p><u>Under the conditions of 3.1, we have</u></p>\n<p>i) <u>If \\(\\operatorname{Pic}_{(\\mathrm{zar})}(X'/S)\\longrightarrow\\operatorname{Pic}_{(\\mathrm{fppf})}(X'/S)\\) is an isomorphism, then \\(\\operatorname{Pic}_{(\\mathrm{zar})}(X/S)\\longrightarrow\\operatorname{Pic}_{(\\mathrm{fppf})}(X/S)\\) is an isomorphism.</u></p>\n<p>ii) <u>Assuming the \\(S\\)-scheme \\(T\\) is affine, if \\(\\operatorname{Pic}(X'_T)\\longrightarrow\\operatorname{Pic}_{(\\mathrm{zar})}(X'/S)(T)\\) is surjective, then \\(\\operatorname{Pic}(X_T)\\longrightarrow\\operatorname{Pic}_{(\\mathrm{zar})}(X/S)(T)\\) is surjective.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed (i) follows from the following diagram of sheaves for the Zariski topology</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{array}{ccccccccc}\n0&amp;\\to&amp;V(E^\\vee)&amp;\\to&amp;\\operatorname{Pic}_{(\\mathrm{zar})}(X/S)&amp;\\to&amp;\\operatorname{Pic}_{(\\mathrm{zar})}(X'/S)&amp;\\to&amp;V(Q)\\\\\n&amp;&amp;\\downarrow\\wr&amp;&amp;\\downarrow&amp;&amp;\\downarrow\\wr&amp;&amp;\\downarrow\\wr\\\\\n0&amp;\\to&amp;V(E^\\vee)&amp;\\to&amp;\\operatorname{Pic}_{(\\mathrm{fppf})}(X/S)&amp;\\to&amp;\\operatorname{Pic}_{(\\mathrm{fppf})}(X'/S)&amp;\\to&amp;V(Q),\n\\end{array}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>by applying the five lemma to it.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) follows from the following diagram with exact rows</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\begin{array}{ccccc}\nH^1(X_T,I_T)&amp;\\longrightarrow&amp;H^1(X_T,\\mathcal O^*_{X_T})&amp;\\longrightarrow&amp;H^1(X'_T,\\mathcal O^*_{X'_T})\\longrightarrow H^2(X_T,I_T)\\\\\n\\downarrow&amp;&amp;\\downarrow&amp;&amp;\\downarrow\\qquad\\downarrow\\\\\nH^0(T,R^1(f_T)_*I_T)&amp;\\longrightarrow&amp;H^0(T,R^1(f_T)_*\\mathcal O^*_{X_T})&amp;\\longrightarrow&amp;H^0(T,R^1(f_T)_*\\mathcal O^*_{X'_T})\\longrightarrow H^0(T,R^2f_*I_T)\n\\end{array}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for the outer vertical arrows are isomorphisms, \\(T\\) being affine.</p>"
+    },
+    {
+     "id": "XII.3.4",
+     "type": "corollary",
+     "label": "3.4.",
+     "title": "Corollary",
+     "html": "<div class=\"thm corollary\" id=\"XII.3.4\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Corollary</u></span> <span class=\"thm-num\">3.4.</span></div><div class=\"thm-body\"><p><u>Let \\(k\\) be a field, \\(X\\) a proper \\(k\\)-scheme. We assume that \\(\\operatorname{Pic}_{X_{\\mathrm{réd}}/k}\\) possesses a universal invertible sheaf. (For example, this will be the case, by descent theory, if every connected component \\(X'_i\\) of \\(X_{\\mathrm{réd}}\\) possesses a rational point, for example if \\(k\\) is algebraically closed, or more generally if the g.c.d. of the degrees of the 0-cycles of every \\(X'_i\\) is 1). Then above every affine open subscheme \\(V\\) of \\(\\operatorname{Pic}_{X/k}\\), there exists a universal invertible sheaf on \\(X\\times_kV\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, we prove I in the following more precise form:</p>"
+    },
+    {
+     "id": "XII.3.5",
+     "type": "proposition",
+     "label": "3.5.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"XII.3.5\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition</u></span> <span class=\"thm-num\">3.5.</span></div><div class=\"thm-body\"><p><u>Let \\(S\\) be an integral noetherian scheme, \\(f:X\\longrightarrow Y\\) a nilpotent immersion of proper \\(S\\)-schemes. Then there exists a non-empty open subscheme \\(V\\) of \\(S\\) such that the morphism</u></p>\n<div class=\"display-formula\">\\[f^*:\\operatorname{Pic}_{Y/S}|V\\longrightarrow\\operatorname{Pic}_{X/S}|V\\]</div>\n<p><u>is representable by an affine morphism of finite presentation; in fact, \\(N=\\operatorname{Ker}f^*\\) is an affine group scheme with unipotent fibers (in the sense of SGA 3 XVII).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed \\(X\\) is defined by a nilpotent ideal \\(I\\). Then \\(I\\) possesses a filtration by ideals \\(I_0=I\\supset I_1\\supset\\cdots\\supset I_n=0\\) such that \\(NI_i\\subset I_{i-1}\\), where \\(N\\) is the nilradical of \\(\\mathcal O_Y\\) (for example \\(I_k=N^kI\\)). Let \\(X_i\\) be the subscheme of \\(Y\\) defined by \\(I_i\\). By induction it suffices to study the immersions \\(X_i\\longrightarrow X_{i-1}\\). We may therefore assume that \\(N.I=0\\); this is condition i) of 3.1 and we finish by reducing to the case where the other conditions (ii) to \\(v\\) are also satisfied. Thanks to the generic flatness theorem (EGA IV 6.9.1) applied to \\(\\mathcal O_{X'}\\), and to the \\(R^if_*(I)\\) and to \\(E\\), and taking into account the Künneth relations EGA III 6.9.9, we may assume, after possibly shrinking \\(S\\), that conditions ii), iii) and iv) are satisfied.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There exists a finite extension \\(K\\) of \\(k(S)\\) such that \\((f_K)_*(\\mathcal O_{X'_K})\\) has all its residue extensions trivial. If \\(S'\\) is an integral scheme, finite and flat over an open subscheme \\(V\\) of \\(S\\), with function field \\(k(S')=K\\), there exists an open subscheme \\(V'\\) of \\(S'\\) such that</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[[(f_{S'})_*(\\mathcal O_{X_{S'}})]_{\\mathrm{réd}}\\mathbin{\\widetilde\\longrightarrow}[(f_{S'})_*(\\mathcal O_{X'_{S'}})]_{\\mathrm{réd}}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>above \\(V'\\); after possibly shrinking \\(S\\) and \\(S'\\), we may assume \\(S=V\\) and \\(S'=V'\\). Since the assertion to be proved is local for f.p.q.c., we can replace \\(S\\) by \\(S'\\). Finally we apply 3.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>3.6.</strong> <u>Remark</u>. It follows in the same way, taking into account the exact sequences</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{Pic}_{X_{i-1}/S}\\longrightarrow\\operatorname{Pic}_{X_i/S}\\longrightarrow V(Q_i),\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>that for every \\(s\\in S\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\operatorname{coker}(\\operatorname{Pic}^0_{X_s/S}\\longrightarrow\\operatorname{Pic}^0_{Y_s/S})\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a unipotent group.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-4",
+   "title": "4. Proof of II*: the most delicate part of the proof",
+   "blocks": [
+    {
+     "id": "XII.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.4\">4. <u>Proof of II*: the most delicate part of the proof</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us recall assertion II*: Theorem 1.1 when \\(X\\) and \\(Y\\) are integral over \\(S\\) and the sequence (*) \\(0\\longrightarrow\\mathcal O_Y\\longrightarrow f_*\\mathcal O_X\\rightrightarrows g_*(\\mathcal O_{X\\times_YX})\\) is exact; by applying the generic flatness theorem EGA IV 6.9.1 and EGA III 7.8.8, we reduce to proving the</p>"
+    },
+    {
+     "id": "XII.4.1",
+     "type": "proposition",
+     "label": "4.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm proposition\" id=\"XII.4.1\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Proposition</u></span> <span class=\"thm-num\">4.1.</span></div><div class=\"thm-body\"><p><u>Let \\(S\\) be an integral noetherian scheme, \\(\\lambda:X\\longrightarrow S\\) and \\(\\mu:Y\\longrightarrow S\\) proper morphisms of finite presentation, \\(f:X\\longrightarrow Y\\) a surjective \\(S\\)-morphism and \\(g:X\\times_YX\\longrightarrow Y\\) the canonical morphism. We assume that</u></p>\n<p>1) <u>\\(X,Y,X\\times_YX\\) are flat over \\(S\\).</u></p>\n<p>2) <u>\\(\\lambda_*\\mathcal O_X=\\mathcal O_S\\), \\(\\mu_*\\mathcal O_Y=\\mathcal O_S\\) universally.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) <u>For \\(i,j\\geq0\\), \\(R^if_*(\\mathcal O_X)\\) and \\(R^jg_*(\\mathcal O_{X\\times_YX})\\) are flat over \\(S\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>4) <u>The sequence</u></p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[(*)\\qquad \\mathcal O_Y\\longrightarrow f_*\\mathcal O_X\\mathrel{\\substack{\\xrightarrow{\\pi_1}\\\\[-.4ex]\\xrightarrow[\\pi_2]{}}}g_*\\mathcal O_{X\\times_YX}\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>is exact and \\(\\operatorname{coker}(\\pi_1-\\pi_2)\\) is a \\(\\mathcal O_Y\\)-module flat over \\(S\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Then \\(f^*:\\operatorname{Pic}_{Y/S}\\longrightarrow\\operatorname{Pic}_{X/S}\\) is representable by a quasi-affine morphism of finite presentation.</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed let us first note that 1)-4) are stable under any base change \\(T\\longrightarrow S\\). Only the stability of 3) and 4) is not obvious. But by the Künneth formula (EGA III 6.9.9), 1) and 3) imply that the formation of the \\(R^if_*(\\mathcal O_X)\\) and \\(R^ig_*(\\mathcal O_{X\\times_YX})\\) commutes with the base changes \\(T\\longrightarrow S\\), which at once implies the stability of conditions 3). Moreover, the formation of the cokernel of \\(\\pi_1-\\pi_2:f_*\\mathcal O_X\\longrightarrow g_*\\mathcal O_{X\\times_YX}\\) therefore also commutes with base changes; since it is flat over \\(S\\) (by 4)), \\(\\operatorname{Im}(\\pi_1-\\pi_2)\\) is flat over \\(S\\) and commutes with base changes. Consequently, \\(\\operatorname{Ker}(\\pi_1-\\pi_2)\\) commutes with the base changes \\(T\\longrightarrow S\\), and is therefore equal to \\(\\mathcal O_Y\\) universally.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The stability of the hypotheses implies two things: a. The assertion to be proved being local for f.p.p.f., we may by descent assume that \\(X\\) possesses a section \\(\\alpha\\), so \\(Y\\) possesses the section \\(\\beta=f\\circ\\alpha\\).   b. To establish the assertion it suffices to consider a \\(S\\)-point of \\(\\operatorname{Pic}_{X/S}\\), that is, by a) and 2), an invertible sheaf \\(L\\) on \\(X\\) equipped with a rigidification \\(u\\) relative to \\(\\alpha\\), and to show that the f.p.p.f. sheaf \\(Z\\), the inverse image of this point in \\(\\operatorname{Pic}_{Y/S}\\), is representable by a quasi-affine \\(S\\)-scheme, of finite presentation over \\(S\\).</p>"
+    },
+    {
+     "id": "XII.4.2",
+     "type": "lemma",
+     "label": "4.2.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.4.2\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">4.2.</span></div><div class=\"thm-body\"><p><u>Under the conditions of 4.1, \\(f\\) is a descent morphism for the category of locally free sheaves; that is, for every pair \\(L,M\\) of locally free sheaves on \\(Y\\), the diagram</u></p>\n<div class=\"display-formula\">\\[\\operatorname{Hom}_Y(L,M)\\longrightarrow\\operatorname{Hom}_X(f^*L,f^*M)\\rightrightarrows\\operatorname{Hom}_{X\\times_YX}(g^*L,g^*M)\\]</div>\n<p><u>is exact.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, if \\(N=\\underline{\\operatorname{Hom}}_{\\mathcal O_Y}(L,M)\\), we must show that the sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\Gamma(Y,N)\\longrightarrow\\Gamma(X,f^*N)\\rightrightarrows\\Gamma(X\\times_YX,g^*N)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is exact, or equivalently (by EGA \\(0_{\\mathrm I}\\) 5.4.10.1) that the sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[\\Gamma(Y,N)\\longrightarrow\\Gamma(Y,f_*\\mathcal O_X\\otimes_{\\mathcal O_Y}N)\\rightrightarrows\\Gamma(Y,g_*\\mathcal O_{X\\times_YX}\\otimes_{\\mathcal O_Y}N)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is exact. But the sequence (*) \\(0\\longrightarrow\\mathcal O_Y\\longrightarrow f_*\\mathcal O_X\\rightrightarrows g_*\\mathcal O_{X\\times_YX}\\) is exact by hypothesis; whence the lemma, by applying to it the functor \\(\\Gamma(N\\otimes-)\\), which is left exact, \\(N\\) being flat over \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(L\\) be an invertible sheaf on \\(X\\) equipped with a rigidification \\(u\\) relative to \\(\\alpha\\); by 4.2 we have an equivalence between the category \\(C\\) of pairs \\((M,\\varphi)\\) of an invertible sheaf \\(M\\) on \\(Y\\) and an isomorphism \\(\\varphi:f^*M\\mathbin{\\widetilde\\longrightarrow}L\\), and the category \\(\\operatorname{Deff}(S)\\) of effective descent data on \\(L\\) relative to \\(f\\). But if \\(f^*M\\simeq L\\), since \\(L\\) is rigidified relative to \\(\\alpha\\), \\(M\\) is canonically equipped with a rigidification relative to \\(\\beta\\). Consequently \\(C\\) is equivalent to the discrete category defined by the set of classes of \\(\\beta\\)-rigidified invertible sheaves \\((M,v)\\) on \\(Y\\), such that \\(f^*(M,v)\\simeq(L,u)\\). But this is precisely the set \\(Z(S)\\) of \\(S\\)-points of the inverse image in \\(\\operatorname{Pic}_{Y/S}\\) of the \\(S\\)-point of \\(\\operatorname{Pic}_{X/S}\\) defined by \\((L,u)\\). Moreover this description of \\(Z(S)\\) is functorial in \\(S\\). Therefore \\(Z\\) is identified with the functor \\(\\operatorname{Deff}\\), and we may forget the rigidifications from now on.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There exists a canonical monomorphism from \\(\\operatorname{Deff}\\) into the functor \\(\\operatorname{Rec}\\) of gluing data on \\(f^*L\\). By definition \\(\\operatorname{Rec}\\) is equal to the functor \\(\\underline{\\operatorname{Isom}}(p_1^*L,p_2^*L)\\) where the \\(p_i:X\\times_YX\\longrightarrow X\\) are the projections, which is represented by an affine scheme \\(I\\) of finite presentation over \\(S\\) by 2.4. It therefore remains to represent the monomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"display-formula\">\\[i:\\operatorname{Deff}\\lhook\\joinrel\\longrightarrow\\underline{\\operatorname{Isom}}(p_1^*L,p_2^*L)\\]</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>by a morphism of finite presentation, which will necessarily be quasi-affine (by EGA IV 8.11.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us remark in passing that if one wishes one can restrict \\(\\underline{\\operatorname{Isom}}(p_1^*L,p_2^*L)\\) by imposing the cocycle condition, but this is not indispensable for what follows.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>After the base change \\(I\\longrightarrow S\\), we are therefore reduced to the following problem: if \\(L\\) is an invertible sheaf on \\(X\\) equipped with a gluing datum \\(\\varphi:p_1^*L\\mathbin{\\widetilde\\longrightarrow}p_2^*L\\), represent the subfunctor of \\(S\\) \"which makes this datum effective\". But we have the</p>"
+    },
+    {
+     "id": "XII.4.3",
+     "type": "lemma",
+     "label": "4.3.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.4.3\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">4.3.</span></div><div class=\"thm-body\"><p><u>Under the conditions of 4.1, let \\(L\\) be an invertible sheaf on \\(Y\\) equipped with a gluing datum</u></p>\n<div class=\"display-formula\">\\[\\varphi:p_1^*L\\mathbin{\\widetilde\\longrightarrow}p_2^*L.\\]</div>\n<p><u>For this datum to be effective, it is necessary and sufficient that the five following conditions be satisfied.</u></p>\n<p>1) <u>For every \\(i\\geq0\\), \\(R^if_*(L)\\) is flat over \\(S\\).</u></p>\n<p>2) <u>For every \\(j\\geq0\\), \\(R^jg_*(p_1^*L)\\) is flat over \\(S\\).</u></p>\n<p>3) <u>The cokernel of \\(\\pi_1-\\pi_2:f_*(L)\\longrightarrow g_*(p_1^*L)\\mathbin{\\widetilde\\longrightarrow}g_*(p_2^*(L))\\) is flat over \\(S\\), (where the last isomorphism is \\(g_*(\\varphi)\\)).</u></p>\n<p>4) <u>The kernel \\(N\\) of \\(\\pi_1-\\pi_2:f_*(L)\\longrightarrow g_*(p_1^*L)\\) is invertible on \\(Y\\).</u></p>\n<p>5) <u>The composite morphism \\(f^*N\\longrightarrow f^*f_*L\\longrightarrow L\\) is an isomorphism.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed these conditions are sufficient since already 4) and 5) imply effectivity. Conversely let \\(M\\) be invertible on \\(Y\\) such that there exists an isomorphism \\(f^*M\\simeq L\\) compatible with the gluing datum. We can cover \\(Y\\) by open subschemes \\(V\\), above which \\(M\\) is isomorphic to \\(\\mathcal O_Y\\); hence the descent datum on \\(L\\) restricted above \\(V=f^{-1}(V)\\) is isomorphic to the trivial descent datum on \\(\\mathcal O_X|V\\). Finally conditions 1)-5) are of a local nature on \\(Y\\) and they are satisfied, by the hypotheses of 4.1, for \\(L=\\mathcal O_X\\); they are therefore satisfied for \\(L\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It therefore remains to represent successively each of the conditions 1) to 5) by monomorphisms of finite presentation. For 1) and 2) we apply the</p>"
+    },
+    {
+     "id": "XII.4.4",
+     "type": "lemma",
+     "label": "4.4.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.4.4\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">4.4.</span></div><div class=\"thm-body\"><p><u>Let \\(S\\) be a scheme, \\(\\lambda:X\\longrightarrow S\\) and \\(\\mu:Y\\longrightarrow S\\) proper morphisms of finite presentation, \\(f:X\\longrightarrow Y\\) a \\(S\\)-morphism. Let \\(F\\) be a sheaf on \\(X\\) of finite presentation and flat over \\(S\\) and, for an integer \\(n\\), let \\(S_n\\) be the subfunctor of \\(S\\) which makes \\(R^if_*(F)\\) flat over \\(S\\) for every \\(i\\geq n\\) (precisely, \\(S_n(T)=\\{\\varnothing\\}\\) if \\(R^i(f_T)_*(F_T)\\) is flat for every \\(i\\geq n\\), \\(S_n(T)=\\varnothing\\) otherwise). Then \\(S_n\\longrightarrow S\\) is representable by a surjective monomorphism of finite presentation, and then for \\(i\\geq n\\) the \\(R^i(f_{S_n})_*(F_{S_n})\\) commute with the base changes \\(T\\longrightarrow S_n\\). Moreover \\(S_n\\) coincides with the functor \\(S'_n\\) which makes exact the functors</u></p>\n<div class=\"display-formula\">\\[M\\longmapsto R^i(f_V)_*(F_V\\otimes\\lambda_V^*M)\\qquad\\text{pour }i\\geq n\\]</div>\n<p><u>where \\(M\\) ranges over the quasi-coherent \\(\\mathcal O_V\\)-modules for every affine open subscheme \\(V\\) of \\(S\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed the assertion is local on \\(S\\); we may therefore assume \\(S\\) quasi-compact. Then the relative dimension of \\(X/Y\\) is bounded, say by \\(r\\), and for \\(n&gt;r\\), \\(R^nf_*(F_V\\otimes\\lambda_V^*M)=0\\). The assertion is therefore true for \\(n&gt;r\\);</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>proceeding by descending induction, suppose it is known for (n+1). After possibly replacing \\(S\\) by \\(S_{n+1}=S'_{n+1}\\), we may assume that \\(R^nf_*(F)\\) is \\(S\\)-flat for \\(i\\geq n+1\\). Since \\(F\\) is flat over \\(S\\), it then follows from EGA III 6.9.8 that \\(R^nf_*(F)\\) commutes with any base change. Consequently the representability of \\(S_n\\) follows from the following lemma (see: J.P. Murre, Representation of unramified functors, Séminaire Bourbaki; Mai 1965, p.294-11, th.2):</p>"
+    },
+    {
+     "id": "XII.4.5",
+     "type": "lemma",
+     "label": "4.5.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.4.5\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">4.5.</span></div><div class=\"thm-body\"><p><u>Let \\(X\\longrightarrow S\\) be a proper morphism of finite presentation, \\(F\\) a sheaf of finite presentation on \\(X\\). Then the subfunctor \\(S_F\\) of \\(S\\) which makes \\(F\\) flat over \\(S\\) is representable by a surjective monomorphism of finite presentation (which is of course not an immersion in general).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To represent condition 3) of 4.3, we note that by 1) and 2), \\(f_*(L)\\) and \\(g_*(p_1^*L)\\) commute with the base changes \\(T\\longrightarrow S\\), and therefore \\(\\operatorname{coker}(\\pi_1-\\pi_2)\\) also commutes with them; then we apply 4.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To represent 4), we note that by 3) and the fact that \\(f_*(L)\\) and \\(g_*(p_1^*L)\\) are flat and commute with base changes, \\(N=\\ker(\\pi_1-\\pi_2)\\) also commutes; then we apply the</p>"
+    },
+    {
+     "id": "XII.4.6",
+     "type": "lemma",
+     "label": "4.6.",
+     "title": "Lemma",
+     "html": "<div class=\"thm lemma\" id=\"XII.4.6\"><div class=\"thm-head\"><span class=\"thm-name\"><u>Lemma</u></span> <span class=\"thm-num\">4.6.</span></div><div class=\"thm-body\"><p><u>Let \\(\\lambda:X\\longrightarrow S\\) be a proper morphism of finite presentation, \\(u:F\\longrightarrow G\\) a homomorphism of \\(\\mathcal O_Y\\)-Modules of finite presentation, with \\(G\\) flat over \\(S\\). Then the subfunctor \\(S_1\\) of \\(S\\) which makes \\(u\\) an isomorphism is representable by an open subscheme of \\(S\\), of finite presentation.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We reduce as usual to the case \\(S\\) noetherian, using EGA IV 8 and 11.2.6, which dispenses us from worrying about the finite presentation. Let us first represent the functor which makes \\(u\\) an epimorphism,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i.e., which makes \\(\\operatorname{Coker}u\\) zero. Since the formation of \\(\\operatorname{Coker}u\\) commutes with base change, we see that it is represented by the open subscheme \\(S-\\lambda(\\operatorname{supp}(\\operatorname{Coker}u))\\) of \\(S\\). We may therefore assume that \\(u\\) is already an epimorphism. But now using the hypothesis that \\(G\\) is \\(S\\)-flat, we find that the formation of \\(\\operatorname{Ker}u\\) commutes with base change, and consequently the functor under consideration is represented by the open subscheme \\(S-\\lambda(\\operatorname{supp}(\\operatorname{Ker}u))\\) of \\(S\\).</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

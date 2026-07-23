@@ -1,0 +1,1129 @@
+{
+ "chapter_id": "XIX",
+ "title": "GROUPES RÉDUCTIFS — GÉNÉRALITÉS",
+ "number": "XIX",
+ "pages": [
+  {
+   "id": "XIX",
+   "title": "GROUPES RÉDUCTIFS — GÉNÉRALITÉS",
+   "blocks": [
+    {
+     "id": "XIX",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XIX\">EXPOSÉ XIX<br>GROUPES RÉDUCTIFS — GÉNÉRALITÉS<span class=\"author\">par M. Demazure</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La suite de ce Séminaire est consacrée à l'étude des groupes réductifs. Le but principal en est la généralisation des résultats classiques de Chevalley (<em>BIBLE</em> et <em>TOHOKU</em>) aux schémas de base arbitraires, les deux résultats centraux étant le théorème d'unicité (Exp. XXIII) et le théorème d'existence (Exp. XXV) des schémas en groupes réductifs « épinglés » correspondant à des « données radicielles » prescrites. Les démonstrations employées sont inspirées de celles de Chevalley, la technique des schémas permettant de leur donner une efficacité accrue.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les résultats du premier volume de la <em>BIBLE</em> (Exp. 1 à 13) seront systématiquement utilisés. En revanche, nous démontrerons directement sur un préschéma quelconque les résultats du second volume (théorème d'isomorphisme en particulier) ; la connaissance des démonstrations sur un corps algébriquement clos n'est donc pas absolument indispensable.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la démonstration de ces deux résultats fondamentaux, nous n'utiliserons que les résultats les plus élémentaires de la théorie des groupes de type multiplicatif, contenus pour l'essentiel dans <a class=\"ref\" href=\"#VIII\">Exp. VIII</a> et <a class=\"ref\" href=\"#IX\">IX</a> ; nous ferons d'autre part un usage essentiel des résultats de l'<a class=\"ref\" href=\"#XVIII\">Exposé XVIII</a>. Le lecteur s'intéressant spécialement aux théorèmes d'existence et d'unicité pourra dans une première lecture sauter les Exposés X à XVII.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-1",
+   "title": "1. Rappels sur les groupes sur un corps algébriquement clos",
+   "blocks": [
+    {
+     "id": "XIX.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.1\">1. Rappels sur les groupes sur un corps algébriquement clos</h2>"
+    },
+    {
+     "id": "XIX.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.1\">1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Dans ce numéro, \\(k\\) désignera toujours un corps algébriquement clos.</em> Comme annoncé ci-dessus, les seuls résultats de <em>BIBLE</em> utilisés par la suite, se trouvent dans le volume 1 (Exposés I à XIII). Tous les résultats de <em>BIBLE</em> concernant les groupes <em>semi-simples</em> sont valables plus généralement pour des groupes <em>réductifs</em> (définition ci-dessous) et leur démonstration est identique, avec les modifications anodines ci-après :</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ul class=\"mods\">\n<li>– 9-06, définition 3 (!), voir ci-dessous.</li>\n<li>– 12-09, théorème 2, e) supprimer « fini ».</li>\n<li>– 13-08, théorème 2, remplacer « rang » par « rang semi-simple ».</li>\n<li>– 13-12, corollaire 2 au théorème 3, remplacer « rang » par « rang réductif ».</li>\n</ul>"
+    },
+    {
+     "id": "XIX.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.2\">1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Soit G un \\(k\\)-groupe lisse affine et connexe.</em> Le <em>radical</em> de G (<em>BIBLE</em>, 9-06, prop. 2) est le sous-groupe réduit associé à la composante neutre de l'intersection des sous-groupes de Borel de G ; c'est aussi le plus grand sous-groupe résoluble lisse connexe invariant de G ; nous le noterons \\(\\mathrm{rad}(\\mathrm{G})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le <em>radical unipotent</em> de G est la partie unipotente du radical de G ; c'est aussi le plus grand sous-groupe unipotent lisse connexe invariant de G ; nous le noterons \\(\\mathrm{rad}^u(\\mathrm{G})\\).</p>"
+    },
+    {
+     "id": "XIX.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.3\">1.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Si G est un \\(k\\)-groupe lisse affine et connexe et si Q est un tore de G, alors le centralisateur \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) de Q dans G est un sous-groupe fermé de G, lisse (<a class=\"ref\" href=\"#XI.2.4\">Exp. XI, 2.4</a>) et connexe (<em>BIBLE</em>, 6-14, th. 6 a)).</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a la relation fondamentale :\n\\[ \\mathrm{rad}^u(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})) = \\mathrm{rad}^u(\\mathrm{G}) \\cap \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q}). \\]\nEn effet, on a, par <em>BIBLE</em>, 12-09, cor. au th. 1, la relation \\(\\mathrm{rad}^u(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q}))(k) \\subset \\mathrm{rad}^u(\\mathrm{G})(k)\\). Pour prouver l'égalité précédente, il suffit donc de voir que \\(\\mathrm{rad}^u(\\mathrm{G}) \\cap \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est lisse et connexe. Si on fait opérer Q sur \\(\\mathrm{rad}^u(\\mathrm{G})\\) par automorphismes intérieurs, le groupe précédent n'est autre que le schéma des invariants de cette opération. Or :</p>"
+    },
+    {
+     "id": "XIX.1.4",
+     "type": "lemme",
+     "label": "1.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, Q un S-tore, H un S-préschéma en groupes sur lequel Q opère. Supposons H séparé sur S de façon que le foncteur des invariants \\(\\mathrm{H}^{\\mathrm{Q}}\\) soit représentable (<a class=\"ref\" href=\"#VIII.6.5\">Exp. VIII, 6.5 d</a>)). Si H est lisse sur S (resp. lisse, affine, et à fibres connexes sur S), \\(\\mathrm{H}^{\\mathrm{Q}}\\) l'est aussi.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons en effet le produit semi-direct \\(\\mathrm{G} = \\mathrm{H} \\cdot \\mathrm{Q}\\). Il est lisse sur S (resp. lisse, affine et à fibres connexes sur S). On a évidemment \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q}) = \\mathrm{H}^{\\mathrm{Q}}\\) et celui-ci est lisse sur S (<a class=\"ref\" href=\"#XI.2.4\">Exp. XI, 2.4</a>) (resp. lisse et affine sur S, et à fibres connexes (<a class=\"ref\" href=\"#XIX.1.3\">1.3</a>)). Comme Q est lisse, affine et à fibres connexes sur S, on a terminé.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Signalons un cas particulier du résultat précédent : si G est un \\(k\\)-groupe lisse affine et connexe et si T est un tore maximal de G,\n\\[ \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}) = \\mathrm{T} \\cdot (\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}) \\cap \\mathrm{rad}^u(\\mathrm{G})). \\]\nEn effet (<em>BIBLE</em>, 6-14, th. 6 c)), \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T})\\) est un groupe résoluble, donc produit semi-direct de son tore maximal T et de son radical unipotent.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu du théorème de densité (<em>BIBLE</em>, 6-13, th. 5), il en résulte que si G est un \\(k\\)-groupe lisse affine et connexe, la réunion des \\(\\mathrm{T} \\cdot \\mathrm{rad}^u(\\mathrm{G})\\), T parcourant l'ensemble des tores maximaux de G, est <em>dense</em> dans G.</p>"
+    },
+    {
+     "id": "XIX.1.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.5\">1.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On rappelle que le <em>rang réductif</em> du \\(k\\)-groupe lisse et affine G est la dimension commune des tores maximaux de G. Nous le noterons \\(\\mathrm{rgred}(\\mathrm{G}/k)\\) ou \\(\\mathrm{rgred}(\\mathrm{G})\\). Pour que \\(\\mathrm{rgred}(\\mathrm{G}/k) = 0\\), il faut et il suffit que G soit <em>unipotent</em> (i.e. que \\(\\mathrm{G} = \\mathrm{rad}^u(\\mathrm{G})\\)), par <em>BIBLE</em>, 6-10, cor. 1 au th. 4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si H est un sous-groupe invariant du \\(k\\)-groupe lisse et affine G, le quotient G/H est affine et lisse (<a class=\"ref\" href=\"#VIA\">Exp. VI</a>). De plus (<em>BIBLE</em>, 7-05, th. 3, a) et c)), on a\n\\[ \\mathrm{rgred}(\\mathrm{G}) = \\mathrm{rgred}(\\mathrm{G}/\\mathrm{H}) + \\mathrm{rgred}(\\mathrm{H}). \\]</p>"
+    },
+    {
+     "id": "XIX.1.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.6\">1.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que le \\(k\\)-groupe lisse, affine et connexe G est <em>réductif</em> si \\(\\mathrm{rad}(\\mathrm{G})\\) est un tore, c'est-à-dire si \\(\\mathrm{rad}^u(\\mathrm{G}) = e\\). Si G est un \\(k\\)-groupe réductif et si Q est un tore de G, alors \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est réductif (<a class=\"ref\" href=\"#XIX.1.3\">1.3</a>). En particulier, si T est un tore maximal de G, \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}) = \\mathrm{T}\\). Il en résulte que le centre de G est contenu dans tout tore maximal, donc est diagonalisable. Le radical de G est alors le tore maximal (unique) de \\(\\underline{\\mathrm{Centr}}(\\mathrm{G})\\) : en effet, celui-ci est un sous-groupe lisse invariant résoluble connexe, donc contenu dans \\(\\mathrm{rad}(\\mathrm{G})\\) ; réciproquement \\(\\mathrm{rad}(\\mathrm{G})\\) est un tore invariant dans G, donc central (<em>BIBLE</em>, 4-07, cor. à la prop. 2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si G est réductif et si \\(\\dim(\\mathrm{G}) \\neq \\mathrm{rgred}(\\mathrm{G})\\), alors \\(\\dim(\\mathrm{G}) - \\mathrm{rgred}(\\mathrm{G}) \\geqslant 2\\). En effet, cette différence est toujours paire (cf. <a class=\"ref\" href=\"#XIX.1.10\">1.10</a> ci-dessous).</p>"
+    },
+    {
+     "id": "XIX.1.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.7\">1.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient G un \\(k\\)-groupe lisse affine et connexe et H un sous-groupe lisse et connexe invariant. Alors \\(\\mathrm{rad}(\\mathrm{H}) = (\\mathrm{rad}(\\mathrm{G}) \\cap \\mathrm{H})^0_{\\mathrm{réd}}\\) et \\(\\mathrm{rad}^u(\\mathrm{H}) = (\\mathrm{rad}^u(\\mathrm{G}) \\cap \\mathrm{H})^0_{\\mathrm{réd}}\\), comme on le voit aussitôt. En particulier, si G est réductif, H l'est aussi.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(f : \\mathrm{G} \\to \\mathrm{G}'\\) un morphisme surjectif de \\(k\\)-groupes lisses affines et connexes. Alors \\(f(\\mathrm{rad}^u(\\mathrm{G})) = \\mathrm{rad}^u(\\mathrm{G}')\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est d'abord clair que \\(f\\) envoie \\(\\mathrm{rad}^u(\\mathrm{G})\\) dans \\(\\mathrm{rad}^u(\\mathrm{G}')\\). Introduisant \\(\\mathrm{H} = (f^{-1}(\\mathrm{rad}^u(\\mathrm{G}')))^0_{\\mathrm{réd}} \\supset \\mathrm{rad}^u(\\mathrm{G})\\), on a \\(\\mathrm{rad}^u(\\mathrm{H}) = \\mathrm{rad}^u(\\mathrm{G})\\) et on est ramené au cas où \\(\\mathrm{G} = \\mathrm{H}\\), i.e. où \\(\\mathrm{G}'\\) est unipotent. Comme la réunion des \\(\\mathrm{T} \\cdot \\mathrm{rad}^u(\\mathrm{G})\\) (T parcourant l'ensemble des tores maximaux de G) est dense dans G, la réunion des \\(f(\\mathrm{T})f(\\mathrm{rad}^u(\\mathrm{G}))\\) est dense dans \\(\\mathrm{G}'\\) ; mais \\(f(\\mathrm{T})\\) est composé d'éléments semi-simples, donc \\(f(\\mathrm{T}) = e\\), \\(\\mathrm{G}'\\) étant unipotent ; ce qui montre que \\(f(\\mathrm{rad}^u(\\mathrm{G}))\\) est dense dans \\(\\mathrm{G}'\\), donc \\(f(\\mathrm{rad}^u(\\mathrm{G})) = \\mathrm{G}'\\) (cf. <em>BIBLE</em>, 5-13, lemme 4). En particulier, tout <em>quotient</em> d'un groupe <em>réductif</em> est <em>réductif</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(<em>Nota</em>, on peut prouver sous les mêmes hypothèses que \\(f(\\mathrm{rad}(\\mathrm{G})) = \\mathrm{rad}(\\mathrm{G}')\\).)</p>"
+    },
+    {
+     "id": "XIX.1.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.8\">1.8.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que le \\(k\\)-groupe lisse affine et connexe G est <em>semi-simple</em> si \\(\\mathrm{rad}(\\mathrm{G}) = e\\), c'est-à-dire si G est réductif et \\(\\underline{\\mathrm{Centr}}(\\mathrm{G})\\) fini. Si G est un \\(k\\)-groupe lisse affine connexe quelconque, alors \\(\\mathrm{G}/\\mathrm{rad}(\\mathrm{G})\\) est semi-simple (<em>BIBLE</em>, 9-06, prop. 2), \\(\\mathrm{G}/\\mathrm{rad}^u(\\mathrm{G})\\) est réductif. On appelle <em>rang semi-simple</em> de G et on note \\(\\mathrm{rgss}(\\mathrm{G}/k)\\) ou \\(\\mathrm{rgss}(\\mathrm{G})\\) le rang réductif de \\(\\mathrm{G}/\\mathrm{rad}(\\mathrm{G})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si G est réductif, on a donc\n\\[ \\mathrm{rgred}(\\mathrm{G}) = \\mathrm{rgss}(\\mathrm{G}) + \\dim(\\mathrm{rad}(\\mathrm{G})). \\]\nSi G est un groupe lisse affine et connexe et si Q est un sous-tore central de G, alors G/Q est semi-simple si et seulement si G est réductif et \\(\\mathrm{Q} = \\mathrm{rad}(\\mathrm{G})\\). En effet, si G/Q est semi-simple, \\(\\mathrm{Q} \\supset \\mathrm{rad}(\\mathrm{G})\\), donc \\(\\mathrm{rad}(\\mathrm{G})\\) est un tore, donc G est réductif, donc \\(\\mathrm{rad}(\\mathrm{G})\\) est le tore maximal de \\(\\underline{\\mathrm{Centr}}(\\mathrm{G})\\), donc \\(\\mathrm{rad}(\\mathrm{G}) = \\mathrm{Q}\\). Si G est réductif et si Q est un sous-groupe central alors (G/Q est réductif et) \\(\\mathrm{rgss}(\\mathrm{G}) = \\mathrm{rgss}(\\mathrm{G}/\\mathrm{Q})\\).</p>"
+    },
+    {
+     "id": "XIX.1.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.9\">1.9.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si K est une extension algébriquement close de \\(k\\) et si G est un \\(k\\)-groupe affine lisse connexe, G est réductif (resp. semi-simple) si et seulement si \\(\\mathrm{G}_{\\mathrm{K}}\\) l'est et on a\n\\[ \\mathrm{rgred}(\\mathrm{G}/k) = \\mathrm{rgred}(\\mathrm{G}_{\\mathrm{K}}/\\mathrm{K}), \\]\n\\[ \\mathrm{rgss}(\\mathrm{G}/k) = \\mathrm{rgss}(\\mathrm{G}_{\\mathrm{K}}/\\mathrm{K}). \\]</p>"
+    },
+    {
+     "id": "XIX.1.10",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.1.10\">1.10.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un \\(k\\)-groupe lisse et connexe et soit T un tore de G. L'algèbre de Lie \\(\\mathfrak{g}\\) de G se décompose sous l'action de T (par \\(\\mathrm{T} \\to \\mathrm{G}\\) et l'opération adjointe de G) en\n\\[ \\mathfrak{g} = \\mathfrak{g}^0 \\oplus \\coprod_{\\alpha \\in \\mathrm{R}} \\mathfrak{g}^\\alpha, \\]\noù les \\(\\alpha \\in \\mathrm{R}\\) sont des caractères non triviaux de T et où les \\(\\mathfrak{g}^\\alpha\\) sont \\(\\neq 0\\). Les caractères \\(\\alpha \\in \\mathrm{R}\\) sont dits les <em>racines</em> de G par rapport à T. Par <a class=\"ref\" href=\"#II.5.2.3\">Exp. II, 5.2.3</a>, (i), on a\n\\[ \\mathfrak{g}^0 = \\underline{\\mathrm{Lie}}(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T})). \\]\nEn particulier, T est son propre centralisateur si et seulement si \\(\\mathfrak{g}^0 = \\underline{\\mathrm{Lie}}(\\mathrm{T})\\), (<a class=\"ref\" href=\"#XII.6.6\">Exp. XII, 6.6 b</a>), ou <a class=\"ref\" href=\"#XIX.1.3\">1.3</a> dans le cas où G est affine). Cette condition entraîne que T est maximal et que \\(\\underline{\\mathrm{Centr}}(\\mathrm{G}) \\subset \\mathrm{T}\\), donc (<a class=\"ref\" href=\"#XII.8.8\">Exp. XII 8.8 d</a>)) \\(\\underline{\\mathrm{Centr}}(\\mathrm{G}) = \\bigcap_{\\alpha \\in \\mathrm{R}} \\mathrm{Ker}(\\alpha)\\) ; de plus \\(\\underline{\\mathrm{Centr}}(\\mathrm{G})\\) est alors affine, donc \\(\\mathrm{G} \\to \\mathrm{G}/\\underline{\\mathrm{Centr}}(\\mathrm{G})\\) affine ; comme ce dernier groupe est affine (<a class=\"ref\" href=\"#XII.6.1\">Exp. XII 6.1</a>), G l'est aussi.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque G est réductif et T maximal, les racines au sens précédent coïncident avec les racines au sens de <em>BIBLE</em>, 12-04, déf. 1 ; ces dernières sont en effet des racines au sens de ce n° (<em>BIBLE</em>, 13-05, th. 1, c)) et il y en a \\(\\dim(\\mathrm{G}) - \\dim(\\mathrm{T})\\) (<em>BIBLE</em>, 13-11, cor. 2 au th. 3). De plus, si \\(\\alpha\\) est une racine, \\(-\\alpha\\) en est aussi une (<em>BIBLE</em>, 12-05, cor. à la prop. 1). (Comme à l'habitude, on note indifféremment additivement ou multiplicativement la structure de groupe de \\(\\mathrm{Hom}_{k\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,k})\\).) Il s'ensuit que\n\\[ \\dim(\\mathrm{G}) - \\mathrm{rgred}(\\mathrm{G}) = \\mathrm{Card}(\\mathrm{R}) \\]\nest toujours pair.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le rang semi-simple du groupe réductif G est le rang de la partie R du \\(\\mathbb{Q}\\)-espace vectoriel \\(\\mathrm{Hom}_{k\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,k}) \\otimes \\mathbb{Q}\\) (<em>BIBLE</em>, 13-08, th. 2).</p>"
+    },
+    {
+     "id": "XIX.1.11",
+     "type": "lemme",
+     "label": "1.11",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.1.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.11</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(k\\) un corps algébriquement clos, G un \\(k\\)-groupe lisse affine connexe, T un tore de G, \\(\\mathrm{W}(\\mathrm{T}) = \\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{T})/\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T})\\) le groupe de Weyl de G par rapport à T. Les conditions suivantes sont équivalentes :</p>\n  <p>(i) G est réductif, T est maximal, \\(\\mathrm{rgss}(\\mathrm{G}) = 1\\).</p>\n  <p>(ii) G est réductif, T est maximal, \\(\\mathrm{G} \\neq \\mathrm{T}\\) ; il existe un sous-tore Q de T, de codimension 1 dans T, central dans G.</p>\n  <p>(iii) G n'est pas résoluble et \\(\\dim(\\mathrm{G}) - \\dim(\\mathrm{T}) \\leqslant 2\\).</p>\n  <p>(iv) \\(\\mathrm{W}(\\mathrm{T}) \\neq e\\) et \\(\\dim(\\mathrm{G}) - \\dim(\\mathrm{T}) \\leqslant 2\\).</p>\n  <p>(v) \\(\\mathrm{W}(\\mathrm{T}) = (\\mathbb{Z}/2\\mathbb{Z})_k\\) et \\(\\dim(\\mathrm{G}) - \\dim(\\mathrm{T}) = 2\\).</p>\n  <p>De plus, sous ces conditions, il y a exactement deux racines de G par rapport à T ; elles sont opposées. Sous les conditions de (ii), \\(\\mathrm{Q} = \\mathrm{rad}(\\mathrm{G})\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a évidemment (v) \\(\\Rightarrow\\) (iv). On a (iv) \\(\\Rightarrow\\) (iii) par <em>BIBLE</em>, 6-04, cor. 3 au th. 1. Prouvons (iii) \\(\\Rightarrow\\) (ii) : soit U le radical unipotent de G ; on sait que G/U est réductif et n'est pas un tore (sinon G serait résoluble) ; on a donc (<a class=\"ref\" href=\"#XIX.1.6\">1.6</a>)\n\\[ \\dim(\\mathrm{G}/\\mathrm{U}) - \\mathrm{rgred}(\\mathrm{G}/\\mathrm{U}) \\geqslant 2\\ ; \\]\nmais\n\\[ \\mathrm{rgred}(\\mathrm{G}) = \\mathrm{rgred}(\\mathrm{G}/\\mathrm{U}) + \\mathrm{rgred}(\\mathrm{U}) = \\mathrm{rgred}(\\mathrm{G}/\\mathrm{U}), \\]\nd'où\n\\[ \\dim(\\mathrm{G}) - \\dim(\\mathrm{U}) - \\mathrm{rgred}(\\mathrm{G}) = \\dim(\\mathrm{G}/\\mathrm{U}) - \\mathrm{rgred}(\\mathrm{G}/\\mathrm{U}) \\geqslant 2 \\geqslant \\dim(\\mathrm{G}) - \\dim(\\mathrm{T}) \\geqslant \\dim(\\mathrm{G}) - \\mathrm{rgred}(\\mathrm{G}). \\]\nCela donne \\(\\dim(\\mathrm{U}) = 0\\), donc G est réductif, \\(\\mathrm{rgred}(\\mathrm{G}) = \\dim(\\mathrm{T})\\), donc T est maximal, \\(\\dim(\\mathrm{G}) - \\dim(\\mathrm{T}) = 2\\). Par <em>BIBLE</em>, 10-09, prop. 8, il existe un tore singulier Q de codimension 1 dans T ; alors \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est réductif (<a class=\"ref\" href=\"#XIX.1.6\">1.6</a>), non résoluble (définition d'un tore singulier), donc \\(\\dim(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})) - \\mathrm{rgred}(\\mathrm{G}) \\geqslant 2\\), ce qui prouve que \\(\\mathrm{G} = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) et Q est central dans G.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons (ii) \\(\\Rightarrow\\) (i). On sait que G/Q est réductif (<a class=\"ref\" href=\"#XIX.1.7\">1.7</a>) et que \\(\\mathrm{rgred}(\\mathrm{G}/\\mathrm{Q}) = 1\\) donc \\(\\mathrm{rgss}(\\mathrm{G}/\\mathrm{Q}) = 0\\) ou 1. Le premier cas est impossible, car il entraînerait \\(\\mathrm{rgss}(\\mathrm{G}) = 0\\), donc \\(\\mathrm{G} = \\mathrm{T}\\) ; on a donc \\(\\mathrm{rgred}(\\mathrm{G}/\\mathrm{Q}) = \\mathrm{rgss}(\\mathrm{G}/\\mathrm{Q}) = 1\\), ce qui prouve que G/Q est semi-simple ; donc Q est le radical de G et \\(\\mathrm{rgss}(\\mathrm{G}) = 1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons enfin (i) \\(\\Rightarrow\\) (v). Si Q est le radical de G, on a \\(\\dim(\\mathrm{T}) - \\dim(\\mathrm{Q}) = 1\\) et Q est central dans G, donc \\(\\mathrm{G} = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\), ce qui prouve que Q est un tore singulier ; par <em>BIBLE</em>, 11-07, th. 2, on a \\(\\mathrm{W}_{\\mathrm{G}}(\\mathrm{T}) = (\\mathbb{Z}/2\\mathbb{Z})_k\\) ; par <em>BIBLE</em>, 12-01, lemme 1, on a \\(\\dim(\\mathrm{G}) - \\dim(\\mathrm{T}) = 2\\). Il y a donc au plus deux racines de G par rapport à T, or il y en a au moins deux, opposées (<a class=\"ref\" href=\"#XIX.1.10\">1.10</a>).</p>"
+    },
+    {
+     "id": "XIX.1.12",
+     "type": "proposition",
+     "label": "1.12",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.1.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.12</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(k\\) un corps algébriquement clos, G un \\(k\\)-groupe lisse et connexe, T un tore de G, R l'ensemble des racines de G par rapport à T et\n  \\[ \\mathfrak{g} = \\mathfrak{g}^0 \\oplus \\coprod_{\\alpha \\in \\mathrm{R}} \\mathfrak{g}^\\alpha, \\qquad \\text{avec } \\mathfrak{g}^\\alpha \\neq 0, \\]\n  la décomposition de \\(\\mathfrak{g}\\) sous \\(\\mathrm{Ad}(\\mathrm{T})\\). Pour chaque \\(\\alpha \\in \\mathrm{R}\\), soit \\(\\mathrm{T}_\\alpha\\) le tore maximal de \\(\\mathrm{Ker}(\\alpha)\\) et \\(\\mathrm{Z}_\\alpha = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}_\\alpha)\\). Les conditions suivantes sont équivalentes :</p>\n  <p>(i) G est affine, réductif ; T est maximal.</p>\n  <p>(ii) \\(\\mathfrak{g}^0 = \\mathfrak{t}\\), chaque \\(\\mathrm{Z}_\\alpha\\) \\((\\alpha \\in \\mathrm{R})\\) est réductif.</p>\n  <p>(iii) \\(\\mathfrak{g}^0 = \\mathfrak{t}\\), chaque \\(\\mathfrak{g}^\\alpha\\) \\((\\alpha \\in \\mathrm{R})\\) est de dimension 1 ; et si \\(\\alpha, \\beta \\in \\mathrm{R}\\) et \\(k \\in \\mathbb{Q}\\) sont tels que \\(\\beta = k\\alpha\\), alors \\(k = \\pm 1\\) ; pour chaque \\(\\alpha \\in \\mathrm{R}\\), il existe un \\(w_\\alpha \\in \\mathrm{G}(k)\\) qui normalise T, centralise \\(\\mathrm{T}_\\alpha\\), mais ne centralise pas T.</p>\n  <p>De plus, sous ces conditions, chaque \\(\\mathrm{Z}_\\alpha\\) est de rang semi-simple 1 et on a \\(\\underline{\\mathrm{Lie}}(\\mathrm{Z}_\\alpha) = \\mathfrak{t} \\oplus \\mathfrak{g}^\\alpha \\oplus \\mathfrak{g}^{-\\alpha}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si G est affine et réductif et si T est maximal, chaque \\(\\mathrm{Z}_\\alpha\\) est affine et réductif (<a class=\"ref\" href=\"#XIX.1.6\">1.6</a>), de tore maximal T ; de plus, T est son propre centralisateur (<a class=\"ref\" href=\"#XIX.1.6\">1.6</a>), donc \\(\\mathfrak{g}^0 = \\mathfrak{t}\\), ce qui prouve (i) \\(\\Rightarrow\\) (ii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part \\(\\mathfrak{g}^0 = \\mathfrak{t}\\) entraîne que T est maximal et G affine (cf. <a class=\"ref\" href=\"#XIX.1.10\">1.10</a>) donc chaque \\(\\mathrm{Z}_\\alpha\\) affine (<a class=\"ref\" href=\"#XIX.1.3\">1.3</a>). De toutes façons, on a par <a class=\"ref\" href=\"#II.5.2.2\">Exp. II, 5.2.2</a>\n\\[ \\underline{\\mathrm{Lie}}(\\mathrm{Z}_\\alpha) = \\mathfrak{g}^{\\mathrm{T}_\\alpha} = \\mathfrak{g}^0 \\oplus \\coprod_{\\beta \\in \\mathrm{R} \\cap \\mathbb{Q}\\alpha} \\mathfrak{g}^\\beta. \\]\nOn a donc\n\\[ \\underline{\\mathrm{Lie}}(\\mathrm{Z}_\\alpha) \\supset \\mathfrak{t} \\oplus \\mathfrak{g}^\\alpha \\oplus \\mathfrak{g}^{-\\alpha}, \\]\nce qui entraîne \\(\\mathrm{Z}_\\alpha \\neq \\mathrm{T}\\) ; par <a class=\"ref\" href=\"#XIX.1.11\">1.11</a>, cela donne aussitôt (ii) \\(\\Leftrightarrow\\) (iii) et les compléments.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à prouver (ii) \\(\\Rightarrow\\) (i) ; on sait déjà que (ii) entraîne que G est affine. Soit U son radical unipotent ; il est invariant dans G, son algèbre de Lie est invariante sous \\(\\mathrm{Ad}(\\mathrm{T})\\). On a donc\n\\[ \\underline{\\mathrm{Lie}}(\\mathrm{U}) = \\underline{\\mathrm{Lie}}(\\mathrm{U}) \\cap \\mathfrak{g}^0 + \\coprod_{\\alpha \\in \\mathrm{R}} \\underline{\\mathrm{Lie}}(\\mathrm{U}) \\cap \\mathfrak{g}^\\alpha. \\]\nPar <a class=\"ref\" href=\"#XIX.1.3\">1.3</a>, on a\n\\[ \\mathrm{U} \\cap \\mathrm{T} = \\mathrm{U} \\cap \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}) = \\mathrm{rad}^u(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T})) = \\mathrm{rad}^u(\\mathrm{T}) = e, \\]\n\\[ \\mathrm{U} \\cap \\mathrm{Z}_\\alpha = \\mathrm{U} \\cap \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}_\\alpha) = \\mathrm{rad}^u(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}_\\alpha)) = \\mathrm{rad}^u(\\mathrm{Z}_\\alpha) = e. \\]\nOn a donc\n\\[ \\underline{\\mathrm{Lie}}(\\mathrm{U}) \\cap \\mathfrak{g}^0 = \\underline{\\mathrm{Lie}}(\\mathrm{U}) \\cap \\mathfrak{t} = \\underline{\\mathrm{Lie}}(\\mathrm{U} \\cap \\mathrm{T}) = 0, \\]\n\\[ \\underline{\\mathrm{Lie}}(\\mathrm{U}) \\cap \\mathfrak{g}^\\alpha \\subset \\underline{\\mathrm{Lie}}(\\mathrm{U}) \\cap \\underline{\\mathrm{Lie}}(\\mathrm{Z}_\\alpha) = \\underline{\\mathrm{Lie}}(\\mathrm{U} \\cap \\mathrm{Z}_\\alpha) = 0\\ ; \\]\ndonc \\(\\underline{\\mathrm{Lie}}(\\mathrm{U}) = 0\\) et \\(\\mathrm{U} = \\{e\\}\\).</p>"
+    },
+    {
+     "id": "XIX.1.13",
+     "type": "corollaire",
+     "label": "1.13",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIX.1.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.13</span></div>\n  <div class=\"thm-body\">\n  <p>Soient \\(k\\) un corps algébriquement clos, G un \\(k\\)-groupe lisse et connexe, T un tore de G, R l'ensemble des racines de G par rapport à T et\n  \\[ \\mathfrak{g} = \\mathfrak{g}^0 \\oplus \\coprod_{\\alpha \\in \\mathrm{R}} \\mathfrak{g}^\\alpha \\]\n  comme ci-dessus. Pour chaque \\(\\alpha \\in \\mathrm{R}\\), soit \\(\\mathrm{T}_\\alpha\\) le tore maximal de \\(\\mathrm{Ker}(\\alpha)\\) et \\(\\mathrm{Z}_\\alpha = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}_\\alpha)\\). Les conditions suivantes sont équivalentes :</p>\n  <p>(i) G est affine, semi-simple ; T est maximal.</p>\n  <p>(ii) \\(\\mathfrak{g}^0 = \\mathfrak{t}\\), chaque \\(\\mathrm{Z}_\\alpha\\) est réductif et \\(\\bigcap_{\\alpha \\in \\mathrm{R}} \\mathrm{Ker}(\\alpha)\\) est fini.</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-2",
+   "title": "2. Schémas en groupes réductifs. Définitions et premières propriétés",
+   "blocks": [
+    {
+     "id": "XIX.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.2\">2. Schémas en groupes réductifs. Définitions et premières propriétés</h2>"
+    },
+    {
+     "id": "XIX.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.2.1\">2.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si G est un préschéma en groupes sur S, les propriétés suivantes sont équivalentes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) G est affine et lisse sur S, et à fibres connexes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) G est affine et plat sur S, de présentation finie sur S, et à fibres géométriques intègres.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces propriétés sont stables par changement de base et locales pour (fpqc).</p>"
+    },
+    {
+     "id": "XIX.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.2.2\">2.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si le S-préschéma en groupes G vérifie les conditions précédentes, et si Q est un tore (<a class=\"ref\" href=\"#IX.1.3\">Exp. IX, 1.3</a>) de G, alors \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est représentable par un sous-préschéma en groupes fermé de G qui vérifie également ces conditions (<a class=\"ref\" href=\"#XIX.1.3\">1.3</a> et <a class=\"ref\" href=\"#XI.6.11\">Exp. XI, 6.11</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons systématiquement la notation suivante : si S est un préschéma et \\(s\\) un point de S, on notera \\(\\overline{s}\\) le spectre d'une clôture algébrique \\(\\overline{k(s)}\\) de \\(k(s)\\).</p>"
+    },
+    {
+     "id": "XIX.2.3",
+     "type": "lemme",
+     "label": "2.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma en groupes lisse et affine sur S, à fibres connexes, T un tore de G. L'ensemble des \\(s \\in \\mathrm{S}\\) tels que \\(\\mathrm{G}_{\\overline{s}}\\) soit un \\(\\overline{s}\\)-groupe réductif, de rang semi-simple 1 et de tore maximal \\(\\mathrm{T}_{\\overline{s}}\\), est un ouvert U de S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme G et T sont plats sur S, la fonction\n\\[ s \\longmapsto \\dim(\\mathrm{G}_{\\overline{s}}/\\overline{s}) - \\dim(\\mathrm{T}_{\\overline{s}}/\\overline{s}) \\]\nest localement constante ; soit \\(\\mathrm{U}_1\\) l'ouvert des points de S où elle vaut 2. Considérons maintenant le groupe de Weyl (<a class=\"ref\" href=\"#XIX.6.3\">6.3</a>)\n\\[ \\mathrm{W}_{\\mathrm{G}}(\\mathrm{T}) = \\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{T})/\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}). \\]\nLa fonction\n\\[ s \\longmapsto \\text{nombre de points de } \\mathrm{W}(\\mathrm{T})_{\\overline{s}} \\]\nest semi-continue inférieurement (<a class=\"ref\" href=\"#XIX.6.3\">6.3</a> (ii)). Soit \\(\\mathrm{U}_2\\) l'ensemble des points de S où cette fonction est \\(&gt; 1\\) ; c'est un ouvert. Il résulte de <a class=\"ref\" href=\"#XIX.1.11\">1.11</a> que l'ensemble des \\(s\\) tels que \\(\\mathrm{G}_{\\overline{s}}\\) soit réductif, de rang semi-simple 1, de tore maximal \\(\\mathrm{T}_{\\overline{s}}\\), est \\(\\mathrm{U} = \\mathrm{U}_1 \\cap \\mathrm{U}_2\\).</p>"
+    },
+    {
+     "id": "XIX.2.4",
+     "type": "remarque",
+     "label": "2.4",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remarque\" id=\"XIX.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>Le groupe \\(\\mathrm{W}(\\mathrm{T})_{\\mathrm{U}}\\) est isomorphe à \\((\\mathbb{Z}/2\\mathbb{Z})_{\\mathrm{U}}\\). Il est en effet étale et fini sur U (<a class=\"ref\" href=\"#XIX.6.3\">6.3</a> (iii)) ; comme le foncteur des automorphismes de \\((\\mathbb{Z}/2\\mathbb{Z})_{\\mathrm{U}}\\) est le groupe unité, il suffit de vérifier l'assertion localement, or elle est immédiate si l'Algèbre qui définit \\(\\mathrm{W}(\\mathrm{T})_{\\mathrm{U}}\\) est un \\(\\mathscr{O}_{\\mathrm{U}}\\)-Module libre.</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.2.5",
+     "type": "theoreme",
+     "label": "2.5",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XIX.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-préschéma en groupes affine et de présentation finie sur S, à fibres connexes, et \\(s_0\\) un point de S. Supposons G plat sur S en \\(e_{\\mathrm{G}}(s_0)\\) et la fibre géométrique \\(\\mathrm{G}_{\\overline{s}_0}\\) (réduite et) réductive (resp. semi-simple). Il existe un ouvert U de S, contenant \\(s_0\\) et un morphisme étale surjectif \\(\\mathrm{S}' \\to \\mathrm{U}\\) tels que :</p>\n  <p>(i) \\(\\mathrm{G}_{\\mathrm{U}}\\) soit lisse sur S, à fibres géométriques réductives (resp. semi-simples), de rang réductif et de rang semi-simple constants.</p>\n  <p>(ii) \\(\\mathrm{G}_{\\mathrm{S}'}\\) possède un tore maximal T, le groupe de Weyl (cf. <a class=\"ref\" href=\"#XIX.6.3\">6.3</a>)\n  \\[ \\mathrm{W}_{\\mathrm{G}_{\\mathrm{S}'}}(\\mathrm{T}) = \\underline{\\mathrm{Norm}}_{\\mathrm{G}_{\\mathrm{S}'}}(\\mathrm{T})/\\underline{\\mathrm{Centr}}_{\\mathrm{G}_{\\mathrm{S}'}}(\\mathrm{T}) = \\underline{\\mathrm{Norm}}_{\\mathrm{G}_{\\mathrm{S}'}}(\\mathrm{T})/\\mathrm{T} \\]\n  étant fini sur \\(\\mathrm{S}'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme G est plat sur S en \\(e_{\\mathrm{G}}(s_0)\\) et \\(\\mathrm{G}_{\\overline{s}_0}\\) réduit, G est lisse sur S en \\(e_{\\mathrm{G}}(s_0)\\). Comme G est à fibres connexes, on peut quitte à restreindre S, supposer G lisse sur S (<a class=\"ref\" href=\"#VIB.3.10\">VI<sub>B</sub> 3.10</a>). Par <a class=\"ref\" href=\"#XI.5.8\">Exp. XI, 5.8 a</a>) et <a class=\"ref\" href=\"#X.4.5\">Exp. X, 4.5</a> (voir aussi <a class=\"ref\" href=\"#XIX.6.1\">6.1</a>), il existe un \\(\\mathrm{S}'' \\to \\mathrm{S}\\) étale, un point \\(s''_0\\) au-dessus de \\(s_0\\) et un tore trivial T de \\(\\mathrm{G}_{\\mathrm{S}''}\\), maximal en \\(s''_0\\). Comme un morphisme étale est ouvert et que les assertions de (i) sont locales pour (ét.), on peut donc supposer que G possède un tore trivial T, maximal en \\(s_0\\). Écrivons donc \\(\\mathrm{T} = \\mathbf{D}_{\\mathrm{S}}(\\mathrm{M})\\) et soit\n\\[ \\mathfrak{g} = \\coprod_{m \\in \\mathrm{M}} \\mathfrak{g}^m, \\]\nla décomposition de \\(\\mathfrak{g} = \\mathscr{L}ie(\\mathrm{G}/\\mathrm{S})\\) sous \\(\\mathrm{Ad}(\\mathrm{T})\\) (<a class=\"ref\" href=\"#I.4.7.3\">Exp. I, 4.7.3</a>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit R l'ensemble des \\(m \\in \\mathrm{M}\\), \\(m \\neq 0\\), tels que \\(\\mathfrak{g}^m(s_0) \\neq 0\\). Comme \\(\\mathrm{G}_{\\overline{s}_0}\\) est réductif, on a \\(\\mathfrak{g}^0(s_0) = \\mathfrak{t}(s_0)\\) (on note \\(\\mathfrak{t} = \\mathscr{L}ie(\\mathrm{T}/\\mathrm{S})\\)), donc\n\\[ \\mathfrak{g}(s_0) = \\mathfrak{t}(s_0) \\oplus \\coprod_{\\alpha \\in \\mathrm{R}} \\mathfrak{g}^\\alpha(s_0). \\]\nComme les Modules en cause sont localement libres, on peut, quitte à restreindre S, supposer les \\(\\mathfrak{g}^\\alpha\\) libres et\n\\[ \\mathfrak{g} = \\mathfrak{t} \\oplus \\coprod_{\\alpha \\in \\mathrm{R}} \\mathfrak{g}^\\alpha. \\]\nSoit alors \\(\\mathrm{T}_\\alpha\\) le tore maximal du noyau de \\(\\alpha\\) (on rappelle, cf. <a class=\"ref\" href=\"#XII.1.12\">Exp. XII 1.12</a>, qu'un groupe de type multiplicatif possède un unique tore maximal ; c'est d'ailleurs à peu près trivial par descente, le cas diagonalisable étant évident). Soit \\(\\mathrm{Z}_\\alpha = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}_\\alpha)\\) ; le groupe \\(\\mathrm{Z}_\\alpha\\) vérifie les hypothèses de <a class=\"ref\" href=\"#XIX.2.3\">2.3</a>, sa fibre \\((\\mathrm{Z}_\\alpha)_{\\overline{s}_0}\\) est réductive, de rang semi-simple 1, de tore maximal \\(\\mathrm{T}_{\\overline{s}_0}\\) (<a class=\"ref\" href=\"#XIX.1.12\">1.12</a>). Par <a class=\"ref\" href=\"#XIX.2.3\">2.3</a>, il existe donc un ouvert \\(\\mathrm{U}_\\alpha\\) de S, contenant \\(s_0\\), tel que \\(\\mathrm{Z}_\\alpha|\\mathrm{U}_\\alpha\\) ait ses fibres réductives. Posons \\(\\mathrm{U} = \\bigcap_{\\alpha \\in \\mathrm{R}} \\mathrm{U}_\\alpha\\) ; par <a class=\"ref\" href=\"#XIX.1.12\">1.12</a>, \\(\\mathrm{G}_{\\overline{s}}\\) est réductif, de tore maximal \\(\\mathrm{T}_{\\overline{s}}\\), pour \\(s \\in \\mathrm{U}\\). Pour tout \\(s \\in \\mathrm{U}\\), l'ensemble des racines de \\(\\mathrm{G}_{\\overline{s}}\\) par rapport à \\(\\mathrm{T}_{\\overline{s}}\\) s'identifie à R, on a donc \\(\\mathrm{rgred}(\\mathrm{G}_{\\overline{s}}) = \\mathrm{rg}(\\mathrm{M})\\), \\(\\mathrm{rgss}(\\mathrm{G}_{\\overline{s}}) = \\mathrm{rg}(\\mathrm{R})\\) (cf. <a class=\"ref\" href=\"#XIX.1.10\">1.10</a>). On a donc prouvé (i) et la première assertion de (ii) ; reste à prouver que le groupe de Weyl \\(\\mathrm{W}_{\\mathrm{G}_{\\mathrm{U}}}(\\mathrm{T}_{\\mathrm{U}})\\) est fini sur U, i.e. (<a class=\"ref\" href=\"#XIX.6.3\">6.3</a>) « qu'il a le même nombre de points dans chaque fibre géométrique » ; pour cela, il suffit de remarquer que la fibre géométrique de ce groupe en \\(s \\in \\mathrm{U}\\) est déterminée par la situation \\(\\mathrm{R} \\subset \\mathrm{M}\\), comme groupe constant associé au « groupe de Weyl abstrait de ce système de racines », et en particulier est indépendante du point \\(s\\), cf. <em>BIBLE</em>, 11-07, th. 2 (voir aussi Exp. XXII, n° 3).</p>"
+    },
+    {
+     "id": "XIX.2.6",
+     "type": "corollaire",
+     "label": "2.6",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIX.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>Soit G un S-groupe affine et lisse sur S, à fibres connexes. L'ensemble des points \\(s \\in \\mathrm{G}\\) tels que \\(\\mathrm{G}_{\\overline{s}}\\) soit réductif (resp. semi-simple) est un ouvert U de S et les fonctions\n  \\[ s \\longmapsto \\mathrm{rgred}(\\mathrm{G}_{\\overline{s}}/\\overline{s}) \\]\n  \\[ s \\longmapsto \\mathrm{rgss}(\\mathrm{G}_{\\overline{s}}/\\overline{s}) \\]\n  sont localement constantes sur U.</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.2.7",
+     "type": "definition",
+     "label": "2.7",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XIX.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\"><p>Un S-groupe (= S-préschéma en groupes) G est dit <em>réductif</em> (resp. <em>semi-simple</em>) s'il est affine et lisse sur S, à fibres géométriques <em>connexes</em>, et <em>réductives</em> (resp. <em>semi-simples</em>).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le fait d'être réductif (resp. semi-simple) pour un S-groupe G est stable par changement de base et <em>local</em> pour la topologie (fpqc).</p>"
+    },
+    {
+     "id": "XIX.2.8",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.2.8\">2.8.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un S-groupe réductif. Pour tout tore (resp. tore maximal) Q de G, \\(\\mathrm{Z}(\\mathrm{Q}) = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est réductif (resp. est Q). Cela résulte aussitôt de <a class=\"ref\" href=\"#XIX.2.2\">2.2</a> et <a class=\"ref\" href=\"#XIX.1.6\">1.6</a>. Appliquant <a class=\"ref\" href=\"#XIX.2.5\">2.5</a> à \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) on en déduit que Q est contenu (localement pour la topologie étale) dans un tore maximal.</p>"
+    },
+    {
+     "id": "XIX.2.9",
+     "type": "remarque",
+     "label": "2.9",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remarque\" id=\"XIX.2.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\"><p>Utilisant comme d'habitude la technique de EGA IV<sub>3</sub>, § 8, les hypothèses de présentation finie et le théorème <a class=\"ref\" href=\"#XIX.2.5\">2.5</a>, on voit que si G est un groupe réductif sur S, il existe un recouvrement ouvert de S, soit \\(\\{\\mathrm{U}_i\\}\\), tel que chaque \\(\\mathrm{G}_{\\mathrm{U}_i}\\) provienne par changement de base d'un groupe réductif sur un anneau noethérien (en fait une algèbre de type fini sur \\(\\mathbb{Z}\\)). De même, si G possède un tore maximal trivial T, on peut de plus supposer que \\(\\mathrm{T}_{\\mathrm{U}_i}\\) provient d'un tore maximal trivial du groupe précédent, ….</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-3",
+   "title": "3. Racines et systèmes de racines des schémas en groupes réductifs",
+   "blocks": [
+    {
+     "id": "XIX.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.3\">3. Racines et systèmes de racines des schémas en groupes réductifs</h2>"
+    },
+    {
+     "id": "XIX.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.3.1\">3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un préschéma, T un S-tore opérant linéairement (<a class=\"ref\" href=\"#I\">Exp. I</a>) sur un \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module localement libre de type fini \\(\\mathscr{F}\\). Pour tout caractère \\(\\alpha\\) de T (c.-à-d., \\(\\alpha \\in \\mathrm{Hom}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,\\mathrm{S}})\\)), on définit un sous-foncteur de \\(\\mathbf{W}(\\mathscr{F})\\) par\n\\[ \\mathbf{W}(\\mathscr{F})^\\alpha(\\mathrm{S}') = \\{x \\in \\mathbf{W}(\\mathscr{F})(\\mathrm{S}') \\mid t\\,x = \\alpha(t)x \\text{ pour tout } t \\in \\mathrm{T}(\\mathrm{S}''),\\ \\mathrm{S}'' \\to \\mathrm{S}'\\}. \\]\nAlors \\(\\mathbf{W}(\\mathscr{F})^\\alpha = \\mathbf{W}(\\mathscr{F}^\\alpha)\\), où \\(\\mathscr{F}^\\alpha\\) est un sous-Module de \\(\\mathscr{F}\\), localement facteur direct dans \\(\\mathscr{F}\\), donc aussi localement libre.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, l'assertion est locale pour la topologie (fpqc) et on peut supposer \\(\\mathrm{T} = \\mathbf{D}_{\\mathrm{S}}(\\mathrm{M})\\), où M est un groupe abélien (libre) de type fini. Alors \\(\\alpha\\) s'identifie à une fonction localement constante de S dans M (<a class=\"ref\" href=\"#VIII.1.3\">Exp. VIII 1.3</a>), et quitte à restreindre S, on peut supposer que cette fonction est constante. On est alors ramené à <a class=\"ref\" href=\"#I.4.7.3\">Exp. I, 4.7.3</a>.</p>"
+    },
+    {
+     "id": "XIX.3.2",
+     "type": "definition",
+     "label": "3.2",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XIX.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-préschéma en groupes lisse et de présentation finie sur S, à fibres connexes, T un tore de G. On dit que le caractère \\(\\alpha\\) de T est une <em>racine</em> de G par rapport à T si les conditions équivalentes suivantes sont satisfaites :</p>\n  <p>(i) Pour chaque \\(s \\in \\mathrm{S}\\), \\(\\alpha_s\\) est une racine de \\(\\mathrm{G}_s\\) par rapport à \\(\\mathrm{T}_s\\) (<a class=\"ref\" href=\"#XIX.1.10\">1.10</a>).</p>\n  <p>(ii) \\(\\alpha\\) est non trivial sur chaque fibre et \\(\\mathfrak{g}^\\alpha(s) \\neq 0\\) pour chaque \\(s \\in \\mathrm{S}\\).</p>\n  <p>(On note \\(\\mathfrak{g} = \\mathscr{L}ie(\\mathrm{G}/\\mathrm{S})\\) et on fait opérer T sur \\(\\mathfrak{g}\\) par l'intermédiaire de la représentation adjointe de G).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "XIX.3.3",
+     "type": "lemme",
+     "label": "3.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, T un S-tore, \\(\\alpha\\) un caractère de T. Les conditions suivantes sont équivalentes :</p>\n  <p>(i) \\(\\alpha\\) est non trivial sur chaque fibre, c'est-à-dire : pour tout \\(s \\in \\mathrm{S}\\), \\(\\alpha_{\\overline{s}}\\) est distinct du caractère unité de \\(\\mathrm{T}_{\\overline{s}}\\).</p>\n  <p>(ii) Pour tout \\(\\mathrm{S}' \\to \\mathrm{S}\\), \\(\\mathrm{S}' \\neq \\varnothing\\), \\(\\alpha_{\\mathrm{S}'}\\) est distinct du caractère unité de \\(\\mathrm{T}_{\\mathrm{S}'}\\).</p>\n  <p>(iii) Le morphisme \\(\\alpha\\) est fidèlement plat.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a (ii) \\(\\Leftrightarrow\\) (i) par <a class=\"ref\" href=\"#IX.5.2\">Exp. IX 5.2</a>, (iii) \\(\\Rightarrow\\) (i). Pour prouver (i) \\(\\Rightarrow\\) (iii), on se ramène au cas où T est diagonalisable et on conclut par <a class=\"ref\" href=\"#VIII.3.2\">Exp. VIII 3.2 a</a>).</p>"
+    },
+    {
+     "id": "XIX.3.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.3.4\">3.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons, sous les conditions de <a class=\"ref\" href=\"#XIX.3.2\">3.2</a>, que G soit <em>réductif</em>. Alors \\(\\mathfrak{g}^\\alpha\\) est localement libre de rang un (<a class=\"ref\" href=\"#XIX.1.12\">1.12</a>). De plus, si \\(\\alpha\\) est une racine de G par rapport à T, \\(-\\alpha\\) en est aussi une (<a class=\"ref\" href=\"#XIX.1.10\">1.10</a>). En particulier, si G est de rang semi-simple 1, on a par <a class=\"ref\" href=\"#XIX.1.11\">1.11</a> :</p>"
+    },
+    {
+     "id": "XIX.3.5",
+     "type": "lemme",
+     "label": "3.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-groupe réductif de rang semi-simple 1, T un tore maximal de G. Si \\(\\alpha\\) est une racine de G par rapport à T, alors \\(-\\alpha\\) en est aussi une et on a\n  \\[ \\mathfrak{g} = \\mathfrak{t} \\oplus \\mathfrak{g}^\\alpha \\oplus \\mathfrak{g}^{-\\alpha}, \\]\n  où \\(\\mathfrak{g}^\\alpha\\) et \\(\\mathfrak{g}^{-\\alpha}\\) sont localement libres de rang 1.</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.3.6",
+     "type": "definition",
+     "label": "3.6",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XIX.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-groupe réductif, T un tore maximal de G, R un ensemble de racines de G par rapport à T. On dit que R est un <em>système de racines</em> de G par rapport à T si les conditions équivalentes suivantes sont satisfaites :</p>\n  <p>(i) Pour chaque \\(s \\in \\mathrm{S}\\), \\(\\alpha \\mapsto \\alpha_{\\overline{s}}\\) est une bijection de R sur l'ensemble des racines de \\(\\mathrm{G}_{\\overline{s}}\\) par rapport à \\(\\mathrm{T}_{\\overline{s}}\\).</p>\n  <p>(ii) Les éléments de R sont distincts sur chaque fibre (i.e. si \\(\\alpha, \\alpha' \\in \\mathrm{R}\\), \\(\\alpha \\neq \\alpha'\\), alors \\(\\alpha - \\alpha'\\) \\((= \\alpha\\,\\alpha'^{-1})\\) est non trivial sur chaque fibre) et pour chaque \\(s \\in \\mathrm{S}\\), on a\n  \\[ \\dim(\\mathrm{G}_s/k(s)) - \\dim(\\mathrm{T}_s/k(s)) = \\mathrm{Card}(\\mathrm{R}). \\]</p>\n  <p>(iii) On a \\(\\mathfrak{g} = \\mathfrak{t} \\oplus \\coprod_{\\alpha \\in \\mathrm{R}} \\mathfrak{g}^\\alpha\\).</p>\n  <p>L'équivalence de ces diverses conditions est triviale.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "XIX.3.7",
+     "type": "lemme",
+     "label": "3.7",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-groupe réductif, T un tore maximal de G, R un système de racines de G par rapport à T. Toute racine de G par rapport à T est localement sur S égale à un élément de R.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>C'est visible sur la condition (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Posons \\(\\mathscr{M} = \\underline{\\mathrm{Hom}}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,\\mathrm{S}})\\) ; c'est un S-préschéma en groupes constant tordu (<a class=\"ref\" href=\"#X.5.6\">Exp. X 5.6</a>). L'inclusion \\(\\mathrm{R} \\hookrightarrow \\mathscr{M}(\\mathrm{S})\\) définit un morphisme \\(\\mathrm{R}_{\\mathrm{S}} \\to \\mathscr{M}\\), où \\(\\mathrm{R}_{\\mathrm{S}}\\) est le S-préschéma constant défini par R ; grâce à la condition (ii), on voit facilement que ce morphisme est une immersion ouverte et fermée dont l'image n'est autre que \\(\\bigcup_{\\alpha \\in \\mathrm{R}} \\alpha(\\mathrm{S})\\) (chaque \\(\\alpha \\in \\mathrm{R}\\) étant considéré comme une section \\(\\mathrm{S} \\to \\mathscr{M}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathscr{R}\\) le foncteur des racines de G par rapport à T : par définition, \\(\\mathscr{R}(\\mathrm{S}')\\) est l'ensemble des racines de \\(\\mathrm{G}_{\\mathrm{S}'}\\) par rapport à \\(\\mathrm{T}_{\\mathrm{S}'}\\) pour tout \\(\\mathrm{S}' \\to \\mathrm{S}\\) ; si \\(\\mathrm{S}' = \\varnothing\\), alors \\(\\mathscr{M}(\\mathrm{S}') = \\mathscr{R}(\\mathrm{S}') = \\mathrm{Hom}_{\\mathrm{loc.const.}}(\\mathrm{S}', \\mathrm{R}) = e\\) ; sinon \\(\\mathrm{R} \\to \\mathscr{M}(\\mathrm{S}')\\) identifie R à un système de racines de \\(\\mathrm{G}_{\\mathrm{S}'}\\) par rapport à \\(\\mathrm{T}_{\\mathrm{S}'}\\), on a \\(\\mathscr{R}(\\mathrm{S}') = \\mathrm{Hom}_{\\mathrm{loc.const.}}(\\mathrm{S}', \\mathrm{R})\\), d'après <a class=\"ref\" href=\"#XIX.3.7\">3.7</a> ; ce qui montre que \\(\\mathscr{R}\\) est représentable par \\(\\mathrm{R}_{\\mathrm{S}}\\). Si maintenant on ne suppose plus nécessairement que G possède un système de racines relativement à T, \\(\\mathscr{R}\\) est de toute façon un sous-faisceau de \\(\\mathscr{M}\\) pour (fpqc). Localement pour cette topologie, G possède un système de racines par rapport à T (prendre par exemple T trivial). Par <a class=\"ref\" href=\"#IV\">Exp. IV</a> 4.6.8 et la théorie de la descente des sous-préschémas ouverts (resp. fermés), on obtient</p>"
+    },
+    {
+     "id": "XIX.3.8",
+     "type": "proposition",
+     "label": "3.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-groupe, T un tore maximal de G. Le foncteur \\(\\mathscr{R}\\) des racines de G par rapport à T est représentable par un S-préschéma fini constant tordu (<a class=\"ref\" href=\"#X.5.1\">Exp. X 5.1</a>) qui est un sous-préschéma ouvert et fermé de \\(\\underline{\\mathrm{Hom}}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,\\mathrm{S}})\\). Pour que \\(\\mathrm{R} \\subset \\underline{\\mathrm{Hom}}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,\\mathrm{S}})\\) soit un système de racines de G par rapport à T, il faut et il suffit que le morphisme \\(\\mathrm{R}_{\\mathrm{S}} \\to \\underline{\\mathrm{Hom}}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{T}, \\mathbb{G}_{m,\\mathrm{S}})\\) défini par l'inclusion précédente induise un isomorphisme \\(\\mathrm{R}_{\\mathrm{S}} \\xrightarrow{\\sim} \\mathscr{R}\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.3.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.3.9\">3.9.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un préschéma, G un S-groupe réductif, T un tore maximal de G, \\(\\alpha\\) une racine de G par rapport à T (i.e. une section de \\(\\mathscr{R}\\)). Considérons le noyau \\(\\mathrm{Ker}(\\alpha)\\) de \\(\\mathscr{R}\\), son unique tore maximal \\(\\mathrm{T}_\\alpha\\) et le centralisateur de ce dernier, \\(\\mathrm{Z}_\\alpha = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}_\\alpha)\\). C'est un S-groupe fermé dans G, <em>réductif</em> (<a class=\"ref\" href=\"#XIX.2.8\">2.8</a>) de <em>rang semi-simple</em> 1 (<a class=\"ref\" href=\"#XIX.1.12\">1.12</a>). De plus \\(\\underline{\\mathrm{Lie}}(\\mathrm{Z}_\\alpha/\\mathrm{S}) = \\mathfrak{t} \\oplus \\mathfrak{g}^\\alpha \\oplus \\mathfrak{g}^{-\\alpha}\\) (<a class=\"ref\" href=\"#XIX.1.12\">1.12</a>), donc \\(\\{\\alpha, -\\alpha\\}\\) est un système de racines de \\(\\mathrm{Z}_\\alpha\\) par rapport à T.</p>"
+    },
+    {
+     "id": "XIX.3.10",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.3.10\">3.10.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un préschéma, G un S-groupe réductif, T un tore maximal de G, \\(\\alpha\\) une racine de G par rapport à T. Si \\(k\\alpha\\), \\(k \\in \\mathbb{Q}\\) est une racine de G par rapport à T, alors \\(k = 1\\) ou \\(k = -1\\). Cela résulte aussitôt de <a class=\"ref\" href=\"#XIX.1.12\">1.12</a>.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-4",
+   "title": "4. Racines et schémas en groupes vectoriels",
+   "blocks": [
+    {
+     "id": "XIX.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.4\">4. Racines et schémas en groupes vectoriels</h2>"
+    },
+    {
+     "id": "XIX.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.4.1\">4.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un préschéma, \\(\\mathscr{F}\\) un \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module localement libre de type fini. Le S-préschéma \\(\\mathbf{W}(\\mathscr{F})\\) est lisse sur S. Son Algèbre de Lie est canoniquement isomorphe à \\(\\mathscr{F}\\). En effet, on a un isomorphisme canonique\n\\[ \\mathbf{W}(\\mathscr{F}) \\xrightarrow{\\ \\sim\\ } \\underline{\\mathrm{Lie}}(\\mathbf{W}(\\mathscr{F})/\\mathrm{S}) = \\mathbf{W}(\\mathscr{L}ie(\\mathbf{W}(\\mathscr{F})/\\mathrm{S})). \\]\n(<a class=\"ref\" href=\"#II.4.4\">Exp. II cor. à la déf. 4.4</a> et Exemples précédent <a class=\"ref\" href=\"#II.4.5\">4.5</a>). Nous identifierons toujours \\(\\mathscr{F}\\) et \\(\\mathscr{L}ie(\\mathbf{W}(\\mathscr{F})/\\mathrm{S})\\).</p>"
+    },
+    {
+     "id": "XIX.4.2",
+     "type": "lemme",
+     "label": "4.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, V un fibré vectoriel sur S, lisse sur S. Il existe alors un isomorphisme unique de \\(\\mathscr{O}_{\\mathrm{S}}\\)-Modules\n  \\[ \\exp : \\mathbf{W}(\\mathscr{L}ie(\\mathrm{V}/\\mathrm{S})) \\xrightarrow{\\ \\sim\\ } \\mathrm{V} \\]\n  qui induise l'identité sur les Algèbres de Lie.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on a \\(\\mathrm{V} = \\mathbf{V}(\\mathrm{F})\\) pour un certain \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module quasi-cohérent H. Alors on a un isomorphisme canonique\n\\[ \\mathbf{W}(\\mathscr{L}ie(\\mathrm{V}/\\mathrm{S})) = \\underline{\\mathrm{Lie}}(\\mathrm{V}/\\mathrm{S}) \\xrightarrow{\\ \\sim\\ } \\mathrm{V} \\]\n(<a class=\"ref\" href=\"#II\">Exp. II loc. cit.</a>). Alors \\(\\mathrm{H} \\simeq \\mathscr{L}ie(\\mathrm{V}/\\mathrm{S})^\\vee\\) est localement libre de type fini donc \\(\\mathrm{V} \\simeq \\mathbf{W}(\\mathrm{H}^\\vee)\\) et on a aussitôt l'unicité de \\(\\exp\\), car \\(\\mathbf{W}\\) est pleinement fidèle.</p>"
+    },
+    {
+     "id": "XIX.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.4.3\">4.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si V est un fibré vectoriel sur S, on désignera par \\(\\mathrm{V}^*\\) l'ouvert de V obtenu en en retirant la section 0. Notons la loi de groupe de V en notation multiplicative. L'opération de \\(\\mathscr{O}_{\\mathrm{S}}\\) sur V définissant la structure de module sera alors notée exponentiellement\n\\[ \\mathscr{O}_{\\mathrm{S}} \\underset{\\mathrm{S}}{\\times} \\mathrm{V} \\longrightarrow \\mathrm{V}, \\qquad (x, v) \\longmapsto v^x. \\]\nOn a \\((vv')^x = v^x v'^x\\), \\(v^{x+x'} = v^x v^{x'}\\), \\(v^{xx'} = (v^x)^{x'}\\). En particulier, si on restreint la loi d'opérateurs à \\(\\mathbb{G}_{m,\\mathrm{S}}\\), \\(\\mathrm{V}^*\\) est stable et est donc muni d'une structure d'objet à groupe d'opérateurs \\(\\mathbb{G}_{m,\\mathrm{S}}\\). On notera encore cette loi par \\((z, v) \\mapsto v^z\\).</p>"
+    },
+    {
+     "id": "XIX.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.4.4\">4.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, soit \\(\\mathscr{L}\\) un Module inversible sur S et \\(\\mathbf{W}(\\mathscr{L})\\) le \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module associé. Alors \\(\\mathbf{W}(\\mathscr{L})^*\\) est un fibré principal homogène sous \\(\\mathbb{G}_{m,\\mathrm{S}}\\) (localement trivial) qui n'est autre que le fibré principal associé au fibré vectoriel \\(\\mathbf{W}(\\mathscr{L})\\). On note \\(\\Gamma(\\mathrm{S}, \\mathscr{L})^* = \\mathbf{W}(\\mathscr{L})^*(\\mathrm{S})\\). Il y a correspondance bijective entre les isomorphismes de \\(\\mathscr{O}_{\\mathrm{S}}\\)-Modules \\(\\mathscr{O}_{\\mathrm{S}} \\simeq \\mathscr{L}\\), les isomorphismes de \\(\\mathscr{O}_{\\mathrm{S}}\\)-modules \\(\\mathscr{O}_{\\mathrm{S}} \\simeq \\mathbf{W}(\\mathscr{L})\\) et les sections \\(\\mathrm{S} \\to \\mathbf{W}(\\mathscr{L})^*\\). Cette correspondance s'effectue par \\(f \\mapsto \\mathbf{W}(f) \\mapsto \\mathbf{W}(f)(1)\\). Elle est compatible avec l'extension de la base. On peut donc considérer \\(\\mathbf{W}(\\mathscr{L})^*\\) comme le « schéma des trivialisations de \\(\\mathbf{W}(\\mathscr{L})\\) ».</p>"
+    },
+    {
+     "id": "XIX.4.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.4.5\">4.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient S un préschéma, T un tore sur S, P un S-groupe à groupe d'opérateurs \\(\\mathbb{G}_{m,\\mathrm{S}}\\) (par exemple un fibré vectoriel), \\(\\alpha\\) un caractère de T. On note \\(\\mathrm{T} \\cdot_\\alpha \\mathrm{P}\\) le produit semi-direct de P par T, T y opérant par le morphisme composé\n\\[ \\mathrm{T} \\xrightarrow{\\ \\alpha\\ } \\mathbb{G}_{m,\\mathrm{S}} \\longrightarrow \\underline{\\mathrm{Aut}}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{P}). \\]</p>"
+    },
+    {
+     "id": "XIX.4.6",
+     "type": "definition",
+     "label": "4.6",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XIX.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-préschéma en groupes, T un sous-groupe de G, \\(\\alpha\\) un caractère de T, \\(\\mathscr{L}\\) un \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module. Soit\n  \\[ p : \\mathbf{W}(\\mathscr{L}) \\longrightarrow \\mathrm{G} \\]\n  un morphisme de groupes. On dit que \\(p\\) est <em>normalisé par T avec le multiplicateur \\(\\alpha\\)</em> s'il vérifie les conditions équivalentes suivantes :</p>\n  <p>(i) \\(p\\) est un morphisme d'objets à groupe d'opérateurs T, si on fait opérer T sur \\(\\mathbf{W}(\\mathscr{L})\\) par \\(\\alpha\\) et sur G par automorphismes intérieurs. En d'autres termes, pour tout \\(\\mathrm{S}' \\to \\mathrm{S}\\) et tous \\(t \\in \\mathrm{T}(\\mathrm{S}')\\), \\(x \\in \\mathbf{W}(\\mathscr{L})(\\mathrm{S}') = \\Gamma(\\mathrm{S}', \\mathscr{L} \\otimes \\mathscr{O}_{\\mathrm{S}})\\), on a\n  \\[ \\mathrm{int}(t)p(x) = p(\\alpha(t)x). \\]</p>\n  <p>(ii) Le morphisme \\(\\mathrm{T} \\cdot_\\alpha \\mathbf{W}(\\mathscr{L}) \\to \\mathrm{G}\\) défini par le produit dans G (i.e. par \\((t, x) \\mapsto t \\cdot p(x)\\)) est un morphisme de groupes.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "XIX.4.7",
+     "type": "lemme",
+     "label": "4.7",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XIX.4.6\">4.6</a>, supposons de plus G lisse, de présentation finie, et à fibres connexes, T tore maximal de G, \\(\\mathscr{L}\\) inversible. Si \\(p\\) est un monomorphisme et \\(\\alpha\\) non nul sur chaque fibre, alors \\(\\alpha\\) est une racine de G par rapport à T.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet \\(\\mathscr{L}ie(p) : \\mathscr{L} \\to \\mathfrak{g}\\) est un monomorphisme qui se factorise par \\(\\mathfrak{g}^\\alpha\\).</p>"
+    },
+    {
+     "id": "XIX.4.8",
+     "type": "proposition",
+     "label": "4.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XIX.4.7\">4.7</a>, supposons que G soit réductif, et que \\(p\\) soit un monomorphisme. Alors \\(\\alpha\\) est une racine de G par rapport à T et \\(\\mathscr{L}ie(p)\\) induit un isomorphisme :\n  \\[ \\mathscr{L}ie(p) : \\mathscr{L} \\xrightarrow{\\ \\sim\\ } \\mathfrak{g}^\\alpha. \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, en vertu de <a class=\"ref\" href=\"#XIX.4.7\">4.7</a> et du fait que \\(\\mathfrak{g}^\\alpha\\) est inversible, il suffit de prouver que \\(\\alpha\\) est non nul sur chaque fibre. Soit donc \\(s \\in \\mathrm{S}\\) tel que \\(\\alpha_{\\overline{s}} = 0\\) (= 1 en notation multiplicative). Si X est une section non nulle de \\(\\mathscr{L} \\otimes_{\\mathrm{S}} k(\\overline{s})\\), \\(p(\\mathrm{X})\\) est un élément unipotent \\(\\neq e\\) de \\(\\mathrm{G}(\\overline{s})\\) qui centralise \\(\\mathrm{T}_{\\overline{s}}\\), ce qui est impossible, car celui-ci est son propre centralisateur.</p>"
+    },
+    {
+     "id": "XIX.4.9",
+     "type": "corollaire",
+     "label": "4.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XIX.4.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.9</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XIX.4.8\">4.8</a>, il existe un monomorphisme de groupes à opérateurs T (i.e. normalisé par T avec le multiplicateur \\(\\alpha\\))\n  \\[ \\mathbf{W}(\\mathfrak{g}^\\alpha) \\longrightarrow \\mathrm{G} \\]\n  qui induit sur les Algèbres de Lie le morphisme canonique \\(\\mathfrak{g}^\\alpha \\to \\mathfrak{g}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous verrons bientôt que <a class=\"ref\" href=\"#XIX.4.9\">4.9</a> est vérifié en fait chaque fois que G est un groupe réductif et \\(\\alpha\\) une racine de G par rapport à T, et qu'un tel morphisme est unique.</p>"
+    },
+    {
+     "id": "XIX.4.10",
+     "type": "rappel",
+     "label": "4.10",
+     "title": "Rappel",
+     "html": "<div class=\"thm thm-remark rappel\" id=\"XIX.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Rappel</span> <span class=\"thm-num\">4.10</span></div>\n  <div class=\"thm-body\"><p>Soient \\(k\\) un corps algébriquement clos, G un \\(k\\)-groupe réductif, T un tore maximal de G, \\(\\alpha\\) une racine de G par rapport à T. Il existe un monomorphisme\n  \\[ p : \\mathbb{G}_{a,k} \\longrightarrow \\mathrm{G} \\]\n  normalisé par T avec le multiplicateur \\(\\alpha\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Voir <em>BIBLE</em>, 13-05, th. 1.</p>"
+    },
+    {
+     "id": "XIX.4.11",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.4.11\">4.11.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Terminons ce n° par un résultat technique qui nous sera utile. Soient S un préschéma, et \\(\\mathscr{L}\\) un \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module inversible. Soit \\(q\\) un entier \\(&gt; 0\\) tel que \\(x \\mapsto x^q\\) soit un endomorphisme du S-groupe \\(\\mathbb{G}_{a,\\mathrm{S}}\\). (Si \\(\\mathrm{S} \\neq \\varnothing\\), on a \\(q = 1\\), ou \\(q = p^n\\), \\(p\\) étant un nombre premier nul sur S ; cela résulte aussitôt du fait élémentaire suivant : le p.g.c.d des coefficients binomiaux \\(\\binom{q}{i}\\), pour \\(i \\neq 0, q\\), est \\(p\\) si \\(q = p^n\\), \\(p\\) premier, et 1 dans le cas contraire). Le morphisme défini par la puissance \\(q\\)-ième\n\\[ \\mathscr{L} \\longrightarrow \\mathscr{L}^{\\otimes q} \\]\nest un morphisme de faisceaux de groupes abéliens. Il définit par changement de base un morphisme de S-préschémas en groupes :\n\\[ \\mathbf{W}(\\mathscr{L}) \\longrightarrow \\mathbf{W}(\\mathscr{L}^{\\otimes q}). \\]\nEn particulier, si \\(\\mathscr{L}'\\) est un autre Module inversible et si on a un morphisme de \\(\\mathscr{O}_{\\mathrm{S}}\\)-Modules\n\\[ h : \\mathscr{L}^{\\otimes q} \\longrightarrow \\mathscr{L}', \\]\non en déduit un morphisme de S-préschémas en groupes :\n\\[ \\mathbf{W}(\\mathscr{L}) \\longrightarrow \\mathbf{W}(\\mathscr{L}') \\]\npar \\(x \\mapsto h(x^q)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ces notations posées, on a</p>"
+    },
+    {
+     "id": "XIX.4.12",
+     "type": "proposition",
+     "label": "4.12",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.4.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.12</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, T (resp. \\(\\mathrm{T}'\\)) un S-tore, \\(\\mathscr{L}\\) (resp. \\(\\mathscr{L}'\\)) un \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module inversible, \\(\\alpha\\) (resp. \\(\\alpha'\\)) un caractère de T (resp. \\(\\mathrm{T}'\\)) ; considérons le produit semi-direct \\(\\mathrm{T} \\cdot_\\alpha \\mathbf{W}(\\mathscr{L})\\), resp. \\(\\mathrm{T}' \\cdot_{\\alpha'} \\mathbf{W}(\\mathscr{L}')\\). Soient\n  \\[ f : \\mathrm{T} \\longrightarrow \\mathrm{T}' \\]\n  un morphisme de groupes et\n  \\[ g : \\mathbf{W}(\\mathscr{L}) \\longrightarrow \\mathbf{W}(\\mathscr{L}') \\]\n  un morphisme (non nécessairement multiplicatif) vérifiant la condition suivante :\n  \\[ g(\\alpha(t)x) = \\alpha'(f(t))\\,g(x) \\]\n  pour tous \\(x \\in \\mathbf{W}(\\mathscr{L})(\\mathrm{S}')\\), \\(t \\in \\mathrm{T}(\\mathrm{S}')\\), \\(\\mathrm{S}' \\to \\mathrm{S}\\).</p>\n  <p>Soit \\(s_0 \\in \\mathrm{S}\\) tel que \\(\\alpha_{\\overline{s}_0} \\neq e\\).</p>\n  <p>a) Supposons que \\(g\\) envoie la section 0 sur la section 0 et que pour tout entier \\(n &gt; 0\\), on ait \\((\\alpha' \\circ f)_{\\overline{s}_0} \\neq n\\,\\alpha_{\\overline{s}_0}\\). Alors \\(g = 0\\) au voisinage de \\(s_0\\).</p>\n  <p>b) Supposons que \\(g\\) soit un morphisme de groupes tel que \\(g_{\\overline{s}_0} \\neq 0\\). Il existe alors un ouvert U de S contenant \\(s_0\\) et un entier \\(q &gt; 0\\) tel que \\(x \\mapsto x^q\\) soit un endomorphisme de \\(\\mathbb{G}_{a,\\mathrm{U}}\\) et que \\((\\alpha' \\circ f)_{\\mathrm{U}} = q\\,\\alpha_{\\mathrm{U}}\\).</p>\n  <p>c) Supposons que \\((\\alpha' \\circ f)_{\\overline{s}_0} = q\\,\\alpha_{\\overline{s}_0}\\), où \\(q\\) est un entier \\(&gt; 0\\) tel que \\(x \\mapsto x^q\\) soit un endomorphisme de \\(\\mathbb{G}_{a,\\mathrm{S}}\\). Il existe alors un ouvert U de S contenant \\(s_0\\) et un unique morphisme de \\(\\mathscr{O}_{\\mathrm{S}}\\)-Modules\n  \\[ h : \\mathscr{L}^{\\otimes q}|\\mathrm{U} \\longrightarrow \\mathscr{L}'|\\mathrm{U} \\]\n  tels que \\(g_{\\mathrm{U}}\\) soit le morphisme composé\n  \\[ \\mathbf{W}(\\mathscr{L})_{\\mathrm{U}} \\xrightarrow{x \\mapsto x^q} \\mathbf{W}(\\mathscr{L}^{\\otimes q})_{\\mathrm{U}} \\xrightarrow{\\mathbf{W}(h)} (\\mathscr{L}')_{\\mathrm{U}}. \\]</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme la conclusion est locale sur S, on peut supposer que \\(\\mathbf{W}(\\mathscr{L}) = \\mathbf{W}(\\mathscr{L}') = \\mathbb{G}_{a,\\mathrm{S}}\\) et donc que \\(g\\) s'exprime comme un polynôme\n\\[ g(\\mathrm{X}) = \\sum_{n \\geqslant 0} a_n \\mathrm{X}^n, \\qquad a_n \\in \\Gamma(\\mathrm{S}, \\mathscr{O}_{\\mathrm{S}}). \\]\nLa condition qui lie \\(f\\) et \\(g\\) s'écrit comme une identité dans \\(\\Gamma(\\mathrm{S}', \\mathscr{O}_{\\mathrm{S}'})[\\mathrm{X}]\\) :\n\\[ \\sum_{n \\geqslant 0} a_n \\alpha'(f(t))\\mathrm{X}^n = \\sum_{n \\geqslant 0} a_n \\alpha(t)^n \\mathrm{X}^n, \\]\nsoit, pour tout \\(n \\geqslant 0\\), tout \\(\\mathrm{S}' \\to \\mathrm{S}\\) et tout \\(t \\in \\mathrm{T}(\\mathrm{S}')\\),\n\\[ a_n(\\alpha'(f(t)) - \\alpha(t)^n) = 0. \\]\nPour chaque \\(n \\geqslant 0\\), soit \\(\\mathrm{S}_n\\) l'ensemble des \\(s \\in \\mathrm{S}\\) tels que \\((\\alpha' \\circ f)_{\\overline{s}} = n\\,\\alpha_{\\overline{s}}\\). On sait (<a class=\"ref\" href=\"#IX.5.3\">Exp. IX 5.3</a>) que les \\(\\mathrm{S}_n\\) sont ouverts et fermés, et que \\((\\alpha' \\circ f)_{\\mathrm{S}_n} = n\\,\\alpha_{\\mathrm{S}_n}\\). De plus, comme \\(\\alpha_{\\overline{s}_0} \\neq e\\), on peut, quitte à restreindre S, supposer que \\(\\alpha\\) est non nul sur chaque fibre (même référence), ce qui entraîne que les \\(\\mathrm{S}_n\\) sont disjoints. Quitte à restreindre S, on peut donc supposer que l'on est dans l'un des deux cas suivants : il existe un \\(n\\) avec \\(\\mathrm{S} = \\mathrm{S}_n\\) ou bien tous les \\(\\mathrm{S}_n\\) sont vides.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(m \\geqslant 0\\) tel que \\(\\mathrm{S}_m = \\varnothing\\), je dis qu'alors \\(a_m = 0\\) ; en effet \\(\\alpha' \\circ f\\) et \\(m\\,\\alpha\\) sont distincts sur chaque fibre de S, et on a :</p>"
+    },
+    {
+     "id": "XIX.4.13",
+     "type": "lemme",
+     "label": "4.13",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.4.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.13</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, T un S-tore, \\(\\alpha\\) et \\(\\alpha'\\) deux caractères de S distincts sur chaque fibre ; il existe une famille couvrante pour (fpqc) : \\(\\{\\mathrm{S}_i \\to \\mathrm{S}\\}\\), et pour chaque \\(i\\) un \\(t_i \\in \\mathrm{T}(\\mathrm{S}_i)\\), tels que \\(\\alpha(t_i) - \\alpha'(t_i) = 1\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le lemme est trivial, par réduction au cas diagonalisable, puis au cas \\(\\mathrm{T} = \\mathbb{G}_{m,\\mathrm{S}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Reprenons la démonstration, on vient de prouver (a). Dans le cas (b) et (c), il existe un \\(n\\) avec \\(\\mathrm{S} = \\mathrm{S}_n\\) \\((n = q\\) dans (c)). Par le résultat précédent on a donc \\(a_m = 0\\) pour \\(m \\neq n\\), ce qui prouve que \\(g\\) s'écrit\n\\[ g(\\mathrm{X}) = a_n \\mathrm{X}^n, \\qquad a_n \\in \\Gamma(\\mathrm{S}, \\mathscr{O}_{\\mathrm{S}}). \\]\nCela prouve aussitôt (c). Dans le cas (b), on sait que \\(a_n(s_0) \\neq 0\\), on peut donc supposer \\(a_n\\) inversible sur S, ce qui entraîne que \\(x \\mapsto x^n\\) est un endomorphisme de \\(\\mathbb{G}_{a,\\mathrm{S}}\\) (en vertu de l'hypothèse de (b)) et achève la démonstration.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-5",
+   "title": "5. Un exemple instructif",
+   "blocks": [
+    {
+     "id": "XIX.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.5\">5. Un exemple instructif</h2>"
+    },
+    {
+     "id": "XIX.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.5.1\">5.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(k\\) un corps algébriquement clos de caractéristique 0. Posons \\(\\mathrm{A} = k[t]\\), anneau des polynômes à une variable sur \\(k\\) et \\(\\mathrm{S} = \\operatorname{Spec}(\\mathrm{A})\\). Considérons l'Algèbre de Lie \\(\\mathfrak{g}\\) sur \\(\\mathscr{O}_{\\mathrm{S}}\\) suivante : Comme Module, elle est libre de dimension 3, de base \\(\\{\\mathrm{X}, \\mathrm{Y}, \\mathrm{H}\\}\\) ; la table de multiplication est\n\\[ [\\mathrm{X}, \\mathrm{Y}] = 2t\\mathrm{H}, \\quad [\\mathrm{H}, \\mathrm{X}] = \\mathrm{X}, \\quad [\\mathrm{H}, \\mathrm{Y}] = -\\mathrm{Y}. \\]\nPour \\(s \\in \\mathrm{S}\\), \\(s \\neq s_0\\) (point défini par \\(t = 0\\)) la fibre réduite \\(\\mathfrak{g}(s)\\) est isomorphe à l'algèbre de Lie du groupe \\(\\mathrm{PGL}_{2,k(s)}\\). Pour \\(s = s_0\\), c'est une algèbre de Lie résoluble.</p>"
+    },
+    {
+     "id": "XIX.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.5.2\">5.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\mathrm{G}_1\\) le schéma en groupes des automorphismes de \\(\\mathfrak{g}\\) : pour tout \\(\\mathrm{S}' \\to \\mathrm{S}\\), \\(\\mathrm{G}_1(\\mathrm{S}')\\) est le groupe des automorphismes de la \\(\\mathscr{O}_{\\mathrm{S}'}\\)-Algèbre de Lie \\(\\mathfrak{g} \\otimes_{\\mathscr{O}_{\\mathrm{S}}} \\mathscr{O}_{\\mathrm{S}'}\\). C'est un sous-préschéma fermé du groupe \\(\\mathrm{GL}(\\mathfrak{g})\\) des automorphismes du \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module \\(\\mathfrak{g}\\). Soient \\(\\mathrm{S}' \\to \\mathrm{S}\\) et \\(u \\in \\mathrm{M}_3(\\Gamma(\\mathrm{S}', \\mathscr{O}_{\\mathrm{S}'}))\\) considéré comme un endomorphisme du \\(\\mathscr{O}_{\\mathrm{S}}\\)-Module \\(\\mathfrak{g} \\otimes_{\\mathscr{O}_{\\mathrm{S}}} \\mathscr{O}_{\\mathrm{S}'}\\) :\n\\[ \\begin{aligned}\nu(\\mathrm{X}) &amp;= a\\mathrm{X} + b\\mathrm{Y} + e\\mathrm{H}, \\\\\nu(\\mathrm{Y}) &amp;= b'\\mathrm{X} + a'\\mathrm{Y} + e'\\mathrm{H}, \\\\\nu(\\mathrm{H}) &amp;= c\\mathrm{X} + c'\\mathrm{Y} + d\\mathrm{H}.\n\\end{aligned} \\]\nOn voit aussitôt que \\(u\\) est une section de \\(\\mathrm{G}_1\\) si et seulement si \\(\\mathrm{dét}(u)\\) est inversible et si on a les relations :\n\\[ \\begin{aligned}\n&amp;(1)\\ \\ a(d-1) = ec, &amp; &amp;(1')\\ \\ a'(d-1) = e'c', \\\\\n&amp;(2)\\ \\ b(d+1) = ec', &amp; &amp;(2')\\ \\ b'(d+1) = e'c, \\\\\n&amp;(3)\\ \\ e = 2t(bc - ac'), &amp; &amp;(3')\\ \\ e' = 2t(b'c' - a'c), \\\\\n&amp;(4)\\ \\ 2tc = eb' - ae', &amp; &amp;(4')\\ \\ 2tc' = be' - ea', \\\\\n&amp;(5)\\ \\ 2t(aa' - bb') = 2td. &amp; &amp;\n\\end{aligned} \\]</p>"
+    },
+    {
+     "id": "XIX.5.3",
+     "type": "lemme",
+     "label": "5.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\"><p>Les relations (1) … (5) impliquent\n  \\[ \\mathrm{dét}(u) = aa'(2 - d) + bb'(d + 2), \\]\n  \\[ aa' - bb' = d \\cdot \\mathrm{dét}(u). \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, la première assertion s'obtient aussitôt en reportant les relations (1), (1'), (2), (2') dans le développement de \\(\\mathrm{dét}(u)\\) :\n\\[ \\begin{aligned}\n\\mathrm{dét}(u) &amp;= aa'd + be'c + b'c'e - a'ec - ae'c' - bb'd \\\\\n&amp;= aa'd + bb'(d+1) + bb'(d+1) - aa'(d-1) - bb'd - aa'(d-1) \\\\\n&amp;= aa'(d - d + 1 - d + 1) + bb'(d + 1 + d + 1 - d) \\\\\n&amp;= aa'(2 - d) + bb'(d + 2).\n\\end{aligned} \\]\nMultipliant alors cette relation par \\(d\\), on obtient\n\\[ d \\cdot \\mathrm{dét}(u) = aa'(2d - d^2) + bb'(d^2 + 2d). \\]\nMais la relation \\((1) \\times (1') = (2) \\times (2')\\) donne aussitôt\n\\[ aa'(d-1)^2 = bb'(d+1)^2. \\]\nCombinant les deux relations précédentes, on trouve aussitôt la seconde formule cherchée.</p>"
+    },
+    {
+     "id": "XIX.5.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.5.4\">5.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons alors \\(\\mathrm{G} = \\mathrm{G}_1 \\cap \\mathrm{SL}(\\mathfrak{g})\\). C'est le sous-groupe fermé de \\(\\mathrm{G}_1\\) défini par l'équation \\(\\mathrm{dét}(u) = 1\\). C'est donc un groupe affine sur S.</p>"
+    },
+    {
+     "id": "XIX.5.5",
+     "type": "proposition",
+     "label": "5.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>Le groupe G est lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.5.6",
+     "type": "lemme",
+     "label": "5.6",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\"><p>Soit U l'ouvert de \\(\\underline{\\mathrm{End}}_{\\mathrm{A}}(\\mathfrak{g}) \\simeq \\mathbf{W}(\\mathrm{M}_3(\\mathscr{O}_{\\mathrm{S}}))\\) défini par la condition « \\(ad\\) inversible », i.e. l'ouvert \\(\\underline{\\mathrm{End}}_{\\mathrm{A}}(\\mathfrak{g})_f\\), où \\(f\\) est la fonction définie par \\(f(u) = ad\\). Alors \\(\\mathrm{U} \\cap \\mathrm{G}\\) est le sous-préschéma fermé de U défini par les six équations :\n  \\[ (1), \\quad (2), \\quad (2'), \\quad (3), \\quad (3') \\quad \\text{et} \\quad (\\mathrm{D}) : aa' - bb' = d. \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est d'abord clair que ces six relations sont vérifiées par tout « point » de G (lemme <a class=\"ref\" href=\"#XIX.5.3\">5.3</a>), en particulier par tout « point » de \\(\\mathrm{U} \\cap \\mathrm{G}\\). Réciproquement, il faut montrer que si \\(u \\in \\mathrm{U}(\\mathrm{S}')\\) (pour tout \\(\\mathrm{S}' \\to \\mathrm{S}\\)), et si \\(u\\) vérifie les six conditions de l'énoncé, alors \\(\\mathrm{dét}(u) = 1\\) et \\(u\\) vérifie aussi (1'), (4), (4') et (5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a d'abord \\((\\mathrm{D}) \\Rightarrow (5)\\). Combinant (2) et (2'), on a aussitôt\n\\[ bb'(d+1) = bce' = b'c'e. \\]\nMais par (3) et (3'), on a, en écrivant de deux manières \\(2t(bc - ac')(b'c' - a'c)\\) :\n\\[ (bc - ac')e' = (b'c' - a'c)e. \\]\nCombinant avec la relation précédente, cela donne \\(ac'e' = a'ce\\). Mais par (1), \\(a'ce = a'a(d-1)\\), ce qui prouve \\(a(a'(d-1) - e'c') = 0\\) et entraîne (1'), \\(a\\) étant supposé inversible.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons (4) et (4'). Faisons-le par exemple pour (4'), l'autre calcul s'en déduisant par symétrie. Par (3) et (3'), on a aussitôt\n\\[ a'e + be' = -2t(aa' - bb')c' = -2tdc'. \\]\nCombinant (1') et (2), on a aussitôt\n\\[ a'e + be' = d(be' - ea'), \\]\nce qui termine la démonstration de (4'), \\(d\\) étant supposé inversible. Par <a class=\"ref\" href=\"#XIX.5.3\">5.3</a>, (D) entraîne \\(\\mathrm{dét}(u) = 1\\).</p>"
+    },
+    {
+     "id": "XIX.5.7",
+     "type": "lemme",
+     "label": "5.7",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.5.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.7</span></div>\n  <div class=\"thm-body\"><p>G est lisse sur S le long de la section unité.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par <a class=\"ref\" href=\"#XIX.5.6\">5.6</a> et SGA 1, II 4.10, il suffit de prouver que les différentielles des fonctions\n\\[ a(d-1) - ec, \\quad b(d+1) - ec', \\quad b'(d+1) - e'c, \\]\n\\[ e - 2t(bc - ac'), \\quad e' - 2t(b'c' - a'c), \\quad aa' - bb' - d, \\]\naux points de la section unité de G sont linéairement indépendantes. Or notant par une majuscule la différentielle de la minuscule correspondant, ce sont\n\\[ \\mathrm{D}, \\quad 2\\mathrm{B}, \\quad 2\\mathrm{B}', \\quad \\mathrm{E} + 2t\\mathrm{C}', \\quad \\mathrm{E}' + 2t\\mathrm{C}, \\quad \\mathrm{A} + \\mathrm{A}' + \\mathrm{B}, \\]\nqui sont bien linéairement indépendantes modulo tout \\((t - a)\\), \\(a \\in \\mathrm{A}\\).</p>"
+    },
+    {
+     "id": "XIX.5.8",
+     "type": "lemme",
+     "label": "5.8",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.8</span></div>\n  <div class=\"thm-body\"><p>Pour \\(s \\in \\mathrm{S}\\), \\(s \\neq s_0\\), la fibre \\(\\mathrm{G}_s\\) est connexe et semi-simple.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet \\(\\mathfrak{g}(s)\\) est isomorphe à l'Algèbre de Lie de \\(\\mathrm{PL}_{2\\,k(s)}\\), on a \\(\\mathrm{G}_s = \\mathrm{G}_{1\\,s}\\) lisse sur \\(k(s)\\) et il est connu que le groupe des automorphismes de l'algèbre de Lie de \\(\\mathrm{PL}_2\\) sur un corps de caractéristique 0 est \\(\\mathrm{PL}_2\\) lui-même.</p>"
+    },
+    {
+     "id": "XIX.5.9",
+     "type": "lemme",
+     "label": "5.9",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.5.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.9</span></div>\n  <div class=\"thm-body\"><p>La fibre \\(\\mathrm{G}_{s_0}\\) est résoluble et a deux composantes connexes qui sont de la forme suivante :\n  \\[ \\mathrm{G}^0_{s_0} = \\left\\{ \\begin{pmatrix} a &amp; 0 &amp; 0 \\\\ 0 &amp; a^{-1} &amp; 0 \\\\ c &amp; c' &amp; 1 \\end{pmatrix} \\right\\} \\quad \\text{et} \\quad \\mathrm{G}^-_{s_0} = \\left\\{ \\begin{pmatrix} 0 &amp; b &amp; 0 \\\\ b^{-1} &amp; 0 &amp; 0 \\\\ c &amp; c' &amp; -1 \\end{pmatrix} \\right\\}. \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, on a \\(e = e' = 0\\), car \\(t = 0\\) en \\(s_0\\). On résout alors immédiatement les équations (1) à (5) et (D).</p>"
+    },
+    {
+     "id": "XIX.5.10",
+     "type": "lemme",
+     "label": "5.10",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XIX.5.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">5.10</span></div>\n  <div class=\"thm-body\"><p>\\(w = \\begin{pmatrix} 0 &amp; 1 &amp; 0 \\\\ 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; -1 \\end{pmatrix}\\) est une section de G sur S, qui est telle que \\(w(s_0) \\in \\mathrm{G}^-_{s_0}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons maintenant <a class=\"ref\" href=\"#XIX.5.5\">5.5</a>. On sait que si on note \\(\\mathrm{G}^0\\) la réunion des composantes neutres des fibres de G (c'est-à-dire le complémentaire de \\(\\mathrm{G}^-_{s_0}\\)), \\(\\mathrm{G}^0\\) est un sous-groupe ouvert de G lisse sur S, par <a class=\"ref\" href=\"#XIX.5.7\">5.7</a>. Comme, par translation, G est évidemment lisse aux points de \\(w(\\mathrm{S})\\), G est lisse sur S.</p>"
+    },
+    {
+     "id": "XIX.5.11",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.5.11\">5.11.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons le morphisme \\(\\mathbb{G}_{m,\\mathrm{S}} \\to \\mathrm{G}^0\\) défini par \\(z \\mapsto \\begin{pmatrix} z &amp; 0 &amp; 0 \\\\ 0 &amp; 1/z &amp; 0 \\\\ 0 &amp; 0 &amp; 1 \\end{pmatrix}\\). C'est un monomorphisme qui définit un tore T de \\(\\mathrm{G}^0\\). Je dis qu'on a\n\\[ \\mathrm{T} = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T}) = \\underline{\\mathrm{Centr}}_{\\mathrm{G}_0}(\\mathrm{T}). \\]\nIl suffit en effet de vérifier la première égalité. Comme il s'agit de sous-groupes lisses sur S de G, il suffit de vérifier qu'ils ont les mêmes points géométriques. Pour les fibres aux points \\(s \\neq s_0\\), cela résulte de ce que \\(\\mathrm{PGL}_{2,k(s)}\\) est réductif et de ce que \\(\\mathrm{T}_s\\) en est un tore maximal pour des raisons de dimensions (cf. <a class=\"ref\" href=\"#XIX.1.11\">1.11</a>). Sur la fibre de \\(s_0\\), le calcul se fait immédiatement. Il en résulte en particulier que T est un tore maximal de G et de \\(\\mathrm{G}^0\\).</p>"
+    },
+    {
+     "id": "XIX.5.12",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.5.12\">5.12.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La section \\(w\\) de G définie en <a class=\"ref\" href=\"#XIX.5.9\">5.9</a> normalise T. Il en résulte aussitôt (cf. <a class=\"ref\" href=\"#XIX.2.4\">2.4</a>) que le groupe de Weyl de G est isomorphe à \\((\\mathbb{Z}/2\\mathbb{Z})_{\\mathrm{S}}\\), et en particulier fini.\n\\[ \\mathrm{W}_{\\mathrm{G}}(\\mathrm{T}) = \\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{T})/\\mathrm{T} = (\\mathbb{Z}/2\\mathbb{Z})_{\\mathrm{S}}. \\]\nEn revanche \\(\\mathrm{W}_{\\mathrm{G}^0}(\\mathrm{T})\\) n'est pas fini : il lui « manque un point » au-dessus de \\(s_0\\).</p>"
+    },
+    {
+     "id": "XIX.5.13",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XIX.5.13\">5.13.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'immersion ouverte \\(\\mathrm{G}^0 \\to \\mathrm{G}\\) n'est pas une immersion fermée (car \\(\\mathrm{G}^0\\) est dense dans G) ; elle est cependant un morphisme <em>affine</em> (et donc \\(\\mathrm{G}^0\\) est <em>affine</em> sur S). En effet, comme \\(\\mathrm{G}^0_{s_0}\\) est fermé dans \\(\\mathrm{G}_{s_0}\\), qui est fermé dans G, le complémentaire U de \\(\\mathrm{G}^0_{s_0}\\) dans G est ouvert ; \\(\\mathrm{G}^0\\) et U forment un recouvrement ouvert de G et il suffit de vérifier que les immersions \\(\\mathrm{G}^0 \\to \\mathrm{G}^0\\) et \\(\\mathrm{G}^0 \\cap \\mathrm{U} \\to \\mathrm{U}\\) sont affines ; pour la première c'est trivial, pour la seconde, on remarque que \\(\\mathrm{U} \\cap \\mathrm{G}^0\\) est défini dans U par l'équation : \\(t \\neq 0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc construit un S-groupe affine lisse, à fibres connexes, \\(\\mathrm{G}^0\\), possédant un tore maximal T qui est son propre centralisateur et dont le groupe de Weyl \\(\\mathrm{W}_{\\mathrm{G}^0}(\\mathrm{T})\\) n'est pas fini.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XIX-6",
+   "title": "6. Existence locale de tores maximaux. Le groupe de Weyl",
+   "blocks": [
+    {
+     "id": "XIX.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XIX.6\">6. Existence locale de tores maximaux. Le groupe de Weyl</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Au cours de la démonstration de <a class=\"ref\" href=\"#XIX.2.5\">2.5</a>, nous avons utilisé un résultat de <a class=\"ref\" href=\"#XI\">Exp. XI</a> sur l'existence locale pour la topologie étale de tores maximaux ; la démonstration de Exp. XI utilise un résultat fin de représentabilité (<a class=\"ref\" href=\"#XI.4.1\">XI 4.1</a>). Dans le cas particulier qui nous occupe, on peut en donner une autre démonstration, basée sur les idées de <a class=\"ref\" href=\"#XII.7\">Exp. XII n° 7</a>, et de nature beaucoup plus élémentaire.</p>"
+    },
+    {
+     "id": "XIX.6.1",
+     "type": "proposition",
+     "label": "6.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma en groupes lisse, affine et à fibres connexes sur S, \\(s_0\\) un point de S tel que les tores maximaux de la fibre géométrique \\(\\mathrm{G}_{\\overline{s}_0}\\) soient leur propre centralisateur. Il existe un morphisme étale \\(\\mathrm{S}' \\to \\mathrm{S}\\) couvrant \\(\\mathrm{S}_0\\), et un tore maximal trivial T de \\(\\mathrm{G}_{\\mathrm{S}'}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'abord, on peut supposer S affine. Comme G est de présentation finie sur S, on peut supposer S noethérien, puis local, puis hensélien à corps résiduel séparablement clos (cf. EGA IV, 8.12, § 8.8, et § 18.8). Posons donc \\(\\mathrm{S} = \\operatorname{Spec}(\\mathrm{A})\\), A hensélien à corps résiduel \\(k = k(s_0)\\) séparablement clos. Choisissons un tore maximal \\(\\mathrm{T}_0\\) de \\(\\mathrm{G}_0\\) \\((= \\mathrm{G}_k)\\) (il en existe, par exemple parce que le schéma des tores maximaux de \\(\\mathrm{G}_0\\) est lisse sur \\(k\\), <a class=\"ref\" href=\"#XII.7.1\">Exp. XII, 7.1 c</a>)) ; comme \\(k\\) est séparablement clos, \\(\\mathrm{T}_0\\) est trivial et est donc donné par un monomorphisme de groupes\n\\[ f_0 : \\mathbb{G}_{m,k}^r \\longrightarrow \\mathrm{G}_0. \\]\nSoit \\(m\\) un entier \\(&gt; 1\\) premier à la caractéristique de \\(k\\). Pour tout \\(h &gt; 0\\), \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}_0}({}_{m^h}\\mathrm{T}_0)\\) est représentable par un sous-préschéma fermé de \\(\\mathrm{G}_0\\) (<a class=\"ref\" href=\"#VIII.6.7\">Exp. VIII 6.7</a>). Comme les \\({}_{m^h}\\mathrm{T}_0\\) sont schématiquement denses dans \\(\\mathrm{T}_0\\) (cf. <a class=\"ref\" href=\"#IX.4.10\">Exp. IX 4.10</a>) et que \\(\\mathrm{G}_0\\) est noethérien, il existe un \\(h\\) tel que\n\\[ \\underline{\\mathrm{Centr}}_{\\mathrm{G}_0}({}_{m^h}\\mathrm{T}_0) = \\underline{\\mathrm{Centr}}_{\\mathrm{G}_0}(\\mathrm{T}_0) = \\mathrm{T}_0. \\]\nPosons \\(n = m^h\\) ; comme \\(n\\) est inversible sur S, \\({}_n\\mathbb{G}_{m,\\mathrm{S}}\\) est isomorphe à \\((\\mathbb{Z}/n\\mathbb{Z})_{\\mathrm{S}}\\) ; \\(f_0\\) définit donc un monomorphisme de groupes\n\\[ g_0 : (\\mathbb{Z}/n\\mathbb{Z})_k^r \\longrightarrow \\mathrm{G}_0 \\]\ntel que \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(g_0) = \\mathrm{T}_0\\). Or le S-foncteur\n\\[ \\mathrm{P} = \\underline{\\mathrm{Hom}}_{\\mathrm{S}\\text{-gr.}}((\\mathbb{Z}/n\\mathbb{Z})_{\\mathrm{S}}^r, \\mathrm{G}) \\]\nest représentable par un S-préschéma de type fini (comme sous-préschéma fermé de \\({}_n\\mathrm{G} = \\underline{\\mathrm{Hom}}_{\\mathrm{S}\\text{-gr.}}((\\mathbb{Z}/n\\mathbb{Z})_{\\mathrm{S}}, \\mathrm{G}) = \\mathrm{Ker}(\\mathrm{G} \\xrightarrow{n} \\mathrm{G})\\)). Mais P est lisse sur S (<a class=\"ref\" href=\"#IX.3.6\">Exp. IX 3.6</a>), donc \\(g_0 \\in \\mathrm{P}(k)\\) se relève en une section \\(g \\in \\mathrm{P}(\\mathrm{S})\\) (Lemme de Hensel, <a class=\"ref\" href=\"#XI.1.11\">Exp. XI 1.11</a>) :\n\\[ g : (\\mathbb{Z}/n\\mathbb{Z})_{\\mathrm{S}}^r \\longrightarrow \\mathrm{G}. \\]\nConsidérons \\(\\mathrm{H} = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(g)\\) ; c'est un sous-préschéma en groupe fermé de G, lisse sur S (<a class=\"ref\" href=\"#IX.3.3\">Exp. IX, 3.3</a>) et \\(\\mathrm{H}_0 = \\mathrm{T}_0\\) par hypothèse. Soit alors \\(\\mathrm{H}^0\\) la composante neutre de H ; c'est un sous-préschéma en groupes de G, lisse et à fibres connexes, dont la fibre spéciale est un tore. Par <a class=\"ref\" href=\"#X.8.1\">Exp. X 8.1</a>, c'est un tore, nécessairement trivial (<a class=\"ref\" href=\"#X.4.6\">Exp. X 4.6</a>). Posons \\(\\mathrm{H}^0 = \\mathrm{T}\\) et soit \\(\\mathrm{C} = \\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{T})\\) qui est un sous-groupe fermé de G (<a class=\"ref\" href=\"#VIII.6.5\">Exp. VIII 6.5 e</a>), lisse (<a class=\"ref\" href=\"#XI.2.4\">Exp. XI 2.4</a>). Considérons \\(\\mathrm{C}^0\\) (On a en fait \\(\\mathrm{C}^0 = \\mathrm{C}\\), mais nous n'avons pas besoin de le savoir) ; \\(\\mathrm{C}^0 \\supset \\mathrm{T}\\) sont deux groupes lisses et à fibres connexes. Ils coïncident en \\(s_0\\), donc au voisinage. Quitte à restreindre S, on peut donc supposer \\(\\mathrm{C}^0 = \\mathrm{T}\\), donc a fortiori T maximal.</p>"
+    },
+    {
+     "id": "XIX.6.2",
+     "type": "remarque",
+     "label": "6.2",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-plain remarque\" id=\"XIX.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\"><p>La démonstration montre en particulier que le rang réductif de \\(\\mathrm{G}_{\\overline{s}}\\) est constant au voisinage de \\(s = s_0\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XIX.6.3",
+     "type": "proposition",
+     "label": "6.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XIX.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.3</span></div>\n  <div class=\"thm-body\">\n  <p>Soient S un préschéma, G un S-préschéma en groupes lisse et de présentation finie sur S, Q un sous-tore de G.</p>\n  <p>(i) \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) et \\(\\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{Q})\\) sont représentables par des sous-préschémas en groupes fermés, lisses (et donc de présentation finie) sur S.</p>\n  <p>(ii) \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est un sous-préschéma ouvert et fermé de \\(\\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{Q})\\). Le quotient \\(\\mathrm{W}_{\\mathrm{G}}(\\mathrm{Q}) = \\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{Q})/\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) est représentable par un sous-préschéma en groupes ouvert de \\(\\underline{\\mathrm{Aut}}_{\\mathrm{S}\\text{-gr.}}(\\mathrm{Q})\\), c'est donc un S-préschéma en groupes quasi-fini, étale et séparé sur S.</p>\n  <p>(iii) Pour tout \\(s \\in \\mathrm{S}\\), posons\n  \\[ w(s) = (\\underline{\\mathrm{Norm}}_{\\mathrm{G}(\\overline{s})}(\\mathrm{Q}(\\overline{s})) : \\underline{\\mathrm{Centr}}_{\\mathrm{G}(\\overline{s})}(\\mathrm{Q}(\\overline{s}))). \\]\n  Alors \\(s \\mapsto w(s)\\) est semi-continue inférieurement, et est constante au voisinage de \\(s\\) si et seulement si \\(\\mathrm{W}_{\\mathrm{G}}(\\mathrm{Q})\\) est fini sur S au voisinage de \\(s\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par <a class=\"ref\" href=\"#XI.6.11\">Exp. XI 6.11</a>, \\(\\underline{\\mathrm{Centr}}_{\\mathrm{G}}(\\mathrm{Q})\\) et \\(\\underline{\\mathrm{Norm}}_{\\mathrm{G}}(\\mathrm{Q})\\) sont représentables par des sous-préschémas fermés et de présentation finie de G. Ceux-ci sont lisses par <a class=\"ref\" href=\"#XI.2.4\">Exp. XI 2.4</a> et 2.4 bis, ce qui prouve (i). Les assertions (ii) et (iii) se démontrent alors comme dans <a class=\"ref\" href=\"#XI.5.9\">Exp. XI 5.9</a> et <a class=\"ref\" href=\"#XI.5.10\">5.10</a>, dont la démonstration n'utilise en fait que (i) et non les théorèmes fins <a class=\"ref\" href=\"#XI.4.1\">Exp. XI 4.1</a> et <a class=\"ref\" href=\"#XI.4.2\">4.2</a>.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par M. Demazure"
+}

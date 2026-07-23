@@ -1,0 +1,1198 @@
+{
+ "chapter_id": "XV",
+ "title": "PRESENTATION XV ACYCLIC MORPHISMS",
+ "number": "XV",
+ "pages": [
+  {
+   "id": "XV",
+   "title": "PRESENTATION XV ACYCLIC MORPHISMS",
+   "blocks": [
+    {
+     "id": "XV",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XV\">EXHIBITION XV<br>ACYCLIC MORPHISMS<span class=\"author\">by M. Artin</span></h1>"
+    },
+    {
+     "id": "XV.sommaire",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XV.sommaire\">Summary</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1. General information on globally and locally acyclic morphisms<br>\n2. Local acyclicity of a smooth morphism<br>\n3. Proof of the main lemma<br>\n4. Appendix: A criterion of \\(0\\)-local acyclicity<br></p>"
+    },
+    {
+     "id": "XV.intro",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XV.intro\">Introduction</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(g : X \\to Y\\) be a schema morphism. In the first issue, we study conditions so that \\(g\\) is acyclic, that is to say, such that for any torsion beam \\(F\\) on \\(Y\\) we have \\(H^q(Y,F) \\xrightarrow{\\ \\sim\\ } H^q(X, g^* F)\\), and that this remains true if we replace \\(Y\\) by a \\(Y'\\) spreads over \\(Y\\). A necessary natural condition of acyclicity is that the geometric fibers are acyclic, that is, have trivial cohomology for constant torsion beams. We will see that this condition, joined to a local condition, called local acyclicity of \\(f\\) (1.11), implies that \\(f\\) is acyclic.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The fundamental theorem is that a smooth morphism is locally acyclic for prime torsion sheaves with residual characteristics (2.1), which will imply the theorem of change of base by a smooth morphism (XVI 1.1), which will be developed, with its first consequences, in the following presentation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This presentation is independent of presentations XI to XIV, and in particular of the \"change of base theorem for a proper morphism\". The latter will intervene again in an essential way, but in conjunction with the fundamental theorem of the present presentation, from the following presentation.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XV-1",
+   "title": "1. General information on globally and locally acyclic morphisms.",
+   "blocks": [
+    {
+     "id": "XV.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XV.1\">1. General information on globally and locally acyclic morphisms.</h2>"
+    },
+    {
+     "id": "XV.1.1",
+     "type": "proposition",
+     "label": "1.1",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XV.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a schema morphism. The following assertions (i) to (iii) are equivalent:</p>\n  <p>(i) For each \\(Y' \\to Y\\) spread (which can be taken affine above an open affine of \\(Y\\)) and each sheaf of sets \\(F\\) on \\(Y'\\), the canonical morphism \\(F \\to g'_* g'^* F\\) is injective (resp. bijective).</p>\n  <p>(ii) For each \\(Y' \\to Y\\) spread (which can be taken affine above an open affine of \\(Y\\)) and each sheaf of sets \\(F\\) on \\(Y'\\), the canonical morphism \\(H^0(Y',F) \\to H^0(X',g'^* F)\\) is injective (resp. bijective).</p>\n  <p>(iii) For each locally quasi-finite \\(Y' \\to Y\\) and each sheaf of sets \\(F\\) over \\(Y'\\), the canonical morphism \\(H^0(Y',F) \\to H^0(X',g'^* F)\\) is injective (resp. bijective).</p>\n  <p>(ii bis) (If \\(f\\) is quasi-compact and quasi-separated). Like (ii), but taking \\(F\\) constant sheaf of the form \\(I_{Y'}\\), where \\(I\\) is a set given beforehand, with \\(\\operatorname{card} I \\geqslant 2\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration. The equivalence of (i) and (ii) is immediate from the definitions, and (iii) \\(\\Longrightarrow\\) (ii) \\(\\Longrightarrow\\) (ii bis) are trivial. We have (ii bis) \\(\\Longrightarrow\\) (ii), because we can assume \\(Y\\) affine, therefore \\(X\\) and \\(Y\\) quasi-compact and quasi-separate, and we can then apply XII 6.5 (i). For implication (i) \\(\\Longrightarrow\\) (iii), we first note the following lemma:</p>"
+    },
+    {
+     "id": "XV.1.2",
+     "type": "lemma",
+     "label": "1.2",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XV.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(f : Y' \\to Y\\) be a locally quasi-finite morphism. Then \\(f\\) is \"locally finite on \\(Y'\\) for the sparse topology\", that is to say, we have commutative diagrams</p>\n  <p>\\[(*)\\qquad \\xymatrix{ Y_i' \\ar[r]^{a_i} \\ar[d]_{b_i} &amp; Y' \\ar[d]^{f} \\\\ Y_i \\ar[r]_{c_i} &amp; Y }\\]</p>\n  <p>where the \\(a_i\\), \\(c_i\\) are spread out, the \\(b_i\\) are finite, and the \\(a_i\\) form an overlap of \\(Y'\\) <sup class=\"footnote-ref\"><a id=\"XV-fn1ref\" href=\"#XV-fn1\">(∗)</a></sup>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, let \\(y'\\) be a point of \\(Y'\\) and \\(y = f(y')\\). Just find a diagram \\((*)\\) such that \\(y'\\) is in the image of \\(Y_i'\\). Let \\(\\widetilde{Y}\\) be the spectrum of the henselized ring \\(\\mathcal{O}_{Y,y}\\) (VIII 4.1) and \\(Z\\) the localized (ordinary) of \\(\\widetilde{Y}' = Y' \\times_Y \\widetilde{Y}\\) at the unique point above \\(y'\\) and the closed point \\(\\mathring{y}\\) of \\(\\widetilde{Y}\\). By VIII 4.1 (ii), \\(Z \\to \\widetilde{Y}\\) is finite, and \\(Z\\) is an induced open of \\(\\widetilde{Y}'\\). Since \\(\\widetilde{Y}\\) is the limit of preschemas \\(Y_i\\) spread above \\(Y\\), we immediately see (EGA IV 9) that for suitable \\(Y_i\\) there exists an open \\(Z_i\\) of \\(Y' \\times_Y Y_i\\), such that \\(Z = Z_i \\times_{Y_i} \\widetilde{Y}\\), and in \\((*)\\) it will suffice to take \\(Y_i' = Z_i\\), c.q.f.d.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now suppose that (i) of 1.1 is true. It is obvious that assertion (iii) of 1.1 is equivalent to the assertion deduced from (i) by replacing the spread morphism \\(Y' \\to Y\\) by a locally quasi-finite morphism. In this form, the assertion (for \\(Y\\), \\(Y'\\) given) is local on \\(Y\\) and \\(Y'\\) for the sparse topology, and we are therefore reduced by the lemma to the case of a finite \\(f : Y' \\to Y\\) morphism. Let \\(f' : X' \\to X\\) be the morphism deduced from \\(f\\) by the change of base \\(g\\). Then the base change morphism \\(g^* f_* F \\to f'_* g'^* F\\) is bijective (VIII 5.6). According to (i), we have \\(f_*(F) \\to g_* g^* f_* F\\). Consequently the morphism \\(H^0(Y',F) \\xrightarrow{\\ \\varepsilon\\ } H^0(Y',g'_* g'^* F)\\) of (iii) is the compound</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^0(Y',F) = H^0(Y,f_* F) \\xrightarrow{\\ \\varepsilon'\\ } H^0(Y, g_* g^* f_* F) = H^0(X, g^* f_* F) \\xrightarrow{\\ \\sim\\ } H^0(X, f'_* g'^* F) = H^0(X', g'^* F) \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(\\varepsilon'\\) is injective (resp. bijective) it is the same for \\(\\varepsilon\\). This completes the demonstration of 1.1.</p>"
+    },
+    {
+     "id": "XV.1.3",
+     "type": "definition",
+     "label": "1.3",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"XV.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>We call a morphism \\((-1)\\)-acyclic (resp. \\(0\\)-acyclic) a morphism \\(g : X \\to Y\\) having one of the properties equivalent to (i) to (iii) (resp. (i) to (iii) resp.) of 1.1. The morphism is said to be universally \\((-1)\\)-acyclic (resp. \\(0\\)-acyclic) if for each base change morphism \\(Y' \\to Y\\), the morphism \\(g' = g \\times_Y Y' : X \\times_Y Y' \\to Y'\\) is \\((-1)\\)-acyclic (resp. \\(0\\)-acyclic). Finally, a preschema \\(X\\) is said to be \\((-1)\\)-acyclic (resp. \\(0\\)-acyclic) if it is non-empty (resp. connected and non-empty).</p></div>\n</div>"
+    },
+    {
+     "id": "XV.1.4",
+     "type": "corollary",
+     "label": "1.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be an \\(0\\)-acyclic morphism. Then for each \\(Y' \\to Y\\) locally quasi-finite and each sheaf in groups \\(F\\) on \\(Y'\\), the canonical morphism</p>\n  <p>\\[H^1(Y',F) \\to H^1(X',g'^* F)\\]</p>\n  <p>is injective.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This follows immediately from XII 6.5 (i).</p>"
+    },
+    {
+     "id": "XV.1.5",
+     "type": "corollary",
+     "label": "1.5",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a morphism. If \\(g\\) is surjective (i.e. its fibers are non-empty, i.e. its fibers are \\((-1)\\)-acyclic) then \\(g\\) is \\((-1)\\)-acyclic. The converse is true if \\(g\\) is quasi-compact and quasi-separated.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The first assertion is obvious in form 1.1 (ii) by consideration of the fibers of the bundles considered. The second results from the definition in form 1.1 (iii) and from the sorite of passage to the limit (VII 5), taking into account that for all \\(y \\in Y\\), \\(y = \\operatorname{Spec} k(y)\\) is the projective limit of locally quasi-finite affine schemes on \\(Y\\), namely the affine neighborhoods of \\(y\\) in \\(\\overline{\\{y\\}}\\) (equipped with the induced reduced structure). — Note that 1.5 implies that when \\(g\\) is quasi-compact and quasi-separated, then \\(g\\) \\((-1)\\)-acyclic already implies \\(g\\) universally \\((-1)\\)-acyclic.</p>"
+    },
+    {
+     "id": "XV.1.6",
+     "type": "proposition",
+     "label": "1.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XV.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a schema morphism, \\(\\mathbb{L} \\subset \\mathbb{P}\\) be a set of prime numbers, and \\(n \\in \\mathbb{N}\\) be a natural number (resp. \\(n = 1\\)). The following assertions (i) to (iii) (resp. the following assertions (i) to (iii) are equivalent. If moreover \\(g\\) is quasi-compact and quasi-separated, then (i) to (iii) (resp. (i) to (iii) respées) are also equivalent to (iv) (resp. (iv) respée).</p>\n  <p>(i) For each \\(Y' \\to Y\\) spread and each abelian sheaf of \\(\\mathbb{L}\\)-torsion (resp. of ind-\\(\\mathbb{L}\\)-groups) (IX 1.5) \\(F\\) on \\(Y'\\), we have\n  \\[\\begin{cases} F \\xrightarrow{\\ \\sim\\ } g'_* g'^* F \\;, \\\\ (R^q g'_*) g'^* F = 0 &amp; \\text{si } 1 \\leqslant q \\leqslant n \\ (\\text{resp. si } q = 1). \\end{cases}\\]</p>\n  <p>(ii) For each \\(Y' \\to Y\\) spread and each abelian sheaf of \\(\\mathbb{L}\\)-torsion (resp. of ind-\\(\\mathbb{L}\\)-groups) \\(F\\) on \\(Y'\\), the canonical morphism\n  \\[H^q(Y',F) \\to H^q(X',g'^* F)\\]\n  is bijective if \\(q \\leqslant n\\) and injective if \\(q = n+1\\) (resp. is bijective if \\(q \\leqslant 1\\)).</p>\n  <p>(iii) For each locally quasi-finite \\(Y' \\to Y\\) and each abelian sheaf of \\(\\mathbb{L}\\)-torsion (resp. of ind-\\(\\mathbb{L}\\)-groups) \\(F\\) on \\(Y'\\), the morphism\n  \\[H^q(Y',F) \\to H^q(X',g'^* F)\\]\n  is bijective if \\(q \\leqslant n\\) and injective if \\(q = n+1\\) (resp. is bijective if \\(q \\leqslant 1\\)).</p>\n  <p>(iv) The morphism \\(g\\) is surjective, and for each locally quasi-finite \\(Y' \\to Y\\), each \\(\\nu &gt; 0\\), and each \\(\\ell \\in \\mathbb{L}\\), the canonical morphism\n  \\[H^q(Y', \\mathbb{Z}/\\ell^\\nu) \\to H^q(X', \\mathbb{Z}/\\ell^\\nu)\\]\n  is surjective for \\(0 \\leqslant q \\leqslant n\\) (resp. for each locally quasi-finite \\(Y' \\to Y\\) and each \\(\\mathbb{L}\\)-ordinary finite group \\(G\\), the canonical morphism\n  \\[H^i(Y',G) \\to H^i(X',G)\\]\n  is surjective for \\(i = 0,1\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration of 1.6. The implications (ii) \\(\\Longleftarrow\\) (iii) \\(\\Longrightarrow\\) (iv) are trivial. Now \\((R^q g'_*) g'^* F\\) is the beam associated with the pre-beam \\(R^q(Y'') = H^q(X'', g''^* F)\\) (\\(Y'' \\to Y'\\) slack). If (ii) is true, we have \\(H^q(Y'',F) \\xrightarrow{\\ \\sim\\ } H^q(X'',g''^* F)\\), so the associated sheaf is zero, i.e. (ii) \\(\\Longrightarrow\\) (i). The implication (i) \\(\\Longrightarrow\\) (ii) results from 1.1 (i) (which corresponds to the case \\(n = 0\\)) joined to the Leray spectral sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^p(Y', (R^q g'_*) g'^* F) \\Longrightarrow H^{p+q}(X', g'^* F)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in the abelian case, and in the exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0 \\to H^1(Y', g'_* g'^* F) \\to H^1(X', g'^* F) \\to H^0(Y', (R^1 g'_*) g'^* F) \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>in the case of group bundles.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) \\(\\Longrightarrow\\) (iii): Since (i) and (ii) are equivalent, it is clear that (iii) is equivalent to the statement which is deduced from (i) by replacing the word \"spread\" by the words \"locally quasi-finite\". In this form it is, for \\(Y\\), \\(Y'\\) given, a local assertion on \\(Y'\\) and on \\(Y\\) for the flat topology, and we are therefore reduced by 1.2 in the case where \\(f : Y' \\to Y\\) is a finite morphism. Let \\(f' : X' \\to X\\) be the morphism. We have according to VIII 5.5 (resp. VIII 5.8) (applied three times)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f_*(R^q g'_*) g'^* F \\simeq R^q(f g')_* g'^* F \\simeq R^q(g f')_* g'^* F \\simeq (R^q g_*) f'_* g'^* F \\simeq (R^q g_*) g^*(f_* F)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and the latter is zero if (i) is true for the values ​​of \\(q\\) considered, hence (i) \\(\\Longrightarrow\\) (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to prove (iv) \\(\\Longrightarrow\\) (iii); but this immediately follows from XII 6.5.</p>"
+    },
+    {
+     "id": "XV.1.7",
+     "type": "definition",
+     "label": "1.7",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"XV.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.7</span></div>\n  <div class=\"thm-body\"><p>Let \\(n \\in \\mathbb{N}\\) and \\(\\mathbb{L} \\subset \\mathbb{P}\\). A morphism \\(g : X \\to Y\\) which satisfies one of the equivalent conditions (i) to (iii) (resp. (i) to (iii) resp.) of 1.6 is called \\(n\\)-acyclic morphism (resp. \\(1\\)-aspheric morphism) for \\(\\mathbb{L}\\). We say that \\(g\\) is acyclic for \\(\\mathbb{L}\\) if it is \\(n\\)-acyclic for \\(\\mathbb{L}\\) for each \\(n\\). We say that \\(g\\) is universally \\(n\\)-acyclic (resp. universally \\(1\\)-aspheric) for \\(\\mathbb{L}\\), if for each \\(Y' \\to Y\\) the morphism \\(g' = g \\times_Y Y'\\) is \\(n\\)-acyclic (resp. \\(1\\)-aspherical) for \\(\\mathbb{L}\\). Finally, a preschema \\(X\\) is said to be \\(n\\)-acyclic (resp. \\(1\\)-aspherical) for \\(\\mathbb{L}\\), if it is \\(0\\)-acyclic (1.3) and if for each \\(\\ell \\in \\mathbb{L}\\) and each \\(1 \\leqslant q \\leqslant n\\) we have \\(H^q(X, \\mathbb{Z}/\\ell) = 0\\) (resp. and for each \\(\\mathbb{L}\\)-ordinary finite group \\(G\\), we have \\(H^1(X,G) = 0\\)).</p></div>\n</div>"
+    },
+    {
+     "id": "XV.1.8",
+     "type": "remark",
+     "label": "1.8",
+     "title": "Remarks",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XV.1.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarks</span> <span class=\"thm-num\">1.8</span></div>\n  <div class=\"thm-body\"><p>a) If \\(g\\) is quasi-compact and quasi-separated, it is sufficient, for \\(g\\) to be universally \\(n\\)-acyclic, that \\(g'\\) be \\(n\\)-acyclic whenever \\(Y' \\to Y\\) is locally of finite presentation. We do not need this fact and leave the demonstration, which is an exercise in crossing the limit, to the reader.</p>\n  <p>b) We do not know whether a \\(n\\)-acyclic morphism for \\(\\mathbb{L}\\) is already universally \\(n\\)-acyclic for \\(\\mathbb{L}\\). The same question arises for the local variants below (1.11).</p>\n  <p>c) When \\(n = 0\\), we find the notion of 1.3. Of course, we could have written 1.6 and 1.7 to include the case \\(n = -1\\). The following proposition is also valid in this case.</p></div>\n</div>"
+    },
+    {
+     "id": "XV.1.9",
+     "type": "proposition",
+     "label": "1.9",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XV.1.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.9</span></div>\n  <div class=\"thm-body\"><p>(i) Let \\(X \\xrightarrow{g} Y \\xrightarrow{h} Z\\) be schema morphisms, \\(\\mathbb{L} \\subset \\mathbb{P}\\), and \\(n \\in \\mathbb{N}\\). Let \\(g\\) be \\(0\\)-acyclic (resp. \\(1\\)-aspheric for \\(\\mathbb{L}\\), resp. \\(n\\)-acyclic for \\(\\mathbb{L}\\)). Or \\(f = hg\\). Then for any sheaf of sets (resp. of ind-\\(\\mathbb{L}\\)-groups, resp. abelian of \\(\\mathbb{L}\\)-torsion) \\(F\\) on \\(Z\\), we have an isomorphism \\(f_* f^* F \\xrightarrow{\\ \\sim\\ } h_* h^* F\\) (resp. isomorphisms \\((R^p f_*) f^* F \\xrightarrow{\\ \\sim\\ } (R^p h_*) h^* F\\) if \\(p \\leqslant 1\\), resp. if \\(p \\leqslant n\\)). In particular, \\(h\\) is \\(0\\)-acyclic (resp. \\(1\\)-aspheric for \\(\\mathbb{L}\\), resp. \\(n\\)-acyclic for \\(\\mathbb{L}\\)) if and only if \\(f\\) is.</p>\n  <p>(ii) Let \\(\\{g_\\alpha : X_\\alpha \\to Y_\\alpha\\}\\) be a projective system of schema morphisms such that the morphisms \\(X_\\alpha \\to X_\\beta\\) and \\(Y_\\alpha \\to Y_\\beta\\) are affine and the \\(g_\\alpha\\) are quasi-compact and quasi-separate. Let \\(g : X \\to Y\\) be the projective limit of \\(g_\\alpha\\) (VII 5.1). Then if all \\(g_\\alpha\\) are \\(0\\)-acyclic (resp. \\(1\\)-aspherical for \\(\\mathbb{L}\\), resp. \\(n\\)-acyclic for \\(\\mathbb{L}\\)), it is the same for \\(g\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration. For (i), we first have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[h_* h^* F \\xrightarrow{\\ \\sim\\ } h_*(g_* g^*) h^* F \\simeq f_* f^* F \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The second assertion of (i) is an immediate consequence of the Leray spectral sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(R^p h_*)(R^q g_*) f^* F \\Longrightarrow (R^{p+q} f_*) f^* F \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally the non-Abelian assertion results from the exact sequence XII 3.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Assertion (ii) easily follows from the theory of passage to the limit (VII 5 and VI).</p>"
+    },
+    {
+     "id": "XV.1.9.1",
+     "type": "corollary",
+     "label": "1.9.1",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.9.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.9.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a quasi-compact and quasi-separate morphism, and \\(n \\in \\mathbb{N}\\), \\(\\mathbb{L} \\subset \\mathbb{P}\\). If \\(g\\) is \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. \\(1\\)-aspheric for \\(\\mathbb{L}\\)), then for any geometric point \\(\\bar{y}\\) of \\(Y\\), algebraic on a point \\(y\\) of \\(Y\\), the geometric fiber \\(X_{\\bar{y}}\\) is \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. \\(1\\)-aspherical for \\(\\mathbb{L}\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, \\(\\bar{y}\\) is the projective limit of affine schemes \\(Y_i\\) which are locally quasi-finite on \\(Y\\), and as the \\(X_i = X \\times_Y Y_i \\to Y_i\\) are \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. ...), it is the same for \\(X_{\\bar{y}} \\to \\bar{y}\\) under 1.9 (ii), hence the stated conclusion.</p>"
+    },
+    {
+     "id": "XV.1.10",
+     "type": "proposition",
+     "label": "1.10",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XV.1.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.10</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a schema morphism, \\(\\mathbb{L} \\subset \\mathbb{P}\\), and \\(n \\in \\mathbb{N}\\). Then conditions (i) to (iv) below are equivalent.</p>\n  <p>(i) Let \\(\\bar{y}\\) be a geometric point of \\(Y\\) and \\(\\bar{x}\\) be a geometric point of \\(X\\) above \\(\\bar{y}\\). Let \\(\\widetilde{X}\\), \\(\\widetilde{Y}\\) be the strict locations of \\(X\\), \\(Y\\) at the points \\(\\bar{x}\\), \\(\\bar{y}\\), and let \\(\\widehat{g} : \\widetilde{X} \\to \\widetilde{Y}\\) be the morphism induced by \\(g\\). Then \\(\\widehat{g}\\) is \\(0\\)-acyclic (resp. \\(1\\)-aspheric for \\(\\mathbb{L}\\), resp. \\(n\\)-acyclic for \\(\\mathbb{L}\\)).</p>\n  <p>(ii) For each Cartesian square diagram\n  \\[(*)\\qquad \\xymatrix{ X \\ar[d]_{g} &amp; X' \\ar[l]_{j} \\ar[d]_{g'} &amp; X'' \\ar[l]_{j'} \\ar[d]^{g''} \\\\ Y &amp; Y' \\ar[l]^{i} &amp; Y'' \\ar[l]^{i'} }\\]\n  with \\(i\\) spread and \\(i'\\) spread of finite presentation, and each sheaf of sets (resp. of ind-\\(\\mathbb{L}\\)-groups, resp. abelian of \\(\\mathbb{L}\\)-torsion) \\(F\\) on \\(Y''\\), the base change morphism (XII 4.1, 4.2)\n  \\[g'^* i'_* F \\to j'_* g''^* F\\]\n  is bijective (resp. morphisms\n  \\[g'^*(R^q i'_*)F \\to (R^q j'_*) g''^* F\\]\n  are bijective for \\(q = 0, 1\\), resp. are bijective for \\(0 \\leqslant q \\leqslant n\\) and injective for \\(q = n+1\\)).</p>\n  <p>(iii) Same statement as (ii), except that the morphism \\(i'\\) is assumed only quasi-finite and quasi-separated.</p>\n  <p>(iv) Same statement as (ii), but assuming \\(i\\) only locally quasi-finite, and on the other hand \\(i'\\) a quasi-compact open immersion.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration. The implication (iii) \\(\\Longrightarrow\\) (ii) is trivial. Let's check that (i) \\(\\Longrightarrow\\) (iii). Just look at the morphism of (iii) fiber by fiber. Let \\(\\bar{y}\\) be a geometric point of \\(Y'\\) and \\(\\bar{x}\\) be a geometric point of \\(X'\\) above \\(\\bar{y}\\). Either</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{ \\widetilde{X}' \\ar[d]_{\\widetilde{g}'} &amp; \\widetilde{X}'' \\ar[l]_{\\widetilde{j}'} \\ar[d]^{\\widetilde{g}''} \\\\ \\widetilde{Y}' &amp; \\widehat{Y}'' \\ar[l]^{\\widetilde{i}'} }\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the Cartesian diagram deduced from \\((*)\\), where \\(\\widetilde{X}'\\), \\(\\widetilde{Y}'\\) are the strict localities of \\(X'\\), \\(Y'\\) at the points \\(\\bar{x}\\), \\(\\bar{y}\\) and where \\(\\widehat{Y}'' = Y'' \\times_{Y'} \\widetilde{Y}'\\), \\(\\widetilde{X}'' = X'' \\times_{X'} \\widetilde{X}'\\). We have VIII 5.2 and 5.3</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\widehat{Y}'', \\widehat{F}) \\simeq (R^q i'_* F)_{\\bar{y}} \\simeq (g'^*(R^q i'_* F))_{\\bar{x}} \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where \\(\\widehat{F}\\) is the inverse image of \\(F\\) on \\(\\widehat{Y}''\\), and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\widetilde{X}'', \\widetilde{g}''^* \\widehat{F}) \\simeq ((R^q j'_*) g''^* F)_{\\bar{x}} \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(\\widetilde{i}'\\) is quasi-finite, we can apply 1.1 (iii) (resp. 1.5 (iii)) to the morphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\widehat{Y}'', \\widehat{F}) \\to H^q(\\widetilde{X}'', \\widetilde{g}''^* \\widehat{F})\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for the values ​​of \\(q\\) considered, hence (i) \\(\\Longrightarrow\\) (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) \\(\\Longrightarrow\\) (i). Assume (ii) true and check criterion 1.6 (ii) of acyclicity for a morphism \\(\\widetilde{g} : \\widetilde{X} \\to \\widetilde{Y}\\). Let \\(\\widehat{Y}' \\to \\widetilde{Y}\\) be spread, with \\(\\widehat{Y}'\\) affine, and let \\(\\widehat{F}\\) be a sheaf of sets (resp. abelian of \\(\\mathbb{L}\\)-torsion, resp. of ind-\\(\\mathbb{L}\\)-groups) on \\(\\widehat{Y}'\\). We must demonstrate that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\widehat{Y}', \\widehat{F}) \\xrightarrow{\\ \\sim\\ } H^q(\\widetilde{X}', \\widetilde{g}'^* \\widehat{F}) \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where \\(\\widetilde{g}' : \\widetilde{X}' \\to \\widehat{Y}'\\) is the morphism deduced from \\(\\widetilde{g}\\) by base change. Now let's write \\(\\widetilde{Y} = \\varprojlim Y_\\alpha\\) where the \\(Y_\\alpha\\) are spread and affine above \\(Y\\) (assuming \\(Y\\) affine, which is permissible). We can \"go down\" the slack morphism \\(\\widehat{Y}' \\to \\widetilde{Y}\\) to one of the \\(Y_\\alpha\\), say to \\(Y'_o \\to Y_o\\), and we have \\(\\widehat{Y}' = \\varprojlim Y'_\\alpha = \\widetilde{Y} \\times_{Y_o} Y'_o\\). Now each sheaf \\(\\widehat{F}\\) on \\(\\widehat{Y}'\\) is the inductive limit of the sheaves \\(f'^*_\\alpha f'_{\\alpha *} \\widehat{F}\\), where \\(f'_\\alpha : Y'_\\alpha \\to Y'_o\\) is the canonical morphism. According to XII 1.2 (v) and 1.6 (iii) the sheaves \\(f'_{\\alpha *} \\widehat{F}\\) are sheaves of sets (resp. abelian of \\(\\mathbb{L}\\)-torsion, resp. of ind-\\(\\mathbb{L}\\)-groups). Taking into account VII 3.3, we therefore see that it is enough to deal with the case where \\(\\widehat{F}\\) goes down to one of \\(Y'_\\alpha\\), say to a \\(F_o\\) on \\(Y'_o\\). By applying (ii) to the diagram</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{ X \\ar[d]_{g} &amp; X_o \\ar[l] \\ar[d]_{g_o} &amp; X'_o \\ar[l]_{j'_o} \\ar[d]^{g'_o} \\\\ Y &amp; Y_o \\ar[l] &amp; Y'_o \\ar[l]^{i'_o} }\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>we deduce that \\(g_o^*(R^q i'_{o*})F_o \\xrightarrow{\\ \\sim\\ } (R^q j'_{o*}) g_o'^* F_o\\) for the values ​​of \\(q\\) applicable. Now the geometric points \\(\\bar{y}\\), \\(\\bar{x}\\) are canonically raised in geometric points of \\(Y_o\\), \\(X_o\\) (we denote them by the same symbols), and we have VIII 5.2 and 5.3</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\widehat{Y}', \\widehat{F}) = ((R^q i'_{o*})F_o)_{\\bar{y}} = (g_o^*(R^q i'_{o*})F_o)_{\\bar{x}}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\widetilde{X}', \\widetilde{g}'^* \\widehat{F}) = ((R^q j'_{o*}) g_o'^* F_o)_{\\bar{x}}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>for the values ​​of \\(q\\) considered, hence the result.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It remains to show that conditions (i) to (iii) are equivalent to (iv). Now, using the form (i), we see that these conditions are stable by extension of the locally quasi-finite base \\(Y' \\to Y\\), from which it immediately follows, in the form (ii), that they imply (iv). On the other hand, (iv) implies (iii), because to verify (iii) we see immediately, using for example the Leray spectral sequence, or the descent result XII 6.8, that we can assume \\(Y'\\) and \\(Y''\\) affines. But then by the \"Main Theorem\" EGA IV 8.12.7 \\(Y'' \\to Y'\\) is factorized into \\(Y'' \\xrightarrow{i'_1} Y'_1 \\xrightarrow{i'_2} Y'\\), with \\(i'_1\\) an open immersion, and \\(i'_2\\) a finite morphism. Using VIII 5.5, 5.8 for \\(i'_2\\), we are reduced to checking (ii) for \\(i'_1\\), which falls under (iv). This completes the demonstration of 1.10.</p>"
+    },
+    {
+     "id": "XV.1.11",
+     "type": "definition",
+     "label": "1.11",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-plain definition\" id=\"XV.1.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.11</span></div>\n  <div class=\"thm-body\"><p>A morphism \\(g : X \\to Y\\) of preschemas which satisfies one of the equivalent conditions (i) to (iv) of 1.10 is called locally \\(0\\)-acyclic (resp. locally \\(1\\)-aspherical for \\(\\mathbb{L}\\), resp. locally) morphism. \\(n\\)-acyclic for \\(\\mathbb{L}\\)). We define in an obvious way (compare 1.7) the notions of locally acyclic morphism, and of universally locally \\(0\\)-acyclic morphism (resp. ...) for \\(\\mathbb{L}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We can naturally vary statements (i) to (iii) of 1.10. Thus, in (iii) and (iv) we can limit ourselves to a constant sheaf \\(F\\) and of the form \\(G_I\\), \\(G\\) a finite set (resp. a \\(\\mathbb{L}\\)-finite group, resp. \\(G\\) of the form \\(\\mathbb{Z}/\\ell^\\nu \\mathbb{Z}\\), with \\(\\ell \\in \\mathbb{L}\\), \\(\\nu \\in \\mathbb{N}\\)); this follows easily from VIII 5.2, 5.3 and XII 6.5. Let us also note the following variant:</p>"
+    },
+    {
+     "id": "XV.1.12",
+     "type": "corollary",
+     "label": "1.12",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.12</span></div>\n  <div class=\"thm-body\"><p>Assume \\(g : X \\to Y\\) locally of finite type. To check the local \\(0\\)-acyclicity (resp. ...), it suffices to check 1.10 (i) in the case where the geometric point \\(\\bar{x}\\) is closed in the geometric fiber \\(X_{\\bar{y}}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, in the demonstration of (i) \\(\\Longrightarrow\\) (iii) of 1.10, we verified (iii) fiber by fiber, and it was enough to do it for the fibers at the geometric points \\(\\bar{x}\\) which are closed in their geometric fiber, since \\(g\\) is locally of finite type (VIII 3.13 b).</p>"
+    },
+    {
+     "id": "XV.1.13",
+     "type": "proposition",
+     "label": "1.13",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XV.1.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.13</span></div>\n  <div class=\"thm-body\"><p>(i) Let \\(X \\xrightarrow{g} Y \\xrightarrow{h} Z\\) be schema morphisms, \\(\\mathbb{L} \\subset \\mathbb{P}\\), and \\(n \\in \\mathbb{N}\\), and suppose that \\(g\\) is surjective, and locally \\(0\\)-acyclic (resp. locally \\(1\\)-aspherical for \\(\\mathbb{L}\\), resp. locally \\(n\\)-acyclic for \\(\\mathbb{L}\\)). Then \\(h\\) is locally \\(0\\)-acyclic (resp. ...) if and only if \\(f = hg\\) is.</p>\n  <p>(ii) Let \\(\\{g_\\alpha : X_\\alpha \\to Y_\\alpha\\}\\) be a projective system of morphisms of preschemas such that the morphisms \\(X_\\alpha \\to X_\\beta\\) and \\(Y_\\alpha \\to Y_\\beta\\) are affine. Let \\(g\\) be the projective limit of \\(\\{g_\\alpha\\}\\) (VII 5.1). So if all \\(g_\\alpha\\) are locally \\(0\\)-acyclic (resp. ...), it is the same for \\(g\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This is a release similar to 1.9.</p>"
+    },
+    {
+     "id": "XV.1.14",
+     "type": "remark",
+     "label": "1.14",
+     "title": "Remarks",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XV.1.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarks</span> <span class=\"thm-num\">1.14</span></div>\n  <div class=\"thm-body\"><p>To simplify his task, the editor has omitted in 1.10 to 1.13 to also treat the case of \\(n = -1\\), and he leaves it to the reader to convince himself that the statements, definitions and demonstrations apply essentially without change to this case. Thus, with the notations of 1.10, condition (i) is stated by saying that the local induced morphisms \\(\\widetilde{X} \\to \\widetilde{Y}\\) are \\((-1)\\)-acyclic i.e. 1.5 surjectives, and conditions (ii) to (iv) are stated by saying that the base change morphism \\(g'^*(i'_*(F)) \\to j'_*(g''^*(F))\\) is a monomorphism. Under these conditions, we will therefore say that \\(g\\) is locally \\((-1)\\)-acyclic. This condition is therefore stable by locally quasi-finite extension of the base. As an example, let us point out that a flat morphism is locally \\((-1)\\)-acyclic, because for such a morphism the surjectivity condition for the \\(\\widetilde{X} \\to \\widetilde{Y}\\) is a well-known consequence of the flatness of these morphisms. On the other hand, let us also point out that when \\(f\\) is locally of finite presentation, then \\(f\\) is locally \\((-1)\\)-acyclic if and only if it is universally open, at least when \\(Y\\) is locally Noetherian: this indeed easily follows from EGA IV 14.4.9, 1.10.3. For such a morphism, local \\((-1)\\)-acyclicity subsequently implies universal \\((-1)\\)-local acyclicity. (It is also very probable <sup class=\"footnote-ref\"><a id=\"XV-fn2ref\" href=\"#XV-fn2\">(∗)</a></sup> that in these last statements, the locally Noetherian hypothesis on \\(Y\\) is useless: this is in any case so if the set of irreducible components of \\(Y\\) is locally finite (EGA IV 14.4.10)).</p></div>\n</div>"
+    },
+    {
+     "id": "XV.1.15",
+     "type": "theorem",
+     "label": "1.15",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XV.1.15\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">1.15</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a quasi-compact and quasi-separate morphism, \\(\\mathbb{L} \\subset \\mathbb{P}\\) a set of prime numbers, \\(n\\) a natural integer (resp. \\(n = 1\\)). We assume that \\(g\\) is \\((n-1)\\)-acyclic for \\(\\mathbb{L}\\) and locally \\(n\\)-acyclic for \\(\\mathbb{L}\\) (1.3, 1.7, 1.11, 1.14). Let \\(F\\) be a sheaf on \\(Y\\), which for \\(n \\geqslant 1\\) we assume to be equipped with an abelian sheaf structure of \\(\\mathbb{L}\\)-torsion (resp. a group beam structure), and let \\(\\xi\\) be an element of \\(H^n(X, g^*(F))\\). For \\(\\xi\\) to come from an element of \\(H^n(Y,F)\\) (which is then uniquely determined, thanks to the hypothesis of \\((n-1)\\)-acyclicity on \\(g\\)), it is necessary and sufficient that for any geometric point \\(\\bar{y}\\) of \\(Y\\), algebraic on a point \\(y\\) of \\(Y\\), the image \\(\\xi_{\\bar{y}}\\) of \\(\\xi\\) in \\(H^n(X_{\\bar{y}}, F | X_{\\bar{y}})\\) or in the image of \\(H^n(\\bar{y}, F_{\\bar{y}})\\) (which, for \\(n \\geqslant 1\\), means that we have \\(\\xi_{\\bar{y}} = 0\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us note immediately that we conclude from 1.15 that, under the preliminary conditions considered for \\(g\\), \\(g\\) is \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. \\(1\\)-aspherical for \\(\\mathbb{L}\\)) if and only if for all \\(\\bar{y}\\) as above, \\(X_{\\bar{y}}\\) is \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. is \\(1\\)-aspherical for \\(\\mathbb{L}\\)): the \"if\" indeed results directly from 1.15 and the definitions, the \"only if\" being in any case immediate by 1.9.1. That said, an immediate recurrence on \\(n\\) provides the</p>"
+    },
+    {
+     "id": "XV.1.16",
+     "type": "corollary",
+     "label": "1.16",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.16\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.16</span></div>\n  <div class=\"thm-body\"><p>Let \\(g\\) be a quasi-compact and quasi-separate morphism which is locally \\((n-1)\\)-acyclic for \\(\\mathbb{L}\\), where \\(n\\) is a given natural number (resp. where \\(n = 1\\)). Then \\(g\\) is \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. is \\(1\\)-aspheric for \\(\\mathbb{L}\\)) if and only if for every geometric point \\(\\bar{y}\\) of \\(Y\\), algebraic on a point \\(y\\) of \\(Y\\), the fiber \\(X_{\\bar{y}}\\) is \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. \\(1\\)-aspherical for \\(\\mathbb{L}\\)).</p></div>\n</div>"
+    },
+    {
+     "id": "XV.1.17",
+     "type": "corollary",
+     "label": "1.17",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.17\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.17</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a morphism of preschemas, \\(\\mathbb{L} \\subset \\mathbb{P}\\) a set of prime numbers, \\(n\\) a natural number (resp. \\(n = 1\\)). For \\(g\\) to be locally \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. locally \\(1\\)-aspherical for \\(\\mathbb{L}\\)) it is necessary and sufficient that for any geometric point \\(\\bar{x}\\) of \\(X\\), if \\(\\widetilde{g} : \\widetilde{X} \\to \\widetilde{Y}\\) is the morphism of the strict localities of \\(X\\) and \\(Y\\) (in \\(\\bar{x}\\) and the corresponding geometric point \\(\\bar{y}\\) of \\(Y\\)) induced by \\(g\\), each geometric fiber \\(X_{\\bar{z}}\\) of \\(\\widetilde{g}\\), relative to a geometric point \\(\\bar{z}\\) of \\(\\widetilde{Y}\\) algebraic on a point \\(z\\) of \\(\\widetilde{Y}\\), i.e. \\(n\\)-acyclic for \\(\\mathbb{L}\\) (resp. \\(1\\)-aspherical for \\(\\mathbb{L}\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Necessity indeed results from criterion 1.10 (i) and 1.9.1, for sufficiency we proceed by induction on \\(n\\), which allows us, when \\(n \\geqslant 1\\), to assume that \\(g\\) is already locally \\((n-1)\\)-acyclic for \\(\\mathbb{L}\\). It is then the same for the morphisms \\(\\widetilde{g}\\), and 1.16 then implies that \\(\\widetilde{g}\\) is \\(n\\)-acyclic (resp. \\(1\\)-aspherical for \\(\\mathbb{L}\\)), which by virtue of criterion 1.10 (i) implies that \\(g\\) is locally \\(n\\)-acyclic (resp. locally \\(1\\)-aspheric) for \\(\\mathbb{L}\\).</p>"
+    },
+    {
+     "id": "XV.1.18",
+     "type": "corollary",
+     "label": "1.18",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.1.18\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">1.18</span></div>\n  <div class=\"thm-body\"><p>With the notations of 1.17, if \\(g\\) is locally of finite type, then in the stated criterion, we can limit ourselves to taking geometric points \\(\\bar{x}\\) whose locality \\(x\\) is closed in its fiber.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This indeed results from the demonstration given and from 1.12.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration of 1.15 <sup class=\"footnote-ref\"><a id=\"XV-fn3ref\" href=\"#XV-fn3\">(∗)</a></sup>. Let us first show that we can assume \\(Y\\) strictly local. In the abelian case, \\(n \\geqslant 1\\), the Leray spectral sequence for \\(g\\) and \\(g^*(F)\\), joined to \\(R^i g_*(g^*(F)) = 0\\) for \\(0 &lt; i \\leqslant n-1\\), and \\(F \\xrightarrow{\\ \\sim\\ } g_* g^*(F)\\), expressing the hypothesis of \\((n-1)\\)-acyclicity of \\(g\\), implies that we have a canonical exact sequence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0 \\to H^n(Y,F) \\to H^n(X,g^*(F)) \\to H^0(Y, R^n g_*(g^*(F))) \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which shows that it is enough to prove that the image of \\(\\xi\\) in the third term is zero. This is verified fiber by fiber, and taking into account VIII 5.2 we are brought back to the case where \\(Y\\) is strictly local. The case \\(n = 0\\), \\(F\\) being a bundle of sets, is treated in the same way, because the hypothesis on \\(g\\) implies that \\(F \\to g_* g^*(F)\\) is injective, and \\(\\xi\\) is identified with a section of the second bundle, which must be shown to come from a section of the first : this is again verified fiber by fiber, and we apply VIII 5.3. Essentially the same argument is valid in the non-commutative case, with \\(n = 1\\), using the exact sequence XII 3.2</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^1(Y,F) \\to H^1(X,g^*(F)) \\to H^0(Y, R^1 g_*(g^*(F))) \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and using VIII 5.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We therefore assume \\(Y\\) strictly local, therefore \\(X\\) quasi-compact and quasi-separate. The morphism \\(g : X \\to Y\\) satisfies the conditions of XII 6.10, which brings us back to the case where for any closed part \\(Y_1\\) of \\(Y\\) distinct from \\(Y\\), the restriction of \\(\\xi\\) to \\(X_1 = X \\times_Y Y_1\\) is in the image of \\(H^n(Y_1, F | Y_1) \\to H^n(X_1, g^*(F) | X_1)\\), and to check in this case that we can find a finite morphism \\(f : Y' \\to Y\\), whose image in \\(Y\\) contains a non-empty open of \\(Y\\), and such that the inverse image \\(\\xi'\\) of \\(\\xi\\) on \\(X' = X \\times_Y Y'\\) is contained in the image of \\(H^n(Y',F') \\to H^n(X',g'^*(F'))\\). We will indeed note that, taking into account VIII 5.5, 5.8, condition 2°) of loc. cit. is automatically satisfied for this morphism \\(f : Y' \\to Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To find such a \\(f\\), we can assume \\(Y\\) reduced, and we consider a maximum point \\(y\\) of \\(Y\\). Let \\(\\bar{y}\\) be the geometric point corresponding to a separable closure of \\(k(y)\\), so that \\(\\bar{y}\\) is the filtering projective limit of open \\(U_i\\) of finite integral schemas \\(Y_i\\) on \\(Y\\), each of which is such as its image in \\(Y\\) contains a neighborhood of \\(y\\). Using the hypothesis on \\(\\xi\\), we see that there exists an index \\(i\\) such that the inverse image of \\(\\xi\\) on \\(X \\times_Y U_i\\) is zero if \\(n \\geqslant 1\\), resp. is in the image of \\(H^0(U_i, F_{U_i})\\) if \\(n = 0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We will take \\(Y'\\) equal to \\(Y_i\\), and note that we can assume \\(U' = U_i\\) equal to the inverse image of an open affine neighborhood \\(U\\) of \\(y\\) in \\(Y\\), so that we see that the inverse image of \\(\\xi\\) of \\(X \\times_Y Z'\\) (where \\(Z' = Y' - U'\\) is the inverse image of \\(Z = X - U\\) in \\(Y'\\)) is in the image of \\(H^n(Z',F_{Z'})\\). Even if we replace \\(Y\\) by \\(Y'\\), we therefore see that we are reduced to the following case: there exists an open affine \\(U\\) of \\(Y\\), of complement \\(Z\\), such as the restrictions of \\(\\xi\\) to \\(X_U\\) and to \\(X_Z\\) belong respectively to the image of \\(H^n(U,F_U)\\) and to the image of \\(H^n(Z,F_Z)\\); moreover, if \\(n \\geqslant 1\\), we can assume these restrictions to be zero.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(n \\geqslant 1\\), we will show that under these conditions, we have \\(\\xi = 0\\). To simplify the notations, we will write \\(Y'\\) instead of \\(X\\), and we denote by \\(U'\\), \\(Z'\\) the inverse images of \\(U\\), \\(Z\\) in \\(Y'\\), by \\(F'\\) the reverse image \\(g^*(F)\\). Let us note \\(i : U \\to Y\\), \\(j : Z \\to Y\\), \\(i' : U' \\to Y'\\), \\(j' : Z' \\to Y'\\) the inclusions,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{ U' \\ar[r]^{i'} \\ar[d]_{g_U} &amp; Y' = X \\ar[d]^{g} &amp; Z' \\ar[l]_{j'} \\ar[d]^{g_Z} \\\\ U \\ar[r]_{i} &amp; Y &amp; Z \\ar[l]^{j} }\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and consider the exact sequence of sheaves</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[0 \\to F'_{U',Y'} \\to F' \\to F'_{Z',Y'} \\to 0 \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>As the image of \\(\\xi\\) in \\(H^n(Y',F'_{Z',Y'}) = H^n(Z',F'_{Z'})\\) is zero, \\(\\xi\\) comes from an element of \\(H^n(Y',F'_{U',Y'})\\), and the restriction of the latter on \\(U'\\) is equal to that of \\(\\xi\\), therefore is zero. As \\(F'_{U',Y'}\\) is isomorphic to the inverse image of \\(F_{U,Y}\\), we are thus brought back to the case of a beam of the form \\(F_{U,Y}\\), so we can assume \\(F_Z = 0\\) (which takes into account the hypothesis \\(\\xi | Z' = 0\\)). Note that if \\(F \\to G\\) is a monomorphism of abelian sheaves of \\(\\mathbb{L}\\)-torsion (resp. of sheaves in groups), it suffices to prove that the image \\(\\eta\\) of \\(\\xi\\) in \\(H^n(Y',G')\\) is in the image of \\(H^n(Y,G)\\) i.e. is zero (XII 6.6). This allows us to replace \\(F\\) with \\(i_*(F_U)\\), given that the hypothesis \\(F_Z = 0\\) implies that the canonical homomorphism \\(F \\to i_*(F_U)\\) is injective. Now as \\(g\\) is locally \\((n-1)\\)-acyclic for \\(\\mathbb{L}\\), and a fortiori \\(0\\)-acyclic for \\(\\mathbb{L}\\) (because \\(n \\geqslant 1\\)), it follows that the inverse image of \\(i_*(F_U)\\) on \\(Y'\\) is identified with \\(i'_*(F'_{U'})\\), so that we are reduced to showing that the image \\(\\eta\\) of \\(\\xi\\) in \\(H^n(Y', i'_*(F'_{U'}))\\) is zero. But the restriction of \\(\\eta\\) to \\(U'\\) is zero, and it is therefore sufficient to check that the homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(*)\\qquad H^n(Y', i'_*(F'_{U'})) \\to H^n(U', F'_{U'})\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is a monomorphism. In the abelian case, we use the Leray spectral sequence for \\(i'\\) and \\(F'_{U'}\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[E_2^{p,q} = H^p(Y', R^q i'_*(F'_{U'})) \\Longrightarrow H^{p+q}(U', F'_{U'}) \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and relationships</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(**)\\qquad E_2^{p,q} = 0 \\quad \\text{pour } 0 &lt; p \\leqslant n-1 \\;, \\quad q \\leqslant n-1 \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To verify the latter, we note that the hypothesis of \\((n-1)\\)-local acyclicity of \\(g\\) for \\(\\mathbb{L}\\) implies that we have isomorphisms</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[R^q i'_*(F'_{U'}) \\simeq g^*(R^q i_*(F_U)) \\quad \\text{pour } q \\leqslant n-1 \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and taking into account the fact that \\(g\\) is \\((n-1)\\)-acyclic for \\(\\mathbb{L}\\), hence that \\(H^p(Y,G) \\xrightarrow{\\ \\sim\\ } H^p(Y',G')\\) for \\(p \\leqslant n-1\\) and any abelian sheaf of \\(\\mathbb{L}\\)-torsion \\(G\\) on \\(Y\\), we find \\((**)\\) since \\(H^p(Y,G) = 0\\) for \\(p &gt; 0\\), and we find the same</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(***)\\qquad E_2^{o,q} \\simeq H^0(Y, R^q i_*(F_U)) \\quad \\text{pour } q \\leqslant n-1 \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The Leray spectral sequence considered then gives rise to an exact sequence, which forms the second line of the following commutative diagram:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{ H^0(Y, R^{n-1} i_*(F_U)) \\ar[r] \\ar[d]^{\\wr} &amp; H^n(Y, i_*(F_U)) = 0 \\ar[d] &amp; \\\\ H^0(Y', R^{n-1} i'_*(F'_{U'})) \\ar[r] &amp; H^n(Y', i'_*(F'_{U'})) \\ar[r] &amp; H^n(U', F'_{U'}) \\;, }\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where the first vertical arrow is bijective by virtue of \\((***)\\). We read on the diagram that \\((*)\\) is injective, which completes the demonstration in this case. In the non-abelian case, \\(n = 1\\), we use the same diagram with \\(n = 1\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{ H^0(Y, i_*(F_U)) \\ar[r] \\ar[d]^{\\wr} &amp; H^1(Y, i_*(F_U)) = 0 \\ar[d] &amp; \\\\ H^0(Y', i'_*(F'_{U'})) \\ar[r] &amp; H^1(Y', i'_*(F'_{U'})) \\ar[r] &amp; H^1(U', F'_{U'}) \\;, }\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>XII 3.2, where the first vertical arrow is still bijective thanks to the hypothesis of \\(0\\)-local and global acyclicity made on \\(g\\), and we still conclude the injectivity of \\((*)\\) in this case.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's finally deal with the case \\(n = 0\\). Note that the data of a section \\(\\xi\\) of \\(F'\\) returns, by virtue of , to the data of a section \\(\\xi_{U'}\\) of \\(F'_{U'}\\) and of a section \\(\\xi_{Z'}\\) of \\(F'_{Z'}\\), such as the image of \\(\\xi_{Z'}\\) by natural homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[F'_{Z'} \\to j'^*(i'_*(F'_{U'}))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>or the section of the second member induced by \\(\\xi_{U'}\\). By hypothesis, there are sections \\(\\eta_Z\\) and \\(\\eta_U\\) of \\(F_Z\\) and \\(F_U\\) respectively, which induce \\(\\xi_{Z'}\\) and \\(\\xi_{U'}\\). It all comes down to seeing that they satisfy the condition of analogous compatibility, expressing that they are the restrictions of the same section \\(\\eta\\) of \\(F\\). It is necessary to check the equality of two sections of \\(j'^*(i'_*(F'_{U'}))\\), and for this, as \\(Z' \\to Z\\) is surjective (\\(g\\) being surjective since \\((-1)\\)-acyclic by hypothesis), it suffices to check that the two corresponding sections of \\(g_Z^*(j^*(i_*(F_U))) = j'^*(g^*(i_*(F_U)))\\) are equal. But the beam considered, thanks to the base change homomorphism</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(*)\\qquad g^*(i_*(F_U)) \\to i'_*(g_U^*(F_U)) = i'_*(F'_{U'}) \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is sent in \\(j'^*(i'_*(F'_{U'}))\\), and this last homomorphism is injective, because it is thus the case of \\((*)\\) thanks to the hypothesis that \\(g\\) is locally \\((-1)\\)-acyclic. It is therefore sufficient to check that the two sections of \\(j'^*(i'_*(F'_{U'}))\\), images of the two previous sections, are equal. However, we immediately see that these sections are none other than those already considered above, which are equal by hypothesis. This completes the demonstration.</p>"
+    },
+    {
+     "id": "XV.1.18bis",
+     "type": "remark",
+     "label": "1.18",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XV.1.18bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">1.18</span></div>\n  <div class=\"thm-body\"><p>We can give a refinement of 1.15, which provides a significantly simpler proof of 1.15 when \\(Y\\) is assumed to be locally Noetherian. For this, in addition to the preliminary assumptions about \\(g\\), \\(F\\), suppose that there exists a finite number of geometric points \\(f_i : \\bar{y}_i \\to Y\\) of \\(Y\\) such that the morphism\n  \\[F \\to \\prod_i f_{i*}(f_i^*(F))\\]\n  or injective (hypothesis automatically verified if \\(Y\\) is Noetherian and if \\(F\\) is constructible IX 2.14).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>I say that under these conditions, criterion 1.15 is valid by limiting itself to geometric points only \\(\\bar{y}_i\\). Indeed, by virtue of XII 6.6 we can assume that \\(F\\) is itself of the form \\(f_*(M_{\\bar{y}})\\), where \\(M\\) is a set resp. a group resp. an abelian group of \\(\\mathbb{L}\\)-torsion, and \\(f : \\bar{y} \\to Y\\) a geometric point. Let \\(f' : X' = X_{\\bar{y}} \\to X\\) be the canonical morphism. Assuming, to fix the ideas, \\(n \\geqslant 1\\), the local hypothesis made on \\(g\\) implies that we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[g^*(f_*(M_{\\bar{y}})) \\simeq f'_*(M_{X'}) \\;, \\qquad R^i f'_*(M_{X'}) = 0 \\quad \\text{pour } 1 \\leqslant i \\leqslant n-1 \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the second relation coming from the fact that the first member is isomorphic to \\(g^*(R^i f_*(M_{\\bar{y}}))\\), which is zero since obviously \\(R^i f_*(M_{\\bar{y}}) = 0\\) for \\(i \\geqslant 1\\). From these relationships, we conclude that</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^n(X, g^*(F)) \\simeq H^n(X, f'_*(M_{X'})) \\to H^n(X', M_{X'})\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>is injective, using the Leray spectral sequence for \\(f'\\), which clearly proves that an element \\(\\xi\\) of \\(H^n(X,F)\\) inducing a zero element of \\(H^n(X_{\\bar{y}}, F)\\) is zero. To deduce from this a simplified demonstration of 1.15 in the case where \\(Y\\) is locally Noetherian, we note that we can limit ourselves to the case \\(Y\\) Noetherian, and a passage to the easy limit, using IX 2.7.2 and VII 5, allows us to return to the case where \\(F\\) is moreover constructible, amenable to the statement that we have just proven.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XV-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) See EGA IV 18.12.1. </p>"
+    },
+    {
+     "id": "XV-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) This was actually verified by Mr. Raynaud. See reissue of EGA IV 14! </p>"
+    },
+    {
+     "id": "XV-fn3",
+     "number": "(∗)",
+     "html": "<p>(∗) The reader who is only interested in the Noetherian case is invited to refer to 1.18. </p>"
+    }
+   ]
+  },
+  {
+   "id": "XV-2",
+   "title": "2. Local acyclicity of a smooth morphism.",
+   "blocks": [
+    {
+     "id": "XV.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XV.2\">2. Local acyclicity of a smooth morphism.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The theorem is as follows:</p>"
+    },
+    {
+     "id": "XV.2.1",
+     "type": "theorem",
+     "label": "2.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XV.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a smooth morphism and let \\(\\mathbb{L} \\subset \\mathbb{P}\\) be the complementary set of the set of residual characteristics of \\(X\\). Then \\(g\\) is locally acyclic and locally \\(1\\)-aspheric for \\(\\mathbb{L}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us first note the corollary:</p>"
+    },
+    {
+     "id": "XV.2.2",
+     "type": "corollary",
+     "label": "2.2",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : \\mathbb{E}^m_Y \\to Y\\) be the structural morphism of the affine space. Then \\(g\\) is acyclic and \\(1\\)-aspheric for the set \\(\\mathbb{L}\\) complementary to the set of residual characteristics of \\(Y\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, by induction on \\(m\\) and 1.9 (i) we return to the case \\(m = 1\\). According to 2.1 we know that \\(g\\) is locally \\(n\\)-acyclic and locally \\(1\\)-aspherical for \\(\\mathbb{L}\\), so that the <u>local</u> condition of 1.16 is satisfied. It is therefore sufficient to demonstrate that the geometric fibers of \\(\\mathbb{E}^1_Y\\) are acyclic and \\(1\\)-aspherical for \\(\\mathbb{L}\\), that is to say that \\(\\operatorname{Spec} k[t]\\) is acyclic and \\(1\\)-aspherical for \\(\\mathbb{L}\\) if \\(k\\) is a separably closed field with characteristic \\(p \\notin \\mathbb{L}\\), which follows from IX 4.6 for the acyclicity assertion, and for \\(1\\)-asphericity is well known. More generally, let \\(X'\\) be an irreducible Galois normal covering of \\(X = \\mathbb{P}^1_k\\), which is not ramified outside the point \\(\\infty\\) and whose ramification at this point is moderate. Let us prove that the degree \\(n\\) of the coating is equal to \\(1\\). Now we have Hurwitz's formula:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[2(g' - 1) = 2n(g - 1) + \\deg \\mathfrak{D}_{X'/X}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where \\(g\\), \\(g'\\) are the kind of \\(X\\), \\(X'\\), and \\(\\mathfrak{D}_{X'/X}\\) the different divisor. We have \\(g = 0\\), and the moderate branching hypothesis implies \\(\\deg \\mathfrak{D}_{X'/X} \\leqslant n-1\\), hence \\(2(g'-1) \\leqslant -(n+1)\\) therefore \\(n \\leqslant 2(1-g')-1\\), and like \\(g' \\geqslant 0\\), we conclude \\(n \\leqslant 1\\) therefore \\(n = 1\\), c.q.f.d.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration of 2.1. The assertion is local on \\(X\\) and \\(Y\\) for the sparse topology, and we can therefore assume (SGA 1 II 1.1) that \\(g\\) is the structural morphism of the affine space \\(\\mathbb{E}^m_Y\\), and that \\(Y\\) is affine. By applying the transitivity of local acyclicity 1.13 (i) and the fact that \\(\\mathbb{E}^m_Y = \\mathbb{E}^{m-1}_{\\mathbb{E}^1_Y}\\), we immediately reduce to the case \\(m = 1\\), that is to say, to the case \\(X = \\operatorname{Spec} \\mathcal{O}_Y[t]\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's apply 1.18. We are brought back to demonstrate that the geometric fibers of the morphism of strictly local diagrams \\(\\widetilde{g} : \\widetilde{X} \\to \\widetilde{Y}\\), deduced from a pair of geometric points \\(\\bar{x}\\), \\(\\bar{y}\\), where \\(\\bar{x}\\) is closed in the fiber \\(X_{\\bar{y}}\\), are acyclic for \\(\\mathbb{L}\\) and \\(1\\)-aspherical for \\(\\mathbb{L}\\). We can obviously assume \\(Y = \\widetilde{Y}\\). Let \\(Y' \\to Y\\) be a finite, local, and surjective morphism, such that \\(Y'\\) is strictly local, and let \\(\\bar{y}'\\) be the point of \\(Y'\\) above \\(\\bar{y}\\), \\(\\bar{x}'\\) the point of \\(X'\\) above \\(\\bar{x}\\) and \\(\\bar{y}'\\). Since \\(X' \\to X\\) is finite, the strict localization of \\(X'\\) at the point \\(\\bar{x}'\\) is none other than \\(\\widetilde{X}' = \\widetilde{X} \\times_Y Y'\\). Consequently, any geometric fiber of \\(\\widetilde{X}'/Y'\\) is deduced from a geometric fiber of \\(\\widetilde{X}/Y\\) by algebraic extension (necessarily radical) of the base body, moreover there is at least one geometric fiber of \\(\\widetilde{X}'/Y'\\) above each geometric fiber of \\(\\widetilde{X}/Y\\). We can therefore (VIII 1.1) replace \\(Y\\) by \\(Y'\\), and by suitable choice of \\(Y'\\), we thus return to the case where \\(k(\\bar{x}) = k(\\bar{y})\\). Then \\(\\bar{x}\\) is a rational point of the fiber \\(X_{\\bar{y}} = \\operatorname{Spec} k(\\bar{y})[t]\\), say the point \\(t = a^o\\). By raising \\(a^o\\) in a section \\(a\\) of \\(\\mathcal{O}_{\\widetilde{Y}}\\) and doing the \"translation\" \\(t_1 = t - a\\) we are brought back to the case where the point \\(\\bar{x}\\) is the point \\(\\{t = 0\\}\\) of \\(\\operatorname{Spec} k(\\bar{y})[t]\\). Let \\(A = \\Gamma(\\widetilde{Y}, \\mathcal{O}_{\\widetilde{Y}})\\), so that \\(A\\) is a strictly local ring.</p>"
+    },
+    {
+     "id": "XV.2.3",
+     "type": "definition",
+     "label": "2.3",
+     "title": "Rating",
+     "html": "<div class=\"thm thm-plain definition\" id=\"XV.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Rating</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(A\\) be a local Henselian ring. We denote by \\(A\\{t\\}\\) the henselized of the ring \\(A[t]\\) in the first ideal generated by \\(\\operatorname{rad} A\\) and \\(t\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XV.2.4",
+     "type": "corollary",
+     "label": "2.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(A\\) Henselian and \\(A'\\) be a finite \\(A\\)-algebra. So \\(A'\\{t\\} \\simeq A' \\otimes_A A\\{t\\}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This follows immediately from VIII 4.1. Note that if \\(A\\) is strictly local, the same is true of \\(A\\{t\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof of the theorem is reduced to the following lemma:</p>"
+    },
+    {
+     "id": "XV.2.5",
+     "type": "lemma",
+     "label": "2.5",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XV.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Let \\(A\\) be a Henselian ring with residual characteristic \\(p\\). Then each geometric fiber of \\(\\operatorname{Spec} A\\{t\\}\\) on \\(\\operatorname{Spec} A\\) is acyclic and \\(1\\)-aspherical for \\(\\mathbb{L} = \\mathbb{P} - \\{p\\}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Note that since \\(A\\{t\\}\\) is the henselized of \\(A[t]\\), a fiber \\(\\operatorname{Spec} A\\{t\\} \\otimes_A K\\), \\(K\\) a residual body of \\(A\\), is projective limit of affine and finite type schemes \\(X_i\\) on the \"right\" \\(\\operatorname{Spec} K[t]\\), that is to say, limit of affine algebraic curves. Therefore each geometric fiber of \\(\\operatorname{Spec} A\\{t\\}\\) is limit of affine curves \\((X_i)_{\\bar{K}}\\) above the separably closed body \\(\\bar{K}\\), and it follows from IX 5.7 and VII 5.7 that the cohomological dimension of the geometric fibers is \\(\\leqslant 1\\). It is therefore sufficient to verify that the geometric fibers are \\(1\\)-aspherical for \\(\\mathbb{L}\\), that is to say, that such a geometric fiber \\(\\bar{Z}\\) is connected, not empty, and that \\(H^1(\\bar{Z},G) = 0\\) for each \\(\\mathbb{L}\\)-finite group \\(G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's write \\(A = \\varinjlim B_\\alpha\\) where the \\(B_\\alpha\\) are rings of finite type on \\(\\mathbb{Z}\\). The morphism \\(B_\\alpha \\to A\\) is factorized by the henselized \\(A_\\alpha\\) of \\(B_\\alpha\\) into the prime ideal induced by \\(\\operatorname{rad} A\\), hence \\(A = \\varinjlim A_\\alpha\\). We easily see that we also have \\(A\\{t\\} = \\varinjlim A_\\alpha\\{t\\}\\). Moreover, let \\(\\bar{y}\\) be a geometric point of \\(\\operatorname{Spec} A\\), \\(X_{\\bar{y}}\\) the geometric fiber of \\(S = \\operatorname{Spec} A\\{t\\}\\) on \\(\\operatorname{Spec} A\\) at \\(\\bar{y}\\), \\(\\bar{y}_\\alpha\\) the point of \\(\\operatorname{Spec} A_\\alpha\\) induced by \\(\\bar{y}\\), and \\(X_{\\alpha\\,\\bar{y}_\\alpha}\\) the geometric fiber of \\(\\operatorname{Spec} A_\\alpha\\{t\\}\\) on \\(\\operatorname{Spec} A\\) in \\(\\bar{y}_\\alpha\\). We have \\(X_{\\bar{y}} = \\varprojlim X_{\\alpha\\,\\bar{y}_\\alpha}\\). We are therefore reduced for the demonstration of 2.5 by 1.7 (ii) (applied to the morphisms \\(X_{\\alpha\\,\\bar{y}_\\alpha} \\to \\bar{y}_\\alpha\\)) to the case \\(A = A_\\alpha\\), that is to say, where \\(A\\) is the henselized of an algebra of finite type on \\(\\mathbb{Z}\\) in a given prime ideal. We assume them now. Recall that such an algebra is an <u>excellent</u> ring (EGA IV 7.8.3 (iii), 7.8.6 (i)), therefore that \\(A_\\alpha\\) is also excellent (as we can easily see from the definition, cf. EGA IV 18.7.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's check the \\(0\\)-acyclicity. (For a more general result, see Appendix.) Since \\(A\\{t\\}/A\\) admits the section \"\\(t = 0\\)\", a geometric fiber \\(\\bar{Z}\\) is non-empty. To see that it is connected, we are reduced, by replacing \\(A\\) by a quotient (2.4), in the case where \\(A\\) is integral, and where \\(\\bar{Z}\\) is the geometric fiber above the generic point of \\(\\operatorname{Spec} A\\). It suffices to prove that for any finite separable extension \\(K'\\) of the field of fractions \\(K\\) of \\(A\\), the scheme \\(Z_{K'}\\), (\\(Z = \\operatorname{Spec} A\\{t\\} \\otimes_A K\\)) is connected. Let \\(A'\\) be the normalized of \\(A\\) in \\(K'\\) (which is a finite \\(A\\)-algebra EGA IV 7.8.2) and \\(Z'\\) be the generic fiber of \\(\\operatorname{Spec} A'\\{t\\}\\) on \\(A'\\). According to 2.4, we have \\(A'\\{t\\} \\simeq A' \\otimes_A A\\{t\\}\\), hence \\(Z_{K'} \\simeq Z'\\). Let's replace \\(A\\) with \\(A'\\). It then suffices to demonstrate that \\(Z\\) has integrity, and it suffices to demonstrate that \\(A\\{t\\}\\) has integrity. But \\(A\\) being normal, \\(A[t]\\) is, therefore \\(A\\{t\\}\\) is also normal (SGA 1 I 9.5 (i)), hence the result.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof of 2.5, and consequently of 2.1, is thus reduced to the following lemma, which will be demonstrated in the next issue:</p>"
+    },
+    {
+     "id": "XV.2.6",
+     "type": "lemma",
+     "label": "2.6",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XV.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>Let \\(A\\) be a Henselian and excellent ring, and let \\(\\bar{Z}\\) be a geometric fiber of \\(\\operatorname{Spec} A\\{t\\}\\) / \\(\\operatorname{Spec} A\\). Then each principal Galois covering \\(\\bar{Z}'\\) of \\(\\bar{Z}\\), of group \\(G\\) of first order with the residual characteristic \\(p\\) of \\(A\\), is trivial.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XV-3",
+   "title": "3. Proof of the main lemma.",
+   "blocks": [
+    {
+     "id": "XV.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XV.3\">3. Proof of the main lemma.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By replacing \\(A\\) by a finite algebra \\(A'\\) (cf. 2.4), we reduce assertion 2.6 to the case where \\(A\\) is integral and where \\(\\bar{Z}\\) is the geometric fiber of \\(\\operatorname{Spec} A\\{t\\}\\) on \\(\\operatorname{Spec} A\\). Let \\(K\\) be the field of fractions of \\(A\\) and \\(Z = \\operatorname{Spec} A\\{t\\} \\otimes_A K\\). If \\(\\bar{Z}'/\\bar{Z}\\) is a principal Galois covering, we can descend it to a \\(Z_{K'}\\), where \\(K'\\) is a suitable separable finite extension of \\(K\\). By replacing (2.4) \\(A\\) by its normalized in \\(K'\\), which is a finite \\(A\\)-algebra (EGA IV 7.8.3 (vi)), we are reduced to proving the lemma in the following form:</p>"
+    },
+    {
+     "id": "XV.3.1",
+     "type": "lemma",
+     "label": "3.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XV.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>With the notations of 2.6, suppose \\(A\\) normal, and let \\(Z'/Z\\) be a galois principal slack covering, of group \\(G\\) of first order with the residual characteristic \\(p\\) of \\(A\\). Then \\(Z'\\) is induced by a Galois extension \\(K'\\) of \\(K\\), i.e. (SGA 1 IX 6.2) the covering \\(\\bar{Z}'\\) of \\(\\bar{Z}\\) deduced from \\(Z'\\) is trivial.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration. Let \\(B'\\) be the normalized of \\(A\\{t\\}\\) in the ring of rational functions of \\(Z'\\), and consider the prime ideals \\(P\\) of height \\(1\\) of \\(A\\{t\\}\\) such that the algebra \\(B'\\) on \\(A\\{t\\}\\) is branched into \\(P\\). Since \\(Z'/Z\\) is slack, \\(P\\) is not on the generic point of \\(\\operatorname{Spec} A\\), i.e., \\(\\mathfrak{p} = P \\cap A \\neq 0\\). Therefore \\(A\\{t\\}/P A\\{t\\} = (A/\\mathfrak{p})\\{t\\}\\) is complete and of dimension at most equal to \\(\\dim A\\). Since \\(A\\{t\\}\\) is excellent (EGA IV 7.8.6 (i)) and 18.7.6 therefore catenary, we have \\(\\dim \\operatorname{Spec} A\\{t\\}/P = (\\dim A + 1) - 1 = \\dim A \\geqslant \\dim A\\{t\\}/\\mathfrak{p} A\\{t\\}\\), hence \\(P = \\mathfrak{p} A\\{t\\}\\) since \\(P \\supset \\mathfrak{p} A\\{t\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let then \\(\\mathfrak{p}_1, \\ldots, \\mathfrak{p}_m\\) be the prime ideals of height \\(1\\) of \\(A\\) such that \\(B'/A\\{t\\}\\) is ramified into the ideals \\(\\mathfrak{p}_i A\\{t\\}\\), or \\(s\\) the p.g.c.d. of the orders of the inertia groups (SGA 2) \\(G_i \\subset G\\) for \\(B'\\) in the prime ideals above \\(\\mathfrak{p}_i A\\{t\\}\\), which is an integer dividing the order of \\(G\\), therefore prime to \\(p\\). Let \\(f \\in A\\) be a function which cancels with order \\(1\\) in each \\(\\mathfrak{p}_i\\) (such a \\(f\\) exists, as results for example from Bourbaki, Alg. Comm., Chap. II, §3, cor. to prop. 17). By replacing (2.4) \\(A\\) by its normalized \\(A_1\\) in the finite extension \\(K_1 = K[x]/(x^s - f)\\) of \\(K\\) and \\(B'\\) by the normalized of \\(A_1 \\otimes_A B'\\), we reduce by Abyankhar's lemma (SGA 1 X 3.6) in case \\(B'\\) is not ramified in any prime ideal of height \\(1\\) of \\(A\\{t\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Then the algebra \\(B'/A\\{t\\}\\) is also spread over the fiber of \\(\\operatorname{Spec} A\\{t\\}\\) at every point of \\(\\operatorname{Spec} A\\) of codimension \\(1\\). Indeed, let \\(\\mathfrak{p}\\) be a prime ideal of height \\(1\\) of \\(A\\). Since \\(A\\) is normal, \\(A_{\\mathfrak{p}}\\) is a ring of discrete valuation, hence regular, therefore \\(A\\{t\\} \\otimes_A A_{\\mathfrak{p}}\\) is also regular — indeed, it is a limit of slack schemes above \\(A_{\\mathfrak{p}}[t]\\). By hypothesis, the algebra \\(B'/A\\{t\\}\\) is spread at every point of codimension \\(\\leqslant 1\\) of \\(\\operatorname{Spec} A\\{t\\} \\otimes_A A_{\\mathfrak{p}}\\), so it is spread everywhere by the Zariski-Nagata purity theorem (SGA 1 X 3.1; for a demonstration, see e.g. SGA 2,"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By replacing (2.4) \\(A\\) by a suitable finite \\(A\\)-algebra, we return to the case where in addition the algebra \\(B'/tB'\\) on \\(A\\{t\\}/tA\\{t\\} \\simeq A\\) is completely decomposed above the generic point of \\(\\operatorname{Spec} A\\). So it suffices to demonstrate that under these conditions, the algebra \\(B'\\) over \\(A\\{t\\}\\) is \"trivial\", and since \\(A\\{t\\}\\) is Henselian, it suffices to demonstrate that \\(B'\\) over \\(A\\{t\\}\\) is equal; in fact, it follows from the fact that the algebra \\(B'/tB'\\) splits above the generic point of \\(\\operatorname{Spec} A\\) that it splits on \\(\\operatorname{Spec}(A)\\) (SGA 1 I 10.1), therefore that the residual extensions of \\(B'\\) on the maximal ideal of \\(A\\{t\\}\\) are trivial, and we apply (EGA IV 18.5.14). We are therefore brought back to the following lemma: </p>"
+    },
+    {
+     "id": "XV.3.2",
+     "type": "lemma",
+     "label": "3.2",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XV.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(B\\) be an excellent and normal local ring, and let \\(0 \\neq t \\in \\operatorname{rad} B\\) such that \\(B/tB\\) is normal. Let \\(B'\\) be a \\(B\\)-normal integral finite algebra, containing \\(B\\), such that:</p>\n  <p>(i) The algebra \\(B'/tB'\\) over \\(B/tB\\) is completely decomposed into the maximal points of \\(\\operatorname{Spec}(B/tB)\\).</p>\n  <p>(ii) The algebra \\(B'\\) on \\(B\\) is spread at the points of codimension \\(1\\) of \\(\\operatorname{Spec}(B/tB)\\).</p>\n  <p>Then \\(B'\\) is spread over \\(B\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration. By virtue of (ii), the assertion is trivial for \\(\\dim B \\leqslant 2\\), i.e. for \\(\\dim B/tB \\leqslant 1\\). Suppose that \\(B'/B\\) is not flat, let \\(x\\) be a maximum point of the set of points of \\(\\operatorname{Spec} B/tB\\) above which \\(B'/B\\) is not flat, and let \\(C\\) be the local ring of \\(\\operatorname{Spec} B\\) in \\(x\\). Then \\(C\\) is still an excellent and normal ring (EGA IV 7.8.2), we have \\(0 \\neq t \\in \\operatorname{rad} C\\), and (i) and (ii) are true for the \\(C\\)-algebra \\(C' = C \\otimes_B B'\\). We can therefore assume \\(B = C\\), that is to say, that \\(B'\\) is spread over \\(B\\) above each point of \\(\\operatorname{Spec} B/tB\\), except perhaps at the origin. Since \\(B/tB\\) is normal (in fact unibranche would suffice), condition (i) implies that the algebra \\(B'/tB'\\) is completely decomposed outside the origin. Furthermore, we can assume \\(\\dim B \\geqslant 3\\). We are therefore brought back to the following lemma: </p>"
+    },
+    {
+     "id": "XV.3.3",
+     "type": "lemma",
+     "label": "3.3",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"XV.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(B\\) be an excellent and normal local ring, \\(0 \\neq t \\in \\operatorname{rad} B\\), \\(\\dim B \\geqslant 3\\). Let \\(B'\\) be an integral \\(B\\)-finite normal algebra, containing \\(B\\), such that the algebra \\(B'/tB'\\) of \\(B/tB\\) is completely decomposed outside the origin. Then \\(B'\\) is spread over \\(B\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Demonstration. Let \\(X = \\operatorname{Spec} B\\), \\(X_1 = X - \\{x_o\\}\\), where \\(x_o\\) is the closed point, and let \\(i : U \\to X\\) be the open of \\(x \\in X\\) in which the algebra \\(B'/B\\) is equal. Then \\((X - U) \\cap V(t) = \\{x_o\\}\\) is of dimension \\(0\\). Since \\(V(t)\\) is defined by an equation, it follows that \\(\\dim(X - U) \\leqslant 1\\) (EGA \\(0_{\\mathrm{IV}}\\) 16.2.5), hence (\\(X\\) being catenary) \\(x \\in X - U \\Longrightarrow \\dim \\mathcal{O}_{X,x} \\geqslant \\dim B - 1 \\geqslant 2\\), i.e. \\(\\operatorname{codim}(X - U, X) \\geqslant 2\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X' = \\operatorname{Spec}(B')\\), \\(U'\\) be the inverse image of \\(U\\) in \\(X'\\), then, \\(X\\) being universally catenary, the relation \\(\\operatorname{codim}(X - U, X) \\geqslant 2\\) implies the relation \\(\\operatorname{codim}(X' - U', X') \\geqslant 2\\) (EGA IV 5.6.10), therefore, \\(X'\\) being normal, we have</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[B' = \\Gamma(X', \\mathcal{O}_{X'}) \\xrightarrow{\\ \\sim\\ } \\Gamma(U', \\mathcal{O}_{U'}) \\;.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let then \\(\\underline{B}' = \\widetilde{B}'\\) be the sheaf of \\(\\mathcal{O}_X\\)-algebras which defines \\(X'\\) on \\(X\\), \\(\\underline{C}\\) its restriction to \\(U\\), then the previous formula is equivalent to the formula</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\underline{B}' \\xrightarrow{\\ \\sim\\ } i_*(\\underline{C}) \\;,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>and 3.3 therefore reduces to the following statement (where there is no longer any question of \\(B'\\)): Let \\(B\\), \\(t\\) as in 3.3, \\(X = \\operatorname{Spec}(B)\\), \\(Y = \\operatorname{Spec}(B/tB)\\), \\(U\\) an open neighborhood of \\(Y_1 = Y - \\{x_o\\}\\) in \\(X_1 = X - \\{x_o\\}\\), \\(U'\\) a covering spread of \\(U\\) whose restriction to \\(Y_1\\) is completely decomposed, \\(\\underline{C}\\) the sheaf of \\(\\mathcal{O}_{U'}\\)-algebras defining \\(U'\\), then (\\(i : U \\to X\\) designating the canonical immersion) \\(i_*(\\underline{C})\\) is a coherent Algebra spread over \\(X\\) (or, which amounts to the same thing, thanks to the relation \\(\\operatorname{prof} \\mathcal{O}_{X,x} \\geqslant 2\\) for \\(x \\in X - U\\) reported above and to EGA IV 5.10.5, \\(U'\\) extends into a flat coating \\(X'\\) of \\(X\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\widehat{X} = \\operatorname{Spec} \\widehat{B}\\), where \\(\\widehat{B}\\) is the complement of \\(B\\). Then \\(\\widehat{B}\\) is normal (EGA IV 7.8.3 (v)) and \\(\\widehat{B}/B\\) is faithfully flat. Either</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\xymatrix{ \\widehat{U} \\ar[r]^{\\widehat{i}} \\ar[d]_{f_1} &amp; \\widehat{X} \\ar[d]^{f} \\\\ U \\ar[r]_{i} &amp; X }\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>the Cartesian diagram deduced from \\(\\widehat{X} \\to X\\). Since \\(f\\) is faithfully flat, the functor \\(i_*\\) commutes on change of base \\(f\\) (EGA IV 2.3.1), and we are brought back (EGA IV 17.7.1) to prove that \\(\\widehat{i}_*(\\widehat{\\underline{C}})\\) is an algebra spread over \\(\\widehat{X}\\). We can therefore replace \\(B\\) by \\(\\widehat{B}\\), that is to say, we can assume \\(B\\) <u>complete</u>. In this case, we will prove that \\(U'\\) is a completely decomposed covering of \\(U\\) (which will obviously imply that it extends into a flat covering of \\(X\\), and will complete the demonstration). Now this assertion is now an immediate consequence of the \"local Lefschetz theory\" SGA 2 X 2.1 (i) and 2.5, as we immediately see, taking into account once again the relation \\(\\operatorname{prof} \\mathcal{O}_{X,x} \\geqslant 2\\) For \\(\\dim \\{x\\} = 1\\).</p>"
+    },
+    {
+     "id": "XV.3.4",
+     "type": "remark",
+     "label": "3.4",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XV.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>We can prove 3.2 and 3.3 under more general conditions, by essentially following the same demonstration: instead of assuming \\(B\\) excellent and normal, it suffices to suppose that the complement \\(\\widehat{B}\\) is normal (a condition which is stable by localization, thanks to the results of EGA IV 7), or only that the complement of \\(B\\) for the topology \\((tB)\\)-adic is normal, and quotient of a regular ring.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XV-4",
+   "title": "4. Appendix: A criterion of local \\(0\\)-acyclicity.",
+   "blocks": [
+    {
+     "id": "XV.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XV.4\">4. Appendix: A criterion for \\(0\\)-local acyclicity.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The results of this issue will no longer be used in the rest of the seminar.</p>"
+    },
+    {
+     "id": "XV.4.1",
+     "type": "theorem",
+     "label": "4.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"XV.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a schema morphism. We assume \\(g\\) flat and with separable fibers, and \\(X\\) and \\(Y\\) locally Noetherian resp. \\(g\\) locally of finite presentation. Then \\(g\\) is universally locally \\(0\\)-acyclic.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We can obviously assume \\(X\\) and \\(Y\\) affines, which allows, in the respective case, to be reduced to the case where \\(Y\\) therefore \\(X\\) is Noetherian, by the standard method of EGA IV 8, using here EGA IV 9.7.7. We can therefore limit ourselves to proving the first statement. The hypothesis being stable by change of base of finite type, we are reduced, taking into account the passage to the limit 1.13 (ii), to prove that \\(g\\) is locally \\(0\\)-acyclic, and for this we are reduced by 1.17 to prove that if we further suppose \\(g\\) strictly local, then the geometric fibers of \\(g\\) are related. But this is what EGA IV 18.9.8 says.</p>"
+    },
+    {
+     "id": "XV.4.2",
+     "type": "corollary",
+     "label": "4.2",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(g : X \\to Y\\) be a schema morphism, with \\(Y\\) discrete. Then \\(g\\) is universally locally \\(0\\)-acyclic.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We can assume that \\(Y\\) is the spectrum of a perfect body \\(k\\) (VIII 1.1). On the other hand, we can assume \\(X\\) affine, therefore projective limit of affine schemes of finite type on \\(k\\), and taking into account 1.13 (ii) we are reduced to the case where \\(X\\) is of finite type on \\(k\\). Finally, we can obviously suppose \\(X\\) reduced, therefore separable on \\(k\\) since \\(k\\) is perfect. The conclusion then results from 4.1.</p>"
+    },
+    {
+     "id": "XV.4.3",
+     "type": "corollary",
+     "label": "4.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XV.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>Suppose that \\(g\\) is surjective, and satisfies the conditions of 4.1 or 4.2; in the other case of 4.1 we further assume that \\(g\\) is either quasi-compact and quasi-separated, or universally open. Then \\(g\\) is a universal effective descent morphism for the fibered category of spread sheaves on variable preschemes.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the cases considered, \\(g\\) is universally submersive and it follows from VIII 9.4 that \\(g\\) is a morphism of universal descent for the fibered category considered. This allows us, for the question of effectiveness, to limit ourselves to the \\(Y\\) affine case. We further see, in each of the cases considered, that \\(X\\) is covered by a <u>finite</u> number of open affines \\(X_i\\) whose images cover \\(Y\\). Replacing \\(X\\) by the disjoint sum of \\(X_i\\), we can then assume \\(X\\) affine, a fortiori quasi-compact and quasi-separate on \\(Y\\). We then conclude thanks to the reasoning of VIII 9.4.1, using the fact XVI 1.1 that for a quasi-compact and quasi-separate morphism \\(g\\), the formation of \\(g_*(F)\\) (\\(F\\) a beam spread over \\(X\\)) commutes at any change of base \\(Y' \\to Y\\) which is locally \\(0\\)-acyclic.</p>"
+    },
+    {
+     "id": "XV.4.4",
+     "type": "remark",
+     "label": "4.4",
+     "title": "Remarks",
+     "html": "<div class=\"thm thm-plain remark\" id=\"XV.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarks</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>a) We thus obtain the demonstration (which had been left pending) of VIII 9.4 d), as a special case of 4.3. A different, easier proof, not using the rather delicate result of EGA IV 18.9.8, would be obtained by noting that thanks to VIII 9.1 we can limit ourselves to the case of the morphism \\(\\operatorname{Spec}(K) \\to \\operatorname{Spec}(k)\\) induced by an extension of body \\(K/k\\), but \\(\\operatorname{Spec}(K)\\) is universally locally \\(0\\)-acyclic on \\(\\operatorname{Spec}(k)\\), because it is even universally acyclic for \\(\\mathbb{L} = \\mathbb{P} - \\{p\\}\\), \\(p = \\operatorname{car} k\\), as we will see in XVI 1.5.</p>\n  <p>b) We do not know whether any quasi-compact and quasi-separate morphism, surjective and locally \\((-1)\\)-acyclic (or universally locally \\((-1)\\)-acyclic) is a morphism of effective descent for the fibered category of spread sheaves on variable preschemes. This statement seems quite plausible, and would improve 4.3 and VIII 9.4 c),d). We will compare it to the statement of effectiveness in MURRE, Sém. Bourbaki n° 293, p. 17.</p>\n  <p>c) It is plausible that under the conditions of 4.2, \\(g\\) is even locally acyclic for \\(\\mathbb{L}\\) and locally \\(1\\)-aspheric for \\(\\mathbb{L}\\), where \\(\\mathbb{L}\\) is the set of distinct prime numbers of the residual characteristics of \\(Y\\). In this question we can obviously assume \\(Y\\) spectrum of an algebraically closed field \\(k\\), and we can show (SGA 1964/65) that the answer is affirmative when we have the resolution of singularities for schemes of finite type on \\(k\\). So the answer is affirmative when \\(Y\\) has zero characteristic, as we see using the results of HIRONAKA <sup class=\"footnote-ref\"><a id=\"XV-fn4ref\" href=\"#XV-fn4\">(∗)</a></sup>.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XV-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) See SGA 1 XIII. </p>"
+    }
+   ]
+  }
+ ]
+}

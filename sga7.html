@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Generic entry page for the translation-viewer. Copy this to your project root as
+     paper.html (next to your data/ folder) — it needs no per-project edits. Everything
+     project-specific (title, languages, UI strings, MathJax macros) lives in
+     data/config.json; the <title>, #book-title and #lang-switch below are filled by
+     viewer.js from that file at runtime. Assumes the submodule is mounted at
+     viewer/ in the project root. -->
+<title>SGA 7</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="viewer/viewer.css">
+<!-- Fetches data/config.json, configures + injects the vendored MathJax/XyJax, and
+     exposes window.TVConfigPromise for viewer.js. Repoint data-config if your
+     config lives elsewhere. -->
+<script src="viewer/viewer-bootstrap.js" data-config="data/sga7/config.json"></script>
+<script>
+window.TVConfigPromise = window.TVConfigPromise.then(function (cfg) {
+  cfg.dataPath = 'data/sga7/';
+  return cfg;
+});
+</script>
+</head>
+<body>
+<header id="topbar">
+  <button id="menu-toggle" aria-label="Menu">☰</button>
+  <a id="home-link" href="index.html" title="Home" aria-label="Home">⌂</a>
+  <h1 id="book-title"></h1>
+  <div id="lang-switch" aria-label="Right-pane language"></div>
+  <button id="cmt-toggle" aria-label="Flagged errors / comments" title="Flagged errors / comments">
+    💬 Comments<span id="cmt-count" hidden></span>
+  </button>
+</header>
+<div id="layout">
+  <nav id="sidebar" aria-label="Contents"></nav>
+  <main id="content">
+    <!-- viewer.js fills this with one .align-row per block pair (base | translation) -->
+    <div id="panes"></div>
+  </main>
+</div>
+<script src="viewer/viewer.js"></script>
+<script src="viewer/comments.js"></script>
+</body>
+</html>

@@ -1,0 +1,1317 @@
+{
+ "chapter_id": "XI",
+ "title": "CRITÈRES DE REPRÉSENTABILITÉ. APPLICATIONS AUX SOUS-GROUPES DE TYPE MULTIPLICATIF DES SCHÉMAS EN GROUPES AFFINES",
+ "number": "XI",
+ "pages": [
+  {
+   "id": "XI",
+   "title": "CRITÈRES DE REPRÉSENTABILITÉ. APPLICATIONS AUX SOUS-GROUPES DE TYPE MULTIPLICATIF DES SCHÉMAS EN GROUPES AFFINES",
+   "blocks": [
+    {
+     "id": "XI",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XI\">EXPOSÉ XI<br>CRITÈRES DE REPRÉSENTABILITÉ. APPLICATIONS AUX SOUS-GROUPES DE TYPE MULTIPLICATIF DES SCHÉMAS EN GROUPES AFFINES<span class=\"author\">par A. Grothendieck</span><sup class=\"footnote-ref\"><a id=\"XI-fn0ref\" href=\"#XI-fn0\">0</a></sup></h1>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn0",
+     "number": "0",
+     "html": "version xy du 5/12/08"
+    }
+   ]
+  },
+  {
+   "id": "XI-0",
+   "title": "0. Introduction",
+   "blocks": [
+    {
+     "id": "XI.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.0\">0. Introduction</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme nous en avons déjà vu des exemples dans <a class=\"ref\" href=\"#X.4\">Exp. X, N<sup>os</sup> 4, 5</a>, la représentabilité de certains foncteurs, tels certains foncteurs du type \\(\\underline{\\mathrm{Hom}}_S(X, Y)\\) et diverses variantes, joue un rôle important dans nombre de questions concernant les préschémas en groupes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Parmi les résultats particulièrement utiles dans cette théorie, signalons (en plus des questions de représentabilité de quotients, étudiées dans les exposés <a class=\"ref\" href=\"#V\">V</a> et <a class=\"ref\" href=\"#VIA\">VI</a> et dans <a class=\"ref\" href=\"#VIII.5\">Exp. VIII 5</a>) la question de la représentabilité des foncteurs de la forme \\(\\prod_{X/S} Y/X\\) (Y un sous-objet de X) étudiée dans <a class=\"ref\" href=\"#VIII.6\">Exp VIII 6</a> dans un cas très élémentaire, dont on donnera des variantes dans le <a class=\"ref\" href=\"#XI.6\">N<sup>o</sup> 6</a> du présent exposé ; ces résultats nous fournissent la représentabilité de divers centralisateurs, normalisateurs, transporteurs.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Des critères de représentabilité moins élémentaires, utilisant des résultats qui figureront dans EGA VI, sont indiqués dans <a class=\"ref\" href=\"#XI.6.12\">6.12</a> et dans les Exp XV, XVI où on donnera un critère de représentabilité de quotients G/H dans des cas non couverts par les exposés antérieurs (critère qui n'a pas été développé dans les exposés oraux).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notre objet principal dans le présent exposé est la démonstration des théorèmes <a class=\"ref\" href=\"#XI.4.1\">4.1</a> et <a class=\"ref\" href=\"#XI.4.2\">4.2</a>, qui fournissent un exemple typique de technique de construction non projective (proche de celle qui sera développée dans EGA VI). Il est d'ailleurs apparu, depuis l'exposé oral et la rédaction du texte actuel, que les hypothèses affines faites dans 4.1 et 4.2 peuvent être éliminées dans une large mesure (cf. XV), et que d'autre part on peut, pour l'essentiel de la théorie développée dans l'exposé suivant, se passer de 4.1 et 4.2. Il pourrait enfin être intéressant de prouver l'analogue de ces résultats pour un préschéma en groupes réductif (par exemple semi-simple) général au lieu d'un groupe de type multiplicatif, auquel cas 4.1 et 4.2 seront sans doute le résultat clef pour la démonstration.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XI-1",
+   "title": "1. Rappels sur les morphismes lisses, étales, non ramifiés",
+   "blocks": [
+    {
+     "id": "XI.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.1\">1. Rappels sur les morphismes lisses, étales, non ramifiés</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le lecteur est référé à EGA IV §§ 17 &amp; 18, et en attendant sa publication, à SGA 1 I, II, III (où il y a lieu cependant de remplacer certaines hypothèses noethériennes, gênantes dans les applications, par des hypothèses de présentation finie).</p>"
+    },
+    {
+     "id": "XI.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Définition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"XI.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Définition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, F un foncteur \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\). On dit que F est <em>formellement lisse</em> (resp. <em>formellement non ramifié</em> <sup class=\"footnote-ref\"><a id=\"XI-fn1ref\" href=\"#XI-fn1\">1</a></sup>, resp. <em>formellement étale</em>) si pour tout S-préschéma \\(S'\\), affine (au sens absolu), et tout sous-schéma \\(S'_0\\) de \\(S'\\) défini par un idéal nilpotent \\(\\mathscr{J}\\), l'application\n  \\[\n  F(S') \\longrightarrow F(S'_0)\n  \\]\n  est surjective (resp. injective, resp. bijective). Un préschéma X sur S est dit <em>formellement lisse sur S</em> (resp. <em>formellement non ramifié sur S</em>, resp. <em>formellement étale sur S</em>), si le foncteur correspondant est formellement lisse (resp. formellement non ramifié, resp. formellement étale) ; on dit que X est <em>lisse sur S</em> (resp. <em>non ramifié sur S</em>, resp. <em>étale sur S</em>), s'il vérifie la condition précédente et si de plus X est localement de présentation finie sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'intérêt de ces définitions pour X réside dans le fait que d'une part, elles s'expriment de façon remarquablement simple en termes du foncteur représenté par X (et en pratique, X est souvent donné comme l'objet sur S représentant un foncteur explicité), et que d'autre part elles s'expriment également par des propriétés remarquables concernant la structure locale de X, que nous allons rappeler dans les énoncés suivants (pour la démonstration nous renvoyons à <em>loc. cit.</em>).</p>"
+    },
+    {
+     "id": "XI.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Soit X un préschéma localement de présentation finie sur S. Alors :</p>\n  <p>(i) Pour que X soit lisse sur S, il faut et il suffit que X soit plat sur S, et que ses fibres géométriques \\(X \\otimes_S \\mathrm{Spec}(\\overline{\\kappa(s)})\\) soient des schémas réguliers. Plus généralement, pour que X soit lisse sur S dans un voisinage du point \\(x \\in X\\), (on dit alors que X est lisse sur S en x), il faut et il suffit que X soit plat sur S en x et \\(X_s\\) soit lisse sur \\(\\kappa(s)\\) en x, i.e. \\(X_s \\otimes_{\\kappa(s)} \\overline{\\kappa(s)}\\) soit régulier en les points (ou simplement, un point) au-dessus de x.</p>\n  <p>(ii) Supposons S donc X localement noethérien, soit \\(x \\in X\\) et \\(s \\in S\\) son image dans S, alors la nature lisse de X sur S en x se reconnaît sur l'homomorphisme local \\(A = \\mathscr{O}_{S,s} \\to B = \\mathscr{O}_{X,x}\\) d'anneaux locaux noethériens, (ou même sur l'homomorphisme local \\(\\widehat{A} \\to \\widehat{B}\\) de leurs complétés), par la propriété caractéristique suivante : B est plat sur A, et \\(B \\otimes_A k\\) est géométriquement régulier sur k (le corps résiduel de A), i.e. pour toute extension finie \\(k'\\) de k, \\((B \\otimes_A k) \\otimes_k k' = B \\otimes_A k'\\) est un anneau semi-local régulier. Lorsque l'extension résiduelle \\(k(B)/k(A)\\) est triviale, ces conditions équivalent aussi à la suivante : \\(\\widehat{B}\\) est isomorphe comme \\(\\widehat{A}\\)-algèbre à une algèbre de séries formelles \\(\\widehat{A}[[t_1, \\ldots, t_n]]\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ainsi, du point de vue « formel », la structure de X sur S est celle de <em>l'espace affine type</em> \\(S[t_1, \\ldots, t_n]\\) <em>sur S</em>.</p>"
+    },
+    {
+     "id": "XI.1.3",
+     "type": "proposition",
+     "label": "1.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>Soit X un préschéma localement de présentation finie sur S. Alors :</p>\n  <p>(i) Les conditions suivantes sont équivalentes :</p>\n  <p>a) X est non ramifié sur S.</p>\n  <p>b) Le morphisme diagonal \\(X \\to X \\times_S X\\) est une immersion ouverte.</p>\n  <p>c) \\(\\Omega^1_{X/S} = 0\\).</p>\n  <p>d) Les fibres géométriques de \\(X/S\\) sont discrètes réduites, i.e. isomorphes à des sommes de copies du corps de base.</p>\n  <p>e) Pour tout \\(s \\in S\\), la fibre \\(X \\otimes_S \\mathrm{Spec}\\,\\kappa(s) = X_s\\) est non ramifiée sur \\(\\kappa(s)\\), ou encore est isomorphe à une somme de spectres d'extensions finies séparables de \\(\\kappa(s)\\).</p>\n  <p>(ii) On a des conditions analogues de nature ponctuelle pour que X soit non ramifié sur S en un point donné x (i.e. dans un voisinage du dit point) par exemple il faut et il suffit que \\(\\mathscr{O}_{X_s,x}\\) soit une extension finie séparable de \\(\\kappa(s)\\), ce qui s'exprime aussi en termes de l'homomorphisme local \\(A = \\mathscr{O}_{S,s} \\to B = \\mathscr{O}_{X,x}\\) par la condition que \\(B \\otimes_A k\\) soit une extension finie séparable de k (corps résiduel de A), i.e. \\(r(A)B = r(B)\\) et \\(k(B)\\) est une extension finie séparable de \\(k(A)\\). Lorsque A donc aussi B est noethérien, et \\(k(A) \\xrightarrow{\\ \\sim\\ } k(B)\\), cela signifie aussi que \\(\\widehat{A} \\to \\widehat{B}\\) est surjectif.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ainsi, du point de vue « formel », dire que X est non ramifié sur S signifie que X est essentiellement un <em>sous-préschéma</em> de S. Observer aussi que les conditions d) et e) s'expriment uniquement en termes des fibres de \\(X/S\\).</p>"
+    },
+    {
+     "id": "XI.1.4",
+     "type": "proposition",
+     "label": "1.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Soit X un préschéma localement de présentation finie sur S. Pour que X soit étale sur S, il faut et il suffit qu'il soit lisse sur S et non ramifié sur S (trivial par définition), ce qui permet d'appliquer les critères <a class=\"ref\" href=\"#XI.1.2\">1.2</a> et <a class=\"ref\" href=\"#XI.1.3\">1.3</a>. On trouve en particulier :</p>\n  <p>(i) Pour que X soit étale sur S, il faut et il suffit qu'il soit plat sur S et non ramifié sur S. Critère local analogue pour que X soit étale sur S en un point x donné.</p>\n  <p>(ii) Supposons de plus S donc X localement noethérien. Alors le fait que X soit étale sur S en un point x se reconnaît sur l'homomorphisme local \\(A = \\mathscr{O}_{S,s} \\to B = \\mathscr{O}_{X,s}\\) (et même sur l'homomorphisme local \\(\\widehat{A} \\to \\widehat{B}\\)) par la propriété caractéristique suivante : B est plat sur A, et \\(B \\otimes_A k\\) est une extension finie séparable de k (corps résiduel <sup class=\"footnote-ref\"><a id=\"XI-fn2ref\" href=\"#XI-fn2\">2</a></sup> de A). Lorsque \\(k(A) \\xrightarrow{\\ \\sim\\ } k(B)\\), cette condition signifie simplement que \\(\\widehat{A} \\to \\widehat{B}\\) est un isomorphisme.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ainsi, du point de vue « formel », dire que X est étale sur S signifie simplement que X est localement isomorphe à S.</p>"
+    },
+    {
+     "id": "XI.1.5",
+     "type": "remarque",
+     "label": "1.5",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>Lorsque X est localement de présentation finie sur S, et qu'on se donne un point \\(x \\in X\\), alors le fait que X soit lisse (resp. non ramifié, resp. étale) sur S en x i.e. au voisinage de x, se reconnaît encore sur le <em>foncteur</em> \\(X : (\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) par la propriété suivante : pour tout \\(S'\\) sur S, \\(S'\\) spectre d'un anneau local, tout sous-schéma \\(S'_0\\) de \\(S'\\) défini par un idéal nilpotent, et tout S-morphisme \\(u_0 : S'_0 \\to X\\) appliquant le point fermé \\(s'\\) de \\(S'\\) en x, il existe au moins un (resp. au plus un, resp. exactement un) S-morphisme \\(u : S' \\to X\\) qui le prolonge. Cet énoncé montre en particulier que dans la définition <a class=\"ref\" href=\"#XI.1.1\">1.1</a> on peut se limiter à des \\(S'\\) qui sont des schémas locaux (à condition que le foncteur envisagé soit représentable par un préschéma localement de présentation finie sur S). D'autre part, lorsque S est localement noethérien, on peut même dans le critère ponctuel précédent se limiter à des \\(S'\\) qui sont des schémas locaux <em>artiniens</em>, et on peut donc faire la même restriction sur \\(S'\\) dans la définition 1.1 (sous réserve que S soit localement noethérien et le foncteur envisagé représenté par un préschéma localement de type fini sur S).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.1.6",
+     "type": "remarque",
+     "label": "1.6",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.6</span></div>\n  <div class=\"thm-body\"><p>Bien entendu, étant donné un morphisme \\(f : X \\to Y\\) de préschémas, on dira que f est lisse (resp. …) si f fait de X un Y-préschéma lisse (resp. …). Lorsque X et Y sont des S-préschémas et f un S-morphisme de présentation finie, alors ces propriétés sur f s'expriment de façon immédiate en termes du morphisme des foncteurs \\(F, G : (\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) défini par f : f est lisse (resp. non ramifié, resp. étale) si pour tout S-préschéma \\(S'\\), \\(S'\\) affine (au sens absolu), et tout sous-schéma \\(S'_0\\) de \\(S'\\) défini par un idéal nilpotent \\(\\mathscr{J}\\), l'application\n  \\[\n  F(S') \\longrightarrow F(S'_0) \\underset{G(S'_0)}{\\times} G(S')\n  \\]\n  déduite du carré commutatif\n  \\[\n  \\xymatrix{\n  F(S') \\ar[r] \\ar[d] &amp; G(S') \\ar[d] \\\\\n  F(S'_0) \\ar[r] &amp; G(S'_0)\n  }\n  \\]\n  est surjective (resp. injective, resp. bijective), i.e. pour tout carré commutatif de morphismes de foncteurs sur S (où \\(S'\\), \\(S'_0\\) sont comme ci-dessus et \\(i : S'_0 \\to S'\\) est l'immersion canonique) :\n  \\[\n  (\\mathrm{Q}) \\qquad\n  \\xymatrix{\n  S'_0 \\ar[r]^-{i} \\ar[d]_-{u_0} &amp; S' \\ar[d]^-{v} \\\\\n  F \\ar[r]_-{f} &amp; G\n  }\n  \\]\n  il existe au moins un (resp. au plus un, resp. exactement un) morphisme\n  \\[\n  \\xymatrix{\n  &amp; S' \\ar[dl]^-{u} \\\\\n  F &amp;\n  }\n  \\]\n  rendant les deux triangles correspondants commutatifs : \\(u_0 = ui\\) et \\(v = fu\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette propriété pour un homomorphisme de foncteurs \\(f : F \\to G\\) sur S garde un sens même si les foncteurs envisagés ne sont pas représentables ; on dira (si elle est vérifiée) que l'homomorphisme de foncteurs \\(f : F \\to G\\) est formellement lisse (resp. formellement non ramifié, resp. formellement étale). On notera qu'elle ne dépend que de l'homomorphisme des foncteurs \\((\\mathbf{Sch})^{\\circ} \\to (\\mathbf{Ens})\\) définis par F, G (cf. <a class=\"ref\" href=\"#I.1.4.1\">I 1.4.1</a>), et pas des morphismes structuraux \\(F \\to S\\) et \\(G \\to S\\). Une façon équivalente d'exprimer la définition précédente, plutôt plus maniable dans les applications, est la suivante : le morphisme de foncteurs \\(F \\to G\\) sur S est dit formellement lisse (resp. formellement non ramifié, resp. formellement étale), lorsque pour tout \\(S'\\) sur S et tout morphisme \\(S' \\to G\\), le foncteur \\(F' = F \\times_G S'\\) sur \\(S'\\) est formellement lisse (resp. formellement non ramifié, resp. formellement étale).</p>"
+    },
+    {
+     "id": "XI.1.7",
+     "type": "remarque",
+     "label": "1.7",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.7</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XI.1.6\">1.6</a>, lorsqu'on se donne un « point de F » à valeurs dans un corps k, i.e. un élément x de \\(F(\\mathrm{Spec}(k))\\) ou, ce qui revient au même, un morphisme \\(\\mathrm{Spec}(k) \\to F\\), on dit de même que f est formellement lisse (resp. formellement non ramifié, resp. formellement étale) en x, si la condition de la définition qui précède est vérifiée chaque fois que \\(S'\\) est un schéma local et le morphisme \\(S'_0 \\to F\\) dans le diagramme (Q) ci-dessus est « compatible avec les points marqués » au sens suivant : si \\(k'\\) désigne le corps résiduel de \\(S'\\) et \\(S'_0\\) en leur point fermé, le diagramme\n  \\[\n  \\xymatrix{\n  \\mathrm{Spec}(k') \\ar[d]_-{j} &amp; \\mathrm{Spec}(k) \\ar[d]^-{x} \\\\\n  S'_0 \\ar[r]_-{u_0} &amp; F\n  }\n  \\]\n  (où \\(j : \\mathrm{Spec}(k') \\to S'_0\\) désigne l'immersion canonique) peut être complété en un diagramme commutatif\n  \\[\n  \\xymatrix{\n  &amp; \\mathrm{Spec}(k'') \\ar[dl] \\ar[dr] &amp; \\\\\n  \\mathrm{Spec}(k') \\ar[d] &amp; &amp; \\mathrm{Spec}(k) \\ar[d] \\\\\n  S'_0 \\ar[rr] &amp; &amp; F\n  }\n  \\]\n  où \\(k''\\) est le spectre d'un corps. Lorsque F, G sont représentables par des S-préschémas X, Y et que le S-morphisme \\(f : X \\to Y\\) est localement de présentation finie, cette condition signifie précisément (en vertu de <a class=\"ref\" href=\"#XI.1.5\">1.5</a>) que \\(f : X \\to Y\\) est lisse au point de X image de \\(\\mathrm{Spec}(k)\\) par \\(x : \\mathrm{Spec}(k) \\to X\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.1.8",
+     "type": "remarque",
+     "label": "1.8",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.1.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">1.8</span></div>\n  <div class=\"thm-body\"><p>Lorsque la condition de la définition précédente est vérifiée en se bornant à des \\(S'\\) locaux artiniens, on dira que \\(F \\to G\\) est infinitésimalement lisse (resp. infinitésimalement non ramifié, resp. infinitésimalement étale) en x, et on dit que \\(F \\to G\\) est infinitésimalement lisse (resp. …) si il l'est en tout point x, en d'autres termes si la condition envisagée dans <a class=\"ref\" href=\"#XI.1.6\">1.6</a> est vérifiée chaque fois que \\(S'\\) est local artinien. Cette variante des notions précédentes est techniquement utile, car elle est souvent de vérification plus commode, étant une notion plus faible, tout en étant suffisante fréquemment (par exemple si \\(F \\to G\\) est un morphisme localement de présentation finie, avec G représentable par un préschéma localement noethérien…) à entraîner la condition forte.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les morphismes lisses de préschémas se comportent de façon remarquablement simple vis-à-vis du calcul différentiel. Nous nous bornons ici à rappeler la propriété suivante :</p>"
+    },
+    {
+     "id": "XI.1.9",
+     "type": "proposition",
+     "label": "1.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.9</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\to S\\) un morphisme lisse de préschémas. Alors \\(\\Omega^1_{X/S}\\) est un module localement libre de type fini sur X, son rang en un point \\(x \\in X\\) est égal à la dimension de la fibre \\(X_s\\) (où \\(s = f(x)\\)) au voisinage du point x.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On appelle cette dimension la <em>dimension relative</em> de X sur S en x. On notera qu'elle est nulle (lorsque f est lisse en x) si et seulement si f est étale en x. Cette dimension se calcule pratiquement encore en termes du foncteur F représenté par X, de la façon suivante. Soit \\(\\xi\\) un point de F à valeurs dans un corps k, « localisé en x », i.e. un morphisme \\(\\mathrm{Spec}(k) \\to F = X\\) dont l'image est x. Considérons l'algèbre \\(D(k) = k[t]/(t^2)\\) des nombres duaux sur k, considérée comme un S-préschéma, et considérons l'application\n\\[\nF(D(k)) \\longrightarrow F(k)\n\\]\ndéduite de l'augmentation \\(D(k) \\to k\\), soit enfin \\(F(D(k), \\xi)\\) l'image inverse de \\(\\xi \\in F(k)\\) par cette application. Alors cet ensemble est muni de façon naturelle d'une structure d'espace vectoriel sur k (en fait, c'est l'espace vectoriel dual de \\(\\Omega^1_{X/S} \\otimes_{\\mathscr{O}_{X,x}} k\\)), dont la dimension est la dimension relative de X sur S en x.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour expliciter la loi vectorielle sur \\(F(D(k), \\xi)\\), il y a intérêt à introduire plus généralement, comme dans l'exposé II, pour tout vectoriel V sur k, l'algèbre \\(D_k(V) = k + V\\) (V idéal de carré nul), et de considérer \\(F(D_k(V), \\xi)\\), image inverse de \\(\\xi\\) par \\(F(D_k(V)) \\to F(k)\\), comme un foncteur covariant en V, à valeurs dans (<strong>Ens</strong>). Il suffit alors que ce foncteur commute au produit de deux facteurs (ce qui signifie que F transforme certaines sommes amalgamées d'un type très particulier en produits fibrés, comparer exposé II, condition toujours vérifiée si F est représentable), pour conclure que les \\(F(D_k(V), \\xi)\\) et en particulier \\(F(D(k), \\xi)\\) sont munis de structures vectorielles sur k. On peut ainsi définir la dimension relative de F sur X en le « point » \\(\\xi\\), sous des conditions sensiblement plus larges que la représentabilité de F.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le présent exposé, le fait que certains foncteurs que nous expliciterons soient représentables par des préschémas lisses sur S, nous servira surtout par l'intermédiaire du résultat suivant, qui sera pour nous l'intermédiaire technique pour passer de constructions sur le <em>complété</em> de l'anneau local A d'un point s d'un schéma noethérien S, à un anneau local \\(A'\\) sur A <em>étale sur</em> A, ce qui donnera en particulier un moyen pour passer de s aux points voisins :</p>"
+    },
+    {
+     "id": "XI.1.10",
+     "type": "proposition",
+     "label": "1.10",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.1.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.10</span></div>\n  <div class=\"thm-body\"><p>Soit \\(f : X \\to S\\) un morphisme lisse de préschémas, s un point de S, et x un point de X au-dessus de s tel que \\(\\kappa(x)\\) soit une extension finie séparable de \\(\\kappa(s)\\). Alors il existe un sous-schéma \\(S'\\) de S, étale sur S, passant par x. Donc on peut trouver un morphisme étale \\(S' \\to S\\), un point \\(s'\\) de \\(S'\\) au-dessus de s d'extension résiduelle égale à \\(\\kappa(x)/\\kappa(s)\\) et un S-morphisme \\(S' \\to X\\) appliquant \\(s'\\) dans x.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour construire \\(S'\\), on prend simplement un système \\(g_1, \\ldots, g_n\\) de sections de \\(\\mathscr{O}_X\\) sur un voisinage de x, qui induisent en x un système régulier de paramètres de l'anneau local de la fibre \\(X_s\\) en x ; le sous-schéma \\(S'\\) défini par les \\(g_i\\) est alors étale sur S en x, et à condition de rapetisser \\(S'\\), il sera donc étale sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons <a class=\"ref\" href=\"#XI.1.10\">1.10</a> lorsque \\(\\kappa(x) = \\kappa(s)\\), i.e. x est rationnel sur \\(\\kappa(s)\\) i.e. x peut être considéré comme une section de \\(X_s\\) au-dessus de \\(\\mathrm{Spec}(\\kappa(s))\\). Alors 1.10 est dans la nature d'un théorème d'extension de sections (après extension étale de la base). Il prend une forme particulièrement simple dans le cas particulier suivant :</p>"
+    },
+    {
+     "id": "XI.1.11",
+     "type": "corollaire",
+     "label": "1.11",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.1.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">1.11</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XI.1.10\">1.10</a> supposons que S soit le spectre d'un anneau local hensélien, et que \\(\\kappa(x) = \\kappa(s)\\). Alors il existe une section de X sur S passant par x (uniquement déterminée si X est même étale sur S en x).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, S étant hensélien, il s'ensuit sous les conditions de 1.10 que \\(S'\\) contient un sous-schéma ouvert qui est fini sur S et dont la fibre en s est réduite à x. Comme il est étale sur S, il s'ensuit qu'il est isomorphe à S, d'où la conclusion. — On notera que lorsque S est le spectre d'un anneau local <em>complet</em>, 1.10 ou 1.11 est plus ou moins l'équivalent du classique « <em>lemme de Hensel</em> », et il arrive qu'on y réfère par ce nom.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn1",
+     "number": "1",
+     "html": "On dira plutôt maintenant « net » au lieu de « non ramifié »."
+    },
+    {
+     "id": "XI-fn2",
+     "number": "2",
+     "html": "N.D.E. : on a remplacé « extension résiduelle » par « corps résiduel »."
+    }
+   ]
+  },
+  {
+   "id": "XI-2",
+   "title": "2. Exemples de foncteurs formellement lisses tirés de la théorie des groupes de type multiplicatif",
+   "blocks": [
+    {
+     "id": "XI.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.2\">2. Exemples de foncteurs formellement lisses tirés de la théorie des groupes de type multiplicatif</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons interpréter, dans le langage introduit au N<sup>o</sup> précédent, les résultats énoncés dans <a class=\"ref\" href=\"#IX.3\">IX 3</a>, concernant les extensions infinitésimales d'un homomorphisme d'un groupe de type multiplicatif (conséquences de la nullité de la cohomologie de Hochschild d'un tel groupe, établie dans l'Exposé I).</p>"
+    },
+    {
+     "id": "XI.2.1",
+     "type": "proposition",
+     "label": "2.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, H un groupe de type multiplicatif sur S, G un S-préschéma en groupes lisse sur S, considérons le foncteur sur S\n  \\[\n  M_H = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\n  \\]\n  (dont la valeur en \\(S'\\) sur S est l'ensemble des homomorphismes de \\(S'\\)-groupes de \\(H_{S'}\\) dans \\(G_{S'}\\)). Ce foncteur est formellement lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cf. <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a>. Plus généralement :</p>"
+    },
+    {
+     "id": "XI.2.2",
+     "type": "corollaire",
+     "label": "2.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Soient S, G comme ci-dessus, considérons un homomorphisme \\(u : H_1 \\to H_2\\) de schémas en groupes de type multiplicatif sur S, d'où avec les notations précédentes un morphisme de foncteurs sur S :\n  \\[\n  M_{H_2} \\longrightarrow M_{H_1} \\quad (M_{H_i} = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H_i, G)),\n  \\]\n  donné par \\(w \\mapsto w \\circ u\\). Cet homomorphisme est formellement lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, en vertu des définitions <a class=\"ref\" href=\"#XI.1.6\">1.6</a>, ceci équivaut à l'énoncé suivant : lorsque S est affine, \\(S_0\\) un sous-schéma défini par un idéal nilpotent, soit\n\\[\nv : H_1 \\longrightarrow G\n\\]\nun homomorphisme de S-groupes, et\n\\[\nw_0 : (H_2)_{S_0} \\longrightarrow G_{S_0}\n\\]\nun homomorphisme de \\(S_0\\)-groupes tel que \\(w_0 u_{S_0} = v_{S_0}\\) ; il existe alors un homomorphisme de S-groupes\n\\[\nw : H_2 \\longrightarrow G\n\\]\nprolongeant \\(w_0\\), et tel que \\(wu = v\\). Pour le voir, on commence par prolonger \\(w_0\\) en un homomorphisme de S-groupes \\(w' : H_2 \\to G\\), ce qui est possible par <a class=\"ref\" href=\"#XI.2.1\">2.1</a>, considérons alors \\(v' = w'u : H_1 \\to G\\), il est tel que \\(v'_{S_0} = v_{S_0}\\) par hypothèse sur \\(w_0\\), donc en vertu de <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> il existe un élément g de \\(G(S)\\), dont l'image dans \\(G(S_0)\\) est l'élément unité, et tel que \\(v = \\mathrm{int}(g)v'\\) d'où \\(v = (\\mathrm{int}(g)w')u\\), et il suffira donc de prendre \\(w = \\mathrm{int}(g)w'\\).</p>"
+    },
+    {
+     "id": "XI.2.3",
+     "type": "corollaire",
+     "label": "2.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de <a class=\"ref\" href=\"#XI.2.1\">2.1</a> considérons \\(M_H = M\\) comme un foncteur à groupe d'opérateurs G (G opérant par \\((v, g) \\mapsto \\mathrm{int}(g) \\circ v\\)). Alors le morphisme correspondant\n  \\[\n  R : G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M\n  \\]\n  défini par \\((g, v) \\mapsto (\\mathrm{int}(g) \\circ v, v)\\) est un morphisme formellement lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Moyennant un changement de base \\(S' \\to S\\), ceci équivaut à l'énoncé suivant :</p>"
+    },
+    {
+     "id": "XI.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de <a class=\"ref\" href=\"#XI.2.1\">2.1</a>, soient \\(v_1, v_2 : H \\to G\\) deux morphismes de S-groupes, soit \\(\\underline{\\mathrm{Transp}}(v_1, v_2)\\) le sous-foncteur de G formé des g tels que \\(\\mathrm{int}(g)v_1 = v_2\\). Alors ce foncteur est formellement lisse sur S. En particulier (si \\(v_1 = v_2 = v\\)) le foncteur \\(\\underline{\\mathrm{Centr}}(v)\\), sous-groupe de G formé des h tels que \\(\\mathrm{int}(h)v = v\\), est formellement lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(N.B. le couple \\((v_1, v_2)\\) peut être considéré comme une section sur S du deuxième membre dans le morphisme R de <a class=\"ref\" href=\"#XI.2.3\">2.3</a>, et \\(\\underline{\\mathrm{Transp}}(v_1, v_2)\\) comme le foncteur image inverse de ladite section par R). L'énoncé <a class=\"ref\" href=\"#XI.2.4\">2.4</a> lui-même équivaut au suivant : lorsque S est affine et \\(S_0\\) est un sous-schéma de S défini par un idéal nilpotent, pour tout \\(g_0 \\in G(S_0)\\) tel que \\(\\mathrm{int}(g_0)(v_1)_{S_0} = (v_2)_{S_0}\\), \\(g_0\\) se prolonge en un \\(g \\in G(S)\\) tel que \\(\\mathrm{int}(g)v_1 = v_2\\). Pour le prouver, on commence par prolonger \\(g_0\\) en une section \\(g'\\) de G sur S, ce qui est possible puisque G est lisse sur S, on pose \\(v'_2 = \\mathrm{int}(g')v_1\\), on note que \\(v_2\\) et \\(v'_2\\) ont même restriction au-dessus de \\(S_0\\), donc par le résultat déjà invoqué <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> il existe un \\(g'' \\in G(S)\\), induisant la section unité sur \\(S_0\\), tel que \\(v_2 = \\mathrm{int}(g'')v'_2 = \\mathrm{int}(g'')\\mathrm{int}(g')v_1 = \\mathrm{int}(g''g')v_1\\), donc il suffit de prendre \\(g = g''g'\\).</p>"
+    },
+    {
+     "id": "XI.2.1bis",
+     "type": "proposition",
+     "label": "2.1 bis",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.2.1bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1 bis</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma en groupes lisse sur S, considérons le foncteur \\(M : (\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) :\n  \\[\n  M(S') = \\text{ ensemble des sous-groupes de type multiplicatif de } G_{S'}.\n  \\]\n  Alors M est formellement lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cf. <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a>.</p>"
+    },
+    {
+     "id": "XI.2.2bis",
+     "type": "corollaire",
+     "label": "2.2 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.2bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.2 bis</span></div>\n  <div class=\"thm-body\"><p>Soit n un entier, et considérons le morphisme de foncteurs\n  \\[\n  \\varphi_n : M \\longrightarrow M\n  \\]\n  défini par\n  \\[\n  \\varphi_n(H) = {}_nH = \\mathrm{Ker}(n \\cdot \\mathrm{id}_H).\n  \\]\n  Alors \\(\\varphi_n\\) est un morphisme formellement lisse. Si pour tout entier \\(p &gt; 0\\), \\(M_p\\) désigne le sous-foncteur de M tel que \\(M_p(S')\\) soit l'ensemble des sous-groupes de type multiplicatif H de \\(G_{S'}\\) tels que \\({}_pH = H\\), alors le morphisme induit par \\(\\varphi_n\\) :\n  \\[\n  M_{np} \\longrightarrow M_n\n  \\]\n  est formellement lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La deuxième assertion est trivialement contenue dans la première et n'est mise que pour la commodité d'une référence ultérieure. La démonstration de la première est analogue à celle de <a class=\"ref\" href=\"#XI.2.2\">2.2</a>, en invoquant cette fois-ci <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a>.</p>"
+    },
+    {
+     "id": "XI.2.3bis",
+     "type": "corollaire",
+     "label": "2.3 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.3 bis</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de <a class=\"ref\" href=\"#XI.2.1bis\">2.1 bis</a>, considérons M comme un foncteur à groupe d'opérateurs G (G opérant par \\((g, H) \\mapsto \\mathrm{int}(g)(H)\\)). Alors le morphisme correspondant\n  \\[\n  R : G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M\n  \\]\n  défini par \\((g, v) \\mapsto (\\mathrm{int}(g)v, v)\\) est formellement lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci équivaut à l'énoncé suivant :</p>"
+    },
+    {
+     "id": "XI.2.4bis",
+     "type": "corollaire",
+     "label": "2.4 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.2.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.4 bis</span></div>\n  <div class=\"thm-body\"><p>Avec les notations de <a class=\"ref\" href=\"#XI.2.1bis\">2.1 bis</a>, soient \\(H_1, H_2\\) deux sous-groupes de type multiplicatif de G, et soit \\(\\underline{\\mathrm{Transp}}_G(H_1, H_2)\\) le sous-foncteur de G formé des g tels que \\(\\mathrm{int}(g)H_1 = H_2\\). Alors ce foncteur est formellement lisse sur S. En particulier, si \\(H_1 = H_2 = H\\), le sous-foncteur \\(\\underline{\\mathrm{Norm}}_G(H)\\) de G, normalisateur de H, est formellement lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est analogue à celle de <a class=\"ref\" href=\"#XI.2.4\">2.4</a>, en invoquant encore <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a>.</p>"
+    },
+    {
+     "id": "XI.2.5",
+     "type": "proposition",
+     "label": "2.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma en groupes lisse sur S, K un sous-S-préschéma en groupes, lisse sur S ou de type multiplicatif, H un S-préschéma en groupes de type multiplicatif, \\(u : H \\to G\\) un homomorphisme de S-groupes, et désignons par \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) le sous-foncteur de G dont la valeur, en un \\(S'\\) sur S, est formé des \\(g \\in G(S')\\) tels que \\(\\mathrm{int}(g)u_{S'} : H_{S'} \\to G_{S'}\\) se factorise par \\(K_{S'}\\). Alors ce foncteur est formellement lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est analogue à celle de <a class=\"ref\" href=\"#XI.2.2\">2.2</a>, en invoquant <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> et <a class=\"ref\" href=\"#X.2.1\">X 2.1</a> (ce dernier dans le cas K de type multiplicatif).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XI-3",
+   "title": "3. Résultats auxiliaires de représentabilité",
+   "blocks": [
+    {
+     "id": "XI.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.3\">3. Résultats auxiliaires de représentabilité</h2>"
+    },
+    {
+     "id": "XI.3.1",
+     "type": "proposition",
+     "label": "3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(F \\to S\\) un foncteur au-dessus du préschéma S. Les conditions suivantes sont équivalentes :</p>\n  <p>(i) F est représentable, et \\(F \\to S\\) est une immersion ouverte (on dit aussi simplement que \\(F \\to S\\) est une immersion ouverte).</p>\n  <p>(ii) F est un faisceau pour la topologie fidèlement plate quasi-compacte, « commute aux limites inductives d'anneaux », \\(F \\to S\\) est un monomorphisme, enfin la condition suivante est vérifiée : pour tout préschéma local \\(S'\\) au-dessus de S, de corps résiduel k, et tout S-morphisme \\(\\mathrm{Spec}(k) = S'_0 \\to F\\), il existe un S-morphisme \\(S' \\to F\\) qui le prolonge.</p>\n  <p>(iii) (Lorsque S est localement noethérien). F est un faisceau pour la topologie fidèlement plate quasi-compacte, « commute aux limites inductives d'anneaux », « commute aux limites projectives adiques d'anneaux locaux artiniens », \\(F \\to S\\) est un monomorphisme, et est infinitésimalement étale (cf. <a class=\"ref\" href=\"#XI.1.8\">1.8</a>).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Précisons d'abord deux points de terminologie.</p>"
+    },
+    {
+     "id": "XI.3.2",
+     "type": "remarque",
+     "label": "3.2",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>On dit qu'un foncteur <sup class=\"footnote-ref\"><a id=\"XI-fn3ref\" href=\"#XI-fn3\">3</a></sup> F au-dessus de S « commute aux limites inductives (sous-entendu : filtrantes) d'anneaux » si pour tout système projectif filtrant \\((S'_i)_{i \\in I}\\) de S-schémas affines au-dessus d'un ouvert affine de S, d'anneaux \\(A'_i\\), l'homomorphisme naturel\n  \\[\n  (\\ast) \\qquad \\varinjlim_i F(S'_i) \\to F(S') \\quad (\\text{où } S' = \\mathrm{Spec}\\,A', \\ A' = \\varinjlim_i A'_i)\n  \\]\n  est bijectif. On notera que \\(S'\\) n'est autre que la limite projective de \\((S'_i)\\) dans la catégorie des préschémas, (et même de tous les espaces annelés), donc la condition envisagée est dans la nature d'une condition d'<em>exactitude à droite</em> (commutation à certaines limites inductives dans \\((\\mathbf{Sch})^{\\circ}_{/S}\\)), tout comme la condition d'être un faisceau pour quelque topologie. On fera attention que la condition envisagée est essentiellement <em>relative</em>, i.e. fait intervenir le morphisme \\(F \\to S\\) et non seulement le foncteur \\(F : (\\mathbf{Sch})^{\\circ} \\to (\\mathbf{Ens})\\), de façon précise dans \\((\\ast)\\) \\(F(S'_i)\\) et \\(F(S')\\) désignent \\(\\mathrm{Hom}_S(S'_i, F)\\), \\(\\mathrm{Hom}_S(S', F)\\). Ainsi, lorsque F est représentable, la condition envisagée signifie que F est localement de présentation finie sur S. (Et nous nous sommes servis à plusieurs reprises, dans les deux derniers exposés, du fait qu'un foncteur représenté par un S-préschéma localement de présentation finie commute aux limites inductives d'anneaux).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.3",
+     "type": "remarque",
+     "label": "3.3",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>On dit qu'un foncteur <sup class=\"footnote-ref\"><a id=\"XI-fn3ref\" href=\"#XI-fn3\">3</a></sup> F au-dessus de S <em>commute aux limites projectives adiques d'anneaux locaux artiniens</em>, si pour tout \\(S'\\) au-dessus de S qui est spectre d'un anneau local noethérien complet \\(A'\\), posant \\(S'_n = \\mathrm{Spec}(A'/\\mathrm{rad}(A')^{n+1})\\), l'application naturelle\n  \\[\n  (\\mathrm{xx}) \\qquad F(S') \\longrightarrow \\varprojlim_n F(S'_n)\n  \\]\n  est bijective. On notera que cette condition, qui est dans la nature d'une condition d'exactitude à gauche, est <em>satisfaite chaque fois que F est représentable</em>. On voit facilement que, contrairement à la condition de commutation aux limites inductives d'anneaux, elle est intrinsèque à F en tant qu'élément de \\(\\mathrm{Ob}(\\widehat{\\mathbf{Sch}})\\), i.e. ne fait pas intervenir le morphisme \\(F \\to S\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.4",
+     "type": "remarque",
+     "label": "3.4",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Soit F un foncteur au-dessus de S qui soit un faisceau pour la topologie de Zariski, ou comme on dit encore, qui est « de nature locale ». (Il suffit pour ceci que F soit un faisceau pour une topologie plus fine, telle la topologie fidèlement plate quasi-compacte). Soit \\((S_i)\\) un recouvrement de S par des ouverts, alors on vérifie facilement (par une méthode de recollement de morceaux) que F est représentable si et seulement si les \\(F_i = F \\times_S S_i\\) le sont, ce qui permet par exemple de se ramener au cas où S est affine. Supposons que le foncteur F de nature locale commute aux limites inductives d'anneaux. Alors, pour que F soit représentable, il faut et il suffit que sa restriction à la catégorie des préschémas localement de présentation finie sur S soit représentable. Le « il faut » a été signalé dans <a class=\"ref\" href=\"#XI.3.2\">3.2</a>, le « il suffit » revient à ceci : si X est un préschéma localement de présentation finie sur S et \\(X \\to F\\) un morphisme tel que, pour tout \\(S'\\) localement de présentation finie sur S, le morphisme induit\n  \\[\n  \\mathrm{Hom}_S(S', X) \\longrightarrow \\mathrm{Hom}_S(S', F)\n  \\]\n  est bijectif, alors \\(X \\to F\\) est un isomorphisme. Or ceci résulte facilement du fait que X et F sont deux foncteurs de nature locale qui commutent aux limites inductives d'anneaux.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons maintenant <a class=\"ref\" href=\"#XI.3.1\">3.1</a>. Les implications (i) ⇒ (ii) et (i) ⇒ (iii) sont évidentes, prouvons les implications inverses.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a (ii) ⇒ (i). Soit en effet U l'ensemble des \\(s \\in S\\) tels que le monomorphisme canonique \\(\\mathrm{Spec}(\\kappa(s)) \\to S\\) se factorise par F. En vertu de la dernière condition (ii), pour tout \\(s \\in U\\), le monomorphisme canonique \\(\\mathrm{Spec}(\\mathscr{O}_{S,s}) \\to S\\) se factorise par F. Notant que \\(\\mathscr{O}_{S,s}\\) est la limite inductive des anneaux des voisinages affines de s, il résulte du fait que F commute aux limites inductives d'anneaux que pour tout \\(s \\in S\\), il existe un voisinage ouvert \\(U^s\\) tel que l'immersion canonique \\(U^s \\to S\\) se factorise par F. Cela implique \\(U^s \\subset U\\), donc U <em>est ouvert</em>. Comme \\(F \\to S\\) est un monomorphisme, et F de nature locale, les S-morphismes \\(U^s \\to F\\) se recollent dans les \\(U^s \\cap U^{s'}\\) \\((s, s' \\in U)\\), donc proviennent d'un S-morphisme \\(U \\to F\\). Reste à prouver que c'est un isomorphisme, donc que tout S-morphisme \\(S' \\to F\\) se factorise de façon unique par U (où \\(S'\\) est un S-préschéma). Comme \\(F \\to S\\) et \\(U \\to S\\) est un monomorphisme, il revient au même de dire que le morphisme structural \\(S' \\to S\\) se factorise par U, ce qui nous ramène au cas où \\(S'\\) est le spectre d'un corps, donc réduit à un seul point \\(s'\\). Soit s le point de S au-dessous de \\(s'\\), je dis que le S-morphisme \\(S' \\to F\\) se factorise par \\(\\mathrm{Spec}(\\kappa(s)) = S_0 \\to F\\), (ce qui implique \\(s \\in U\\) et prouvera ce qu'on veut). Il revient au même, puisque \\(S' \\to S_0\\) est couvrant pour fpqc et F est un faisceau pour cette topologie, que les deux composés\n\\[\nS'' = S' \\underset{S_0}{\\times} S' \\rightrightarrows S' \\to F\n\\]\nsont les mêmes, ce qui résulte du fait que \\(F \\to S\\) est un monomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a (iii) ⇒ (ii) (lorsque S est localement noethérien). Il suffit de prouver la dernière condition de (ii), et d'ailleurs (en vertu de la démonstration précédente) il suffit de le faire lorsque \\(S'\\) est de la forme \\(\\mathrm{Spec}(\\mathscr{O}_{S,s})\\), avec \\(s \\in S\\). Soient \\(A = \\mathscr{O}_{S,s}\\), \\(A_n = A/\\mathfrak{m}^{n+1}\\), \\(S_n = \\mathrm{Spec}(A_n)\\), alors il résulte de l'hypothèse que \\(F \\to S\\) est infinitésimalement lisse, que le morphisme donné \\(S_0 \\to F\\) se prolonge en des morphismes \\(S_n \\to F\\). Comme \\(F \\to S\\) est un monomorphisme, on obtient ainsi un élément de \\(\\varprojlim_n F(S_n)\\), et comme F commute aux limites projectives adiques d'anneaux locaux artiniens, les \\(S_n \\to F\\) proviennent d'un morphisme \\(\\mathrm{Spec}(\\widehat{A}) = \\widehat{S}' \\to F\\). Comme \\(F \\to S\\) est un monomorphisme, F un faisceau pour fpqc, et \\(\\widehat{S}' \\to S'\\) couvrant pour la dite topologie, ce morphisme \\(\\widehat{S}' \\to F\\) se factorise par \\(S' \\to F\\), ce qui achève la démonstration.</p>"
+    },
+    {
+     "id": "XI.3.5",
+     "type": "proposition",
+     "label": "3.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma localement noethérien, \\(F \\to S\\) un foncteur au-dessus de S, \\((X_i, u_i)_{i \\in I}\\) une famille de S-morphismes \\(u_i : X_i \\to F\\), où les \\(X_i\\) sont des préschémas localement de type fini sur S. On suppose vérifiées les conditions suivantes :</p>\n  <p>a) F est un faisceau pour la topologie fidèlement plate quasi-compacte, commute aux limites inductives d'anneaux, commute aux limites projectives adiques d'anneaux locaux artiniens.</p>\n  <p>b) Les \\(u_i : X_i \\to F\\) sont des monomorphismes, et sont infinitésimalement étales (cf. <a class=\"ref\" href=\"#XI.1.8\">1.8</a>).</p>\n  <p>c) La famille des \\(u_i\\) est « ensemblistement surjective ».</p>\n  <p>Sous ces conditions, F est représentable par un préschéma localement de type fini sur S, (et les \\(u_i\\) sont des immersions ouvertes, qui font de la famille des \\(X_i\\) un recouvrement ouvert de F).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.6",
+     "type": "remarque",
+     "label": "3.6",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>Procédant comme à la fin de la remarque <a class=\"ref\" href=\"#XI.1.7\">1.7</a>, on définit, pour tout foncteur \\(F : (\\mathbf{Sch})^{\\circ} \\to (\\mathbf{Ens})\\), un « ensemble sous-jacent » \\(\\mathrm{ens}(F)\\) comme un ensemble quotient de l'ensemble des points de F à valeurs dans des corps (pour la relation d'équivalence précisée dans 1.7). Lorsque F est représentable par X, on retrouve bien l'ensemble sous-jacent à X. Évidemment \\(\\mathrm{ens}(F)\\) dépend fonctoriellement de F, donc si \\(G \\to F\\) est un morphisme de foncteurs, on pourra dire que ce morphisme est ensemblistement surjectif si l'application induite \\(\\mathrm{ens}(G) \\to \\mathrm{ens}(F)\\) est surjective. Cela signifie donc aussi que tout point de F à valeurs dans un corps k « provient » d'un point de G à valeurs dans une extension convenable de k. Cette définition s'étend aussitôt au cas d'une famille de morphismes \\(G_i \\to F\\), ce qui précise la signification de c).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons <a class=\"ref\" href=\"#XI.3.5\">3.5</a>. Pour ceci, introduisons pour \\((i, j) \\in I \\times I\\)\n\\[\nX_{i,j} = X_i \\underset{F}{\\times} X_j,\n\\]\net considérons les projections\n\\[\nv_{i,j} : X_{i,j} \\longrightarrow X_i \\quad \\text{et} \\quad w_{i,j} : X_{i,j} \\longrightarrow X_j.\n\\]\nJe dis que ces dernières sont <em>représentables par des immersions ouvertes</em>. Pour le voir, on applique le critère <a class=\"ref\" href=\"#XI.3.1\">3.1</a> (iii) : \\(X_{i,j}\\) satisfait aux trois conditions d'exactitude (être un faisceau, commuter aux \\(\\varinjlim\\) d'anneaux et aux \\(\\varprojlim\\) adiques d'anneaux locaux artiniens), car F, \\(X_i\\), \\(X_j\\) y satisfont, et ces conditions sont stables par limites projectives finies, en particulier par produits fibrés ; comme \\(X_i \\to F\\) est un monomorphisme, de même \\(v_{i,j} : X_{i,j} \\to X_i\\) qui s'en déduit par changement de base \\(X_j \\to F\\), et de façon symétrique \\(v_{j,i}\\) est un monomorphisme ; enfin la condition « infinitésimalement étale » se conserve également par changement de base. Cela prouve qu'on est sous les conditions 3.1 (iii).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous pouvons utiliser maintenant les \\(X_i\\), \\(X_{i,j}\\), \\(v_{i,j}\\) et \\(w_{i,j}\\) pour construire à la façon habituelle un S-préschéma X, tel que les \\(X_i\\) s'identifient à des ouverts de X, les \\(X_{i,j}\\) aux intersections \\(X_i \\cap X_j\\) et les \\(v_{i,j}\\), \\(w_{i,j}\\) aux immersions canoniques. Notons que X est aussi le quotient de\n\\[\n\\mathbf{X} = \\coprod_i X_i\n\\]\npar la relation d'équivalence \\(R = \\coprod_{i,j} X_{i,j}\\) (les deux projections \\(v, w : R \\rightrightarrows \\mathbf{X}\\) étant définies par les \\(v_{i,j}\\) resp. les \\(w_{i,j}\\)). De façon précise, F étant un faisceau pour fpqc, les \\(u_i : X_i \\to F\\) proviennent d'un \\(\\mathbf{u} : \\mathbf{X} \\to F\\), et R n'est autre que la relation d'équivalence définie par \\(\\mathbf{u}\\), \\(R = \\mathbf{X} \\times_F \\mathbf{X}\\), enfin le quotient \\(X = \\mathbf{X}/R\\) est aussi un quotient dans la catégorie des faisceaux pour fpqc (et même, dans la catégorie des faisceaux pour la topologie de Zariski : il suffit d'utiliser les définitions de « quotient » et de « faisceau » pour s'en convaincre). Par suite, \\(\\mathbf{u}\\) se factorise de façon unique par un morphisme\n\\[\nu : X \\longrightarrow F,\n\\]\net ce morphisme est un <em>monomorphisme</em>. Reste à montrer que c'est un isomorphisme. Comme F est de nature locale, on peut supposer S affine, et comme de plus F commute aux limites inductives d'anneaux, il suffit de vérifier que pour tout T affine de type fini sur S, tout morphisme \\(T \\to F\\) se factorise par X, (cf. <a class=\"ref\" href=\"#XI.3.4\">3.4</a>). Pour ceci, considérons \\(G = X \\times_F T \\to T\\), il suffit de prouver que c'est un isomorphisme. Or, T étant noethérien, on voit comme ci-dessus que c'est une immersion ouverte (N.B. \\(X \\to F\\) est infinitésimalement étale, comme il résulte aussitôt du fait que les morphismes induits \\(u_i : X_i \\to F\\) le sont). Or par hypothèse \\(X \\to F\\) est ensemblistement surjectif, et on voit tout de suite que c'est là une condition stable par changement de base, donc \\(G \\to T\\) est ensemblistement surjectif, donc un isomorphisme puisque c'est une immersion ouverte. C.Q.F.D.</p>"
+    },
+    {
+     "id": "XI.3.7",
+     "type": "proposition",
+     "label": "3.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.7</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma localement noethérien, I un ensemble d'indices filtrant croissant, \\((T_i)_{i \\in I}\\) un système projectif de S-préschémas localement de type fini, \\(T = \\varprojlim T_i\\) le foncteur limite projective, F un foncteur sur S, \\(u : F \\to T\\) un S-morphisme. On suppose les conditions suivantes satisfaites :</p>\n  <p>a) F est un faisceau pour la topologie fidèlement plate quasi-compacte, commute aux limites inductives d'anneaux, et aux limites projectives adiques d'anneaux locaux artiniens.</p>\n  <p>b) Le morphisme \\(u : F \\to T\\) est un monomorphisme.</p>\n  <p>b') Le morphisme \\(u : F \\to T\\) est infinitésimalement étale.</p>\n  <p>c) Pour tout point \\(\\xi\\) de F à valeurs dans le spectre d'un corps k, désignant par \\(\\xi_i \\in T_i(\\mathrm{Spec}(k))\\) son image et par \\(t_i\\) l'élément correspondant de \\(T_i\\), il existe un \\(i \\in I\\) tel que pour \\(j \\geqslant i\\) le morphisme de transition \\(p_{i,j} : T_j \\to T_i\\) soit étale en \\(t_j\\).</p>\n  <p>d) Pour tout préschéma X localement de type fini sur S, et tout S-morphisme \\(X \\to F\\), l'ensemble des \\(x \\in X\\) en lesquels ce morphisme est infinitésimalement étale est ouvert.</p>\n  <p>Sous ces conditions, F est représentable par un préschéma localement de type fini sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notons tout de suite que dans le cas qui nous occupera au N<sup>o</sup> suivant, on vérifiera les conditions c) et d) par l'intermédiaire du corollaire suivant :</p>"
+    },
+    {
+     "id": "XI.3.8",
+     "type": "corollaire",
+     "label": "3.8",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.3.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.8</span></div>\n  <div class=\"thm-body\"><p>Moyennant a), b), b'), les conditions c) et d) sont impliquées par les suivantes :</p>\n  <p>c') Les \\(T_i\\) sont lisses sur S, et les morphismes de transition \\(p_{i,j} : T_j \\to T_i\\) sont lisses.</p>\n  <p>d') Pour tout point \\(\\xi\\) de F à valeurs dans le spectre d'un corps k, soit \\(t_i(\\xi)\\) l'élément de \\(T_i\\) défini par \\(\\xi\\), \\(d_i(\\xi)\\) la dimension relative de \\(T_i\\) sur S en \\(t_i(\\xi)\\), et \\(d(\\xi) = \\mathrm{Sup}\\, d_i(\\xi)\\). Alors :</p>\n  <p>1°) pour tout \\(\\xi\\) comme dessus, on a \\(d(\\xi) &lt; +\\infty\\), et</p>\n  <p>2°) pour tout préschéma X localement de type fini sur S, et tout S-monomorphisme \\(v : X \\to F\\), la fonction \\(x \\mapsto d(\\xi_x)\\) sur X est localement constante, (où pour \\(x \\in X\\), on désigne par \\(\\xi_x\\) le point de F à valeurs dans \\(\\kappa(x)\\) induit par v).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons <a class=\"ref\" href=\"#XI.3.7\">3.7</a>. Plaçons-nous dans les conditions de c), soit t l'élément de \\(\\mathrm{ens}(F)\\) défini par \\(\\xi\\) (cf. <a class=\"ref\" href=\"#XI.3.6\">3.6</a>) et posons\n\\[\n\\mathscr{O}_t = \\varinjlim_i \\mathscr{O}_{T_i, t_i}.\n\\]\nAlors utilisant la condition énoncée dans c), on voit facilement que \\(\\mathscr{O}_t\\) est un anneau local <em>noethérien</em> (EGA <span style=\"white-space:nowrap\">0<sub>IV</sub></span> 10.3.1.3). Son corps résiduel \\(\\kappa(t)\\) est limite inductive des corps résiduels \\(\\kappa(t_i)\\), et k en est une extension. Si \\(\\eta\\) désigne le spectre de \\(\\kappa(t)\\), \\(\\xi\\) celui de k, on a un diagramme commutatif\n\\[\n\\xymatrix{\n\\xi \\ar[r] \\ar[d] &amp; F \\ar[d] \\\\\n\\eta \\ar[r] &amp; T\n}\n\\]\ndont la définition est évidente et laissée au lecteur. Comme \\(\\xi \\to \\eta\\) est couvrant pour la topologie fpqc, que F est un faisceau pour ladite en vertu de a), et \\(F \\to T\\) un monomorphisme en vertu de b), on voit aussitôt que le morphisme \\(\\eta \\to T\\) se factorise (de façon unique) en un morphisme \\(\\eta \\to F\\). Notons maintenant le</p>"
+    },
+    {
+     "id": "XI.3.9",
+     "type": "lemme",
+     "label": "3.9",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.3.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.9</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XI.3.7\">3.7</a>, soient \\(T' = \\mathrm{Spec}(A)\\) un schéma local noethérien, \\(T'_0 = \\mathrm{Spec}(k(A))\\), \\(i : T'_0 \\to T'\\) l'immersion canonique, et supposons donné un carré commutatif de morphismes\n  \\[\n  \\xymatrix{\n  T'_0 \\ar[r] \\ar[d]_-{i} &amp; F \\ar[d] \\\\\n  T' \\ar[r] &amp; T\n  }\n  \\]\n  Alors il existe un T-morphisme unique \\(T' \\to F\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est celle de 3.1 (iii) ⇒ (ii) (où le fait que le S de l'énoncé cité soit représentable n'a pas servi), en utilisant que F est un faisceau pour la topologie fpqc, commute aux limites projectives adiques d'anneaux locaux artiniens (en l'occurrence les \\(A/\\mathrm{rad}(A)^{n+1}\\)) et que \\(F \\to T\\) est un monomorphisme et est infinitésimalement étale.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous appliquerons le lemme 3.9 au cas où \\(T' = \\mathrm{Spec}(\\mathscr{O}_t)\\), donc \\(T'_0 = \\mathrm{Spec}(\\kappa(t))\\), en notant que nous venons de construire \\(T'_0 \\to F\\), et que les homomorphismes canoniques \\(\\mathscr{O}_{T_i, t_i} \\to \\mathscr{O}_t\\) définissent un système projectif de morphismes \\(\\mathrm{Spec}(\\mathscr{O}_t) \\to T_i\\), d'où un morphisme canonique \\(\\mathrm{Spec}(\\mathscr{O}_t) \\to T\\). La commutativité du carré correspondant \\((\\mathrm{x})\\) est triviale (car par définition de T, il suffit de la vérifier avec T remplacé par \\(T_i\\)), d'où un unique T-morphisme\n\\[\nv' : T' = \\mathrm{Spec}(\\mathscr{O}_t) \\longrightarrow F.\n\\]\nComme F commute aux limites inductives d'anneaux, ce morphisme se factorise en\n\\[\nv'_i : T'_i = \\mathrm{Spec}(\\mathscr{O}_{T_i, t_i}) \\longrightarrow F\n\\]\npour i grand. Pour un tel i, on a\n\\[\nT' \\xrightarrow{\\ \\sim\\ } T'_i \\quad \\text{i.e.} \\quad \\mathscr{O}_{T_i, t_i} \\xrightarrow{\\ \\sim\\ } \\mathscr{O}_t.\n\\]\nEn effet, comme \\(T' \\to T'_i\\) est fidèlement plat quasi-compact donc un épimorphisme effectif, il suffit de voir que c'est un monomorphisme. Or si on a deux morphismes \\(R \\rightrightarrows T'\\) (avec R représentable) ayant même composé avec \\(T' \\to T'_i\\), ils ont même composé avec \\(T' \\to T\\), (qui se factorise par \\(T' \\to T'_i\\)) donc même composé avec \\(T' \\to T_j\\) pour tout j, donc avec \\(T' \\to T'_j\\) pour tout j, donc sont égaux car \\(T'\\) est la limite projective des \\(T'_j\\) dans la catégorie \\((\\mathbf{Sch})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons le diagramme\n\\[\n\\xymatrix{\nT' \\ar[r]^-{v'} \\ar[d] &amp; F \\ar[d] \\\\\nT'_i \\ar[r] \\ar[ur]^-{v'_i} &amp; T_i\n}\n\\]\noù les flèches non précisées sont les flèches évidentes. Le carré est commutatif et le triangle supérieur également, donc comme \\(T' \\to T'_i\\) est un épimorphisme, il s'ensuit que le triangle inférieur est commutatif. Or \\(\\mathscr{O}_{T_i, t_i}\\) est la limite inductive des anneaux affines des voisinages ouverts affines de \\(t_i\\) dans \\(T_i\\), donc comme F commute aux limites inductives d'anneaux, \\(v'_i\\) provient d'un morphisme\n\\[\nv_t : U_t \\longrightarrow F\n\\]\nd'un voisinage ouvert \\(U_t\\) de \\(t_i\\) dans \\(T_i\\). On voit de suite que quitte à restreindre au besoin ce voisinage, \\(v_t\\) est nécessairement un \\(T_i\\)-morphisme (\\(T_i\\) étant localement de type fini sur S, donc commutant également aux limites inductives d'anneaux). Alors le composé de \\(v_t\\) avec \\(F \\to T_i\\) est un monomorphisme, donc \\(v_t\\) est un <em>monomorphisme</em>. Je dis qu'il est <em>infinitésimalement étale en \\(t_i\\)</em>. Comme \\(F \\to T\\) est infinitésimalement étale, il revient au même de dire que le composé \\(U_t \\to F \\to T\\) est infinitésimalement étale en \\(t_i\\), ou encore que le morphisme induit \\(T'_i \\to T\\) est infinitésimalement étale, ou enfin (puisque \\(T' \\xrightarrow{\\ \\sim\\ } T'_i\\)) que \\(T' \\to T\\) est infinitésimalement étale, ce qui est immédiat, ce morphisme étant la limite projective des morphismes infinitésimalement étales \\(T'_i \\to T_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Appliquons maintenant la condition d), (qui n'avait pas encore servi), il s'ensuit que \\(v_t\\) est infinitésimalement étale au voisinage de t, donc quitte à prendre un ouvert plus petit, on peut supposer que \\(v_t\\) est un <em>monomorphisme infinitésimalement étale</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(t \\in \\mathrm{ens}(F)\\) variable, la famille des morphismes \\(v_t\\) est justiciable de <a class=\"ref\" href=\"#XI.3.5\">3.5</a>, qui implique la conclusion de 3.7.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons maintenant <a class=\"ref\" href=\"#XI.3.8\">3.8</a>, en supposant vérifiées les conditions c') et d') de 3.8. Alors avec les notations de d'), on aura \\(d_i(\\xi) = \\) constante pour i grand, donc la dimension relative de \\(T_j\\) sur \\(T_i\\) en \\(t_j\\), égale à \\(d_j(\\xi) - d_i(\\xi)\\), est nulle, donc \\(T_j \\to T_i\\) est étale en \\(t_j\\), ce qui prouve la condition c). Par suite la démonstration qui précède s'applique pour donner, pour chaque \\(t \\in \\mathrm{ens}(F)\\), un indice i, un voisinage ouvert \\(U_t\\) de \\(t_i\\) et un morphisme \\(U_t \\to F\\) qui soit un monomorphisme, infinitésimalement étale en \\(t_i\\), et tout revient à prouver que ce morphisme est infinitésimalement étale au voisinage de \\(t_i\\). Or avec la notation de d') 2°), où on fait \\(X = U_t\\), on peut supposer, quitte à remplacer \\(U_t\\) par la composante connexe de \\(t_i\\) dans \\(U_t\\), que pour tout \\(x \\in U_t\\), on a\n\\[\nd(\\xi_x) = d(\\xi_{t_i}) \\quad \\text{pour tout} \\quad x \\in U_t.\n\\]\nOr \\(d(\\xi_{t_i}) = \\) dimension relative de \\(T_i\\) sur S en \\(t_i\\), et comme la dimension relative de \\(T_i\\) sur S reste constante sur \\(U_t\\), on aura aussi, pour tout \\(x \\in U_t\\) :\n\\[\n(\\ast) \\qquad d(\\xi_x) = \\text{dimension relative de } U_t \\text{ sur S en } x.\n\\]\nD'autre part, avec les notations de la démonstration de 3.7, on voit aussitôt que pour tout préschéma local \\(R' = \\mathrm{Spec}(A)\\), posant \\(R'_0 = \\mathrm{Spec}\\,k(A)\\), tout morphisme \\(R' \\to F\\) tel que le morphisme induit \\(R'_0 \\to F\\) se factorise par F (i.e. appliquant le point fermé de \\(R'\\) dans \\(t \\in \\mathrm{ens}(F)\\)) se factorise (de façon évidemment unique) par \\(T'\\). (La démonstration est celle de 3.1 et 3.9 : on utilise que \\(T' \\to F\\) est un monomorphisme infinitésimalement étale <em>en t</em>, et que \\(T'\\) est un faisceau pour fpqc commutant aux \\(\\varprojlim\\) adiques…). Appliquant ce résultat au morphisme \\(\\mathrm{Spec}(\\mathscr{O}_{U_t, x}) = R' \\to F\\) induit par \\(v_t\\) et au point \\(t_x \\in \\mathrm{ens}(F)\\) image du point fermé de \\(R'\\), i.e. image de x par \\(v_t\\), on trouve une factorisation\n\\[\n\\mathrm{Spec}(\\mathscr{O}_{U_t, x}) \\longrightarrow \\mathrm{Spec}(\\mathscr{O}_{t_x}) \\longrightarrow F\n\\]\net comme la deuxième flèche est infinitésimalement étale en \\(t_x\\), pour prouver que la composée l'est en x, il suffit de prouver que la première l'est en \\(t_x\\). Or grâce à la formule \\((\\mathrm{x})\\) plus haut, c'est un S-homomorphisme local des localisés, en deux points \\(x, t_x\\), de S-préschémas lisses \\(U_t\\), \\(U_{t_x}\\) de même dimension relative d sur S en \\(t, t_x\\). Ce morphisme est induit par un S-morphisme\n\\[\nw : U \\longrightarrow V\n\\]\noù U est un voisinage ouvert de x dans \\(U_t\\), et où \\(V = U_{t_x}\\) (EGA I 6.5.1). Tout revient à prouver que ce morphisme est étale en x. D'ailleurs, U et V sont munis de monomorphismes \\(U \\to F\\), \\(V \\to F\\), et on voit aussitôt que, quitte à restreindre encore U, w est un F-morphisme, donc w est un <em>monomorphisme</em>. Il suffit maintenant de prouver le</p>"
+    },
+    {
+     "id": "XI.3.10",
+     "type": "lemme",
+     "label": "3.10",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.3.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">3.10</span></div>\n  <div class=\"thm-body\"><p>Soient U, V deux S-préschémas lisses, de même dimension relative d sur S, et \\(w : U \\to V\\) un S-morphisme qui soit un monomorphisme, alors w est une immersion ouverte (et a fortiori est étale).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu de SGA I 5.7 on est ramené au cas où S est le spectre d'un corps, qu'on peut supposer algébriquement clos. En vertu de SGA I 5.1 il suffit de prouver que w est étale, et il suffit de le prouver aux points fermés de U. Soient x un tel point, \\(y = w(x)\\), alors prenant un système régulier de paramètres \\(f_1, \\ldots, f_d\\) de \\(\\mathscr{O}_{V,y}\\), on voit que \\(A = \\mathscr{O}_{U,x}/\\sum f_i \\mathscr{O}_{U,x}\\) est l'extension triviale de \\(k = \\mathscr{O}_{V,y}/\\sum f_i \\mathscr{O}_{V,y}\\) (car w étant un monomorphisme, il en est de même du morphisme structural \\(\\mathrm{Spec}(A) \\to \\mathrm{Spec}(k)\\) qui s'en déduit par changement de base). Comme \\(\\mathscr{O}_{U,x}\\) est un anneau local régulier de dimension d, il s'ensuit que les \\(f_i\\) forment un système régulier de paramètres de cet anneau, ce qui implique aussitôt que w est étale en x et achève la démonstration de 3.10 donc de 3.8.</p>"
+    },
+    {
+     "id": "XI.3.11",
+     "type": "corollaire",
+     "label": "3.11",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.3.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">3.11</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XI.3.8\">3.8</a>, pour tout ouvert quasi-compact U de F séparé sur S, il existe un \\(i \\in I\\) tel que pour tout \\(j \\geqslant i\\) le morphisme \\(u_j|U : U \\to T_j\\) soit une immersion ouverte. En particulier, si les \\(T_i\\) sont quasi-affines sur S, alors tout ouvert U de F quasi-compact sur S i.e. de type fini sur S est quasi-affine sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de 3.7 montre que pour tout \\(t \\in F\\), il existe un \\(i \\in I\\) tel que \\(u_i : F \\to T_i\\) soit un isomorphisme local en t, et alors \\(u_j\\) est un isomorphisme local en x pour tout \\(j \\geqslant i\\). Par raison de quasi-compacité, on peut choisir i indépendant de \\(x \\in U\\). Il reste à prouver que pour i grand, \\(u_i|_U : U \\to T_i\\) est un monomorphisme. Or comme \\(U \\to T\\) est un monomorphisme, on voit que l'intersection des relations d'équivalence \\(U \\times_{T_i} U \\subset U \\times_S U\\) est réduite à la diagonale, et comme \\(U \\times_S U\\) est un préschéma noethérien et les \\(U \\times_{T_i} U\\) des sous-préschémas fermés, il s'ensuit que l'un de ces \\(U \\times_{T_i} U\\) est déjà réduit à la diagonale, i.e. \\(u_i|U\\) est un monomorphisme. Cela prouve la première assertion dans 3.11, et la deuxième en est une conséquence immédiate.</p>"
+    },
+    {
+     "id": "XI.3.12",
+     "type": "proposition",
+     "label": "3.12",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.3.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">3.12</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma en groupes affine.</p>\n  <p>a) Soit F le foncteur \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) tel que, pour tout T sur S,\n  \\[\n  F(T) = \\text{ ensemble des sous-groupes de type multiplicatif de } G_T \\text{ qui sont finis sur T.}\n  \\]\n  Supposons S localement noethérien ou G de présentation finie sur S. Alors le foncteur F est représentable et est affine sur S. Si G est de présentation finie sur S, alors F est localement de présentation finie sur S.</p>\n  <p>b) Soit H un S-préschéma en groupes de type multiplicatif, et fini sur S. Alors \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) est représentable. Il est affine sur S, et si G est de type fini (resp. de présentation finie) sur S, il en est de même de \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.3.13",
+     "type": "remarque",
+     "label": "3.13",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.3.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">3.13</span></div>\n  <div class=\"thm-body\"><p>Sauf pour la précision que \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}\\) est affine, et dans le cas où G est de présentation finie sur S (qui nous suffira), <a class=\"ref\" href=\"#XI.3.12\">3.12</a> est une conséquence immédiate de la théorie des Schémas de Hilbert (A. Grothendieck, Techniques de construction et théorèmes d'existence en Géométrie Algébrique : IV Les Schémas de Hilbert, Séminaire Bourbaki Mai 1961, N°221). Il suffit même que G soit quasi-projectif sur S ; dans le cas a), on peut représenter aussi le foncteur plus gros\n  \\[\n  F'(T) = \\left\\{\\begin{array}{l}\\text{ensemble des sous-préschémas en groupes de } \\overline{G}_T \\\\ \\text{plats propres et de présentation finie sur T,}\\end{array}\\right\\}\n  \\]\n  (le monomorphisme canonique \\(F \\to F'\\) est une « immersion ouverte », comme il résulte du critère 3.1 et de <a class=\"ref\" href=\"#X.4.7\">X 4.7 b)</a>, de sorte que la représentabilité de \\(F'\\) entraîne que F est représentable par un ouvert de \\(F'\\)) ; dans le cas b), on peut se borner à supposer que H est projectif et de présentation finie sur S. Dans les deux cas, on obtient un foncteur localement de présentation finie sur S. Dans le présent exposé, 3.12 n'est qu'un lemme technique pour prouver un résultat clef au N<sup>o</sup> suivant, aussi nous allons esquisser une démonstration directe facile de 3.12, n'utilisant pas les schémas de Hilbert.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons d'abord b). Il suffira que nous prouvions que \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) est représentable (indépendamment de toute structure de groupe sur H, G), et a les propriétés supplémentaires énoncées pour \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\), car utilisant aussi le même résultat pour \\(\\underline{\\mathrm{Hom}}_S(H \\times_S H, G)\\), on explicite le sous-foncteur \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) de \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) par une limite projective finie (en fait, à l'aide de produits fibrés) faisant intervenir G, \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) et \\(\\underline{\\mathrm{Hom}}_S(H \\times_S H, G)\\), que nous laissons au lecteur le soin d'expliciter. D'autre part, on aura\n\\[\nH = \\mathrm{Spec}(\\mathscr{B}),\n\\]\noù \\(\\mathscr{B}\\) est un faisceau d'algèbres sur S qui est localement libre comme faisceau de modules (c'est là la seule hypothèse sur H que nous aurons à retenir). Comme la question de représentabilité envisagée est locale sur S, nous pouvons supposer S affine d'anneau A. D'autre part, on aura \\(G = \\mathrm{Spec}(C)\\), où C est une A-algèbre. Lorsque \\(G = S[t] = G_0\\), t une indéterminée, le foncteur \\(\\underline{\\mathrm{Hom}}\\) n'est autre que\n\\[\nT \\mapsto \\Gamma(T, \\mathscr{B}_T),\n\\]\nqui est représentable (\\(\\mathscr{B}\\) étant localement libre) par le fibré vectoriel \\(\\mathbb{V}(\\mathscr{B}^{\\vee})\\), où \\(\\mathscr{B}^{\\vee}\\) est le faisceau de modules dual de \\(\\mathscr{B}\\). Lorsque \\(G = S[(t_i)]\\), avec \\((t_i)\\) une famille (pas nécessairement finie) d'indéterminées, on aura donc \\(G = G_0^I\\) (produit sur S d'une famille de copies de \\(G_0\\)) qui est représentable par le schéma affine\n\\[\n\\underline{\\mathrm{Hom}}_S(H, G)^I = \\mathbb{V}(\\mathscr{B}^{\\vee})^I = \\mathbb{V}(\\mathscr{B}^{\\vee(I)}).\n\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas général, G sera isomorphe à un sous-schéma fermé d'un schéma de la forme \\(S[(t_i)]\\), i.e. C sera un quotient d'une A-algèbre de la forme \\(A[(t_i)]\\). Soit \\((F_j)\\) un système de générateurs de l'idéal par lequel on divise. Supposons \\(\\mathscr{B}\\) libre de rang n, ce qui est loisible quitte à recouvrir S par des ouverts affines plus petits. Choisissons une base \\((e_k)_{1 \\leqslant k \\leqslant n}\\) de \\(\\mathscr{B}\\), alors écrivant les n composantes suivant cette base de \\(F_j((x_i))\\), pour les \\(x_i = \\sum x_{ik} e_k\\) (\\(x_{ik}\\) des coefficients indéterminés, pris dans une algèbre non précisée \\(A'\\) sur A) on trouve, pour chaque \\(F_j\\), n polynômes \\(F_{j,k}\\) en les \\((x_{i,k})_{i \\in I, 1 \\leqslant k \\leqslant n}\\), à coefficients dans A. On constate aussitôt que \\(\\underline{\\mathrm{Hom}}_S(H, G)\\) est représenté par le spectre du quotient de l'anneau de polynômes \\(A[(x_{i,k})]\\) par l'idéal engendré par les \\(F_{j,k}\\). Cela prouve aussitôt b).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons a). Pour tout groupe fini commutatif ordinaire M, soit \\(F_M\\) le sous-foncteur de F obtenu en se bornant aux sous-groupes de \\(G_T\\) qui sont de type multiplicatif et de type M. On voit facilement, par un raisonnement de recollement comme celui qui a servi dans <a class=\"ref\" href=\"#XI.3.5\">3.5</a> (que nous aurions dû énoncer en dévissant un peu plus !) qu'il suffit de vérifier que les \\(F_M\\) sont représentables, alors F sera représentable par le préschéma somme des \\(F_M\\), où M parcourt l'ensemble des classes de groupes finis commutatifs à isomorphisme près. (F est en effet la somme des \\(F_M\\) dans la catégorie des faisceaux…).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dorénavant nous supposons fixé M, et écrivons F au lieu de \\(F_M\\). Soit \\(H = \\mathbf{D}_S(M)\\), considérons le sous-foncteur \\(F' = \\underline{\\mathrm{Imm}}_{S\\text{-gr}}(H, G)\\) de \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) dont la valeur en T est l'ensemble des homomorphismes de T-groupes \\(H_T \\to G_T\\) qui sont des immersions fermées. On sait déjà que \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) est représentable par un S-préschéma affine en vertu de b), et utilisant <a class=\"ref\" href=\"#IX.6.8\">IX 6.8</a>, on voit aussitôt que \\(F'\\) est représenté par un sous-préschéma ouvert et fermé de ce dernier, donc il est également <em>affine</em> sur S. Considérons enfin le morphisme canonique \\(F' \\to F\\), qui associe à chaque monomorphisme \\(H_T \\to G_T\\) le groupe image. On constate aussitôt, en vertu des définitions, que de cette façon \\(F'\\) devient un fibré principal homogène (dans la catégorie des faisceaux pour fpqc) sur F, de groupe \\(\\Gamma_F = \\Gamma_S \\times_S F\\), où \\(\\Gamma = \\mathrm{Aut}_{\\mathrm{gr}}(M)\\), d'où il résulte « par descente » que ce morphisme est représentable (i.e. pour tout morphisme \\(T \\to F\\), avec T représentable, \\(T \\times_F F'\\) au-dessus de T est représentable, — en fait, représentable par un fibré principal galoisien sous \\(\\Gamma\\)). Donc en vertu de IV 4.6.6 F est représentable si et seulement si le quotient \\(F'/F''\\), où \\(F'' = F' \\times_F F'\\), existe dans \\((\\mathbf{Sch})\\) et est effectif universel pour les morphismes fidèlement plats quasi-compacts, ou ce qui revient au même, si et seulement si le quotient \\(F'/\\Gamma\\) existe et est effectif universel pour lesdits morphismes. Or comme \\(F'\\) est affine sur S on a vu dans <a class=\"ref\" href=\"#V.4.1\">V 4.1</a> que la condition en question est bien vérifiée. Cela prouve la représentabilité de F dans a).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Quant au complément, relatif au cas où on suppose G de présentation finie sur S, il se déduit aussitôt de la démonstration qui précède, compte tenu qu'en vertu de b), \\(F'\\) est alors localement de présentation finie sur S, de sorte qu'on peut appliquer l'Exposé V <sup class=\"footnote-ref\"><a id=\"XI-fn4ref\" href=\"#XI-fn4\">4</a></sup>.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn3",
+     "number": "3",
+     "html": "N.D.E. : contravariant"
+    },
+    {
+     "id": "XI-fn4",
+     "number": "4",
+     "html": "N.D.E. : référence à vérifier/préciser"
+    }
+   ]
+  },
+  {
+   "id": "XI-4",
+   "title": "4. Le schéma des sous-groupes de type multiplicatif d'un groupe lisse affine",
+   "blocks": [
+    {
+     "id": "XI.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.4\">4. Le schéma des sous-groupes de type multiplicatif d'un groupe lisse affine</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le résultat principal du présent exposé est constitué par le</p>"
+    },
+    {
+     "id": "XI.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma en groupes lisse et affine sur S, F le foncteur \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) défini par\n  \\[\n  F(T) = \\text{ ensemble des sous-groupes de type multiplicatif de } G_T.\n  \\]\n  Alors le foncteur F <em>est représentable, et est lisse et séparé sur S</em>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Signalons tout de suite la variante suivante :</p>"
+    },
+    {
+     "id": "XI.4.2",
+     "type": "corollaire",
+     "label": "4.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Soient G, H deux S-préschémas en groupes, avec G lisse et affine sur S, H de type multiplicatif et de type fini. Alors \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) est représentable, et est lisse et séparé sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, lorsque H est lisse sur S, il en est de même de \\(H \\times_S G\\), et on peut appliquer <a class=\"ref\" href=\"#XI.4.1\">4.1</a> à ce dernier. Par la considération des groupes graphes, \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) devient un sous-foncteur \\(F'\\) du foncteur F : « sous-groupes de type multiplicatif de \\(H \\times_S G\\) », savoir \\(F'(T) = \\) ensemble des sous-groupes de type multiplicatif K de \\((H \\times_S G)_T = H_T \\times_T G_T\\), tels que l'homomorphisme induit par la première projection\n\\[\nK \\longrightarrow H_T\n\\]\nsoit un isomorphisme. En vertu de <a class=\"ref\" href=\"#IX.2.9\">IX 2.9</a>, le morphisme canonique \\(F' \\to F\\) est une immersion ouverte, donc F étant représentable, il en est de même de \\(F'\\), qui sera représentable par un ouvert de F ; et F étant séparé et lisse sur S, il en est de même de \\(F'\\). Dans le cas où H est fini sur S, il suffit d'appliquer <a class=\"ref\" href=\"#XI.3.12\">3.12 b)</a> pour la représentabilité de \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\). Lorsque H est un produit \\(H_1 \\times_S H_2\\), avec \\(H_1\\) lisse sur S et \\(H_2\\) fini sur S, alors \\(\\underline{\\mathrm{Hom}}_{T\\text{-gr}}(H_T, G_T)\\) s'identifie au sous-ensemble de \\(\\mathrm{Hom}_{T\\text{-gr}}((H_1)_T, G_T) \\times \\mathrm{Hom}_{T\\text{-gr}}((H_2)_T, G_T)\\) formé des couples \\((u_1, u_2)\\) tels que \\(u_1 \\cdot u_2 = u_2 \\cdot u_1\\), d'où il résulte que \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) est représentable par un sous-préschéma fermé de \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H_1, G) \\times_S \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H_2, G) = X\\), comme on voit en appliquant <a class=\"ref\" href=\"#VIII.6.5\">VIII 6.5 b)</a>, où on fait \\(Y = H\\), \\(Z = G\\), \\(q_1\\) et \\(q_2\\) étant définis respectivement par \\((u_1, u_2) \\mapsto u_1 \\cdot u_2\\) et \\((u_1, u_2) \\mapsto u_2 \\cdot u_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas général, la question étant locale sur S pour la topologie de Zariski, on peut supposer que S est affine, et H de type constant sur S. Alors H étant quasi-isotrivial (<a class=\"ref\" href=\"#X.4.5\">X 4.5</a>) on peut trouver un morphisme étale surjectif \\(S' \\to S\\), \\(S'\\) affine, qui splitte H, i.e. tel que \\(H' = H_{S'}\\) soit diagonalisable. Alors le résultat précédent s'applique, car un groupe diagonalisable est le produit d'un tore diagonalisable par un groupe diagonalisable fini. Reste à voir que la donnée de descente obtenue sur le \\(S'\\)-préschéma \\(\\underline{\\mathrm{Hom}}_{S'\\text{-gr}}(H', G') = X'\\) est effective. Cela se voit par le raisonnement de <a class=\"ref\" href=\"#X.5.4\">X 5.4</a>, en notant que dans <em>loc. cit.</em>, l'hypothèse que \\(X' \\to S'\\) était séparé et localement quasi-fini n'avait servi qu'à assurer que toute partie ouverte de \\(X'\\) quasi-compacte sur \\(S'\\) était quasi-affine sur \\(S'\\). Or cette propriété est encore vérifiée dans le cas présent, comme il résulte facilement du fait qu'il en est ainsi pour le foncteur F de 4.1 (ce qui sera vu en cours de démonstration de 4.1). Cela (où toute autre variante de ce petit dévissage) établit la représentabilité de \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\), et en même temps le fait qu'il est séparé sur S. Il est localement de présentation finie sur S, comme on voit par exemple (comme on a signalé dans <a class=\"ref\" href=\"#XI.3.2\">3.2</a>) grâce au fait que ce foncteur « commute aux limites inductives d'anneaux ». Enfin, ce foncteur étant formellement lisse sur S (en vertu de <a class=\"ref\" href=\"#XI.2.1\">2.1</a>), il est lisse sur S.</p>"
+    },
+    {
+     "id": "XI.4.3",
+     "type": "remarque",
+     "label": "4.3",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\"><p>Nous avons ici déduit <a class=\"ref\" href=\"#XI.4.2\">4.2</a> de <a class=\"ref\" href=\"#XI.4.1\">4.1</a>, ce qui n'est vraiment immédiat que lorsque H est également lisse sur S. Pour que la déduction se fasse sans contorsions pour le cas général, il faudrait que le résultat de représentabilité 4.1 soit établi sans supposer G lisse sur S, mais seulement affine de présentation finie sur S. (Bien entendu, alors F ne sera plus lisse en général sur S !). Il n'y a guère de doute que 4.1 reste vrai sous ces hypothèses plus générales, mais la démonstration semble devoir être plus délicate (faute de pouvoir invoquer 3.8) <sup class=\"footnote-ref\"><a id=\"XI-fn5ref\" href=\"#XI-fn5\">5</a></sup> <sup class=\"footnote-ref\"><a id=\"XI-fn6ref\" href=\"#XI-fn6\">6</a></sup>. Signalons cependant que lorsque G est un sous-groupe fermé d'un groupe affine et lisse \\(G'\\) sur S, alors le foncteur F représentant les sous-groupes de type multiplicatif de G est représentable par un sous-préschéma fermé du préschéma représentant le foncteur analogue \\(F'\\) pour \\(G'\\) (justiciable de 4.1), comme on voit facilement en appliquant <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>. Cela soulève aussi la question : un schéma en groupes G sur S affine, qui est affine et de présentation finie sur S, est-il isomorphe à un sous-schéma en groupes d'un \\(GL(n)_S\\), n convenable ? C'est vrai lorsque S est le spectre d'un corps, cf. <a class=\"ref\" href=\"#VIB.11.11\">VI<sub>B</sub> 11.11</a>, mais est malheureusement faux en général, même pour les tores, cf. <a class=\"ref\" href=\"#XI.4.6\">4.6</a>. Enfin, notons qu'on pourrait démontrer aussi directement 4.2 par exactement la même méthode que 4.1.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Démontrons maintenant <a class=\"ref\" href=\"#XI.4.1\">4.1</a>. Comme le foncteur F est évidemment de nature locale, on peut supposer S affine, donc \\(S = \\mathrm{Spec}(A)\\), A un anneau. Considérant A comme limite inductive de ses sous-anneaux de type fini sur \\(\\mathbb{Z}\\), et notant que G provient d'un groupe lisse et affine sur un tel sous-anneau (EGA IV 8), on est ramené au cas où S est noethérien. Pour tout entier \\(n &gt; 0\\), soit \\(T_n\\) le foncteur défini par F, mais en se bornant aux sous-groupes H de type multiplicatif de \\(G_T\\) tels que \\(n \\cdot \\mathrm{id}_H = 0\\), i.e. tels que \\({}_nH = H\\). Ordonnons l'ensemble I des entiers \\(&gt; 0\\) par la relation de divisibilité. Lorsque m est multiple de n, définissons\n\\[\np_{n,m} : T_m \\longrightarrow T_n\n\\]\npar \\(p_{n,m}(H) = {}_nH = \\mathrm{Ker}(n \\cdot \\mathrm{id}_H)\\). De cette façon les \\(T_n\\) forment un système projectif de foncteurs sur S. En vertu de <a class=\"ref\" href=\"#XI.3.12\">3.12 a)</a> les foncteurs \\(T_n\\) sont représentables, affines et de type fini sur S. Définissons de même les morphismes\n\\[\nu_n : F \\longrightarrow T_n,\n\\]\npar la relation \\(u_n(H) = {}_nH\\). De cette façon, on obtient un morphisme\n\\[\nu : F \\longrightarrow T = \\varprojlim_n T_n,\n\\]\noù la \\(\\varprojlim\\) est prise dans la catégorie des foncteurs sur S. Mais signalons tout de suite que, les \\(T_n\\) étant représentables et affines sur S, il en est de même de T (ce sera le spectre de la limite inductive des algèbres quasi-cohérentes sur S qui définissent les \\(T_n\\)). Bien entendu, T n'est pas en général de type fini sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons appliquer <a class=\"ref\" href=\"#XI.3.7\">3.7</a> et sommes ramenés à vérifier les conditions a) à d) de 3.7 qui impliqueront que F est représentable par un préschéma localement de type fini sur S. Il résulte alors de <a class=\"ref\" href=\"#XI.2.1bis\">2.1 bis</a> que F est même lisse sur S, et comme F est un sous-foncteur de T qui est affine sur S, il s'ensuit que F est séparé sur S (étant séparé sur T, qui est séparé sur S). Prouvons tout de suite le complément invoqué plus haut, savoir que tout ouvert U de F quasi-compact sur S est quasi-affine sur S : Cela résulte de <a class=\"ref\" href=\"#XI.3.11\">3.11</a> et du fait que les \\(T_n\\) sont affines sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Vérifions donc les conditions de 3.7.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) F est un faisceau pour la topologie fidèlement plate quasi-compacte, par la théorie de la descente SGA 1 VIII, qui s'applique ici puisque les groupes de type multiplicatif sur T sont affines sur T. Il commute aux limites inductives d'anneaux par le tapis général EGA IV 8. Montrons qu'il commute aux limites projectives adiques d'anneaux locaux artiniens. Quand on a affaire, au lieu du foncteur F, au foncteur analogue envisagé dans <a class=\"ref\" href=\"#XI.4.2\">4.2</a>, cette propriété n'est autre que celle de <a class=\"ref\" href=\"#IX.7.1\">IX 7.1</a> dans le cas particulier où A est un anneau local noethérien complet, muni d'un idéal de définition pour sa topologie habituelle (N.B. C'est exactement ici que l'hypothèse G affine intervient de façon essentielle). Dans le cas actuel, nous sommes ramenés à prouver le</p>"
+    },
+    {
+     "id": "XI.4.4",
+     "type": "lemme",
+     "label": "4.4",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Soient A un anneau local noethérien complet, d'idéal maximal \\(\\mathfrak{m}\\), G un schéma en groupes affine sur \\(S = \\mathrm{Spec}(A)\\). Pour tout entier \\(n \\geqslant 0\\), soient \\(S_n = \\mathrm{Spec}(A/\\mathfrak{m}^{n+1})\\), \\(G_n = G \\times_S S_n\\). Soit pour tout n, \\(H_n\\) un sous-groupe de type multiplicatif et de type fini de \\(G_n\\), tel que pour \\(m \\geqslant n\\), \\(H_n\\) se déduise de \\(H_m\\) par réduction. Sous ces conditions, il existe un unique sous-groupe de type multiplicatif H dans G, qui se réduise suivant les \\(H_n\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En vertu de <a class=\"ref\" href=\"#X.3.2\">X 3.2</a> il existe un groupe de type multiplicatif H sur S, nécessairement de type fini et isotrivial, déterminé à isomorphisme unique près, qui soit muni d'un isomorphisme \\(H \\times_S S_0 \\simeq H_0\\), (en utilisant le fait que \\(H_0\\) est isotrivial, étant de type fini sur un corps, cf. <a class=\"ref\" href=\"#X.1.4\">X 1.4</a>). En vertu de <a class=\"ref\" href=\"#X.2.1\">X 2.1</a>, pour tout n, l'isomorphisme \\(H \\times_S S_0 \\simeq H_0\\) se relève en un isomorphisme unique \\(H \\times_S S_n \\simeq H_n\\). Ceci dit, en vertu de <a class=\"ref\" href=\"#IX.7.1\">IX 7.1</a> déjà cité, les homomorphismes \\(H_n \\to G_n\\) proviennent d'un unique homomorphisme de S-groupes \\(u : H \\to G\\). En vertu de <a class=\"ref\" href=\"#IX.6.6\">IX 6.6</a> ce dernier est un monomorphisme puisque \\(u_0 : H_0 \\to G_0\\) l'est. Cela achève la démonstration de 4.4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Le morphisme \\(u : F \\to T\\) est un monomorphisme. Cela résulte du théorème de densité <a class=\"ref\" href=\"#IX.4.7\">IX 4.7</a>, sous la forme du corollaire <a class=\"ref\" href=\"#IX.4.8\">4.8 b)</a>. On fera attention qu'il est essentiel, pour l'application que nous en faisons ici, de disposer de ce résultat sur une base non nécessairement noethérienne. (N.B. comme le foncteur T ne commute pas aux limites inductives d'anneaux, il n'est pas possible de s'y ramener a priori).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b') Le morphisme \\(u : F \\to T\\) est infinitésimalement étale, en d'autres termes on a le</p>"
+    },
+    {
+     "id": "XI.4.5",
+     "type": "lemme",
+     "label": "4.5",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"XI.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>Soient A un anneau local artinien de corps résiduel k, \\(S = \\mathrm{Spec}(A)\\), I un idéal \\(\\subset \\mathrm{rad}(A)\\), \\(S' = \\mathrm{Spec}(A/I)\\), G un S-préschéma en groupes lisse sur S, \\(G' = G \\times_S S'\\), donnons-nous un sous-groupe de type multiplicatif \\(H'\\) de \\(G'\\) et pour tout entier \\(n &gt; 0\\), un sous-groupe de type multiplicatif \\(H(n)\\) de G de telle façon que</p>\n  <p>1°) pour tout multiple m de n, \\(H(n) = {}_nH(m)\\), et</p>\n  <p>2°) \\(H(n)' = {}_nH'\\).</p>\n  <p>Sous ces conditions, il existe un sous-groupe de type multiplicatif H de G et un seul tel que \\({}_nH = H(n)\\) pour tout n.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'unicité est déjà contenue dans b). Pour l'existence, une récurrence immédiate nous ramène au cas où \\(J\\mathfrak{m} = 0\\), \\(\\mathfrak{m}\\) étant l'idéal maximal de A. Soient \\(k = A/\\mathfrak{m}\\), \\(S_0 = \\mathrm{Spec}(k)\\), \\(G_0 = G \\times_S S_0\\), \\(\\mathfrak{g}_0\\) l'algèbre de Lie de \\(G_0\\), \\(\\mathfrak{h}_0\\) celle de \\(H_0\\). On a un isomorphisme de groupes canonique :\n\\[\n\\mathfrak{g}_0 \\otimes_k J \\simeq \\mathrm{Ker}(G(S) \\longrightarrow G(S_0)),\n\\]\ncf. Exp III. En vertu de <a class=\"ref\" href=\"#IX.3.6bis\">IX 3.6 bis</a> et <a class=\"ref\" href=\"#XI.3.7\">3.7</a>, il existe un sous-groupe de type multiplicatif H de G se réduisant suivant \\(H'\\), et un tel H est déterminé modulo automorphisme intérieur par un élément de \\(N = \\mathrm{Ker}(G(S) \\to G(S_0))\\). Ainsi, l'ensemble P des relèvements H de \\(H_0\\) est un ensemble principal homogène sous le groupe N/M, où M est le groupe des \\(g \\in N\\) tels que \\(\\mathrm{int}(g) \\cdot H = H\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or on voit facilement (Exp III) que ce sous-groupe n'est autre que le sous-espace vectoriel de \\(\\mathfrak{g}_0 \\otimes_k J\\) formé des invariants sous \\(H_0\\), lorsque \\(H_0\\) opère sur \\(\\mathfrak{g}_0 \\otimes_k J\\) par la représentation induite par la représentation adjointe de \\(G_0\\). De même, l'ensemble \\(P(n)\\) des relèvements de \\(H(n)_0 = {}_nH_0\\) est un ensemble principal homogène sous \\(N/M(n)\\), où \\(M(n)\\) est le sous-espace vectoriel de \\(\\mathfrak{g}_0 \\otimes_k J = N\\) formé des invariants sous \\({}_nH_0\\). Utilisant le théorème de densité <a class=\"ref\" href=\"#IX.4.7\">Exp IX 4.7</a>, on voit facilement que pour n grand, (au sens de la relation d'ordre mise sur l'ensemble des entiers \\(n &gt; 0\\), savoir la relation de divisibilité) on a \\(M = M(n)\\). Par suite, l'application naturelle \\(H \\mapsto {}_nH\\) de P dans \\(P(n)\\), qui est compatible avec les opérations de N donc avec l'homomorphisme \\(N/M \\to N/M(n)\\) sur les groupes d'opérateurs, est bijectif pour n grand. La conclusion de 4.5 en résulte aussitôt.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour vérifier c) et d) de 3.7, nous utilisons <a class=\"ref\" href=\"#XI.3.8\">3.8</a> qui nous ramène à la vérification de c') et d') ci-dessous.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c') Les \\(T_n\\) sont lisses sur S, et les morphismes de transition \\(p_{n,m} : T_m \\to T_n\\) sont lisses.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci n'est autre que <a class=\"ref\" href=\"#XI.2.2bis\">2.2 bis</a>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d') Avec les notations de 3.8, un point \\(\\xi\\) de F à valeurs dans un corps k au-dessus de S n'est autre qu'un sous-groupe de type multiplicatif \\(H_0\\) de \\(G_0 = G_k\\). Reprenons le raisonnement de b') ci-dessus, on voit que l'entier \\(d(\\xi)\\) envisagé dans 3.8 n'est autre que la dimension de \\(\\mathfrak{g}_0/\\mathfrak{g}_0^{H_0}\\), où \\(\\mathfrak{g}_0\\) est l'algèbre de Lie de \\(G_0\\) et \\(\\mathfrak{g}_0^{H_0}\\) est le sous-espace vectoriel des invariants sous \\(H_0\\). C'est donc un entier fini, i.e. la condition d') 1°) de 3.8 est vérifiée. Avec les notations de d') 2°), la donnée d'un morphisme \\(v : X \\to F\\) revient à la donnée d'un sous-groupe de type multiplicatif H de \\(G_X\\). Pour \\(x \\in X\\), l'entier \\(d(\\xi_x)\\) n'est alors autre que la dimension de \\((\\mathfrak{g} \\otimes \\kappa(x))/(\\mathfrak{g} \\otimes \\kappa(x))^{H_x}\\), où \\(\\mathfrak{g}\\) est le faisceau en algèbres de Lie de \\(G_X\\) (qui est localement libre de type fini sur X car \\(G_X\\) est lisse sur X, et \\(\\mathfrak{g} \\otimes \\kappa(x)\\) n'est autre que l'algèbre de Lie de la fibre \\(G_x\\) de \\(G_X\\) en x), et \\(H_x\\) la fibre de H en x. Or \\(\\mathfrak{g}\\) étant un module localement libre sur X sur lequel le groupe de type multiplicatif H opère, on voit aussitôt que le sous-foncteur \\(\\mathfrak{g}^H\\) des invariants sous H est donné par un sous-faisceau localement facteur direct donc localement libre de \\(\\mathfrak{g}\\). (Par descente, on est ramené au cas où H est diagonalisable, et où on applique <a class=\"ref\" href=\"#I.4.7.3\">Exp I 4.7.3</a>, en notant que le sous-faisceau des invariants correspond à la composante de degré zéro). Par suite \\(d(\\xi_x) = \\) rang en x de \\(\\mathfrak{g}/\\mathfrak{g}^H\\), donc c'est une fonction localement constante en x. Cela achève de prouver la condition d').</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous avons ainsi vérifié les conditions de 3.7, ce qui achève la démonstration de 4.1.</p>"
+    },
+    {
+     "id": "XI.4.6",
+     "type": "remarque",
+     "label": "4.6",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\"><p>Lorsque \\(G = GL(n)_S\\), on peut donner une démonstration directe nettement plus simple et plus explicite de <a class=\"ref\" href=\"#XI.4.1\">4.1</a>, en utilisant <a class=\"ref\" href=\"#I.4.7.3\">I 4.7.3</a>. La démonstration montre de plus que dans ce cas, le schéma modulaire est un schéma somme d'une famille de schémas <em>affines</em> sur S. Procédant comme il a été dit dans <a class=\"ref\" href=\"#XI.4.3\">4.3</a>, on en déduit le même résultat chaque fois que G est un sous-groupe fermé d'un groupe de la forme \\(GL(n)_S\\). On se gardera de croire cependant que les préschémas qui représentent les foncteurs dans 4.1 ou 4.2 sont toujours des sommes d'une famille de schémas affines sur S. Soit par exemple H un groupe de type multiplicatif et de type fini sur un préschéma localement noethérien S, alors en vertu de <a class=\"ref\" href=\"#X.5.11\">X 5.11</a> H est isotrivial si et seulement si \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, \\mathbb{G}_m)\\) est somme d'une famille de préschémas affines sur S, or on a signalé (<a class=\"ref\" href=\"#X.1.6\">X 1.6</a>) qu'il peut exister des tores H (de dimension relative 2) non isotriviaux ; pour un tel tore, \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, \\mathbb{G}_m)\\) n'est donc pas somme de S-préschémas affines sur S, et on voit de même que le groupe constant tordu « dual » \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(\\mathbb{G}_m, H)\\) n'est pas non plus une telle somme (car si deux groupes constants tordus commutatifs de présentation finie R, \\(R'\\) sont duaux l'un de l'autre, \\(R' = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(R, \\mathbb{Z}_S)\\), on voit facilement que l'un est isotrivial si et seulement si l'autre l'est). Ce dernier point montre aussi qu'un tel H n'est pas isomorphe à un sous-groupe d'un groupe de la forme \\(GL(n)_S\\) ; de façon précise, on peut montrer qu'un groupe de type multiplicatif et de type fini sur S localement noethérien connexe est isomorphe à un sous-groupe d'un groupe de la forme \\(\\underline{\\mathrm{Aut}}_{\\mathrm{Mod}}(\\mathscr{E})\\) (avec \\(\\mathscr{E}\\) un module localement libre de type fini sur S) si et seulement si il est isotrivial. Enfin, prenant \\(G = H \\times \\mathbb{G}_m\\) dans les deux exemples précédents, on trouve un exemple où le préschéma représentant le foncteur F de 4.1 n'est pas somme d'une famille de S-préschémas affines sur S, (avec G un tore de dimension relative 3 si on veut).</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn5",
+     "number": "5",
+     "html": "C'est effectivement prouvé pour G plat et quasi-affine sur S à fibres connexes, à condition de se borner aux sous-tores <em>centraux</em> de G (XV 8.8)."
+    },
+    {
+     "id": "XI-fn6",
+     "number": "6",
+     "html": "N.D.E. : Dans le cas où H lisse (non nécessairement affine) sur une base normale S localement noethérienne, M. Raynaud a montré que le plus grand ouvert représentable du foncteur des sous-tores de H est somme disjointe d'ouverts lisses et affines sur S. Il s'agit du théorème IX.9.26 dans <em>Faisceaux amples sur les schémas en groupes et sur les espaces homogènes</em>, Lecture Notes Maths. 119 (1970)."
+    }
+   ]
+  },
+  {
+   "id": "XI-5",
+   "title": "5. Premiers corollaires du théorème de représentabilité",
+   "blocks": [
+    {
+     "id": "XI.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.5\">5. Premiers corollaires du théorème de représentabilité</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient H, G comme dans <a class=\"ref\" href=\"#XI.4.2\">4.2</a>. Posons\n\\[\nM = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G),\n\\]\nqui est un S-préschéma lisse, séparé sur S, en vertu de 4.2. Notons que G opère sur le foncteur \\(M = \\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) par\n\\[\n(g, u) \\mapsto \\mathrm{int}(g) \\circ u,\n\\]\nd'où un morphisme canonique\n\\[\n(\\mathrm{x}) \\qquad G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M,\n\\]\ndont les composantes sont le morphisme précédent \\(G \\times_S M \\to M\\), et la deuxième projection \\(G \\times_S M \\to M\\).</p>"
+    },
+    {
+     "id": "XI.5.1",
+     "type": "corollaire",
+     "label": "5.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\"><p>Le morphisme précédent (x) est lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte de <a class=\"ref\" href=\"#XI.4.2\">4.2</a> et <a class=\"ref\" href=\"#XI.2.3\">2.3</a>. Cet énoncé est équivalent au suivant :</p>"
+    },
+    {
+     "id": "XI.5.2",
+     "type": "corollaire",
+     "label": "5.2",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\"><p>Soient \\(u_1, u_2 : H \\rightrightarrows G\\) deux homomorphismes de S-groupes. Alors le sous-foncteur \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) de G (cf. <a class=\"ref\" href=\"#XI.2.4\">2.4</a>) est représentable par un sous-préschéma fermé de G, lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste seulement à prouver que \\(\\underline{\\mathrm{Transp}}(u_1, u_2) \\to G\\) est bien une immersion fermée, ce qui résulte du fait que c'est le <em>noyau</em> d'un couple de morphismes \\(G \\rightrightarrows M\\) (savoir \\(g \\mapsto \\mathrm{int}(g)u_1\\) et le morphisme « constant » \\(g \\mapsto u_2\\)), et du fait que M est séparé sur S. En particulier :</p>"
+    },
+    {
+     "id": "XI.5.3",
+     "type": "corollaire",
+     "label": "5.3",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : H \\to G\\) un morphisme de S-groupes. Alors \\(\\underline{\\mathrm{Centr}}_G(u) = \\underline{\\mathrm{Transp}}(u, u)\\) est représentable par un sous-préschéma en groupes fermé de G, lisse sur S. De plus, \\(G/\\underline{\\mathrm{Centr}}_G(u)\\) est représentable par un sous-préschéma ouvert de M.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à prouver ce dernier point. Or le morphisme\n\\[\ng \\mapsto \\mathrm{int}(g) \\circ u\n\\]\nde G dans M est lisse de type fini en vertu de <a class=\"ref\" href=\"#XI.5.2\">5.2</a>, c'est donc un morphisme ouvert (EGA IV 6.6), et si U désigne son image, avec la structure induite par M, le morphisme \\(G \\to U\\) est lisse, surjectif, de type fini, donc couvrant pour la topologie fidèlement plate et quasi-compacte. D'ailleurs il est évident que le morphisme \\(G \\to M\\) précédent fait de G un faisceau formellement principal homogène sous \\(\\underline{\\mathrm{Centr}}_G(u)_M\\), ce qui implique que le faisceau \\(G/\\underline{\\mathrm{Centr}}_G(u)\\) est bien représentable par U.</p>"
+    },
+    {
+     "id": "XI.5.4",
+     "type": "corollaire",
+     "label": "5.4",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\"><p>Soient \\(u_1, u_2 : H \\rightrightarrows G\\) deux homomorphismes de S-groupes. Les conditions suivantes sont équivalentes :</p>\n  <p>(i) \\(u_1\\) et \\(u_2\\) sont conjugués localement pour la topologie étale.</p>\n  <p>(i bis) \\(u_1, u_2\\) sont conjugués localement au sens de la topologie fidèlement plate quasi-compacte.</p>\n  <p>(ii) Pour tout \\(s \\in S\\), désignant par \\(\\overline{s}\\) le spectre d'une clôture algébrique de \\(\\kappa(s)\\), les morphismes \\(u_{1,\\overline{s}}, u_{2,\\overline{s}} : H_{\\overline{s}} \\rightrightarrows G_{\\overline{s}}\\) sont conjugués par un élément de \\(G(\\kappa(\\overline{s}))\\).</p>\n  <p>(ii bis) Le morphisme structural \\(\\underline{\\mathrm{Transp}}(u_1, u_2) \\to S\\) est surjectif.</p>\n  <p>(iii) \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) est un torseur sous l'action du S-préschéma en groupes lisse de type fini \\(\\underline{\\mathrm{Centr}}_G(u_1)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) ⇒ (i bis) et (ii) ⇒ (ii bis) sont triviaux, (le deuxième grâce au Nullstellensatz), par ailleurs (i bis) ⇒ (ii) par le « principe de l'extension finie » (EGA IV 9). D'autre part (ii bis) ⇒ (iii) grâce au fait que \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) est lisse sur S donc plat sur S, et de type fini donc quasi-compact sur S, il est donc fidèlement plat quasi-compact sur S si et seulement si son morphisme structural est surjectif. Comme d'autre part, il est formellement principal homogène sous \\(\\underline{\\mathrm{Centr}}_G(u_1)\\), qui est fidèlement plat et quasi-compact sur S, on voit que cette dernière condition équivaut aussi à dire que \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) est un torseur sous \\(\\underline{\\mathrm{Centr}}_G(u_1)\\) (sous-entendu : au sens de la topologie fidèlement plate et quasi-compacte). Enfin (iii) ⇒ (i) grâce au fait que \\(\\underline{\\mathrm{Transp}}(u_1, u_2)\\) est lisse sur S et au « lemme de Hensel » sous la forme <a class=\"ref\" href=\"#XI.1.10\">1.10</a>.</p>"
+    },
+    {
+     "id": "XI.5.5",
+     "type": "remarque",
+     "label": "5.5",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>Pour \\(u_1 = u : H \\to G\\) fixé, le foncteur \\((\\mathbf{Sch})^{\\circ}_{/S} \\to (\\mathbf{Ens})\\) qui à tout T sur S associe l'ensemble des homomorphismes de T-groupes \\(u_2 : H_T \\to G_T\\) qui sont conjugués de \\(u_T : H_T \\to G_T\\) localement pour la topologie étale, est précisément représentable par l'ouvert de M, isomorphe à \\(G/\\underline{\\mathrm{Centr}}_G(u)\\), envisagé dans <a class=\"ref\" href=\"#XI.5.3\">5.3</a>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Esquissons les variantes des résultats précédents, obtenues par application de <a class=\"ref\" href=\"#XI.4.1\">4.1</a> au lieu de <a class=\"ref\" href=\"#XI.4.2\">4.2</a>. Soit donc G un préschéma en groupes lisse et affine sur S, et désignons maintenant par M le S-préschéma lisse, séparé sur S, qui représente le foncteur envisagé dans 4.1. On a encore des opérations de G sur M :\n\\[\n(g, H) \\longmapsto \\mathrm{int}(g)(H),\n\\]\nd'où comme ci-dessus un morphisme\n\\[\n(\\mathrm{x\\ bis}) \\qquad G \\underset{S}{\\times} M \\longrightarrow M \\underset{S}{\\times} M.\n\\]</p>"
+    },
+    {
+     "id": "XI.5.1bis",
+     "type": "corollaire",
+     "label": "5.1 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.1bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.1 bis</span></div>\n  <div class=\"thm-body\"><p>Le morphisme précédent est lisse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Résulte de <a class=\"ref\" href=\"#XI.4.1\">4.1</a> et <a class=\"ref\" href=\"#XI.2.3bis\">2.3 bis</a>. On en conclut encore :</p>"
+    },
+    {
+     "id": "XI.5.2bis",
+     "type": "corollaire",
+     "label": "5.2 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.2bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.2 bis</span></div>\n  <div class=\"thm-body\"><p>Soient \\(H_1, H_2\\) deux sous-groupes de type multiplicatif de G. Alors le sous-foncteur \\(\\underline{\\mathrm{Transp}}_G(H_1, H_2)\\) de G est représentable par un sous-préschéma fermé de G, lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier :</p>"
+    },
+    {
+     "id": "XI.5.3bis",
+     "type": "corollaire",
+     "label": "5.3 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.3 bis</span></div>\n  <div class=\"thm-body\"><p>Soit H un sous-groupe de type multiplicatif de G. Alors le sous-foncteur en groupes \\(\\underline{\\mathrm{Norm}}_G(H)\\) de G est représentable par un sous-préschéma fermé de G, lisse sur S. De plus, le quotient \\(G/\\underline{\\mathrm{Norm}}_G(H)\\) est représentable par un sous-préschéma ouvert de M.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.4bis",
+     "type": "corollaire",
+     "label": "5.4 bis",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.4bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.4 bis</span></div>\n  <div class=\"thm-body\"><p>Soient \\(H_1, H_2\\) deux sous-groupes de type multiplicatif de G. Les conditions suivantes sont équivalentes :</p>\n  <p>(i) \\(H_1\\) et \\(H_2\\) sont conjugués localement pour la topologie étale.</p>\n  <p>(i bis) \\(H_1\\) et \\(H_2\\) sont conjugués localement pour la topologie fidèlement plate quasi-compacte.</p>\n  <p>(ii) Pour tout \\(s \\in S\\), désignant par \\(\\overline{s}\\) le spectre d'une clôture algébrique de \\(\\kappa(s)\\), les sous-groupes \\(H_{1,\\overline{s}}, H_{2,\\overline{s}}\\) de \\(G_{\\overline{s}}\\) sont conjugués par un élément de \\(G(\\kappa(\\overline{s}))\\).</p>\n  <p>(ii bis) Le morphisme structural \\(\\underline{\\mathrm{Transp}}(H_1, H_2) \\to S\\) est surjectif.</p>\n  <p>(iii) \\(\\underline{\\mathrm{Transp}}(H_1, H_2)\\) est un fibré principal homogène sous l'action du S-préschéma en groupes lisse de type fini \\(\\underline{\\mathrm{Norm}}_G(H_1)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.5bis",
+     "type": "remarque",
+     "label": "5.5 bis",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.5bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.5 bis</span></div>\n  <div class=\"thm-body\"><p>La remarque 5.5 se transpose également au cas actuel.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.6",
+     "type": "remarque",
+     "label": "5.6",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.6</span></div>\n  <div class=\"thm-body\"><p>Notons que pour établir le résultat <a class=\"ref\" href=\"#XI.5.2\">5.2</a>, et par suite aussi la première assertion dans 5.3, ainsi que 5.4, la référence à <a class=\"ref\" href=\"#XI.4.2\">4.2</a> peut se remplacer par une référence à <a class=\"ref\" href=\"#VIII.6.4\">VIII, 6.4</a>, dont la démonstration est beaucoup plus facile. Cela montre aussi que l'hypothèse G affine sur S y est inutile. De plus, dans le <a class=\"ref\" href=\"#XI.6\">N<sup>o</sup> 6</a>, nous montrerons comment une variante de cette méthode permet d'étendre ces résultats au cas de certains groupes H plus généraux que les groupes de type multiplicatif. Ces mêmes observations s'étendent aux variantes 5.2 bis etc. Par contre, le résultat <a class=\"ref\" href=\"#XI.5.8\">5.8</a> qui suit utilise de façon essentielle toutes les hypothèses faites (notamment G affine et lisse sur S, H de type multiplicatif), et le conférencier n'en connaît d'autre démonstration que via les théorèmes de représentabilité 4.1 ou 4.2 <sup class=\"footnote-ref\"><a id=\"XI-fn7ref\" href=\"#XI-fn7\">7</a></sup>.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.5.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.5.7\">5.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme le morphisme (x) resp. (x bis) est lisse donc ouvert, son image est ouverte. Soit R cette image, munie de la structure induite par \\(M \\times_S M\\), on constate facilement que R est une <em>relation d'équivalence</em> dans M, qui n'est autre d'ailleurs que celle explicitée dans <a class=\"ref\" href=\"#XI.5.4\">5.4</a> resp. <a class=\"ref\" href=\"#XI.5.4bis\">5.4 bis</a>. Il serait intéressant de savoir si le faisceau quotient M/R (qui est formellement étale sur S) est représentable (il est alors représentable par un préschéma <em>étale</em> sur S) ; il l'est par exemple si S est le spectre d'un corps. On notera d'ailleurs qu'il peut arriver que R ne soit pas fermé dans \\(M \\times_S M\\) (même si G est quasi-fini sur S…), ce qui signifie (lorsque M/R est représentable) que M/R est alors non séparé sur S.</p>"
+    },
+    {
+     "id": "XI.5.8",
+     "type": "theoreme",
+     "label": "5.8",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.5.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">5.8</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma lisse et affine sur S, \\(s \\in S\\). Alors :</p>\n  <p>a) Pour tout sous-groupe de type multiplicatif \\(H_0\\) de \\(G_s\\), il existe un morphisme étale \\(S' \\to S\\), un point \\(s'\\) de \\(S'\\) au-dessus de s tel que l'extension résiduelle \\(\\kappa(s')/\\kappa(s)\\) soit triviale, et un sous-groupe de type multiplicatif \\(H'\\) de \\(G' = G \\times_S S'\\), tel que \\(H'_{s'} = H_0 \\otimes_{\\kappa(s)} \\kappa(s')\\).</p>\n  <p>b) Pour tout homomorphisme de groupes \\(u_0 : H_s \\to G_s\\), où H est un S-préschéma en groupes de type multiplicatif et de type fini, il existe un morphisme étale \\(S' \\to S\\), un point \\(s'\\) de \\(S'\\) au-dessus de s tel que l'extension résiduelle \\(\\kappa(s')/\\kappa(s)\\) soit triviale, et un homomorphisme de groupes \\(u' : H' \\to G'\\), tel que \\(u'_{s'} : H'_{s'} \\to G'_{s'}\\) soit égal à \\(u_0 \\otimes_{\\kappa(s)} \\kappa(s')\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cela résulte de <a class=\"ref\" href=\"#XI.4.1\">4.1</a> resp. <a class=\"ref\" href=\"#XI.4.2\">4.2</a>, et du lemme de Hensel sous la forme <a class=\"ref\" href=\"#XI.1.10\">1.10</a>.</p>"
+    },
+    {
+     "id": "XI.5.9",
+     "type": "proposition",
+     "label": "5.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.5.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.9</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, G un S-préschéma lisse et affine sur S, H un sous-groupe de type multiplicatif de G. Considérons \\(\\underline{\\mathrm{Centr}}_G(H) \\hookrightarrow \\underline{\\mathrm{Norm}}_G(H)\\), qui par <a class=\"ref\" href=\"#XI.5.3\">5.3</a> et <a class=\"ref\" href=\"#XI.5.3bis\">5.3 bis</a> sont des sous-préschémas en groupes fermés de G, lisses sur S. Alors le premier groupe est un sous-préschéma ouvert et fermé du second, et le faisceau quotient\n  \\[\n  W_G(H) = \\underline{\\mathrm{Norm}}_G(H)/\\underline{\\mathrm{Centr}}_G(H)\n  \\]\n  est représentable par un sous-préschéma en groupes ouvert de \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) ; c'est donc un S-préschéma en groupes quasi-fini, étale et séparé sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons en effet l'homomorphisme évident\n\\[\n\\theta : \\underline{\\mathrm{Norm}}_G(H) \\longrightarrow \\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H),\n\\]\ndont le noyau est par définition \\(\\underline{\\mathrm{Centr}}_G(H)\\). Comme \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) est représentable par un S-préschéma en groupes <em>étale et séparé</em> sur S (<a class=\"ref\" href=\"#X.5.10\">X 5.10</a>), sa section unité est une immersion ouverte et fermée, donc son image inverse par \\(\\theta\\) est un sous-groupe ouvert et fermé de \\(\\underline{\\mathrm{Norm}}_G(H)\\). Je dis de plus que \\(\\theta\\) est un morphisme lisse : cela résulte en effet formellement des définitions, et du fait que \\(\\underline{\\mathrm{Norm}}_G(H)\\) est lisse sur S et \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) est étale sur S. On en conclut comme dans <a class=\"ref\" href=\"#XI.5.3\">5.3</a> que l'image de \\(\\theta\\) est un ouvert U de \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) et que muni de la structure induite, U représente le faisceau quotient \\(\\underline{\\mathrm{Norm}}_G(H)/\\underline{\\mathrm{Centr}}_G(H)\\). Ce dernier est donc étale et séparé sur S puisque \\(\\underline{\\mathrm{Aut}}_{S\\text{-gr}}(H)\\) l'est, et il est quasi-fini sur S, étant quasi-compact sur S comme image de \\(\\underline{\\mathrm{Norm}}_G(H)\\) qui l'est. Cela achève la démonstration de 5.9.</p>"
+    },
+    {
+     "id": "XI.5.10",
+     "type": "corollaire",
+     "label": "5.10",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.5.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">5.10</span></div>\n  <div class=\"thm-body\"><p>Pour tout \\(s \\in S\\), soit\n  \\[\n  w(s) = \\mathrm{rang}\\ \\underline{\\mathrm{Norm}}_{G_s}(H_s)/\\underline{\\mathrm{Centr}}_{G_s}(H_s)\n  \\]\n  (qui est aussi l'indice de \\(\\underline{\\mathrm{Centr}}_{G(k)} H(k)\\) dans \\(\\underline{\\mathrm{Norm}}_{G(k)} H(k)\\), où k est une clôture algébrique de \\(\\kappa(s)\\)). Alors la fonction \\(s \\mapsto w(s)\\) est semi-continue inférieurement. Pour qu'elle soit constante au voisinage du point s, il faut et suffit que \\(W_G(H)\\) soit fini sur S au voisinage de s.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, pour tout S-préschéma W qui est étale, de type fini et séparé sur S, il est vrai que la fonction \\(s \\mapsto w(s) = \\mathrm{rang}\\ [W_s : \\kappa(s)]\\) est semi-continue inférieurement, et qu'elle est constante au voisinage du point s si et seulement si W est fini sur S au voisinage de s, (fait signalé dans SGA 1, I 10.9, et dont la démonstration, qui n'offre pas de difficulté, se trouvera dans EGA IV <sup class=\"footnote-ref\"><a id=\"XI-fn8ref\" href=\"#XI-fn8\">8</a></sup>).</p>"
+    },
+    {
+     "id": "XI.5.11",
+     "type": "remarque",
+     "label": "5.11",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.5.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">5.11</span></div>\n  <div class=\"thm-body\"><p><sup class=\"footnote-ref\"><a id=\"XI-fn9ref\" href=\"#XI-fn9\">9</a></sup> Soit G un préschéma en groupes affine et lisse sur S, H un sous-groupe de type multiplicatif, alors <a class=\"ref\" href=\"#XI.5.3\">5.3</a> et <a class=\"ref\" href=\"#XI.5.3bis\">5.3 bis</a> impliquent que les quotients \\(G/\\underline{\\mathrm{Centr}}_G(H)\\) et \\(G/\\underline{\\mathrm{Norm}}_G(H)\\) sont des préschémas lisses sur S et <em>quasi-affines</em> sur S, puisque dans l'un et l'autre cas, le préschéma modulaire M dans lequel le quotient se trouve plongé est tel que tout ouvert U de M quasi-compact sur S est quasi-affine sur S (<a class=\"ref\" href=\"#XI.3.11\">3.11</a>). Nous verrons d'ailleurs dans l'exposé suivant <sup class=\"footnote-ref\"><a id=\"XI-fn10ref\" href=\"#XI-fn10\">10</a></sup> que pour tout U comme dessus, l'adhérence schématique \\(\\overline{U}\\) de U dans M est même affine sur S, ce qui montre que les quotients envisagés sont affines sur S pourvu que l'ouvert U dans le schéma modulaire correspondant (des homomorphismes de groupe de H dans G, resp. des sous-groupes de type multiplicatif de G) soit <em>fermé</em> dans M. C'est par exemple le cas si H est un « tore maximal » dans le second cas envisagé, ou lorsque S est le spectre d'un corps, cf. <a class=\"ref\" href=\"#XII.5.4\">XII.5.4</a> <sup class=\"footnote-ref\"><a id=\"XI-fn11ref\" href=\"#XI-fn11\">11</a></sup>. J'ignore si les quotients envisagés sont affines sur S en général.</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn7",
+     "number": "7",
+     "html": "La situation a changé depuis la rédaction de ce texte, cf. XV et XIX n<sup>o</sup> 6."
+    },
+    {
+     "id": "XI-fn8",
+     "number": "8",
+     "html": "EGA IV 15.5.1 et 18.10.7."
+    },
+    {
+     "id": "XI-fn9",
+     "number": "9",
+     "html": "N.D.E. : Pour une généralisation au cas non affine, voir M. Raynaud, <em>Faisceaux amples sur les schémas en groupes et les espaces homogènes</em>, Lecture Notes Math. 119 (1970), IX.2.8."
+    },
+    {
+     "id": "XI-fn10",
+     "number": "10",
+     "html": "N.D.E. : cf. remarque <a class=\"ref\" href=\"#XII.5.7\">XII.5.7</a>. Mentionnons ici la généralisation suivante. Sans hypothèse d'affinité sur G, si H est un tore et S est localement noethérien, U est affine et lisse d'après un théorème de Raynaud (<em>loc. cit.</em>, IX.2.6 et IX.2.8). En effet, \\(G/\\underline{\\mathrm{Norm}}_G(H)\\) est un ouvert de M et le plus grand ouvert représentable de M est somme disjointe d'ouverts lisses et affines sur S."
+    },
+    {
+     "id": "XI-fn11",
+     "number": "11",
+     "html": "N.D.E. : sous l'hypothèse que G est de rang réductif localement constant."
+    }
+   ]
+  },
+  {
+   "id": "XI-6",
+   "title": "6. Sur une propriété de rigidité pour les homomorphismes de certains schémas en groupes, et la représentabilité de certains transporteurs12",
+   "blocks": [
+    {
+     "id": "XI.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XI.6\">6. Sur une propriété de rigidité pour les homomorphismes de certains schémas en groupes, et la représentabilité de certains transporteurs<sup class=\"footnote-ref\"><a id=\"XI-fn12ref\" href=\"#XI-fn12\">12</a></sup></h2>"
+    },
+    {
+     "id": "XI.6.1",
+     "type": "proposition",
+     "label": "6.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XI.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma localement noethérien, H un S-préschéma en groupes commutatif, de type fini sur S, E un ensemble d'entiers \\(&gt; 0\\), stable par multiplication, et supposons vérifiées les conditions suivantes :</p>\n  <p>a) Pour tout \\(n \\in E\\), le sous-groupe \\({}_nH = \\mathrm{Ker}(n \\cdot \\mathrm{id}_H)\\) est fini et plat sur S.</p>\n  <p>b) Pour tout \\(s \\in S\\), la famille des \\({}_nH_s\\) \\((n \\in E)\\) est schématiquement dense dans H.</p>\n  <p>Soit Y un sous-préschéma fermé de H. Alors le sous-foncteur \\(\\prod_{H/S} Y/H\\) de S (comparer <a class=\"ref\" href=\"#VIII.6\">VIII, 6</a>) est représentable par un sous-préschéma fermé T de S, et si S est noethérien, il existe un \\(n \\in E\\) tel que\n  \\[\n  (\\mathrm{x}) \\qquad \\prod_{H/S} Y/H = \\prod_{{}_nH/S} Y \\cap {}_nH/S.\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, en vertu de <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>, comme par la condition a) \\({}_nH\\) est fini et plat et a fortiori « essentiellement libre » sur S, il s'ensuit que le deuxième membre de (x) est représentable par un sous-préschéma fermé \\(T_n\\) de T. Bien entendu, pour \\(n \\in E\\), E ordonné par divisibilité, les \\(T_n\\) forment une famille décroissante de sous-préschémas fermés de S, donc si S est noethérien (ce que nous pouvons supposer) elle est stationnaire pour n grand. Soit T la valeur de \\(T_n\\) pour n grand, je dis que T représente bien le premier membre de (x), ce qui achèvera la démonstration. On est ramené à prouver que si \\(S'\\) est un préschéma sur S tel que \\((Y \\cap {}_nH)_{S'} = ({}_nH)_{S'}\\) pour tout \\(n \\in E\\), i.e. tel que \\(Y_{S'} \\supset {}_nH_{S'}\\) pour tout \\(n \\in E\\), alors \\(Y_{S'} = H_{S'}\\). Or c'est bien le cas, car en vertu de <a class=\"ref\" href=\"#IX.4.4\">IX 4.4</a> la famille des \\({}_nH_{S'}\\) est schématiquement dense dans \\(H_{S'}\\), compte tenu des conditions a) et b).</p>"
+    },
+    {
+     "id": "XI.6.2",
+     "type": "theoreme",
+     "label": "6.2",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\"><p>Soient S un préschéma, H, E comme dans <a class=\"ref\" href=\"#XI.6.1\">6.1</a> satisfaisant les conditions a), b), \\(u : H \\to G\\) un homomorphisme de S-groupes de H dans un S-préschéma en groupes localement de type fini sur S, enfin K un sous-préschéma en groupes fermé de H. Considérons le sous-foncteur \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) de G (cf. <a class=\"ref\" href=\"#XI.2.5\">2.5</a>). Alors ce dernier est représentable par un sous-préschéma fermé de G, et si G est noethérien (par exemple S noethérien et G de type fini sur S), il existe un entier \\(n \\in E\\) tel que \\(\\underline{\\mathrm{Transp}}_G(u, K) = \\underline{\\mathrm{Transp}}_G(u|_{{}_nH}, K)\\). Si enfin G est lisse sur S, et K lisse sur S ou de type multiplicatif, et si H, E satisfont à la condition suivante plus forte que a) :</p>\n  <p>a') Pour tout \\(n \\in E\\), le sous-groupe \\({}_nH\\) de H est de type multiplicatif,</p>\n  <p>alors \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) est lisse sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons en effet le G-groupe \\(H_G = H \\times_S G\\), qui satisfait évidemment aux conditions de 6.1 (S remplacé par G, et H par \\(H_G\\)), et le sous-préschéma fermé Y de \\(H_G\\), image inverse de \\(K \\subset G\\) par\n\\[\nH_G = H \\underset{S}{\\times} G \\longrightarrow G\n\\]\ndéfini par \\((h, g) \\mapsto \\mathrm{int}(g) \\cdot u(h)\\). Alors \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) n'est autre que \\(\\prod_{H_G/G} Y/H_G\\) (comparer <a class=\"ref\" href=\"#VIII.6.5\">VIII, exemples 6.5 e)</a>). Donc les premières assertions résultent de 6.1, et d'ailleurs, on voit que pour tout ouvert U quasi-compact de G, il existe \\(n \\in E\\) tel que \\(\\underline{\\mathrm{Transp}}_G(u, K)\\) et \\(\\underline{\\mathrm{Transp}}_G(u|_{{}_nH}, K)\\) aient même trace sur U. Pour vérifier la dernière assertion de 6.2, on peut donc remplacer H par un \\({}_nH\\), et alors il suffit d'appliquer <a class=\"ref\" href=\"#XI.2.5\">2.5</a>, qui s'applique puisque \\({}_nH\\) est supposé de type multiplicatif sur S.</p>"
+    },
+    {
+     "id": "XI.6.3",
+     "type": "remarque",
+     "label": "6.3",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">6.3</span></div>\n  <div class=\"thm-body\"><p>La démonstration précédente n'utilise que le résultat très élémentaire <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>, et de plus (pour la dernière partie) <a class=\"ref\" href=\"#XI.2.5\">2.5</a>, c'est-à-dire, lorsque K est lisse sur S, le résultat infinitésimal <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a>, donc la nullité de la cohomologie des groupes de type multiplicatif. On notera que dans les cas les plus importants (cf. <a class=\"ref\" href=\"#XI.6.7\">6.7</a>) on peut supposer même les \\(n \\in E\\) premiers aux caractéristiques résiduelles de S, i.e. inversibles dans \\(\\mathscr{O}_S\\), donc les \\({}_nH\\) étales finis sur S, et alors le résultat cohomologique invoqué est pratiquement trivial, donc 6.2 est alors indépendant de la théorie des groupes de type multiplicatif.</p></div>\n</div>"
+    },
+    {
+     "id": "XI.6.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.4\">6.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit comme d'habitude que <a class=\"ref\" href=\"#XI.6.1\">6.1</a> s'étend au cas où on a un S-préschéma \\(S'\\) sur S (pas nécessairement localement noethérien), et un sous-préschéma fermé \\(Y'\\) de \\(H' = H_{S'}\\), pourvu que \\(Y' \\to H'\\) soit de présentation finie i.e. l'idéal définissant \\(Y'\\) de type fini : alors \\(\\prod_{H'/S'} Y'/H'\\) est représentable par un sous-préschéma fermé \\(T'\\) de \\(S'\\), tel que \\(T' \\to S'\\) soit de présentation finie, et si \\(S'\\) est quasi-compact, il existe un \\(n \\in E\\) tel que la relation analogue à (x) soit valable. Il s'ensuit aussi que le premier énoncé dans 6.2 est valable sans supposer G localement de type fini sur S, pourvu que l'immersion \\(K \\to G\\) soit de présentation finie.</p>"
+    },
+    {
+     "id": "XI.6.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.5\">6.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme annoncé dans <a class=\"ref\" href=\"#XI.5.6\">5.6</a>, le théorème <a class=\"ref\" href=\"#XI.6.2\">6.2</a> permet d'étendre aux préschémas en groupes satisfaisant a') et b) ci-dessus, certains résultats établis par une autre méthode et sous des conditions plus restrictives pour les groupes de type multiplicatif. Il en est ainsi des résultats <a class=\"ref\" href=\"#XI.5.2\">5.2</a>, du début de <a class=\"ref\" href=\"#XI.5.3\">5.3</a>, de <a class=\"ref\" href=\"#XI.5.4\">5.4</a> et les variantes bissées des résultats précédents de <a class=\"ref\" href=\"#XI.5.9\">5.9</a> et <a class=\"ref\" href=\"#XI.5.10\">5.10</a>. Il en est de même des résultats de <a class=\"ref\" href=\"#IX\">IX, N<sup>os</sup> 5 et 6</a>, à l'exclusion de <a class=\"ref\" href=\"#IX.6.8\">IX 6.8</a> (déjà faux pour un homomorphisme de schémas abéliens \\(u : H \\to G\\), sur le spectre S d'un anneau de valuation discrète à caractéristique résiduelle \\(p &gt; 0\\) : il peut en effet arriver que \\(\\mathrm{Ker}\\, u\\) ait comme fibre générique le groupe unité, et comme fibre spéciale un groupe radiciel non réduit au groupe unité).</p>"
+    },
+    {
+     "id": "XI.6.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.6\">6.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous venons de donner un exemple d'une propriété de rigidité pour les groupes de type multiplicatif qui n'est pas partagée par les schémas abéliens. Un autre exemple, extrêmement important, est dans le fait que le théorème d'existence de prolongements infinitésimaux d'homomorphismes <a class=\"ref\" href=\"#IX.3.6\">IX 3.6</a> n'est plus valable lorsque H est un schéma abélien. Ainsi, un schéma abélien \\(\\neq 0\\) sur un corps admet des variations infinitésimales non triviales, contrairement à ce qui a lieu pour un groupe de type multiplicatif, – ce qui est l'aspect infinitésimal du fait qu'il existe une « théorie des modules » (d'ailleurs loin d'être achevée) pour les variétés abéliennes, alors que la théorie des modules pour les groupes de type multiplicatif est vide. Un autre aspect « global » de cette différence infinitésimale est que si H est un schéma abélien sur S localement noethérien, et G un S-préschéma en groupes commutatif localement de type fini sur S, alors on peut montrer que \\(\\underline{\\mathrm{Hom}}_{S\\text{-gr}}(H, G)\\) est représentable par un préschéma localement de type fini sur S, mais contrairement à ce qui se passe pour H de type multiplicatif, ce préschéma <em>n'est pas étale sur S</em>, mais seulement non ramifié sur S. Ainsi, si S est par exemple le spectre d'un anneau de valuation discrète complet, H et G des schémas abéliens sur S, il peut exister des homomorphismes \\(H_0 \\to G_0\\) sur les fibres spéciales qui ne proviennent pas « par spécialisation » d'un homomorphisme sur les fibres génériques.</p>"
+    },
+    {
+     "id": "XI.6.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XI.6.7\">6.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le théorème <a class=\"ref\" href=\"#XI.6.2\">6.2</a> s'applique chaque fois que H est un schéma abélien sur S, ou plus généralement une extension d'un tel schéma par un tore. En effet, la question étant locale sur S, on peut supposer qu'il existe un nombre premier \\(\\ell\\) premier aux caractéristiques résiduelles de S, et on voit qu'il suffit alors de prendre pour E l'ensemble des puissances de \\(\\ell\\) pour satisfaire aux conditions a') et b).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un raisonnement analogue à celui de <a class=\"ref\" href=\"#XI.6.1\">6.1</a> nous donne le</p>"
+    },
+    {
+     "id": "XI.6.8",
+     "type": "theoreme",
+     "label": "6.8",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"XI.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">6.8</span></div>\n  <div class=\"thm-body\"><p>Soit X un préschéma lisse sur S, à fibres géométriques connexes non vides. Alors pour tout sous-préschéma fermé Y de X, le foncteur \\(\\prod_{X/S} Y/X\\) est représentable par un sous-préschéma fermé T de S. Si Y est de présentation finie sur X, alors T est de présentation finie sur S.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(f : X \\to S\\) est fidèlement plat localement de présentation finie, il est couvrant pour la topologie fpqc. Comme d'autre part \\(T = \\prod_{X/S} Y/X\\) est évidemment un sous-<em>faisceau</em> de S (pour la topologie fpqc), il s'ensuit que la question de la représentabilité de T par un sous-préschéma fermé de S est de nature locale sur S pour la topologie fpqc, et il en est de même de la question de décider si T est de présentation finie sur S. Quitte à faire alors le changement de base \\(S' \\to S\\), avec \\(S' = X\\), on est ramené au cas où X admet une section e sur S. On peut de plus supposer S affine et a fortiori quasi-compact. On a alors :</p>"
+    },
+    {
+     "id": "XI.6.9",
+     "type": "corollaire",
+     "label": "6.9",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.6.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.9</span></div>\n  <div class=\"thm-body\"><p>Sous les conditions de <a class=\"ref\" href=\"#XI.6.8\">6.8</a>, supposons que S soit quasi-compact et que X admette une section e sur S. Soit, pour tout entier \\(n \\geqslant 0\\), \\(X_n\\) le sous-préschéma de X, voisinage infinitésimal d'ordre n de la section e. Supposons Y de présentation finie sur X. Alors il existe un entier \\(n \\geqslant 0\\) tel que l'on ait \\(\\prod_{X/S} Y/X = \\prod_{X_n/S} Y_n/X_n\\) (où \\(Y_n = Y \\cap X_n\\)).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce corollaire implique bien 6.8 lorsque Y est de présentation finie sur X, grâce à <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a>, car X étant lisse sur S, \\(X_n\\) est fini et localement libre sur S et a fortiori est « essentiellement libre » sur S au sens de <a class=\"ref\" href=\"#VIII.6.1\">VIII 6.1</a>, donc \\(\\prod_{X_n/S} Y_n/X_n\\) est représentable par un sous-préschéma fermé de S. De plus, la démonstration de <em>loc. cit.</em>, ou la réduction au cas noethérien, nous montre immédiatement que ledit sous-préschéma fermé de S est de présentation finie sur S.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prouvons d'abord 6.9 donc 6.8 lorsque S est <em>noethérien</em>. Soit \\(T_n = \\prod_{X_n/S} Y_n/X_n\\), alors les \\(T_n\\) forment une suite décroissante de sous-préschémas fermés de S, et S étant noethérien, cette suite est stationnaire. Soit \\(R = \\bigcap_{n \\geqslant 0} \\prod_{X_n/S} Y_n/X_n\\) leur valeur commune pour n grand, on a évidemment \\(T \\subset R\\), et il suffit d'établir que l'on a \\(R \\subset T\\). Quitte à faire le changement de base \\(R \\to S\\), on est ramené au cas où \\(R = S\\), i.e. \\(Y_n = X_n\\) pour tout n i.e. \\(Y \\supset X_n\\) pour tout n, et à prouver alors \\(T = S\\) i.e. \\(Y = X\\). Or \\(Y \\supset X_n\\) pour tout n implique (grâce au fait que X est localement noethérien) que Y est, au voisinage de chaque point de \\(e(S)\\), un sous-préschéma ouvert induit de X, donc il existe un ouvert induit U de X, contenant \\(e(S)\\), tel que \\(U \\subset Y\\). En vertu de <a class=\"ref\" href=\"#IX.4.3\">IX 4.3</a>, les fibres de \\(X/S\\) étant intègres, U est schématiquement dense dans X, donc (Y étant un sous-préschéma fermé majorant U) on a \\(Y = X\\). Cela prouve 6.9 donc 6.8 dans ce cas.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le cas général procède par réduction au cas précédent. Pour tout \\(s \\in S\\), il existe un voisinage ouvert affine U de s et un voisinage ouvert affine V de \\(e(s)\\) tel que \\(f(V) \\subset U\\). Alors \\(f(V)\\) est un voisinage ouvert de s contenu dans U, et si \\(S'\\) est un voisinage ouvert affine de s contenu dans \\(e^{-1}(V) \\cap f(V)\\), et \\(X' = V \\cap f^{-1}(S')\\), alors \\(X'\\) et \\(S'\\) sont des ouverts affines de X resp. S, et \\(X'/S'\\) admet une section. À cause de la nature locale de 6.8 et 6.9 on peut supposer \\(S = S'\\). Je dis qu'alors on a \\(\\prod_{X/S} Y/X = \\prod_{X'/S} Y'/X'\\), où \\(Y' = Y \\cap X'\\) ; en effet, en vertu de <a class=\"ref\" href=\"#IX.4.6\">IX 4.6</a>, \\(X'\\) est schématiquement dense dans X (du moins lorsque X est quasi-séparé sur S donc \\(X'\\) est rétrocompact dans X ; mais en fait on peut montrer sans difficulté que IX 4.6 reste valable sans l'hypothèse de rétrocompacité), et de même pour tout changement de base \\(S_1 \\to S\\), \\(X' \\times_S S_1\\) est schématiquement dense dans \\(X \\times_S S_1\\), d'où aussitôt l'égalité annoncée. Cela nous ramène au cas où \\(X = X'\\), donc on peut supposer S et X affines.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De plus, si \\(X = \\mathrm{Spec}(B)\\) et si J est l'idéal de B qui définit Y, J est limite inductive de ses sous-idéaux de type fini, donc Y est intersection de sous-préschémas fermés \\(Y_i\\) de X qui sont de présentation finie sur S, et par suite \\(\\prod_{X/S} Y/X = \\bigcap_i \\prod_{X/S} Y_i/X\\), ce qui nous ramène, pour prouver 6.8, au cas où Y est de présentation finie sur X. Il suffit alors de prouver 6.9 avec S et X affines. Mais alors X et Y sur S proviennent par changement de base \\(S \\to S_0\\) d'une situation analogue \\(X_0\\) et \\(Y_0\\) sur \\(S_0\\), avec \\(S_0\\) noethérien, ce qui nous ramène au cas où S et noethérien, qui a déjà été traité. Cela achève la démonstration de 6.8 et 6.9.</p>"
+    },
+    {
+     "id": "XI.6.10",
+     "type": "corollaire",
+     "label": "6.10",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.6.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.10</span></div>\n  <div class=\"thm-body\"><p>Soient X un S-préschéma en groupes lisse de présentation finie, à fibres connexes, Y un préschéma en groupes de présentation finie sur S, \\(i : Y \\to X\\) un monomorphisme de S-préschémas en groupes, faisant donc de Y un sous-groupe de X. Alors \\(\\prod_{X/S} Y/X\\) est représentable par un sous-préschéma fermé de présentation finie de S. Si S est quasi-compact, désignant pour tout entier \\(n \\geqslant 0\\) par \\(X_n\\) le voisinage infinitésimal d'ordre n de la section unité de X, et posant \\(Y_n = X_n \\cap Y\\), on a pour n assez grand : \\(\\prod_{X/S} Y/X = \\prod_{X_n/S} Y_n/X_n\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration est essentiellement celle de <a class=\"ref\" href=\"#XI.6.9\">6.9</a>. Notons que les sections unité de X et de Y induisent des immersions bijectives \\(S \\to X_n\\) et \\(S \\to Y_n\\), induisant donc des isomorphismes de \\(S_{\\mathrm{réd}}\\) avec \\((X_n)_{\\mathrm{réd}}\\) et \\((Y_n)_{\\mathrm{réd}}\\), ce qui implique que l'injection \\(Y_n \\to X_n\\) est <em>propre</em>, donc, étant un monomorphisme de présentation finie, est une immersion fermée. Par suite, en vertu de <a class=\"ref\" href=\"#VIII.6.4\">VIII 6.4</a> déjà utilisé, \\(\\prod_{X_n/S} Y_n/X_n\\) est représentable par un sous-préschéma fermé de S de présentation finie sur S, et il reste donc à prouver la dernière assertion de 6.10 dans le cas où on suppose de plus S affine. On se réduit immédiatement encore au cas où S est noethérien, et on est ramené à prouver qu'alors on a \\(R = T\\) (avec les notations de la démonstration de 6.9), ou encore que \\(Y \\supset X_n\\) pour tout n implique \\(Y = X\\). Or l'hypothèse implique que \\(i : Y \\to X\\) est étale en les points de la section unité de Y sur S, donc Y est lisse sur S en les points de la section unité, d'où il résulte que l'ouvert \\(Y'\\) des points de Y en lesquels Y est lisse sur S est un sous-groupe ouvert induit de Y. Alors \\(Y' \\to X\\) est un monomorphisme étale en vertu de <a class=\"ref\" href=\"#X.3.5\">X 3.5</a> donc une immersion ouverte, or les fibres de X étant connexes et tout sous-groupe ouvert d'un groupe algébrique étant aussi fermé, il s'ensuit que c'est une immersion ouverte surjective i.e. un isomorphisme. Donc \\(Y' = X\\) et a fortiori \\(Y = X\\), ce qui achève la démonstration de 6.10.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Procédant comme dans <a class=\"ref\" href=\"#VIII.6.5\">VIII 6.5</a>, on conclut de 6.10 :</p>"
+    },
+    {
+     "id": "XI.6.11",
+     "type": "corollaire",
+     "label": "6.11",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"XI.6.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">6.11</span></div>\n  <div class=\"thm-body\"><p>Soient G un S-préschéma en groupes localement de type fini et quasi-séparé sur S, H un préschéma en groupes lisse de présentation finie sur S à fibres connexes, \\(i : H \\to G\\) un monomorphisme de S-groupes, faisant donc de H un sous-groupe de G. Alors :</p>\n  <p>a) \\(\\underline{\\mathrm{Centr}}_G(H)\\) et \\(\\underline{\\mathrm{Norm}}_G(H)\\) sont représentables par des sous-préschémas fermés de G de présentation finie sur G, et de même, pour tout monomorphisme \\(j : K \\to G\\) de présentation finie de S-préschémas en groupes, \\(\\underline{\\mathrm{Transp}}_G(H, K)\\) est représentable par un sous-préschéma fermé de G de présentation finie sur G.</p>\n  <p>b) Si G est quasi-compact, dans les divers cas envisagés dans a), il existe un entier \\(n \\geqslant 0\\) tel que (si \\(H_n\\) désigne le voisinage infinitésimal d'ordre n de la section unité de H) on ait\n  \\[\n  \\begin{aligned}\n  \\underline{\\mathrm{Centr}}_G(H) &amp;= \\underline{\\mathrm{Centr}}_G(H_n) \\\\\n  \\underline{\\mathrm{Norm}}_G(H) &amp;= \\underline{\\mathrm{Norm}}_G(H_n) \\\\\n  \\underline{\\mathrm{Transp}}_G(H, K) &amp;= \\underline{\\mathrm{Transp}}_G(H_n, K) = \\underline{\\mathrm{Transp}}_G(H_n, K_n).\n  \\end{aligned}\n  \\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On applique <a class=\"ref\" href=\"#XI.6.10\">6.10</a> au préschéma en groupes \\(X = H_G = H \\times_S G\\) au-dessus du préschéma de base G, et au sous-préschéma en groupes Y image inverse du sous-groupe diagonal de \\((G \\times_S G)_G\\) sur G par un homomorphisme de G-groupes convenable de X dans \\((G \\times_S G)_G\\) (dans le cas de Centr), resp. l'image inverse de \\(K_G\\) par un homomorphisme de G-groupes convenable de X dans \\(G_G\\) (dans le cas de Transp). Le cas de Norm se ramène au transporteur en faisant \\(K = H\\), l'hypothèse sur G assurant que \\(H \\to G\\) est de présentation finie, (donc \\(Y \\to X\\) est de présentation finie) ; dans le cas de Centr, l'hypothèse faite sur G assure que le groupe diagonal de \\(G \\times_S G\\) est de présentation finie sur \\(G \\times_S G\\), d'où encore le fait que Y est de présentation finie sur X.</p>"
+    },
+    {
+     "id": "XI.6.12",
+     "type": "remarque",
+     "label": "6.12",
+     "title": "Remarque",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"XI.6.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarque</span> <span class=\"thm-num\">6.12</span></div>\n  <div class=\"thm-body\"><p>On peut prouver (utilisant des résultats assez délicats de EGA VI <sup class=\"footnote-ref\"><a id=\"XI-fn13ref\" href=\"#XI-fn13\">13</a></sup>) que si X est un préschéma plat de présentation finie sur S, qui est <em>propre</em> sur S ou à fibres géométriques <em>connexes non vides</em>, alors pour tout sous-préschéma fermé Y de X de présentation finie sur S, \\(\\prod_{X/S} Y/X\\) est représentable par un sous-préschéma fermé de S de présentation finie sur S. De même, si X est un S-préschéma en groupes plat de présentation finie à fibres connexes, et \\(i : Y \\to X\\) un monomorphisme de S-groupes, avec Y un S-préschéma en groupes de présentation finie, alors \\(\\prod_{X/S} Y/X\\) est représentable par un sous-préschéma fermé de S de présentation finie sur S. En particulier, 6.11 a) reste valable en remplaçant l'hypothèse « H lisse sur S » par « H plat sur S ».</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XI-fn12",
+     "number": "12",
+     "html": "Le présent Numéro n'utilise pas les résultats des N<sup>os</sup> 3, 4, 5 ; sa place naturelle serait dans VI<sub>B</sub>."
+    },
+    {
+     "id": "XI-fn13",
+     "number": "13",
+     "html": "cf. aussi J.P. Murre, <em>Representation of unramified functors. Applications</em>, Sém. Bourbaki N<sup>o</sup> 294 (Mai 1965), th. 3 (p. 13)."
+    }
+   ]
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. Grothendieck"
+}

@@ -1,0 +1,3355 @@
+{
+ "chapter_id": "14",
+ "title": "COMPARAISON AVEC LA THÉORIE TRANSCENDANTE",
+ "number": "XIV",
+ "pages": [
+  {
+   "id": "14",
+   "title": "COMPARAISON AVEC LA THÉORIE TRANSCENDANTE",
+   "blocks": [
+    {
+     "id": "14",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"14\">EXPOSÉ XIV<br><u>COMPARAISON AVEC LA THÉORIE TRANSCENDANTE</u><span class=\"author\"><u>par P. Deligne</u></span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-s2",
+   "title": "Sommaire",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>Sommaire</h2>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"toc\">\n<div class=\"toc-row\"><span>Introduction</span><span>1</span></div>\n<div class=\"toc-row\"><span>§ 1.   Formalisme transcendant des cycles évanescents</span><span>1</span></div>\n<div class=\"toc-row toc-sub\"><span>1.1 Le groupe fondamental du disque épointé : conventions de signes</span><span>2</span></div>\n<div class=\"toc-row toc-sub\"><span>1.2 Faisceaux d'ensembles</span><span>5</span></div>\n<div class=\"toc-row toc-sub\"><span>1.3 Le foncteur \\(R\\Psi\\)</span><span>10</span></div>\n<div class=\"toc-row toc-sub\"><span>1.4 Un cas particulier</span><span>12</span></div>\n<div class=\"toc-row\"><span>§ 2.   Le théorème de comparaison</span><span>16</span></div>\n<div class=\"toc-row\"><span>§ 3.   Singularités isolées</span><span>20</span></div>\n<div class=\"toc-row toc-sub\"><span>3.1 La variété des cycles évanescents</span><span>20</span></div>\n<div class=\"toc-row toc-sub\"><span>3.2 La formule de Picard-Lefschetz (cas transcendant)</span><span>31</span></div>\n<div class=\"toc-row\"><span>§ 4.   Cohomologie de De Rham</span><span>38</span></div>\n</div>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-0",
+   "title": "Introduction",
+   "blocks": [
+    {
+     "id": "14.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"14.0\"><u>Introduction</u></h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour comparer la théorie des cycles évanescents de l'exposé XIII avec son analogue transcendant, sur \\(\\mathbb C\\), nous procéderons en deux étapes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Nous donnerons un formalisme transcendant calqué sur le formalisme de l'exposé XIII, et démontrerons un théorème de comparaison par les méthodes habituelles (déjà utilisées pour prouver le théorème de finitude en XIII 2.3).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Dans le cas de singularités isolées, nous expliciterons en termes plus concrets ce que signifie le formalisme transcendant introduit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Outre le théorème de comparaison, cet exposé contient une démonstration de la formule de Picard-Lefschetz (cas transcendant).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Au § 4, nous donnons un résultat préliminaire à la théorie de Hodge des cycles évanescents. Ce paragraphe ne servira pas dans la suite du séminaire.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-1",
+   "title": "§ 1 Formalisme transcendant des cycles évanescents",
+   "blocks": [
+    {
+     "id": "14.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"14.1\">§ 1 Formalisme transcendant des cycles évanescents</h2>"
+    },
+    {
+     "id": "14.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"14.1.1\">1.1. <u>Le groupe fondamental du disque épointé : conventions de signes.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous aurons à considérer des disques épointés \\(D^*\\), et leur groupe fondamental \\(\\mathbb Z\\). Ce groupe étant abélien, des ambiguïtés de signes risquent d'apparaître. On les élimine en oubliant qu'il l'est.</p>"
+    },
+    {
+     "id": "14.1.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.1\"><strong>1.1.1.</strong> Pour \\(X\\) un bon espace topologique connexe et \\(x\\in X\\), le groupe fondamental a pour éléments les classes d'homotopie de lacets issus de \\(x\\) ; si \\(\\alpha,\\beta\\in\\pi_1(X,x)\\) sont représentés par des lacets \\(a,b\\) alors \\(\\alpha\\beta\\) est représenté par le lacet obtenu en faisant suivre \\(b\\) par \\(a\\).</p>"
+    },
+    {
+     "id": "14.1.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.2\"><strong>1.1.2.</strong> Soit \\(F\\) un faisceau localement constant sur \\(X\\). Pour tout chemin \\(a:[0,1]\\to X\\), l'image réciproque \\(a^*F\\) de \\(F\\) sur \\([0,1]\\) est un faisceau localement constant, donc constant, d'où une bijection</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\na:F_{a(0)}\\mathop{\\longleftarrow}\\limits^\\sim H^0([0,1],a^*F)\\mathop{\\longrightarrow}\\limits^\\sim F_{a(1)},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui ne dépend que de la classe d'homotopie de \\(a\\). Par cette construction, \\(\\pi_1(X,x)\\) agit (à gauche) sur \\(F_x\\). Le foncteur \\(F\\mapsto F_x\\) est une équivalence de la catégorie des faisceaux localement constants sur \\(X\\) avec celle des ensembles munis d'une action de \\(\\pi_1(X,x)\\).</p>"
+    },
+    {
+     "id": "14.1.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.3\"><strong>1.1.3.</strong> Les \\(\\pi_1(X,x)\\) pour \\(x\\) variable sont les fibres d'un faisceau en groupes localement constant \\(\\pi_1(X)\\) qui agit sur tout faisceau localement constant \\(F\\). Si \\(\\pi_1(X,x)\\) est abélien, \\(\\pi_1(X)\\) est constant, de valeur notée \\(\\pi_1(X)\\).</p>"
+    },
+    {
+     "id": "14.1.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.4\"><strong>1.1.4.</strong> Le groupe \\(\\pi_1(X,x)\\) agit sur le revêtement universel \\(p:(\\widetilde X,\\widetilde x)\\to(X,x)\\) de \\((X,x)\\) : si on regarde ce revêtement comme un espace étalé, donc un faisceau, sur \\(X\\) (le faisceau de ses sections locales), il correspond par 1.1.2 à \\(\\pi_1(X,x)\\), muni de \\(e\\), sur lequel \\(\\pi_1(X,x)\\) agit par translation à gauche ; le groupe \\(\\pi_1(X,x)\\) agit sur ce \\(\\pi_1\\)-ensemble (par automorphismes de \\(\\pi_1\\)-ensembles) : \\(\\sigma\\in\\pi_1(X,x)\\) agit par \\(x\\mapsto x\\sigma^{-1}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette construction identifie \\(\\pi_1(X,x)\\) à \\(\\operatorname{Aut}_X(\\widetilde X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(F\\) est localement constant sur \\(X\\), la bijection</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.4.1}H^0(\\widetilde X,p^*F)\\longrightarrow(p^*F)_{\\widetilde x}=F_x\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>commute à l'action de \\(\\pi_1(X,x)\\), agissant sur le membre de gauche par transport de structure, via son action sur \\(\\widetilde X\\), et sur le membre de droite par 1.1.2. L'équivalence 1.1.2 peut se reformuler en disant que \\(F\\mapsto(\\widetilde X\\mapsto H^0(\\widetilde X,p^*F))\\) est une équivalence de la catégorie des faisceaux localement constants sur \\(X\\) avec celle des foncteurs</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\text{revêtements universels de }X)\\longrightarrow(\\mathrm{Ens}).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.1.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.5\"><strong>1.1.5.</strong> Si \\(\\pi_1(X,x)\\) est abélien, donc indépendant de \\(x\\), l'action 1.1.4 de \\(\\pi_1(X)\\) sur \\(\\widetilde X\\) ne dépend pas du point base : \\(\\pi_1(X)\\) agit sur tout revêtement universel \\(\\widetilde X\\) de \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On prendra garde que cette action (qui sera seule considérée) correspond à l'inverse de l'action 1.1.3.</p>"
+    },
+    {
+     "id": "14.1.1.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.6\"><strong>1.1.6.</strong> Soit \\(D\\) un disque, i.e. un espace topologique homéomorphe au disque standard \\(\\{z\\in\\mathbb C\\mid |z|&lt;1\\}\\). Soient \\(0\\in D\\) et \\(D^*=D-\\{0\\}\\). Supposons \\(D\\) muni d'une structure de variété analytique, donc orienté. Le groupe fondamental \\(\\pi_1(D^*)\\) est alors canoniquement isomorphe à \\(\\mathbb Z\\) : pour le disque standard, \\(0=0\\) et \\(t\\in D^*\\), on prend pour générateur positif de \\(\\pi_1(D^*,t)\\) le lacet \\(x\\mapsto\\exp(2\\pi i x)t\\).</p>"
+    },
+    {
+     "id": "14.1.1.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.7\"><strong>1.1.7.</strong> Soit \\(z:D\\to\\mathbb C\\) une uniformisante (\\((dz)_0\\ne0\\)). Soit \\(\\widetilde D^*\\) un revêtement universel de \\(D^*\\). On note \\(\\log z\\) une quelconque fonction sur \\(\\widetilde D^*\\) telle que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\exp(\\log z)=z.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On pose, pour \\(\\alpha\\in\\mathbb C\\), \\(z^\\alpha=\\exp(\\alpha\\log z)\\). Si \\(T\\) est le générateur positif de \\(\\pi_1(D^*)\\), agissant sur \\(\\widetilde D^*\\) par 1.1.5 et sur les fonctions sur \\(\\widetilde D^*\\) par transport de structure, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.7.1}T\\log(z)=\\log(z)+2\\pi i\n\\]\n\\[\n\\tag{1.1.7.2}Tz^\\alpha=\\exp(2\\pi i\\alpha)z^\\alpha.\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.1.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.8\"><strong>1.1.8.</strong> Soit \\(D\\) un disque, \\(0\\in D\\) et \\(D^*=D-\\{0\\}\\). Pour \\(D'\\subset D\\) un disque plus petit, avec \\(0\\in D'\\), la restriction à \\(D'^*\\) est une équivalence de la catégorie des faisceaux localement constants sur \\(D^*\\) avec celle des faisceaux localement constants sur \\(D'^*\\). Pour \\(t\\in D'^*\\), on a en effet \\(\\pi_1(D'^*,t)\\mathop{\\longrightarrow}\\limits^\\sim\\pi_1(D^*,t)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons que \\(D\\) soit muni d'une structure de variété différentiable, soient \\(T\\) l'espace tangent à \\(D\\) en \\(0\\), et \\(T^*=T-\\{0\\}\\). Pour \\(D'\\subset D\\) comme plus haut, et \\(f:D'\\lhook\\joinrel\\longrightarrow T\\) avec \\(f(0)=0\\) et \\((df)_0=\\operatorname{Id}\\), le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\text{restriction à }D')^{-1}\\circ f^*\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est une équivalence \\([f]\\) de la catégorie des faisceaux localement constants sur \\(T^*\\) avec celle des faisceaux localement constants sur \\(D^*\\). À isomorphisme canonique près, elle ne dépend que du germe de \\(f\\) en \\(0\\), ce germe vérifiant \\((df)_0=\\operatorname{Id}\\). Un chemin d'un tel germe à un autre définit un isomorphisme d'équivalences et deux chemins homotopes le même isomorphisme ; l'ensemble des germes considéré étant contractile (rétraction sur \\(f_0:(1-\\lambda)f_0+\\lambda f\\)), on obtient une équivalence, bien définie à isomorphisme unique près, de la catégorie des faisceaux localement constants sur \\(T^*\\) avec celle des faisceaux localement constants sur \\(D^*\\).</p>"
+    },
+    {
+     "id": "14.1.1.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.9\"><strong>1.1.9.</strong> Pour \\(D\\) un disque, \\(0\\in D\\), \\(D^*=D-\\{0\\}\\) et \\(p:\\widetilde D^*\\to D^*\\) un revêtement universel de \\(D^*\\), nous noterons \\(p:\\widetilde D\\to D\\) l'espace topologique sur \\(D\\) déduit de \\(\\widetilde D^*\\) par adjonction d'un point \\(0\\), de sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">a)</span> \\(\\widetilde D^*\\) est ouvert dans \\(\\widetilde D\\) ;</li>\n<li><span class=\"item-label\">b)</span> \\(p:\\widetilde D\\to D\\) prolonge \\(p:\\widetilde D^*\\to D^*\\) et \\(p(0)=0\\) ;</li>\n<li><span class=\"item-label\">c)</span> les \\(p^{-1}(U)\\), pour \\(U\\) voisinage de \\(0\\) dans \\(D\\), formant un système fondamental de voisinages de \\(0\\) dans \\(\\widetilde D\\).</li>\n</ol>"
+    },
+    {
+     "id": "14.1.1.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.10\"><strong>1.1.10.</strong> Soient \\(X\\) une courbe algébrique complexe non singulière, \\(0\\in X\\) et \\(D\\) un disque voisinage de \\(0\\) dans \\(X\\). L'anneau des germes en \\(0\\) des fonctions holomorphes sur \\(D\\), algébriques sur le corps \\(K(X)\\) des fonctions rationnelles sur \\(X\\), est l'hensélisé \\(\\mathcal O_0^h\\) de l'anneau local \\(\\mathcal O_0\\) de \\(X\\) en \\(0\\). Soit \\(\\widetilde D^*\\) un revêtement universel de \\(D^*=D-\\{0\\}\\). Le corps des germes en \\(0\\in\\widetilde D\\) de fonctions méromorphes sur \\(\\widetilde D^*\\), algébriques sur \\(K(X)\\), est une clôture algébrique \\(\\overline K\\) de \\(K(X)\\) (et donc du corps des fractions \\(K_0^h\\) de \\(\\mathcal O_0^h\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le groupe \\(\\pi_1(D^*)\\) des \\(D\\)-automorphismes de \\(\\widetilde D^*\\) (1.1.5) agit par transport de structure sur \\(\\overline K\\), d'où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.1.10.1}\\xymatrix@C=4em@R=3em{{\\pi_1(D^*)}\\ar[r]\\ar@{=}[d]&amp;{\\operatorname{Gal}(\\overline K/K_0^h)}\\ar@{=}[d]\\\\\\mathbb Z\\ar[r]&amp;{\\widehat{\\mathbb Z}(1)}}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de (1.1.7.2) que ce diagramme commute avec l'inclusion naturelle (sur \\(\\mathbb C\\)) de \\(\\mathbb Z\\) dans \\(\\widehat{\\mathbb Z}(1)\\), composée de l'inclusion de \\(\\mathbb Z\\lhook\\joinrel\\longrightarrow\\widehat{\\mathbb Z}\\) et de l'isomorphisme \\(\\widehat{\\mathbb Z}\\mathop{\\longrightarrow}\\limits^\\sim\\widehat{\\mathbb Z}(1)\\), limite projective des isomorphismes \\(\\exp(\\frac{2\\pi i}{n}k):\\mathbb Z/n\\to\\mu_n\\).</p>"
+    },
+    {
+     "id": "14.1.1.11",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.1.11\"><strong>1.1.11.</strong> Chaque faisceau \\(F\\) sur \\(\\operatorname{Spec}(K_0^h)\\) définit un faisceau localement constant sur \\(D^*\\) : on utilise l'équivalence 1.1.4 et, à chaque revêtement universel \\(\\widetilde D^*\\) de \\(D^*\\), on associe \\(F_{\\overline K}\\) pour le \\(\\overline K\\) construit en 1.1.10.</p>"
+    },
+    {
+     "id": "14.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"14.1.2\">1.2. <u>Faisceaux d'ensembles.</u></h3>"
+    },
+    {
+     "id": "14.1.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.1\"><strong>1.2.1.</strong> Soient \\(D\\) un disque (1.1.6), \\(0\\in D\\) et \\(D^*=D-\\{0\\}\\). Nous noterons \\(\\mathscr D^*\\) le topos des faisceaux d'ensembles localement constants sur \\(D^*\\). D'après 1.1.8, ce topos ne « change » pas si on remplace \\(D\\) par un disque plus petit \\(D'\\), contenant \\(0\\), ni, pour \\(D\\) muni d'une structure de variété différentiable, si on remplace \\(D\\) par son espace tangent en \\(0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(t\\in D^*\\), le foncteur \\(F\\longmapsto F_t\\) identifie ce topos au topos des ensembles munis d'une action de \\(\\pi_1(D^*)\\) (1.1.2). D'après (1.1.4), le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF\\longmapsto(\\widetilde D^*\\longmapsto H^0(\\widetilde D^*,p^*F))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>l'identifie au topos des foncteurs</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\text{revêtements universels de }D^*)\\longrightarrow(\\mathrm{Ens}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et ces identifications sont reliées par 1.1.4.1.</p>"
+    },
+    {
+     "id": "14.1.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.2\"><strong>1.2.2.</strong> Soit \\(F\\) un faisceau sur \\(D\\), dont la restriction à \\(D^*\\) soit localement constante. Il existe un et un seul morphisme de faisceaux \\(F_0\\xrightarrow{\\alpha}F\\) qui soit l'identité en \\(0\\). Comme expliqué en XIII 0.1 (pour \\(X=(P^1_t)\\)), le foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF\\longmapsto(F_0,F\\text{ restreint à }D^*,\\alpha)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>identifie ces faisceaux aux triples formés d'un ensemble \\(F_0\\), d'un faisceau localement constant \\(F_\\eta\\) sur \\(D^*\\) et de \\(\\alpha\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\text{faisceau constant de valeur }F_0\\text{ sur }D^*)\\longrightarrow(\\text{faisceau }F_\\eta).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.3\"><strong>1.2.3.</strong> Nous noterons \\(\\mathscr D\\) le topos des faisceaux d'ensembles sur \\(D\\) dont la restriction à \\(D^*\\) est localement constante. L'inclusion de \\(\\mathscr D\\) dans les faisceaux sur \\(D\\) est le morphisme image inverse d'un morphisme de topos \\(D\\to\\mathscr D\\) qui s'insère dans un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=3.5em@R=3em{\n\\{0\\}\\ar@{^{(}-&gt;}[r]\\ar@{=}[d]&amp;D\\ar@{_{(}-&gt;}[l]\\ar[d]^{\\beta}&amp;D^*\\ar@{_{(}-&gt;}[l]\\ar[d]^{\\beta}\\\\\n\\{0\\}\\ar@{^{(}-&gt;}[r]&amp;\\mathscr D\\ar@{_{(}-&gt;}[l]&amp;\\mathscr D^*\\ar@{_{(}-&gt;}[l]\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme en 1.1.1, on vérifie que ce topos ne change pas quand on remplace \\(D\\) par un disque plus petit ou par l'espace tangent à \\(D\\) en \\(0\\).</p>"
+    },
+    {
+     "id": "14.1.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.4\"><strong>1.2.4.</strong> Soit \\(Y\\) un espace topologique. Le topos produit \\(Y\\times\\mathscr D\\) admet les trois descriptions suivantes (pour leur équivalence, voir XIII 0.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">a)</span> \\(Y\\times\\mathscr D\\) est le topos des faisceaux \\(F\\) sur \\(Y\\times D\\) vérifiant<br>\n(*) \\(D^*\\) est recouvert par des ouverts \\(U\\) tels que \\(F|Y\\times U\\) soit image réciproque d'un faisceau sur \\(Y\\).</li>\n<li><span class=\"item-label\">b)</span> Soit \\(t\\in D^*\\). Le topos \\(Y\\times\\mathscr D\\) est le topos des triples \\((F_0,F_t,\\alpha)\\) où<br>\n\\(\\alpha)\\) \\(F_0\\) est un faisceau sur \\(Y\\) ;<br>\n\\(\\beta)\\) \\(F_t\\) est un faisceau sur \\(Y\\), muni d'une action de \\(\\pi_1(D^*)\\) ;<br>\n\\(\\gamma)\\) \\(\\alpha\\) est un morphisme de \\(F_0\\) dans \\(F_t\\), d'image contenue dans les invariants.</li>\n<li><span class=\"item-label\">c)</span> Le topos \\(Y\\times\\mathscr D\\) est le topos des triples \\((F_0,F_\\eta,\\alpha)\\) où<br>\n\\(\\alpha')\\) \\(F_0\\) est un faisceau sur \\(Y\\) ;<br>\n\\(\\beta')\\) \\(F_\\eta\\) est un foncteur, de valeurs notées \\(F_{\\widetilde\\eta}\\),<br>\n\\[\n(\\text{revêtements universels de }D^*)\\longrightarrow(\\text{faisceaux sur }Y) ;\n\\]\n\\(\\gamma')\\) \\(\\alpha\\) est un morphisme de \\(F_0\\) (le foncteur constant de valeur \\(F_0\\) des revêtements universels de \\(D^*\\) dans les faisceaux sur \\(Y\\)) dans \\(F_\\eta\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Peu nous chaut, d'ailleurs, que ce topos soit vraiment le topos produit de \\(Y\\) et \\(\\mathscr D\\). On définit de même \\(Y\\times\\mathscr D^*\\) comme étant au choix</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">a*)</span> le topos des faisceaux sur \\(Y\\times D^*\\) vérifiant (*) ;</li>\n<li><span class=\"item-label\">b*)</span> (pour \\(t\\in D^*\\)) le topos des faisceaux \\(F_t\\) sur \\(Y\\), munis d'une action de \\(\\pi_1(D^*)\\) ;</li>\n<li><span class=\"item-label\">c*)</span> le topos des foncteurs\n\\[\n(\\text{revêtements universels de }D^*)\\longrightarrow(\\text{faisceaux sur }Y).\n\\]</li>\n</ol>"
+    },
+    {
+     "id": "14.1.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.5\"><strong>1.2.5.</strong> Le topos \\(Y\\times\\mathscr D\\) a les mêmes propriétés de fonctorialité en \\(Y\\) que les topos \\(Y\\mathbin{\\mathop\\times_S}S\\) de l'exposé XIII, et nous nous dispenserons d'en faire la liste. Citons simplement, pour fixer les notations, le diagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=3em@R=3em{\nY\\ar[d]&amp;Y\\ar[l]_{\\mathrm{sp}}\\ar[d]\\ar@{^{(}-&gt;}[r]^i&amp;Y\\times\\mathscr D\\ar[d]&amp;Y\\times\\mathscr D^*\\ar[d]\\ar@{_{(}-&gt;}[l]_j\\\\\n(P^1_t)&amp;\\{0\\}\\ar@{^{(}-&gt;}[r]^i&amp;\\mathscr D&amp;\\mathscr D^*\\ar@{_{(}-&gt;}[l]_j\n}\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.6\"><strong>1.2.6.</strong> Soit \\(K\\) un complexe de faisceaux abéliens sur \\(Y\\times\\mathscr D\\). On procède comme en XIII 1.4.2 pour déduire de \\(K\\) un triangle distingué dans \\(K(Y\\times\\mathscr D^*)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=5em@R=3em{&amp;\\Phi(K)\\ar[dl]\\ar[dr]&amp;\\\\\n\\mathrm{sp}^*K_0\\ar[rr]&amp;&amp;K_\\eta.}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette construction passe à la catégorie dérivée et définit un foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nD(Y\\times\\mathscr D)\\longrightarrow(\\text{triangles distingués de }D(Y\\times\\mathscr D^*)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons \\(D\\) orienté (par exemple analytique complexe) et soit \\(T\\) le générateur positif de \\(\\pi_1(D^*)\\) (1.1.6). Soit \\(K\\in\\operatorname{Ob}D(Y\\times\\mathscr D)\\). On définit comme en XIII 1.4.3 la <u>variation</u> \\(V=\\operatorname{Var}(T)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nV:\\Phi(K)\\longrightarrow K_\\eta.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'endomorphisme \\(T-\\operatorname{Id}\\) de \\(K_\\eta\\) est le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nT-\\operatorname{Id}:K_\\eta\\longrightarrow\\Phi(K)\\longrightarrow K_\\eta.\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.7\"><strong>1.2.7.</strong> Soient \\(D\\) un disque, \\(0\\in D\\), \\(D^*=D-\\{0\\}\\), \\(f:X\\to D\\) une application continue et \\(X_0=f^{-1}(0)\\). Nous nous proposons de définir un foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi:(\\text{faisceaux sur }X)\\longrightarrow(\\text{faisceaux sur }X_0\\times\\mathscr D).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\widetilde D^*\\) un revêtement universel de \\(D^*\\), \\(\\widetilde D\\) comme en 1.1.9,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\overline X=X\\mathbin{\\mathop\\times_D}\\widetilde D,\\qquad X^*=X-X_0=X\\mathbin{\\mathop\\times_D}D^*,\\qquad\n\\overline X^*=\\overline X-X_0=X\\mathbin{\\mathop\\times_D}\\widetilde D^*.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.7.1}\\xymatrix@C=3em@R=3em{\nX_0\\ar@{^{(}-&gt;}[r]^{\\bar i}\\ar@{=}[d]&amp;\\overline X\\ar@{_{(}-&gt;}[r]^{\\bar j}\\ar[d]^p&amp;\\overline X^*\\ar[d]^{p'}\\\\\nX_0\\ar@{^{(}-&gt;}[r]^i&amp;X\\ar@{_{(}-&gt;}[r]^j&amp;X^*\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>cartésien au-dessus du diagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.2.7.2}\\xymatrix@C=3em@R=3em{\n\\{0\\}\\ar@{^{(}-&gt;}[r]^{\\bar i}\\ar@{=}[d]&amp;\\widetilde D\\ar@{_{(}-&gt;}[r]^{\\bar j}\\ar[d]^p&amp;\\widetilde D^*\\ar[d]^{p'}\\\\\n\\{0\\}\\ar@{^{(}-&gt;}[r]^i&amp;D\\ar@{_{(}-&gt;}[r]^j&amp;D^*.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(F\\) un faisceau sur \\(X\\), on pose (avec les notations de 1.2.4 c))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi(F)=(i^*F,\\ \\bar i^*\\bar j_*((jp')^*F),\\ \\alpha)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\alpha:i^*F=\\bar i^*p^*F\\longrightarrow\\bar i^*\\bar j_*\\bar j^*p^*F\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est déduit, par application de \\(\\bar i^*\\), de la flèche d'adjonction \\(\\operatorname{Id}\\to\\bar j_*\\bar j^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit aussi un foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi_\\eta:(\\text{faisceaux sur }X^*)\\longrightarrow(\\text{faisceaux sur }X_0\\times\\mathscr D^*)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>par \\(\\Psi_\\eta(F)=\\bar i^*\\bar j_*(p'^*F)\\).</p>"
+    },
+    {
+     "id": "14.1.2.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.2.8\"><strong>1.2.8.</strong> Les propriétés de fonctorialité de \\(\\Psi\\) sont les mêmes que celles de son analogue étudié en XIII 1.3.5 à 1.3.9.</p>"
+    },
+    {
+     "id": "14.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"14.1.3\">1.3. <u>Le foncteur \\(R\\Psi\\).</u></h3>"
+    },
+    {
+     "id": "14.1.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.3.1\"><strong>1.3.1.</strong> Soient \\(D\\) un disque, \\(0\\in D\\), \\(D^*=D-\\{0\\}\\), \\(f:X\\to D\\) une application continue et \\(X_0=f^{-1}(0)\\). Les foncteurs \\(R\\Psi\\) et \\(R\\Psi_\\eta\\) sont les foncteurs dérivés des foncteurs \\(\\Psi\\) et \\(\\Psi_\\eta\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\nR\\Psi &amp;:D^+(X)\\longrightarrow D^+(X_0\\times\\mathscr D),\\\\\nR\\Psi_\\eta &amp;:D^+(X^*)\\longrightarrow D^+(X_0\\times\\mathscr D^*).\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On note \\(R\\Phi\\) le foncteur composé \\(\\Phi\\circ R\\Psi\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Phi:D^+(X)\\longrightarrow D^+(X_0\\times\\mathscr D^*).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les propriétés de ces foncteurs sont toutes pareilles à celles des foncteurs de même nom de XIII 2.1. Leur démonstration est bien plus élémentaire car, dans le cadre topologique, les théorèmes de changement de base pour un morphisme propre ou par un morphisme lisse \\(= localement isomorphe à (\\mathbb R^n\\times S\\to S)\\) sont faciles à prouver. Voici les menus changements à apporter.</p>"
+    },
+    {
+     "id": "14.1.3.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.3.2\"><strong>1.3.2.</strong> Le foncteur \\(Rf_!\\) n'est défini que pour un morphisme séparé entre espaces localement compacts, et est le foncteur dérivé du foncteur image directe à supports propres \\(f_!\\).</p>"
+    },
+    {
+     "id": "14.1.3.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.3.3\"><strong>1.3.3.</strong> L'isomorphisme fondamental (2.1.8.3), pour un morphisme propre (et séparé) \\(f:X\\to D\\) est à récrire comme suit. Soit \\(p:\\widetilde D^*\\to D^*\\) un revêtement universel de \\(D^*\\). Pour tout voisinage \\(U\\) de \\(0\\) dans \\(D\\), soit \\(\\widetilde U^*=p^{-1}(U)\\), et \\(X_{\\widetilde U^*}=X\\mathbin{\\mathop\\times_D}\\widetilde U^*\\). Pour \\(K\\in\\operatorname{Ob}D^+(f^{-1}(D^*))\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.3.1}\\varinjlim_U H^i(X_{\\widetilde U^*},K)\\mathop{\\longrightarrow}\\limits^\\sim H^i(X_0,R\\Psi_\\eta(K)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cet isomorphisme est intéressant surtout si \\(X^*=f^{-1}(D^*)\\) est un fibré topologique sur \\(D^*\\). Pour \\(U\\subset D\\) un disque tendant vers \\(0\\), la suite spectrale de Leray de \\(X_{\\widetilde U^*}\\to\\widetilde U^*\\) montre alors que pour tout faisceau localement constant \\(\\Lambda\\) sur \\(X^*\\) et pour tout \\(t\\in\\widetilde U^*\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^i(X_{\\widetilde U^*},\\Lambda)\\mathop{\\longrightarrow}\\limits^\\sim H^i(X_t,\\Lambda).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(t\\in D^*\\), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.3.2}H^i(X_t,\\Lambda)\\mathop{\\longrightarrow}\\limits^\\sim H^i(X_0,R\\Psi_t(\\Lambda))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(\\(X/D\\) propre, \\(X^*\\) fibré, \\(\\Lambda\\) localement constant).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour vérifier que \\(X^*\\) est un fibré sur \\(D^*\\), on utilise en pratique le théorème d'isotopie de Thom dont une forme est énoncée ci-dessous. (Pour la démonstration de ce théorème, dont aucune conséquence ne servira dans les exposés suivants, je renvoie à Whitney et Mather).</p>"
+    },
+    {
+     "id": "14.1.3.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.3.4\"><strong>1.3.4.</strong> <u>Préliminaire :</u> Soit \\(f:X\\to Y\\) un morphisme lisse (=<sub>dfn</sub> sans point critique) de variétés différentiables. Une <u>connexion</u> \\(\\nabla\\) sur \\(X/Y\\) est un sous-fibré vectoriel du fibré tangent de \\(X\\), supplémentaire de \\(\\operatorname{Ker}(df)\\). Pour \\(u\\) un champ de vecteurs sur \\(Y\\), il existe un et un seul champ de vecteurs \\(\\nabla(u)\\) sur \\(X\\), relevant \\(u\\), dans ce sous-fibré. On dit que \\(\\nabla\\) est intégrable si</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\nabla([u,v])=[\\nabla(u),\\nabla(v)]\\ ;\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour \\(f\\) propre, une connexion intégrable définit des trivialisations locales sur \\(Y\\) de \\(X/Y\\) : \\(\\alpha:f^{-1}(U)\\mathop{\\longrightarrow}\\limits^\\sim X_0\\times U\\), compatible à la projection sur \\(U\\), avec \\(d\\alpha(\\nabla(u))=(0,u)\\). Pour \\(f\\) non propre, le même résultat vaut sous des conditions convenables à l'infini, par exemple si les \\(\\nabla(u)g\\) sont nuls pour \\(g\\) une fonction d'exhaustion convenable.</p>"
+    },
+    {
+     "id": "14.1.3.5",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm thm-plain\" id=\"14.1.3.5\"><div class=\"thm-head\">1.3.5. <u>Théorème d'isotopie de Thom.</u></div><div class=\"thm-body\">\n<p>Soient \\(D=\\{z\\in\\mathbb C\\mid |z|&lt;1\\}\\), \\(D^*=D-\\{0\\}\\) et \\(f:X\\to D\\) un morphisme propre d'espaces analytiques. Pour \\(D\\) remplacé par un disque plus petit et \\(X\\) par son image réciproque, il existe une stratification \\(\\Sigma\\) de \\(X^*=f^{-1}(D^*)\\) ayant les propriétés suivantes.</p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> \\(\\Sigma\\) est une filtration \\(X^*=F_0\\supset F_1\\supset\\cdots\\supset F_n\\supset F_{n+1}=\\varnothing\\) de \\(X^*\\) par des parties fermées dont l'adhérence \\(\\overline F_i\\) dans \\(X\\) est un sous-espace analytique de \\(X\\).</li>\n<li><span class=\"item-label\">\\(b\\)</span> Les strates ouvertes \\(F_i-F_{i+1}\\) sont lisses sur \\(D^*\\).</li>\n<li><span class=\"item-label\">\\(c\\)</span> \\(\\Sigma\\) vérifie les conditions \\(a\\) et \\(b\\) de Whitney.</li>\n</ol>\n<p>Pour une telle stratification \\(\\Sigma\\), il existe sur les \\(F_i-F_{i+1}\\) des connexions intégrables \\(\\nabla_i\\) telles que</p>\n<ol class=\"enumerate\">\n<li><span class=\"item-label\">(i)</span> localement sur \\(D^*\\), \\(\\nabla_i\\) définit une trivialisation de \\(F_i-F_{i+1}\\) ;</li>\n<li><span class=\"item-label\">(ii)</span> ces trivialisations se recollent pour fournir des trivialisations locales de \\(X^*/D^*\\).</li>\n</ol>\n<p>Enfin, si \\((Y_\\alpha)\\) est une famille finie de sous-espaces analytiques fermés de \\(X\\), et quitte à rétrécir \\(D\\) davantage, on peut trouver \\(\\Sigma\\) tel que chaque \\(Y_\\alpha\\) soit réunion de composantes connexes de strates ouvertes \\((F_i-F_{i+1})\\). Une connexion \\(\\nabla\\) comme plus haut trivialise alors localement \\((X,(Y_\\alpha))\\).</p>\n</div></div>"
+    },
+    {
+     "id": "14.1.3.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.3.6\"><strong>1.3.6.</strong> On dispose encore de (1.3.3.2) pour l'hypercohomologie à valeurs dans un complexe de faisceaux \\(K\\) lorsque \\(X\\) est propre sur \\(D\\) et que la condition suivante est vérifiée</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(*) Pour tout \\(i\\in\\mathbb Z\\), \\(D^*\\) est recouvert par des ouverts \\(U\\) tels qu'il existe un isomorphisme compatible à la projection sur \\(U\\), \\(\\varphi:f^{-1}(U)\\mathop{\\longrightarrow}\\limits^\\sim Y\\times U\\) et un faisceau \\(G\\) sur \\(Y\\) tel que \\(\\mathcal H^i(K)\\) soit isomorphe, sur \\(f^{-1}(U)\\), à \\(\\varphi^*\\operatorname{pr}_1^*G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sous cette hypothèse, le triangle 1.2.1 fournit une suite exacte longue</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.3.6.1}\\cdots\\longrightarrow H^i(X_0,K)\\longrightarrow H^i(X_t,K)\\longrightarrow H^i(X_0,R\\Phi_t(K))\\longrightarrow\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après le théorème de Thom, la condition (*) est vérifiée (quitte à rétrécir \\(D\\)) lorsqu'il existe une stratification analytique complexe de \\(X\\) telle que les \\(\\mathcal H^i(K)\\) soient localement constants sur chaque strate ouverte.</p>"
+    },
+    {
+     "id": "14.1.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"14.1.4\">1.4. <u>Un cas particulier.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce numéro ne sera pas utilisé dans la suite du séminaire. On y formalise une construction esquissée dans l'introduction de XIII.</p>"
+    },
+    {
+     "id": "14.1.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.4.1\"><strong>1.4.1.</strong> Soient \\(D\\) un disque orienté, \\(0\\in D\\) et \\(D^*=D-\\{0\\}\\). Un <u>espace topologique \\(\\mathscr X^*\\) sur \\(\\mathscr D^*\\)</u> est un foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\text{revêtements universels de }D^*)\\longrightarrow(\\text{espaces topologiques}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Une fois choisi un revêtement universel \\(\\widetilde D^*\\), c'est un espace topologique \\(X_\\eta\\) muni d'une action de \\(\\pi_1(D^*)\\) ; pour \\(\\widetilde D^*\\) le revêtement universel de \\((D^*,t)\\), on le note \\(\\mathscr X_t^*\\). Un <u>faisceau</u> sur \\(\\mathscr X^*\\) est un foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\text{revêtements universels de }D^*)\\longrightarrow(\\text{espaces topologiques munis d'un faisceau}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>soit encore un faisceau \\(\\pi_1(D^*)\\)-équivariant sur \\(X_\\eta\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>À \\(\\mathscr X^*\\), on associe l'espace topologique \\(\\beta^*\\mathscr X^*=X_\\eta\\times\\widetilde D^*/\\pi_1(D^*)\\) sur \\(D^*\\). Tout faisceau \\(F\\) sur \\(\\mathscr X^*\\) définit par passage au quotient un faisceau \\(\\beta^*F\\) sur \\(\\beta^*\\mathscr X^*\\), d'où un diagramme commutatif de topos</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=5em@R=3em{\\beta^*\\mathscr X^*\\ar[r]\\ar[d]&amp;\\mathscr X^*\\ar[d]\\\\D^*\\ar[r]^\\beta&amp;\\mathscr D^*.}\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.4.2\"><strong>1.4.2.</strong> Un <u>espace topologique \\(\\mathscr X\\) sur \\(\\mathscr D\\)</u> consiste en</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> un espace topologique \\(\\mathscr X^*\\) sur \\(\\mathscr D^*\\) ;</li>\n<li><span class=\"item-label\">\\(b\\)</span> un espace topologique \\(X_0\\) ;</li>\n<li><span class=\"item-label\">\\(c\\)</span> un morphisme \\(\\pi_1(D^*)\\)-invariant \\(\\operatorname{sp}:X_\\eta\\to X_0\\) (\\(\\pi_1(D^*)\\) agissant trivialement sur \\(X_0\\)).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un <u>faisceau</u> sur \\(\\mathscr X\\) consiste en un faisceau \\(F_0\\) sur \\(X_0\\), un faisceau sur \\(\\mathscr X^*\\), donné par \\(F_\\eta\\), et un morphisme équivariant</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{sp}:\\operatorname{sp}^*F_0\\longrightarrow F_\\eta\\quad(\\text{ou }F_0\\longrightarrow\\operatorname{sp}_*F_\\eta).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dispose d'un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=3.5em@R=3em{X_0\\ar@{^{(}-&gt;}[r]\\ar[d]&amp;\\mathscr X&amp;\\mathscr X^*\\ar@{_{(}-&gt;}[l]\\ar[d]\\\\\\{0\\}\\ar@{^{(}-&gt;}[r]&amp;\\mathscr D&amp;\\mathscr D^*\\ar@{_{(}-&gt;}[l].}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dispose de plus d'un morphisme de topos \\(\\Psi:\\mathscr X\\to X_0\\times\\mathscr D\\), d'après la fonctorialité de la construction précédente appliquée à \\((X_\\eta,X_0,\\operatorname{sp})\\to(X_0,X_0,\\operatorname{Id})\\). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi(F_0,F_\\eta,\\operatorname{sp})=(F_0,\\operatorname{sp}_*F_\\eta,\\operatorname{sp}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce morphisme induit \\(\\Psi_\\eta:\\mathscr X^*\\to X_0\\times\\mathscr D^*\\).</p>"
+    },
+    {
+     "id": "14.1.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.4.3\"><strong>1.4.3.</strong> À un espace topologique \\(\\mathscr X\\) sur \\(\\mathscr D\\), on associe comme suit un espace topologique \\(X=\\beta^*\\mathscr X\\) sur \\(D\\). On adjoint à \\(X^*=\\beta^*\\mathscr X^*\\) la fibre \\(X_0\\) en \\(0\\), en prenant pour système fondamental de voisinage de \\(x_0\\in X_0\\) les</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nV\\cup(\\operatorname{sp}^{-1}(V)\\times\\widetilde U^*/\\pi_1(D^*))\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>pour \\(V\\) un voisinage de \\(x_0\\) dans \\(X_0\\), \\(U\\) un voisinage de \\(0\\) dans \\(D\\) et \\(\\widetilde U^*=U\\mathbin{\\mathop\\times_D}\\widetilde D^*\\). Notons \\(j\\) (resp. \\(i\\)) l'inclusion de \\(X^*\\) (resp. \\(X_0\\)) dans \\(X\\). Pour \\(F\\) un faisceau sur \\(\\mathscr X^*\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ni^*j_*\\beta^*F=(\\operatorname{sp}_*F_\\eta)^{\\pi_1(D^*)}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On en tire un diagramme commutatif de topos</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix@C=4em@R=3em{X\\ar[r]^\\beta\\ar[d]&amp;\\mathscr X\\ar[d]\\\\D\\ar[r]^\\beta&amp;\\mathscr D}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que, pour tout faisceau \\(F\\) sur \\(\\mathscr X\\), on ait</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.3.1}\\Psi(F)\\mathop{\\longrightarrow}\\limits^\\sim\\Psi(\\beta^*F).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.4.4",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.1.4.4\"><div class=\"thm-head\"><u>Proposition 1.4.4.</u></div><div class=\"thm-body\"><p><u>La flèche (1.4.3.1) se dérive en un isomorphisme</u></p>\n\\[\nR\\Psi\\mathop{\\longrightarrow}\\limits^\\sim R\\Psi\\circ\\beta^*\n\\]\n<p><u>entre foncteurs de \\(D^+(\\mathscr X)\\) dans \\(D^+(X_0\\times\\mathscr D)\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\bar j\\) l'inclusion de \\(\\overline X^*=X\\mathbin{\\mathop\\times_D}\\widetilde D^*\\simeq X_\\eta\\times\\widetilde D^*\\) dans \\(\\overline X=X\\mathbin{\\mathop\\times_D}\\widetilde D\\). La proposition se ramène à vérifier que pour tout faisceau abélien \\(F\\) flasque sur \\(X_\\eta\\), \\(\\operatorname{pr}_1^*F\\) est acyclique pour le foncteur \\(\\bar j_*\\). Cette assertion, à son tour, se ramène à la suivante (pour \\(B=\\widetilde D^*\\)), bien connue, qui se démontre par un argument d'homotopie.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau abélien sur un espace \\(Y\\), et \\(B\\) un disque. On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^i(Y,F)\\mathop{\\longrightarrow}\\limits^\\sim H^i(Y\\times B,\\operatorname{pr}_1^*F).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.1.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.4.5\"><strong>1.4.5.</strong> La proposition 1.4.4 fournit un procédé de calcul de \\(R\\Psi\\) pour les faisceaux sur \\(X\\) de la forme \\(\\beta^*F\\), ramenant pour l'essentiel le calcul de \\(R\\Psi\\) à celui de \\(R\\operatorname{sp}_*\\).</p>"
+    },
+    {
+     "id": "14.1.4.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.4.6\"><strong>1.4.6.</strong> Nous aurons plus tard à considérer le cas où \\(X_\\eta\\) est localement compact et où \\(X_0\\) se déduit de \\(X_\\eta\\) en contractant en un point \\(0\\) une partie compacte \\(V\\subset X_\\eta\\), \\(\\operatorname{sp}\\) étant la flèche de contraction et l'action de \\(\\pi_1(D^*)\\) étant triviale en dehors de \\(V\\). Le théorème de changement de base pour le morphisme propre \\(\\operatorname{sp}\\) fournit alors, pour \\(K\\in\\operatorname{Ob}D^+(\\mathscr X^*)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.6.1}R\\Psi_\\eta(\\beta^*K)_0=R\\Gamma(V,K)\n\\]\n\\[\n\\tag{1.4.6.2}R\\Gamma_{\\{0\\}}R\\Psi_\\eta(\\beta^*K)=R\\Gamma_V(X_\\eta,K)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(cohomologie à support).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(K\\) sur \\(\\mathscr X\\), avec \\(\\operatorname{sp}:\\operatorname{sp}^*K_0\\to K_\\eta\\) un quasi-isomorphisme en dehors de \\(V\\), on a \\(R\\Phi(K)=0\\) en dehors de \\(0\\). En particulier, pour un faisceau constant \\(\\Lambda\\) sur \\(X\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR^i\\Phi(\\Lambda)=\\widetilde H^i(V,\\Lambda)\\quad\\text{concentré en }0\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(groupes de cohomologie réduit).</p>"
+    },
+    {
+     "id": "14.1.4.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.1.4.7\"><strong>1.4.7.</strong> Le cas qui nous intéresse est celui où \\(X_\\eta\\) est une variété différentiable et où \\(V\\subset X_\\eta\\) est une sous-variété à bord, d'intérieur \\(V^\\circ\\) ; \\(X-\\{0\\}\\) est alors une variété différentiable, obtenue en recollant \\(\\beta^*X_\\eta\\) et le fibré constant sur \\(D\\) de fibre \\(X_\\eta-V\\). L'application</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.7.1}H_c^i(V^\\circ,\\Lambda)\\mathop{\\longrightarrow}\\limits^\\sim H_V^i(X_\\eta,\\Lambda)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un isomorphisme. Ces groupes sont aussi notés \\(H^i(V\\bmod\\partial V,\\Lambda)\\). L'isomorphisme (1.4.7.1) définit un isomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.7.2}R\\Gamma_c(V^\\circ,\\Lambda)\\mathop{\\longrightarrow}\\limits^\\sim R\\Gamma_{\\{0\\}}R\\Psi_\\eta(\\Lambda),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et la <u>variation</u> est définie (par le procédé de XIII 2.4.5 et via (1.4.7.2)) par un morphisme de source la cohomologie réduite de \\(V\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{1.4.7.3}\\operatorname{Var}:R\\widetilde\\Gamma(V,\\Lambda)\\longrightarrow R\\Gamma_c(V^\\circ,\\Lambda).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(T\\) induit un automorphisme, encore noté \\(T\\), de la paire \\((V,\\partial V)\\) et la restriction \\(\\partial T\\) de \\(T\\) à \\(\\partial V\\) est l'identité. Il doit être vrai que la variation 1.4.7.3 coïncide avec le morphisme variation classique (3.1.9) attaché à un tel automorphisme \\(T\\). Un énoncé de ce type sera démontré en 3.1.10.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-2",
+   "title": "2. Le théorème de comparaison",
+   "blocks": [
+    {
+     "id": "14.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"14.2\">2. <u>Le théorème de comparaison</u></h2>"
+    },
+    {
+     "id": "14.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.1\"><strong>2.1.</strong> Pour tout schéma \\(X\\) de type fini sur \\(\\mathbb C\\), nous noterons \\(X_{\\mathrm{cl}}\\) l'espace \\(X(\\mathbb C)\\), muni de sa topologie usuelle.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(S\\) une courbe lisse sur \\(\\mathbb C\\), i.e. un schéma lisse séparé de type fini sur \\(\\mathbb C\\), purement de dimension 1. Soient \\(0\\in S(\\mathbb C)\\), \\(f:X\\to S\\) un \\(S\\)-schéma séparé de type fini et \\(\\Lambda\\) un anneau noethérien de torsion (par exemple \\(\\mathbb Z/n\\mathbb Z\\)). On pose \\(X_0=f^{-1}(0)\\).</p>"
+    },
+    {
+     "id": "14.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.2\"><strong>2.2.</strong> Nous noterons \\(S^h\\) le trait hensélien hensélisé de \\(S\\) en \\(0\\), et \\(\\eta\\) le point générique de \\(S^h\\). On dispose d'un foncteur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi:(\\text{faisceaux sur }X)\\xrightarrow{\\text{restriction}}(\\text{faisceaux sur }X\\times_S S^h)\\longrightarrow (\\text{faisceaux sur }X_0\\times S^h).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le foncteur dérivé de \\(\\Psi\\) est le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Psi:D(X,\\Lambda)\\longrightarrow D(X\\times_S S^h,\\Lambda)\\xrightarrow{R\\Psi}D(X_0\\times S^h,\\Lambda).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.3\"><strong>2.3.</strong> Soit \\(D\\subset S_{\\mathrm{cl}}\\) un disque contenant \\(0\\). Le foncteur composé \\(\\Psi_{\\mathrm{cl}}\\) (ou simplement \\(\\Psi\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi_{\\mathrm{cl}}:(\\text{faisceaux sur }X_{\\mathrm{cl}})\\xrightarrow{\\text{restriction}}(\\text{faisceaux sur }X_{\\mathrm{cl}}\\times_{S_{\\mathrm{cl}}}D)\\longrightarrow(\\text{faisceaux sur }(X_0)_{\\mathrm{cl}}\\times\\mathscr D)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est indépendant (à isomorphisme unique près) du choix de \\(D\\) (rappelons que \\(\\mathscr D\\) ne change pas quand on remplace \\(D\\) par un disque plus petit). Son dérivé est le composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Psi_{\\mathrm{cl}}:D(X_{\\mathrm{cl}},\\Lambda)\\longrightarrow D(f_{\\mathrm{cl}}^{-1}(D),\\Lambda)\\xrightarrow{R\\Psi}D(X_0\\times\\mathscr D,\\Lambda).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.4\"><strong>2.4.</strong> On définit de même</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\nR\\Psi_\\eta &amp;:D(X-X_0,\\Lambda)\\longrightarrow D(X_0\\times\\eta,\\Lambda),\\\\\nR\\Psi_{\\eta\\,\\mathrm{cl}} &amp;:D((X-X_0)_{\\mathrm{cl}},\\Lambda)\\longrightarrow D(X_0\\times\\mathscr D^*,\\Lambda).\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.5\"><strong>2.5.</strong> La construction 1.1.11 définit un morphisme de topos de \\(\\mathscr D^*\\) dans \\(\\eta\\) qui se prolonge en</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varepsilon:\\mathscr D\\longrightarrow S^h.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce morphisme, et \\(\\varepsilon:(X_0)_{\\mathrm{cl}}\\to X_0\\) (SGA4 XI 4), définissent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varepsilon:(X_0)_{\\mathrm{cl}}\\times\\mathscr D\\longrightarrow X_0\\times S^h.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(\\widetilde D^*\\) est un revêtement universel de \\(D^*\\) et que \\(k(\\bar\\eta)\\) est la clôture algébrique correspondante (1.1.10) de \\(k(\\eta)\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varepsilon^*(F_0,F_{\\bar\\eta},\\alpha)=(\\varepsilon^*F_0,\\varepsilon^*F_{\\bar\\eta},\\varepsilon^*\\alpha).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.2.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.6\"><strong>2.6.</strong> Soit \\(\\widetilde D^*\\) un revêtement universel de \\(D^*\\), \\(k(\\bar\\eta)\\) la clôture algébrique correspondante de \\(k(\\eta)\\) et \\(\\overline S\\) le normalisé de \\(S^h\\) dans \\(k(\\bar\\eta)\\). Écrivons \\(\\overline S\\) comme limite projective de \\(S\\)-schémas affines \\(S_i\\) ; pour chaque \\(i\\), et après avoir remplacé \\(D\\) par un disque plus petit \\(D_i\\), on dispose d'un morphisme naturel de \\(S_{\\mathrm{cl}}\\)-espaces \\(\\widetilde D_i\\xrightarrow{a_i}(S_i)_{\\mathrm{cl}}\\). Soit \\(j_i:U_i\\hookrightarrow S_i\\) l'ouvert de \\(S_i\\), complément de l'image \\(0\\) du point fermé de \\(\\overline S\\), et \\(i:0\\hookrightarrow S_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(F\\) un faisceau sur \\(X\\). Soit \\(F_{\\mathrm{cl}}=\\varepsilon^*F\\). Notons encore \\(j_i\\) l'inclusion de \\(X\\times_S U_i\\) dans \\(X\\times_S S_i\\), \\(j\\) celle de \\(X_0\\) dans \\(X\\times_S S_i\\), et \\(F\\) l'image réciproque de \\(F\\) sur \\(X\\times_S S_i\\). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Psi(F)=\\left(i^*F,\\varinjlim_* i^*j_{i*}j_i^*F,\\varinjlim(\\varphi_i)\\right).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les foncteurs \\(\\varepsilon^*\\) et image réciproque commutent. Le morphisme \\(\\varepsilon^*j_{i*}\\to(j_{i\\,\\mathrm{cl}})_*\\varepsilon^*\\) fournit donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nc_i:(i^*j_{i*}j_i^*F)_{\\mathrm{cl}}\\longrightarrow i^*j_{i*}j_i^*(F_{\\mathrm{cl}}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\bar j\\) (resp. \\(\\bar j_i\\)) l'inclusion de \\(\\widetilde D^*\\) (resp. \\(\\widetilde D_i^*\\)) dans \\(\\widetilde D\\) (resp. \\(\\widetilde D_i\\)), et les inclusions \\(X\\times_S\\widetilde D^*\\hookrightarrow X\\times_S\\widetilde D\\), \\(X\\times_S\\widetilde D_i^*\\hookrightarrow X\\times_S\\widetilde D_i\\) qui s'en déduisent. La flèche d'adjonction \\(\\operatorname{Id}\\to a_{i*}a_i^*\\) définit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ni^*j_{i*}j_i^*F_{\\mathrm{cl}}\\longrightarrow i^*\\bar j_{i*}\\bar j_i^*F_{\\mathrm{cl}}=i^*\\bar j_*\\bar j^*F_{\\mathrm{cl}},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où par passage à la limite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nc_\\eta:\\Psi_{\\bar\\eta}(F)_{\\mathrm{cl}}\\longrightarrow\\Psi_{\\mathrm{cl}}(F_{\\mathrm{cl}}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce morphisme définit le <u>morphisme de comparaison</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.6.1}c:\\varepsilon^*\\Psi(F)\\longrightarrow\\Psi_{\\mathrm{cl}}(\\varepsilon^*F).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On définit de même</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{2.6.2}c_\\eta:\\varepsilon^*\\Psi_\\eta(F)\\longrightarrow\\Psi_{\\eta\\,\\mathrm{cl}}(\\varepsilon^*F).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.2.7\"><strong>2.7.</strong> Les morphismes 2.6.1 et 2.6.2 se dérivent en</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\nc&amp;:\\varepsilon^*R\\Psi\\longrightarrow R\\Psi_{\\mathrm{cl}}\\circ\\varepsilon^*,\\\\\nc_\\eta&amp;:\\varepsilon^*R\\Psi_\\eta\\longrightarrow R\\Psi_{\\eta\\,\\mathrm{cl}}\\circ\\varepsilon^*.\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.2.8",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.2.8\"><div class=\"thm-head\"><u>Théorème 2.8.</u></div><div class=\"thm-body\"><p><u>Soit \\(K\\in\\operatorname{Ob}D(X,\\Lambda)\\) (resp. \\(\\operatorname{Ob}D(X-X_0,\\Lambda)\\)) un complexe de faisceaux de \\(\\Lambda\\)-modules dont les faisceaux de cohomologie \\(\\mathcal H^i(K)\\) sont constructibles. Alors, le morphisme de comparaison</u></p>\n\\[\nc:\\varepsilon^*R\\Psi(K)\\longrightarrow R\\Psi_{\\mathrm{cl}}(\\varepsilon^*K)\n\\]\n<p><u>(resp. \\(c:\\varepsilon^*R\\Psi_\\eta(K)\\longrightarrow R\\Psi_{\\eta\\,\\mathrm{cl}}(\\varepsilon^*K)\\)) est un isomorphisme.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il suffit de prouver l'assertion pour \\(R\\Psi_\\eta\\) ; de plus, les deux membres de (2.7) étant des foncteurs triangulés de dimension cohomologique finie, il suffit de traiter le cas où \\(K\\) est réduit à un faisceau \\(F\\) (placé en degré 0). La démonstration est toute pareille à celle du théorème de finitude XIII 2.3.1 : \\(R\\Psi\\) et \\(R\\Psi_{\\mathrm{cl}}\\) ayant les mêmes propriétés de variance, on se ramène par les dévissages de loc. cit. (où on se permet de rétrécir \\(S\\)) au cas où \\(X\\) est régulier, \\(f^{-1}(0)\\) un diviseur à croisements normaux dans \\(X\\) et où \\(F\\) est \\(\\mathbb Z/\\ell\\). On compare alors I 3.3 à son analogue transcendant.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-3",
+   "title": "3. Singularités isolées",
+   "blocks": [
+    {
+     "id": "14.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"14.3\">3. <u>Singularités isolées</u></h2>"
+    },
+    {
+     "id": "14.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"14.3.1\">3.1. <u>La variété des cycles évanescents.</u></h3>"
+    },
+    {
+     "id": "14.3.1.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.1\"><strong>3.1.1.</strong> Soient \\(D=\\{z\\in\\mathbb C\\mid |z|&lt;1\\}\\), \\(X\\) un espace analytique, \\(0\\in X\\) et \\(f:X\\to D\\) un morphisme tel que \\(f(0)=0\\). On suppose que \\(f\\) est lisse en dehors de \\(0\\) (en particulier, \\(X\\) est lisse en dehors de \\(0\\)). On se propose d'étudier les cycles évanescents au voisinage de \\(0\\) ; on ne restreint donc pas la généralité en supposant \\(X\\) plongé dans \\(\\mathbb C^n\\times D\\subset\\mathbb C^{n+1}\\), de façon compatible à la projection sur \\(D\\), et de sorte que \\(0\\) s'envoie sur \\(0\\).</p>"
+    },
+    {
+     "id": "14.3.1.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.2\"><strong>3.1.2.</strong> Soit \\(\\delta(x)\\) une fonction analytique réelle sur \\(X\\) (restriction à \\(X\\) d'une fonction analytique réelle sur \\(\\mathbb C^{n+1}\\)), telle que, pour \\(x\\in X_0=f^{-1}(0)\\), on ait</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> \\(\\delta(x)\\geq0\\) ;</li>\n<li><span class=\"item-label\">\\(b\\)</span> \\(\\delta(x)=0\\Longleftrightarrow x=0\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On prendra par exemple pour \\(\\delta\\) le carré de la distance euclidienne, dans \\(\\mathbb C^{n+1}\\), de \\(x\\) à \\(0\\). Le lieu des points critiques de la restriction de \\(\\delta\\) à \\(X_0\\) est analytique réel donc, dans un voisinage convenable de \\(0\\), n'a qu'un nombre fini de composantes connexes. Remplaçant \\(X\\) par un voisinage ouvert de \\(0\\) et appliquant Sard, on peut donc obtenir la situation suivante</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(c\\)</span> pour \\(r&gt;0\\) convenable, \\(X_0\\cap\\delta^{-1}([0,r])\\) est compact,</li>\n<li><span class=\"item-label\">\\(d\\)</span> sur \\(X_0\\), \\(\\delta\\) n'a pas de valeur critique \\(\\leq r\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Quitte à rétrécir \\(X\\) davantage, on a alors</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(e\\)</span> il existe une fonction \\(C^\\infty\\) \\(\\tau(s)\\) (\\(0\\leq s\\leq r\\)), avec \\(\\tau(0)=0\\) et \\(\\tau'(s)&gt;0\\) pour \\(s&gt;0\\), telle que, pour \\(0&lt;s\\leq r\\) et \\(0\\leq |t|^2\\leq\\tau(s)\\), \\(X_t=f^{-1}(t)\\) soit transverse à l'hypersurface réelle \\(\\delta(x)=s\\) de \\(X\\) et que la boîte\n\\[\nB_{t,d}=\\{x\\in X\\mid\\delta(x)\\leq d\\text{ et }|f(x)|^2&lt;t\\}\n\\]\nsoit propre sur le disque ouvert \\(D_t\\) de rayon \\(t^{1/2}\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(L=X_0\\cap\\delta^{-1}(r)\\). D'après \\(c\\) et \\(d\\), il existe un homéomorphisme de\n\\(X_0\\cap\\delta^{-1}([0,r])\\) avec le cône \\((L\\times[0,r]/\\text{contraction de }L\\times\\{0\\}\\text{ en un point})\\),\ntransformant \\(\\delta\\) en la 2<sup>e</sup> coordonnée, et \\(C^\\infty\\) en dehors de l'origine.</p>"
+    },
+    {
+     "id": "14.3.1.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.3\"><strong>3.1.3.</strong> Soient \\(d\\leq r\\) et \\(t\\leq\\tau(d)\\). En dehors de \\(0\\), \\(B_{t,d}\\) est une variété à coins et la projection \\(f\\) de \\(B_{t,d}\\) sur \\(D_t\\) une fibration. En particulier</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> \\(B_{t,d}\\) induit sur \\(D_t^*=D_t-\\{0\\}\\) un fibré \\(C^\\infty\\) en variétés compactes à bord ;</li>\n<li><span class=\"item-label\">\\(b\\)</span> le bord \\(\\delta(x)=d\\) de ce fibré est prolongé en un fibré \\(C^\\infty\\) \\(\\partial B_{t,d}\\) en variétés compactes sur \\(D_t\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(y\\in D_t^*\\). Nous appellerons la variété à bord \\(V=f^{-1}(y)\\) la <u>variété des cycles évanescents</u>. Le disque étant contractile, le fibré \\(\\partial B_{t,d}\\) sur \\(D_t\\) est isomorphe au fibré constant de fibre \\(\\partial V\\), et l'ensemble des isomorphismes de fibré\n\\[\\partial B_{t,d}\\mathop{\\longrightarrow}\\limits^\\sim\\partial V\\times D_t,\\]\nqui soit l'identité sur la fibre en \\(y\\), est contractile. Choisissons-en un, noté \\(\\alpha\\). Relevons le champ de vecteurs \\(\\frac\\partial{\\partial\\theta}\\) sur \\(S_{|y|}\\) (circonférence de rayon \\(|y|\\)) en un champ de vecteur \\(u\\) sur \\(f^{-1}(S_{|y|})\\) qui, au bord, soit compatible à \\(\\alpha\\) (\\(d\\alpha(u)=(\\frac\\partial{\\partial\\theta},0)\\)). L'ensemble de ces relèvements est contractile. Par intégration (tourner une fois dans le sens positif), \\(u\\) définit un difféomorphisme \\(T\\) de \\(V\\) sur elle-même, qui est l'identité sur \\(\\partial V\\) ; c'est la <u>transformation de monodromie</u>. Elle est bien définie modulo isotopies mod \\(\\partial V\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En un sens qu'on laisse au lecteur le soins de préciser, \\((V,T)\\) est indépendant des choix de \\(t\\) et \\(s\\). J'ignore s'il est indépendant du choix de \\(\\delta\\). On vérifie toutefois qu'il en est ainsi lorsqu'on se restreint à prendre pour \\(\\delta\\) la restriction à \\(X\\) d'une fonction \\(g\\) sur \\(\\mathbb C^{n+1}\\) telle que, sur l'espace tangent de Zariski de \\(X_0\\) en \\(0\\), on ait \\(dg=0\\) et \\(d^2g&gt;0\\) (définie positif). Le point est que, pour \\(\\delta\\) et \\(\\delta'\\) de ce type, on peut choisir \\(r\\) comme en 3.1.2 \\(c\\) \\(d\\) uniformément pour tous les \\(\\lambda\\delta+(1-\\lambda)\\delta'\\) \\((0\\leq\\lambda\\leq1)\\).</p>"
+    },
+    {
+     "id": "14.3.1.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.4\"><strong>3.1.4.</strong> Soient \\((V,T)\\) et \\((V_1,T_1)\\) déduit de \\((V,T)\\) par adjonction d'un collier :\n\\[V_1-V^\\circ\\simeq\\partial V\\times[0,1]\\quad\\text{et}\\quad T_1\\text{ est l'identité sur }V_1-V^\\circ.\\]\nSoit \\(f':W\\to D_t\\) l'espace sur \\(D_t\\) suivant (cf. 1.4.3)</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> Soient \\(\\widetilde D_t^*\\) un revêtement universel de \\(D_t^*\\) de point de base \\(y\\) et \\(W^*\\) le fibré sur \\(D_t^*\\) quotient de \\(V_1\\times\\widetilde D_t^*\\) par la relation engendrée par \\((v,y)\\simeq(T_1v,e^{2\\pi i}y)\\).</li>\n<li><span class=\"item-label\">\\(b\\)</span> Puisque \\(T_1|V_1-V^\\circ\\) est trivial, on peut recoller \\(W^*\\) et le fibré trivial sur \\(D_t\\) de fibre \\(V_1-V\\) en un espace \\(W_1\\) sur \\(D_t\\).</li>\n<li><span class=\"item-label\">\\(c\\)</span> \\(W=W_1\\cup\\{0\\}\\), avec \\(f'(0)=0\\). \\(W\\) est muni de l'unique topologie induisant celle de \\(W_1\\), pour laquelle \\(f'\\) soit continue et que \\(f'^{-1}(\\overline D_{t'})\\) \\((t'&lt;t)\\) soit la compactification par un point de \\(W_1\\cap f'^{-1}(\\overline D_{t'})\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On munit \\(W-\\{0\\}\\) de la connexion intégrable (1.3.4) pour laquelle la trivialisation fournie par \\(a\\) de l'image réciproque de \\(W^*\\) sur \\(\\widetilde D^*\\) soit horizontale.</p>"
+    },
+    {
+     "id": "14.3.1.5",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.3.1.5\"><div class=\"thm-head\"><u>Proposition 3.1.5.</u></div><div class=\"thm-body\"><p><u>Il existe un homéomorphisme \\(\\Psi\\), compatible à la projection sur \\(D_t\\) et envoyant \\(0\\) sur \\(0\\), de \\(B_{s,t}\\) avec \\(W\\) ; cet homéomorphisme peut être choisi un difféomorphisme en dehors de \\(0\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce résultat ne sera pas utilisé dans la suite du séminaire.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(d_0&lt;d_1\\leq r\\), \\(t_0\\leq\\tau(d_0)\\) et \\(y\\in D_{t_0}^*\\). On a \\(B_{t_0,d_0}\\subset B_{t_0,d_1}\\) et \\(B_{t_0,d_1}-B_{t_0,d_0}^\\circ\\) est un fibré sur \\(D_{|t|_0}\\). Trivialisons-le et au-dessus de la circonférence \\(S_{|y|}\\), relevons le champs de vecteur \\(\\frac\\partial{\\partial\\theta}\\) de façon compatible à cette trivialisation. Soit \\(T_1\\) l'endomorphisme correspondant de \\(V_1=f^{-1}(y)\\cap B_{t_0,d_1}\\), et \\(V_0=f^{-1}(y)\\cap B_{t_0,d_0}\\). Alors, \\((V_0\\subset V_1,T_1)\\) est isomorphe à \\((V\\subset V_1,T_1)\\) de 3.1.4. Soit \\(W\\) construit à l'aide de \\((V_0\\subset V_1,T_1)\\). On a \\(f'^{-1}(y)=V_1\\), canoniquement. La démonstration montrera qu'on peut prendre \\(\\Psi\\) qui induise l'identité \\(f^{-1}(y)\\mathop{\\longrightarrow}\\limits^\\sim f'^{-1}(y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les dessins suivants (\\(f\\), et sa restriction à \\(f^{-1}(\\mathbb R)\\)) résument la démonstration.</p>"
+    },
+    {
+     "id": null,
+     "type": "div",
+     "label": null,
+     "title": null,
+     "html": "<div style=\"text-align:center; margin:1em 0\"><p>[Schémas de \\(f:B_{t_0,d_1}\\to D_t\\) et de sa restriction à \\(f^{-1}(\\mathbb R)\\)]</p></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(B^+\\subset B_{t_0,d_1}\\) l'ensemble des \\(x\\) tels que \\(|f(x)|^2\\leq\\tau(\\delta(x))\\). Soit \\(\\varphi_n\\) une suite de fonction \\(C^\\infty\\) de \\([0,t_0]\\) dans \\((0,d_1]\\) telle que, pour une suite \\(r_0&gt;r_1&gt;\\cdots\\) tendant vers \\(0\\), on ait</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> pour \\(|t|^2\\geq r_i\\), \\(\\varphi_i\\) est la réciproque de la fonction \\(\\tau\\) ;</li>\n<li><span class=\"item-label\">\\(b\\)</span> pour \\(|t|^2&lt;r_i\\) et \\(j&gt;i\\), \\(\\varphi_j(t)&lt;\\varphi_i(t)\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'ensemble \\(B^+-\\{0\\}\\) est réunion des fibrés sur \\(D_t\\), \\(B_i^+\\) : \\(\\delta(x)\\leq\\varphi_i(|f(x)|^2)\\). Un argument standard, utilisant que \\(\\delta\\) n'a pas de points critiques sur les fibres de \\(B^+-\\{0\\}\\to D_t\\), montre qu'il existe un difféomorphisme \\(\\alpha_i\\) de \\(B_i^+\\) avec \\(B_{i+1}^+\\), compatible à la projection sur \\(D_t\\), et l'identité en dehors d'un petit voisinage du sous-espace\n\\[(\\delta(x)=\\varphi_i(|f(x)|^2),\\quad |f(x)|^2\\leq r_i)\\quad\\text{de }B_i^+.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Composant les \\(\\alpha_i\\) et passant à la limite, on obtient un difféomorphisme \\(\\alpha\\) de \\(B_0^+-\\{x\\mid x=0\\text{ et }\\delta(x)=\\varphi_0(0)\\}\\) avec \\(B^+-\\{0\\}\\). Transportons par \\(\\alpha\\) une trivialisation du fibré \\(B_0^+\\) sur \\(D_t\\) pour obtenir une connexion intégrable \\(\\nabla'\\) sur \\(B^+-\\{0\\}\\). On peut alors</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> prolonger la restriction de cette connexion à \\(f^{-1}(S_{|y|})\\cap B^+\\) en une connexion sur \\(f^{-1}(S_{|y|})/S_{|y|}\\) (ce prolongement donnant \\(T_1\\)) ;</li>\n<li><span class=\"item-label\">\\(b\\)</span> prolonger à \\(B_{t_0,d_1}\\) le relèvement sur \\(B^+-\\{0\\}\\) fourni par \\(\\nabla'\\) du champ de vecteurs radial sur \\(D_t\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il existe alors une et une seule connexion intégrable \\(\\nabla\\) sur \\(B_{t_0,d_1}\\) qui prolonge \\(\\nabla'\\), \\(a\\) et \\(b\\), et un et un seul difféomorphisme horizontal de \\(B_{t_0,d_1}-\\{0\\}\\) avec \\(W-\\{0\\}\\) qui soit l'identité sur \\(f^{-1}(y)\\). Il répond au problème.</p>"
+    },
+    {
+     "id": "14.3.1.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.6\"><strong>3.1.6.</strong> <u>Une généralisation.</u> Ce qui précède se généralise au cas où \\(f:X\\to D\\) est un morphisme tel que \\(0\\in X\\) soit un point de non lissité isolé <u>dans</u> \\(X_0\\). Le lieu de non lissité de \\(f\\) est alors fini sur \\(D\\) (quitte à rapetisser \\(X\\) et \\(D\\)). La variété des cycles évanescents \\(V\\) a alors un ensemble fini \\(\\Sigma\\) de points critiques ; \\(V-\\Sigma\\) est une variété différentiable à bord (de bord compact, mais non compacte). La transformation de monodromie \\(T\\) est l'identité sur le bord et laisse \\(\\Sigma\\) stable. Enfin, 3.1.5 reste valable, l'homéomorphisme fibré \\(\\Psi\\) étant un difféomorphisme en dehors du lieu critique, qu'il envoie sur ce qui dans \\(W\\) provient de \\(\\Sigma\\).</p>"
+    },
+    {
+     "id": "14.3.1.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.7\"><strong>3.1.7.</strong> La proposition 3.1.5 permet d'utiliser les calculs de 1.4. On trouve ainsi que</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(A\\)</span> Les groupes de cycles évanescents \\((R^i\\Phi(\\Lambda))_0\\) sont les groupes de cohomologie réduits, à valeurs dans \\(\\Lambda\\), de la variété des cycles évanescents \\(V\\).</li>\n<li><span class=\"item-label\">\\(B\\)</span> Les groupes \\(H_{\\{0\\}}^i(X_0,R\\Psi(\\Lambda))\\) sont les groupes de cohomologie à support propre de \\(V^\\circ\\), à valeurs dans \\(\\Lambda\\).</li>\n<li><span class=\"item-label\">\\(C\\)</span> La variation\n\\[\\operatorname{Var}:\\widetilde H^i(V,\\Lambda)\\longrightarrow H_c^i(V^\\circ,\\Lambda)=H^i(V\\bmod\\partial V,\\Lambda)\\]\nest la variation classique, définie par l'automorphisme \\(T\\) de \\(V\\) (qui est l'identité sur \\(\\partial V\\)).</li>\n</ol>"
+    },
+    {
+     "id": "14.3.1.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.8\"><strong>3.1.8.</strong> Les assertions \\(A\\) \\(B\\) \\(C\\) sont en fait plus élémentaires que 3.1.5 ; en voici une démonstration-construction directe, qui nous dispensera de vérifier que les isomorphismes \\(A\\) \\(B\\) sont indépendants des choix faits dans la construction 3.1.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(d\\leq r\\), \\(t\\leq\\tau(d)\\) et \\(B\\) la boîte ouverte</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[B=\\{x\\mid\\delta(x)&lt;d\\quad\\text{et}\\quad |f(x)|^2&lt;t\\}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\widetilde D^*\\) un revêtement universel de \\(D^*\\), et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.8.1}\n\\xymatrix{\\{0\\}\\ar@{=}[d]\\ar[r]^{\\bar i}&amp;\\widetilde D_t\\ar[d]^p&amp;\\widetilde D_t^*\\ar[l]_{\\bar j}\\ar[d]^{p'}\\\\\n\\{0\\}\\ar[r]^i&amp;D_t&amp;D_t^*\\ar[l]_j}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>déduit de 1.2.7.2 par restriction à \\(D_t\\). Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.8.2}\n\\xymatrix{B_0\\ar@{=}[d]\\ar[r]^{\\bar i}&amp;\\overline B\\ar[d]^p&amp;\\overline B^*\\ar[l]_{\\bar j}\\ar[d]^{p'}\\\\\nB_0\\ar[r]^i&amp;B&amp;B^*\\ar[l]_j}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>image réciproque de \\(f:B\\to D\\) sur (3.1.8.1). On note encore \\(f\\) la projection de (3.1.8.2) sur (3.1.8.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(A\\) Par définition, \\(R^i\\Psi_\\eta(\\Lambda)_0\\) est la limite inductive, pour \\(U\\) parcourant les voisinages de \\(0\\) dans \\(X\\), des groupes de cohomologie \\(H^i(U\\times_D\\widetilde D^*,\\Lambda)\\). Faisons parcourir à \\(U\\) le système fondamental de \\(0\\) formé des boîtes \\(B\\) comme plus haut. Le produit fibré \\(U\\times_D\\widetilde D^*=\\overline B^*\\) est un fibré de fibre \\(V^\\circ\\) sur \\(\\widetilde D_t^*\\) (contractile). Le système inductif des \\(H^i(\\overline B^*,\\Lambda)\\) est donc constant, de valeur \\(H^i(V^\\circ,\\Lambda)=H^i(V,\\Lambda)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les isomorphismes obtenus</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.8.3}R^i\\Psi_\\eta(\\Lambda)_0=H^i(V,\\Lambda)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>peuvent se préciser en un isomorphisme composé (cf. \\(B\\) ci-dessous).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.8.4}\n\\xymatrix{\nR\\Psi_\\eta(\\Lambda)_0 &amp; RI(B_0,R\\Psi_\\eta(\\Lambda))\\ar[l]_-\\sim &amp;\n(Rf_*R\\bar j_*\\Lambda)_0\\ar[l]_-\\sim &amp;\nR\\Gamma(\\widetilde D_t,Rf_*R\\bar j_*\\Lambda)_0\\ar[l]_-\\sim\\ar@{=}[d]\\\\\n&amp;R\\Gamma(V,\\Lambda)\\ar[r]^-\\sim&amp;R\\Gamma(V^\\circ,\\Lambda)&amp;R\\Gamma(\\overline B^*,\\Lambda)\\ar[l]_-\\sim\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le complexe \\(R\\Phi(\\Lambda)_0\\) est défini par le triangle distingué</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Lambda\\longrightarrow(R\\Psi_\\eta\\Lambda)_0\\longrightarrow R\\Phi(\\Lambda)_0\\longrightarrow.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les \\(R^i\\Phi(\\Lambda)_0\\) sont donc les groupes de cohomologie réduits de \\(V\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(B\\) Soit \\(\\Phi\\) l'ensemble des fermés de \\(\\overline B^*\\) dont l'adhérence dans \\(\\overline B\\) est propre sur \\(\\widetilde D\\). Les flèches suivantes sont des isomorphismes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.8.5}\n\\xymatrix{\nR\\Gamma_{\\{0\\}}(R\\Psi_\\eta(\\Lambda))\\ar[r]^-{\\overset{\\sim}{\\scriptscriptstyle 1}}&amp;\nR\\Gamma_c(B_0,R\\Psi_\\eta(\\Lambda))&amp;\n(Rf_!R\\bar j_*\\Lambda)_0\\ar[l]_-{\\overset{\\sim}{\\scriptscriptstyle 2}}\\\\\nR\\Gamma_c(V^\\circ,\\Lambda)&amp;R\\Gamma_\\Phi(\\overline B^*,\\Lambda)\\ar[l]_-{\\overset{\\sim}{\\scriptscriptstyle 5}}&amp;\nR\\Gamma(\\widetilde D_t,Rf_!R\\bar j_*\\Lambda)\\ar[l]_-{\\overset{\\sim}{\\scriptscriptstyle 4}}\\ar[u]_-{\\overset{\\sim}{\\scriptscriptstyle 3}}\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">①</span> parce que \\(B_0\\) est un cône (3.1.2) et que \\(R^i\\Psi_\\eta(\\Lambda)\\) est constant en dehors de (0) ;</li>\n<li><span class=\"item-label\">②</span> par le théorème de changement de base pour les images directes à support propre ;</li>\n<li><span class=\"item-label\">③</span> parce que \\(Rf_!R\\bar j_*\\Lambda\\) est constant en dehors de (0),</li>\n<li><span class=\"item-label\">④</span> est la version « catégorie dérivée » de la suite spectrale d'un foncteur composé ;</li>\n<li><span class=\"item-label\">⑤</span> parce que \\(\\widetilde D^*\\) est contractile).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'isomorphisme (3.1.8.5) fournit les isomorphismes voulus</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.8.6}R^i\\Gamma_{\\{0\\}}(R\\Psi_\\eta(\\Lambda))=H_c^i(V^\\circ,\\Lambda).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous vérifierons \\(C\\) en 3.1.10.</p>"
+    },
+    {
+     "id": "14.3.1.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.9\"><strong>3.1.9.</strong> (cf. [3]) Soient \\(X\\) un espace topologique, \\(i:Y\\hookrightarrow X\\) une partie fermée de \\(X\\), \\(T\\) un automorphisme de \\(X\\), induisant l'identité sur \\(Y\\), et \\(\\Lambda\\) un groupe abélien. Pour définir la variation \\(\\operatorname{Var}\\), on choisit une résolution \\(T\\)-équivariante \\(\\Lambda_X^*\\) de \\(\\Lambda\\) sur \\(X\\), une résolution \\(\\Lambda_Y^*\\) du faisceau \\(\\Lambda\\) sur \\(Y\\), sur laquelle \\(T\\) agit trivialement par convention, et un morphisme équivariant</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi:\\Lambda_X^*\\longrightarrow i_*\\Lambda_Y^*,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui résout le morphisme évident \\(\\varphi_0:\\Lambda_X\\to i_*\\Lambda_Y\\). On suppose les faisceaux \\(\\Lambda_X^i\\) et \\(\\Lambda_Y^i\\) acycliques pour les foncteurs qui seront considérés. Passant aux sections globales, on trouve</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Gamma(\\varphi):\\Gamma(\\Lambda_X^*)\\longrightarrow\\Gamma(\\Lambda_Y^*).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons pour simplifier les \\(\\Gamma(\\varphi)^i\\) surjectifs (sinon, on les rend surjectifs par addition à \\(\\Gamma(\\Lambda_X^*)\\) du cône de \\(\\Gamma(\\Lambda_Y^*)\\)). On pose</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Gamma(X\\bmod Y,\\Lambda)=\\ker(\\Gamma(\\varphi)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sous des hypothèses raisonnables, si \\(\\Phi\\) est l'ensemble des fermés de \\(X\\) disjoints de \\(Y\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Gamma_\\Phi(X-Y,\\Lambda_X^*)\\mathop{\\longrightarrow}\\limits^\\sim R\\Gamma(X\\bmod Y,\\Lambda)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(quasi-isomorphisme). L'endomorphisme (T-1) de \\(\\Gamma(\\Lambda_X^*)\\) (\\(T\\) agit par transport de structure) est nul sur \\(\\Lambda\\) (les constantes) et se factorise par \\(\\ker(\\Gamma(\\varphi))\\), d'où dans la catégorie dérivée et sous les mêmes hypothèses, un morphisme variation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Var}:R\\widetilde\\Gamma(X,\\Lambda)\\longrightarrow R\\Gamma_\\Phi(X-Y,\\Lambda)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(sans hypothèse, on trouve \\(\\operatorname{Var}:R\\widetilde\\Gamma(X,\\Lambda)\\to R\\Gamma(X\\bmod Y,\\Lambda)\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette description se simplifie si \\(T\\) est l'identité dans un voisinage de \\(Y\\) et, dans ce voisinage, est l'identité sur \\(\\Lambda_X^*\\). L'endomorphisme (T-1) de \\(\\Gamma(\\Lambda_X^*)\\) se factorise alors par \\(\\Gamma_\\Phi(\\Lambda_X^*)\\), et fournit la variation.</p>"
+    },
+    {
+     "id": "14.3.1.10",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.3.1.10\"><div class=\"thm-head\"><u>Proposition 3.1.10.</u></div><div class=\"thm-body\"><p><u>Via les isomorphismes 3.1.8 \\(A\\) \\(B\\), la variation</u></p>\n\\[\n(R\\Phi_\\eta(\\Lambda))_0\\longrightarrow R\\Gamma_{\\{0\\}}(R\\Psi_\\eta(\\Lambda))\n\\]\n<p><u>est égale à la variation 3.1.9 définie par l'automorphisme \\(T\\) de \\(V\\), identique sur \\(\\partial V\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le lecteur est invité à faire un petit dessin plutôt que de lire la démonstration. Soient \\(f^B\\) la boîte fermée de 3.1.2 et \\(f^C\\subset f^B\\) un collier le long du bord (\\(f^C\\simeq\\partial_fB\\times[0,1]\\) comme fibré sur \\(D_t\\) via un isomorphisme qui envoie \\(\\partial_fB\\times\\{1\\}\\) identiquement sur \\(\\partial_fB\\)). Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf^\\alpha:f^C\\mathop{\\longrightarrow}\\limits^\\sim(\\partial V\\times[0,1])\\times D_t\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>une trivialisation du fibré \\(f^C\\) sur \\(D_t\\), dont la fibre en \\(y\\in D_t\\) induise l'identité \\(\\partial V=\\partial(f^{-1}(y))\\mathop{\\to}\\limits^\\sim\\partial V\\times\\{1\\}\\). Soit \\(C=f^C\\cap B\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\alpha:C\\mathop{\\longrightarrow}\\limits^\\sim(\\partial V\\times[0,1[)\\times D_t\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>induit par \\(f^\\alpha\\). On garde les notations de 3.1.8.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(R\\) la relation d'équivalence sur \\(\\overline B\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nx=y\\quad\\text{ou}\\quad p(x),p(y)\\in C\\quad\\text{et}\\quad\n\\alpha(p(x)),\\alpha(p(y))\\text{ ont même image dans }\\partial V\\times[0,1[.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\({}_1\\overline B=\\overline B/R\\), \\({}_1\\overline B^*=\\overline B^*/R\\) et \\({}_1\\overline C^*=p^{-1}(C)/R\\). On dispose d'un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nB_0\\ar@{^{(}-&gt;}[r]^-{\\bar i}\\ar@{=}[d]&amp;\\overline B\\ar[d]^q&amp;{{}_1\\overline B^*}\\ar[l]_-{\\bar j}\\ar[d]^{q'}\\\\\nB_0\\ar@{^{(}-&gt;}[r]^-{\\bar i}&amp;{{}_1\\overline B}&amp;{{}_1\\overline B^*}\\ar[l]_-{\\bar j}\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\Lambda^*\\) une résolution \\(\\pi_1(D^*)\\)-équivariante de \\(\\Lambda\\) par des faisceaux acycliques sur \\(\\overline B^*\\). Par définition, la variation se calcule à partir du morphisme de complexe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Lambda[0]\\longrightarrow\\bar i^*\\bar j_*(\\Lambda^*).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(\\Lambda\\mathop{\\to}\\limits^\\sim Rq_*\\Lambda\\) et \\(\\Lambda\\mathop{\\to}\\limits^\\sim Rq'_*\\Lambda\\), on peut aussi la calculer à l'aide d'une résolution équivariante de \\(\\Lambda\\) sur \\({}_1\\overline B^*\\) et du morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\Lambda[0]\\longrightarrow\\bar i^*{}_1\\bar j_*(\\Lambda).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Via \\(A\\) \\(B\\), on identifie alors la variation au morphisme composé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{3.1.10.1}\n\\xymatrix{\nR\\Gamma(V,\\Lambda)\\ar[r]^-\\sim&amp;R\\Gamma(V^\\circ,\\Lambda)&amp;R\\Gamma({}_1\\overline B^*,\\Lambda)\\ar[l]_-{\\overset{\\sim}{\\scriptscriptstyle 1}}\\ar[d]^{\\operatorname{Var}}\\\\\n&amp;R\\Gamma_c(V^\\circ,\\Lambda)&amp;R\\Gamma({}_1\\overline B^*\\bmod{}_1\\overline C^*,\\Lambda)\\ar[l]_-{\\overset{\\sim}{\\scriptscriptstyle 2}}\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où ① et ② sont déduits de l'inclusion de \\(V^\\circ\\) dans \\({}_1\\overline B^*\\), et où \\(\\operatorname{Var}\\) est la variation 3.1.9 pour \\({}_1\\overline B^*\\) et l'action du générateur positif de \\(\\pi_1(D^*)\\) (ce groupe agit sur \\({}_1\\overline B^*\\) via son action 1.15 ; il agit trivialement sur \\({}_1\\overline C^*\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Choisissons une connexion \\(\\nabla\\) sur \\(B^*/D^*\\), compatible à la trivialisation de \\(C\\). Cette connexion trivialise \\(\\overline B^*\\) et définit par passage au quotient</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu:{}_1\\overline B^*\\longrightarrow V.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(T\\) défini comme en 3.1.3, le diagramme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\n{{}_1\\overline B^*}\\ar[r]^u\\ar[d]_T&amp;V\\ar[d]^T\\\\\n{{}_1\\overline B^*}\\ar[r]^u&amp;V\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est commutatif. L'application \\(u\\) induit des isomorphismes en cohomologie, de sorte que (3.1.10) résulte de 3.1.10.1 et de la fonctorialité de la variation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition 3.1.10 sera censée justifier un calcul explicite que nous ferons plus tard et où, comme ici, \\(T\\) sera l'identité dans un voisinage de \\(\\partial V\\). On prendra une classe de cohomologie \\(c\\), représentée par un courant \\(C\\), et on utilisera que \\(\\operatorname{Var}(c)\\) est représenté par le courant (TC-C), à support compact dans \\(V^\\circ\\).</p>"
+    },
+    {
+     "id": "14.3.1.11",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.11\"><strong>3.1.11.</strong> Pour calculer en pratique \\(T\\), on procède souvent en deux étapes</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">\\(a\\)</span> On fixe \\(t\\) et \\(d\\) avec \\(t\\leq\\tau(d)\\), on choisit \\(y\\in D_t\\), et on choisit une connexion \\(\\nabla\\) sur \\(f^{-1}(S_{|y|})\\cap B_{t,d}\\). Cette connexion \\(\\nabla\\) définit un difféomorphisme \\(T_0\\) de \\(V_0=f^{-1}(y)\\cap B_{t,d}\\) sur lui-même, qui n'est pas nécessairement l'identité sur le bord.</li>\n<li><span class=\"item-label\">\\(b\\)</span> On choisit une trivialisation de \\(\\partial B_{t,d}\\) sur \\(D_t\\). L'intégration de \\(\\nabla\\) fournit un difféomorphisme \\(\\varphi(\\theta)\\) de \\(\\partial V\\) avec \\(f^{-1}(e^{2\\pi i\\theta}y)\\cap\\partial B_{t,d}\\), identifié à \\(\\partial V\\) par la trivialisation. Pour \\(0\\leq\\theta\\leq1\\), \\(\\varphi(\\theta)\\) est un chemin dans \\(\\operatorname{Diff}(\\partial V)\\), qui relie l'identité à \\(\\partial T_0\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le couple \\((T_0,\\varphi)\\) obtenu dépend des choix arbitraires faits. L'ensemble de ces choix étant contractile, il n'en dépend pas à homotopie près. Pour \\(T\\) du type 3.1.3, \\((T,\\text{chemin trivial})\\) est un \\((T_0,\\varphi)\\) du type considéré ici.</p>"
+    },
+    {
+     "id": "14.3.1.12",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.12\"><strong>3.1.12.</strong> On sait que \\(\\operatorname{Diff}(V)\\to\\operatorname{Diff}(\\partial V)\\) est une fibration, de sorte que \\(T\\mapsto(T,\\text{trivial})\\) induit une bijection entre</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) l'ensemble des difféomorphismes \\(T:V\\to V\\) avec \\(\\partial T=\\operatorname{Id}\\), à isotopie près, avec</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) l'ensemble des couples \\((T_0,\\varphi)\\), \\(T_0:V\\mathop{\\longrightarrow}\\limits^\\sim V\\), \\(\\varphi\\) classe d'homotopie de chemins de \\(\\operatorname{Id}\\) à \\(\\partial T\\), à isotopie près.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un couple \\((T_0,\\varphi)\\) calculé par \\(a\\) \\(b\\) ci-dessus détermine donc \\(T\\). Concrètement, on calcule \\(T\\) à l'aide de \\((T_0,\\varphi)\\) comme suit :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(α) On prend un collier \\([0,1]\\times\\partial V\\mathop{\\longrightarrow}\\limits^\\alpha V\\) de \\(\\partial V\\) dans \\(V\\) (avec \\(\\alpha(1,x)=x\\)), et un représentant de \\(\\varphi\\) tel que \\(\\varphi:[0,1]\\to\\operatorname{Diff}(\\partial V)\\), prolongé pour \\(x&lt;0\\) par \\(\\operatorname{Id}\\), soit \\(C^\\infty\\). Soit, dans le collier, \\(\\beta(x)=\\operatorname{pr}_1\\alpha^{-1}(x)\\) (\\(\\beta\\) est sans point critique, à valeurs dans \\([0,1]\\), et vaut 1 sur \\(\\partial V\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(β) On prend \\(T=T_0\\) en dehors du collier et, dans le collier,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[T(x)=T_0(\\varphi(\\beta(x))^{-1}(x)).\\]\n\n</p>"
+    },
+    {
+     "id": "14.3.1.13",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.1.13\"><strong>3.1.13.</strong> Voici une variante de 3.1.11\\(b\\) pour calculer la classe d'homotopie de chemins \\(\\varphi\\). Sur chaque rayon \\(\\arg(z)=\\theta\\), on choisit une trivialisation du fibré \\(\\partial B_{t,d}\\), variant continûment avec \\(\\theta\\). On identifie \\((\\partial V)_0=f^{-1}(0)\\cap\\partial B_{t,d}\\) à \\(\\partial V\\) grâce à la trivialisation au-dessus du rayon passant par \\(y\\). Soit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\psi_\\theta:V\\longrightarrow f^{-1}(e^{i\\theta}y)\\cap B_{t,d}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>déduit de l'intégration de \\(\\nabla\\). Transportant \\(\\partial\\psi_\\theta\\) le long des rayons, on obtient un difféomorphisme de \\((\\partial V)_0\\), donc de \\(\\partial V\\), sur lui-même. C'est \\(\\varphi(\\theta)\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-3-2",
+   "title": "3.2. La formule de Picard-Lefschetz (cas transcendant).",
+   "blocks": [
+    {
+     "id": "14.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"14.3.2\">3.2. La formule de Picard-Lefschetz (cas transcendant).</h2>"
+    },
+    {
+     "id": "14.3.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.1\"><strong>3.2.1.</strong> Nous nous proposons d'expliciter les résultats de 3.1 pour l'application\n\\[f=\\sum_1^{n+1}z_i^2\\quad\\text{de }\\mathbb C^{n+1}\\text{ dans }\\mathbb C.\\]\nOn prend pour \\(\\delta\\) la fonction \\(\\sum|z_i|^2\\), et une boîte \\(B=B_{a,b}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\left|\\sum z_i^2\\right|\\leq a^2,\\qquad \\sum|z_i|^2\\leq b^2\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(0&lt;a&lt;b\\) (ce n'est que pour simplifier les notations qu'on prend une boîte fermée plutôt qu'une boîte 3.1.2).</p>"
+    },
+    {
+     "id": "14.3.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.2\"><strong>3.2.2.</strong> La variété des cycles évanescents \\(V\\) admet l'équation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.2.2.1}\\sum z_i^2=a^2,\\qquad \\sum|z_i|^2\\leq b^2.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Décomposons \\(z=(z_i)\\) en parties réelle et imaginaire : \\(z=x+iy\\). Les équations précédentes se récrivent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.2.2.2}x^2-y^2=a^2,\\qquad x\\cdot y=0\\quad(\\text{i.e. }x\\perp y\\text{ dans }\\mathbb R^n),\\qquad x^2+y^2\\leq b^2.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prenons sur \\(V\\) le nouveau système de coordonnées</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[X=x/|x|\\quad\\text{et}\\quad Y=y\\left(\\frac{b^2-a^2}{2}\\right)^{-1/2}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a \\(x=X(a^2+y^2)^{1/2}\\) et (3.2.2.2) se récrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.2.2.3}X^2=1,\\qquad XY=0,\\qquad Y^2\\leq1.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci identifie \\(V\\) au fibré en boules tangent à la sphère \\(S^n\\).</p>"
+    },
+    {
+     "id": "14.3.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.3\"><strong>3.2.3.</strong> L'application \\(\\theta\\longmapsto\\exp(2\\pi i\\theta)a\\) identifie \\(\\mathbb R\\) au revêtement universel de la circonférence \\(S_a\\) de rayon \\(a\\) et centre 0 de \\(\\mathbb C\\). Le fibré sur \\(\\mathbb R\\) image réciproque de \\(B\\) est isomorphe à \\(\\mathbb R\\times V\\). Nous le trivialiserons à l'aide de l'isomorphisme \\(v\\mapsto\\exp(\\pi i\\theta)v\\) de \\(V\\) avec la fibre de \\(B\\) en \\(\\exp(2\\pi i\\theta)a\\). Soit \\(T_0\\) de cette trivialisation comme en 3.1.11. En coordonnées (3.2.2.3), on a \\(T_0(X,Y)=(-X,-Y)\\).</p>"
+    },
+    {
+     "id": "14.3.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.4\"><strong>3.2.4.</strong> Le fibré sur le disque \\(D_a\\) de rayon \\(a\\), bord du « fibré » \\(B\\), a pour équation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\sum|z_i|^2=b^2,\\qquad f(z)\\in D_a,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la projection sur le disque étant \\(f\\). Nous nous proposons de décrire une trivialisation de l'image réciproque de ce fibré au-dessus de chacun des rayons \\(e^{2\\pi i\\theta}\\mathbb R^+\\cap D_a\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Au dessus du rayon \\(\\mathbb R^+\\cap D_a\\), on prend pour trivialisation l'isomorphisme avec \\((\\mathbb R^+\\cap D_a)\\times\\partial V\\) donné en coordonnées (3.2.2.3) sur \\(\\partial V\\) par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[z=x+iy\\longmapsto(f(z),X,Y)=(f(z),x/|x|,y/|y|).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Au-dessus de \\((e^{2\\pi i\\theta}\\mathbb R^+)\\cap D_a\\), on le trivialise par la trivialisation image de la précédente par multiplication par \\(e^{\\pi i\\theta}\\). Appliquons 3.1.13 et prenons sur \\(\\partial V\\) les coordonnées \\((X,Y)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.2.4.1}X^2=Y^2=1,\\qquad XY=0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On trouve que, si \\(\\varphi(\\theta)\\) transforme \\((X,Y)\\) en \\((X_\\theta,Y_\\theta)\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.2.4.2}X_\\theta+iY_\\theta=e^{\\pi i\\theta}(X+iY)\\qquad(0\\leq\\theta\\leq1).\\]\n\n</p>"
+    },
+    {
+     "id": "14.3.2.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.5\"><strong>3.2.5.</strong> En résumé, la variété des cycles évanescents \\(V\\) est le fibré en boules tangent à \\(S^n\\). La transformation de monodromie est représentée par \\((T_0,\\varphi)\\), où \\(T_0\\) est la différentielle de l'application \\(x\\mapsto\\) point antipodique, et où \\(\\varphi\\) est le chemin suivant de \\(\\operatorname{Id}\\) à \\(\\partial T_0\\) : par \\(\\varphi(\\theta)\\), on déplace par transport parallèle chaque vecteur tangent unitaire le long de la géodésique qu'il engendre d'une longueur \\(+\\pi\\theta\\) (le + signifie : « dans le sens vers lequel pointe le vecteur »). Pour \\(\\theta=1\\), on arrive au vecteur antipodique.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par 3.1.13, on obtient la description suivante de \\(T\\) : soit \\(\\varphi\\) une application \\(C^\\infty\\) \\([0,1]\\to[0,1]\\), valant 0 près de 0 et 1 près de 1. \\(T\\) consiste à déplacer \\(u\\), le long de la géodésique qu'il engendre, d'une longueur</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[-\\pi(1-\\varphi(|u|))\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(près de \\(|u|=1\\), c'est l'identité, près de \\(|u|=0\\), c'est l'application antipodique).</p>"
+    },
+    {
+     "id": "14.3.2.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.7\"><strong>3.2.7.</strong> Soient \\(W\\) une variété différentielle de dimension \\(n\\) et \\(p:T(W)\\to W\\) son fibré tangent (vu comme une variété).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\((x_1,\\ldots,x_n)\\) est un système de coordonnées locales sur \\(W\\), \\((x_1,\\ldots,x_n,dx_1,\\ldots,dx_n)\\) est un système de coordonnées locales sur \\(T(W)\\). Soit \\(\\varepsilon'\\) l'orientation de \\(T(W)\\) définie par ce système de coordonnées, elle ne dépend pas du choix des \\(x_i\\), donc est globalement définie. Supposons \\(W\\) orientable. La sous-variété \\(W\\subset T(W)\\) (section 0), munie d'une orientation (resp. d'une orientation de son fibré normal), définit un élément \\(w\\) de \\(H_d(T(W))\\) (resp. \\(H_c^d(T(W))\\)). On sait que la self-intersection de \\(W\\subset T(W)\\) est la caractéristique d'Euler-Poincaré</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\int w\\wedge w=\\chi(W)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(pour l'orientation \\(\\varepsilon'\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans le cas de la variété des cycles évanescents \\(V\\), la structure complexe de \\(V\\) définit une orientation \\(\\varepsilon\\). Elle est liée à l'orientation \\(\\varepsilon'\\) du fibré tangent à \\(S^n\\) par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\varepsilon=(-1)^{\\frac{n(n-1)}2}\\varepsilon'.\\]\n\n</p>"
+    },
+    {
+     "id": "14.3.2.8",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.8\"><strong>3.2.8.</strong> Le <u>cycle évanescent</u> \\(\\delta\\) est bien défini au signe près. Pour \\(n\\neq0\\), c'est l'élément de \\(H_c^n(V^\\circ)\\) défini par la sous-variété \\(S^n\\subset V^\\circ\\). Pour \\(n=0\\), \\(V\\) est réduit à deux points et c'est la différence de ces deux points. Pour l'orientation complexe de \\(V\\), on a par 3.2.7</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\tag{3.2.8.1}(\\delta,\\delta)=(-1)^{\\frac{n(n-1)}2}(1+(-1)^n).\\]\n\n</p>"
+    },
+    {
+     "id": "14.3.2.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.9\"><strong>3.2.9.</strong> Posons \\(\\widetilde H_c^i(V^\\circ)=\\ker(H_c^i(V^\\circ)\\mathop{\\longrightarrow}\\limits^{\\operatorname{Tr}}\\mathbb Z)\\) (c'est \\(H_c^i\\) pour \\(i\\neq2n\\)). On a alors</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\widetilde H_c^i(V^\\circ)=0\\quad\\text{pour }i\\neq n,\\qquad \\widetilde H_c^n(V^\\circ)=\\mathbb Z,\\quad\\text{engendré par }\\delta.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dualement, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\widetilde H^i(V)=0\\quad\\text{pour }i\\neq n,\\qquad \\widetilde H^n(V)\\mathop{\\longrightarrow}\\limits^{(\\ ,\\delta)}\\mathbb Z.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(n\\neq0\\), l'image de \\(\\delta\\in H_c^n(V^\\circ)\\) dans \\(H^n(V)\\) est nulle pour \\(n\\) impair, et divisible par deux (et pas plus) pour \\(n\\) pair.</p>"
+    },
+    {
+     "id": "14.3.2.10",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.3.2.10\"><strong>3.2.10.</strong> Calculons la variation</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Var}:\\widetilde H^n(V)\\longrightarrow H_c^n(V^\\circ).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous utiliserons d'abord l'orientation \\(\\varepsilon'\\), et supposerons que \\(n\\neq0\\). Soit \\(\\alpha\\) une orientation du fibré tangent à \\(S^n\\), et soit \\(\\delta\\in H_c^n(V^\\circ)\\) défini par \\(S^n\\subset V^\\circ\\) et l'orientation \\(\\alpha\\) de son fibré normal. Le cocycle \\(\\delta'\\in H^n(V)\\) tel que \\((\\delta',\\delta)=1\\) est représenté par une fibre de la fibration de \\(V^\\circ\\) sur \\(S^n\\) ; le fibré normal à cette fibre est le fibré constant, de valeur l'espace tangent en un point de \\(S^n\\), et est muni de l'orientation \\(\\alpha\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On notera que cette assertion ne dépend pas de la convention de signe choisie pour définir l'application</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(\\text{sous-variété + orientation du fibré normal})\\longrightarrow\\text{cohomologie}\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(changer de convention change \\(\\delta\\) en \\(-\\delta\\) et \\(\\delta'\\) en \\(-\\delta'\\)). Elle est valable si \\(\\operatorname{Tr}:H_c^{2n}(V,\\mathbb R)\\to\\mathbb R\\) est défini comme suit :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(α) \\(\\Omega_V^*\\) étant une résolution molle de \\(\\mathbb R\\), \\(\\Gamma_c(\\Omega_V^*)\\) représente \\(R\\Gamma(V,\\mathbb R)\\), d'où un isomorphisme \\(H^i(\\Gamma_c(V,\\Omega_V^*))=H_c^i(V,\\mathbb R)\\) (on n'utilise pas le cobord itéré) ;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(β) \\(\\operatorname{Tr}\\) est l'intégration.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(T(\\delta')\\) coïncide avec \\(\\delta'\\) dans un voisinage de \\(\\partial V\\), de sorte que \\(\\operatorname{Var}(\\delta')=T(\\delta')-\\delta'\\) est à support compact dans \\(V^\\circ\\). On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[T(\\delta')-\\delta'\\sim-\\delta,\\qquad\\text{d'où}\\qquad \\operatorname{Var}(\\delta')=-(\\delta',\\delta)\\cdot\\delta.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Voici le dessin pour \\(n=1\\). On dessine le fibré tangent à \\(S^1\\) en faisant pointer vers l'extérieur les vecteurs pointant dans le sens trigonométrique choisi pour orienter \\(S^1\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<figure>\n<figcaption>Pour \\(n=1\\) : \\(\\delta,\\delta'\\) et \\(\\varepsilon\\) ; \\(\\operatorname{Var}(\\delta')\\).</figcaption>\n</figure>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour l'orientation \\(\\varepsilon\\), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\operatorname{Var}(x)=-\\varepsilon/\\varepsilon'\\,(x\\delta)\\delta.\\]\n\n</p>"
+    },
+    {
+     "id": "14.3.2.11",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.3.2.11\"><div class=\"thm-head\"><u>Théorème 3.2.11.</u></div><div class=\"thm-body\"><p><u>Le groupe \\(\\widetilde H_c^n(V^\\circ)\\) est isomorphe à \\(\\mathbb Z\\), engendré par le cycle évanescent \\(\\delta\\). Le groupe \\(\\widetilde H^n(V)\\) est aussi isomorphe à \\(\\mathbb Z\\), et dual du groupe précédent. Les autres \\(\\widetilde H_c^i(V^\\circ)\\) et \\(\\widetilde H^i(V)\\) sont nuls.</u></p>\n<p><u>La variation est donnée par</u></p>\n\\[\n\\operatorname{Var}(x)=-(-1)^{\\frac{n(n-1)}2}(x\\delta)\\delta,\n\\qquad\\text{et}\\qquad\n(\\delta,\\delta)=(-1)^{\\frac{n(n-1)}2}(1+(-1)^n).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Selon la congruence de \\(n\\bmod4\\), on a la table suivante</p>"
+    },
+    {
+     "id": null,
+     "type": "table",
+     "label": null,
+     "title": null,
+     "html": "<table class=\"tabular\">\n<tr><td>\\(n\\bmod4\\)</td><td>0</td><td>1</td><td>2</td><td>3</td></tr>\n<tr><td>\\((\\delta,\\delta)\\)</td><td>2</td><td>0</td><td>−2</td><td>0</td></tr>\n<tr><td>\\(\\operatorname{Var}(x)=\\pm(x\\delta)\\delta\\)</td><td>−</td><td>−</td><td>+</td><td>+</td></tr>\n<tr><td>\\(T(\\delta)=(-1)^{n+1}\\delta\\)</td><td>\\(-\\delta\\)</td><td>\\(\\delta\\)</td><td>\\(-\\delta\\)</td><td>\\(\\delta\\)</td></tr>\n</table>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>À titre de contrôle, on note qu'on a bien</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[T(\\delta)=\\delta+\\operatorname{Var}(\\delta).\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-4",
+   "title": "4. Cohomologie de De Rham",
+   "blocks": [
+    {
+     "id": "14.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"14.4\">4. <u>Cohomologie de De Rham</u></h2>"
+    },
+    {
+     "id": "14.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.1\"><strong>4.1.</strong> Soient \\(D\\) un disque analytique complexe, \\(0\\in D\\), \\(D^*=D-\\{0\\}\\) et \\(\\widetilde D^*\\) un revêtement universel de \\(D^*\\). Soient \\(X\\) un espace analytique, \\(f:X\\to D\\) un morphisme et le diagramme (1.27.1)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.1}\n\\xymatrix{\nX_0\\ar@{=}[d]&amp;\\overline X\\ar[l]_-{\\bar i}\\ar[d]^p&amp;\\overline X^*\\ar[l]_-{\\bar j}\\ar[d]^{p'}\\\\\nX_0&amp;X\\ar[l]^-i&amp;X^*\\ar[l]^-j\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On suppose que \\(X^*=X-X_0\\) est non singulier \\(= lisse\\). Son revêtement \\(\\overline X^*\\) est donc lisse, on note \\(\\Omega^*_{\\overline X^*}\\) le complexe de De Rham des faisceaux de formes différentielles holomorphes sur \\(\\overline X^*\\). C'est une résolution du faisceau constant \\(\\mathbb C\\) (lemme de Poincaré holomorphe), d'où une flèche</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.1.2}\n\\bar j_*\\Omega^*_{\\overline X^*}\\longrightarrow R\\bar j_*\\mathbb C\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dans \\(D^+(\\overline X,\\mathbb C)\\).</p>"
+    },
+    {
+     "id": "14.4.2",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.2\"><div class=\"thm-head\"><u>Proposition 4.2.</u></div><div class=\"thm-body\"><p><u>Le morphisme (4.1.2) est un isomorphisme.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que 4.1.1 est un quasi-isomorphisme en tout point de \\(\\overline X^*\\subset\\overline X\\). Il suffit donc de montrer que tout point \\(x\\in X_0\\) a un système fondamental de voisinages \\(U\\) dans \\(\\overline X\\) tels que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\bar j^{-1}(U),\\Omega^*)=0\\quad\\text{pour }q&gt;0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(V\\) parcourant un système fondamental de \\(x\\) dans \\(X\\), les \\(p^{-1}(V)\\) forment un système fondamental de voisinages de \\(x\\) dans \\(\\overline X\\). En particulier, les \\(p^{-1}(V)\\), pour \\(V\\) un voisinage de Stein de \\(x\\) dans \\(X\\), forment un système fondamental de voisinages de \\(x\\). Pour \\(V\\) de Stein, \\(V-X_0\\) est encore de Stein (car \\(X_0\\cap V\\) est défini par une équation dans \\(V\\)), ainsi que son revêtement \\(p'^{-1}(V-X_0)=\\bar j^{-1}p^{-1}(V)\\). Pour tout faisceau cohérent \\(\\mathcal F\\) sur \\(\\overline X^*\\), on a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^q(\\bar j^{-1}p^{-1}(V),\\mathcal F)=0\\quad\\text{pour }q&gt;0,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui achève la démonstration.</p>"
+    },
+    {
+     "id": "14.4.3",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.3\"><div class=\"thm-head\"><u>Corollaire 4.3.</u></div><div class=\"thm-body\"><p><u>L'isomorphisme (4.1.2) induit un isomorphisme</u></p>\n\\[\n\\tag{4.3.1}\n\\bar i^*\\bar j_*\\Omega^*_{\\overline X^*}\\mathop{\\longrightarrow}\\limits^\\sim R\\Psi_\\eta(\\mathbb C).\n\\]\n</div></div>"
+    },
+    {
+     "id": "14.4.4",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.4\"><div class=\"thm-head\"><u>Variante 4.4.</u></div><div class=\"thm-body\"><p><u>Soit \\(V\\) un faisceau localement constant de vectoriels complexes de dimension finie sur \\(X^*\\) (un système local complexe). Le quasi-isomorphisme \\(V\\to\\Omega^*_{X^*}(V)\\) (lemme de Poincaré) induit un quasi-isomorphisme</u></p>\n\\[\n\\tag{4.4.1}\n\\bar i^*\\bar j_*\\Omega^*_{\\overline X^*}(p'^*V)\\mathop{\\longrightarrow}\\limits^\\sim R\\Psi_\\eta(V).\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous nous proposons de montrer que 4.3.1 reste vrai lorsqu'on remplace \\(\\bar i^*\\bar j_*\\Omega^*_{\\overline X^*}\\) par un sous-complexe défini par des conditions de croissance et de monodromie.</p>"
+    },
+    {
+     "id": "14.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.5\"><strong>4.5.</strong> Soient \\(f:X^*\\to D^*\\) un espace topologique sur \\(D^*\\), \\(F\\) un faisceau de \\(f^*\\mathcal O_{D^*}\\)-modules sur \\(X^*\\) et \\(\\overline F\\) son image réciproque sur \\(\\overline X^*=X^*\\times_{D^*}\\widetilde D^*\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(z:D\\hookrightarrow\\mathbb C\\) un plongement holomorphe de \\(D\\) dans \\(\\mathbb C\\), avec \\(z(0)=0\\). Par la suite, nous aurons toujours le droit de rétrécir \\(D\\) ; pour un disque assez petit, l'existence de \\(z\\) est une trivialité. On suppose choisie sur \\(\\widetilde D^*\\) une fonction \\(\\log z\\) telle que \\(\\exp(\\log z)=z\\), et on pose</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[z^\\alpha=\\exp(\\alpha\\log z)\\qquad(\\alpha\\in\\mathbb C).\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le groupe \\(\\pi_1(D^*)\\) agit (par transport de structure) sur \\(H^0(\\overline X^*,\\overline F)\\). Un élément \\(f\\in H^0(\\overline X^*,\\overline F)\\) est de <u>détermination finie</u> si l'ensemble de ses transformés sous \\(\\pi_1(D^*)\\) engendre un espace vectoriel \\(V(f)\\) de dimension finie sur \\(\\mathbb C\\). Soit \\(T\\) le générateur positif de \\(\\pi_1(D^*)\\). Pour que \\(f\\) soit de détermination finie, il faut et il suffit qu'il existe un polynôme \\(P\\in\\mathbb C[X]\\), non nul, tel que \\(P(T)(f)=0\\). Le polynôme \\(P\\) de plus petit degré tel que \\(P(T)(f)=0\\) est alors le polynôme minimal, égal au polynôme caractéristique, de \\(T\\) agissant sur \\(V(f)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que \\(f\\) est de <u>détermination finie unipotente</u> s'il existe \\(A\\) tel que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(T-1)^Af=0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sur l'espace de ces sections, on définit \\(N=\\dfrac{\\log T}{2\\pi i}\\) par la somme finie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[N(f)=-\\frac1{2\\pi i}\\sum_{n&gt;0}\\frac{(1-T)^n}{n}f.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(f\\) (resp. \\(g\\)) une section de détermination finie unipotente de \\(H^0(D^*,\\mathcal O)\\) (resp. \\(H^0(\\overline X^*,\\overline F)\\)), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[N(fg)=N(f)g+fN(g)\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(le logarithme d'un automorphisme est une dérivation).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On dit que \\(f\\) est de <u>détermination finie quasi-unipotente</u> s'il existe \\(A\\) et \\(B&gt;0\\) avec</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(T^B-1)^Af=0.\\]\n\n</p>"
+    },
+    {
+     "id": "14.4.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.6\"><strong><u>Exemples 4.6.</u></strong> (pour \\(X=D^*\\), \\(F=\\mathcal O\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(T-\\exp(2\\pi i\\alpha))^{k+1}\\bigl(z^\\alpha(\\log z)^k\\bigr)=0,\n\\]\n\\[\nN(\\log z)=1,\n\\qquad\nN\\left(\\frac{(\\log z)^k}{k!}\\right)=\\frac{(\\log z)^{k-1}}{(k-1)!}\\quad(0\\text{ pour }k=0).\n\\]\n\n</p>"
+    },
+    {
+     "id": "14.4.7",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.7\"><div class=\"thm-head\"><u>Proposition 4.7.</u></div><div class=\"thm-body\"><p><u>Pour qu'une section \\(f\\in H^0(\\overline X^*,\\overline F)\\) soit de détermination finie, il faut et il suffit qu'elle puisse s'écrire</u></p>\n\\[\n\\tag{4.7.1}\nf=\\sum_{\\alpha,k}f_{\\alpha,k}\\,z^\\alpha\\frac{(\\log z)^k}{k!},\n\\]\n<p><u>avec \\(0\\leq\\Re(\\alpha)&lt;1\\), \\(k\\in\\mathbb N\\), et les \\(f_{\\alpha,k}\\in H^0(X^*,F)\\) presque tous nuls. Pour \\(f\\) de détermination finie, la décomposition (4.7.1) est unique.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après 4.6, toute section (4.7.1) est de détermination finie. Soit réciproquement \\(f\\) de détermination finie : \\(P(T)(f)=0\\). Posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nP(X)=\\prod_{\\beta\\in\\mathbb C}(X-\\beta)^{n'(\\beta)}\n=\\prod_{0\\leq\\Re(\\alpha)&lt;1}(X-\\exp(2\\pi i\\alpha))^{n(\\alpha)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(n(\\alpha)=n'(\\exp(2\\pi i\\alpha))\\) presque toujours nul. Décomposant le \\(\\mathbb C[X]\\)-module \\(V(f)\\) en composante isotypique, on trouve que \\(f\\) admet une et une seule décomposition</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f=\\sum f'_\\alpha,\\qquad (T-\\exp(2\\pi i\\alpha))^{n(\\alpha)}f'_\\alpha=0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(Q_\\alpha\\in\\mathbb C[X]\\) un polynôme congru à 1 mod \\((X-\\exp(2\\pi i\\alpha))^{n(\\alpha)}\\) et à 0 mod \\((X-\\exp(2\\pi i\\alpha'))^{n(\\alpha')}\\) pour \\(\\alpha'\\neq\\alpha\\), on a \\(f'_\\alpha=Q_\\alpha(T)(f)\\). Posons</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.7.2}\nf_\\alpha=z^{-\\alpha}f'_\\alpha=z^{-\\alpha}Q_\\alpha(T)(f).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Puisque \\(T(z^{-\\alpha}f'_\\alpha)=\\exp(-2\\pi i\\alpha)z^{-\\alpha}T(f'_\\alpha)\\), on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(T-1)^{n(\\alpha)}f_\\alpha=0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(f_\\alpha=\\sum f_{\\alpha,k}\\dfrac{(\\log z)^k}{k!}\\), avec \\(f_{\\alpha,k}\\in H^0(X^*,F)\\), on a alors par 4.6 et l'identité \\(\\sum(-1)^j\\binom{k}{j}=\\delta_{0,k}\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.7.3}\nf_{\\alpha,k}=\\sum_{j\\geq0}(-1)^j\\frac{(\\log z)^j}{j!}N^{j+k}f_\\alpha,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où l'unicité. Si réciproquement \\(f_\\alpha\\) est une section de détermination finie unipotente, \\(f_{\\alpha,k}\\) défini par (4.7.3) est nul pour \\(k\\) grand (car \\(N^kf_\\alpha=0\\) pour \\(k\\) grand) et est invariant sous \\(T\\), donc s'identifie à une section de \\(F\\) sur \\(X^*\\). Montrons, ce qui revient au même, que \\(Nf_{\\alpha,k}=0\\) : on applique à \\(N^kf_\\alpha\\) l'identité</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nN\\sum_{j\\geq0}(-1)^j\\frac{(\\log z)^j}{j!}N^j\n=\\sum_{j&gt;0}(-1)^j\\frac{(\\log z)^{j-1}}{(j-1)!}N^j\n+\\sum_{j\\geq0}(-1)^j\\frac{(\\log z)^j}{j!}N^{j+1}=0.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a enfin</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\sum_{k\\geq0}f_{\\alpha,k}\\frac{(\\log z)^k}{k!}\n=\\sum_{j,k\\geq0}(-1)^j\\frac{(\\log z)^{j+k}}{j!\\,k!}N^{j+k}f_\\alpha\n=\\sum_{n\\geq0}\\left(\\sum_j(-1)^j\\binom nj\\right)\\frac{(\\log z)^n}{n!}N^nf_\\alpha=f_\\alpha,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui prouve 4.7.</p>"
+    },
+    {
+     "id": "14.4.8.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.8.1\"><strong><u>Remarque 4.8.1.</u></strong> La condition \\(\\Re(\\alpha)\\in[0,1[\\) de 4.7 peut se remplacer par \\(\\alpha\\in C\\), pour \\(C\\) n'importe quel domaine fondamental pour \\(\\mathbb C\\to\\mathbb C/\\mathbb Z\\).</p>"
+    },
+    {
+     "id": "14.4.8.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.8.2\"><strong><u>Remarque 4.8.2.</u></strong> Soit \\(f\\) de détermination finie et sa décomposition (4.7.1). Pour \\(0\\leq\\Re(\\alpha)&lt;1\\), et \\(\\alpha\\) tel qu'un \\(f_{\\alpha,k}\\neq0\\), soit \\(m(\\alpha)=1+\\sup\\{k\\mid f_{\\alpha,k}\\neq0\\}\\). Si tous les \\(f_{\\alpha,k}\\) sont nuls, posons \\(m(\\alpha)=0\\). Le polynôme caractéristique de \\(T\\) agissant sur \\(V(f)\\) est</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[P_c(T,V(f))=\\prod_\\alpha(X-\\exp(2\\pi i\\alpha))^{m(\\alpha)}.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En particulier, \\(f\\) est de détermination finie quasi-unipotente si et seulement si dans (4.7.1), on peut se restreindre à \\(\\alpha\\) à être dans \\(\\mathbb Q\\).</p>"
+    },
+    {
+     "id": "14.4.9",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.9\"><strong>4.9.</strong> Revenons aux hypothèses plus restrictives de 4.1 et soit \\(F\\) un faisceau cohérent sur \\(X\\) dont la restriction à \\(X^*\\) soit localement libre.</p>"
+    },
+    {
+     "id": "14.4.10",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.10\"><div class=\"thm-head\"><u>Proposition 4.10.</u></div><div class=\"thm-body\"><p><u>Soit \\(f\\) une section de détermination finie de l'image réciproque \\(\\overline F\\) de \\(F\\) sur \\(\\overline X^*\\). Pour que \\(f\\) soit à croissance modérée le long de \\(X_0\\), il faut et il suffit que les \\(f_{\\alpha,k}\\) de la décomposition (4.7.1) soient méromorphes le long de \\(X_0\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour la définition de « à croissance modérée », je renvoie à [1] 2.10. Il est clair sur (4.7.1), (4.7.2), (4.7.3) que \\(f\\) est à croissance modérée si et seulement si les \\(f_{\\alpha,k}\\) le sont ; pour des sections de \\(F\\) sur \\(X^*\\), on sait que « à croissance modérée le long de \\(X_0\\) » équivaut à « méromorphe le long de \\(X_0\\) ».</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(X=D\\) et \\(F=\\mathcal O\\), 4.10 a le corollaire élémentaire suivant.</p>"
+    },
+    {
+     "id": "14.4.11",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.11\"><div class=\"thm-head\"><u>Corollaire 4.11.</u></div><div class=\"thm-body\"><p><u>Soient \\(K\\) le corps de germes en 0 de fonctions méromorphes sur \\(D\\), et \\(K^m\\) (resp. \\(K^{mu}\\), \\(K^{mqu}\\)) la \\(K\\)-algèbre des germes en 0 de fonctions holomorphes sur \\(\\widetilde D^*\\), à croissance modérée en 0 et de détermination finie (resp. de détermination finie unipotente, resp. quasi-unipotente). Alors, \\(K^m\\), \\(K^{mu}\\), \\(K^{mqu}\\) admettent sur \\(K\\) les bases suivantes</u></p>\n\\[\n\\begin{array}{lll}\nK^m&amp;\\text{les }z^\\alpha(\\log z)^k&amp;(0\\leq\\Re(\\alpha)&lt;1,\\ k\\in\\mathbb N),\\\\\nK^{mu}&amp;\\text{les }(\\log z)^k,&amp;\\\\\nK^{mqu}&amp;\\text{les }z^\\alpha(\\log z)^k&amp;(\\alpha\\in\\mathbb Q,\\ 0\\leq\\alpha&lt;1,\\ k\\in\\mathbb N).\n\\end{array}\n\\]\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sous les hypothèses de 4.9, notons \\(\\Psi_\\eta^m(F)\\) (resp. \\(\\Psi_\\eta^{mu}(F)\\), resp. \\(\\Psi_\\eta^{mqu}(F)\\)) le sous-faisceau de \\(\\bar i^*\\bar j_*(\\overline F)\\) formé des sections de \\(\\overline F\\) au voisinage des points de \\(X_0\\) qui soient à croissance modérée le long de \\(X_0\\) et de détermination finie (resp. finie unipotente, resp. finie quasi-unipotente). Soit \\(F^m\\subset j_*j^*F\\) le faisceau sur \\(X\\) des sections de \\(j_*j^*F\\) méromorphes le long de \\(X_0\\). La proposition 4.10 a le corollaire suivant, indépendant des choix arbitraires de \\(z\\) et \\(\\log z\\).</p>"
+    },
+    {
+     "id": "14.4.12",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.12\"><div class=\"thm-head\"><u>Corollaire 4.12.</u></div><div class=\"thm-body\"><p><u>Les morphismes naturels</u></p>\n\\[\n\\begin{array}{rcl}\n\\text{(i)}&amp;K^m\\otimes_K i^*F^m&amp;\\longrightarrow\\Psi_\\eta^m(F),\\\\\n\\text{(ii)}&amp;K^{mu}\\otimes_K i^*F^m&amp;\\longrightarrow\\Psi_\\eta^{mu}(F),\\\\\n\\text{(iii)}&amp;K^{mqu}\\otimes_K i^*F^m&amp;\\longrightarrow\\Psi_\\eta^{mqu}(F)\n\\end{array}\n\\]\n<p><u>sont des isomorphismes.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le résultat principal de ce paragraphe est le suivant.</p>"
+    },
+    {
+     "id": "14.4.13",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.13\"><div class=\"thm-head\"><u>Théorème 4.13.</u></div><div class=\"thm-body\"><p><u>Le morphisme naturel, induit par 4.3.1,</u></p>\n\\[\n\\tag{4.13.1}\n\\Psi_\\eta^{mqu}(\\Omega_X^*)\\longrightarrow R\\Psi_\\eta(\\mathbb C)\n\\]\n<p><u>est un isomorphisme dans \\(D^+(X_0,\\mathbb C)\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous prouverons en fait des résultats plus généraux (4.15) (4.17.) dont l'énoncé requiert quelques préliminaires que le lecteur intéressé seulement par 4.13 pourra se dispenser de lire.</p>"
+    },
+    {
+     "id": "14.4.14",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.14\"><strong>4.14.</strong> Soit \\(V\\) un faisceau localement constant de \\(\\mathbb C\\)-vectoriels de dimension finie sur \\(X^*\\) (un système local). Soit \\(\\mathcal V=V\\otimes_\\mathbb C\\mathcal O\\) le \\(\\mathcal O\\)-module localement libre correspondant et \\(\\nabla\\) la connexion intégrable sur \\(\\mathcal V\\) pour laquelle les sections locales de \\(V\\) soit horizontale. On sait que \\(\\mathcal V\\) admet un prolongement \\(\\widetilde{\\mathcal V}\\) en un faisceau cohérent sur \\(X\\), tel que la connexion \\(\\nabla\\) soit <u>régulière</u> le long de \\(X_0\\) relativement à ce prolongement. On sait aussi que deux tels prolongements sont méromorphiquement équivalents ([1] II 5.7) ; le faisceau \\(\\Psi_\\eta^m(\\widetilde{\\mathcal V})\\), (et ses variantes \\(\\Psi^{mu}\\), \\(\\Psi^{mqu}\\)), ne dépend donc pas du \\(\\mathcal V\\) choisi ; on le note \\(\\Psi_\\eta^m(\\mathcal V)\\). On définit de même \\(\\Psi_\\eta^m(\\Omega_{X^*}^*(V))=\\Psi_\\eta^m(\\Omega_X^*\\otimes\\mathcal V)\\), et ses variantes \\(\\Psi^{mu}\\), \\(\\Psi^{mqu}\\).</p>"
+    },
+    {
+     "id": "14.4.15",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.15\"><div class=\"thm-head\"><u>Proposition 4.15.</u></div><div class=\"thm-body\"><p><u>Le morphisme naturel, induit par (4.4.1)</u></p>\n\\[\n\\tag{4.15.1}\n\\Psi_\\eta^m(\\Omega_{X^*}^*(V))\\longrightarrow R\\Psi_\\eta(V)\n\\]\n<p><u>est un isomorphisme dans \\(D^+(X_0,\\mathbb C)\\).</u></p></div></div>"
+    },
+    {
+     "id": "14.4.16",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.16\"><strong>4.16.</strong> On dit que \\(V\\) comme en 4.14 est <u>unipotente</u> (resp. <u>quasi-unipotente</u>) le long de \\(X_0\\) si, pour tout morphisme \\(u\\) du disque standard \\(D_0\\) dans \\(X\\), avec \\(u^{-1}(X_0)=\\{0\\}\\), la transformation de monodromie du système local \\(u^*V\\) sur \\(D_0^*\\) est unipotente (resp. quasi-unipotente).</p>"
+    },
+    {
+     "id": "14.4.17",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.17\"><div class=\"thm-head\"><u>Proposition 4.17.</u></div><div class=\"thm-body\"><p><u>Si \\(V\\) est quasi-unipotente, le morphisme naturel induit par (4.4.1)</u></p>\n\\[\n\\tag{4.17.1}\n\\Psi_\\eta^{mqu}(\\Omega_{X^*}^*(V))\\longrightarrow R\\Psi_\\eta(V)\n\\]\n<p><u>est un isomorphisme dans \\(D^+(X_0,\\mathbb C)\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le théorème 4.13 est le cas particulier de 4.17 où \\(V=\\mathbb C\\).</p>"
+    },
+    {
+     "id": "14.4.18",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.18\"><strong>4.18.</strong> Nous traiterons d'abord le cas où \\(X\\) est lisse et où \\((X_0)_{\\mathrm{red}}\\) est un diviseur à croisements normaux dans \\(X\\). Les théorèmes étant locaux, on peut supposer que \\(f\\) est l'application \\(f(z)=\\prod_1^d z_i^{n_i}\\), \\((0&lt;d\\leq e,\\ n_i&gt;0)\\) de \\(X=D^e\\) dans \\(D\\), où \\(D\\) désigne cette fois le disque standard \\(D=\\{z\\in\\mathbb C\\mid |z|&lt;1\\}\\), et il suffit de prouver que la fibre en \\(0\\in D^e\\) de (4.15.1) (resp. 4.17.1) est un quasi-isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(U\\) un voisinage de 0 dans \\(D^e\\) de la forme \\(|z_i|&lt;a\\) \\((0&lt;a\\leq1)\\). On définit \\(U_0\\), \\(\\overline U\\), \\(U^*\\), \\(\\overline U^*\\) en prenant l'image réciproque de \\(U\\) dans 4.1.1. La cohomologie de \\(U^*\\) ou \\(\\overline U^*\\) est indépendante de \\(a\\), de sorte que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[H^*(\\overline U^*,V)\\mathop{\\longrightarrow}\\limits^\\sim(R^*\\Psi_\\eta(V))_0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le groupe fondamental \\(\\mathbb Z^d\\) de \\(X^*=(D^*)^d\\times D^{e-d}\\) (égal à celui de \\(U^*\\)) étant abélien, \\(V\\) admet une filtration finie de quotients successifs des systèmes locaux de rang un. Par dévissage, nous pouvons donc supposer \\(V\\) de rang un.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(\\widetilde{\\mathcal V}\\) comme en 4.14, nous noterons \\(j_*^m\\Omega_{X^*}^*(V)\\) le sous-complexe de \\(j_*\\Omega_{X^*}^*(V)\\) de composantes les \\((\\Omega_X^p\\otimes\\widetilde{\\mathcal V})^m\\). D'après [1] II 6.4.1 et 6.8, l'application naturelle déduite du quasi-isomorphisme \\(V\\mathop{\\longrightarrow}\\limits^\\sim\\Omega_{X^*}^*(V)\\) (lemme de Poincaré holomorphe),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.18.1}\nj_*^m\\Omega_{X^*}^*(V)\\longrightarrow Rj_*V\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un quasi-isomorphisme. On a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.18.2}\nH^*((j_*^m\\Omega_{X^*}^*(V))_0)\\mathop{\\longrightarrow}\\limits^\\sim(R^*j_*V)_0\n\\mathop{\\longleftarrow}\\limits^\\sim H^*(U,V).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ceci sera le seul ingrédient analytique de cette partie 4.18 de la démonstration.</p>"
+    },
+    {
+     "id": "14.4.18.3",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.18.3\"><div class=\"thm-head\"><u>Lemme 4.18.3.</u></div><div class=\"thm-body\"><p><u>Pour \\(V\\) de rang un, on a</u></p>\n<p>(i) <u>pour \\(V\\) non trivial : \\(H^*(U^*,V)=0\\)</u></p>\n<p>(ii) <u>pour \\(V=\\mathbb C\\) : \\(H^*(U^*,V)=\\bigwedge^*\\mathbb C^d\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, \\(U^*\\) a le type d'homotopie d'un tore.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\eta\\) le générateur de \\(H^1(D^*,\\mathbb Z)\\), et son image réciproque dans \\(H^1(U^*,\\mathbb Z)\\).</p>"
+    },
+    {
+     "id": "14.4.18.4",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.18.4\"><div class=\"thm-head\"><u>Lemme 4.18.4.</u></div><div class=\"thm-body\"><p><u>Pour \\(V\\) de rang un, l'application naturelle</u></p>\n\\[\nH^*(U^*,\\mathbb C)\\mathop{\\longrightarrow}\\limits^\\sim_{(4.18.1)}H^*((j_*^m\\Omega_{X^*}^*(V))_0)\n\\longrightarrow H^*(\\Psi_\\eta^{mu}(\\Omega_{X^*}^*(V))_0)\n\\]\n<p><u>identifie \\(H^*(\\Psi_\\eta^{mu}(\\Omega_{X^*}^*(V))_0)\\) à \\(H^*(U^*,V)/\\eta H^*(U^*,V)\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Utilisons 4.12 (ii), et l'identité \\(d\\log f=\\sum n_i\\dfrac{dz_i}{z_i}\\). Le complexe \\(\\Psi_\\eta^{mu}(\\Omega_{X^*}^*(V))_0\\) s'identifie au complexe simple \\(\\underline sK\\) associé (en prenant des sommes) au complexe double \\(K\\) de composantes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[K^{-p,n+p}=\\frac{(\\log f)^p}{p!}\\cdot(j_*^m\\Omega_{X^*}^n(V))_0.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce complexe est dans un mauvais quadrant (\\(p\\leq0\\), \\(q\\geq0\\), \\(p+q\\geq0\\)) ; toutefois, \\(\\underline sK\\) est limite inductive des sous-complexes \\(\\underline s\\,\\sigma_{p\\geq p_0}(K)\\) de composantes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[(\\underline s\\,\\sigma_{p\\geq p_0}K)^n=\\bigoplus_{\\substack{p+q=n\\\\p\\geq p_0}}K^{pq},\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et cela suffit à justifier l'argument ci-dessous.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La suite spectrale de la filtration par le premier degré s'écrit</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[E_1^{-p,n+p}=H^n(U^*,V)\\qquad(p\\geq0),\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>avec \\(d_1=2\\pi i\\eta\\wedge:H^n(U^*,V)\\longrightarrow H^{n+1}(U^*,V)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(V\\) est non trivial, \\(E_1=0\\) par 4.18.3 et 4.18.4 se réduit à \\(0=0\\). Supposons que \\(V=\\mathbb C\\). Les \\((E_1,d_1)\\) sont alors des complexes de Koszul, éventuellement tronqués, de sorte que (acyclicité du complexe de Koszul)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\n\\[\nE_2^{pq}=0\\quad\\text{pour }p\\neq0,\n\\qquad E_2^{0n}=H^n(U^*,V)/\\eta H^{n-1}(U^*,V)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui vérifie 4.18.4.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour \\(\\beta\\in\\mathbb C^*\\), notons \\(V_\\beta\\) le système local de rang un sur \\(D^*\\), d'image réciproque sur \\(\\widetilde D^*\\) trivialisée, et de monodromie \\(\\beta\\). Notons encore \\(V_\\beta\\) son image réciproque sur \\(U^*\\). Sur \\(\\overline U^*\\), l'image réciproque de \\(V\\otimes V_\\beta\\) est canoniquement isomorphe à \\(V\\).</p>"
+    },
+    {
+     "id": "14.4.18.5",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.18.5\"><div class=\"thm-head\"><u>Lemme 4.18.5.</u></div><div class=\"thm-body\"><p><u>Pour \\(V\\) de rang un, l'application</u></p>\n\\[\n\\bigoplus_{\\beta\\in\\mathbb C^*}H^*(U^*,V\\otimes V_\\beta)/\\eta H^*(U^*,V\\otimes V_\\beta)\n\\longrightarrow H^*(\\overline U^*,V)\n\\]\n<p><u>est bijective.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(k\\) le pgcd des \\(n_i\\). L'espace \\(\\overline U^*\\) a \\(k\\) composantes connexes, paramétrée par les racines \\(k^{\\text{ièmes}}\\) de l'unité ; sur celle, \\(\\overline U^*_\\xi\\), d'indice \\(\\xi\\), l'image réciproque de la fonction \\(z^{1/k}\\) sur \\(\\widetilde D^*\\) coïncide avec l'image réciproque de la fonction \\(\\xi:\\prod_1^d z_i^{n_i/k}\\) sur \\(U^*\\). La composante \\(\\overline U^*_\\xi\\) a le type d'homotopie d'un tore, et la suite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n0\\longrightarrow\\pi_1(\\overline U^*_\\xi)\\longrightarrow\\pi_1(U^*)\\longrightarrow\\pi_1(D^*)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est exacte. Notons \\(\\varphi:\\mathbb Z^d\\to\\mathbb Z\\) l'application \\(\\pi_1(U^*)\\to\\pi_1(D^*)\\). Si \\(\\operatorname{Ker}(\\varphi)\\) agit non trivialement sur \\(V\\), les deux membres de 4.18.4 sont nuls. Sinon, remplaçant \\(V\\) par un \\(V\\otimes V_\\beta\\), on peut supposer que \\(V\\) est trivial, soit \\(V=\\mathbb C\\). On a alors en cohomologie complexe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH^0(\\overline U^*)\\otimes H^*(U^*)/\\eta H^*(U^*)\\mathop{\\longrightarrow}\\limits^\\sim H^*(\\overline U^*)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et on conclut en notant que \\(V_\\beta\\) est trivial sur \\(U^*\\) si \\(\\beta^k=1\\), que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\bigoplus_{\\beta^k=1}H^0(U^*,V_\\beta)=\\bigoplus_{\\beta^k=1}\\mathbb C\n\\mathop{\\longrightarrow}\\limits^\\sim H^0(\\overline U^*,\\mathbb C),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et que, pour \\(\\beta^k\\neq1\\), \\(H^*(U^*,V_\\beta)=0\\).</p>"
+    },
+    {
+     "id": "14.4.18.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.18.6\"><strong><u>Remarque 4.18.6.</u></strong> Si \\(V\\) est quasi-unipotent, on peut dans 4.18.5 remplacer la sommation sur \\(\\mathbb C^*\\) par une sommation sur les racines de l'unité : la preuve est la même.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Appliquant 4.12, on trouve un diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccccc}\nH^*\\Psi_\\eta^m(\\Omega_{X^*}^*(V))_0&amp;\\mathop{\\longleftarrow}\\limits^\\sim_{4.12}&amp;\\displaystyle\\bigoplus_\\beta H^*\\Psi_\\eta^{mu}(\\Omega_{X^*}^*(V\\otimes V_\\beta))_0&amp;\\mathop{\\longleftarrow}\\limits^\\sim_{4.18.4}&amp;\\displaystyle\\bigoplus_\\beta H^*(U^*,V\\otimes V_\\beta)/\\eta H^*(U^*,V\\otimes V_\\beta)\\\\\n\\downarrow&amp;&amp;&amp;&amp;\\downarrow\\scriptstyle{4.18.5}\\\\\nH^*R\\Psi(V)_0&amp;\\longleftarrow&amp;&amp;\\mathop{\\longleftarrow}\\limits^\\sim&amp;H^*(\\overline U^*,V)\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>dont 4.15 résulte. On obtient 4.17 en y remplaçant \\(\\Psi^{m}\\) par \\(\\Psi^{mqu}\\), la sommation sur \\(\\beta\\) par une sommation sur les racines de l'unité et 4.18.5 par 4.18.6.</p>"
+    },
+    {
+     "id": "14.4.19",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.19\"><strong>4.19.</strong> Déduisons 4.15 et 4.17 du cas particulier 4.18. Soit \\(u:Y\\to X\\) une résolution de \\((X,X_0)\\), c'est-à-dire un morphisme propre, induisant un isomorphisme \\(Y^*\\mathop{\\longrightarrow}\\limits^\\sim X^*\\), tel que \\(Y\\) soit lisse et que \\((Y_0)_{\\mathrm{red}}\\) soit un diviseur à croisements normaux de \\(Y\\). Si \\(V\\) est quasi-unipotente le long de \\(X_0\\), son image réciproque \\(u^*V\\) est quasi-unipotente le long de \\(Y_0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour tout faisceau cohérent \\(F\\) sur \\(X\\), notons \\(F^m\\) ou \\(j_*^m j^*F\\) le sous-faisceau de \\(j_*j^*F\\) formé des sections méromorphe, si \\(f\\) est l'équation de \\(X_0\\), \\(j_*^m j^*F\\) est la limite inductive du système inductif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\tag{4.19.1}\nF\\mathop{\\longrightarrow}\\limits^f F\\mathop{\\longrightarrow}\\limits^f F\\longrightarrow\\cdots\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le lemme suivant est prouvé dans [2].</p>"
+    },
+    {
+     "id": "14.4.19.2",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.19.2\"><div class=\"thm-head\"><u>Lemme 4.19.2.</u></div><div class=\"thm-body\"><p><u>Pour tout faisceau cohérent \\(F\\) sur \\(X\\), on a</u></p>\n\\[\nF^m\\mathop{\\longrightarrow}\\limits^\\sim u_*(u^*F)^m\n\\]\n<p><u>et \\(R^iu_*(u^*F)^m=0\\) pour \\(i&gt;0\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'après le théorème de Grauert, les \\(R^iu_*u^*F\\) sont des faisceaux cohérents. Les noyaux et conoyaux de \\(F\\longrightarrow u_*u^*F\\), et les \\(R^iu_*F\\) \\((i&gt;0)\\) sont nuls en dehors de \\(X_0\\), donc localement annulés par une puissance de \\(f\\). Puisque \\(u\\) est propre, \\(R^iu_*\\) commute aux limites inductives filtrantes, en particulier à la limite inductive (4.19.1), et (4.19.2) en résulte.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De 4.19.2 et 4.12 on déduit que, sous les hypothèses de loc. cit. et désignant encore par \\(u_0\\) l'application de \\(Y_0\\) dans \\(X_0\\) induite par \\(u\\), on a :</p>"
+    },
+    {
+     "id": "14.4.19.3",
+     "type": "theoreme",
+     "label": null,
+     "title": null,
+     "html": "<div class=\"thm\" id=\"14.4.19.3\"><div class=\"thm-head\"><u>Lemme 4.19.3.</u></div><div class=\"thm-body\"><p><u>Les morphismes</u></p>\n\\[\n\\Psi_\\eta^m(F)\\longrightarrow u_{0*}\\Psi_\\eta^m(u^*F)\\longrightarrow Ru_{0*}\\Psi_\\eta^m(u^*F)\n\\]\n<p><u>sont des isomorphismes.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Que la seconde flèche soit un isomorphisme signifie que \\(R^iu_{0*}\\Psi_\\eta^m(u^*F)=0\\) pour \\(i&gt;0\\). Ceci résulte de 4.12 et de \\(R^iu_*(i'u^*F)^m=0\\) pour \\(i&gt;0\\), qui résulte de \\(R^iu_*(u^*F^m)=0\\) pour \\(i&gt;0\\) et du théorème de changement de base pour le morphisme propre \\(u\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour prouver 4.15, il reste à contempler le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{array}{ccc}\n\\Psi_\\eta^m(\\Omega_{X^*}^*(V))&amp;\\mathop{\\longrightarrow}\\limits_{(4.19.3)}&amp;u_{0*}\\Psi_\\eta^m(\\Omega_{Y^*}^*(u^*V))\\mathop{\\longrightarrow}\\limits^\\sim_{(4.19.3)}Ru_{0*}\\Psi_\\eta^m\\Omega_{Y^*}^*(u^*V)\\\\\n\\downarrow&amp;&amp;\\downarrow\\scriptstyle{(4.18)}\\\\\nR\\Psi(V)&amp;\\mathop{\\longrightarrow}\\limits_{(I.3.1;\\,XIII\\ 2.1.7.1)}&amp;&amp;Ru_{0*}R\\Psi(u^*V)\n\\end{array}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On procède de même pour 4.17, en remplaçant partout \\(\\Psi^m\\) par \\(\\Psi^{mqu}\\).</p>"
+    },
+    {
+     "id": "14.4.20",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"14.4.20\"><strong><u>Remarque 4.20.</u></strong> Le théorème 4.13 fournit une incarnation du théorème de monodromie au niveau des complexes.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "14-s9",
+   "title": "Bibliographie",
+   "blocks": [
+    {
+     "id": null,
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2>Bibliographie</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1]   P. Deligne - Equations différentielles à points singuliers réguliers.<br>\n    Lecture Notes in Math. 163, Springer Verlag.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2]   A. Grothendieck - On the De Rham cohomology of algebraic varieties.<br>\n    Publ. Math. IHES <u>29</u>, 95-103 (1966).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3]   K. Lamotke - Isolated critical points and monodromy.</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par P. Deligne"
+}

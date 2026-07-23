@@ -1,0 +1,912 @@
+{
+ "chapter_id": "VIA",
+ "title": "GÉNÉRALITÉS SUR LES GROUPES ALGÉBRIQUES",
+ "number": "VIA",
+ "pages": [
+  {
+   "id": "VIA",
+   "title": "GÉNÉRALITÉS SUR LES GROUPES ALGÉBRIQUES",
+   "blocks": [
+    {
+     "id": "VIA",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"VIA\">EXPOSÉ VI<sub>A</sub><br>GÉNÉRALITÉS SUR LES GROUPES ALGÉBRIQUES<span class=\"author\">par P. Gabriel</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans tout ce chapitre, A désignera un anneau local artinien de corps résiduel \\(k\\). Un\nschéma en groupes G sur \\(\\mathrm{Spec}\\ A\\) sera appelé simplement un <em>\\(A\\)-groupe</em>. Cet \\(A\\)-groupe\nest dit <em>localement de type fini</em> si le schéma sous-jacent est localement de type fini sur\nA ; il est dit <em>algébrique</em> si le schéma sous-jacent est de type fini sur A.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIA-0",
+   "title": "0. Remarques préliminaires",
+   "blocks": [
+    {
+     "id": "VIA.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIA.0\">0. Remarques préliminaires</h2>"
+    },
+    {
+     "id": "VIA.0.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.0.1\">0.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons d'abord un schéma en groupes G sur un schéma quelconque S. Nous\nappelons <em>multiplication</em> le morphisme structural \\(\\mu : G\\times_S G \\to G\\) et <em>inversion</em> le\nmorphisme \\(c : G \\to G\\) qui est défini par les égalités \\(c(T)(x) = x^{-1}\\) (T étant un schéma\nsur S et \\(x\\) un élément de \\(G(T)\\)). Si U et V sont des parties de l'ensemble sous-jacent à\nG, nous notons \\(U\\cdot V\\) l'image par le morphisme multiplication de la partie de \\(G\\times_S G\\)\nformée des points dont la première projection appartient à U, la deuxième à V. De\nmême, les notations \\(U^{-1}\\) et \\(c(U)\\) sont équivalentes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(\\mathrm{pr}_1\\) la projection de \\(G\\times_S G\\) sur le premier facteur et \\(\\sigma : G\\times_S G \\to G\\times_S G\\)\nle morphisme de composantes \\(\\mathrm{pr}_1\\) et \\(\\mu\\). Pour tout S-schéma T, \\(\\sigma(T)\\) est l'applica-\ntion \\((x,y) \\mapsto (x,xy)\\) ; il s'ensuit que \\(\\sigma\\) est un automorphisme. Le composé de cet\nautomorphisme et de la projection \\(\\mathrm{pr}_2\\) de \\(G\\times_S G\\) sur le deuxième facteur est le mor-\nphisme multiplication. Lorsque G est <em>plat</em> sur S, \\(\\mathrm{pr}_2\\) donc \\(\\mu\\) sont des morphismes\n<em>plats</em> ; lorsque G est <em>lisse</em> sur S, \\(\\mathrm{pr}_2\\) donc \\(\\mu\\) sont des morphismes <em>lisses</em>, etc...</p>"
+    },
+    {
+     "id": "VIA.0.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.0.2\">0.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous supposons à partir de maintenant que S est le spectre d'un anneau\nlocal artinien A de corps résiduel \\(k\\). Nous désignons par \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) la catégorie des\nschémas réduits sur \\(k\\). Pour tout schéma X sur A, le schéma réduit \\(X_{\\mathrm{r\\acute{e}d}}\\) est un objet\nde \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) et le foncteur \\(X \\mapsto X_{\\mathrm{r\\acute{e}d}}\\) est adjoint à droite à l'inclusion de \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\)\ndans \\((\\mathrm{Sch}/A)\\). Il s'ensuit que, pour tout \\(A\\)-groupe G, \\(G_{\\mathrm{r\\acute{e}d}}\\) est un groupe dans la\ncatégorie \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Réciproquement, <em>si \\(k\\) est un corps parfait</em>, l'inclusion de \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) dans \\((\\mathrm{Sch}/k)\\)\ncommute aux produits de sorte que les groupes dans la catégorie \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) s'identi-\nfient aux schémas en groupes sur \\(k\\) dont le schéma sous-jacent est réduit. En particu-\nlier, pour tout \\(k\\)-groupe G, \\(G_{\\mathrm{r\\acute{e}d}}\\) est un sous-schéma en groupes de G ; ce sous-groupe\nn'est pas invariant dans G en général : par exemple, si \\(k\\) est un corps de caractéristique\n3, le groupe constant \\((\\mathbb{Z}/(2))_k\\) opère de façon non triviale dans le groupe diagonali-\nsable \\(\\mathbf{D}_k(\\mathbb{Z}/(3))\\) (<a class=\"ref\" href=\"#I.4.1\">I.4.1</a> et <a class=\"ref\" href=\"#I.4.4\">I.4.4</a>) ; si G désigne le produit semi-direct de \\(\\mathbf{D}_k(\\mathbb{Z}/(3))\\) par\n\\((\\mathbb{Z}/(2))_k\\) défini par cette opération, \\(G_{\\mathrm{r\\acute{e}d}}\\) s'identifie à \\((\\mathbb{Z}/(2))_k\\) et n'est pas invariant\ndans G.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(k\\) est un corps quelconque et H un groupe dans la catégorie \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\),\n\\((H\\otimes_k k^{p^{-\\infty}})_{\\mathrm{r\\acute{e}d}}\\) est un schéma en groupes sur \\(k^{p^{-\\infty}}\\). Comme \\(H\\otimes_k k^{p^{-\\infty}}\\)\na même espace topologique sous-jacent que \\((H\\otimes_k k^{p^{-\\infty}})_{\\mathrm{r\\acute{e}d}}\\), on voit que les groupes de\n\\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) ont en commun avec les \\(k\\)-groupes certaines propriétés topologiques inva-\nriantes par extension du corps de base : par exemple, il résultera de <a class=\"ref\" href=\"#VIA.0.3\">0.3</a> et des remarques\nqu'on vient de faire que tout groupe de \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) est séparé. Nous rencontrerons dans\nla suite des groupes de \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\) chaque fois que nous aurons affaire à une partie loca-\nlement fermée non vide U d'un \\(A\\)-groupe G telle que \\(U\\cdot U = U\\) et \\(U^{-1} = U\\) : en effet,\nle sous-schéma réduit de G défini par U est un groupe de \\((\\mathrm{Sch}/k)_{\\mathrm{r\\acute{e}d}}\\).</p>"
+    },
+    {
+     "id": "VIA.0.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.0.3\">0.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Un \\(A\\)-groupe G est toujours <em>séparé</em> : la diagonale de \\(G\\times_A G\\) s'identifie en\neffet au foncteur de \\((\\mathrm{Sch}/A)^{\\circ}\\) à valeurs dans \\((\\mathrm{Ens})\\) qui associe à tout schéma S sur A\nl'image réciproque de l'élément neutre de \\(G(S)\\) par l'application \\(\\varphi(S) : (x,y) \\mapsto xy^{-1}\\)\nde \\(G(S)\\times G(S)\\) dans \\(G(S)\\). On a par conséquent un carré cartésien\n\\[\n\\xymatrix{\nG\\times_A G \\ar[r]^-{\\varphi} &amp; G \\\\\nG \\ar[u]^-{\\text{morphisme diagonal}} \\ar[r] &amp; \\mathrm{Spec}\\ A \\ar[u]_-{\\text{section unité}}\n}\n\\]\nde sorte que le morphisme diagonal, qui est déduit d'une immersion fermée par chan-\ngement de base est lui-même une immersion fermée.</p>"
+    },
+    {
+     "id": "VIA.0.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.0.4\">0.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un \\(A\\)-groupe. Nous dirons qu'un point \\(g\\) de G est <em>strictement rationnel</em>\nsur A s'il existe un \\(A\\)-morphisme \\(s : \\mathrm{Spec}\\ A \\to G\\) qui envoie le seul point de \\(\\mathrm{Spec}\\ A\\) sur\n\\(g\\). On sait qu'un tel \\(s\\) définit un automorphisme \\(r_s\\) du schéma G sur A qu'on appelle\ntranslation à droite par \\(s\\) : pour tout morphisme \\(\\pi : S \\to \\mathrm{Spec}\\ A\\), \\(r_s(S)\\) est\nl'automorphisme \\(x \\mapsto x\\cdot(G(\\pi)(s))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De même, on note \\(\\ell_s\\) la translation à gauche par \\(s\\), c'est-à-dire l'automorphisme\nde G défini par les égalités \\((\\ell_s(S))(x) = (G(\\pi)(s))\\cdot x\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme \\(G\\otimes_A k\\) et G ont même espace topologique sous-jacent \\(\\overline{G}\\), que \\(G\\otimes_A k\\)\nest un \\(k\\)-groupe et que \\(s\\otimes_A k\\) dépend seulement de \\(g\\) et non de \\(s\\), on voit que les\nautomorphismes de \\(\\overline{G}\\) induits par \\(r_s\\) et \\(\\ell_s\\) (ou par \\(r_{s\\otimes k}\\) et \\(\\ell_{s\\otimes k}\\)) dépendent\nseulement de \\(g\\) et non de \\(s\\) ; lorsque P est une partie de \\(\\overline{G}\\), nous pouvons donc noter\n\\(P\\cdot g\\) et \\(g\\cdot P\\) au lieu de \\(r_s(P)\\) et \\(\\ell_s(P)\\), ce qui est conforme à <a class=\"ref\" href=\"#VIA.0.1\">0.1</a>.</p>"
+    },
+    {
+     "id": "VIA.0.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.0.5\">0.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons maintenant deux ouverts partout denses U et V d'un \\(A\\)-groupe\nlocalement de type fini G. Le produit \\(U\\cdot V\\) (cf. <a class=\"ref\" href=\"#VIA.0.1\">0.1</a>) est alors égal à tout l'espace sous-\njacent à G : en effet, comme G et \\(G\\otimes_A k\\) ont même espace sous-jacent, on peut supposer,\nquitte à remplacer A par \\(k\\) et G par \\(G\\otimes_A k\\) que A est un corps \\(k\\). Dans ce cas le\nmorphisme multiplication est plat et localement de type fini (cf. <a class=\"ref\" href=\"#VIA.0.1\">0.1</a>), donc ouvert, de\nsorte que \\(U\\cdot V\\) est un ouvert de G. Si \\(\\overline{k}\\) est une clôture algébrique de \\(k\\), on a évidemment\n\\((U\\cdot V)\\otimes_k\\overline{k} = (U\\otimes_k\\overline{k})\\cdot(V\\otimes_k\\overline{k})\\) ; d'après SGA 1 VIII §4, il suffit\ndonc de prouver qu'on a \\(G\\otimes_k\\overline{k} = (U\\otimes_k\\overline{k})\\cdot(V\\otimes_k\\overline{k})\\) et on est ramené au cas où \\(k\\) est\nalgébriquement clos. Dans ce dernier cas, il suffit de prouver que \\(U\\cdot V\\) contient tout\npoint fermé \\(x\\) de G ; si \\(k\\) est algébriquement clos, un tel \\(x\\) est strictement rationnel\net les ouverts partout denses \\(U^{-1}\\cdot x\\) et V ont en commun un point fermé \\(v\\) ; si \\(u\\)\nest l'élément de \\(G(k)\\) défini par l'égalité \\(x = u\\cdot v\\), \\(u^{-1}\\cdot x\\) appartient alors à \\(U^{-1}\\cdot x\\)\nde sorte que \\(u\\) appartient à U, ce qui prouve l'assertion.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIA-1",
+   "title": "1. Propriétés locales d'un \\(A\\)-groupe localement de type fini",
+   "blocks": [
+    {
+     "id": "VIA.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIA.1\">1. Propriétés locales d'un \\(A\\)-groupe localement de type fini</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons voir d'abord que, si G est localement de type fini et plat sur A, on peut\n« rendre strictement rationnel tout point fermé de G » au moyen d'une extension finie\net plate de la base.</p>"
+    },
+    {
+     "id": "VIA.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.1.1\">1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Sauf mention expresse du contraire, nous supposerons à partir de maintenant\nque G est un \\(A\\)-groupe localement de type fini. Lorsque A est un corps, nous obtien-\ndrons dans l'exposé <a class=\"ref\" href=\"#VIIB\">VII<sub>B</sub></a> des résultats très précis sur les anneaux locaux de G. Nous\nnous contentons ici de quelques résultats élémentaires :</p>"
+    },
+    {
+     "id": "VIA.1.1.1",
+     "type": "proposition",
+     "label": "1.1.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIA.1.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.1.1</span></div>\n  <div class=\"thm-body\"><p>Soit \\(x\\) un point d'un \\(A\\)-groupe G localement de type fini et\nplat sur A. Alors l'anneau local \\(\\mathscr{O}_{G,x}\\) est de Cohen-Macaulay et il existe un système\n\\(a_1,\\ldots,a_n\\) de paramètres de \\(\\mathscr{O}_{G,x}\\) tel que \\(\\mathscr{O}_{G,x}/(a_1,\\ldots,a_n)\\) soit un \\(A\\)-module\nplat.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous supposons d'abord A égal à son corps résiduel \\(k\\) ; il suffit de prouver alors\nque \\(\\mathscr{O}_{G,x}\\) est de Cohen-Macaulay et on peut se limiter au cas où \\(x\\) est un point fermé\n(cf. EGA \\(0_{\\mathrm{IV}}\\), 16.5.13). D'après le lemme <a class=\"ref\" href=\"#VIA.1.1.2\">1.1.2</a> ci-dessous, G contient un point fermé\n\\(y\\) tel que \\(\\mathscr{O}_{G,y}\\) soit de Cohen-Macaulay. D'après SGA 1, I §9, il revient au même de\ndire que, pour toute extension finie K du corps de base \\(k\\) et tout point \\(\\overline{y}\\) de \\(\\overline{G} = G\\otimes_k K\\)\nau-dessus de \\(y\\), \\(\\mathscr{O}_{\\overline{G},\\overline{y}}\\) est de Cohen-Macaulay. Si l'extension K a été choisie assez\ngrande (i.e. si K contient l'extension normale de \\(k\\) engendrée par les corps résiduels\n\\(k(y)\\) et \\(k(x)\\)), \\(\\overline{y}\\) est (strictement) rationnel sur K ainsi que tout point \\(\\overline{x}\\) de \\(\\overline{G}\\) au-\ndessus de \\(x\\). Comme l'automorphisme \\(r_{\\overline{x}}\\circ(r_{\\overline{y}})^{-1}\\) applique \\(\\overline{y}\\) sur \\(\\overline{x}\\), il s'ensuit\nque \\(\\mathscr{O}_{\\overline{G},\\overline{x}}\\), donc \\(\\mathscr{O}_{G,x}\\) (SGA 1, I §9) sont de Cohen-Macaulay.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque A est de nouveau supposé quelconque, le raisonnement précédent s'ap-\nplique à \\(k\\otimes_A G\\) de sorte que \\(k\\otimes_A\\mathscr{O}_{G,x}\\) est de Cohen-Macaulay. Si \\(a_1,\\ldots,a_n\\) est\nune suite d'éléments de \\(\\mathscr{O}_{G,x}\\) dont l'image dans \\(k\\otimes_A\\mathscr{O}_{G,x}\\) est un système de para-\nmètres, il résulte de SGA 1, IV 5.7 ou de EGA \\(0_{\\mathrm{IV}}\\), 15.1.16, que \\(a_1,\\ldots,a_n\\) est une suite\n\\(\\mathscr{O}_{G,x}\\)-régulière et que \\(\\mathscr{O}_{G,x}/(a_1,\\ldots,a_n)\\) est fini et plat sur A.</p>"
+    },
+    {
+     "id": "VIA.1.1.2",
+     "type": "lemme",
+     "label": "1.1.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"VIA.1.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">1.1.2</span></div>\n  <div class=\"thm-body\"><p>Tout schéma non vide X, localement de type fini sur un anneau\nartinien A, contient un point fermé \\(x\\) dont l'anneau local est de Cohen-Macaulay.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut évidemment supposer X affine d'algèbre B et raisonner par récurrence\nsur \\(\\dim X\\) (l'assertion est claire si X est discret, tous les anneaux locaux étant alors\nartiniens). Comme B est de type fini sur A, si \\(\\dim B &gt; 0\\), B contient un élément \\(a\\) non\ninversible et non diviseur de 0 ; le sous-schéma fermé \\(X' = \\mathrm{Spec}\\ B/(a)\\) de X est alors\nde dimension strictement inférieure à \\(\\dim X\\) et contient par hypothèse de récurrence un\npoint fermé \\(x\\) tel que \\(\\mathscr{O}_{X',x}\\) soit de Cohen-Macaulay. Comme on a \\(\\mathscr{O}_{X',x} = \\mathscr{O}_{X,x}/(a)\\)\net \\(a\\) est non inversible et non diviseur de 0 dans \\(\\mathscr{O}_{X,x}\\), \\(\\mathscr{O}_{X,x}\\) est de Cohen-Macaulay\n(Voir aussi EGA \\(\\mathrm{IV}_2\\), 6.11.3).</p>"
+    },
+    {
+     "id": "VIA.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIA.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Soient A un anneau artinien, G un \\(A\\)-groupe localement de type\nfini et plat sur A et \\(x\\) un point fermé de G. Il existe alors une \\(A\\)-algèbre \\(A'\\) locale,\nfinie et libre sur A telle que tout point de \\(G\\otimes_A A'\\) au-dessus de \\(x\\) soit strictement\nrationnel sur \\(A'\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On sait en effet qu'il existe une \\(A\\)-algèbre \\(A_1\\) locale, finie et libre sur A et telle\nque le corps résiduel de \\(A_1\\) contienne l'extension normale de \\(k\\) engendrée par le corps\nrésiduel \\(k(x)\\) de \\(x\\). Dans ce cas, tous les points \\(g_1,\\ldots,g_n\\) de \\(G\\otimes_A A_1\\) au-dessus de\n\\(g\\in G\\) ont même corps résiduel que \\(A_1\\) (i.e. \\(g_1,\\ldots,g_n\\) sont rationnels sur \\(A_1\\) au sens de\n<a class=\"ref\" href=\"#V.4\">V, §4</a> ; e)). Soient donc \\(B_1,\\ldots,B_n\\) les anneaux locaux de \\(g_1,\\ldots,g_n\\). D'après <a class=\"ref\" href=\"#VIA.1.1.1\">1.1.1</a>,\n\\(B_1,\\ldots,B_n\\) possèdent des quotients \\(B'_1,\\ldots,B'_n\\) qui sont artiniens et plats sur \\(A_1\\). Si\non pose \\(A' = B'_1\\otimes_{A_1}\\cdots\\otimes_{A_1}B'_n\\), les algèbres \\(B_i\\otimes_{A_1}A'\\) sont toutes locales et elles\nont un quotient isomorphe à \\(A'\\), de sorte que \\(A'\\) répond à la question.</p>"
+    },
+    {
+     "id": "VIA.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.1.3\">1.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(e\\) l'élément neutre (ou origine) de G, c'est-à-dire l'image du seul point\nde \\(\\mathrm{Spec}\\ A\\) par la section unité \\(\\mathrm{Spec}\\ A \\to G\\). Par définition même, \\(e\\) est strictement\nrationnel sur A.</p>"
+    },
+    {
+     "id": "VIA.1.3.1",
+     "type": "proposition",
+     "label": "1.3.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIA.1.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3.1</span></div>\n  <div class=\"thm-body\"><p>Soient G un groupe localement de type fini et plat sur un anneau\nartinien A et K la clôture parfaite du corps résiduel \\(k\\) de A. Les assertions suivantes\nsont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(G\\otimes_A K\\) est réduit.</p></li>\n  <li><span class=\"item-label\">(i bis)</span> <p>Si \\(\\mathscr{O}_{G,e}\\) est l'anneau local de l'origine de G, \\(\\mathscr{O}_{G,e}\\otimes_A K\\) est réduit.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>G est lisse sur A.</p></li>\n  <li><span class=\"item-label\">(ii bis)</span> <p>G est lisse sur A à l'origine.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Au moyen de SGA 1, II.2.1, on se ramène tout de suite au cas où A est un corps\n\\((A = k)\\). Les implications (i)⇒(i bis), (ii)⇒(ii bis), (ii)⇒(i) et (ii bis)⇒(i bis) sont\névidentes, de sorte qu'il suffit de prouver que (i bis) entraîne (ii). Or, si \\(\\overline{k}\\) désigne\nla clôture algébrique de \\(k\\), il résulte de (i bis) que \\(\\mathscr{O}_{G,e}\\otimes_k\\overline{k}\\) est réduit. De plus, si\n\\(x\\) est un point fermé quelconque de \\(\\overline{G} = G\\otimes_k\\overline{k}\\), il y a exactement un \\(\\overline{k}\\)-morphisme\n\\(s : \\mathrm{Spec}\\ \\overline{k} \\to G\\otimes_k\\overline{k}\\) dont l'image est \\(x\\) ; la translation à droite \\(r_s\\) induit alors un\nisomorphisme de \\(\\mathscr{O}_{G,e}\\otimes_k\\overline{k}\\) sur \\(\\mathscr{O}_{\\overline{G},x}\\) de sorte que \\(\\mathscr{O}_{\\overline{G},x}\\), donc \\(\\overline{G}\\) sont réduits.\nMais, comme \\(\\overline{G}\\) est aussi localement de type fini sur \\(\\overline{k}\\), \\(\\overline{G}\\) contient au moins un point\n\\(y\\) fermé dans \\(\\overline{G}\\) et lisse sur \\(\\overline{k}\\). Comme, d'autre part, les anneaux locaux des points\nfermés de \\(\\overline{G}\\) sont tous isomorphes à \\(\\mathscr{O}_{G,e}\\otimes_k\\overline{k}\\), on voit que tous ces anneaux locaux\nsont réguliers, de sorte que \\(\\overline{G}\\) est lisse sur \\(\\overline{k}\\), donc G lisse sur \\(k\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIA-2",
+   "title": "2. Composantes connexes d'un \\(A\\)-groupe localement de type fini",
+   "blocks": [
+    {
+     "id": "VIA.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIA.2\">2. Composantes connexes d'un \\(A\\)-groupe localement de type fini</h2>"
+    },
+    {
+     "id": "VIA.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.2.1\">2.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons d'abord un \\(A\\)-groupe quelconque G et soit \\(G'\\) la composante\nconnexe de l'origine \\(e\\) de G. Cette composante connexe est évidemment fermée de\nsorte que nous pouvons l'identifier au sous-schéma fermé réduit de G qui a \\(G'\\) pour\nespace sous-jacent.</p>"
+    },
+    {
+     "id": "VIA.2.1.1",
+     "type": "proposition",
+     "label": "2.1.1",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIA.2.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.1.1</span></div>\n  <div class=\"thm-body\"><p>Pour toute extension K du corps résiduel \\(k\\) de A, \\(G'\\otimes_A K\\) a\npour espace sous-jacent la composante connexe de l'origine dans le K-groupe \\(G\\otimes_A K\\)\n(\\(G'\\) est géométriquement connexe).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit en effet \\((G\\otimes_A K)'\\) la composante connexe de l'origine dans \\(G\\otimes_A K\\). Comme\nl'image de \\((G\\otimes_A K)'\\) dans G est connexe et contient l'élément neutre de G, cette\nimage est contenue dans \\(G'\\) de sorte que \\((G\\otimes_A K)'\\) est contenu dans l'image réciproque\n\\(G'\\otimes_A K\\) de \\(G'\\) dans \\(G\\otimes_A K\\). La proposition résulte donc de la connexité de \\(G'\\otimes_A K\\)\nqui est prouvée dans le lemme <a class=\"ref\" href=\"#VIA.2.1.2\">2.1.2</a> :</p>"
+    },
+    {
+     "id": "VIA.2.1.2",
+     "type": "lemme",
+     "label": "2.1.2",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"VIA.2.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.1.2</span></div>\n  <div class=\"thm-body\"><p>Soient X et Y deux schémas connexes sur un corps \\(k\\). Si X contient\nun point rationnel, \\(X\\times_k Y\\) est connexe.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous donnons ci-dessous une démonstration directe de ce résultat de EGA \\(\\mathrm{IV}_2\\)\n(4.5.8 et 4.5.14). Supposons d'abord Y non vide, connexe et affine d'algèbre B. Dans\nce cas, \\(X\\times_k Y\\) est le spectre de la \\(\\mathscr{O}_X\\)-Algèbre quasi-cohérente \\(\\mathscr{B} = \\mathscr{O}_X\\otimes_k B\\).\nNous voulons montrer que toute partie U de \\(X\\times_k Y\\) qui est ouverte, fermée et non\nvide, coïncide avec \\(X\\times_k Y\\). Et en effet U est affine sur X et a pour \\(\\mathscr{O}_X\\)-Algèbre\naffine un facteur direct de \\(\\mathscr{B}\\). Il résulte donc du lemme <a class=\"ref\" href=\"#VIA.2.1.3\">2.1.3</a> ci-dessous que l'image de\nU dans X est ouverte et fermée, i.e. coïncide avec X tout entier. Cette image contient\nen particulier un point rationnel \\(x\\) de X, de sorte que U rencontre l'image réciproque de\n\\(x\\) dans \\(X\\times_k Y\\). Comme cette dernière est isomorphe à Y, donc est connexe, U contient\ncette image réciproque. Le même résultat serait valable pour le complémentaire de\nU dans \\(X\\times_k Y\\), si U était distincte de \\(X\\times_k Y\\), ce qui serait absurde.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si Y est maintenant un \\(k\\)-schéma quelconque, ce qui précède montre que les fibres\nde la projection canonique \\(X\\times_k Y \\to Y\\) sont connexes. Si \\(x\\) est un point rationnel de\nX, ces fibres rencontrent toutes le sous-schéma \\(\\{x\\}\\times_k Y\\) qui est lui-même connexe,\nd'où la proposition.</p>"
+    },
+    {
+     "id": "VIA.2.1.3",
+     "type": "lemme",
+     "label": "2.1.3",
+     "title": "Lemme",
+     "html": "<div class=\"thm thm-plain lemme\" id=\"VIA.2.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemme</span> <span class=\"thm-num\">2.1.3</span></div>\n  <div class=\"thm-body\"><p>Soient X un schéma et \\(\\mathscr{A}\\) une \\(\\mathscr{O}_X\\)-Algèbre quasi-cohérente qui\nest un facteur direct d'un \\(\\mathscr{O}_X\\)-Module libre. L'image de \\(\\mathrm{Spec}\\ \\mathscr{A}\\) dans X est alors\nouverte et fermée.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit V cette image. Il est clair que V est contenue dans le support de \\(\\mathscr{A}\\). Récipro-\nquement, si \\(x\\) appartient au support de \\(\\mathscr{A}\\), \\(\\mathscr{A}_x\\) est non nul et est un \\(\\mathscr{O}_{X,x}\\)-module\nlibre (Kaplansky). Par conséquent la fibre de \\(\\mathrm{Spec}\\ \\mathscr{A}\\) en \\(x\\), qui est affine d'algèbre\n\\(\\mathscr{A}_x\\otimes_{\\mathscr{O}_{X,x}}k(x)\\), n'est pas vide. On voit donc que l'image de \\(\\mathrm{Spec}\\ \\mathscr{A}\\) coïncide avec\nle support de \\(\\mathscr{A}\\). Si \\(s\\) est la section unité de \\(\\mathscr{A}\\), l'égalité \\(s_x = 0\\) entraîne que \\(s\\)\nest nul dans un voisinage du point \\(x\\) de sorte que le support de \\(\\mathscr{A}\\) est fermé. On peut\nsupposer d'autre part que \\(\\mathscr{A}\\) est un facteur direct de la somme directe d'une famille\n\\((\\mathscr{O}_X^{\\alpha})\\) d'exemplaires de \\(\\mathscr{O}_X\\) ; soit alors \\(\\varphi^{\\alpha}\\) la restriction à \\(\\mathscr{A}\\) de la projection\ncanonique de \\(\\coprod_{\\alpha}\\mathscr{O}_X^{\\alpha}\\) sur \\(\\mathscr{O}_X^{\\alpha}\\) ; si \\(x\\) est un point de X, tout homomorphisme de\n\\(\\mathscr{O}_{X,x}\\)-modules \\(\\psi_x : \\mathscr{A}_x \\to \\mathscr{O}_{X,x}\\) est de la forme \\(a \\mapsto \\sum_{\\alpha}\\xi^{\\alpha}\\varphi^{\\alpha}(a)\\) où \\((\\xi^{\\alpha})\\) est\nune famille d'éléments de \\(\\mathscr{O}_{X,x}\\). Comme \\(\\mathscr{A}_x\\) est libre et non nul, on peut choisir\nles \\(\\xi^{\\alpha}\\) et \\(a\\) de telle façon qu'on ait \\(1 = \\sum_{\\alpha}\\xi^{\\alpha}\\varphi^{\\alpha}(a) = \\xi^{\\alpha_1}\\varphi^{\\alpha_1}(a)+\\cdots+\\xi^{\\alpha_n}\\varphi^{\\alpha_n}(a)\\).\nL'égalité \\(1 = \\xi^{\\alpha_1}\\varphi^{\\alpha_1}(a)+\\cdots+\\xi^{\\alpha_n}\\varphi^{\\alpha_n}(a)\\) reste alors valable dans un voisinage\nde \\(x\\), ce qui montre que \\(a\\), donc \\(\\mathscr{A}\\) sont non nuls dans un voisinage de \\(x\\) (« le support\nd'un module projectif est ouvert »).</p>"
+    },
+    {
+     "id": "VIA.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.2.2\">2.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les notations étant toujours celles de <a class=\"ref\" href=\"#VIA.2.1\">2.1</a>, il est clair que \\(G'\\) est un schéma\nréduit au-dessus de \\(\\mathrm{Spec}\\ k \\subset \\mathrm{Spec}\\ A\\). Le lemme <a class=\"ref\" href=\"#VIA.2.1.2\">2.1.2</a> montre que \\(G'\\times_k G'\\) est connexe,\nde sorte que \\((G'\\times_k G')_{\\mathrm{r\\acute{e}d}}\\) est le sous-schéma réduit de \\(G\\times_A G\\) qui a pour espace\nsous-jacent la composante connexe de l'origine. En particulier, le morphisme multi-\nplication \\(\\mu : G\\times_A G \\to G\\) induit un morphisme \\(\\mu' : (G'\\times_k G')_{\\mathrm{r\\acute{e}d}} \\to G'\\) qui fait de\n\\(G'\\) un groupe dans la sous-catégorie pleine de \\((\\mathrm{Sch}/k)\\) formée des \\(k\\)-schémas réduits.</p>"
+    },
+    {
+     "id": "VIA.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.2.3\">2.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Conformément à nos conventions de <a class=\"ref\" href=\"#VIA.1.1\">1.1</a>, nous supposons de nouveau à\npartir de maintenant que G est localement de type fini sur A. Alors G est localement\nnoethérien, donc localement connexe, de sorte que la composante connexe de l'élé-\nment neutre est ouverte dans G. Nous noterons \\(G^0\\) le sous-schéma induit par G sur\ncet ouvert, de sorte qu'avec les notations de <a class=\"ref\" href=\"#VIA.2.1\">2.1</a> on a \\(G' = (G^0)_{\\mathrm{r\\acute{e}d}}\\). Il résulte évidem-\nment de <a class=\"ref\" href=\"#VIA.2.2\">2.2</a> que \\(G^0\\) est un sous-schéma en groupes de G que nous appellerons la\n<em>composante neutre</em> de G.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(G^{\\alpha}\\) une composante connexe quelconque de G et \\(\\nu^{\\alpha} : G^{\\alpha}\\times_A G^0 \\to G\\) le\nmorphisme défini par les égalités \\((\\nu^{\\alpha}(S))(g,\\gamma) = g\\gamma g^{-1}\\) (\\(S\\in(\\mathrm{Sch}/A)\\), \\(g\\in G^{\\alpha}(S)\\),\n\\(\\gamma\\in G^0(S)\\)). Si \\(e\\) est l'origine de G, la restriction de \\(\\nu^{\\alpha}\\) à \\(G^{\\alpha}\\times_A\\{e\\}\\) est le mor-\nphisme nul ; comme \\(G^{\\alpha}\\times_A G^0\\) est connexe d'après <a class=\"ref\" href=\"#VIA.2.1.2\">2.1.2</a>, on voit que \\(\\nu^{\\alpha}\\) se factorise\nà travers \\(G^0\\) de sorte que \\(G^0\\) est un \\(A\\)-sous-groupe invariant de G (car ce qui précède\nentraîne, que pour tout schéma S sur A, \\(G^0(S)\\) est un sous-groupe invariant de\n\\(G(S)\\)).</p>"
+    },
+    {
+     "id": "VIA.2.4",
+     "type": "proposition",
+     "label": "2.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIA.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>La composante neutre d'un \\(A\\)-groupe G localement de type fini est\ngéométriquement irréductible et est de type fini sur A.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(\\overline{k}\\) la clôture algébrique du corps résiduel \\(k\\) de A et montrons d'abord que\n\\(G^0\\) est géométriquement irréductible, c'est-à-dire que \\(G^0\\otimes_A\\overline{k}\\) est irréductible.\nD'après <a class=\"ref\" href=\"#VIA.2.2\">2.2</a> \\((G\\otimes_A\\overline{k})_{\\mathrm{r\\acute{e}d}}\\) est un \\(\\overline{k}\\)-groupe localement de type fini et réduit, donc\nlisse sur \\(\\overline{k}\\) (<a class=\"ref\" href=\"#VIA.1.3.1\">1.3.1</a>). A fortiori les anneaux locaux de \\((G\\otimes_A\\overline{k})_{\\mathrm{r\\acute{e}d}}\\) sont intègres, de\nsorte que les composantes connexes de \\(G\\otimes_A\\overline{k}\\), en particulier \\(G^0\\otimes_A\\overline{k}\\), sont irré-\nductibles.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Montrons maintenant que \\(G^0\\) est de type fini sur A. Comme \\(G^0\\) est localement\nde type fini sur A, il suffit de prouver que \\(G^0\\) est quasi-compact. Pour cela, soit V\nun ouvert affine de \\(G^0\\). Comme \\(G^0\\) est irréductible, cet ouvert est dense dans \\(G^0\\) de\nsorte que \\(V\\cdot V\\) coïncide avec \\(G^0\\) (<a class=\"ref\" href=\"#VIA.0.5\">0.5</a>) ; comme \\(V\\cdot V\\) est l'image de \\(V\\times_A V\\) par le\nmorphisme multiplication, \\(V\\cdot V\\) est quasi-compact.</p>"
+    },
+    {
+     "id": "VIA.2.4.1",
+     "type": "corollaire",
+     "label": "2.4.1",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollaire\" id=\"VIA.2.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">2.4.1</span></div>\n  <div class=\"thm-body\"><p>Toute composante connexe de G est irréductible et de type fini sur\nA.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut supposer en effet A égal à son corps résiduel \\(k\\). Soit alors H une compo-\nsante connexe de G, \\(x\\) un point fermé de H, \\(k(x)\\) le corps résiduel de \\(x\\) et K l'extension\nnormale de \\(k\\) engendrée par \\(k(x)\\). La projection canonique \\(\\pi : H\\otimes_k K \\to H\\) est ouverte\net fermée de sorte que toute composante connexe de \\(H\\otimes_k K\\) est la somme des images\nde \\(G^0\\otimes_k K\\) par les translations définies par les points de \\(\\pi^{-1}(x)\\). Comme \\(H\\otimes_k K\\)\nest de type fini, H l'est. Si H n'était pas irréductible, on pourrait choisir \\(x\\) de telle\nfaçon que \\(x\\) appartienne à deux composantes irréductibles distinctes. L'anneau local\n\\(\\mathscr{O}_{H,x}\\) aurait alors deux idéaux premiers minimaux distincts, ainsi que l'anneau local\nde tout point de \\(H\\otimes_k K\\) au-dessus de \\(x\\) (« going down theorem » de Cohen-Seidenberg,\ncf. Bourbaki, Alg. comm. chap. VI) ; or nous venons de voir que \\(H\\otimes_k K\\) est la somme\ndirecte d'un certain nombre d'exemplaires de \\(G^0\\otimes_k K\\), qui est irréductible...</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIA-3",
+   "title": "3. Construction de groupes-quotients (cas des groupes de type fini)",
+   "blocks": [
+    {
+     "id": "VIA.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIA.3\">3. Construction de groupes-quotients (cas des groupes de type fini)</h2>"
+    },
+    {
+     "id": "VIA.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.3.1\">3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient A un anneau local artinien et \\(u : F \\to G\\) un homomorphisme de\n\\(A\\)-groupes. Si \\(\\mu : F\\times_A F \\to F\\) et \\(\\nu : G\\times_A G \\to G\\) désignent les morphismes\nmultiplication et \\(\\lambda\\) le morphisme composé\n\\[\n\\xymatrix{\nF\\times_A G \\ar[r]^-{u\\times G} &amp; G\\times_A G \\ar[r]^-{\\nu} &amp; G,\n}\n\\]\non rappelle que le quotient à gauche \\(F\\backslash G\\) de G par F est le conoyau du \\((\\mathrm{Sch}/A)\\)-\ngroupoïde \\(G_*\\) décrit ci-dessous :\n\\[\n\\xymatrix{\nF\\times_A F\\times_A G \\ar@&lt;1.2ex&gt;[r]^-{F\\times\\lambda} \\ar[r]|-{\\mu\\times G} \\ar@&lt;-1.2ex&gt;[r]_-{\\mathrm{pr}_{2,3}} &amp; F\\times_A G \\ar@&lt;0.8ex&gt;[r]^-{\\lambda} \\ar@&lt;-0.8ex&gt;[r]_-{\\mathrm{pr}_2} &amp; G\n}\n\\]\n(\\(\\mathrm{pr}_2\\) et \\(\\mathrm{pr}_{2,3}\\) sont les projections de \\(F\\times_A G\\) et \\(F\\times_A(F\\times_A G)\\) sur les deuxièmes\nfacteurs). Nous dirons que \\(G_*\\) est le <em>groupoïde de base G défini par u</em> (confer <a class=\"ref\" href=\"#V\">V</a>, 2a ;\ncomme dans l'exposé <a class=\"ref\" href=\"#V\">V</a>, nous ne suivons pas en VI<sub>A</sub> la convention de <a class=\"ref\" href=\"#IV\">IV</a>, 4.6.15).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme l'unique \\(A\\)-morphisme \\(F \\to \\mathrm{Spec}\\ A\\) est universellement ouvert (EGA \\(\\mathrm{IV}_2\\),\n2.4.9), \\(\\mathrm{pr}_2\\) est un morphisme ouvert ; il en va donc de même pour \\(\\lambda\\) qui est composé\nde \\(\\mathrm{pr}_2\\) et de l'automorphisme \\(\\sigma\\) de \\(F\\times_A G\\) qui est défini par les formules suivantes :\n\\(\\sigma(S)(x,y) = (x,u(S)(x)\\cdot y)\\) où S est un \\(A\\)-schéma variable, \\(x\\) et \\(y\\) appartenant à\n\\(F(S)\\) et \\(G(S)\\). On voit de la même façon que \\(\\mathrm{pr}_2\\) et \\(\\lambda\\) sont plats lorsque F est plat\nsur A.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Remarquons aussi pour terminer ces préliminaires que tout \\(A\\)-morphisme\n\\(s : \\mathrm{Spec}\\ A \\to G\\) définit un automorphisme du groupoïde \\(G_*\\) qui induit sur G, \\(F\\times_A G\\)\net \\(F\\times_A F\\times_A G\\), les automorphismes \\(r_s\\), \\(\\mathrm{id}_F\\times_A r_s\\) et \\(\\mathrm{id}_F\\times_A\\mathrm{id}_F\\times_A r_s\\), respective-\nment. Nous noterons encore \\(r_s\\) cet automorphisme de \\(G_*\\) et nous dirons que \\(r_s\\) est la\ntranslation à droite définie par \\(s\\) (confer <a class=\"ref\" href=\"#VIA.0.4\">0.4</a>).</p>"
+    },
+    {
+     "id": "VIA.3.2",
+     "type": "theoreme",
+     "label": "3.2",
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"VIA.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\"><p>Soient F et G des groupes plats et localement de type fini sur un\nanneau local artinien A. Soit \\(u : F \\to G\\) un homomorphisme de \\(A\\)-groupes quasi-\ncompact et de noyau fini. Alors :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>Le quotient à gauche \\(F\\backslash G\\) de G par F existe et la suite\n\\[\n\\xymatrix{\nF\\times_A G \\ar@&lt;0.8ex&gt;[r]^-{\\lambda} \\ar@&lt;-0.8ex&gt;[r]_-{\\mathrm{pr}_2} &amp; G \\ar[r]^-{\\text{canonique}} &amp; F\\backslash G\n}\n\\]\nest exacte dans la catégorie de tous les espaces annelés.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>Le morphisme canonique \\(G \\to F\\backslash G\\) est surjectif et ouvert, et \\(F\\backslash G\\)\nest une somme directe de schémas de type fini sur A.</p></li>\n  <li><span class=\"item-label\">(iii)</span> <p>Le morphisme canonique \\(F\\times_A G \\to G\\times_{(F\\backslash G)}G\\) est surjectif.</p></li>\n  <li><span class=\"item-label\">(iv)</span> <p>Si \\(u\\) est un monomorphisme, \\(F\\times_A G \\to G\\times_{(F\\backslash G)}G\\) est un isomor-\nphisme et \\(G \\to F\\backslash G\\) est plat.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans la démonstration de ce théorème, \\(A'\\) désignera une \\(A\\)-algèbre locale, finie\net libre sur A. Si R est une relation faisant intervenir \\(A'\\), nous dirons que \\(R(A')\\) est\nvraie <em>quand \\(A'\\) est assez grande</em> s'il existe une algèbre \\(A_1\\) locale, finie et libre sur A\ntelle que la relation \\(R(A')\\) soit vérifiée pour chaque algèbre \\(A'\\) locale, finie et libre\nsur \\(A_1\\). Nous allons d'abord prouver notre théorème lorsque F et G sont de type fini\nsur A :</p>"
+    },
+    {
+     "id": "VIA.3.2.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.3.2.1\">3.2.1.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons un instant que tout point de G possède un voisinage ouvert et\nsaturé W tel que le groupoïde induit par \\(G_*\\) sur W possède une quasi-section (cf.\n<a class=\"ref\" href=\"#V.6\">V §6</a>). Le théorème 3.2 résulte alors de <a class=\"ref\" href=\"#V.6.1\">V 6.1</a>. Nous allons montrer qu'en outre toute\npartie finie de \\(F\\backslash G\\) est alors contenue dans un ouvert affine.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si U est une quasi-section du groupoïde induit par \\(G_*\\) sur un ouvert saturé W de\nG, \\(U\\otimes_A A'\\) est en effet une quasi-section du \\((\\mathrm{Sch}/A')\\)-groupoïde induit par \\(G_*\\otimes_A A'\\)\nsur \\(W\\otimes_A A'\\). De plus, si \\(U_*\\) est le \\((\\mathrm{Sch}/A)\\)-groupoïde induit par \\(G_*\\) sur U, \\(U_*\\otimes_A A'\\)\ns'identifie au \\((\\mathrm{Sch}/A')\\)-groupoïde induit par \\(G_*\\otimes_A A'\\) dans \\(U\\otimes_A A'\\). Il résulte donc\ndes démonstrations de l'exposé <a class=\"ref\" href=\"#V\">V</a> que la construction du quotient \\(X = F\\backslash G\\) commute\nà l'extension \\(A \\to A'\\) de la base du type considéré ici.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient donc \\(x_1,\\ldots,x_n\\) des points de \\(F\\backslash G\\) que nous pouvons supposer fermés et\n\\(g_1,\\ldots,g_n\\) des points fermés de G se projetant sur \\(x_1,\\ldots,x_n\\) ; soient U un ouvert\naffine partout dense de \\(F\\backslash G\\), V l'image réciproque de U dans G et soit \\(A'\\) une\n\\(A\\)-algèbre assez grande pour les besoins de notre cause : alors l'image réciproque de\n\\(g_1,\\ldots,g_n\\) dans \\(G\\otimes_A A'\\) est formée de points \\(g'_1,\\ldots,g'_p\\) qui sont strictement rationnels\nsur \\(A'\\) (<a class=\"ref\" href=\"#VIA.1.2\">1.2</a>) ; en outre, si \\(A'\\) est assez grande, l'ouvert partout dense\n\\(\\bigcap_i(V\\otimes_A A')^{-1}\\cdot g'_i\\) contient un point \\(x\\) strictement rationnel sur \\(A'\\). On a donc\n\\(x\\in(V\\otimes_A A')^{-1}\\cdot g'_i\\) d'où \\(g'_i\\in(V\\otimes_A A')\\cdot x\\). Comme \\((V\\otimes_A A')\\cdot x\\) est l'image de\n\\(V\\otimes_A A'\\) par un automorphisme du groupoïde \\(G_*\\otimes_A A'\\), l'image \\((U\\otimes_A A')\\cdot x\\) de\n\\((V\\otimes_A A')\\cdot x\\) dans \\((F\\backslash G)\\otimes_A A'\\) est l'image de \\(U\\otimes_A A'\\) par l'automorphisme induit\nsur \\((F\\backslash G)\\otimes_A A'\\). Donc \\((U\\otimes_A A')\\cdot x\\) est un ouvert affine de \\((F\\backslash G)\\otimes_A A'\\) contenant\n\\(g'_1,\\ldots,g'_p\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour terminer la démonstration on montre comme dans <a class=\"ref\" href=\"#V.5\">V §5.b)</a> que \\((U\\otimes_A A')\\cdot x\\)\ncontient un ouvert affine \\(W'\\) qui contient \\(g'_1,\\ldots,g'_p\\) et qui est saturé pour la relation\nd'équivalence\n\\[\n\\xymatrix{\n(F\\backslash G)\\otimes_A A'\\otimes_A A' \\ar@&lt;0.6ex&gt;[r] \\ar@&lt;-0.6ex&gt;[r] &amp; (F\\backslash G)\\otimes_A A'\n}\n\\]\ninduite par les deux injections canoniques de \\(A'\\) dans \\(A'\\otimes_A A'\\). L'image de \\(W'\\) dans\n\\(F\\backslash G\\) contient alors \\(g_1,\\ldots,g_n\\) et est un ouvert affine de \\(F\\backslash G\\) (<a class=\"ref\" href=\"#V.4.1\">V 4.1</a>).</p>"
+    },
+    {
+     "id": "VIA.3.2.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.3.2.2\">3.2.2.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour toute algèbre \\(A'\\) sur A (du type considéré en 4.1), désignons main-\ntenant par \\(U(A')\\) l'ensemble des points de \\(G\\otimes_A A'\\) ayant un voisinage ouvert et saturé\nW tel que le groupoïde induit par \\(G_*\\otimes_A A'\\) sur W possède une quasi-section. Il est\nbien clair que \\(U(A')\\) est saturé pour les opérations de \\(G(\\mathrm{Spec}\\ A')\\) sur \\(G\\otimes_A A'\\). Nous\nallons voir que, lorsque \\(A'\\) est assez grande, \\(U(A')\\) est égale à \\(G\\otimes_A A'\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La preuve se fait par récurrence sur \\(\\dim(G-U(A))\\) : soient \\(g_1,\\ldots,g_n\\) des points\nfermés appartenant aux diverses composantes irréductibles de \\(G-U(A)\\) ; si \\(A'\\) est\nassez grande, les points \\(g'_1,\\ldots,g'_p\\) de \\(G\\otimes_A A'\\) se projetant sur \\(g_1,\\ldots,g_n\\) sont stric-\ntement rationnels sur \\(A'\\) ; de même, \\(U(A)\\otimes_A A'\\) contient un point strictement rationnel\n\\(x\\) (\\(U(A)\\) n'est pas vide d'après <a class=\"ref\" href=\"#V.8.1\">V 8.1</a>). Par conséquent, \\(U(A')\\) contient\n\\((U(A)\\otimes_A A')\\cdot x^{-1}g'_i\\) pour tout \\(i\\) ; donc \\(U(A')\\) contient \\(g'_1,\\ldots,g'_p\\) et on a\n\n\\[\n\\dim(G\\otimes_A A' - U(A')) &lt; \\dim(G-U(A)).\n\\]\nL'hypothèse de récurrence entraîne alors l'existence d'une algèbre \\(A''\\) sur \\(A'\\) telle\nqu'on ait \\(U(A'') = (G\\otimes_A A')\\otimes_{A'}A'' = G\\otimes_A A''\\).</p>"
+    },
+    {
+     "id": "VIA.3.2.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.3.2.3\">3.2.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous sommes maintenant en mesure de prouver l'existence de \\(F\\backslash G\\) quand\nF et G sont de type fini sur A : soit \\(A'\\) assez grande sur A pour que \\(U(A')\\) coïncide\navec \\(G\\otimes_A A'\\) (confer <a class=\"ref\" href=\"#VIA.3.2.2\">3.2.2</a>). Nous poserons \\(A'' = A'\\otimes_A A'\\) et, pour tout \\(A\\)-schéma X,\nnous désignerons par \\(X'\\) et \\(X''\\) les produits fibrés \\(X\\otimes_A A'\\) et \\(X\\otimes_A A''\\). D'après\n<a class=\"ref\" href=\"#VIA.3.2.1\">3.2.1</a> et <a class=\"ref\" href=\"#VIA.3.2.2\">3.2.2</a>, les quotients \\(F'\\backslash G'\\) et \\(F''\\backslash G''\\) existent et on a le diagramme commutatif</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(∗)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nF''\\times_{A''} G'' \\ar@&lt;0.8ex&gt;[r]^-{\\lambda''} \\ar@&lt;-0.8ex&gt;[r]_-{\\mathrm{pr}_2''} \\ar@&lt;0.6ex&gt;[d]^-{w_1} \\ar@&lt;-0.6ex&gt;[d]_-{w_2} &amp; G'' \\ar[r]^-{p''} \\ar@&lt;0.6ex&gt;[d]^-{v_1} \\ar@&lt;-0.6ex&gt;[d]_-{v_2} &amp; F''\\backslash G'' \\ar@&lt;0.6ex&gt;[d]^-{u_1} \\ar@&lt;-0.6ex&gt;[d]_-{u_2} \\\\\nF'\\times_{A'} G' \\ar@&lt;0.8ex&gt;[r]^-{\\lambda'} \\ar@&lt;-0.8ex&gt;[r]_-{\\mathrm{pr}_2'} \\ar[d]_-{h} &amp; G' \\ar[r]^-{p'} \\ar[d]^-{g} &amp; F'\\backslash G' \\\\\nF\\times_A G \\ar@&lt;0.8ex&gt;[r]^-{\\lambda} \\ar@&lt;-0.8ex&gt;[r]_-{\\mathrm{pr}_2} &amp; G &amp;\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce diagramme, \\(\\mathrm{pr}_2'\\) et \\(\\lambda'\\) (resp. \\(\\mathrm{pr}_2''\\) et \\(\\lambda''\\)) sont obtenus à partir de \\(\\mathrm{pr}_2\\) et\n\\(\\lambda\\) par des changements de base évidents ; les morphismes \\(g\\) et \\(h\\) sont induits par\nl'injection canonique \\(A \\to A'\\). On y désigne par \\(p'\\) et \\(p''\\) les morphismes canoniques ;\nles morphismes \\(v_1,v_2\\) et \\(w_1,w_2\\) sont induits par les deux injections canoniques de\n\\(A'\\) dans \\(A''\\) ; enfin, si \\(\\pi' : F'\\backslash G' \\to \\mathrm{Spec}\\ A'\\) est le morphisme structural, il résulte\nde ce que la construction du quotient \\(F'\\backslash G'\\) commute aux deux changements de base\n\\(f_1, f_2 : \\mathrm{Spec}\\ A'' \\rightrightarrows \\mathrm{Spec}\\ A'\\) qu'on a des isomorphismes canoniques \\(i_1\\) et \\(i_2\\) de\n\\(F''\\backslash G''\\) sur \\((F'\\backslash G')\\times_{\\pi',f_1}\\mathrm{Spec}\\ A''\\) et \\((F'\\backslash G')\\times_{\\pi',f_2}\\mathrm{Spec}\\ A''\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Or, lorsqu'on a un diagramme du type (∗), \\(\\mathrm{Coker}(\\mathrm{pr}_2,\\lambda)\\) existe si et seulement si\nil en va de même pour \\(\\mathrm{Coker}(u_1,u_2)\\), et ces deux conoyaux s'identifient. L'existence\nde \\(F\\backslash G\\) résultera donc de celle de \\(\\mathrm{Coker}(u_1,u_2)\\). Or il résulte de la compatibilité de\nla formation de \\(F\\backslash G\\) avec les extensions de la base considérées ici que le morphisme\ncomposé\n\\[\n\\xymatrix{\n(F'\\backslash G')\\times_{\\pi',f_1}\\mathrm{Spec}\\ A'' \\ar[r]^-{i_1^{-1}} &amp; F''\\backslash G'' \\ar[r]^-{i_2} &amp; (F'\\backslash G')\\times_{\\pi',f_2}\\mathrm{Spec}\\ A''\n}\n\\]\nest une donnée de descente sur \\(F'\\backslash G'\\) relativement à \\(f : \\mathrm{Spec}\\ A' \\to \\mathrm{Spec}\\ A\\). D'après\nSGA VIII §7.6 et <a class=\"ref\" href=\"#VIA.3.2.1\">3.2.1</a> cette donnée de descente est effective, c'est-à-dire que\n\\(\\mathrm{Coker}(u_1,u_2)\\) existe (on pourrait d'ailleurs utiliser directement <a class=\"ref\" href=\"#V.4.1\">V 4.1</a>).</p>"
+    },
+    {
+     "id": "VIA.3.2.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.3.2.4\">3.2.4.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour terminer la preuve du théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> dans le cas où F et G sont de\ntype fini sur A, il reste à étudier le quotient \\(F\\backslash G\\). D'après <a class=\"ref\" href=\"#V.6.1\">V 6.1</a>, les assertions (ii),\n(iii) et (iv) « deviennent vraies » après le changement de base \\(f : \\mathrm{Spec}\\ A' \\to \\mathrm{Spec}\\ A\\) ;\nd'après EGA \\(\\mathrm{IV}_2\\), 2.6.1, 2.6.2 et 2.7.1, ces assertions étaient donc vraies avant le\nchangement de base. Enfin, pour prouver la deuxième assertion de (i), il n'y a qu'à se\nreporter à <a class=\"ref\" href=\"#V.6\">V §6.c)</a>.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIA-4",
+   "title": "4. Construction de groupes-quotients (cas général)",
+   "blocks": [
+    {
+     "id": "VIA.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIA.4\">4. Construction de groupes-quotients (cas général)</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous supposons maintenant satisfaites les hypothèses du théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a>, F et G\nn'étant pas nécessairement de type fini sur A.</p>"
+    },
+    {
+     "id": "VIA.4.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.1\">4.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons tout d'abord une composante connexe \\(G^{\\alpha}\\) de G et montrons que\nle saturé \\(\\overline{G^{\\alpha}}\\) de \\(G^{\\alpha}\\) pour la relation d'équivalence définie par le groupoïde \\(G_*\\)\nest une partie ouverte et fermée de G (autrement dit est la réunion de certaines\ncomposantes connexes de G). Ce saturé est l'image de \\(F\\times_A G^{\\alpha}\\) par \\(\\lambda\\), donc est\nouvert dans G (confer <a class=\"ref\" href=\"#VIA.3.1\">§3.1</a>). Si \\(k\\) est le corps résiduel de A et \\(\\overline{k}\\) une clôture algé-\nbrique de \\(k\\), il reste à montrer que l'image de \\((F\\times_A G^{\\alpha})\\otimes_A k\\) par \\(\\lambda\\otimes_A k\\) est\nfermée dans \\(G\\otimes_A k\\), ou encore, d'après SGA 1, VIII.4.4, que l'image de\n\\((F\\times_A G^{\\alpha})\\otimes_A\\overline{k}\\) par \\(\\lambda\\otimes_A\\overline{k}\\) est fermée. Comme \\(G^{\\alpha}\\otimes_A\\overline{k}\\) est la réunion d'un\nnombre fini de composantes connexes de \\(G\\otimes_A\\overline{k}\\), on est ramené au cas où A est\nun corps algébriquement clos, ce que nous allons supposer : dans ce cas, \\(\\overline{G^{\\alpha}}\\) est la\nréunion des images de \\(G^{\\alpha}\\) par les translations à gauche \\(\\ell_{u(x)}\\), où \\(x\\) parcourt les points\nfermés de F ; l'assertion résulte donc de ce que ces images sont des composantes\nconnexes de G.</p>"
+    },
+    {
+     "id": "VIA.4.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.2\">4.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Prenons en particulier pour \\(G^{\\alpha}\\) la composante connexe \\(G^0\\) de l'origine de\nG. Alors \\(\\overline{G^0}\\) contient évidemment l'image de F par \\(u\\) qui n'est autre que la classe\nd'équivalence de l'origine. D'autre part, si \\(F^{\\beta}\\) est une composante connexe de F,\n\\(F^{\\beta}\\times_A G^0\\) est connexe (<a class=\"ref\" href=\"#VIA.2.1.2\">2.1.2</a>) de sorte que l'image de \\(F^{\\beta}\\times_A G^0\\) par \\(\\lambda\\) est\ncontenue dans la composante connexe de \\(u(F^{\\beta})\\) dans G. Autrement dit, \\(\\overline{G^0}\\) est la\nréunion des composantes connexes qui rencontrent l'image de F.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On remarquera aussi que le sous-schéma ouvert de G qui a \\(\\overline{G^0}\\) pour espace sous-\njacent est un sous-groupe de G (que nous notons encore \\(\\overline{G^0}\\)) : en effet le morphisme\ninversion de G conserve l'image de F et commute les composantes connexes de G qui\nrencontrent cette image ; il suffit donc de montrer que \\(\\nu : G\\times_A G \\to G\\) applique\n\\(\\overline{G^0}\\times_A\\overline{G^0}\\) dans \\(\\overline{G^0}\\) et pour cela on peut supposer que A est un corps algébrique-\nment clos (avec les notations de <a class=\"ref\" href=\"#VIA.4.1\">4.1</a>, \\(\\overline{G^0}\\otimes_A\\overline{k}\\) s'identifie en effet au saturé de\n\\((G\\otimes_A\\overline{k})^0\\) par la relation d'équivalence définie par l'homomorphisme \\(u\\otimes_A\\overline{k}\\)) ; si\n\\(G^{\\gamma}\\) et \\(G^{\\delta}\\) sont alors des composantes connexes de \\(\\overline{G^0}\\), \\(G^{\\gamma}\\times_A G^{\\delta}\\) est connexe et\nson image par \\(\\nu\\) rencontre l'image de F ; par conséquent, \\(u(G^{\\gamma}\\times_A G^{\\delta})\\) est contenu\ndans une composante connexe de G rencontrant \\(u(F)\\), c.q.f.d.</p>"
+    },
+    {
+     "id": "VIA.4.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.3\">4.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de ce qui précède que le groupoïde \\(G_*\\) de base G défini par \\(u\\) est\nla <em>somme directe</em> des groupoïdes \\(\\overline{G^{\\alpha}}_*\\) induits par \\(G_*\\) sur les différentes parties\nouvertes et fermées de G de la forme \\(\\overline{G^{\\alpha}}\\). Le conoyau de \\(G_*\\) est donc la somme\ndirecte des conoyaux de ces groupoïdes \\(\\overline{G^{\\alpha}}_*\\), qu'on est amené à étudier séparément.\nConsidérons tout d'abord le groupoïde \\(\\overline{G^0}_*\\) induit par \\(G_*\\) sur \\(\\overline{G^0}\\). Il est clair que\n\\(\\overline{G^0}_*\\) est le groupoïde de base \\(\\overline{G^0}\\) défini par l'homomorphisme de F dans \\(\\overline{G^0}\\) induit\npar \\(u\\) (<a class=\"ref\" href=\"#VIA.3.1\">§3.1</a>). Le conoyau dont nous voulons prouver l'existence s'identifie donc à\n\\(F\\backslash\\overline{G^0}\\). Considérons d'autre part le groupoïde\n\\[\n\\xymatrix{\nG^0_2 \\ar@&lt;1.2ex&gt;[r]^-{\\ell_2'} \\ar[r]|-{\\ell_1'} \\ar@&lt;-1.2ex&gt;[r]_-{\\ell_0'} &amp; G^0_1 \\ar@&lt;0.8ex&gt;[r]^-{\\ell_1} \\ar@&lt;-0.8ex&gt;[r]_-{\\ell_0} &amp; G^0_0=G^0\n}\n\\]\ninduit par \\(\\overline{G^0}_*\\) sur \\(G^0\\). Si l'on se reporte à la construction explicitée en\n<a class=\"ref\" href=\"#V.3\">V §3.b)</a>, l'objet noté alors \\(Y_0\\times_{X_0}X_1\\) n'est autre que \\(F\\times_A G^0\\), de sorte que \\(G^0_1\\)\nest l'image réciproque de \\(G^0\\) par le morphisme \\(F\\times_A G^0 \\to G^0\\) induit par \\(\\lambda\\). Je dis\nque cette image réciproque est \\(F_0\\times_A G^0\\), si l'on note \\(F_0\\) l'image réciproque de \\(G^0\\)\npar \\(u\\) : en effet, si \\(F^{\\beta}\\) est une composante connexe de \\(F_0\\) et \\(e\\) l'élément neutre de\nG, \\(F^{\\beta}\\times_A G^0\\) est connexe (<a class=\"ref\" href=\"#VIA.2.1.2\">2.1.2</a>) et \\(\\lambda(F^{\\beta}\\times_A G^0)\\) est contenu dans \\(G^0\\) ;\nréciproquement, si \\(F^{\\beta}\\) est une composante connexe de F non contenue dans \\(F_0\\), l'image\nde \\(F^{\\beta}\\times_A G^0\\) est encore connexe et contient \\(u(F^{\\beta})\\) ; si \\(u(F^{\\beta})\\) n'est pas contenu dans\n\\(G^0\\), \\(\\lambda(F^{\\beta}\\times_A G^0)\\) ne rencontre pas \\(G^0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il résulte de ce qui précède que le groupoïde \\(G^0_*\\) induit par \\(G_*\\) sur \\(G^0\\) est le\ngroupoïde de base \\(G^0\\) défini par l'homomorphisme \\(F_0 \\to G^0\\) induit par \\(u\\) : d'après le\nparagraphe 4, ce groupoïde possède un conoyau qui n'est autre que \\(F_0\\backslash G^0\\). Je dis\nmaintenant que \\(F_0\\backslash G^0\\) s'identifie à \\(F\\backslash\\overline{G^0}\\) : en effet, la démonstration est analogue\nà celle de l'assertion (i) du lemme <a class=\"ref\" href=\"#V.6.1\">V §6.1</a> ; considérons le diagramme :\n\\[\n\\xymatrix{\n\\overline{G^0} &amp; F\\times_A G^0 \\ar[l]_-{v} \\ar[r]^-{\\mathrm{pr}_2} &amp; G^0,\n}\n\\]\noù \\(v\\) est le morphisme induit par \\(\\lambda\\). Comme \\(\\mathrm{pr}_2\\) possède une section, \\(\\mathrm{pr}_2\\) est un\népimorphisme effectif et universel de sorte que \\(F_0\\backslash G^0\\) coïncide avec \\(\\mathrm{Coker}(v_0,v_1)\\), où</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\xymatrix{\nV_2 \\ar@&lt;1.2ex&gt;[r]^-{v_2'} \\ar[r]|-{v_1'} \\ar@&lt;-1.2ex&gt;[r]_-{v_0'} &amp; V_1 \\ar@&lt;0.8ex&gt;[r]^-{v_1} \\ar@&lt;-0.8ex&gt;[r]_-{v_0} &amp; V=F\\times_A G^0\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est l'image réciproque du groupoïde \\(G^0_*\\) par \\(\\mathrm{pr}_2\\) (cf. <a class=\"ref\" href=\"#V.3\">V §3.a)</a>), c'est-à-dire également\nl'image réciproque de \\(\\overline{G^0}_*\\) par le morphisme composé\n\\[\n\\xymatrix{\nF\\times_A G^0 \\ar[r]^-{\\text{inclusion}} &amp; F\\times_A\\overline{G^0} \\ar[r]^-{\\mathrm{pr}_2} &amp; \\overline{G^0}.\n}\n\\]\nDe même, comme \\(v\\) est fidèlement plat et quasi-compact, \\(F\\backslash\\overline{G^0}\\) coïncide avec le\nconoyau de l'image réciproque du groupoïde \\(\\overline{G^0}_*\\) par le changement de base \\(v\\). Or\ncette image réciproque est isomorphe à \\(V_*\\) d'après <a class=\"ref\" href=\"#V.3\">V §3c)</a> ; il résulte de là que l'inclu-\nsion canonique de \\(G^0_*\\) dans \\(\\overline{G^0}_*\\) induit un isomorphisme de \\(F_0\\backslash G^0\\) sur \\(F\\backslash\\overline{G^0}\\).\nOn remarque enfin que : <em>la construction de \\(F\\backslash\\overline{G^0}\\) commute aux changements de base\nfinis et localement libres</em>, parce qu'il en va de même pour \\(F_0\\backslash G^0\\).</p>"
+    },
+    {
+     "id": "VIA.4.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.4\">4.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il reste à construire le conoyau du groupoïde \\(\\overline{G^{\\alpha}}_*\\) lorsque \\(G^{\\alpha}\\) est une compo-\nsante connexe quelconque de G : si \\(A'\\) est une \\(A\\)-algèbre locale, finie et libre assez\ngrande (confer <a class=\"ref\" href=\"#VIA.3.2\">3.2</a>), \\(G^{\\alpha}\\otimes_A A'\\) est la réunion d'un nombre fini de composantes\nconnexes \\(G'_1,\\ldots,G'_n\\) de \\(G\\otimes_A A'\\) qui possèdent toutes un point strictement rationnel.\nPour tout \\(i\\), il existe donc une translation à droite \\(r_i\\) de \\(G\\otimes_A A'\\) qui applique\n\\(G^0\\otimes_A A'\\) sur \\(G'_i\\) ; cette translation induit un isomorphisme du groupoïde\n\\(\\overline{G^0}_*\\otimes_A A'\\) sur \\((\\overline{G'_i})_*\\), de sorte que le groupoïde induit par \\(G_*\\otimes_A A'\\) sur le\nsaturé de \\(G'_i\\) possède un conoyau. Comme \\((\\overline{G^{\\alpha}})_*\\otimes_A A'\\) est la somme directe d'un\ncertain nombre d'entre les \\((\\overline{G'_i})_*\\), \\((\\overline{G^{\\alpha}})_*\\otimes_A A'\\) possède un conoyau ; ce conoyau\nest la somme directe d'un certain nombre d'exemplaires de \\((F_0\\otimes_A A')\\backslash(G^0\\otimes_A A')\\)\nde sorte que toute partie finie de ce conoyau est contenue dans un ouvert affine ; de\nplus, la construction de ce conoyau commute aux extensions finies et localement\nlibres de la base. On voit donc comme en <a class=\"ref\" href=\"#VIA.3.2.3\">3.2.3</a> que ce conoyau est de la forme \\(Y\\otimes_A A'\\),\noù Y est un conoyau de \\((\\overline{G^{\\alpha}})_*\\).</p>"
+    },
+    {
+     "id": "VIA.4.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.5\">4.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous avons donc construit \\(F\\backslash G\\). Les autres assertions du théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> se\nramènent directement à des assertions concernant les groupoïdes \\(\\overline{G^{\\alpha}}_*\\). Comme en\n<a class=\"ref\" href=\"#V.6\">V §6</a>, il suffit de prouver (ii), (iii) et (iv) ; d'après SGA VIII il suffit de vérifier les\nassertions correspondantes du groupoïde \\(\\overline{G^{\\alpha}}_*\\otimes_A A'\\) qui est isomorphe à la somme\ndirecte d'un nombre fini d'exemplaires de \\(\\overline{G^0}_*\\otimes_A A'\\) (confer <a class=\"ref\" href=\"#VIA.4.4\">4.4</a>), de sorte qu'on\nest ramené au groupoïde \\(\\overline{G^0}_*\\). Pour ce dernier on continue de calquer la preuve\nétablie en <a class=\"ref\" href=\"#V.6\">V §6</a> comme on a commencé à le faire en <a class=\"ref\" href=\"#VIA.4.3\">4.3</a>.</p>"
+    },
+    {
+     "id": "VIA.4.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.6\">4.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ajoutons pour terminer ce paragraphe quelques remarques concernant le\nlemme 6.1 et le §9.a) de l'exposé <a class=\"ref\" href=\"#V\">V</a> : avec les hypothèses et les notations de\n<a class=\"ref\" href=\"#V.9\">V §9.a)</a>, nous cherchons une condition sous laquelle la construction du conoyau du\n\\((\\mathrm{Sch}/S)\\)-groupoïde \\(X_*\\) commute à une extension \\(\\pi : S' \\to S\\) de la base. Comme les\nconoyaux de \\(X_*\\) et \\(X'_*\\) s'identifient aux conoyaux des groupoïdes \\(U_*\\) et \\(U'_*\\) induits\npar \\(X_*\\) et \\(X'_*\\) sur les quasi-sections U et \\(U'\\), on est ramené au cas d'un \\((\\mathrm{Sch}/S)\\)-\ngroupoïde vérifiant les hypothèses du théorème <a class=\"ref\" href=\"#V.4.1\">V 4.1</a>. Si \\(g : U_0 \\to Y\\) est le\nmorphisme canonique de \\(U_0=U\\) sur le conoyau Y de \\(U_*\\), nous voulons que la suite\nde \\(\\mathscr{O}_{Y'}\\)-Modules\n\\[\n(*)\\qquad \\mathscr{O}_{Y'} \\longrightarrow g'_*(\\mathscr{O}_{U_0'}) \\rightrightarrows (gu_1)'_*(\\mathscr{O}_{U_1'}) = (gu_0)'_*(\\mathscr{O}_{U_1'})\n\\]\nsoit exacte. Si S est localement noethérien et \\(X_0\\) de type fini sur S, ou bien si\n\\((d_0,d_1)\\) est un couple d'équivalence, il résulte de EGA \\(\\mathrm{III}_1\\), 1.4.5 que la suite (∗)\ns'identifie à l'image réciproque de la suite\n\\[\n(**)\\qquad \\mathscr{O}_Y \\longrightarrow g_*(\\mathscr{O}_{U_0}) \\rightrightarrows g_*u_{1*}(\\mathscr{O}_{U_1}) = g_*u_{0*}(\\mathscr{O}_{U_1})\n\\]\nchaque fois que \\(S'\\) est plat sur S. Comme (∗∗) est une suite exacte, on voit que\n<em>la construction du conoyau de \\(X_*\\) commute aux extensions plates de la base sous les\nhypothèses mentionnées</em>.</p>"
+    },
+    {
+     "id": "VIA.4.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.4.7\">4.7.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons maintenant le cas du groupoïde \\(G_*\\) du théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> lorsqu'on\nsuppose provisoirement F et G de type fini sur A. D'après <a class=\"ref\" href=\"#VIA.3.2.2\">3.2.2</a> il existe une algèbre\n\\(A'\\) locale, finie et libre sur A telle que le groupoïde \\(G_*\\otimes_A A'\\) possède « localement »\ndes quasi-sections. Pour toute extension \\(T \\to \\mathrm{Spec}\\ A\\) de la base, la suite\n\\[\n\\xymatrix{\n(F''\\backslash G'')\\times_{\\mathrm{Spec}\\ A}T \\ar@&lt;0.6ex&gt;[r] \\ar@&lt;-0.6ex&gt;[r] &amp; (F'\\backslash G')\\times_{\\mathrm{Spec}\\ A}T \\ar[r] &amp; (F\\backslash G)\\times_{\\mathrm{Spec}\\ A}T\n}\n\\]\ndéduite du diagramme (∗) de <a class=\"ref\" href=\"#VIA.3.2.3\">3.2.3</a> est exacte. Si l'on suppose de plus T plat sur\n\\(\\mathrm{Spec}\\ A\\), \\((F''\\backslash G'')\\times_{\\mathrm{Spec}\\ A}T\\) et \\((F'\\backslash G')\\times_{\\mathrm{Spec}\\ A}T\\) s'identifient respectivement\naux conoyaux de \\((G_*\\otimes_A A'')\\times_{\\mathrm{Spec}\\ A}T\\) et \\((G_*\\otimes_A A')\\times_{\\mathrm{Spec}\\ A}T\\). Le diagramme\ndéduit de (∗), <a class=\"ref\" href=\"#VIA.3.2.3\">3.2.3</a> par le changement de base \\(T \\to \\mathrm{Spec}\\ A\\) montre alors que\n\\((F\\backslash G)\\times_{\\mathrm{Spec}\\ A}T\\) s'identifie au conoyau de \\(G_*\\times_{\\mathrm{Spec}\\ A}T\\). Un raisonnement\nanalogue est valable dans le cas général :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>Sous les hypothèses du théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a>, pour tout \\(A\\)-schéma plat T, \\((F\\backslash G)\\times_{\\mathrm{Spec}\\ A}T\\)\ns'identifie au quotient à gauche de \\(G\\times_{\\mathrm{Spec}\\ A}T\\) par \\(F\\times_{\\mathrm{Spec}\\ A}T\\).</em></p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "VIA-5",
+   "title": "5. Compléments",
+   "blocks": [
+    {
+     "id": "VIA.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"VIA.5\">5. Compléments</h2>"
+    },
+    {
+     "id": "VIA.5.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.5.1\">5.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous reprenons les notations du <a class=\"ref\" href=\"#VIA.3\">§3</a> et les hypothèses du théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> ; on a\nalors le diagramme commutatif suivant\n\\[\n\\xymatrix{\nF\\times_A G\\times_A G \\ar[r]^-{F\\times\\nu} \\ar@&lt;0.8ex&gt;[d]^-{\\mathrm{pr}_2\\times G} \\ar@&lt;-0.8ex&gt;[d]_-{\\lambda\\times G} &amp; F\\times_A G \\ar@&lt;0.8ex&gt;[d]^-{\\mathrm{pr}_2} \\ar@&lt;-0.8ex&gt;[d]_-{\\lambda} \\\\\nG\\times_A G \\ar[r]^-{\\nu} \\ar[d]_-{\\mathrm{can.}\\times G} &amp; G \\ar[d]^-{\\mathrm{can.}} \\\\\n(F\\backslash G)\\times_A G \\ar@{--&gt;}[r]^-{\\rho} &amp; F\\backslash G,\n}\n\\]\nqui satisfait aux égalités \\(\\mathrm{pr}_2\\circ(F\\times\\nu) = \\nu\\circ(\\mathrm{pr}_2\\times G)\\) et \\(\\lambda\\circ(F\\times\\nu) =\n\\nu\\circ(\\lambda\\times G)\\). En outre, comme G est supposé plat sur A, la suite verticale de gauche\nest exacte d'après <a class=\"ref\" href=\"#VIA.4.7\">4.7</a>, de sorte que \\(\\nu\\) induit un morphisme de \\(A\\)-schémas :\n\\[\n\\rho : (F\\backslash G)\\times_A G \\longrightarrow F\\backslash G.\n\\]\nCe morphisme \\(\\rho\\) fait opérer G à droite sur \\(F\\backslash G\\) comme on le vérifie immédiatement ;\nde plus, le morphisme canonique \\(G \\to F\\backslash G\\) commute aux opérations de G à droite\nsur G et \\(F\\backslash G\\).</p>"
+    },
+    {
+     "id": "VIA.5.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.5.2\">5.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Lorsque l'homomorphisme de \\(A\\)-groupes \\(u : F \\to G\\) est un monomorphisme,\non peut retrouver <a class=\"ref\" href=\"#VIA.5.1\">5.1</a> en se servant des résultats de l'exposé <a class=\"ref\" href=\"#IV\">IV</a>. En effet, le morphisme\ncanonique \\(p : G \\to F\\backslash G\\) est fidèlement plat et ouvert d'après <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> ; il est donc couvrant\npour la topologie (fpqc) (<a class=\"ref\" href=\"#IV.6.3.1\">IV 6.3.1</a>) et l'on peut appliquer les corollaires\n<a class=\"ref\" href=\"#IV.5.2.2\">IV.5.2.2</a> et <a class=\"ref\" href=\"#IV.5.2.4\">IV.5.2.4</a>. En particulier, si nous supposons, en plus des hypothèses de <a class=\"ref\" href=\"#VIA.3.2\">3.2</a>,\nque \\(u\\) est l'inclusion dans G d'un sous-groupe invariant F, il existe sur \\(F\\backslash G\\) une et\nune seule structure de \\(A\\)-groupe telle que le morphisme canonique \\(p : G \\to F\\backslash G\\) soit\nun homomorphisme de \\(A\\)-groupes.</p>"
+    },
+    {
+     "id": "VIA.5.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.5.3\">5.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous allons maintenant passer en revue quelques énoncés de l'exposé <a class=\"ref\" href=\"#IV\">IV</a> :</p>"
+    },
+    {
+     "id": "VIA.5.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.5.3.1\">5.3.1.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les énoncés <a class=\"ref\" href=\"#IV.5.2.7\">IV 5.2.7</a> et <a class=\"ref\" href=\"#IV.5.3.1\">IV 5.3.1</a> se traduisent comme suit : soient F et G deux\ngroupes localement de type fini et plats sur A, F étant un sous-groupe invariant fermé\nde G. Les applications \\(H \\mapsto F\\backslash H\\) et \\(H' \\mapsto H'\\times_{(F\\backslash G)}G\\) définissent une correspon-\ndance biunivoque entre les \\(A\\)-sous-groupes plats de G contenant F et les \\(A\\)-sous-groupes\nplats de \\(F\\backslash G\\). Dans cette bijection les sous-groupes fermés (resp. invariants) de G\ncontenant F correspondent aux sous-groupes fermés (resp. invariants) de \\(F\\backslash G\\).</p>"
+    },
+    {
+     "id": "VIA.5.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.5.3.2\">5.3.2.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La proposition <a class=\"ref\" href=\"#IV.5.2.9\">IV 5.2.9</a> implique le résultat suivant : soient F, H et G des\ngroupes localement de type fini et plats sur A ; on suppose F contenu et fermé dans\nG, H contenu dans G et contenant F, F invariant dans H. Dans ces conditions, \\(F\\backslash H\\)\nopère librement à gauche sur \\(F\\backslash G\\), le schéma quotient \\((F\\backslash H)\\backslash(F\\backslash G)\\) existe et on a\nun isomorphisme canonique de schémas à groupe d'opérateurs G :\n\\[\n(F\\backslash H)\\backslash(F\\backslash G) = H\\backslash G.\n\\]</p>"
+    },
+    {
+     "id": "VIA.5.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h4 id=\"VIA.5.3.3\">5.3.3.</h4>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De <a class=\"ref\" href=\"#IV.5.2.8\">IV 5.2.8</a>, enfin, découle l'assertion que voici : soient F, H et G des groupes\nlocalement de type fini et plats sur A ; on suppose que F est contenu, fermé et invariant\ndans G, que H est contenu dans G et que \\(F\\cap H\\) est plat sur A. Soit alors \\(F\\rtimes_A H\\)\nle \\(A\\)-groupe qui a pour schéma sous-jacent le produit \\(F\\times_A H\\), la multiplication étant\ndéfinie par le morphisme « \\(((x,h),(y,h'))\\mapsto(xhyh^{-1},hh')\\) » ; de même, soient\n\\(u : H\\cap F \\to F\\rtimes_A H\\) le monomorphisme \\(x \\mapsto (x^{-1},x)\\) et \\(F\\cdot H\\) le quotient\n\\((F\\cap H)\\backslash(F\\rtimes_A H)\\). Dans ces conditions il existe un isomorphisme canonique\n\\[\nF\\backslash(F\\cdot H) = (F\\cap H)\\backslash H.\n\\]</p>"
+    },
+    {
+     "id": "VIA.5.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.5.4\">5.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(u : F \\to G\\) un homomorphisme quasi-compact de groupes localement de\ntype fini et plats sur A ; supposons que le noyau de \\(u\\) soit également plat sur A. Dans\nce cas, le groupe-quotient \\((\\mathrm{Ker}\\ u)\\backslash F\\) existe d'après le théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> et <a class=\"ref\" href=\"#VIA.5.2\">5.2</a> ; de plus,\n\\(u\\) induit un monomorphisme \\(v : \\mathrm{Ker}\\ u\\backslash F \\to G\\) (<a class=\"ref\" href=\"#IV.5.2.6\">IV 5.2.6</a>) et, \\(\\mathrm{Ker}\\ u\\backslash F\\) est plat sur\nA d'après <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> (iv). D'autre part, \\(\\mathrm{Ker}\\ u\\backslash F\\) s'identifie au faisceau-quotient de \\(\\widehat{F}\\)\npar \\(\\mathrm{Ker}\\ \\widehat{u}\\) pour la topologie (fpqc) de \\((\\mathrm{Sch}/A)\\) (confer <a class=\"ref\" href=\"#VIA.5.2\">5.2</a>) ; il en résulte que\n\\(F\\backslash G\\) s'identifie à \\((\\mathrm{Ker}\\ u\\backslash F)\\backslash G\\) car le faisceau-quotient \\(\\widehat{F}\\backslash\\widehat{G}\\) pour la topologie\ncanonique s'identifie au faisceau-quotient \\((\\mathrm{Ker}\\ \\widehat{u}\\backslash\\widehat{F})\\backslash\\widehat{G}\\). A fortiori \\(v\\) induit un\nisomorphisme de \\((\\mathrm{Ker}\\ u)\\backslash F\\) sur l'image réciproque dans G du point distingué de \\(F\\backslash G\\)\n(de sorte que \\(v\\) est une immersion fermée ; confer <a class=\"ref\" href=\"#VIB\">VI<sub>B</sub></a>). Lorsque F et G sont des\n\\(A\\)-groupes commutatifs, cette image réciproque est l'<em>image</em> de \\(u\\) dans la catégorie des\n\\(A\\)-groupes abéliens, alors que \\((\\mathrm{Ker}\\ u)\\backslash F\\) est la <em>coimage</em> de \\(u\\). D'où :</p>"
+    },
+    {
+     "id": "VIA.5.4.thm",
+     "type": "theoreme",
+     "label": null,
+     "title": "Théorème",
+     "html": "<div class=\"thm thm-plain theoreme\" id=\"VIA.5.4.thm\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Théorème</span></div>\n  <div class=\"thm-body\"><p>La catégorie des groupes commutatifs de type fini sur un corps est\nabélienne.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet, lorsque A est un corps, \\(\\mathrm{Ker}\\ u\\) est plat sur A quelque soit \\(u\\).</p>"
+    },
+    {
+     "id": "VIA.5.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.5.5\">5.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit G un groupe localement de type fini et plat sur un anneau artinien local\nA. On sait que la composante connexe de l'origine \\(G^0\\) est un sous-groupe invariant\nde G (<a class=\"ref\" href=\"#VIA.2.3\">2.3</a>). Ce sous-groupe \\(G^0\\) opère à gauche sur toutes les composantes connexes\n\\(G^{\\alpha}\\) de G de sorte que \\(G^0\\backslash G\\) est la somme directe des \\(G^0\\backslash G^{\\alpha}\\). En particulier, la\ncomposante connexe de l'origine dans \\(G^0\\backslash G\\) n'est autre que \\(G^0\\backslash G^0 \\cong \\mathrm{Spec}\\ A\\) et\n\\(G^0\\backslash G \\to \\mathrm{Spec}\\ A\\) est un isomorphisme local à l'origine ; par conséquent, \\(G^0\\backslash G\\)\nest non ramifié sur \\(\\mathrm{Spec}\\ A\\) (3.3) ; comme \\(G^0\\backslash G\\) est également plat sur \\(\\mathrm{Spec}\\ A\\) d'après\nle théorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> (iv), <em>on voit que \\(G^0\\backslash G\\) est un groupe étale sur \\(\\mathrm{Spec}\\ A\\)</em>.</p>"
+    },
+    {
+     "id": "VIA.5.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"VIA.5.6\">5.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient maintenant \\(k\\) un corps parfait et G un groupe localement de type\nfini sur \\(k\\). Nous avons vu (<a class=\"ref\" href=\"#VIA.0.2\">0.2</a>) que \\(G_{\\mathrm{r\\acute{e}d}}\\) est alors un sous-schéma en groupes de G. De\nplus, la classe d'équivalence de l'origine de G pour l'opération de \\(G_{\\mathrm{r\\acute{e}d}}\\) à gauche sur G\nest tout l'espace sous-jacent à G. Il résulte donc du théorème <a class=\"ref\" href=\"#VIA.4.2\">4.2</a> que le quotient\n\\(G_{\\mathrm{r\\acute{e}d}}\\backslash G\\) est le spectre d'une \\(k\\)-algèbre finie et locale.</p>"
+    },
+    {
+     "id": "VIA.5.6.prop",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"VIA.5.6.prop\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span></div>\n  <div class=\"thm-body\"><p>Soit \\(u : F \\to G\\) un homomorphisme de groupes localement de type\nfini sur un corps parfait \\(k\\). Les assertions suivantes sont équivalentes :</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(i)</span> <p>\\(u\\) est plat.</p></li>\n  <li><span class=\"item-label\">(ii)</span> <p>\\(u^0 : F^0 \\to G^0\\) est dominant et le morphisme \\(v : F_{\\mathrm{r\\acute{e}d}}\\backslash F \\to\nG_{\\mathrm{r\\acute{e}d}}\\backslash G\\) induit par \\(u\\) est plat.</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Considérons en effet le diagramme commutatif suivant :\n\\[\n\\xymatrix{\nF_{\\mathrm{r\\acute{e}d}} \\ar[r]^-{i} \\ar[d]_-{u_{\\mathrm{r\\acute{e}d}}} &amp; F \\ar[r]^-{p} \\ar[d]^-{u} &amp; F_{\\mathrm{r\\acute{e}d}}\\backslash F \\ar[d]^-{v} \\\\\nG_{\\mathrm{r\\acute{e}d}} \\ar[r]_-{j} &amp; G \\ar[r]_-{q} &amp; G_{\\mathrm{r\\acute{e}d}}\\backslash G,\n}\n\\]\noù \\(i\\) et \\(j\\) désignent les inclusions, \\(p\\) et \\(q\\) les projections canoniques. D'après le\nthéorème <a class=\"ref\" href=\"#VIA.3.2\">3.2</a> (iv) \\(p\\) et \\(q\\) sont fidèlement plats ; par conséquent, si \\(u\\) est plat, \\(qu=vp\\)\nest plat, donc également \\(v\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Réciproquement, si \\(v\\) est plat, F et G sont plats sur \\(G_{\\mathrm{r\\acute{e}d}}\\backslash G\\) ; d'après SGA 1, IV\n5.9 il suffit donc de monter que le morphisme \\(u^{-1}(G_{\\mathrm{r\\acute{e}d}}) \\to G_{\\mathrm{r\\acute{e}d}}\\) induit par \\(u\\) est\nplat ; cela est vrai parce que \\(G_{\\mathrm{r\\acute{e}d}}\\) est réduit (3.3.1).</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par P. Gabriel"
+}

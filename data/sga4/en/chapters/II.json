@@ -1,0 +1,1312 @@
+{
+ "chapter_id": "II",
+ "title": "PRESENTATION II TOPOLOGIES AND BEAMS",
+ "number": "II",
+ "pages": [
+  {
+   "id": "II",
+   "title": "PRESENTATION II TOPOLOGIES AND BEAMS",
+   "blocks": [
+    {
+     "id": "II",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"II\">PRESENTATION II<br>TOPOLOGIES AND BEAMS<span class=\"author\">by J.L. Verdier</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>After the definition of topologies and pre-topologies (n° 1) and sheaves\nof sets (n° 2), we approach in n° 3 the central theorem of this presentation (3.4):\nthe existence of the beam associated with a pre-beam. In order to cover all cases encountered\nin practice, the existence of this functor is demonstrated for presheaves on a\n\\(\\mathcal{U}\\)-site (3.0.2). Nos. 4 and 5 draw the consequences of this theorem on the\nbehavior of inductive and projective limits in sheaf categories. At\nNo. 6 we define and study the value sheaves in any categories, to\nimmediately pay attention to the bundles of rings, groups, modules\netc... .</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-1",
+   "title": "1. Topologies, covering families, pretopologies",
+   "blocks": [
+    {
+     "id": "II.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.1\">1. Topologies, covering families, pretopologies</h2>"
+    },
+    {
+     "id": "II.1.1",
+     "type": "definition",
+     "label": "1.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\">\n  <p>A <em>topology</em> on a category \\(C\\) is the data, for any object \\(X\\) of \\(C\\),\nof a set \\(J(X)\\) of screens of \\(X\\), this data being subject to the following axioms:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(T 1)</span> <p>(Stability by change of base). For any object \\(X\\) of \\(C\\), any screen\n\\(R \\in J(X)\\), any morphism \\(f : Y \\to X\\) (\\(Y \\in \\mathrm{ob}\\,(C)\\)), the sieve \\(R \\times_X Y\\) of \\(Y\\)\nbelongs to \\(J(Y)\\).</p></li>\n  <li><span class=\"item-label\">(T 2)</span> <p>(Local character). If \\(R\\) and \\(R'\\) are two screens of \\(X\\), if \\(R \\in J(X)\\), and\nif for all \\(Y \\in \\mathrm{ob}\\,(C)\\) and all morphism \\(Y \\to R\\) the sieve \\(R' \\times_X Y\\) belongs to\n\\(J(Y)\\), then \\(R'\\) belongs to \\(J(X)\\).</p></li>\n  <li><span class=\"item-label\">(T 3)</span> <p>For any object \\(X\\) of \\(C\\), \\(X\\) belongs to \\(J(X)\\).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.1.1.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.1\">1.1.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Screens belonging to \\(J(X)\\) will be called <em>screens covering \\(X\\)</em>, or\nagain the <em>refinements of \\(X\\)</em>. From the axioms (T1), (T2), (T3), we immediately deduce that\nthe set of sieves covering \\(X\\) is stable by finite intersections, and that every sieve\ncontaining a covering screen is a covering screen. The set \\(J(X)\\), ordered by\ninclusion, is therefore co-filtering (I 8).</p>"
+    },
+    {
+     "id": "II.1.1.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.2\">1.1.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be a category, \\(T\\) and \\(T'\\) two topologies on \\(C\\). The topology \\(T\\) is said to be\n<em>finer than the topology \\(T'\\)</em> if for any object \\(X\\) of \\(C\\), any refinement of \\(X\\) for the\ntopology \\(T'\\) is a refinement of \\(X\\) for topology \\(T\\). In this way, we define a\norder structure on all topologies.</p>"
+    },
+    {
+     "id": "II.1.1.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.3\">1.1.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\((T_i)_{i \\in I}\\) be a family of topologies on \\(C\\). Sets, for any object \\(X\\)\nof \\(C\\), screens of \\(X\\) which are covering for all topologies \\(T_i\\), check the\naxioms (T 1), (T 2) and (T 3) and therefore define a topology: the <em>intersection topology</em>\nof \\(T_i\\), i.e. the lower bound of \\(T_i\\). It is the finest topology which is less\nfine that all topologies \\(T_i\\). The \\((T_i)_{i \\in I}\\) family therefore admits a<em>boundary\nsuperior</em>: the topology intersection of topologies finer than each of \\(T_i\\).</p>"
+    },
+    {
+     "id": "II.1.1.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.4\">1.1.4.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular the data \\(J(X) = \\) the set of all the screens of \\(X\\), is a\ntopology finer than any topology on \\(C\\), which we will call <em>discrete topology</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>There exists a topology less fine-grained than any topology on \\(C\\); the topology for\nwhich \\(J(X) = \\{X\\}\\) for all \\(X\\) of \\(C\\). This topology is called the <em>coarse topology</em>\nor <em>chaotic</em>.</p>"
+    },
+    {
+     "id": "II.1.1.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.5\">1.1.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A category \\(C\\) with a topology is called a <em>site</em>. Category \\(C\\) is\ncalled the <em>category underlying the site</em>.</p>"
+    },
+    {
+     "id": "II.1.2",
+     "type": "definition",
+     "label": "1.2",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a site, \\(X\\) be an object of \\(C\\). A family of morphisms\n\\((f_\\alpha : X_\\alpha \\to X)\\), \\(\\alpha \\in A\\), is said to be <em>covering</em> if the sieve generated by the family \\(f_\\alpha\\)\n(I 4.3.3) is a sieve covering \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.1.1.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.1.6\">1.1.6.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be a category. Let us give ourselves for each object \\(X\\) of \\(C\\), a set of\nfamilies of goal morphisms \\(X\\). There then exists a topology \\(T\\) which is the least fine of the\ntopologies for which the given families are covering, namely the intersection\n(1.1.3) of all the topologies in question. We call this topology the<em>topology\ngenerated by the sets of families of given morphisms</em>. It is difficult to describe,\nin general, all covering screens of this topology. However, the situation is more\nnice in the following case:</p>"
+    },
+    {
+     "id": "II.1.3",
+     "type": "definition",
+     "label": "1.3",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a category. A <em>pretopology</em> on \\(C\\) is the data, for each\nobject \\(X\\) of \\(C\\), of a set \\(\\mathrm{Cov}(X)\\) of families of goal morphisms \\(X\\), this data\nbeing subject to the following axioms:</p>\n  <ol class=\"enumerate\">\n  <li><span class=\"item-label\">(PT 0)</span> <p>For any object \\(X\\) of \\(C\\), the morphisms of the families of morphisms of\n\\(\\mathrm{Cov}(X)\\) are quatable. (Recall that a morphism \\(Y \\to X\\) is said to be <em>quarrable</em> if for\nany morphism \\(Z \\to X\\) the fiber product \\(Z \\times_X Y\\) is representable).</p></li>\n  <li><span class=\"item-label\">(PT 1)</span> <p>For any object \\(X\\) of \\(C\\), any family \\((X_\\alpha \\to X)_{\\alpha \\in A}\\) belonging\nto \\(\\mathrm{Cov}(X)\\), and any morphism \\(Y \\to X\\) (\\(Y \\in \\mathrm{ob}\\,(C)\\)), the family:\n\\((X_\\alpha \\times_X Y \\to Y)_{\\alpha \\in A}\\) belongs to \\(\\mathrm{Cov}(Y)\\). (Stability by change of base).</p></li>\n  <li><span class=\"item-label\">(PT 2)</span> <p>If \\((X_\\alpha \\to X)_{\\alpha \\in A}\\) belongs to \\(\\mathrm{Cov}(X)\\) and if for each\n\\(\\alpha \\in A\\), \\((X_{\\beta_\\alpha} \\to X_\\alpha)_{\\beta_\\alpha \\in B_\\alpha}\\) belongs to \\(\\mathrm{Cov}(X_\\alpha)\\), then the family\n\\((X_\\gamma \\to X)_{\\gamma \\in \\coprod_{\\alpha \\in A} B_\\alpha}\\) (where for all \\(\\gamma = (\\alpha, \\beta_\\alpha)\\), \\(\\alpha \\in A\\), \\(\\beta_\\alpha \\in B_\\alpha\\), the\nmorphism \\(X_\\gamma \\to X\\) is the compound morphism: \\(X_\\gamma = X_{\\beta_\\alpha} \\to X_\\alpha \\to X\\)) belongs\nto \\(\\mathrm{Cov}(X)\\). (Stability by composition).</p></li>\n  <li><span class=\"item-label\">(PT 3)</span> <p>Family: \\(X \\xrightarrow{\\ \\mathrm{id}_X\\ } X\\) belongs to \\(\\mathrm{Cov}(X)\\).</p></li>\n  </ol>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.1.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.1.3.1\">1.3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The definition of 1.1.6 allows us to consider, for a given <em>pretopology</em> on\n\\(C\\), the <em>topology</em> on \\(C\\) generated by this pretopology. Note that if \\(C\\) is a category\nwhere the fiber products are representable, then any topology \\(T\\) of \\(C\\) can be defined\nby a pretopology, namely the one for which \\(\\mathrm{Cov}(X)\\) is formed of <em>all</em> families\ncovering \\(X\\) for topology \\(T\\).</p>"
+    },
+    {
+     "id": "II.1.4",
+     "type": "proposition",
+     "label": "1.4",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a category, \\(E\\) be a pretopology on \\(C\\), \\(T\\)\nthe topology defined by the pretopology \\(E\\) (1.1.6), \\(X\\) an object of \\(C\\). Let us denote by \\(J_E(X)\\)\nthe set of screens of \\(X\\) generated by the families of the pretopology, and by \\(J_T(X)\\)\nall refinements of \\(X\\) for the topology \\(T\\). Then \\(J_E(X)\\) is cofinal in \\(J_T(X)\\).\nIn other words, for a sieve \\(R\\) of \\(X\\) to belong to \\(J_T(X)\\), it is necessary and sufficient that it\nexists a screen \\(R' \\in J_E(X)\\) such that \\(R' \\subset R\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Let, for any object \\(X\\) of \\(C\\), \\(J'(X)\\) be the set of screens of \\(X\\) which\ncontain a screen of \\(J_E(X)\\). We obviously have \\(J'(X) \\subset J_T(X)\\). To show that\n\\(J'(X) = J_T(X)\\), it suffices to show that the data of \\(J'(X)\\) defines a topology on \\(C\\). Gold\nthe \\(J'(X)\\) obviously verify the axioms (T 1) and (T 3). It therefore remains to be verified (T 2). For\nthis suffices to demonstrate that if \\(R'\\) is a sub-screen of \\(R \\in J_E(X)\\) such that for all\n\\(Y \\to R\\), the screen \\(R' \\times_X Y\\) of \\(Y\\) belongs to \\(J'(X)\\), the screen \\(R'\\) belongs to \\(J'(X)\\). But the\nsieve \\(R\\) is spawned by a family \\((X_\\alpha \\to X)\\) belonging to \\(\\mathrm{Cov}(X)\\), and for all \\(\\alpha\\) the\nsieve \\(R' \\times_X X_\\alpha\\) contains a sieve generated by a family \\((X_{\\beta_\\alpha} \\to X_\\alpha)\\) belonging\nto \\(\\mathrm{Cov}(X_\\alpha)\\). We deduce that the sieve \\(R'\\) contains a sieve generated by the family\n\\((X_{\\beta_\\alpha} \\to X)\\). Therefore, according to the axiom (PT 2), \\(R'\\) contains a sieve of \\(J_E(X)\\) and consequently\nbelongs to \\(J'(X)\\), cqfd.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-2",
+   "title": "2. Set bundles",
+   "blocks": [
+    {
+     "id": "II.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.2\">2. Set bundles</h2>"
+    },
+    {
+     "id": "II.2.1",
+     "type": "definition",
+     "label": "2.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a site whose underlying category is a\n\\(\\mathcal{U}\\)-category. A pre-bundle \\(F\\) with values in \\(\\mathcal{U}\\text{-Ens}\\) is said to be <em>separated</em> (resp. is a\n<em>beam</em>) if for any screen \\(R\\) covering \\(X\\), object of \\(C\\), the application:\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R,F)\n\\]\nis an injection (resp. a bijection). The full subcategory of \\(\\widehat{C}\\) whose objects\nare the sheaves is called the <em>category of set sheaves on \\(C\\)</em>, and is denoted the\nmore often \\(\\widetilde{C}\\) <sup class=\"footnote-ref\"><a id=\"II-fn1ref\" href=\"#II-fn1\">(1)</a></sup>. When no ambiguity results, we will say\nsimply <em>beam category on \\(C\\)</em>; on the other hand we will sometimes specify in\nsaying category of sheaves with value in \\(\\mathcal{U}\\text{-Ens}\\) or even category of\n\\(\\mathcal{U}\\)-beams.</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.2",
+     "type": "proposition",
+     "label": "2.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category, \\(\\mathscr{F} = (F_i)_{i \\in I}\\) be a family\nof \\(\\mathcal{U}\\)-pre-bundles on \\(C\\). Let us designate, for each object \\(X\\) of \\(C\\), by \\(J_{\\mathscr{F}}(X)\\) all of the\nsifters \\(R \\hookrightarrow X\\) of \\(C\\) such that for any morphism \\(Y \\to X\\) of \\(C\\) of goal \\(X\\), the sieve\n\\(R \\times_X Y\\) has the following property: the application\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(Y,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R \\times_X Y, F_i)\n\\]\nis bijective (resp. injective) for all \\(i \\in I\\). Then the sets \\(J_{\\mathscr{F}}(X)\\) define a\ntopology on \\(C\\), which is the finest topology for which each of \\(F_i\\) is a\nbeam (resp. a separate pre-beam).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. The \\(J_{\\mathscr{F}}(X)\\) obviously verify axioms (T 1) and (T 3). It remains to\nshow that they verify (T 2). To do this, it is enough to show that:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) If \\(R' \\hookrightarrow R \\hookrightarrow X\\) are two sifters of \\(X\\), such that \\(R \\in J_{\\mathscr{F}}(X)\\) and such that for\nany \\(Y \\to R\\) (where \\(Y\\) is an object of \\(C\\)) the sieve \\(R' \\times_X Y\\) belongs to \\(J_{\\mathscr{F}}(Y)\\), then the\nscreen \\(R'\\) belongs to \\(J_{\\mathscr{F}}(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) If \\(R' \\hookrightarrow R \\hookrightarrow X\\) are two sifters of \\(X\\) such that \\(R' \\in J_{\\mathscr{F}}(X)\\), then the sifter \\(R\\)\nbelongs to \\(J_{\\mathscr{F}}(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Note that, in case 2), for all \\(Y \\to R\\) (where \\(Y\\) is an object of \\(C\\)) the sieve\n\\(R' \\times_X Y\\) belongs to \\(J_{\\mathscr{F}}(Y)\\). Now, in cases 1) and 2), \\(R\\) is the inductive limit of \\(Y\\), objects\nof \\(C\\), above \\(R\\) (I 3.4). The inductive limits in \\(\\widehat{C}\\) are universal (I 3.3). By\nfollowing in cases 1) and 2), \\(R'\\) is the inductive limit of \\(R' \\times_X Y\\). However, in cases 1) and (2),\n\\(R' \\times_X Y\\) belongs to \\(J_{\\mathscr{F}}(Y)\\). We deduce, by passing to the inductive limit on the objects \\(Y\\)\nof \\(C\\) above \\(R\\), that the application\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(R,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R',F_i)\n\\]\nis a bijection (resp. an injection) for all \\(i \\in I\\). Consequently, the applications\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F_i) \\to \\mathrm{Hom}_{\\widehat{C}}(R',F_i) \\quad\\text{et}\\quad \\mathrm{Hom}_{\\widehat{C}}(X,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R,F_i)\n\\]\nare, in cases 1) and 2), bijections (resp. injections). Additionally, assumptions 1)\nand 2) are visibly stable by any base change \\(Y \\to X\\) (\\(Y\\) object of \\(C\\)). We\nthen deduces that for any object \\(Y\\) of \\(C\\) above \\(X\\) and all \\(i \\in I\\), the applications\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(Y,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R \\times_X Y, F_i)\n\\]\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(Y,F_i) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R' \\times_X Y, F_i)\n\\]\nare in both cases bijections (resp. injections); which shows that \\(R'\\) and \\(R\\)\nbelong to \\(J_{\\mathscr{F}}(X)\\), cqfd.</p>"
+    },
+    {
+     "id": "II.2.3",
+     "type": "corollaire",
+     "label": "2.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category, and for all \\(X\\) of \\(C\\) a set\n\\(K(X)\\) of \\(X\\) screens. We assume that the \\(K(X)\\) satisfy the axiom (T 1) of (1.1). So that a\npre-bundle \\(F\\) is a beam (resp. a separate pre-bundle) for the generated topology\n(1.1.6) by \\(K(X)\\), it is necessary and sufficient that for any object \\(X\\) of \\(C\\) and any sieve \\(R \\in K(X)\\),\nthe app\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(R,F)\n\\]\nor a bijection (resp. an injection).</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.4",
+     "type": "corollaire",
+     "label": "2.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">2.4</span></div>\n  <div class=\"thm-body\"><p>In particular, let \\(C\\) be a \\(\\mathcal{U}\\)-category with a\npretopology. For a pre-beam \\(F\\) to be a beam (resp. a separate pre-beam), it\nIt is necessary and sufficient that for any object \\(X\\) of \\(C\\) and for any family \\((X_\\alpha \\to X)\\) belonging to\n\\(\\mathrm{Cov}(X)\\), the set diagram\n\\[\nF(X) \\longrightarrow \\prod_{\\alpha \\in A} F(X_\\alpha) \\rightrightarrows \\prod_{(\\alpha,\\beta) \\in A \\times A} F(X_\\alpha \\times_X X_\\beta)\n\\]\nis exact (resp. the application\n\\[\nF(X) \\longrightarrow \\prod_{\\alpha \\in A} F(X_\\alpha)\n\\]\nor injective).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. We apply 2.3, then (I 3.5) and (I 2.12).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We find with corollary 2.4 the definition given in [1].</p>"
+    },
+    {
+     "id": "II.2.5",
+     "type": "definition",
+     "label": "2.5",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category. We call <em>canonical topology</em>\nof \\(C\\) the finest topology for which the representable functors are sheaves\n(2.2). A screen covering \\(X\\) for the canonical topology will be called<em>epimorphic screen\nstrict universal</em>. A covering family for the canonical topology will be called<em>family\nuniversal strict epimorphic</em>. When in addition the morphisms of the covering family\nare quatable, the family will be called <em>universal effective epimorphic</em> [2].</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.5.1",
+     "type": "remarque",
+     "label": "2.5.1",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.2.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">2.5.1</span></div>\n  <div class=\"thm-body\"><p>For almost all the sites we have had to use until\npresent, the topology is <em>less fine-grained</em> than the canonical topology, in other words, the\nfunctors representable on \\(C\\) are sheaves, i.e. the covering families of \\(C\\) are\nuniversal strict epimorphics. The only exception to this rule is the site \\(\\widehat{C}\\) studied at\nNo. 5 (whose topology is <em>finer</em>, and most often strictly finer, than the\ncanonical topology).</p></div>\n</div>"
+    },
+    {
+     "id": "II.2.6",
+     "type": "proposition",
+     "label": "2.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>So that a \\(R \\hookrightarrow X\\) sieve is strict epimorphic\nuniversal, it is necessary and sufficient that for any object \\(Y \\to X\\) of \\(C\\) above \\(X\\), and for all\nobject \\(Z\\) of \\(C\\), the application:\n\\[\n\\mathrm{Hom}_C(Y,Z) \\longrightarrow \\varprojlim_{\\widehat{C}/(Y \\times_X R)} \\mathrm{Hom}_C(\\,\\cdot\\,, Z)\n\\]\nor a bijection.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Immediately by applying 2.2 then (I 5.3).</p>"
+    },
+    {
+     "id": "II.2.7",
+     "type": "remarque",
+     "label": "2.7",
+     "title": "Remarks",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarks</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\">\n  <p>1) Proposition 2.6 gives a characterization of epimorphic sieves\nstrict universals of a category \\(C\\), independent of the universe in which the pre-sheaves\ntake their values, on the sole condition that the sets of morphisms \\(\\mathrm{Hom}(X,Y)\\) of\n\\(C\\) belong to this universe. It thus makes it possible to define the canonical topology for\nany category \\(C\\), without it being necessary to specify the universes.</p>\n  <p>2) Let \\(C\\) be a site whose underlying category is a \\(\\mathcal{U}\\)-category, \\(F\\) be a\n\\(\\mathcal{U}\\)-prebundle and \\(\\mathcal{V}\\) a universe containing \\(\\mathcal{U}\\). The category underlying \\(C\\) is a\n\\(\\mathcal{V}\\)-category, and \\(F\\) can be considered a \\(\\mathcal{V}\\)-prebundle. The \\(\\mathcal{U}\\)-pre-beam \\(F\\) is a\nbeam (resp. a separate pre-beam) if and only if the \\(\\mathcal{V}\\)-pre-beam \\(F\\) is a beam\n(resp. a separate pre-bundle). In other words, the condition for a pre-bundle \\(F\\) to be\na beam (resp. a separate pre-beam) does not depend (in the sense just specified) on\nthe universe in which the pre-bundle \\(F\\) takes its values. In particular are \\(C\\) a site and \\(F\\)\na \\(\\mathcal{U}\\)-prebundle; we say that \\(F\\) is a beam (resp. a separate pre-beam) if there exists a\nuniverse \\(\\mathcal{V}\\) containing \\(\\mathcal{U}\\) such that the category \\(C\\) is a \\(\\mathcal{V}\\)-category and such that \\(F\\) is a\n\\(\\mathcal{V}\\)-bundle (resp. a separate \\(\\mathcal{V}\\)-prebundle). This property does not depend on the universe \\(\\mathcal{V}\\).</p>\n  </div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn1",
+     "number": "(1)",
+     "html": "<p>(1) or \\(C^{\\sim}\\), depending on the mood of the typewriter. </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-3",
+   "title": "3. Harness associated with a pre-harness",
+   "blocks": [
+    {
+     "id": "II.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.3\">3. Harness associated with a pre-harness</h2>"
+    },
+    {
+     "id": "II.3.0.1",
+     "type": "definition",
+     "label": "3.0.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.0.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">3.0.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a site. We call<em>family topologically\ngenerator</em> (or when no confusion results, <em>generating family</em>) of \\(C\\), a\nset \\(G\\) of objects of \\(C\\) such that any object of \\(C\\) is the goal of a covering family of\nmorphisms of \\(C\\) (1.2) whose sources are elements of \\(G\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.0.2",
+     "type": "definition",
+     "label": "3.0.2",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.0.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">3.0.2</span></div>\n  <div class=\"thm-body\"><p>Let \\(\\mathcal{U}\\) be a universe. We call <em>\\(\\mathcal{U}\\)-site</em> a site \\(C\\) whose\nthe underlying category is a \\(\\mathcal{U}\\)-category (I 1.1), which has a small family\ntopologically generative. Let \\(C\\) be a \\(\\mathcal{U}\\)-category; we call <em>\\(\\mathcal{U}\\)-topology</em> on \\(C\\) a\ntopology on \\(C\\) making \\(C\\) a \\(\\mathcal{U}\\)-site. We say that a site \\(C\\) is <em>\\(\\mathcal{U}\\)-small</em>, or by abuse of\nlanguage, <em>small</em>, if the category underlying \\(C\\) is small (I 1.0).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.0.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.3.0.3\">3.0.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It immediately follows from the definitions that any topology finer than a\n\\(\\mathcal{U}\\)-topology is a \\(\\mathcal{U}\\)-topology, and a small site is a \\(\\mathcal{U}\\)-site.</p>"
+    },
+    {
+     "id": "II.3.0.4",
+     "type": "proposition",
+     "label": "3.0.4",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposal\" id=\"II.3.0.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.0.4</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site, \\(G\\) a small topologically generating family\nfrom \\(C\\). For all \\(X \\in \\mathrm{ob}\\, C\\), let us designate by \\(J_G(X)\\) the set of screens covering \\(X\\) generated\nby a family of morphisms \\((Y_\\alpha \\xrightarrow{\\ u_\\alpha\\ } X)\\), \\(\\alpha \\in A\\), where \\(Y_\\alpha \\in G\\).</p>\n  <p>1) The set \\(J_G(X)\\) is small.</p>\n  <p>2) The set \\(J_G(X)\\) is cofinal in the set \\(J(X)\\) of all screens covering \\(X\\),\nordered by inclusion.</p>\n  <p>3) For all \\(R \\in J_G(X)\\), there exists a small epimorphic family (I 10.2)\n\\((u_\\alpha : Y \\to R)\\), \\(\\alpha \\in A\\), with \\(Y \\in G\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. 1) Let's set \\(A(X) = \\coprod_{Y \\in G} \\mathrm{Hom}(Y,X)\\). The set \\(A(X)\\) is small (I 0) and\n\\(\\mathrm{card}(J_G(X)) \\leq 2^{\\mathrm{card}(A(X))}\\). As a result \\(J_G(X)\\) is small.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Let \\(R \\in J(X)\\). Let us set \\(A(R) = \\coprod_{Y \\in G} \\mathrm{Hom}(Y,R)\\) and let \\(R'\\) be the sieve of \\(X\\)\nsired by family \\((Y \\xrightarrow{\\ u\\ } R \\hookrightarrow X)\\), \\(u \\in A(R)\\). We have \\(R' \\subset R\\) and we just need to\nshow that \\(R'\\) is covering. According to axiom (T2) of 1.1, it suffices to show that for\nany morphism \\(Z \\to R\\), \\(Z \\in \\mathrm{ob}\\, C\\), the sieve \\(R' \\times_X Z\\) of \\(Z\\) is covering. Gold the sieve\n\\(R' \\times_X Z\\) contains the sieve generated by the family of all morphisms \\(Y \\to Z\\) with\n\\(Y \\in G\\), family which is, by hypothesis, covering. The screen \\(R' \\times_X Z\\) of \\(Z\\) is therefore covering\n(axiom T2 of 1.1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) Let \\(R \\in J_G(X)\\). The family \\((Y \\xrightarrow{\\ u\\ } R)\\), \\(u \\in A(R) = \\coprod_{Y \\in G} \\mathrm{Hom}(Y,R)\\) is, by\nhypothesis, epimorphic. Now, for all \\(Y \\in \\mathrm{ob}\\, C\\), \\(\\mathrm{Hom}(Y,R)\\) is contained in \\(\\mathrm{Hom}(Y,X)\\)\nwhich is small. As a result \\(A(R)\\) is small.</p>"
+    },
+    {
+     "id": "II.3.0.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.3.0.5\">3.0.5.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site, \\(\\mathcal{V}\\) be a universe such that \\(C \\in \\mathcal{V}\\) and \\(\\mathcal{U} \\subset \\mathcal{V}\\), \\(G\\) be a \\(\\mathcal{U}\\)-small\ntopologically generating family of \\(C\\). The \\(\\widehat{C}\\) category of pre-bundles\n\\(\\mathcal{U}\\)-sets on \\(C\\) is a \\(\\mathcal{V}\\)-category (I 1.1.1). Let \\(X\\) be an object of \\(C\\). All \\(J(X)\\) of\nsieves covering \\(X\\) is \\(\\mathcal{V}\\)-small and, ordered by inclusion, it is cofiltering (1.1.1). For everything\n\\(\\mathcal{U}\\)-pre-beam \\(F\\), the inductive limit \\(\\varinjlim_{J(X)} \\mathrm{Hom}_{\\widehat{C}}(R,F)\\) is therefore representable by a\nelement of \\(\\mathcal{V}\\) (I 2.4.1). Furthermore, it follows from (3.0.4 3)) that, for all \\(R \\in J_G(X)\\),\n\\(\\mathrm{Hom}_{\\widehat{C}}(R,F)\\) is \\(\\mathcal{U}\\)-small, and since \\(J_G(X)\\) is a \\(\\mathcal{U}\\)-small cofinal set in \\(J(X)\\)\n(loc. cit.), it follows from (I 2.4.2) that \\(\\varinjlim \\mathrm{Hom}_{\\widehat{C}}(R,F)\\) is \\(\\mathcal{U}\\)-small. Let us then choose, for\nall \\(F\\) and for all \\(X\\), an element of \\(\\mathcal{U}\\) which represents this inductive limit and let us put\n\\[\nLF(X) = \\varinjlim_{J(X)} \\mathrm{Hom}_{\\widehat{C}}(\\,\\cdot\\,, F) .\n\\]\nLet \\(g : Y \\to X\\) be a morphism of \\(C\\). The change of base functor\n\\(g^* : J(X) \\to J(Y)\\) defines an application:\n\\[\nLF(g) : LF(X) \\longrightarrow LF(Y)\n\\]\nwhich makes \\(X \\mapsto LF(X)\\) a pre-beam on \\(C\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The morphism \\(\\mathrm{id}_X : X \\to X\\) being an element of \\(J(X)\\) we have, for any object \\(X\\) of \\(C\\),\nan application:\n\\[\n\\ell(F)(X) : F(X) \\longrightarrow LF(X),\n\\]\nvisibly defining a morphism of functors:\n\\[\n\\ell(F) : F \\longrightarrow LF .\n\\]\nIt is further clear that \\(F \\mapsto LF\\) is a functor in \\(F\\) and that the morphisms \\(\\ell(F)\\)\ndefine a morphism\n\\[\n\\ell : \\mathrm{Id} \\longrightarrow L .\n\\]\nFinally, let \\(R \\hookrightarrow X\\) be a refinement of \\(X\\). The definition of \\(LF(X)\\) and (I 1.4) gives us\nprovide application:\n\\[\nZ_R : \\mathrm{Hom}_{\\widehat{C}}(R,F) \\longrightarrow \\mathrm{Hom}_{\\widehat{C}}(X,LF) ,\n\\]\nand for any morphism of \\(C\\), \\(Y \\xrightarrow{\\ g\\ } X\\), the definition of the functor \\(LF\\) shows us that the\ndiagram below, is commutative:\n\\[\n(*) \\qquad\n\\xymatrix{\nZ_R : \\mathrm{Hom}_{\\widehat{C}}(R,F) \\ar[r] \\ar[d] &amp; \\mathrm{Hom}_{\\widehat{C}}(X,LF) \\ar[d] \\\\\nZ_{R \\times_X Y} : \\mathrm{Hom}_{\\widehat{C}}(R \\times_X Y, F) \\ar[r] &amp; \\mathrm{Hom}_{\\widehat{C}}(Y,LF)\n}\n\\]\n(the vertical arrows are the obvious arrows).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let's then copy [2].</p>"
+    },
+    {
+     "id": "II.3.1",
+     "type": "lemme",
+     "label": "3.1",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"II.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">3.1</span></div>\n  <div class=\"thm-body\">\n  <p>1) For any refinement \\(i_R : R \\hookrightarrow X\\) and all \\(u : R \\to F\\), the diagram:\n\\[\n(**) \\qquad\n\\xymatrix{\nF \\ar[r]^-{\\ell(F)} &amp; LF \\\\\nR \\ar[u]^-{u} \\ar[r]_-{i_R} &amp; X \\ar[u]_-{Z_R(u)}\n}\n\\]\nis commutative.</p>\n  <p>2) For any morphism \\(v : X \\to LF\\), there exists a refinement \\(R\\) of \\(X\\) and a\nmorphism \\(u : R \\to F\\) such that \\(Z_R(u) = v\\).</p>\n  <p>3) Let \\(Y\\) be an object of \\(C\\) and \\(u, v : Y \\rightrightarrows F\\) two morphisms such that\n\\(\\ell(F) \\circ u = \\ell(F) \\circ v\\). Then the core of the couple \\((u,v)\\) is a refinement of \\(Y\\).</p>\n  <p>4) Let \\(R\\) and \\(R'\\) be two refinements of \\(X\\), \\(u : R \\to F\\) and \\(u' : R' \\to F\\) two\nmorphisms. For \\(Z_R(u) = Z_{R'}(u')\\), it is necessary and sufficient that \\(u\\) and \\(u'\\) coincide on a\nrefinement \\(R'' \\to R \\times_X R'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. The only non-trivial assertion is assertion 1). It must be shown that\n\\(Z_R(u) \\circ i_R = \\ell(F) \\circ u\\). For this it suffices to show (I 3.4) that the compounds of these\nmorphisms with any morphism \\(Y \\xrightarrow{\\ g\\ } R\\) (\\(Y\\) object of \\(C\\)) are equal. Now, consider\n\\(f = i_R \\circ g\\) and the fiber product \\(R \\times_X Y\\):\n\\[\n\\xymatrix{\nF \\ar[r]^-{\\ell(F)} &amp; LF \\\\\nR \\ar[u]^-{u} \\ar[r]^-{T_R} &amp; X \\ar[u]_-{Z_R(u)} \\\\\nR \\times_X Y \\ar[u]^-{g'} \\ar[r]_-{i'}^-{\\sim} &amp; Y \\ar[u]_-{f}\n}\n\\]\nIn this diagram above, \\(i'\\) is a monomorphism which admits one section. As a result\n(1.3.3) \\(i'\\) is an isomorphism. Now by definition of the morphism \\(\\ell(F)\\), the morphism\n\\(Z_{R \\times_X Y}(u \\circ g')\\) is equal to \\(\\ell(F) \\circ u \\circ g\\). On the other hand the commutativity of the diagram\n(*) provides us with the equality \\(Z_{R \\times_X Y}(u \\circ g') = Z_R(u) \\circ f\\), and as a result we have the equality\n\\(\\ell(F) \\circ u \\circ g = Z_R(u) \\circ i_R \\circ g\\).</p>"
+    },
+    {
+     "id": "II.3.2",
+     "type": "proposition",
+     "label": "3.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.2</span></div>\n  <div class=\"thm-body\">\n  <p>1) The functor \\(L\\) is left exact (I 2.3.2).</p>\n  <p>2) For any pre-bundle \\(F\\), \\(LF\\) is a separate pre-bundle.</p>\n  <p>3) The presheaf \\(F\\) is separated if and only if the morphism \\(\\ell(F) : F \\to LF\\) is\na monomorphism. The pre-beam \\(LF\\) is then a beam.</p>\n  <p>4) The following properties are equivalent:</p>\n  <p>i) \\(\\ell(F) : F \\to LF\\) is an isomorphism.</p>\n  <p>ii) \\(F\\) is a beam.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) It suffices to show (I 3.1) that for any object \\(X\\) of \\(C\\), the functor \\(F \\mapsto LF(X)\\)\ncommutes at finite projective limits. Now by definition of the projective limit, the functor\n\\[\nF \\mapsto \\mathrm{Hom}_{\\widehat{C}}(R,F) \\qquad R \\hookrightarrow X \\in \\mathrm{ob}(J(X))\n\\]\ncommutes at projective limits, and the inductive limit \\(\\varinjlim_{J(X)}\\) commutes at limits\nfinite projectives because \\(J(X)\\) is a cofiltering set (I 2.7).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Let \\(X\\) be an object of \\(C\\) and \\(f, g : X \\rightrightarrows LF\\) two morphisms which coincide on a\nrefinement \\(R \\hookrightarrow X\\) of \\(X\\). By virtue of 3.1(2), there exists a sieve covering \\(R' \\hookrightarrow X\\), which we\ncan always assume contained in \\(R\\), and two morphisms \\(u, v : R' \\rightrightarrows F\\) such that\n\\(Z_{R'}(u) = f\\) and \\(Z_{R'}(v) = g\\). By virtue of 3.1 1) we then have \\(\\ell(F) \\circ u = \\ell(F) \\circ v\\). As a result\n(3.1 4)) \\(u\\) and \\(v\\) coincide on a refinement \\(R'' \\hookrightarrow R'\\). Let \\(w\\) be the restriction of \\(u\\) to \\(R''\\). We have\n\\(Z_{R''}(w) = Z_{R'}(u) = Z_{R'}(v)\\) and subsequently \\(f = g\\). The pre-bundle \\(LF\\) is therefore separated.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) If \\(F\\) is separated, the morphism \\(\\ell(F)\\) is a monomorphism because a limit\ninductive filtering of monomorphisms is a monomorphism. If \\(\\ell(F)\\) is a\nmonomorphism, the prebundle \\(F\\) is a sub-prebundle of a separate prebundle, so it\nis separated. Let us show that \\(LF\\) is then a sheaf. Let \\(i : R \\hookrightarrow X\\) be a sieve covering a\nobject \\(X\\) of \\(C\\), and \\(u : R \\to LF\\) a morphism. We just need to show that \\(u\\) is factorized by\n\\(X\\). Let's set \\(R' = F \\times_{LF} R\\) and \\(v = Z_{R'}(\\mathrm{pr}_1)\\):\n\\[\n\\xymatrix{\nF \\ar[r]^-{\\ell(F)} &amp; LF &amp; \\\\\nR' \\ar[u]^-{\\mathrm{pr}_1} \\ar[r]^-{\\mathrm{pr}_2} &amp; R \\ar[u]^-{u} \\ar[r]^-{i} &amp; X \\ar[ul]_-{v} \\\\\nR'' \\ar[u]^-{p_1} \\ar[r]^-{p_2} &amp; Y \\ar[u]^-{m} &amp;\n}\n\\]\nTo show that \\(u = v \\circ i\\), it suffices to show (I 3.4) that for any morphism\n\\(m : Y \\to R\\) (\\(Y\\) object of \\(C\\)), \\(v \\circ i \\circ m = u \\circ m\\). Let us set \\(R'' = Y \\times_R R'\\) and let \\(p_1\\) and \\(p_2\\) be the\nprojections. The projection \\(R'' \\xrightarrow{\\ p_2\\ } Y\\) is a monomorphism and makes \\(R''\\) a sieve\ncovering \\(Y\\) (3.1.2)). We have \\(v \\circ i \\circ \\mathrm{pr}_2 = \\ell(F) \\circ \\mathrm{pr}_1\\) (3.1 1)), and consequently\n\\(v \\circ i \\circ \\mathrm{pr}_2 = u \\circ \\mathrm{pr}_2\\). We deduce \\(v \\circ i \\circ \\mathrm{pr}_2 \\circ p_1 = u \\circ \\mathrm{pr}_2 \\circ p_1\\) i.e.\n\\(v \\circ i \\circ m \\circ p_2 = u \\circ m \\circ p_2\\). As the pre-bundle \\(LF\\) is separated, we have \\(v \\circ i \\circ m = u \\circ m\\),\ncqfd.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>4) Clear.</p>"
+    },
+    {
+     "id": "II.3.3",
+     "type": "remarque",
+     "label": "3.3",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.3.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">3.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(J'(X)\\) be a cofinal subset of \\(J(X)\\). We have\n\\[\nLF(X) = \\varinjlim_{J'(X)} \\mathrm{Hom}_{\\widehat{C}}(\\,\\cdot\\,, F) .\n\\]\nIn particular, if the topology of \\(C\\) is defined by a pretopology \\(X \\mapsto \\mathrm{Cov}(X)\\) (1.1.3), the\nfunctor \\(L\\) can be described using the covering families of \\(\\mathrm{Cov}(X)\\) (I 2.12 and I 3.5). In\nexplaining the formulas we find the construction of [1].</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.4",
+     "type": "theoreme",
+     "label": "3.4",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"II.3.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">3.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site. The inclusion functor \\(i : \\widetilde{C} \\hookrightarrow \\widehat{C}\\)\nof the bundles in the pre-sheaves admits an adjoint on the left \\(a\\), exact on the left\n(I 2.3.2):\n\\[\n\\xymatrix{\n\\widetilde{C} \\ar@{^{(}-&gt;}@&lt;-0.7ex&gt;[r]_-{i} &amp; \\widehat{C} \\ar@&lt;-0.7ex&gt;[l]_-{a}\n}\n\\]\nThe functor \\(i \\circ a\\) is canonically isomorphic to the functor \\(L \\circ L\\) (cf. 3.0.5). For everything\npresheaf \\(F\\) the addition morphism \\(F \\to i \\circ a(F)\\) is deduced by the isomorphism\nprecedent of the morphism \\(\\ell(LF) \\circ \\ell(F) : F \\longrightarrow L \\circ L(F)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.3.5",
+     "type": "definition",
+     "label": "3.5",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.3.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">3.5</span></div>\n  <div class=\"thm-body\"><p>The beam \\(aF\\) is called the<em>beam associated with the prebeam\n\\(F\\)</em>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Theorem 3.4 follows immediately from proposition 3.2.</p>"
+    },
+    {
+     "id": "II.3.6",
+     "type": "proposition",
+     "label": "3.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.3.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">3.6</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\(\\mathcal{V} \\supset \\mathcal{U}\\) be a universe. Let us note\n\\(\\widehat{C}_{\\mathcal{U}}\\) and \\(\\widetilde{C}_{\\mathcal{U}}\\) (resp. \\(\\widehat{C}_{\\mathcal{V}}\\) and \\(\\widetilde{C}_{\\mathcal{V}}\\)) the categories of \\(\\mathcal{U}\\)-pre-bundles and\n\\(\\mathcal{U}\\)-bundles (resp. \\(\\mathcal{V}\\)-pre-bundles and \\(\\mathcal{V}\\)-bundles) and \\(a_{\\mathcal{U}} : \\widehat{C}_{\\mathcal{U}} \\to \\widetilde{C}_{\\mathcal{U}}\\)\n(resp. \\(a_{\\mathcal{V}} : \\widehat{C}_{\\mathcal{V}} \\to \\widetilde{C}_{\\mathcal{V}}\\)) the corresponding “associated bundles” functors. The\ndiagram\n\\[\n\\xymatrix{\n\\widehat{C}_{\\mathcal{U}} \\ar[r]^-{a_{\\mathcal{U}}} \\ar@{^{(}-&gt;}[d] &amp; \\widetilde{C}_{\\mathcal{U}} \\ar@{^{(}-&gt;}[d] \\\\\n\\widehat{C}_{\\mathcal{V}} \\ar[r]^-{a_{\\mathcal{V}}} &amp; \\widetilde{C}_{\\mathcal{V}}\n}\n\\]\nwhere the vertical functors are the canonical inclusions, is commutative to isomorphism\nnear canonical.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Result of the construction of the functors \\(a_{\\mathcal{U}}\\) and \\(a_{\\mathcal{V}}\\) (3.4 and 3.0.5).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "II-4",
+   "title": "4. Accuracy properties of beam category",
+   "blocks": [
+    {
+     "id": "II.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.4\">4. Beam Category Accuracy Properties</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The accuracy properties of the category of sheaves are deduced from the properties\nof accuracy of the category of pre-sheaves via Theorem 3.4. This issue\nexplains this philosophy in some of the most useful standard statements.</p>"
+    },
+    {
+     "id": "II.4.1",
+     "type": "theoreme",
+     "label": "4.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"II.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site, \\(\\widetilde{C}\\) the category of beams, \\(a : \\widehat{C} \\to \\widetilde{C}\\) the\nassociated beam functor, \\(i : \\widetilde{C} \\to \\widehat{C}\\) the inclusion functor.</p>\n  <p>1) The functor \\(a\\) commutes at inductive limits and is exact.</p>\n  <p>2) The \\(\\mathcal{U}\\)-inductive limits in \\(\\widetilde{C}\\) are representable. For little ones\ncategory \\(I\\) and for any functor \\(E : I \\to \\widetilde{C}\\), the canonical morphism\n\\[\n\\varinjlim_I E \\longrightarrow a(\\varinjlim_I i \\circ E)\n\\]\nis an isomorphism.</p>\n  <p>3) The \\(\\mathcal{U}\\)-projective limits in \\(\\widetilde{C}\\) are representable. For any object \\(X\\) of \\(C\\),\nthe functor on \\(\\widetilde{C}\\): \\(F \\mapsto F(X)\\) commutes to projective limits, i.e. the functor\nof inclusion \\(i : \\widetilde{C} \\to \\widehat{C}\\) commutes to projective limits.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. These properties result essentially from Theorem 3.4 and (I 2.11).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, in the bundle category, products indexed by an element of \\(\\mathcal{U}\\),\nfiber products, sums indexed by an element of \\(\\mathcal{U}\\), amalgamated sums, kernels,\ncokernels, images, coimages are representable.</p>"
+    },
+    {
+     "id": "II.4.1.1",
+     "type": "corollaire",
+     "label": "4.1.1",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.1.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\(F\\) be a sheaf of sets on \\(C\\).\nCanonical homomorphism\n\\[\n\\varinjlim_{C/F} aX \\longrightarrow F\n\\]\nis an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Result from (I 3.4) and the fact that \\(a\\) commutes at inductive limits.</p>"
+    },
+    {
+     "id": "II.4.2",
+     "type": "proposition",
+     "label": "4.2",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">4.2</span></div>\n  <div class=\"thm-body\"><p>Any morphism of \\(\\widetilde{C}\\), which is both an epimorphism and\na monomorphism, is an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Let \\(u : G \\to H\\) be a morphism of \\(\\widetilde{C}\\) which is an epimorphism and a\nmonomorphism. Let us first notice that the morphism \\(u\\) is a monomorphism of\npre-bundles (4.1 1)). Let us construct the amalgamated sum \\(H \\coprod_G H = K\\) and both\ncanonical morphisms \\(i_1, i_2 : H \\rightrightarrows K\\) in the category of presheaves. As \\(u\\) is a\nmonomorphism of pre-sheaves, we immediately verify that the diagram below is\nCartesian and co-Cartesian (I 10.1):\n\\[\n\\xymatrix{\nG \\ar[r]^-{u} \\ar[d]_-{u} &amp; H \\ar[d]^-{i_2} \\\\\nH \\ar[r]_-{i_1} &amp; K\n}\n\\]\nBy applying the “associated beam” functor, we therefore obtain a Cartesian diagram and\ncocartesian of the category of sheaves (4.1 1)):\n\\[\n(*) \\qquad\n\\xymatrix{\nG \\ar[r]^-{u} \\ar[d]_-{u} &amp; H \\ar[d]^-{a i_2} \\\\\nH \\ar[r]_-{a i_1} &amp; aK\n}\n\\]\nAs \\(u\\) is an epimorphism of sheaves, the morphism \\(a i_1\\) is an isomorphism and\nas the diagram (*) is Cartesian, the morphism \\(u\\) is an isomorphism.</p>"
+    },
+    {
+     "id": "II.4.3",
+     "type": "proposition",
+     "label": "4.3",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">4.3</span></div>\n  <div class=\"thm-body\">\n  <p>1) The inductive limits in \\(\\widetilde{C}\\) which are representable, are universal\n(I 2.5).</p>\n  <p>2) Any epimorphic family (I 10.2) of morphisms is effective epimorphic\nuniversal (2.6).</p>\n  <p>3) Any equivalence relation is effectively universal (I 10.6).</p>\n  <p>4) The \\(\\mathcal{U}\\)-filtering inductive limits commute to finite projective limits\n(I 2.6).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Assertions 1) to 4) are true in the category of sets therefore in\nthe category of pre-bundles (I 3.1). Assertions 1) and 4) then immediately result\ncorresponding assertions for the pre-beams and 4.1. Let us demonstrate 3). Either\n\\(p_1, p_2 : R \\rightrightarrows X\\) an equivalence relation of \\(\\widetilde{C}\\). The diagram \\(R \\rightrightarrows X\\) is then a\npre-bundle equivalence relation (4.1 1)). There therefore exists a morphism of presheaves\n\\(u : X \\to Y\\) such as the diagram\n\\[\n\\xymatrix{\nR \\ar[r]^-{p_2} \\ar[d]_-{p_1} &amp; X \\ar[d]^-{u} \\\\\nX \\ar[r]_-{u} &amp; Y\n}\n\\]\neither Cartesian and co-Cartesian in the category of pre-sheaves. By applying the functor\n“associated beam”, we obtain a Cartesian and co-Cartesian diagram in the category of\nbeams (4.1 1)). Consequently \\(R \\rightrightarrows X\\) is an effective equivalence relation. Like all\nequivalence relation is effective according to the above, every equivalence relation is\nuniversal effective. Let us demonstrate 2). Let \\((u_i : X_i \\to X)\\), \\(i \\in I\\), be an epimorphic family of\n\\(\\widetilde{C}\\). According to (II 2.6) and (I 2.12), it is enough to prove the following assertions:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) For any sheaf morphism \\(v : Y \\to X\\), the family of morphisms\n\\(\\mathrm{pr}_{2,i} : X_i \\times_X Y \\to Y\\), \\(i \\in I\\), is an epimorphic family of \\(\\widetilde{C}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) For any sheaf \\(Z\\) the set diagram:\n\\[\n\\mathrm{Hom}(X,Z) \\longrightarrow \\prod_{i \\in I} \\mathrm{Hom}(X_i,Z) \\rightrightarrows \\coprod_{(i,k) \\in I \\times I} \\mathrm{Hom}(X_i \\times_X X_k, Z)\n\\]\nis correct.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X'\\) be the union of the images of the morphisms \\(u_i\\) in the sense of the presheaves and\n\\(j : X' \\hookrightarrow X\\) canonical injection. For all \\(i \\in I\\), the morphism \\(u_i : X_i \\to X\\) is factorized into\na morphism \\(u'_i : X_i \\to X'\\) and the morphism \\(j\\), and the family \\(u'_i : X_i \\to X'\\), \\(i \\in I\\), is a\nepimorphic family of \\(\\widehat{C}\\). Since \\(j\\) is a monomorphism, the morphism \\(aj : aX' \\to X\\) is\na monomorphism of sheaves (4.1). As for all \\(i \\in I\\), we have \\(u_i = aj \\circ au'_i\\), \\(aj\\) is a\nepimorphism of bundles. Consequently \\(aj\\) is an isomorphism (4.2). Let \\(v : Y \\to X\\) be a\nmorphism of sheaves. We deduce by change of base a morphism\n\\(j_v : X' \\times_X Y \\to Y\\) and morphisms \\(u'_{i,v} : X_i \\times_X Y \\to X' \\times_X Y\\). As \\(a\\) switches to\nfiber products, \\(aj_v\\) is an isomorphism. Like the epimorphic families of \\(\\widehat{C}\\)\npreserve this character by base change, the family \\(u'_{i,v}\\), \\(i \\in I\\), is epimorphic\nin \\(\\widehat{C}\\). As \\(a\\) commutes at inductive limits, the family\n\\(au'_{i,v} : X_i \\times_X Y \\longrightarrow a(X' \\times_X Y)\\), \\(i \\in I\\), is epimorphic in \\(\\widetilde{C}\\) hence a).\nLet us demonstrate b). Let \\(Z\\) be a beam. As \\(aj\\) is an isomorphism, the application\n\\[\n\\mathrm{Hom}(X,Z) \\longrightarrow \\mathrm{Hom}(X',Z)\n\\]\nis a bijection. As the \\(u'_i\\), \\(i \\in I\\), form an epimorphic family of \\(\\widehat{C}\\), the\noverview diagram:\n\\[\n\\mathrm{Hom}(X',Z) \\longrightarrow \\prod_{i \\in I} \\mathrm{Hom}(X_i,Z) \\rightrightarrows \\coprod_{(i,k) \\in I \\times I} \\mathrm{Hom}(X_i \\times_X X_k, Z)\n\\]\nis correct. Finally as \\(X'\\) is a sub-prebundle of \\(X\\), the prebundle \\(X_i \\times_{X'} X_k\\),\n\\((i,k) \\in I \\times I\\), is canonically isomorphic to \\(X_i \\times_X X_k\\), hence b).</p>"
+    },
+    {
+     "id": "II.4.3.1",
+     "type": "remarque",
+     "label": "4.3.1",
+     "title": "Remarks",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.4.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarks</span> <span class=\"thm-num\">4.3.1</span></div>\n  <div class=\"thm-body\">\n  <p>1) Proposition 4.3 2) formally provides us with a second\ndemonstration of 4.2: It is clear that, in any category, a morphism which is both\na universal effective epimorphism and a monomorphism is actually an isomorphism.</p>\n  <p>2) We deduce from the previous propositions that any morphism in the category of\nbundles uniquely factorize into an effective epimorphism and a monomorphism\neffective. This property generalizes in a natural way, for non-additive categories,\nthe axiom (AB2) of abelian categories (\\(\\mathrm{coim} \\xrightarrow{\\ \\sim\\ } \\mathrm{im}\\)) [Tohoku].</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.4.4.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.4.0\">4.4.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site. The functor \\(h : C \\to \\widehat{C}\\) (I 1.3.1), composed with the functor\nassociated bundle, provides a functor\n\\[\n\\varepsilon_C : C \\longrightarrow \\widetilde{C} ,\n\\]\ncalled <em>canonical functor</em> of \\(C\\) in \\(\\widetilde{C}\\), which will be constantly used thereafter. The\nfunctor \\(\\varepsilon_C\\) commutes at finite projective limits. When the topology of \\(C\\) is less fine\nthat the canonical topology, \\(\\varepsilon_C\\) is fully faithful, and commutes at projective limits; he\nis then, moreover, defined when \\(C\\) does not necessarily have a small family\ntopologically generative. We will not study in detail the behavior of \\(\\varepsilon_C\\) by\nrelation to inductive limits (cf. [SGA 3 IV]). However, we will need\nsuggestions below.</p>"
+    },
+    {
+     "id": "II.4.4",
+     "type": "theoreme",
+     "label": "4.4",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"II.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">4.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\((u_i : X_i \\to X)\\), \\(i \\in I\\), a family of\nmorphisms from \\(C\\) to goal \\(X\\). The following conditions are equivalent\n<sup class=\"footnote-ref\"><a id=\"II-fn2ref\" href=\"#II-fn2\">(∗)</a></sup>:</p>\n  <p>i) The family \\((\\varepsilon_C u_i : \\varepsilon_C X_i \\longrightarrow \\varepsilon_C X)\\), \\(i \\in I\\), is an epimorphic family of\n\\(\\widetilde{C}\\) (I 10.2).</p>\n  <p>ii) The family \\((u_i : X_i \\to X)\\), \\(i \\in I\\), is a covering family of \\(C\\) (1.2).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. ii) \\(\\Longrightarrow\\) i). Let \\(R \\hookrightarrow X\\) be the sieve generated by \\(u_i\\), \\(i \\in I\\) (I 4.3.3), and\n\\(u'_i : X_i \\to R\\) the morphisms induced by \\(u_i\\). The family of \\(u'_i\\), \\(i \\in I\\), is a family\nepimorphic of \\(\\widehat{C}\\), and \\(R\\) is a sieve covering \\(X\\). Consequently, for any beam \\(F\\),\nthe app\n\\[\n\\mathrm{Hom}(X,F) \\longrightarrow \\mathrm{Hom}(R,F)\n\\]\nis bijective and the application\n\\[\n\\mathrm{Hom}(R,F) \\longrightarrow \\prod_i \\mathrm{Hom}(X_i,F)\n\\]\nis injective. So the application\n\\[\n\\mathrm{Hom}(X,F) \\longrightarrow \\prod_i \\mathrm{Hom}(X_i,F)\n\\]\nis injective and therefore the application\n\\[\n\\mathrm{Hom}(aX,F) \\longrightarrow \\prod_i \\mathrm{Hom}(aX_i,F)\n\\]\nis injective, hence i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). With the notations introduced previously, let \\(J_R : R \\hookrightarrow X\\) be the injection\ncanonical in \\(X\\) of the sieve generated by \\(u_i\\), \\(i \\in I\\). It follows from i) that the morphism of\nfascicles \\(aJ_R : aR \\to aX\\) is both an epimorphism of fascicles and a monomorphism\nof beams. It is therefore an isomorphism of sheaves (4.2). We have, with the notations of\nNo. 3, a commutative diagram:\n\\[\n\\xymatrix{\nX \\ar[r]^-{\\ell(X)} &amp; LX \\ar[r]^-{\\ell(LX)} &amp; aX \\\\\nR \\ar[u]^-{J_R} \\ar[r]_-{\\ell(R)} &amp; LR \\ar[u]^-{LJ_R} \\ar[r]_-{\\ell(LR)} &amp; aR \\ar[u]_-{aJ_R}^-{\\wr}\n}\n\\]\nFirst of all, according to 3.1 2), there exists a sieve covering \\(J_{S_1} : S_1 \\hookrightarrow X\\) and a morphism\n\\(u_1 : S_1 \\to LR\\) such that\n\\[\n(4.6.1) \\qquad \\ell(LX) \\circ \\ell(X) \\circ J_{S_1} = aJ_R \\circ \\ell(LR) \\circ u_1 = \\ell(LX) \\circ LJ_R \\circ u_1 .\n\\]\nLet's set \\(m = \\ell(X) \\circ J_{S_1}\\) and \\(n = LJ_R \\circ u_1\\). The morphisms \\(m\\) and \\(n\\) are morphisms of \\(S_1\\)\nin \\(LX\\). Let \\(S_2 \\hookrightarrow S_1\\) be the kernel of the pair of arrows \\((m,n)\\). For any object \\(Y\\) of \\(C\\) and all\nmorphism \\(\\alpha : Y \\to S_1\\), we have, by virtue of (4.6.1), \\(\\ell(LX) \\circ m \\circ \\alpha = \\ell(LX) \\circ n \\circ \\alpha\\). It results\nthen from (3.1.3)) that the kernel \\(S_2 \\times_{S_1} Y\\) of the pair of arrows \\((m \\circ \\alpha, n \\circ \\alpha)\\) is a sieve\ncovering \\(Y\\). Consequently, according to the axiom (T2) of topologies, \\(J_{S_2} : S_2 \\hookrightarrow X\\) is a sieve\ncovering \\(X\\). We therefore have a morphism \\(u_2 : S_2 \\to LR\\) and a commutative diagram:\n\\[\n(4.6.2) \\qquad\n\\xymatrix{\nS_2 \\ar[rr]^-{J_{S_2}} \\ar[dd]_-{u_2} &amp; &amp; X \\ar[dd]^-{\\ell(X)} \\\\\n&amp; R \\ar[ur]_-{J_R} \\ar[dl]^-{\\ell(R)} &amp; \\\\\nLR \\ar[rr]_-{LJ_R} &amp; &amp; LX\n}\n\\]\nLet \\(Y\\) be an object of \\(C\\) and \\(\\beta : Y \\to S_2\\) be a morphism. According to 3.1 1), there exists a sieve\ncovering \\(J_{Q_1} : Q_1 \\hookrightarrow Y\\) and a morphism \\(v_1 : Q_1 \\to LR\\) such that\n\\(u_2 \\circ \\beta \\circ J_{Q_1} = \\ell(R) \\circ v_1\\). Let's set \\(f = J_{S_2} \\circ \\beta \\circ J_{Q_1}\\), \\(g = J_R \\circ v_1\\). Let \\(Q_2\\) be the core of\ncouple \\((f,g) : Q_1 \\rightrightarrows X\\) and \\(J_{Q_2} : Q_2 \\hookrightarrow Y\\), canonical injection. For any object \\(Z\\) of \\(C\\) and all\nmorphism \\(\\gamma : Z \\to Q_1\\), we have, by virtue of the commutativity of (4.6.2):\n\\[\n\\ell(X) \\circ f \\circ \\gamma = \\ell(X) \\circ J_{S_2} \\circ \\beta \\circ J_{Q_1} \\circ \\gamma = LJ_R \\circ u_2 \\circ \\beta \\circ J_{Q_1} \\circ \\gamma =\n\\]\n\\[\n= LJ_R \\circ \\ell(R) \\circ v_1 \\circ \\gamma = \\ell(X) \\circ J_R \\circ v_1 \\circ \\gamma = \\ell(X) \\circ g \\circ \\gamma .\n\\]\nIt then follows from 3.1.2) that the kernel \\(Q_2 \\times_{Q_1} Z\\) of the couple \\((f \\circ \\gamma, g \\circ \\gamma)\\) is a sieve\ncovering \\(Z\\). According to the axiom (T 2) of topologies, \\(J_{Q_2} : Q_2 \\hookrightarrow Y\\) is a sieve covering \\(Y\\).\nFor any morphism \\(\\beta : Y \\to S\\), there therefore exists a sieve covering \\(J_{Q_2} : Q_2 \\hookrightarrow Y\\) and a\nmorphism \\(v_2 : Q_2 \\to R\\) such that the following diagram is commutative:\n\\[\n\\xymatrix{\nY \\ar[r]^-{\\beta} &amp; S_2 \\ar[r]^-{J_{S_2}} &amp; X \\\\\nQ_2 \\ar[u]^-{J_{Q_2}} \\ar[rr]_-{v_2} &amp; &amp; R \\ar[u]_-{J_R}\n}\n\\]\nLet us then denote \\(S_2 \\cap R\\) the fiber product of \\(S_2\\) and \\(R\\) above \\(X\\). The sieve (from \\(Y\\)):\n\\((S_2 \\cap R) \\times_{S_2} Y\\) contains the sieve \\(Q_2\\) and therefore \\((S_2 \\cap R) \\times_{S_2} Y\\) is a sieve covering \\(Y\\). He\nthen results from the axiom (T 2) of topologies that \\(S_2 \\cap R\\) is a sieve covering \\(X\\) and consequently\nthe sieve \\(R\\) which contains \\(S_2 \\cap R\\) is a sieve covering \\(X\\), cqfd.</p>"
+    },
+    {
+     "id": "II.4.4.4",
+     "type": "corollaire",
+     "label": "4.4.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.4.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.4.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(T\\) be the topology of \\(\\mathcal{U}\\)-site \\(C\\), \\(T'\\) (resp. \\(T''\\)) the\nfinest topology on \\(C\\) among those for which the objects of \\(\\widetilde{C}\\) are sheaves\n(resp. pre-beams) (2.2). So \\(T = T' = T''\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, we trivially have \\(T \\leq T' \\leq T''\\), and 4.4 and 2.2 imply that \\(T'' \\leq T\\), cqfd.</p>"
+    },
+    {
+     "id": "II.4.5",
+     "type": "definition",
+     "label": "4.5",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.4.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">4.5</span></div>\n  <div class=\"thm-body\"><p>An <em>initial object</em> of a category \\(A\\) is an object \\(\\varnothing_A\\) which\nrepresents the empty inductive limit i.e. such that for all \\(X \\in \\mathrm{ob}\\, A\\), there exists an arrow and an\nonly \\(\\varnothing_A \\to X\\). We say that an object \\(\\varnothing_A\\) is <em>strict initial</em> if it is initial and if all\ngoal morphism \\(\\varnothing_A\\) is an isomorphism. Let \\((S_i)\\), \\(i \\in I\\), be a family of objects of a\ncategory \\(A\\). Suppose the sum \\(s = \\coprod_{i \\in I} S_i\\) is representable. It is said that the\nsum \\(S\\) is <em>disjoint</em> if the structural morphisms \\(S_i \\to S\\) are quatable, if they are\nmonomorphisms and if for any pair \\(i,j\\), \\(i \\neq j\\) the product \\(S_i \\times_S S_j\\) is an initial object\nfrom \\(A\\). We say that the sum \\(S\\) is <em>universal disjoint</em> if it is disjoint and if it remains\ndisjoint sum after any base change \\(T \\to S\\); it follows that for any couple\n\\(i,j\\), \\(i \\neq j\\), objects \\(S_i \\times_S S_j\\) are strict initial objects of \\(A\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.5.1",
+     "type": "exemple",
+     "label": "4.5.1",
+     "title": "Example",
+     "html": "<div class=\"thm thm-remark example\" id=\"II.4.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Example</span> <span class=\"thm-num\">4.5.1</span></div>\n  <div class=\"thm-body\"><p>In the category of sets, direct sums are\ndisjoint and universal. It is therefore the same in any category of pre-bundles\nof sets (I 3.1) and consequently in any category of sheaves of sets on a\n\\(\\mathcal{U}\\)-site(4.1); in particular, the initial object of \\(\\widetilde{C}\\) is strict.</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.6",
+     "type": "proposition",
+     "label": "4.6",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">4.6</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category and \\((s_i : X_i \\to X)\\), \\(i \\in I\\), a family of\nmorphisms of \\(C\\). For any \\(\\mathcal{U}\\)-topology \\(\\mathscr{C}\\) on \\(C\\) (3.0.2), we denote by \\(\\widetilde{C}_{\\mathscr{C}}\\) the category\nof corresponding sheaves and by \\(\\varepsilon_{\\mathscr{C}} : C \\to \\widetilde{C}_{\\mathscr{C}}\\) the corresponding functor.</p>\n  <p>1) Let \\(\\mathscr{C}\\) be a \\(\\mathcal{U}\\)-topology such that\n\\[\n\\coprod_{i \\in I} \\varepsilon_{\\mathscr{C}}(X_i) \\xrightarrow{\\ (\\varepsilon_{\\mathscr{C}}(s_i))\\ } \\varepsilon_{\\mathscr{C}}(X)\n\\]\nor an isomorphism. Then for any topology \\(\\mathscr{C}'\\) finer than \\(\\mathscr{C}\\), the morphism:\n\\[\n\\coprod_{i \\in I} \\varepsilon_{\\mathscr{C}'}(X_i) \\xrightarrow{\\ (\\varepsilon_{\\mathscr{C}'}(s_i))\\ } \\varepsilon_{\\mathscr{C}'}(X)\n\\]\nis an isomorphism.</p>\n  <p>2) Let \\(\\mathscr{C}\\) be a \\(\\mathcal{U}\\)-topology on \\(C\\). The following properties (i) and (ii) are\nequivalents:</p>\n  <p>i) a) The family \\((s_i : X_i \\to X)\\), \\(i \\in I\\), is covering for \\(\\mathscr{C}\\).</p>\n  <p style=\"margin-left:1.5em;\">b) For all \\(i \\in I\\), the diagonal morphism of presheaves\n\\(\\Delta_i : X_i \\hookrightarrow X_i \\times_X X_i\\) is transformed by the “associated bundle” functor (for \\(\\mathscr{C}\\)) into a\nisomorphism (which is the case if the \\(s_i\\) are monomorphisms).</p>\n  <p style=\"margin-left:1.5em;\">c) For any pair \\((i,j)\\), \\(i \\neq j\\), of elements of \\(I\\), the prebundle\n\\(X_i \\times_X X_j\\) is transformed by the \"associated bundle\" functor (for \\(\\mathscr{C}\\)) into the initial object of \\(\\widetilde{C}_{\\mathscr{C}}\\).</p>\n  <p>ii) \\(\\varepsilon_{\\mathscr{C}}(X)\\) is sum of \\(\\varepsilon_{\\mathscr{C}}(X_i)\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) A beam \\(F\\) for \\(\\mathscr{C}'\\) is a beam for \\(\\mathscr{C}\\). Consequently, for any beam \\(F\\)\nfor \\(\\mathscr{C}'\\), the morphism\n\\[\n\\mathrm{Hom}_{\\widehat{C}}(X,F) \\longrightarrow \\prod_{i \\in I} \\mathrm{Hom}_{\\widehat{C}}(X_i,F)\n\\]\nis an isomorphism, which results in the assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) By definition, we have the property ii) if and only if the morphism of presheaves\n\\[\n\\Phi = (h(s_i), i \\in I) : \\coprod_i h(X_i) \\longrightarrow h(X)\n\\]\nis transformed by the “associated sheaf” functor into an isomorphism i.e. (4.2) if and\nonly if \\(a(\\Phi)\\) is an epimorphism and monomorphism of sheaves. According to (4.4), the\nmorphism \\(a(\\Phi)\\) is an epimorphism if and only if we have property a). Morphism\ndiagonal\n\\[\n\\Delta : \\coprod_i h(X_i) \\longrightarrow \\Bigl(\\coprod_i h(X_i)\\Bigr) \\times_{h(X)} \\Bigl(\\coprod_i h(X_i)\\Bigr)\n\\]\nis a direct sum of a family \\(\\Delta_{i,j}\\), \\((i,j) \\in I \\times I\\), of morphisms defined as follows:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>β) When \\(i = j\\), \\(\\Delta_{i,i}\\) is the diagonal morphism \\(h(X_i) \\to h(X_i) \\times_{h(X)} h(X_i)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>γ) When \\(i \\neq j\\), \\(\\Delta_{i,j}\\) is the morphism \\(\\varnothing_{\\widehat{C}} \\to h(X_i) \\times_{h(X)} h(X_j)\\)\n(\\(\\varnothing_{\\widehat{C}}\\) designates the initial object of \\(\\widehat{C}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The morphism \\(a(\\Phi)\\) is a monomorphism if and only if \\(a(\\Delta)\\) is a\nisomorphism, and according to (4.1) \\(a(\\Delta)\\) is isomorphism if and only if the \\(a(\\Delta_{i,j})\\) are\nisomorphisms i.e. if and only if we have properties b) and c).</p>"
+    },
+    {
+     "id": "II.4.6.1",
+     "type": "corollaire",
+     "label": "4.6.1",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.6.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category and \\(X\\) be an object of \\(C\\).</p>\n  <p>1) Let \\(\\mathscr{C}\\) be a \\(\\mathcal{U}\\)-topology on \\(C\\). The object \\(X\\) of \\(C\\) is transformed by the functor\n\"associated beam\" (for topology \\(\\mathscr{C}\\)) to the initial object of \\(\\widetilde{C}_{\\mathscr{C}}\\) if and only if the screen\nempty covers \\(X\\).</p>\n  <p>2) When \\(X\\) is a strict initial object of \\(C\\), the beam associated with \\(X\\), for any\n\\(\\mathcal{U}\\)-topology finer than the canonical topology, is an initial object.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) We take for set \\(I\\) in 4.6 2) the empty set.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) According to 1) and 4.6 1), it is enough to show that the empty sieve covers \\(X\\) for the\ncanonical topology i.e. (2.6) it suffices to show that for any object \\(Y \\to X\\) above\n\\(X\\), \\(Y\\) is an initial object of \\(X\\), which follows from definition (4.5).</p>"
+    },
+    {
+     "id": "II.4.6.2",
+     "type": "corollaire",
+     "label": "4.6.2",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.6.2</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\((s_i : X_i \\to X)\\), \\(i \\in I\\), a family of\nquarable morphisms of \\(C\\) with the same purpose having the following properties:</p>\n  <p>α) The family of \\(s_i\\), \\(i \\in I\\), is covering.</p>\n  <p>β) For all \\(i \\in I\\), \\(s_i : X_i \\to X\\) is a monomorphism.</p>\n  <p>γ) For any pair \\((i,j)\\), \\(i \\neq j\\), of elements of \\(I\\), \\(X_i \\times_X X_j\\) is covered by the\nempty sieve, i.e. for any beam \\(F\\) on \\(C\\), \\(F(X_i \\times_X X_j)\\) is a set reduced to one\nelement.</p>\n  <p>Then \\(\\varepsilon_C(X)\\) is sum of \\(\\varepsilon_C(X_i)\\), \\(i \\in I\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Follows immediately from 4.6 2) and 4.6.1 1).</p>"
+    },
+    {
+     "id": "II.4.6.3",
+     "type": "corollaire",
+     "label": "4.6.3",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.6.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.6.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category and \\((s_i : X_i \\to X)\\), \\(i \\in I\\), a family\nof quarable morphisms with the same goal. Suppose that the canonical topology of \\(C\\) is a\n\\(\\mathcal{U}\\)-topology. The following conditions are equivalent:</p>\n  <p>i) There exists a \\(\\mathcal{U}\\)-topology \\(\\mathscr{C}\\) on \\(C\\), less fine-grained than the canonical topology, such\nthat \\(\\varepsilon_{\\mathscr{C}}(X)\\) is the sum of \\(\\varepsilon_{\\mathscr{C}}(X_i)\\), \\(i \\in I\\).</p>\n  <p>ii) The object \\(X\\) is a disjoint and universal sum (4.5) (in \\(C\\)) of \\(X_i\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. ii) \\(\\Longrightarrow\\) i). As \\(X\\) is the universal sum of \\(X_i\\), \\(i \\in I\\), the family of \\(s_i\\),\n\\(i \\in I\\), is covering for the canonical topology of \\(C\\) (2.6). The condition α) of 4.6.2 is therefore\nsatisfied when we provide \\(C\\) with the canonical topology. The condition β) is obviously\nsatisfied and the property γ) results from 4.6.1) 2), hence i).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). Let \\(\\mathscr{C}\\) be a topology on \\(C\\) less fine than the canonical topology such that\n\\(\\varepsilon_{\\mathscr{C}}(X)\\) is the sum of \\(\\varepsilon_{\\mathscr{C}}(X_i)\\). For any beam \\(F\\), for \\(\\mathscr{C}\\), the canonical application\n\\(\\mathrm{Hom}(X,F) \\to \\prod_i \\mathrm{Hom}(X_i,F)\\) is a bijection. Furthermore, any representable pre-bundle is\na beam. It immediately follows that \\(X\\) is sum in \\(C\\) of \\(X_i\\), \\(i \\in I\\). Applying this to\ncase where the set \\(I\\) is empty, we see that if an object of \\(C\\) is transformed into the initial object\nof \\(\\widetilde{C}\\), this object is an initial object of \\(C\\). The functor \\(\\varepsilon_C : C \\to \\widetilde{C}\\) is fully faithful and\ncommutes at finite projective limits. Consequently, condition b) of 4.6 2) results in the\n\\(s_i\\), \\(i \\in I\\), are monomorphisms of \\(C\\), and condition c) results, according to what precedes,\nthat the \\(X_i \\times_X X_j\\), \\(i \\neq j\\), are initial objects of \\(C\\). Consequently \\(X\\) is the disjoint sum of\n\\(X_i\\). As \\(\\varepsilon_{\\mathscr{C}}\\) commutes to fiber products, this last property is stable under all\nchange of base \\(Y \\to X\\), and consequently \\(X\\) is a disjoint and universal sum of \\(X_i\\), \\(i \\in I\\).</p>"
+    },
+    {
+     "id": "II.4.6.4",
+     "type": "corollaire",
+     "label": "4.6.4",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.6.4</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category and \\(X\\) be an object of \\(C\\). Suppose that the\ncanonical topology on \\(C\\) or a \\(\\mathcal{U}\\)-topology. The following properties are\nequivalents:</p>\n  <p>i) There exists on \\(C\\) a topology less fine than the canonical topology such that\n\\(\\varepsilon_{\\mathscr{C}}(X)\\) is an initial object of \\(\\widetilde{C}_{\\mathscr{C}}\\).</p>\n  <p>ii) \\(X\\) is a strict initial object of \\(C\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. We take for set \\(I\\) the empty set in 4.6.3.</p>"
+    },
+    {
+     "id": "II.4.7",
+     "type": "proposition",
+     "label": "4.7",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">4.7</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-category, \\(\\widetilde{C}\\) the category of the beams on \\(C\\)\nfor the canonical topology, \\(\\varepsilon_C : C \\to \\widetilde{C}\\) the canonical functor (4.4.0), \\(R \\rightrightarrows X\\) a\nequivalence relation in \\(C\\) admitting a cokernel \\(Y\\) in \\(C\\). Let \\(\\pi : X \\to Y\\) be the morphism\ncanonical and let's assume it is quarable. Consider then the following properties:</p>\n  <p>i) \\(\\varepsilon_C(Y)\\) is the quotient of the equivalence relation \\(\\varepsilon_C(R) \\rightrightarrows \\varepsilon_C(X)\\).</p>\n  <p>ii) The equivalence relation \\(R \\rightrightarrows X\\) is effectively universal (cf. no. 7).</p>\n  <p>We have ii) \\(\\Longrightarrow\\) i). When \\(C\\) has a \\(\\mathcal{U}\\)-topology less fine than the topology\ncanonical, we have i) \\(\\Longrightarrow\\) ii).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. ii) \\(\\Longrightarrow\\) i). The canonical morphism \\(R \\to X \\times_Y X\\) is an isomorphism. Either\n\\(S \\hookrightarrow Y\\) the sieve generated by \\(\\pi : X \\to Y\\). For any pre-beam \\(F\\), we have an exact diagram\n(I 2.12):\n\\[\n\\mathrm{Hom}(S,F) \\longrightarrow \\mathrm{Hom}(X,F) \\rightrightarrows \\mathrm{Hom}(R,F) .\n\\]\nIt is therefore sufficient to show that for any sheaf \\(F\\) for the canonical topology, the application\n\\[\n\\mathrm{Hom}(X,F) \\longrightarrow \\mathrm{Hom}(S,F)\n\\]\nis a bijection i.e. it suffices to show that \\(S\\) is covering for the canonical topology, or\nalthough the sieve generated by \\(\\pi : X \\to Y\\) is covering, which results from definition 2.5.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). The functor \\(\\varepsilon_C : C \\to \\widetilde{C}\\) commutes at finite projective limits and is\nfully faithful. But the canonical morphism\n\\(\\varepsilon_C(R) \\to \\varepsilon_C(X) \\times_{\\varepsilon_C(Y)} \\varepsilon_C(X)\\) is an isomorphism (4.3). Consequently the morphism\ncanonical \\(R \\to X \\times_Y X\\) is an isomorphism. The morphism \\(\\varepsilon_C(X) \\to \\varepsilon_C(Y)\\) is a\nepimorphism, which leads (4.4) that \\(\\pi : X \\to Y\\) is a covering morphism of \\(C\\) for the\ncanonical topology, cqfd.</p>"
+    },
+    {
+     "id": "II.4.8",
+     "type": "proposition",
+     "label": "4.8",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">4.8</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site. The beams category on \\(C\\) has the\nfollowing properties:</p>\n  <p style=\"margin-left:1.5em;\">a) Finite projective limits are representable.</p>\n  <p style=\"margin-left:1.5em;\">b) The direct sums indexed by an element of \\(\\mathcal{U}\\) are\nrepresentable. They are disjointed and universal. (4.5)</p>\n  <p style=\"margin-left:1.5em;\">c) Equivalence relations are effectively universal.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This was seen in 4.1, 2) and 3), 4.3, 3), and 4.5.1.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>These properties have been highlighted because they will later allow us to\ncharacterize the \\(\\mathcal{U}\\)-categories equivalent to categories of beams on categories\nbelonging to \\(\\mathcal{U}\\) (IV 1.2).</p>"
+    },
+    {
+     "id": "II.4.8.remarque",
+     "type": "remarque",
+     "label": null,
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remarque\" id=\"II.4.8.remarque\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Noticed</span></div>\n  <div class=\"thm-body\"><p>Recall that property a) is equivalent to the property:\nthere exists a final object, and the fiber products are representable (I 2.3.1).</p></div>\n</div>"
+    },
+    {
+     "id": "II.4.9",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.4.9\">4.9.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be a site whose underlying category is a \\(\\mathcal{U}\\)-category. So the\ncategory \\(\\widetilde{C}\\) of \\(\\mathcal{U}\\)-beams on \\(C\\) satisfies the conditions envisaged in I 7.3 ((i) or\n(ii), as desired), therefore by loc. cit. the various variants considered in I 7.1 for the notion\nof <em>generating family</em> in \\(\\widetilde{C}\\) coincide. That said:</p>"
+    },
+    {
+     "id": "II.4.10",
+     "type": "proposition",
+     "label": "4.10",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.4.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">4.10</span></div>\n  <div class=\"thm-body\"><p>With the previous notations, consider the functor\ncanonical \\(\\varepsilon : C \\to \\widetilde{C}\\) (4.4.0), and let \\(G \\subset \\mathrm{ob}\\, C\\) be a topologically generating family\nin \\(C\\) (3.0.1). Then the family \\((\\varepsilon(X))_{X \\in G}\\) of objects of \\(\\widetilde{C}\\) is a generating family. In\nin particular the family \\((\\varepsilon(X))_{X \\in \\mathrm{ob}\\, C}\\) of objects of \\(C\\) is generator.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is necessary to prove that any morphism \\(u : F \\to F'\\) in \\(\\widetilde{C}\\) such that\n\\[\n(4.10.1) \\qquad \\mathrm{Hom}(\\varepsilon(X),F) \\longrightarrow \\mathrm{Hom}(\\varepsilon(X),F')\n\\]\ni.e. a bijection for all \\(X \\in G\\), is an isomorphism. Or the previous application\nidentifies with the application\n\\[\n(4.10.2) \\qquad u(X) : F(X) \\longrightarrow F'(X) ,\n\\]\nand it is necessary to show that if this is bijective for everything \\(X \\in G\\), it is the same for everything\n\\(X \\in \\mathrm{ob}\\, C\\). Now let \\((X_i \\to X)_{i \\in I}\\) be a covering family of \\(X\\) by objects of \\(G\\), and for all\npair of indices \\((i,j)\\) of \\(I\\), consider the set of all morphisms\n\\(X_{ijk} \\to X_i \\times_X X_j\\) in \\(\\widetilde{C}\\), with \\(X_{ijk} \\in G\\) (\\(k\\) varying in a set of indices \\(I_{i,j}\\)). We\nthen obtains a homomorphism of exact diagrams of sets\n\\[\n\\xymatrix{\nF(X) \\ar[r] \\ar[d] &amp; \\prod_i F(X_i) \\ar@&lt;0.5ex&gt;[r] \\ar@&lt;-0.5ex&gt;[r] \\ar[d]^-{\\wr} &amp; \\prod_{ijk} F(X_{ijk}) \\ar[d]^-{\\wr} \\\\\nF'(X) \\ar[r] &amp; \\prod_i F'(X_i) \\ar@&lt;0.5ex&gt;[r] \\ar@&lt;-0.5ex&gt;[r] &amp; \\prod_{ijk} F'(X_{ijk})\n}\n\\]\nwhere by hypothesis the last two vertical arrows are bijections. It is therefore\neven from the first vertical arrow, cqfd.</p>"
+    },
+    {
+     "id": "II.4.11",
+     "type": "corollaire",
+     "label": "4.11",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.11</span></div>\n  <div class=\"thm-body\"><p>Suppose \\(C\\) is a \\(\\mathcal{U}\\)-site (3.0.2). So the category\n\\(\\widetilde{C}\\) is a \\(\\mathcal{U}\\)-category and admits a \\(\\mathcal{U}\\)-small generating family.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Indeed, by hypothesis we can take in 4.10 for \\(G\\) a small family\ngenerator, which proves the existence of a small generating family. On the other hand, if\n\\(F, F' \\in \\mathrm{ob}\\, \\widetilde{C}\\), a homomorphism of \\(F\\) in \\(F'\\) is known when we know the homomorphism\n(4.10.1) i.e. (4.10.2) for all \\(X \\in \\mathrm{ob}\\, G\\) (I 7.1.1), from which it follows that the application\n\\[\n\\mathrm{Hom}(F,F') \\longrightarrow \\prod_{X \\in G} \\mathrm{Hom}(F(X), F'(X))\n\\]\nis injective. As the second member is \\(\\mathcal{U}\\)-small, it is the same for the first, which\nproves that \\(\\widetilde{C}\\) is a \\(\\mathcal{U}\\)-category.</p>"
+    },
+    {
+     "id": "II.4.12",
+     "type": "corollaire",
+     "label": "4.12",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.4.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">4.12</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site. Then for any object of \\(\\widetilde{C}\\), the set\nsubobjects of \\(X\\) and the set of quotient objects of \\(X\\) is \\(\\mathcal{U}\\)-small.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This results from I 7.4 resp. I 7.5, which apply through 4.11.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) When the site \\(C\\) does not necessarily have a small topologically generating family and when the topology of \\(C\\) is less fine than the canonical topology, we have ii) \\(\\Longrightarrow\\) i) (see demonstration of 4.4). </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-5",
+   "title": "5. Extension of a topology from \\(C\\) to \\(\\widehat{C}\\)",
+   "blocks": [
+    {
+     "id": "II.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.5\">5. Extending a topology from \\(C\\) to \\(\\widehat{C}\\)</h2>"
+    },
+    {
+     "id": "II.5.1",
+     "type": "proposition",
+     "label": "5.1",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">5.1</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\(f : H \\to K\\) be a morphism of \\(\\widehat{C}\\). The\nfollowing conditions are equivalent:</p>\n  <p>i) For all \\(X \\to K\\), with \\(X \\in \\mathrm{ob}\\, C\\), the corresponding morphism \\(H \\times_K X \\to X\\)\nhas the image of a sieve covering \\(X\\).</p>\n  <p>ii) The morphism \\(a(f) : aH \\to aK\\) on the associated sheaves is an epimorphism\nby \\(\\widetilde{C}\\).</p>\n  <p>ii bis) For any beam \\(F\\) on \\(C\\), the application \\(\\mathrm{Hom}(K,F) \\to \\mathrm{Hom}(H,F)\\) deduced from\n\\(f\\) is injective.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. It is clear that (ii) is equivalent to (ii bis).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us prove that (i) \\(\\Longrightarrow\\) (ii). Under 4.4, (i) means that\n\\(u : a(H \\times_K X) \\to a(X)\\) is an epimorphism. However, as\n\\(a(H \\times_K X) \\simeq a(H) \\times_{a(K)} a(X)\\), \\(a\\) commuting to finite \\(\\varprojlim\\) (4.1), the morphism considered\nis deduced from \\(a(f) : a(H) \\to a(K)\\) by change of base. Like the epimorphisms of \\(\\widetilde{C}\\)\nare universal, this shows that (ii) \\(\\Longrightarrow\\) (i). Conversely, as the family of \\(X_i \\to K\\) is\nepimorphic, it is the same for the family of \\(a(X) \\to a(K)\\) in \\(\\widetilde{C}\\) (4.1), therefore for\ncheck that \\(a(f) : a(H) \\to a(K)\\) is epimorphic, just see it after any change\nbase of the previous type \\(a(X) \\to a(K)\\), which proves i) \\(\\Longrightarrow\\) ii), cqfd.</p>"
+    },
+    {
+     "id": "II.5.2",
+     "type": "definition",
+     "label": "5.2",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.5.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">5.2</span></div>\n  <div class=\"thm-body\">\n  <p>1) A morphism \\(f : H \\to K\\) satisfying the three conditions\nequivalents of 5.1 is called a <em>covering morphism</em>. A family of morphisms\n\\(f_i : H_i \\to K\\), \\(i \\in I\\), with the same goal is said to be <em>covering</em> if the corresponding morphism\n\\(f : \\coprod_i H_i \\to K\\) is covering.</p>\n  <p>2) A morphism \\(f : H \\to K\\) is said to be <em>bi-covering</em> if it is covering and if the morphism\ndiagonal \\(H \\to H \\times_K H\\) is covering. A family \\(f_i : H_i \\to K\\), \\(i \\in I\\), with the same purpose is said to be\n<em>bicovering</em> if the corresponding morphism \\(f : \\coprod_i H_i \\to K\\) is bicovering.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By condition i) of 5.1, say that a family \\((f_i : H_i \\to K)\\), \\(i \\in I\\), is covering,\nmeans that for any morphism \\(X \\to K\\), with \\(X \\in \\mathrm{ob}\\, C\\), the family of \\(H_i \\times_K X \\to X\\), \\(i \\in I\\),\nhas as image a sieve covering \\(X\\); or again, by ii), the family of morphisms\n\\(a(f_i) : aH_i \\to aK\\) in \\(\\widetilde{C}\\) is epimorphic (given that the functor \\(a\\) commutes\nto direct sums (4.1))<sup class=\"footnote-ref\"><a id=\"II-fn3ref\" href=\"#II-fn3\">(∗)</a></sup>.</p>"
+    },
+    {
+     "id": "II.5.3",
+     "type": "proposition",
+     "label": "5.3",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">5.3</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site and \\(f : H \\to K\\) be a morphism of \\(\\widehat{C}\\). The\nfollowing conditions are equivalent:</p>\n  <p>i) The morphism \\(f\\) is bicovering.</p>\n  <p>i bis) The morphism \\(f\\) is covering and for any object \\(X\\) of \\(C\\) and any pair of\nmorphisms \\(u,v : X \\rightrightarrows H\\) such that \\(fu = fv\\), the kernel of \\((u,v)\\) is a spanning sieve of \\(X\\).</p>\n  <p>ii) The morphism \\(a(f) : aH \\to aK\\) is an isomorphism of \\(\\widetilde{C}\\).</p>\n  <p>ii bis) For any beam \\(F\\) on \\(C\\), the application \\(\\mathrm{Hom}(K,F) \\to \\mathrm{Hom}(H,F)\\) is a\nbijection.</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. The equivalence i) \\(\\Longleftrightarrow\\) i bis) results from condition i) of 5.1, applied to\ndiagonal morphism \\(H \\to H \\times_K H\\); the equivalence ii) \\(\\Longleftrightarrow\\) ii bis) is trivial.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) \\(\\Longrightarrow\\) ii). The morphism \\(a(f) : aH \\to aK\\) is an epimorphism (5.1). Like the\nfunctor \\(a\\) commutes to the formation of fiber products (4.1), the diagonal morphism\n\\(aH \\to aH \\times_{aK} aH\\) is an epimorphism (5.1). As the diagonal morphism is always a\nmonomorphism is an isomorphism (4.2). Consequently the morphism \\(a(f)\\) is a\nmonomorphism. It is therefore an isomorphism (4.2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ii) \\(\\Longrightarrow\\) i). As the functor \\(a\\) commutes to the formation of fiber products, the\nmorphism \\(f\\) and the diagonal morphism \\(H \\to H \\times_K H\\) are transformed by \\(a\\) into\nisomorphisms. In particular, they are transformed by \\(a\\) into epimorphisms. They are therefore\ncoverings, cqfd.</p>"
+    },
+    {
+     "id": "II.5.3.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.3.1\">5.3.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It follows from 5.3, and from the fact that \\(a\\) commutes to direct sums, that a family\n\\((f_i : H_i \\to K)\\), \\(i \\in I\\), of morphisms of \\(\\widehat{C}\\) is bicovering if and only if the \\(f_i\\)\ninduce on the associated sheaves an isomorphism of the direct sum \\(\\coprod_i aH_i\\) on \\(aK\\),\nor even if and only if, for any beam \\(F\\), the application\n\\[\n\\mathrm{Hom}(K,F) \\longrightarrow \\prod_i \\mathrm{Hom}(H_i,F)\n\\]\nis bijective.</p>"
+    },
+    {
+     "id": "II.5.4",
+     "type": "proposition",
+     "label": "5.4",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.5.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">5.4</span></div>\n  <div class=\"thm-body\">\n  <p>Let \\(C\\) be a \\(\\mathcal{U}\\)-site. There exists on \\(\\widehat{C}\\) a topology (obviously\nunique) such that a family \\(H_i \\to K\\) of arrows of \\(\\widehat{C}\\) of the same purpose is covering for\nthis topology if and only if it is covering in the sense of 5.2. It is also the topology\nthe least fine on \\(\\widehat{C}\\) among the topologies \\(T\\) having the following properties:</p>\n  <p>a) \\(T\\) is finer than the canonical topology of \\(\\widehat{C}\\) (i.e. any family\nepimorphic of \\(\\widehat{C}\\) is covering for \\(T\\)).</p>\n  <p>b) Any covering family in \\(C\\) is covering in \\(\\widehat{C}\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. We will limit ourselves to giving indications. We leave it to the reader\nto show that the covering families within the meaning of 5.2 are the covering families of a\ntopology \\(T_C\\) on \\(\\widehat{C}\\) (we use 4.1). The covering families of the canonical topology on \\(\\widehat{C}\\)\nare the epimorphic families on \\(\\widehat{C}\\) (2.6 and I 3.1). As \\(a\\) commutes at the limits\ninductive (4.1), the topology \\(T_C\\) is finer than the canonical topology of \\(\\widehat{C}\\). In addition the\ncovering families of \\(C\\) are covering families of \\(T_C\\) (5.1). If therefore \\(T'\\) designates the\nless fine of the topologies of \\(\\widehat{C}\\) having the properties a) and b), \\(T_C\\) is finer than \\(T'\\).\nLet \\((f_i : H_i \\to K)\\), \\(i \\in I\\), be a covering family of \\(T_C\\). Let us show that \\((f_i, i \\in I)\\) is a family\ncovering of \\(T'\\). Let \\(s_i : H_i \\to H = \\coprod H_i\\) be the canonical monomorphisms and\n\\(f = (f_i, i \\in I) : H = \\coprod_i H_i \\to K\\) the morphism defined by \\(f_i\\). The family of \\(s_i\\) is\ncovering for \\(T'\\). To show that \\((f_i, i \\in I)\\) is a covering family of \\(T'\\), it is therefore sufficient\nto show, by virtue of the axiom (T2) of topologies, that the morphism \\(f : H \\to K\\) is\ncovering for \\(T'\\). There is an epimorphic family of \\(\\widehat{C}\\), \\(u_\\lambda : X_\\lambda \\to K\\), \\(\\lambda \\in \\Lambda\\),\n\\(X_\\lambda \\in \\mathrm{ob}\\, C\\) (I 3.4). To show that \\(f : H \\to K\\) is covering for \\(T'\\), it is therefore sufficient, by virtue\nof the axiom (T 2) of topologies, to show that for all \\(\\lambda \\in \\Lambda\\), the morphism\n\\(\\mathrm{pr}_2 : H \\times_K X_\\lambda \\to X_\\lambda\\) is covering for \\(T'\\). Let then be \\(v_j : Y_j \\to H \\times_K X_\\lambda\\), \\(j \\in J\\),\n\\(Y_j \\in \\mathrm{ob}\\, C\\), an epimorphic family of \\(\\widehat{C}\\). The \\((\\mathrm{pr}_2 \\circ v_j, j \\in J)\\) family is covering for\n\\(T_C\\). It is therefore a covering family of \\(C\\) (5.1). It is therefore a covering family of \\(T'\\). By\nSubsequently the sieve generated by \\(\\mathrm{pr}_2 : H \\times_K X_\\lambda \\to X_\\lambda\\) contains a covering sieve for \\(T'\\). He\nis therefore covering for \\(T'\\) and consequently \\(\\mathrm{pr}_2 : H \\times_K X_\\lambda \\to X_\\lambda\\) is covering, cqfd.</p>"
+    },
+    {
+     "id": "II.5.4.1",
+     "type": "remarque",
+     "label": "5.4.1",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.5.4.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">5.4.1</span></div>\n  <div class=\"thm-body\">\n  <p>The proof of 5.4 actually shows that any topology \\(T'\\) on \\(\\widehat{C}\\),\nfiner than the canonical topology of \\(\\widehat{C}\\), is the least fine of the topologies \\(T\\) on \\(\\widehat{C}\\) which\nhave the following properties:</p>\n  <p>a) \\(T\\) is finer than the canonical topology of \\(\\widehat{C}\\).</p>\n  <p>b) Any covering family for \\(T'\\) of the form \\(u_i : X_i \\to X\\), \\(i \\in I\\), where \\(X\\) and the \\(X_i\\)\nare objects of \\(C\\), is covering for \\(T\\).</p>\n  <p>In particular, any topology \\(T'\\) on \\(\\widehat{C}\\), finer than the canonical topology, is\nonly determined by the families \\(u_i : X_i \\to X\\), \\(i \\in I\\), \\(X_i\\) and \\(X\\) objects of \\(C\\), which are\ncovering for \\(T'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.5.4.2",
+     "type": "remarque",
+     "label": "5.4.2",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.5.4.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">5.4.2</span></div>\n  <div class=\"thm-body\"><p>We can easily show that for any topology \\(T'\\) on \\(\\widehat{C}\\),\nfiner than the canonical topology, the set of families of morphisms \\((X_i \\to X)\\), \\(i \\in I\\),\nof the same purpose of \\(C\\), which are covering for \\(T'\\), is the set of covering families of a\ntopology on \\(C\\). So 5.4 and 5.4.1 make it possible to establish a one-to-one correspondence between\ntopologies on \\(C\\) and topologies on \\(\\widehat{C}\\) finer than the canonical topology.</p></div>\n</div>"
+    },
+    {
+     "id": "II.5.5.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.5.5.0\">5.5.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) be a small category. Let us designate by \\(\\mathrm{Caf}\\) all the subcategories\nstrictly full (any object isomorphic to an object of the subcategory is an object of the\nsubcategory) of \\(\\widehat{C}\\) whose injection functor admits a left adjoint which commutes\nat finite projective limits. Let us also designate by \\(\\mathscr{T}\\) the set of topologies on \\(C\\). The\nTheorem 3.4 defines an application for us:\n\\[\n\\Phi : \\mathscr{T} \\longrightarrow \\mathrm{Caf} .\n\\]\nWe will define an application in reverse. For this, it is necessary to associate with everything\nelement \\(e = (i' : C' \\rightleftarrows \\widehat{C}\\), \\(a'\\) added to the left of \\(i')\\) a topology \\(T_e\\) on \\(C\\). For everything\nobject \\(X\\) of \\(C\\), we will define \\(J_e(X)\\) as being the set of sub-objects of \\(X\\) whose\ninjection morphism is transformed by \\(a'\\) into an isomorphism. We immediately check,\nusing the hypotheses made on \\(a'\\), we thus define a topology \\(T_e\\) on \\(C\\). We therefore have\ndefined an application:\n\\[\n\\Psi : \\mathrm{Caf} \\longrightarrow \\mathscr{T} .\n\\]\nWe then have the result (due to J. GIRAUD): </p>"
+    },
+    {
+     "id": "II.5.5",
+     "type": "theoreme",
+     "label": "5.5",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"II.5.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">5.5</span></div>\n  <div class=\"thm-body\"><p>The map \\(\\Phi\\) is a bijection, and \\(\\Psi\\) is the map\nreverse.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. Application \\(\\Psi \\circ \\Phi\\) is the identity. In fact, this immediately results from\n5.1. Application \\(\\Phi \\circ \\Psi\\) is the identity. Indeed, let \\((i' : C' \\rightleftarrows \\widehat{C})\\) be an element of \\(\\mathrm{Caf}\\),\n\\(T_e\\) the topology that corresponds to it by \\(\\Psi\\), \\(C_e\\) the category of beams for \\(T_e\\). We\nthen demonstrates, using the definition of the topology \\(T_e\\) and the definition of morphisms\nbi-coverings (5.2), the equivalence of the following assertions:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>i) The morphism \\(u\\) of \\(\\widehat{C}\\) is bicovering for the topology \\(T_e\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ii) The morphism \\(u\\) of \\(\\widehat{C}\\) is transformed by \\(a'\\) into an isomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It is clear that \\(C'\\) is a full subcategory of \\(C_e\\). It is therefore sufficient to show that\nany beam \\(F\\) for topology \\(T_e\\) is an object of \\(C'\\). But, according to the equivalence\nabove, the morphism \\(F \\to i' \\circ a'(F)\\) is bicovering, and its source and its goal being\nbundles, we deduce by 5.3 (ii) that \\(F \\to i' \\circ a'(F)\\) is an isomorphism, cqfd.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn3",
+     "number": "(∗)",
+     "html": "<p>(∗) Note that the property for a morphism or a family of morphisms of \\(\\widehat{C}\\) of being covering (resp. bicovering) is stable by change of base. </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-6",
+   "title": "6. Bundles with values ​​in a category",
+   "blocks": [
+    {
+     "id": "II.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.6\">6. Value bundles in a category</h2>"
+    },
+    {
+     "id": "II.6.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.0\">6.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(C\\) and \\(D\\) be two categories. A contravariant functor of \\(C\\) in \\(D\\),\n\\(F : C^\\circ \\to D\\), is called a <em>pre-bundle on \\(C\\) with values in \\(D\\)</em>.</p>"
+    },
+    {
+     "id": "II.6.1",
+     "type": "definition",
+     "label": "6.1",
+     "title": "Definition",
+     "html": "<div class=\"thm thm-remark definition\" id=\"II.6.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Definition</span> <span class=\"thm-num\">6.1</span></div>\n  <div class=\"thm-body\"><p>Let \\(C\\) be a site, \\(D\\) be a category. A pre-bundle\n\\(F : C^\\circ \\to D\\) is called a <em>bundle on \\(C\\) with values in \\(D\\)</em> (or, more briefly, a\n<em>bundled with values in \\(D\\)</em>) if for any object \\(S\\) of \\(D\\), the pre-bundle of sets:\n\\[\nX \\mapsto \\mathrm{Hom}_D(S, F(X)) , \\qquad X \\in \\mathrm{ob}(C)\n\\]\nis a beam. The full subcategory of \\(\\underline{\\mathrm{Hom}}(C^\\circ, D)\\) formed from the bundles on \\(C\\) to\nvalues in \\(D\\) will be noted \\(\\underline{\\mathrm{Hom}}^{\\sim}(C^\\circ, D)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "II.6.2",
+     "type": "remarque",
+     "label": "6.2",
+     "title": "Remarks",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.6.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Remarks</span> <span class=\"thm-num\">6.2</span></div>\n  <div class=\"thm-body\">\n  <p>1) Condition 6.1 means that for any object \\(X\\) of \\(C\\), any sieve covering\n\\(R\\) of \\(X\\), and any object \\(S\\) of \\(D\\), we have an isomorphism (I 3.5 and 2.1):\n\\[\n\\mathrm{Hom}_D(S, F(X)) \\xrightarrow{\\ \\sim\\ } \\varprojlim_{C/R} F(\\,\\cdot\\,) .\n\\]\nWe thus find, when \\(D\\) is the category of \\(\\mathcal{U}\\)-sets, the definition of the sheaves\nof sets (loc. cit.).</p>\n  <p>2) Let \\(D'\\) be a \\(\\mathcal{U}\\)-category and \\(G : D \\to D'\\) be a limit-commuting functor\nprojectives. The functor \\(G\\) transforms, by composition, the sheaves with values in \\(D\\) into\nbundles with value in \\(D'\\).</p>\n  </div>\n</div>"
+    },
+    {
+     "id": "II.6.3.0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3.0\">6.3.0.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\gamma\\) be a kind of algebraic structure defined by finite projective limits\n(I 2.9) and \\(\\mathcal{U}\\text{-}\\gamma\\) the category of \\(\\gamma\\)-sets which belong to \\(\\mathcal{U}\\). Let us designate by\n\\(\\mathrm{esj} : \\mathcal{U}\\text{-}\\gamma \\to \\mathcal{U}\\text{-Ens}\\) the “underlying set” functor. The functor \\(\\mathrm{esj}\\) commutes to\nprojective limits and, consequently, according to the previous remark, defined by composition of\nfunctors:\n\\[\n\\mathrm{esj}^\\wedge : \\underline{\\mathrm{Hom}}(C^\\circ, \\mathcal{U}\\text{-}\\gamma) \\longrightarrow \\widehat{C}\n\\]\n\\[\n\\mathrm{esj}^\\sim : \\underline{\\mathrm{Hom}}^{\\sim}(C^\\circ, \\mathcal{U}\\text{-}\\gamma) \\longrightarrow \\widetilde{C} .\n\\]\nThe \\(\\mathrm{esj}^\\sim\\) functor is called the “underlying set bundle” functor. In fact, he\nfactors canonically by the category \\(\\gamma\\text{-}\\widetilde{C}\\) of \\(\\gamma\\)-objects of \\(\\widetilde{C}\\), and again designating\nby \\(\\widetilde{\\mathrm{esj}}\\) the functor\n\\[\n\\underline{\\mathrm{Hom}}^{\\sim}(C^\\circ, \\mathcal{U}\\text{-}\\gamma) \\longrightarrow \\gamma\\text{-}\\widetilde{C}\n\\]\nobtained, we can state:</p>"
+    },
+    {
+     "id": "II.6.3.1",
+     "type": "proposition",
+     "label": "6.3.1",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.3.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">6.3.1</span></div>\n  <div class=\"thm-body\"><p>The functor \\(\\mathrm{esj}^\\sim\\) establishes an equivalence of categories\nbetween the category of beams on \\(C\\) with value in \\(\\mathcal{U}\\text{-}\\gamma\\), that of \\(\\gamma\\)-objects of the\ncategory of bundles of sets, and the category of \\(\\gamma\\)-objects of the category of\npre-beams of assemblies whose underlying pre-beam is a beam.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. The proof essentially uses (I 3.2) and the fact that a projective limit\nfinite number of bundles in the category of presheaves is a bundle (4.1).</p>"
+    },
+    {
+     "id": "II.6.3.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3.2\">6.3.2.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The previous proposition justifies the abuse of language which consists of identifying a\nvalue beam in \\(\\mathcal{U}\\text{-}\\gamma\\) and the corresponding \\(\\gamma\\)-object in \\(\\widetilde{C}\\). We will now do\nsystematically this abuse of language. We will use the classic terminology:\n<em>group bundles</em>, <em>commutative group bundles</em> (which we will most likely call\noften <em>abelian bundles</em>), <em>ring bundles</em>, <em>bundles of \\(A\\)-modules</em>...</p>"
+    },
+    {
+     "id": "II.6.3.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"II.6.3.3\">6.3.3.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We designate by\n\\[\n\\widetilde{C}_\\gamma \\quad (\\text{resp. } \\widehat{C}_\\gamma)\n\\]\nthe category of \\(\\gamma\\)-objects of \\(\\widetilde{C}\\) (resp. of \\(\\widehat{C}\\)). When \\(\\gamma\\) is the structure species\n“\\(A\\)-module”, we also write \\(\\widetilde{C}_A\\), or simply \\(\\widetilde{C}_{ab}\\) when \\(A = \\mathbb{Z}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose \\(C\\) is a \\(\\mathcal{U}\\)-site. The “associated beam” functor is left exact\n(4.1) and subsequently:</p>"
+    },
+    {
+     "id": "II.6.4",
+     "type": "proposition",
+     "label": "6.4",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">6.4</span></div>\n  <div class=\"thm-body\"><p>The inclusion functor \\(i_\\gamma : \\widetilde{C}_\\gamma \\to \\widehat{C}_\\gamma\\) admits a\nleft adjoint \\(a_\\gamma\\) exact on the left, i.e. we have an isomorphism:\n\\[\n\\mathrm{Hom}_{\\widetilde{C}_\\gamma}(a_\\gamma\\,,\\ ) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\widehat{C}_\\gamma}(\\ ,\\ i_\\gamma) .\n\\]\nLet \\(X\\) be an object of \\(\\widehat{C}_\\gamma\\). The bundle of sets underlying \\(a_\\gamma(X)\\) is\ncanonically isomorphic to the bundle associated with the presheaf of sets underlying \\(X\\).\nThe morphism of pre-sheaves of sets underlying the addition morphism\n\\(\\mathrm{id} \\to i_\\gamma a_\\gamma\\) identifies with the addition morphism applied to the set prebundle\nunderlying.</p></div>\n</div>"
+    },
+    {
+     "id": "II.6.5",
+     "type": "proposition",
+     "label": "6.5",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">6.5</span></div>\n  <div class=\"thm-body\"><p>Suppose the functor \\(\\mathrm{esj} : \\gamma\\text{-}\\mathcal{U} \\to \\mathcal{U}\\text{-Ens}\\)\nadmits an assistant on the left<sup class=\"footnote-ref\"><a id=\"II-fn4ref\" href=\"#II-fn4\">(∗)</a></sup>:\n\\[\n\\mathrm{Hom}_{\\mathcal{U}\\text{-Ens}}(.\\,, \\mathrm{esj}(.)) \\xrightarrow{\\ \\sim\\ } \\mathrm{Hom}_{\\gamma\\text{-}\\mathcal{U}}(\\mathrm{Lib}(.),.) .\n\\]\nThe functor \\(\\mathrm{esj}^\\sim : \\widetilde{C}_\\gamma \\to \\widetilde{C}\\) (resp. \\(\\mathrm{esj}^\\wedge : \\widehat{C}_\\gamma \\to \\widehat{C}\\)) admits a left adjoint\n\\(\\mathrm{Lib}^\\sim\\) (resp. \\(\\mathrm{Lib}^\\wedge\\)) and we have a canonical isomorphism\n\\[\n\\mathrm{Lib}^\\sim = a_\\gamma \\mathrm{Lib}^\\wedge i .\n\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. The proof is formal and is left to the reader.</p>"
+    },
+    {
+     "id": "II.6.6",
+     "type": "corollaire",
+     "label": "6.6",
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"II.6.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span> <span class=\"thm-num\">6.6</span></div>\n  <div class=\"thm-body\"><p>Let \\((X_i)\\), \\(i \\in I\\), a generating family of \\(\\widetilde{C}\\) (4.9). So\nthe \\(\\mathrm{Lib}^\\sim(X_i)\\) family is a generating family of \\(\\widetilde{C}_\\gamma\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. The proof is formal once we notice that the functor \\(\\mathrm{esj}^\\sim\\)\ncommutes to projective limits and that it is conservative (\\(\\mathrm{esj}^\\sim(u)\\) is a\nisomorphism \\(\\Longleftrightarrow\\) \\(u\\) is isomorphism).</p>"
+    },
+    {
+     "id": "II.6.7",
+     "type": "proposition",
+     "label": "6.7",
+     "title": "Proposal",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"II.6.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposal</span> <span class=\"thm-num\">6.7</span></div>\n  <div class=\"thm-body\"><p>Let \\(A\\) be a \\(\\mathcal{U}\\)-bundle of rings, or else a small ring,\n\\(\\widetilde{C}_A\\) (resp. \\(\\widehat{C}_A\\)) the category of beams (resp. pre-beams) of \\(A\\)-unit modules\n(6.3.3) on a \\(\\mathcal{U}\\)-site \\(C\\). Then \\(\\widetilde{C}_A\\) is an \\(\\mathcal{U}\\)-abelian category satisfying the axioms\n(AB 5) (“existence of exact filtering inductive limits on the left”) and (AB 3)*\n(“existence of infinite products”) from [TOHOKU]. It has a family of generators\nindexed by an element of \\(\\mathcal{U}\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof. It is clear that the category \\(\\widehat{C}_A\\) is an abelian category verifying the\naxioms (AB 3), (AB 4), and (AB 5) (I 2.8 and I 3.3). We then deduce from 6.4 that the category \\(\\widetilde{C}_A\\)\nis an additive category where cores and co-cores are representable. More precisely,\nbe \\(i_A\\) and \\(a_A\\) the inclusion functors in the presheaves and associated sheaves and\n\\(u : X \\to Y\\) a morphism of \\(\\widetilde{C}_A\\). The functor \\(a_A\\) is left exact and commutes at the limits\ninductive. The functor \\(i_A\\) commutes at projective limits. Consequently the functor\n\\(i_A a_A : \\widehat{C}_A \\to \\widehat{C}_A\\) is a left-exact additive functor. We deduce isomorphisms\ncanonicals:\n\\[\n(*) \\qquad i_A(\\mathrm{Ker}(u)) \\xrightarrow{\\ \\sim\\ } \\mathrm{Ker}(i_A(u)) ,\n\\]\n\\[\n(**) \\qquad \\mathrm{coker}(u) \\xrightarrow{\\ \\sim\\ } a_A \\mathrm{coker}(i_A(u)) .\n\\]\nWe then have a canonical isomorphism:\n\\[\n(***) \\qquad \\mathrm{coim}(u) \\xrightarrow{\\ \\sim\\ } a_A \\mathrm{coim}(i_A(u)) .\n\\]\nLet us show that the canonical morphism \\(\\mathrm{coim}(u) \\to \\mathrm{im}(u)\\) is an isomorphism. For this, he\nsuffice to show, according to (*), that the sequence:\n\\[\n0 \\to i_A(\\mathrm{coim}(u)) \\to i_A(Y) \\to i_A(\\mathrm{coker}(u))\n\\]\nis correct. Using the isomorphisms (**) and (***) and noticing that \\(a_A i_A(Y)\\) is isomorphic\nat \\(Y\\), we see that this sequence is isomorphic to the sequence:\n\\[\n0 \\to i_A a_A(\\mathrm{coim}(i_A(u))) \\to i_A a_A i_A(Y) \\to i_A a_A(\\mathrm{coker}(i_A(u))) ,\n\\]\nwhich is none other than the transform by the functor \\(i_A a_A\\) of the sequence:\n\\[\n0 \\to \\mathrm{coim}(i_A(u)) \\to i_A(Y) \\to \\mathrm{coker}(i_A(u)) .\n\\]\nHowever, this sequence is exact and the functor \\(i_A a_A\\) is exact on the left. The category \\(\\widetilde{C}_A\\) is therefore\nan abelian category. The functor \\(a_A : \\widehat{C}_A \\to \\widetilde{C}_A\\) is left exact and commutes to\nany inductive limits. Consequently it is additive, exact and commutes at the limits\ninductive. The category \\(\\widehat{C}_A\\) verifying the axiom (AB 5), it is the same for the category \\(\\widetilde{C}_A\\).\nFinally it is clear that in the category \\(\\widetilde{C}_A\\), the products indexed by an element of \\(\\mathcal{U}\\) are\nrepresentable and, consequently, that the axiom (AB 3)* is verified, which completes the demonstration\nof the first assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For any ring \\(A\\) element of \\(\\mathcal{U}\\), the functor:\n\\[\n\\mathrm{esj} : \\mathcal{U}\\text{-}A\\text{-module} \\longrightarrow \\mathcal{U}\\text{-Ens}\n\\]\nadmits a left adjoint \\(X_A\\) (\\(A\\)-generated free module). So just apply 4.10 and\n6.6 to complete the proof.</p>"
+    },
+    {
+     "id": "II.6.8",
+     "type": "notation",
+     "label": "6.8",
+     "title": "Rating",
+     "html": "<div class=\"thm thm-remark notation\" id=\"II.6.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Rating</span> <span class=\"thm-num\">6.8</span></div>\n  <div class=\"thm-body\"><p>Let \\(H\\) be a sheaf of sets. The \\(A\\)-module bundle\nassociated with the pre-beam (see notation 6.5)\n\\[\nX \\mapsto \\mathrm{Lib}_A H(X) \\qquad X \\in \\mathrm{ob}\\, C\n\\]\nis noted \\(A_H\\). When \\(H = a(X)\\) (beam associated with the pre-beam represented by \\(X\\)) we write\nsometimes simply \\(A_X\\) (by abuse of notation). The proof of 6.7 shows that the\nbundle family of \\(A\\)-module \\(A_X\\), (\\(X \\in \\mathrm{ob}(C)\\)), is a generating family, indexed by\nan element of \\(\\mathcal{U}\\), of the category of bundles of \\(A\\)-modules.</p></div>\n</div>"
+    },
+    {
+     "id": "II.6.9",
+     "type": "remarque",
+     "label": "6.9",
+     "title": "Noticed",
+     "html": "<div class=\"thm thm-remark remark\" id=\"II.6.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Note</span> <span class=\"thm-num\">6.9</span></div>\n  <div class=\"thm-body\"><p>According to [TOHOKU], 6.7 shows that the category \\(\\widetilde{C}_A\\), when \\(A\\)\nis an element of \\(\\mathcal{U}\\), has sufficient injectives. We know, moreover, that the products\ninfinites are not necessarily exact in \\(\\widetilde{C}_A\\), and, consequently, that the category \\(\\widetilde{C}_A\\)\ndoes not, in general, admit sufficient projectives [ROOS].</p></div>\n</div>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "II-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) We demonstrate that such an adjoint always exists [C.F.]: free group, free abelian group, \\(A\\)-free module... . </p>"
+    }
+   ]
+  },
+  {
+   "id": "II-bibliographie",
+   "title": "Bibliography",
+   "blocks": [
+    {
+     "id": "II.bibliographie",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"II.bibliographie\">Bibliography</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] Mr. Artin; <em>Grothendieck's topologies</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] M. Demazure: <em>Algebraic Geometry Seminar III</em>, Presentation IV, Reading Notes.\nSpringer-Verlag.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] A. Grothendieck: <em>On some points of Homological Algebra</em>. Tohoku Math.\nJournal.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] J. E. Roos: CR</p>"
+    }
+   ],
+   "footnotes": []
+  }
+ ]
+}

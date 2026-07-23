@@ -1,0 +1,2588 @@
+{
+ "chapter_id": "XII",
+ "title": "FORMULES DE NIELSEN-WECKEN ET DE LEFSCHETZ EN GÉOMÉTRIE ALGÉBRIQUE",
+ "number": "XII",
+ "pages": [
+  {
+   "id": "XII",
+   "title": "FORMULES DE NIELSEN-WECKEN ET DE LEFSCHETZ EN GÉOMÉTRIE ALGÉBRIQUE",
+   "blocks": [
+    {
+     "id": "XII",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"XII\">EXPOSÉ XII<br>FORMULES DE NIELSEN-WECKEN ET DE LEFSCHETZ EN GÉOMÉTRIE ALGÉBRIQUE<span class=\"author\">par A. Grothendieck<br>rédigé par I. BUCUR</span></h1>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-1",
+   "title": "1.",
+   "blocks": [
+    {
+     "id": "XII.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.1\">1.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(X'\\) un schéma propre sur le corps \\(k\\) algébriquement clos et \\(G\\) un groupe fini opérant sur \\(X'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour chaque élément \\(g\\in G\\) on désigne par \\({}_gX':X'\\longrightarrow X'\\) l'automorphisme de \\(X'\\) induit par \\(g\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons qu'il existe un ouvert \\(U'\\) de \\(X'\\) stable par \\(G\\) et tel que \\(G\\) opère librement sur \\(U'\\) et soit \\(\\Lambda_n=\\mathbb Z/\\ell^n\\mathbb Z\\) où \\(\\ell\\) est un nombre premier différent de la caractéristique de \\(k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(\\Lambda_{n,U',X'}\\) le faisceau \\(i_!(\\Lambda_{n,U'})\\) sur \\(X'\\) où \\(\\Lambda_{n,U'}\\) est le faisceau constant sur \\(U'\\) associé à l'anneau \\(\\Lambda_n\\) et \\(i:U'\\lhook\\joinrel\\longrightarrow X'\\) est l'immersion canonique de \\(U'\\) dans \\(X'\\). Le faisceau \\(\\Lambda_{n,U',X'}\\) est muni d'une manière naturelle d'une structure de faisceau à groupe \\(G\\) d'opérateurs. Par conséquence le complexe</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal H_{n,U',X'}=R\\Gamma_{X'}(\\Lambda_{n,U',X'})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est un complexe de \\(\\Lambda_n[G]\\)-modules et plus précisément un complexe parfait (VIII,7) de \\(\\Lambda_n[G]\\)-modules (IX,2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On verra dans la suite qu'il est plus commode pour notre but de considérer au lieu du complexe \\(R\\Gamma_{X'}(\\Lambda_{n,U',X'})\\) son dual \\(\\mathcal H_{n,U',X'}^\\vee=R\\Gamma_{X'}(\\Lambda_{n,U',X'})^\\vee\\) par rapport à l'anneau \\(\\Lambda_n\\) au sens des catégories dérivées :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathcal H_{n,U',X'}^\\vee=R\\Gamma_{X'}(\\Lambda_{n,U',X'})^\\vee\n=R\\operatorname{Hom}_{\\Lambda_n}\\bigl(R\\Gamma_{X'}(\\Lambda_{n,U',X'}),\\Lambda_n\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le complexe \\(R\\Gamma_{X'}(\\Lambda_{n,U',X'})^\\vee\\) est un complexe parfait de \\(\\Lambda_n[G]\\)-modules.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons qu'on se donne maintenant un endomorphisme \\(f':X'\\longrightarrow X'\\) du schéma \\(X'\\) et un endomorphisme \\(\\varphi:G\\longrightarrow G\\) du groupe \\(G\\) tel que les deux conditions suivantes soient remplies :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(1.1)\\qquad f'{}_gX'={}_{\\varphi(g)}X'f'\\qquad\\forall g\\in G.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\((1.2)\\) Le complémentaire \\(Y'=X'-U'\\) est stable par \\(f'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(Sous les hypothèses déjà faites \\(Y'\\) est stable par \\(G\\). <u>En général on n'exige pas que l'ouvert \\(U'\\) soit stable par \\(f'\\)</u>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient donc les homomorphismes de faisceaux :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_{\\Lambda_{n,X'}}:\\Lambda_{n,X'}\\longrightarrow\\Lambda_{n,X'},\n\\]\n\\[\nf'_{\\Lambda_{n,Y'}}:\\Lambda_{n,Y'}\\longrightarrow\\Lambda_{n,Y'},\n\\]\n\\[\nf'_{\\Lambda_{n,U',X'}}:\\Lambda_{n,U',X'}\\longrightarrow\\Lambda_{n,U',X'},\n\\]\n\\[\n{}_g\\Lambda_{n,U',X'}:\\Lambda_{n,U',X'}\\longrightarrow\\Lambda_{n,U',X'},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que le diagramme suivant, où les lignes sont exactes, soit commutatif :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(1.3)\\qquad\n\\xymatrix{\n0\\ar[r]&amp;\\Lambda_{n,U',X'}\\ar[r]\\ar[d]^{f'_{\\Lambda_{n,U',X'}}}&amp;\\Lambda_{n,X'}\\ar[r]\\ar[d]^{f'_{\\Lambda_{n,X'}}}&amp;\\Lambda_{n,Y'}\\ar[r]\\ar[d]^{f'_{\\Lambda_{n,Y'}}}&amp;0\\\\\n0\\ar[r]&amp;\\Lambda_{n,U',X'}\\ar[r]&amp;\\Lambda_{n,X'}\\ar[r]&amp;\\Lambda_{n,Y'}\\ar[r]&amp;0.\n}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On en déduit, en particulier, des homomorphismes de complexes de \\(\\Lambda_n\\)-modules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_{\\mathcal H_{n,U',X'}}=R\\Gamma_{X'}(f'_{\\Lambda_{n,U',X'}}):\n\\mathcal H_{n,U',X'}\\longrightarrow\\mathcal H_{n,U',X'},\n\\]\n\\[\nf'_{\\mathcal H_{n,U',X'}^\\vee}=(f'_{\\mathcal H_{n,U',X'}})^\\vee:\n\\mathcal H_{n,U',X'}^\\vee\\longrightarrow\\mathcal H_{n,U',X'}^\\vee,\n\\]\n\\[\n{}_g\\mathcal H_{n,U',X'}=R\\Gamma_{X'}({}_g\\Lambda_{n,U',X'}):\n\\mathcal H_{n,U',X'}\\longrightarrow\\mathcal H_{n,U',X'},\n\\]\n\\[\n{}_g\\mathcal H_{n,U',X'}^\\vee=({}_g\\mathcal H_{n,U',X'})^\\vee:\n\\mathcal H_{n,U',X'}^\\vee\\longrightarrow\\mathcal H_{n,U',X'}^\\vee,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que les relations suivantes soient vraies :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(1.4)\\qquad {}_g\\mathcal H_{n,U',X'}\\circ f'_{\\mathcal H_{n,U',X'}}\n=f'_{\\mathcal H_{n,U',X'}}\\circ{}_{\\varphi(g)}\\mathcal H_{n,U',X'},\n\\]\n\\[\n(1.5)\\qquad f'_{\\mathcal H_{n,U',X'}^\\vee}\\circ{}_g\\mathcal H_{n,U',X'}^\\vee\n={}_{\\varphi(g)}\\mathcal H_{n,U',X'}^\\vee\\circ f'_{\\mathcal H_{n,U',X'}^\\vee}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La relation (1.5) nous montre (cf. Exp. XI sur la théorie générale des traces, 5.2.1, 7.1) que la trace</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}_{\\Lambda_n[G],\\varphi}^{*}\n\\bigl(f'_{\\mathcal H_{n,U',X'}^\\vee}\\bigr)\n\\in\\Lambda_n[G_{\\varphi,\\varphi^0}]\\simeq\\mathcal J_1(G_{\\varphi,\\varphi^0},\\Lambda_n)\n\\tag{*}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notre premier but sera de donner, sous quelques hypothèses supplémentaires, une formule explicite de \\(\\operatorname{Tr}_{\\Lambda_n[G],\\varphi}^{*}(f'_{\\mathcal H_{n,U',X'}^\\vee})\\) en termes d'invariants locaux associés à \\(f'\\) ; termes que nous allons définir plus bas.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-2",
+   "title": "2.",
+   "blocks": [
+    {
+     "id": "XII.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.2\">2.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En fait on peut faire mieux. Soient pour cela \\(n,m\\) deux entiers positifs tel que \\(m\\geq n\\). Les homomorphismes d'anneaux :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\alpha_{m,n}:\\Lambda_m\\longrightarrow\\Lambda_n\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>engendrent les homomorphismes de faisceaux d'anneaux sur \\(X'\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\alpha_{m,n,X'}:\\Lambda_{m,X'}\\longrightarrow\\Lambda_{n,X'},\n\\]\n\\[\n\\alpha_{m,n,U',X'}:\\Lambda_{m,U',X'}\\longrightarrow\\Lambda_{n,U',X'}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'application de la formule de Künneth nous donne :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(2.1)\\qquad R\\Gamma_{X'}(\\Lambda_{m,X'})\\mathbin{\\overset L\\otimes}_{\\Lambda_m}\\Lambda_n\n\\simeq R\\Gamma_{X'}(\\Lambda_{n,X'}),\n\\]\n\\[\n(2.2)\\qquad R\\Gamma_{X'}(\\Lambda_{m,U',X'})\\mathbin{\\overset L\\otimes}_{\\Lambda_m}\\Lambda_n\n\\simeq R\\Gamma_{X'}(\\Lambda_{n,U',X'}),\n\\]\n\\[\n(2.3)\\qquad R\\Gamma_{X'}(f'_{\\Lambda_{m,X'}})\\mathbin{\\overset L\\otimes}_{\\Lambda_m}\\Lambda_n\n\\simeq R\\Gamma_{X'}(f'_{\\Lambda_{n,X'}}),\n\\]\n\\[\n(2.4)\\qquad R\\Gamma_{X'}(f'_{\\Lambda_{m,U',X'}})\\mathbin{\\overset L\\otimes}_{\\Lambda_m}\\Lambda_n\n\\simeq R\\Gamma_{X'}(f'_{\\Lambda_{n,U',X'}}).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On en déduit aisément :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(2.5)\\qquad R\\operatorname{Hom}_{\\Lambda_m}\\bigl(R\\Gamma_{X'}(\\Lambda_{m,U',X'}),\\Lambda_m\\bigr)\n\\mathbin{\\overset L\\otimes}_{\\Lambda_m}\\Lambda_n\n\\simeq R\\operatorname{Hom}_{\\Lambda_n}\\bigl(R\\Gamma_{X'}(\\Lambda_{n,U',X'}),\\Lambda_n\\bigr)\n\\]\n\\[\n(2.6)\\qquad f'_{\\mathcal H_{m,U',X'}^\\vee}\\mathbin{\\overset L\\otimes}_{\\Lambda_m}\\Lambda_n\n\\simeq f'_{\\mathcal H_{n,U',X'}^\\vee}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le morphisme de complexes parfaits \\(R\\Gamma_{X'}(f'_{\\Lambda_{n,X'}})\\) (resp. \\(R\\Gamma_{X'}(f'_{\\Lambda_{n,U',X'}}), f'_{\\mathcal H_{n,U',X'}^\\vee}\\)) s'obtient donc par extension des scalaires (XI, 6.3) à partir des morphismes \\(R\\Gamma_{X'}(f'_{\\Lambda_{m,X'}})\\) (resp. \\(R\\Gamma_{X'}(f'_{\\Lambda_{m,U',X'}}), f'_{\\mathcal H_{m,U',X'}^\\vee}\\))</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>à l'aide des morphismes \\(\\alpha_{m,n}\\) (resp. \\(\\alpha_{m,n},\n\\alpha_{m,n,G}:\\Lambda_m[G]\\longrightarrow\\Lambda_n[G]\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En utilisant (XI, 6.3, 6.3.2, 6.3.3), 2.3, 2.6 on obtient les relations</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(2.7)\\qquad \\operatorname{Tr}_{\\Lambda_n}^{*}\\bigl(R\\Gamma_{X'}(f'_{\\Lambda_{n,X'}})\\bigr)\n=\\alpha_{m,n}\\bigl(\\operatorname{Tr}_{\\Lambda_m}^{*}(R\\Gamma_{X'}(f'_{\\Lambda_{m,X'}}))\\bigr),\n\\]\n\\[\n(2.8)\\qquad \\operatorname{Tr}_{\\Lambda_n[G],\\varphi}^{*}\n\\bigl(f'_{\\mathcal H_{n,U',X'}^\\vee}\\bigr)\n=\\alpha_{m,n,G}\\bigl(\\operatorname{Tr}_{\\Lambda_m[G],\\varphi}^{*}\n(f'_{\\mathcal H_{m,U',X'}^\\vee})\\bigr).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le système des fonctions\n\\(\\bigl(\\operatorname{Tr}_{\\Lambda_n[G],\\varphi}^{*}(f'_{\\mathcal H_{n,U',X'}^\\vee})\\bigr)_{n&gt;0}\\)\ndéfinit une fonction</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}^{*}\n\\bigl(f'_{\\mathcal H_{U',X'}^\\vee}(\\ell)\\bigr)\n\\in\\mathcal J_1(G_{\\varphi,\\varphi^0},\\mathbb Z_\\ell),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\varphi\\)-centrale sur \\(G\\) à valeurs dans l'anneau \\(\\mathbb Z_\\ell\\) des entiers \\(\\ell\\)-adiques.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>De même les éléments\n\\(\\operatorname{Tr}_{\\Lambda_n}^{*}(R\\Gamma_{X'}(f'_{\\Lambda_{n,X'}}))\\),\n\\(n\\geq1\\), définissent un entier \\(\\ell\\)-adique\n\\(\\operatorname{Tr}_{\\mathbb Z_\\ell}^{*}(f'_{R\\Gamma_{X'}(\\mathbb Z_{\\ell,X'})})\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notre but sera de trouver une formule pour\n\\(\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}^{*}\n(f'_{\\mathcal H_{U',X'}^\\vee}(\\ell))\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-3",
+   "title": "3. L'invariant local de Nielsen-Wecken (cf. [1]).",
+   "blocks": [
+    {
+     "id": "XII.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.3\">3. <u>L'invariant local de Nielsen-Wecken</u> (cf. [1]).</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons en plus des hypothèses décrites au numéro 1, que toute orbite de\n\\(G\\) est contenue dans un ouvert affine. Il existe donc un quotient\n\\(X=X'/G\\) et grâce à la formule 1.1, l'endomorphisme \\(f'\\) de \\(X'\\) passe au quotient :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[f:X\\longrightarrow X.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On va utiliser dans la suite les notations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np:X'\\longrightarrow X=X'/G\\quad\\text{pour la projection canonique},\n\\]\n\\[Y=p(Y')=Y'/G,\\qquad U=X-Y.\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(U'\\) est un revêtement principal ayant \\(G\\) comme groupe structural. Soit\n\\(x\\in U\\) un point fixe de \\(f\\). On va lui associer une classe de\n\\(\\varphi\\)-conjugaison (XI, 7.1) \\(NW_f^{G,\\varphi}(x)\\) de la manière suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(x'\\in U'\\) tel que \\(p(x')=x\\). \\(U'\\) étant un revêtement principal\nayant \\(G\\) comme groupe structural et le point \\(x\\) étant fixe pour \\(f\\) il\nexiste un élément unique \\(g\\in G\\) tel que \\(f'(x')=gx'\\). La classe de\n\\(\\varphi\\)-conjugaison de \\(g\\) ne dépend que de \\(x\\). En effet si\n\\(p(x'')=x\\), il existe \\(h\\in G\\) tel que \\(hx''=x'\\). Par conséquent si\n\\(f'(x'')=g'x''\\) on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ngx'=f'(x')=f'(hx'')=\\varphi(h)f'(x'')=(\\varphi(h)g'h^{-1})x',\n\\]\n\\[g=\\varphi(h)g'h^{-1},\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est-à-dire \\(g\\) et \\(g'\\) sont \\(\\varphi\\)-conjugués. Par conséquent, on\nobtient une classe bien déterminée de \\(\\varphi\\)-conjugaison, <u>l'invariant\nlocal de Nielsen-Wecken</u> associé au point fixe \\(x\\in U\\) de \\(f\\) qui sera\ndésigné par \\(NW_f^{G,\\varphi}(x)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La classe de \\(\\varphi\\)-conjugaison \\(NW_f^{G,\\varphi}(x)\\) définit une\nfonction \\(\\varphi\\)-centrale (cf. XI, 7.1) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[NW_f^{G,\\varphi}(x):G\\longrightarrow\\mathbb Z\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>à valeurs entières, caractérisée par les relations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(3.1)\\qquad NW_f^{G,\\varphi}(x)(g)=\n\\begin{cases}\n1&amp;\\text{s'il existe }x'\\in X'\\text{ tel que }(g^{-1}f')(x')=x'\\\\\n&amp;\\text{et }p(x')=x,\\\\\n0&amp;\\text{sinon.}\n\\end{cases}\n\\]\n\n</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-4",
+   "title": "4.",
+   "blocks": [
+    {
+     "id": "XII.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.4\">4.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons \\(X'\\) lisse sur \\(k\\) et en plus que le nombre des points fixes\nde \\(f\\) est fini. Il en résulte en particulier que le nombre des points fixes\nde \\(g^{-1}f'\\) est fini pour chaque \\(g\\in G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour chaque point fixe \\(x\\in X\\) de \\(f\\) on introduit la fonction\n\\(\\varphi\\)-centrale</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[S_x(f',f,G,\\varphi):G\\longrightarrow\\mathbb Q,\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>à valeurs rationnelles, définie par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(4.1)\\qquad S_x(f',f,G,\\varphi)(g)=\\frac1{c^\\varphi(g)}\n\\sum_{x'\\in X_x'^{\\,g^{-1}f'}}\\bigl(\\nu_{x'}(g^{-1}f')-1\\bigr).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous avons utilisé les notations suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(4.2)\\qquad c^\\varphi(g)=\\operatorname{Card}G_g^\\varphi,qquad\nG_g^\\varphi=\\{x\\in G\\mid\\varphi(x)gx^{-1}=g\\},\n\\]\n\\[\n(4.3)\\qquad X_x'^{\\,g^{-1}f'}=\n\\{x'\\in X'\\mid p(x')=x,\\ (g^{-1}f')(x')=x'\\}.\n\\]\n\\[\n(4.4)\\qquad \\nu_{x'}(g^{-1}f')=\\text{la multiplicité du point fixe }x'\n\\text{ de }g^{-1}f'.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par composition, avec les inclusions canoniques</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\\mathbb Q\\lhook\\joinrel\\longrightarrow\\mathbb Q_\\ell\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>la fonction \\(S_x(f',f,G,\\varphi)\\) engendre des fonctions\n\\(\\varphi\\)-centrales \\(S_{x,\\ell}(f',f,G,\\varphi)\\) sur \\(G\\) à valeurs dans\nle corps \\(\\mathbb Q_\\ell\\) des nombres \\(\\ell\\)-adiques.</p>"
+    },
+    {
+     "id": "XII.4.5",
+     "type": "conjecture",
+     "label": null,
+     "title": "Conjecture 4.5.",
+     "html": "<div class=\"thm conjecture\" id=\"XII.4.5\"><div class=\"thm-head\"><span class=\"thm-name\">Conjecture 4.5.</span></div><div class=\"thm-body\"><p><u>Pour chaque\n\\(\\ell\\ne\\operatorname{car}(k)\\) les valeurs de la fonction\n\\(S_{x,\\ell}(f',f,G,\\varphi)\\) sont des entiers \\(\\ell\\)-adiques.</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On va prouver dans la suite que la conjecture 4.5 est vraie si la dimension\nde \\(X\\) est égale à 1.</p>"
+    },
+    {
+     "id": "XII.4.6",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 4.6.",
+     "html": "<div class=\"thm proposition\" id=\"XII.4.6\"><div class=\"thm-head\"><span class=\"thm-name\">Proposition 4.6.</span></div><div class=\"thm-body\"><p><u>Soient \\(R\\) un anneau de valuation discrète, \\(\\mathfrak m\\) son idéal\nmaximal, \\(\\pi\\) une uniformisante, \\(k=R/\\mathfrak m\\) son corps résiduel\nsupposé alg. clos, \\(v\\) sa valuation, \\(f'_R:R\\to R\\) un endomorphisme de\n\\(R\\) et \\(G\\) un groupe fini d'automorphismes de \\(R\\). Supposons que\nl'endomorphisme \\(f'_R\\) et les automorphismes \\(g_R\\) induisent l'identité sur\n\\(k\\) et qu'on se donne en plus un endomorphisme de \\(G\\) :</u></p>\n\\[\\varphi:G\\longrightarrow G,\\]\n<p><u>tel que la relation suivante soit remplie :</u></p>\n\\[f'_R\\circ g_R=\\varphi(g)_R\\circ f'_R.\\]\n<p><u>Si l'on désigne pour chaque \\(g\\in G\\)</u></p>\n\\[\\nu(g_R^{-1}f'_R)=v(g_R^{-1}f'_R(\\pi)-\\pi),\\]\n<p><u>et si l'on décompose \\(c^\\varphi(g)\\) (cf. 4.2) sous la forme</u></p>\n\n<!-- Source PDF page 10 (printed page 416) -->\n\\[c^\\varphi(g)=p^s q,qquad(p,q)=1,qquad p=\\operatorname{car}(k),\\]\n<p><u>alors \\(q\\mid(\\nu(g_R^{-1}f'_R)-1)\\).</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour démontrer la proposition 4.6 on se réduit au cas \\(g=e\\) et\n\\(\\varphi=\\operatorname{id}_G\\). En effet on peut se réduire d'abord au cas\n\\(g=e\\) en associant à la situation \\((f'_R,G,g,\\varphi)\\) la situation\n\\((f''_R=g_R^{-1}f'_R,G,e,\\varphi'=\\operatorname{int}(g)\\circ\\varphi)\\)\n(\\(\\varphi'(a)=g^{-1}\\varphi(a)g\\)) et en observant aisément qu'on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\nu(g_R^{-1}f')-1=\\nu(f''_R)-1,\n\\]\n\\[\nc^\\varphi(g)=c^{\\varphi'}(e)\\qquad(G_g^\\varphi=G_e^{\\varphi'})\\quad\\text{(cf. 4.2)}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Pour se réduire simultanément au cas \\(g=e\\),\n\\(\\varphi=\\operatorname{id}_G\\) remarquons qu'on peut associer à la situation\n\\((f''_R,G,e,\\varphi')\\) la situation\n\\((f''_R,G_e^{\\varphi'},e,\\operatorname{id}_{G_e^{\\varphi'}})\\) et qu'on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nG_e^{\\varphi'}=(G_e^{\\varphi'})_e^{\\operatorname{id}_{G_e^{\\varphi'}}}.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La démonstration de la proposition 4.6 utilise essentiellement le lemme suivant :</p>"
+    },
+    {
+     "id": "XII.4.7",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 4.7.",
+     "html": "<div class=\"thm lemma\" id=\"XII.4.7\"><div class=\"thm-head\"><span class=\"thm-name\">Lemme 4.7.</span></div><div class=\"thm-body\"><p><u>Les hypothèses et les notations étant celles de la proposition 4.6\nsupposons en plus que \\(\\varphi=\\operatorname{id}_G\\), c'est-à-dire que les\nopérations de \\(G\\) sur \\(R\\) commutent avec \\(f'_R\\), et que\n\\(r=\\nu(f'_R)\\geq2\\).</u></p>\n<p><u>Soit</u></p>\n\\[\nc=\\operatorname{Card}\\bigl(\\operatorname{Im}(G\\longrightarrow\n\\operatorname{Aut}_k(\\mathfrak m/\\mathfrak m^2))\\bigr).\n\\]\n<p><u>On a alors la relation suivante de divisibilité :</u></p></div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nc\\mid(r-1).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Il est clair que l'entier \\(r\\) satisfait aux conditions suivantes :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">a) l'homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_r:A/\\mathfrak m^r\\longrightarrow A/\\mathfrak m^r\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">induit par \\(f'_R\\) est l'identité.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">b) l'homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_{r+1}:A/\\mathfrak m^{r+1}\\longrightarrow A/\\mathfrak m^{r+1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">est différent de l'identité.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part il est évident que \\(G\\) opère sur tous les espaces vectoriels\n\\(\\mathfrak m^i/\\mathfrak m^{i+1}\\) sur \\(k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On va montrer d'abord que sous les hypothèses du lemme il existe un\nhomomorphisme de \\(k[G]\\)-modules</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu(f'_R):\\mathfrak m/\\mathfrak m^2\\longrightarrow\n\\mathfrak m^r/\\mathfrak m^{r+1}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et un seul tel que les deux conditions suivantes soient satisfaites :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">1) \\(u(f'_R)\\ne0\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:4em;\">2) \\(u(f'_R)(x\\bmod\\mathfrak m^2)=(f'_R(x)-x)\\bmod\\mathfrak m^{r+1}\\), quel que soit \\(x\\in\\mathfrak m\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est clair que la condition a) implique \\(f'_R(x)-x\\in\\mathfrak m^r\\) quel que soit\n\\(x\\in R\\), ce qui donne un sens à la condition 2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cette observation nous donne aussi la possibilité de définir un\nhomomorphisme de groupes abéliens :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n\\mathfrak m&amp;\\longrightarrow\\mathfrak m^r/\\mathfrak m^{r+1}\\\\\nx&amp;\\longmapsto(f'_R(x)-x)\\bmod\\mathfrak m^{r+1}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Cet homomorphisme s'annule sur \\(\\mathfrak m^2\\). En effet, si\n\\(x_1,x_2\\in\\mathfrak m\\) alors \\(f'_R(x_1x_2)-x_1x_2\\in\\mathfrak m^{r+1}\\)\ncar on a grâce à la condition a) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_R(x_1)=x_1+\\alpha_1,\\quad\\alpha_1\\in\\mathfrak m^r,\n\\]\n\\[\nf'_R(x_2)=x_2+\\alpha_2,\\quad\\alpha_2\\in\\mathfrak m^r,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_R(x_1x_2)=f'_R(x_1)f'_R(x_2)=(x_1+\\alpha_1)(x_2+\\alpha_2)\n=x_1x_2+x_1\\alpha_2+x_2\\alpha_1+\\alpha_1\\alpha_2,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et évidemment \\(x_1\\alpha_2+x_2\\alpha_1+\\alpha_1\\alpha_2\\in\\mathfrak m^{r+1}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte donc par passage au quotient un homomorphisme de groupes abéliens :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu(f'_R):\\mathfrak m/\\mathfrak m^2\\longrightarrow\n\\mathfrak m^r/\\mathfrak m^{r+1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'homomorphisme \\(u(f'_R)\\) est en fait un homomorphisme d'espaces vectoriels sur\n\\(k\\). Pour le voir il faut montrer qu'on a quel que soit \\(x\\in\\mathfrak m\\), \\(\\alpha\\in R\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_R(\\alpha x)-\\alpha x\\equiv\\alpha(f'_R(x)-x)\\bmod\\mathfrak m^{r+1},\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est-à-dire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(4.7.1)\\qquad f'_R(\\alpha x)-\\alpha f'_R(x)\\in\\mathfrak m^{r+1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_R(\\alpha x)-\\alpha f'_R(x)=(f'_R(\\alpha)-\\alpha)f'_R(x),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>ce qui donne la relation (4.7.1) parce que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_R(\\alpha)-\\alpha\\in\\mathfrak m^r\\quad\\text{(Condition a))}\n\\]\n\\[\nf'_R(x)\\in\\mathfrak m\\qquad(x\\in\\mathfrak m).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'homomorphisme \\(u(f'_R)\\) est un homomorphisme de \\(k[G]\\)-modules. En\neffet, on a pour \\(x\\in\\mathfrak m\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu(f'_R)(g(x\\bmod\\mathfrak m^2))=(f'_R(gx)-gx)\\bmod\\mathfrak m^{r+1}\n\\]\n\\[\n=g(f'_R(x)-x)\\bmod\\mathfrak m^{r+1}=gu(f'_R)(x\\bmod\\mathfrak m^2).\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Enfin \\(u(f'_R)\\ne0\\). En effet grâce à la condition b) il existe un élément\n\\(x_0\\in R\\) tel que \\(f'_R(x_0)-x_0\\notin\\mathfrak m^{r+1}\\). Mais il nous faut un tel élément\nappartenant à \\(\\mathfrak m\\). Pour obtenir un tel élément écrivons \\(x_0\\) sous la forme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nx_0=\\frac{x}{x'},\\qquad x,x'\\in\\mathfrak m,\\quad x'\\notin\\mathfrak m^{r+1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'un au moins des éléments \\(x,x'\\) satisfait à la condition voulue.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Supposons par l'absurde qu'on ait en même temps :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'_R(x)-x\\in\\mathfrak m^{r+1},\\qquad f'_R(x')-x'\\in\\mathfrak m^{r+1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On aura donc, dans le corps \\(K\\) des fractions de \\(A\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\frac{f'_R(x)}x\\in1+\\mathfrak m^r,qquad\n\\frac{f'_R(x')}{x'}\\in1+\\mathfrak m^r.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut supposer que \\(f'_R(x')\\ne0\\), parce qu'autrement \\(x'\\) est\nl'élément cherché. Sous cette hypothèse, compte tenu du fait que\n\\(1+\\mathfrak m^r\\) est un groupe multiplicatif il résulte que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\frac{x'}{f'_R(x')}\\in1+\\mathfrak m^r,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\frac{f'_R(x)}x\\cdot\\frac{x'}{f'_R(x')}\\in1+\\mathfrak m^r.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais cette dernière relation implique :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\frac{f'_R(x_0)}{x_0}\\in1+\\mathfrak m^r.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n\\frac{f'_R(x_0)}{x_0}-\\frac{f'_R(x)}x\\cdot\\frac{x'}{f'_R(x')}\n&amp;=\\frac{f'_R(\\frac{x}{x'})}{\\frac{x}{x'}}-\\frac{f'_R(x)}x\\cdot\\frac{x'}{f'_R(x')}\\\\\n&amp;=\\frac1x\\left(\\frac{x'f'_R(x')f'_R(\\frac{x}{x'})-x'f'_R(x)}{f'_R(x')}\\right)=0.\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si l'on munit l'espace vectoriel sur \\(k\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}_k(\\mathfrak m/\\mathfrak m^2,\n\\mathfrak m^r/\\mathfrak m^{r+1})\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>de la structure habituelle de \\(G\\)-module son élément \\(u(f'_R)\\) appartient au sous-espace</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Hom}_k(\\mathfrak m/\\mathfrak m^2,\n\\mathfrak m^r/\\mathfrak m^{r+1})^G\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>des invariants sous \\(G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part il est classique que l'espace vectoriel\n\\(\\mathfrak m^i/\\mathfrak m^{i+1}\\) s'identifie canoniquement avec la \\(i\\)-ième\npuissance tensorielle \\(\\bigotimes_k^i(\\mathfrak m/\\mathfrak m^2)\\) et par\nconséquent l'espace vectoriel\n\\(\\operatorname{Hom}_k(\\mathfrak m/\\mathfrak m^2,\\mathfrak m^r/\\mathfrak m^{r+1})\\)\ns'identifie par l'homomorphisme de « contraction avec la \\((r-1)\\)-ème\npuissance tensorielle » \\(\\bigotimes_k^{r-1}(\\mathfrak m/\\mathfrak m^2)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\gamma:\\operatorname{Hom}_k(\\mathfrak m/\\mathfrak m^2,\n\\mathfrak m^r/\\mathfrak m^{r+1})\\longrightarrow\n\\bigotimes_k^{r-1}(\\mathfrak m/\\mathfrak m^2).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par l'isomorphisme \\(\\gamma\\) la structure de \\(G\\)-module de\n\\(\\operatorname{Hom}_k(\\mathfrak m/\\mathfrak m^2,\\mathfrak m^r/\\mathfrak m^{r+1})\\)\nse transporte dans la structure de \\(G\\)-module de\n\\(\\bigotimes_k^{r-1}(\\mathfrak m/\\mathfrak m^2)\\) induite par la structure de\n\\(G\\)-module de \\(\\mathfrak m/\\mathfrak m^2\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ng(\\xi_1\\otimes\\xi_2\\otimes\\cdots\\otimes\\xi_{r-1})\n=g\\xi_1\\otimes\\cdots\\otimes g\\xi_{r-1}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous désignerons par \\(\\mu(f'_R)\\) l'image de \\(u(f'_R)\\) par l'isomorphisme \\(\\gamma\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On a donc</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n1)\\qquad 0\\ne\\mu(f'_R)\\in\\bigotimes_k^{r-1}(\\mathfrak m/\\mathfrak m^2),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\mathrm{II})\\qquad \\mu(f'_R)\\text{ est invariant par }G.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Nous pouvons maintenant conclure la démonstration du lemme 4.7. Tout d'abord,\nl'espace vectoriel \\(\\mathfrak m/\\mathfrak m^2\\) étant de dimension 1 on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Aut}_k(\\mathfrak m/\\mathfrak m^2)=k^*,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent \\(\\operatorname{Im}(G\\longrightarrow\n\\operatorname{Aut}_k(\\mathfrak m/\\mathfrak m^2))\\) est un sous-groupe fini de\n\\(k^*\\) cyclique, engendré par une racine primitive \\(c\\)-ème de l'unité.\nDésignons par \\(\\varepsilon\\) une telle racine. Le sous-groupe\n\\(\\operatorname{Im}(G\\longrightarrow\\operatorname{Aut}_k(\\mathfrak m/\\mathfrak\nm^2))\\) est donc engendré par l'automorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\chi:\\mathfrak m/\\mathfrak m^2\\longrightarrow\\mathfrak m/\\mathfrak m^2,\n\\qquad \\xi\\longmapsto\\varepsilon\\xi.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>L'élément \\(\\mu(f'_R)\\) de \\(\\bigotimes_k^{r-1}(\\mathfrak m/\\mathfrak m^2)\\)\nétant invariant par \\(G\\) on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n\\mu(f'_R)&amp;=\\chi\\mu(f'_R)\n=\\chi\\sum_i\\xi_{1i}\\otimes\\xi_{2i}\\otimes\\cdots\\otimes\\xi_{r-1,i}\\\\\n&amp;=\\sum_i\\varepsilon\\xi_{1i}\\otimes\\varepsilon\\xi_{2i}\\otimes\\cdots\n\\otimes\\varepsilon\\xi_{r-1,i}=\\varepsilon^{r-1}\\mu(f'_R),\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est-à-dire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(1-\\varepsilon^{r-1})\\mu(f'_R)=0,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(\\mu(f'_R)\\) étant différent de zéro (Cond. I) il en résulte\n\\(1-\\varepsilon^{r-1}=0\\), c'est-à-dire \\(c\\mid(r-1)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration de la proposition 4.6.</u> Nous avons déjà remarqué qu'on peut\nse réduire au cas \\(g=e\\), \\(\\varphi=\\operatorname{id}_G\\). Si l'on désigne par\n\\(G_1\\) le noyau de l'homomorphisme :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nG\\longrightarrow\\operatorname{Aut}_k(\\mathfrak m/\\mathfrak m^2),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>alors on a grâce à la théorie de la ramification :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Card}(G_1)=p^t.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par conséquent, en utilisant les notations du lemme 4.7 on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Card}(G)=p^t c.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Comme d'autre part \\(c^{\\operatorname{id}_G}(e)=\\operatorname{Card}(G)\\)\nl'énoncé de la proposition 4.6 dans le cas \\(g=e\\),\n\\(\\varphi=\\operatorname{id}_G\\), et par conséquent en général, résulte du\nlemme 4.7.</p>"
+    },
+    {
+     "id": "XII.4.8",
+     "type": "corollary",
+     "label": "4.8.",
+     "title": "Corollaire",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"XII.4.8\">\n<div class=\"thm-head\"><span class=\"thm-name\">Corollaire</span> <span class=\"thm-num\">4.8.</span></div>\n<div class=\"thm-body\"><p>Pour chaque \\(\\ell\\ne\\operatorname{car}(k)\\), l'image du\nnombre rationnel</p>\n\\[\n\\frac{\\nu(g_R^{-1}f'_R)-1}{c^\\varphi(g)}\n\\]\n<p>par l'inclusion canonique :</p>\n\\[\n\\mathbb Q\\lhook\\joinrel\\longrightarrow\\mathbb Q_\\ell\n\\]\n<p>est un entier \\(\\ell\\)-adique.</p></div>\n</div>"
+    },
+    {
+     "id": "XII.4.9",
+     "type": "proposition",
+     "label": "4.9.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XII.4.9\">\n<div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">4.9.</span></div>\n<div class=\"thm-body\"><p>La conjecture 4.5 est vraie si la dimension du schéma\n\\(X\\) est égale à 1.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Nous allons introduire l'endomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\psi:G\\longrightarrow G\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>défini par :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\psi=\\operatorname{int}_g\\circ\\varphi,\\qquad\n\\operatorname{int}_g(\\xi)=g^{-1}\\xi g.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit facilement qu'on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">i) \\(\\psi(G_{x'})\\subset G_{g^{-1}f'x'}\\),\n\\(G_{x'}\\) étant le stabilisateur du point \\(x'\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">ii) \\(c^\\varphi(g)=\\operatorname{Card}(G^\\psi)\\),\n\\(G^\\psi=\\{\\xi\\mid\\psi(\\xi)=\\xi\\}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">iii) \\(G^\\psi\\) opère sur \\(X_x^{\\prime\\,g^{-1}f'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">iv) \\(\\nu_{x'}(g^{-1}_{x'}f')=\n\\nu_{hx'}(g^{-1}_{x'}f')\\) pour chaque \\(h\\in G^\\psi\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">v) \\((g^{-1}f')(g_1x)=\\psi(g_1)(g^{-1}f')(x)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par conséquent on peut décomposer \\(X_x^{\\prime\\,g^{-1}f'}\\) comme la\nréunion de ses orbites et on obtient :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(4.9.1)\\qquad\n\\sum_{x'\\in X_x^{\\prime\\,g^{-1}f'}}(\\nu_{x'}(g^{-1}_{x'}f')-1)\n=\\sum_{x'\\in X_x^{\\prime\\,g^{-1}f'}/G^\\psi}\n\\frac{\\nu_{x'}(g^{-1}_{x'}f')-1}{\\operatorname{Card}(G^\\psi_{x'})}\n\\operatorname{Card}(G^\\psi),\n\\]\n\\[\n\\nu_{x'}(g^{-1}f')=\\nu((g^{-1}f')_{\\widehat{\\mathcal O}_{x'}}),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est-à-dire :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(4.9.2)\\qquad S_x(f',f,G,\\varphi)(g)=\n\\sum_{x'\\in X_x^{\\prime\\,g^{-1}f'}/G^\\psi}\n\\frac{\\nu_{x'}(g^{-1}f')-1}{\\operatorname{Card}(G^\\psi_{x'})}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et la proposition résulte de la proposition 4.6.</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-5",
+   "title": "5. Généralisation d'une formule de type Nielsen-Wecken. (cf. [1])",
+   "blocks": [
+    {
+     "id": "XII.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.5\">5. Généralisation d'une formule de type Nielsen-Wecken. <span style=\"font-weight:normal;\">(cf. [1])</span></h2>"
+    },
+    {
+     "id": "XII.5.1",
+     "type": "proposition",
+     "label": "5.1.",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XII.5.1\">\n<div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">5.1.</span></div>\n<div class=\"thm-body\"><p>Les hypothèses et les notations étant celles de 1, 2,\n3, 4, supposons en plus que \\(Y'\\) est une partie finie de \\(X'\\).</p>\n<p>Si \\(\\ell\\) est un nombre premier différent de la caractéristique de \\(k\\),\non a :</p>\n<p style=\"margin-left:2em;\">a) les valeurs de la fonction \\(\\varphi\\)-centrale</p>\n\\[\n\\sum_{x\\in Y^f}S_{x,\\ell}(f,f',G,\\varphi)\n\\]\n<p style=\"margin-left:2em;\">sont des entiers \\(\\ell\\)-adiques.</p>\n<p style=\"margin-left:2em;\">b) la formule suivante est vraie :</p>\n\\[\n(5.1.1)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}\n(f'_{\\mathcal H_{U',X'}^\\vee(\\ell)})\n=\\sum_{x\\in U^f}\\nu_x(f)\\operatorname{NW}^{G,\\varphi}_f(x)\n+\\sum_{x\\in Y^f}S_{x,\\ell}(f,f',G,\\varphi).\n\\]\n</div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Il est clair que si l'on prouve l'égalité b) en pensant\ntout comme fonctions à valeurs dans \\(\\mathbb Q_\\ell\\), il résulte déjà\nl'assertion de a) parce que \\(\\operatorname{NW}^{G,\\varphi}_f(x)\\),\n\\(\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}\n(f'_{\\mathcal H_{U',X'}^\\vee(\\ell)})\\) sont des fonctions à valeurs dans\n\\(\\mathbb Z_\\ell\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'abord on voit en réduisant modulo \\(\\ell^n\\) pour chaque \\(n\\geq1\\) et en\nutilisant (XI, 7.2.3.6) qu'on a pour chaque \\(g\\in G\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(5.2)\\qquad c^\\varphi(g)\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}\n(f'_{\\mathcal H_{U',X'}^\\vee(\\ell)})(g)\n=\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{X'}f')_{\\mathcal H_{U',X'}^\\vee(\\ell)}\n=\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{X'}f')_{\\mathcal H_{U',X'}(\\ell)}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le diagramme commutatif (1.3), dont les lignes sont exactes, nous donne\n(XI, §4) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(5.3)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{X'}f')_{\\mathcal H_{U',X'}(\\ell)}\n=\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{X'}f')_{R\\Gamma_{X'}(\\mathbb Z_{\\ell,X'})}\n-\\operatorname{Tr}_{\\mathbb Z_\\ell}^{*}(g^{-1}_{Y'}f'_{Y'})_{R\\Gamma_{Y'}(\\mathbb Z_{\\ell,Y'})}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les deux termes du deuxième membre de la relation (5.3) peuvent être\névalués grâce à la formule classique de Lefschetz (cf.  ). (En fait pour\nle dernier terme il s'agit d'une formule triviale de Lefschetz) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(5.4)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{X'}f')_{R\\Gamma_{X'}(\\mathbb Z_{\\ell,X'})}\n=\\sum_{x\\in X^f}\\ \\sum_{x'\\in X_x^{\\prime\\,g^{-1}_{x'}f'}}\n\\nu_{x'}(g^{-1}_{x'}f')\n\\]\n\\[\n(5.5)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{Y'}f'_{Y'})_{R\\Gamma_{Y'}(\\mathbb Z_{\\ell,Y'})}\n=\\text{nombre des points fixes de }g^{-1}_{Y'}f'_{Y'}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par conséquent</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n(5.6)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell}(g^{-1}_{X'}f')_{\\mathcal H_{U',X'}(\\ell)}\n={}&amp;\\sum_{x\\in U^f}\\ \\sum_{x'\\in X_x^{\\prime\\,g^{-1}_{x'}f'}}\n\\nu_{x'}(g^{-1}_{x'}f')\\\\\n&amp;-\\sum_{x\\in Y^f}\\ \\sum_{x'\\in X_x^{\\prime\\,g^{-1}_{x'}f'}}\n(1-\\nu_{x'}(g^{-1}_{x'}f'))\n\\end{aligned}\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais \\(x\\in U^f\\) étant donné, l'ensemble\n\\(X_x^{\\prime\\,g^{-1}_{x'}f'}\\) est non vide si et seulement si\n\\(\\operatorname{NW}^{G,\\varphi}_f(x)=1\\). Comme on a aussi :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(5.7)\\qquad \\operatorname{Card}X_x^{\\prime\\,g^{-1}_{x'}f'}=c^\\varphi(g),\n\\quad x\\in U,\n\\]\n\\[\n(5.8)\\qquad \\nu_{x'}(g^{-1}_{X'}f')=\\nu_x(f),\\quad x\\in U.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Les relations (5.2), (5.6) donnent :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n(5.9)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}\n(f'_{\\mathcal H_{U',X'}^\\vee(\\ell)})(g)\n={}&amp;\\sum_{x\\in U^f}\\nu_x(f)\\operatorname{NW}^{G,\\varphi}_f(x)(g)\\\\\n&amp;-\\sum_{x\\in Y^f}\\ \\sum_{x'\\in X_x^{\\prime\\,g^{-1}_{x'}f'}}\n\\frac{1-\\nu_{x'}(g^{-1}_{X'}f')}{c^\\varphi(g)}.\n\\end{aligned}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c'est-à-dire la formule à démontrer.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>5.10. Cas particuliers.</u>  a) <u>Le cas non-ramifié :</u>\n\\(Y'=\\varnothing\\), c'est-à-dire \\(Y=\\varnothing\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce cas la formule (5.1.1) devient :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(5.11)\\qquad\n\\operatorname{Tr}_{\\mathbb Z_\\ell[G],\\varphi}\n(f'_{\\mathcal H_{U',X'}^\\vee(\\ell)})\n=\\sum_{x\\in X^f}\\nu_x(f)\\operatorname{NW}^{G,\\varphi}_f(x).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) <u>Le cas des multiplicités 1 :</u>\n\\(\\nu_{x'}(g^{-1}_{X'}f')=1\\),\n\\(\\forall x'\\in Y'^{\\,g^{-1}_{Y'}f'_{Y'}}\\) et \\(\\forall g\\in G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce cas la formule 5.1.1 se réduit à la formule 5.11. Ce cas est en\nparticulier réalisé si l'on a : \\(\\dim X=1\\), \\(\\nu_x(f)=1\\) pour tout\n\\(y\\in Y\\).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "XII-6",
+   "title": "6. Application à une formule de Lefschetz.",
+   "blocks": [
+    {
+     "id": "XII.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.6\">6. Application à une formule de Lefschetz.</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>6.1.</u> Nous garderons les notations et les conditions du numéro\n1<sup class=\"footnote-ref\"><a id=\"XII-fn-XII-2ref\" href=\"#XII-fn-XII-2\">x)</a></sup>.\nSoient de plus \\(A\\) une \\(\\Lambda_n\\)-algèbre commutative noethérienne,\n\\(F\\) un faisceau (pour la topologie étale) constructible de \\(A\\)-modules\nparfaits sur \\(X\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu:f^*(F)\\longrightarrow F\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>un homomorphisme de faisceaux de \\(A\\)-modules.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient en particulier un endomorphisme de la paire \\((X,F)\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(u,f):(X,F)\\longrightarrow(X,F),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquence un endomorphisme de complexes de \\(A\\)-modules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nR\\Gamma_X(u,f):R\\Gamma_X(F)\\longrightarrow R\\Gamma_X(F).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le schéma \\(X\\) étant par hypothèse propre sur \\(k\\) et le faisceau \\(F\\)\nétant constructible et de torsion, le théorème de finitude (S.G.A. 4, XVII 5)\nnous assure que le complexe \\(R\\Gamma_X(F)\\) est un complexe parfait de\n\\(A\\)-modules. La trace \\(\\operatorname{Tr}_A(R\\Gamma_X(u,f))\\) est donc\ndéfinie</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Tr}_A(R\\Gamma_X(u,f))\\in A.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Notre but sera de donner, sous quelques hypothèses supplémentaires, une\nformule explicite de \\(\\operatorname{Tr}_A(R\\Gamma_X(u,f))\\) en termes\nd'invariants locaux associés aux points fixes de \\(f\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>6.2. Définition des termes locaux.</u> Supposons que \\(X'\\) est\nirréductible de dimension un et que la restriction du faisceau\n\\(F'=p^*(F)\\) à \\(U'\\) soit constante.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si le nombre des points fixes de \\(f'\\) est fini, hypothèse qui sera faite\ndans la suite, on peut toujours supposer qu'on a \\(X^f\\subset Y^f\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le faisceau \\(F'|_{U'}\\) est donc défini par un \\(A\\)-module \\(M\\) sur\nlequel \\(G\\) opère :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF'|_{U'}\\simeq M_{U'}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En fait si on désigne par \\(\\eta\\) (resp. \\(\\eta'\\)) le point générique de\n\\(X\\) (resp. \\(X'\\)) et par \\(\\bar\\eta\\) (resp. \\(\\bar\\eta'\\)) un point\ngéométrique sur \\(\\eta\\) (resp. \\(\\eta'\\)) on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np(\\eta')=\\eta,\\qquad F_{\\bar\\eta}\\simeq F'_{\\bar\\eta'}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le complexe \\(F'\\) est isomorphe à \\(M\\) et par conséquence \\(M\\) est un\n\\(A\\)-module parfait.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part si le morphisme \\(f'\\) n'est pas constant il laisse fixe le\npoint générique de \\(X'\\). Par conséquent le morphisme \\((p^*(u),f')\\) de la\npaire \\((X',F')\\) induit un morphisme sur la fibre \\(F'_{\\bar\\eta'}\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_{\\bar\\eta'}:F'_{\\bar\\eta'}\\longrightarrow F'_{\\bar\\eta'},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où évidemment un morphisme de \\(A\\)-modules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_M:M\\longrightarrow M.\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On voit aisément que la relation suivante est satisfaite</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.2.1)\\qquad u_M(\\varphi(g)m)=g u_M(m),\n\\quad\\forall m\\in M,\\quad\\forall g\\in G.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le dual \\(\\check M\\) de \\(M\\) par rapport à \\(A\\) est donc muni d'une\nstructure de (A[G])-module et d'un endomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_{\\check M}:\\check M\\longrightarrow\\check M,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que la relation suivante soit vraie :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_{\\check M}(gx)=\\varphi(g)u_{\\check M}(x),\n\\quad\\forall g\\in G,\\quad\\forall x\\in\\check M.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En plus \\(\\check M\\) est un \\(A\\)-module parfait et par conséquent la trace\n\\(\\operatorname{Tr}_A(g^{-1}u_{\\check M})\\) est définie pour chaque\n\\(g\\in G\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(x\\in X^f\\) un point fixe fermé de \\(f\\). Le morphisme \\(u\\) induit\nun endomorphisme du module \\(F_x\\), la fibre du faisceau \\(F\\) dans le point\n\\(x\\). (On identifie les points fermés de \\(X\\) avec les points de \\(X(k)\\)) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_x:F_x\\longrightarrow F_x.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La trace \\(\\operatorname{Tr}_A(u_x)\\) nous fournit un premier invariant\nlocal associé au point fixe \\(x\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On introduit un autre invariant local\n\\(\\alpha_x(f,u,f',G,\\varphi)\\), élément de l'anneau \\(A\\), par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.2.2)\\qquad\n\\alpha_x(f,u,f',G,\\varphi)=\n\\sum_{\\substack{g\\in G\\\\g\\notin G^\\varphi}}\nS_{x,\\ell^n}(f,f',G,\\varphi)(g)\n\\operatorname{Tr}_A(g^{-1}u_{\\check M}),\n\\]\n\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où la fonction</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nS_{x,\\ell^n}(f,f',G,\\varphi):G\\longrightarrow\\Lambda_n,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>s'obtient à partir de la fonction \\(i_\\ell\\circ S_x(f,f',G,\\varphi)\\)\n(cf. 4) par réduction modulo \\(\\ell^n\\mathbb Z_\\ell\\), c'est-à-dire :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nS_{x,\\ell^n}(f,f',G,\\varphi)(g)\n=(i_\\ell\\circ S_x(f,f',G,\\varphi))(g)\\bmod \\ell^n\\mathbb Z_\\ell.\n\\]\n\n</p>"
+    },
+    {
+     "id": "XII.6.3",
+     "type": "proposition",
+     "label": null,
+     "title": "6.3. Une formule de Lefschetz.",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"XII.6.3\">\n<div class=\"thm-head\"><span class=\"thm-name\">6.3. Une formule de Lefschetz.</span></div>\n<div class=\"thm-body\"><p>Sous les hypothèses et avec les notations de 5.1,\n6.1, 6.2, on a la formule :</p>\n\\[\n(6.3.1)\\qquad\n\\operatorname{Tr}_A(R\\Gamma_X(u,f))\n=\\sum_{x\\in X^f}\\tau_x(f,u,f',G,\\varphi),\n\\]\n<p><u>où on a posé</u></p>\n\\[\n(6.3.2)\\qquad\n\\tau_x(f,u,f',G,\\varphi)=\\operatorname{Tr}_A(u_x)\n-\\alpha_x(f,u,f',G,\\varphi).\n\\]</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Le sous-schéma \\(Y\\) étant stable par \\(f\\), le\nmorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(u,f):(X,F)\\longrightarrow(X,F)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>induit un endomorphisme de triangles distingués</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.3)\\qquad\n\\xymatrix@C=3.5em@R=2.5em{\nR\\Gamma_Y(F|Y)\\ar[r]\\ar@(ul,ur)[]^{R\\Gamma_Y(u|Y,f|Y)}&amp;\nR\\Gamma_X(F)\\ar[r]\\ar@(dr,ur)[]_{R\\Gamma_X(u,f)}&amp;\nR\\Gamma_X(F_{U,X})\\ar@/^1.2pc/[ll]\\ar@(dl,dr)[]_{R\\Gamma_X((u,f)_{U,X})}}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où la relation :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.4)\\qquad\n\\operatorname{Tr}_A(R\\Gamma_X(u,f))=\n\\operatorname{Tr}_A(R\\Gamma_X((u,f)_{U,X}))+\n\\operatorname{Tr}_A(R\\Gamma_Y(u|Y,f|Y)).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le dernier terme de la formule (6.3.4) peut s'expliciter grâce à la formule\nde Lefschetz élémentaire et au fait qu'on peut toujours supposer\n\\(X^f=Y^f\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.5)\\qquad\n\\operatorname{Tr}_A(R\\Gamma_Y(u|Y,f|Y))=\n\\sum_{x\\in X^f}\\operatorname{Tr}_A(u_x).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part, on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.6)\\qquad\nR\\Gamma_X((u,f)_{U,X})\\simeq\nR\\Gamma^G R\\Gamma_{X'}(u',f')_{U',X'},\\qquad (u'=p^*(u)),\n\\]\n\\[\n(6.3.7)\\qquad\nF_{U',X'}\\simeq\n\\Lambda_{n,U',X'}\\mathbin{\\overset L\\otimes}_{\\Lambda_n}M,\n\\quad\n(u',f')_{U',X'}=f'\\!{}^*_{\\Lambda_{n,U',X'}}\n\\mathbin{\\overset L\\otimes}_{\\Lambda_n}u_M,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où par la formule de Künneth :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.8)\\qquad\nR\\Gamma_{X'}(u',f')_{U',X'}\\simeq\nR\\Gamma_{X'}(f'\\!{}^*_{\\Lambda_{n,U',X'}})\n\\mathbin{\\overset L\\otimes}_{\\Lambda_n}u_M.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On conclut de (6.3.8) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.9)\\qquad\nR\\Gamma_{X'}((u',f')_{U',X'})^\\vee\\simeq\n\\bigl(R\\Gamma_{X'}(f'\\!{}^*_{\\Lambda_{n,U',X'}})^\\vee\n\\mathbin{\\overset L\\otimes}_{\\Lambda_n}A\\bigr)\n\\mathbin{\\overset L\\otimes}_A u_M^\\vee.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Grâce à la formule 6.3.6 on obtient :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.10)\\qquad\nR\\Gamma_X((u,f)_{U,X})=\nR\\Gamma_{X'}(f'\\!{}^*_{\\Lambda_{n,U',X'}})\n\\mathbin{\\overset L\\otimes}_{A[G]}u_M^\\vee,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>d'où compte tenu de la formule générale (cf. Exp. XI, 7.5.9) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.11)\\qquad\n\\operatorname{Tr}_A((u,f)_{U,X})=\n\\sum_{g\\in G/G^\\varphi}\n\\operatorname{Tr}_{\\Lambda_n[G],\\varphi}\n\\bigl(f'\\!{}^*_{H^\\vee_{\\Lambda_n,U',X'}}\\bigr)(g)\n\\operatorname{Tr}_A(g^{-1}u_M^\\vee).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Mais la trace\n\\(\\operatorname{Tr}_{\\Lambda_n[G],\\varphi}\n(f'\\!{}^*_{H^\\vee_{\\Lambda_n,U',X'}})\\)\nse calcule à l'aide de la formule de Nielsen-Wecken (cf. Proposition 5.1.b)),\névidemment en réduisant modulo \\(\\ell^n\\mathbb Z\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient compte tenu de la relation \\(X^f=Y^f\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.3.12)\\qquad\n\\operatorname{Tr}_{\\Lambda_n[G],\\varphi}\n\\bigl(f'\\!{}^*_{H^\\vee_{\\Lambda_n,U',X'}}\\bigr)(g)\n=\\sum_{x\\in X^f}S_{x,\\ell^n}(f,f',G,\\varphi)(g).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En combinant les relations 6.3.12, 6.3.11, 6.3.5, 6.3.4 on obtient la\nformule de l'énoncé.</p>"
+    },
+    {
+     "id": "XII.6.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XII.6.4\">6.4. <u>Remarques sur les termes locaux.</u></h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) Il est facile à voir que si \\(g\\in G\\), alors on a la relation :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.1)\\qquad\n\\alpha_x(f,u,g^{-1}f',G,\\varphi_g)=\n\\alpha_x(f,u,f',G,\\varphi)\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où on a posé</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.2)\\qquad\n\\varphi_g(\\xi)=(\\operatorname{int}_g\\circ\\varphi)(\\xi)\n=g^{-1}\\varphi(\\xi)g,\\quad\\forall\\xi\\in G.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La relation 6.4.1. permet de nous ramener toujours, quitte à remplacer\n\\(f'\\) par \\(g^{-1}f'\\) et \\(\\varphi\\) par \\(\\varphi_g\\) au cas où il existe\nau moins un point \\(x'\\in X_x^{f'}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) Soit \\(x'=X_x^{f'}\\) et \\(G_{x'}\\) la stabilisation du point \\(x'\\).\nÉvidemment \\(G_{x'}\\) est stable par \\(\\varphi\\) et on obtient donc un\nendomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\varphi_{x'}=\\varphi|G_{x'}:G_{x'}\\longrightarrow G_{x'}.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Désignons par \\(X'/G_{x'}\\) le schéma quotient obtenu à partir de \\(X'\\)\npar la relation d'équivalence définie par \\(G_{x'}\\), par \\(F'/G_{x'}\\)\nl'endomorphisme de \\(X'/G_{x'}\\) obtenu à partir de l'endomorphisme \\(f'\\) de\n\\(X'\\) par la même relation d'équivalence et par \\(x'\\) la classe du point\n\\(x'\\) modulo cette relation d'équivalence.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La projection canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np:X'\\longrightarrow X'/G=X\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>se factorise de la manière suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np:X'\\xrightarrow{p_1}X'/G_{x'}\\xrightarrow{p_2}X=X'/G.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En prenant l'image inverse par \\(p_2\\) de l'homomorphisme \\(u\\) on obtient\nun homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nv=p_2(u):(f'/G_{x'})^*(p_2^*(F))\\longrightarrow p_2^*(F).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est facile à voir qu'on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.3)\\qquad\n\\alpha_{x'}(f'/G_{x'},v,f',G_{x'},\\varphi_{x'})=\n\\alpha_x(f,u,f',G,\\varphi)\\quad(x=p(x')).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut donc se réduire toujours au cas « totalement ramifié » c'est-à-dire\nau cas quand la fibre du point \\(x\\) se réduit à un point.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) <u>Le cas « modérément ramifié ».</u> Supposons qu'il existe\n\\(x'\\in p^{-1}(x)\\), tel qu'on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'(x')=x',\\qquad(p(x')=x),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>cas auquel on peut toujours se ramener (cf. le cas a)), et que l'ordre du\ngroupe \\(G_x\\) est premier avec la caractéristique du corps \\(k\\). Dans ce\ncas on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.4)\\qquad\n\\alpha_x(f,u,f',G,\\varphi)=\nS_{x,\\ell^n}(f,f',G,\\varphi)(e)\\operatorname{Tr}_A(u_M^\\vee).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En tenant compte du cas b) on peut supposer que \\(G=G_{x'}\\). La formule\n(6.4.4) résulte alors du lemme suivant :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>La projection canonique</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np:X'\\longrightarrow X'/G=X\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>se factorise de la manière suivante :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\np:X'\\xrightarrow{p_1}X'/G_{x'}\\xrightarrow{p_2}X=X'/G.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En prenant l'image inverse par \\(p_2\\) de l'homomorphisme \\(u\\) on obtient\nun homomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nv=p_2(u):(f'/G_{x'})^*(p_2^*(F))\\longrightarrow p_2^*(F).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il est facile à voir qu'on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.3)\\qquad\n\\alpha_{x'}(f'/G_{x'},v,f',G_{x'},\\varphi_{x'})=\n\\alpha_x(f,u,f',G,\\varphi)\\quad(x=p(x')).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On peut donc se réduire toujours au cas « totalement ramifié » c'est-à-dire\nau cas quand la fibre du point \\(x\\) se réduit à un point.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) <u>Le cas « modérément ramifié ».</u> Supposons qu'il existe\n\\(x'\\in p^{-1}(x)\\), tel qu'on a</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'(x')=x',\\qquad(p(x')=x),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>cas auquel on peut toujours se ramener (cf. le cas a)), et que l'ordre du\ngroupe \\(G_x\\) est premier avec la caractéristique du corps \\(k\\). Dans ce\ncas on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.4)\\qquad\n\\alpha_x(f,u,f',G,\\varphi)=\nS_{x,\\ell^n}(f,f',G,\\varphi)(e)\\operatorname{Tr}_A(u_M^\\vee).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En tenant compte du cas b) on peut supposer que \\(G=G_{x'}\\). La formule\n(6.4.4) résulte alors du lemme suivant :</p>"
+    },
+    {
+     "id": "XII.6.4.5",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemme 6.4.5.",
+     "html": "<div class=\"thm lemma\" id=\"XII.6.4.5\">\n<div class=\"thm-head\"><span class=\"thm-name\">Lemme 6.4.5.</span> <u>Si les\nrelations suivantes sont vraies :</u></div>\n<div class=\"thm-body\">\n\\[\n\\nu_{x'}(f')&gt;1,\n\\]\n\\[\n\\nu_{x'}(g^{-1}f')&gt;1,\n\\]\n<p><u>alors \\(g\\) appartient au premier groupe de ramification \\(G_1\\)\n(cf. 4.7) :</u></p>\n\\[\ng\\in G_1,\n\\]\n<p><u>c'est-à-dire \\(g\\) induit l'identité sur l'espace vectoriel\n\\(\\mathfrak m_{x'}/\\mathfrak m_{x'}^2\\).</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Soit \\(\\widehat{\\mathcal O}_{x'}=k[[T]]\\).\nL'automorphisme de \\(\\mathfrak m/\\mathfrak m^2\\) induit par \\(g^{-1}\\) est\ndéterminé par une racine \\(\\varepsilon(g^{-1})\\in k\\) de l'unité par la\ncondition</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ng^{-1}T=\\varepsilon(g^{-1})T\\pmod {\\mathfrak m^2},\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\mathfrak m\\) est l'idéal maximal de l'anneau \\(k[[T]]\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>D'autre part l'hypothèse \\(\\nu_{x'}(f')&gt;1\\) nous donne</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf'(T)=T+a_\\nu T^\\nu+a_{\\nu+1}T^{\\nu+1}+\\cdots,\\qquad\\nu\\geq2.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Par conséquence</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\ng^{-1}f'(T)=\\varepsilon(g^{-1})T+b_\\nu T^\\nu+\nb_{\\nu+1}T^{\\nu+1}+\\cdots,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et l'hypothèse \\(\\nu_{x'}(g^{-1}f')&gt;1\\) implique\n\\(\\varepsilon(g^{-1})=1\\), c.q.f.d.</p>"
+    },
+    {
+     "id": "XII.6.4.d",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"XII.6.4.d\"><u>d) Le cas du faisceau \\(F\\) qui ne se ramifie pas dans les points fixes\nde l'endomorphisme \\(f\\).</u></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Dans ce cas le terme local \\(\\tau_x(f,u,f',G,\\varphi)\\) est donné par la formule :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.6)\\qquad \\tau_x(f,u,f',G,\\varphi)=\\nu_x(f)\\operatorname{Tr}_A(u_x),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et par conséquent il ne dépend que de la paire \\((f,u)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet on a dans ce cas :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.7)\\qquad S'_{x,\\ell^n}(f,f';G,\\varphi)(g)=\n\\begin{cases}\n0 &amp; \\begin{array}{l}\\text{si il existe }x'\\in X'\\text{ tel qu'on a }(g^{-1}f')(x')=x'\\text{ ou}\\\\\n\\text{équivalent si la classe de }\\varphi\\text{-conjugaison de }g\\text{ coïncide avec}\\\\\n\\text{la classe }NW_f^{G,\\varphi}(x)\\text{ (cf. 3) ;}\\end{array}\\\\[4pt]\n(\\nu_x(f)-1) &amp; \\text{sinon.}\n\\end{cases}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Il en résulte en particulier qu'on a :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(6.4.8)\\qquad S_{x,\\ell^n}(f,f';G,\\varphi)(g)=0\n\\quad\\text{si}\\quad g\\notin NW_f^{G,\\varphi}(x).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On trouve donc :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\begin{aligned}\n(6.4.9)\\qquad \\tau_x(f,u,f',G,\\varphi)\n&amp;=\\nu_x(f)\\operatorname{Tr}_A(g^{-1}u_M^\\vee)\\\\\n&amp;=\\nu_x(f)\\operatorname{Tr}_A(g^{-1}u')_{x'}\\\\\n&amp;=\\nu_x(f)\\operatorname{Tr}_A(u_x).\n\\end{aligned}\n\\]\n\n</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XII-fn-XII-2",
+     "number": "x)",
+     "html": "\\(X^f\\) désigne l'ensemble des points fixes fermés de \\(X\\)."
+    }
+   ]
+  },
+  {
+   "id": "XII-7",
+   "title": "7. Commentaires sur les conditions de validité de la formule de Lefschetz.",
+   "blocks": [
+    {
+     "id": "XII.7",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"XII.7\">7. <u>Commentaires sur les conditions de validité de la formule de Lefschetz.</u></h2>"
+    },
+    {
+     "id": "XII.7.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"XII.7.1\">7.1.</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Bien entendu, en pratique, on part d'un schéma \\(X\\) propre sur \\(k\\) et\nd'un endomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(u,f):(X,F)\\longrightarrow(X,F),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">— \\(F\\) est un faisceau constructible de \\(A\\)-modules,</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"margin-left:2em;\">— l'ensemble \\(X^f\\) des points fixes de \\(f\\) est fini.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Le problème est de définir sous ces conditions des termes locaux\n\\(\\tau_x(u,f)\\), \\(x\\in X^f\\) tels que</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(*)\\qquad \\operatorname{Tr}_A(R\\Gamma_X(u,f))=\\sum_{x\\in X^f}\\tau_x(u,f).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En utilisant les deux théorèmes de dualité, globale et locale,\nVerdier arrive à définir les termes \\(\\tau_x(u,f)\\) tel que la formule (*) soit\nvraie (cf. III). Malheureusement la détermination explicite des \\(\\tau_x(u,f)\\),\ndéfinis par Verdier, en termes d'invariants locaux connus, semble difficile,\nd'où l'intérêt des définitions proposées en chapitre précédent.<sup class=\"footnote-ref\"><a id=\"XII-fn-XII-3ref\" href=\"#XII-fn-XII-3\">(*)</a></sup></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En revanche ces dernières définitions supposent des hypothèses supplémentaires\nsur \\(F\\), \\(f\\) et \\(u\\), à savoir l'existence de\n\\(U,U',G,f',\\varphi\\) ayant les propriétés exigées dans 5.1, 6.1, 6.2.</p>"
+    },
+    {
+     "id": "XII.7.2",
+     "type": "proposition",
+     "label": null,
+     "title": "Proposition 7.2.",
+     "html": "<div class=\"thm proposition\" id=\"XII.7.2\">\n<div class=\"thm-head\"><span class=\"thm-name\">Proposition 7.2.</span> <u>Soient\n\\(X\\) un schéma lisse de dimension 1, \\(F\\) constructible et</u></div>\n<div class=\"thm-body\">\n\\[\n(u,f):(X,F)\\longrightarrow(X,F)\n\\]\n<p><u>un endomorphisme tel que le morphisme de faisceaux</u></p>\n\\[\nu:f^*(F)\\longrightarrow F\n\\]\n<p><u>soit un isomorphisme.</u></p>\n<p><u>Sous ces conditions il existe \\(U,U',G,f',\\varphi\\) satisfaisant aux conditions\nde 5.1, 6.1, 6.2.</u></p>\n</div></div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Démonstration.</u> Soit \\(U\\) le plus grand ouvert de \\(X\\) tel que \\(F\\) soit\nlocalement constant dans \\(U\\) et désignons par \\(Y\\) son complémentaire.\nL'ensemble \\(Y\\) est stable par \\(f\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf(Y)\\subset Y.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En effet supposons par l'absurde qu'il existe \\(y\\in Y\\) tel que\n\\(f(y)\\in U\\). Le faisceau \\(f^*(F)\\) est alors localement constant\nau voisinage de \\(y\\) et en utilisant l'isomorphisme \\(u\\) il résulte que \\(F\\)\nest localement constant au voisinage de \\(y\\), ce qui est absurde.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(f\\) est constant la démonstration de la proposition est triviale. On\nva donc supposer que \\(f\\) <u>n'est pas constant</u>. Si \\(\\eta\\) est le point générique\nde \\(X\\) on aura donc \\(f(\\eta)=\\eta\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soient \\(i_\\eta:\\operatorname{Spec}(k(\\eta))\\longrightarrow X\\) l'inclusion canonique,\n\\(F_\\eta=i_\\eta^*(F)\\) et</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_\\eta:f_\\eta^*(F_\\eta)\\longrightarrow F_\\eta\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le morphisme (en fait l'isomorphisme) de faisceaux induit par \\(u\\),\n\\(f_\\eta\\) étant bien-entendu la restriction de \\(f\\) à\n\\(\\operatorname{Spec}(k(\\eta))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>En traduisant tout en termes de \\(H\\)-modules :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH=\\operatorname{Gal}(k(\\eta)_s/k(\\eta)),\\qquad\nk(\\eta)_s=\\text{une clôture séparable de }k(\\eta),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>on obtient les isomorphismes</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH\\xrightarrow{\\ \\psi\\ }H,\n\\qquad\n\\overline F_\\eta\\xrightarrow{\\ u_{\\overline\\eta}\\ }\\overline F_\\eta,\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>où \\(\\overline F_\\eta\\) a une structure de \\(H\\)-module et la relation suivante est vérifiée :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nu_{\\overline\\eta}(gx)=\\psi(g)u_{\\overline\\eta}x,\n\\qquad g\\in H,\\quad x\\in\\overline F_\\eta.\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(H_1\\) est le plus grand sous-groupe distingué de \\(H\\) d'indice fini\ntel que \\(\\overline F_\\eta^{H_1}=\\overline F_\\eta\\), on a \\(\\psi(H_1)=H_1\\). Un tel sous-groupe existe\nparce que le faisceau \\(F_\\eta\\) est constructible.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Soit \\(K\\supset k(\\eta)\\) l'extension galoisienne de \\(k(\\eta)\\) correspondant\nau sous-groupe \\(H_1\\) et \\(X'\\) la normalisée de \\(X\\) dans \\(K\\).\nÉvidemment on peut définir un endomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nf':X'\\longrightarrow X'\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>et un endomorphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nH/H_1=G\\xrightarrow{\\ \\varphi\\ }G\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>tel que le système \\(U,U',f',G,\\varphi\\) satisfassent aux conditions voulues.</p>"
+    },
+    {
+     "id": "XII.7.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"XII.7.3\"><u>Exemple 7.3.</u> Soient \\(X\\) un préschéma défini sur le corps fini\n\\(\\mathbb F_p\\), \\(p\\) étant un nombre premier, \\(\\operatorname{fr}_X:X\\longrightarrow X\\)\nl'endomorphisme de Frobenius (cf. XIV) et un faisceau de \\(\\Lambda\\)-modules sur \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(Y,S\\) sont des schémas sur \\(\\mathbb F_p\\) et si \\(Y\\) est un schéma sur \\(S\\), nous\ndésignons par</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n\\operatorname{Fr}_{Y/S}:Y\\longrightarrow Y^{(p/S)}\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>le morphisme de Frobenius relatif (cf. XIV 2).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>On obtient un morphisme de faisceaux sur \\(X_{\\mathrm{et}}\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\operatorname{fr}_X)_*(F)\\longrightarrow F\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>en posant pour tout \\(X\\)-préschéma étale \\(U\\) :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(\\operatorname{fr}_X)_*(F)(U)=F(\\operatorname{fr}_X^{-1}(U))\n=F(U^{(p/X)})\\xrightarrow{\\ F(\\operatorname{Fr}_{U/X})\\ }F(U).\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Ce morphisme est en fait un isomorphisme. Son inverse :</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF(\\operatorname{Fr}_{/X})^{-1}:F\\longrightarrow(\\operatorname{fr}_X)_*(F),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>définit par adjonction un morphisme</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\nF_{\\operatorname{Fr}/X}^*:(\\operatorname{fr}_X)^*(F)\\longrightarrow F\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>qui est un isomorphisme.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Si \\(X\\) est en particulier lisse de dimension 1 et \\(F\\) constructible, la paire</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\n\\[\n(F_{\\operatorname{Fr}/X}^*,\\operatorname{fr}_X):(X,F)\\longrightarrow(X,F),\n\\]\n</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>est donc justiciable de la proposition 7.2.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1]  Wecken, F., Fixpunktklassen I, Math. Ann. 117 (1941) p. 659–671,<br>\n<span style=\"margin-left:8em;\">Fixpunktklassen II, III, Math. Ann. 118 (1942–1943),</span><br>\n<span style=\"margin-left:8em;\">p. 216–234 et p. 544–577.</span></p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "XII-fn-XII-1",
+     "number": "(*)",
+     "html": "cf. III B 5.12."
+    },
+    {
+     "id": "XII-fn-XII-3",
+     "number": "(*)",
+     "html": "Voir cependant III B pour la comparaison des termes locaux de 6.3.1\naux termes locaux de Verdier."
+    }
+   ]
+  }
+ ],
+ "alias": "EXPOSÉ",
+ "author": "par A. Grothendieck rédigé par I. BUCUR"
+}

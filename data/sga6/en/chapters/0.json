@@ -1,0 +1,2056 @@
+{
+ "chapter_id": "0",
+ "title": "EXPOSÉ 0 SKETCH OF A PROGRAM FOR A THEORY OF INTERSECTIONS ON GENERAL SCHEMES",
+ "number": "0",
+ "pages": [
+  {
+   "id": "0",
+   "title": "EXPOSÉ 0 SKETCH OF A PROGRAM FOR A THEORY OF INTERSECTIONS ON GENERAL SCHEMES",
+   "blocks": [
+    {
+     "id": "0",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h1 id=\"0\">EXPOSÉ 0<br>SKETCH OF A PROGRAM FOR A THEORY OF INTERSECTIONS ON GENERAL SCHEMES<span class=\"author\">by A. Grothendieck</span></h1>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The present exposé is of an introductory nature, and reading it is not\nlogically indispensable for the study of the Seminar. It is addressed more\nparticularly to readers familiar with the provisional version of the Riemann-Roch\ntheorem, as it is set out in the report of Borel-Serre\n\\([2]\\) or in the report of Grothendieck already mentioned in the Introduction\n(cited \\([\\mathrm{RRR}]\\) in what follows), which is reproduced as an appendix at\nthe end of the present exposé.</p>"
+    },
+    {
+     "id": "0.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.1\"><strong>1.</strong> Let us recall the Riemann-Roch formula for a proper morphism\n\\[f\\colon X \\to Y\\]\nof schemes quasi-projective and smooth over a field \\(k\\), and a coherent\nsheaf \\(F\\) on \\(X\\), whose class in the group \\(K(X)\\) of classes of\ncoherent sheaves on \\(X\\) is denoted by \\(c\\ell(F)\\):\n\\[\\operatorname{Todd}(T_Y)\\, \\operatorname{ch}_Y(f_*(c\\ell(F))) = f_*(\\operatorname{Todd}(T_X)\\, \\operatorname{ch}_X(F)) \\tag{1.1}\\]\nThis formula is valid in \\(A(Y)\\otimes_{\\mathbb{Z}}\\mathbb{Q}\\), where \\(A(Y)\\) is the Chow ring of \\(Y\\),\nthe \\(f_*\\) of the right-hand side being deduced by tensoring with \\(\\mathbb{Q}\\) from the \"direct image of cycles\" homomorphism\n\\[f_*\\colon A(X) \\to A(Y) ,\\]\nthat of the left-hand side being the Euler-Poincaré characteristic of \\(F\\) relative\nto \\(f\\):\n\\[f_*(c\\ell(F)) = \\sum_i (-1)^i c\\ell(R^i f_*(F)) ;\\]\n\\(\\operatorname{ch}_X\\), \\(\\operatorname{ch}_Y\\) denote the Chern characters on \\(X\\) resp. on \\(Y\\), and \\(T_X,T_Y\\)\nthe tangent bundles of \\(X\\) resp. of \\(Y\\). As is well known, \\(\\operatorname{Todd}(-)\\) and \\(\\operatorname{ch}(-)\\) are\nuniversal polynomials with coefficients in \\(\\mathbb{Q}\\) in the Chern classes of\nthe argument. The constant term of \\(\\operatorname{Todd}(-)\\) being \\(1\\), it is an invertible element\nfor every value of the argument, so that formula (1.1) takes,\nafter multiplication by \\(\\operatorname{Todd}(T_Y)^{-1}\\), the equivalent form, more convenient for\nour purpose\n\\[\\operatorname{ch}_Y(f_*(c\\ell(F))) = f_*(\\operatorname{Todd}(T_f)\\cdot\\operatorname{ch}_X(F)) , \\tag{1.2}\\]\nwhere we have set\n\\[T_f = T_X - f^*(T_Y) \\in K(X) , \\tag{1.3}\\]\nso that \\(T_f\\) plays the role of a <u>virtual relative tangent bundle</u> of \\(X\\) over\n\\(Y\\). In the case where the morphism \\(f\\) is smooth (i.e. with tangent map\neverywhere surjective), we have simply\n\\[T_f = T_{X/Y} \\quad \\text{(fibré tangent le long des fibres)} ,\\]\nwhile in the case where \\(f\\colon X \\to Y\\) is an immersion, one finds\n\\[T_f = -\\check{N}_{X/Y} ,\\]\nwhere \\(\\check{N}_{X/Y}\\) denotes the normal sheaf of \\(X\\) in \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One of the principal aims of the Seminar is to generalize (1.2) simultaneously\nin two directions:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">a)</span> To get rid of the hypothesis of the existence of a base field \\(k\\).</li>\n<li><span class=\"item-label\">b)</span> To replace the regularity hypotheses on \\(Y,X\\) by a hypothesis\nof \"local regularity\" on \\(f\\).</li>\n</ol>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, along the way we shall also concern ourselves with the problem:</p>"
+    },
+    {
+     "id": null,
+     "type": "list",
+     "label": null,
+     "title": null,
+     "html": "<ol class=\"enumerate\">\n<li><span class=\"item-label\">c)</span> To eliminate the quasi-projectivity hypotheses which, in the absence\nof a base field, are expressed by the existence of ample invertible Modules\non \\(X\\) and on \\(Y\\).</li>\n</ol>"
+    },
+    {
+     "id": "0.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.2\"><strong>2.</strong> Let us first examine generalization a), while however keeping the hypotheses\nof regularity and of existence of ample invertible Modules on \\(X\\)\nand on \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The definition of \\(K(X),K(Y)\\) and of the homomorphism \\(f_*\\colon K(X) \\to K(Y)\\)\nthen offers no new problem, thanks to the fact that \\(X\\) and \\(Y\\) are regular.\nThe most natural route to giving a meaning to (1.2) thus seems\nto consist in the definition of <u>Chow rings</u> \\(A(X),A(Y)\\) and of a homomorphism\nof groups\n\\[f_*\\colon A(X) \\to A(Y) ,\\]\nin the establishment of a theory of Chern classes, providing maps\n\\[c_i\\colon K(X) \\to A(X) ,\\]\nand likewise for \\(Y\\), and finally in the description of a virtual relative\ntangent bundle element\n\\[T_f \\in K(X) .\\]</p>"
+    },
+    {
+     "id": "0.2.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.2.1\"><strong>2.1</strong> As for the latter, a definition presents itself fairly\nobviously. One uses the fact that the morphism \\(f\\), thanks to the hypothesis\nof the existence of an ample invertible Module on \\(X\\) and on \\(Y\\), can be factored\nas\n\\[X \\xrightarrow{\\ i\\ } X' \\xrightarrow{\\ f'\\ } Y , \\tag{2.1}\\]\nwhere \\(i\\) is a closed immersion, and \\(f'\\) a smooth morphism; for example one\nmay take \\(X' = \\mathbb{P}^r_Y\\) for suitable \\(r\\). One then sets\n\\[\\check{T}_f = c\\ell(\\Omega^1_{X'/Y}) - c\\ell(N_{X/X'}) , \\tag{2.2}\\]\nwhere \\(\\Omega^1_{X'/Y}\\) is the locally free Module of relative \\(1\\)-differentials of\n\\(X'\\) over \\(Y\\) (or relative cotangent Module of \\(X'\\) over \\(Y\\)), and \\(N_{X/X'}\\) the conormal\nModule of \\(X\\) in \\(X'\\), equal by definition to \\(J/J^2\\), where \\(J\\) is the Ideal on \\(X'\\) defining\nthe closed subscheme \\(X\\); as \\(X\\) and \\(X'\\) are regular, one concludes\nmoreover that \\(N_{X/X'}\\) is also locally free. Finally \\(\\check{T}_f\\) denotes\nthe dual of \\(T_f\\). One verifies without difficulty (Exp VIII) that the element \\(T_f\\) defined\nby (2.1) does not depend on the chosen factorization of \\(f\\).</p>"
+    },
+    {
+     "id": "0.2.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.2.2\"><strong>2.2</strong> As for a definition, under the conditions envisaged, of a Chow\nring and of a corresponding theory of Chern classes, although it\nis plausible that such a theory should admit a development on the model\nof the one already known for smooth quasi-projective algebraic schemes,\nit seems that this work has not been done at the present time, and a\nfortiori has not been undertaken in the Seminar. One introduces instead\nanother ring, which will play a role analogous to that of the Chow ring, and\nwhose tensor product with \\(\\mathbb{Q}\\) is indeed isomorphic to \\(A(X)\\otimes_{\\mathbb{Z}}\\mathbb{Q}\\) in\nthe case where \\(X\\) is quasi-projective and smooth over a field \\(k\\). This ring is\nthe graded ring associated to \\(K(X)\\), for a suitable filtration of this ring.\nA first natural filtration of \\(K(X)\\), which is the one envisaged in\n\\([\\mathrm{RRR}]\\), is the \"<u>topological filtration</u>\" by the codimension of the support of\ncoherent sheaves, \\(\\operatorname{Filt}^i_{\\mathrm{top}} K(X)\\) being generated by the \\(c\\ell(F)\\) with \\(F\\) coherent\nand \\(\\operatorname{codim}(\\operatorname{supp} F) \\geq i\\). A first question is that of the compatibility\nof this filtration with the ring structure, a question resolved in\n\\([\\mathrm{RRR}]\\), in the case \\(X\\) smooth over a field \\(k\\), thanks to Chow's \"moving lemma\".\nThis point granted, one thus finds an associated graded ring, which we shall denote\nhere \\(\\operatorname{Gr}'_{\\mathrm{top}}(X)\\). In \\([\\mathrm{RRR}]\\) one defines a surjective ring homomorphism\n\\[\\delta\\colon A(X) \\to \\operatorname{Gr}'_{\\mathrm{top}}(X) ,\\]\n(transforming the class of a prime cycle \\(Z\\) into \\(c\\ell(\\mathcal{O}_Z)\\),) whose kernel\nturns out (Exp. XIV 4.2) to be a torsion subgroup. Moreover,\none shows in \\([\\mathrm{RRR}]\\) how the images in \\(\\operatorname{Gr}'_{\\mathrm{top}}(X)\\) of the Chern classes\n\\(c_i(F)\\) can be computed directly in terms of \\(c\\ell(F) \\in K(X)\\) and of the exterior\npower operations \\(\\lambda^i\\) in \\(K(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This shows that, for \\(X\\) a regular noetherian scheme equipped with an ample\ninvertible Module, the ring \\(\\operatorname{Gr}'_{\\mathrm{top}}(X)\\) is a convenient substitute for the hypothetical\nChow ring \\(A(X)\\); it moreover has the advantage over the latter that it is\ndirectly in this ring that certain computations of \\([\\mathrm{RRR}]\\) are carried out, leading\nto important formulas which even for \\(X\\) projective and smooth over a field are not established at the present time in\n\\(A(X)\\) itself (Exp. XIV, 4.3 and 4.4). To justify this point of view entirely,\none would however have to solve the problem pointed out above of the\ncompatibility of the topological filtration of \\(K(X)\\) with its ring structure,\na problem which seems essentially tied to Chow's \"moving lemma\", which\nitself is the essential technical ingredient of the theory of the Chow\nring and which we have claimed to be able to avoid.</p>"
+    },
+    {
+     "id": "0.2.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.2.3\"><strong>2.3</strong> To avoid this problem, one equips \\(K(X)\\) with a second filtration,\nfiner than the topological filtration, and which can be described in purely\nalgebraic terms starting from the structure of augmented \\(\\lambda\\)-ring on \\(K(X)\\).\nThe definition of this filtration is suggested by the expression given in\n\\([\\mathrm{RRR}]\\) for the Chern classes of a \\(x \\in K(X)\\) in \\(\\operatorname{Gr}'_{\\mathrm{top}}(X)\\),\n\\[c_i(x) = \\gamma^i(x - \\varepsilon(x)) \\bmod \\operatorname{Filt}^{i+1}_{\\mathrm{top}} K(X) , \\tag{2.3}\\]\nwhere \\(\\gamma^i\\) denotes a certain linear combination of the \\(\\lambda^j\\) \\((j \\leq i)\\) made explicit in\nloc. cit., \\(\\varepsilon\\) being the augmentation. One shows that \\(\\gamma^i(x - \\varepsilon(x))\\) is indeed of\ntopological filtration \\(\\geq i\\), which gives a meaning to formula (2.3). One then\ndefines the <u>\\(\\lambda\\)-filtration</u> of \\(K(X)\\) by the ideals \\(\\operatorname{Filt}^i K(X)\\), where \\(\\operatorname{Filt}^i K(X)\\)\nis formed by the sums of expressions of the form\n\\[\\gamma^{i_1}(x_1 - \\varepsilon(x_1)) \\cdots \\gamma^{i_k}(x_k - \\varepsilon(x_k)) , \\quad i_1 + \\cdots + i_k \\geq i .\\]\nThe graded ring associated to this filtration will be denoted \\(\\operatorname{Gr}'(X)\\), and it is this ring\nwhich will replace the Chow ring of \\(X\\) in the Seminar. One can moreover\nshow that in the case envisaged here the canonical homomorphism\n\\[\\operatorname{Gr}'(X) \\to \\operatorname{Gr}'_{\\mathrm{top}}(X) \\tag{2.4}\\]\nis an isomorphism modulo torsion, which justifies the point of view according to\nwhich this ring tensored with \\(\\mathbb{Q}\\) can play in every respect the same role\nas the Chow ring tensored with \\(\\mathbb{Q}\\). On the other hand, we have done exactly\nwhat was needed for formula (2.3) (where one replaces \\(\\operatorname{Filt}^i_{\\mathrm{top}}\\) by \\(\\operatorname{Filt}^i\\))\nto define a theory of Chern classes with values in \\(\\operatorname{Gr}'(X)\\), from which the\nChern classes in \\(\\operatorname{Gr}'_{\\mathrm{top}}(X)\\) are deduced by means of the homomorphism (2.4).\nOne shows (Exp.V), thanks to the fact (Exp.VI) that \\(K(X)\\) is a \\(\\lambda\\)-ring which is <u>special</u>\nin the sense of \\([\\mathrm{RRR}]\\) (i.e. a \\(\\lambda\\)-ring in the sense of Exp.V), that this notion of Chern\nclass satisfies all the usual formal properties, reviewed\nin \\([\\mathrm{RRR}]\\).</p>"
+    },
+    {
+     "id": "0.2.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.2.4\"><strong>2.4</strong> One will note a very appreciable advantage of the definition of \\(\\operatorname{Gr}'(X)\\) over\nthat of \\(A(X)\\) and \\(\\operatorname{Gr}'_{\\mathrm{top}}(X)\\), namely that it keeps a meaning for an absolutely\narbitrary scheme \\(X\\), and more generally for an arbitrary locally ringed\ntopos \\(X\\), by then taking for \\(K(X)\\) the group of classes constructed with\nthe locally free Modules on \\(X\\), which is again an augmented \\(\\lambda\\)-ring,\nhence equipped with a corresponding filtration, allowing one to define an associated\ngraded ring \\(\\operatorname{Gr}'(X)\\). As the price of this generality, one must however remark\nthat when one is not willing to neglect torsion phenomena, i.e. to\ntensor with \\(\\mathbb{Q}\\), the properties of \\(\\operatorname{Gr}'(X)\\) are less satisfactory in various\nrespects than those of its two competitors (Exp.XIV n° 4). Thus,\nassuming again that \\(f\\colon X \\to Y\\) is a proper morphism of regular noetherian schemes\nequipped with ample invertible Modules, it is not true in general\nthat the homomorphism \\(f_*\\colon K(X) \\to K(Y)\\) maps \\(\\operatorname{Filt}^i K(X)\\) into \\(\\operatorname{Filt}^{i-d} K(Y)\\), where\n\\(d\\) is the relative dimension of \\(X\\) over \\(Y\\), and consequently defines, by passage to the\nassociated graded rings, a homomorphism of degree \\(-d\\) from \\(\\operatorname{Gr}'(X)\\) to \\(\\operatorname{Gr}(Y)\\). However,\none can prove (Exp.VII) that this is the case provided one tensors\nwith \\(\\mathbb{Q}\\), so that one obtains a homomorphism of degree \\(-d\\)\n\\[f_*\\colon \\operatorname{Gr}'(X)_{\\mathbb{Q}} \\to \\operatorname{Gr}'(Y)_{\\mathbb{Q}} , \\tag{2.5}\\]\nplaying the role of the \"direct image of cycles\" homomorphism \\(A(X) \\to A(Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This granted, we see then that we are in possession of all the\nstructural elements needed to give a meaning to formula (1.2) when one does\nnot postulate the existence of a base field, \\(f\\colon X \\to Y\\) being a proper morphism\nof regular noetherian schemes admitting ample invertible Modules.</p>"
+    },
+    {
+     "id": "0.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.3\"><strong>3.</strong> Let us now show how one can still give a meaning to formula\n(1.2) when one abandons the regularity hypothesis made on \\(X,Y\\), replacing\nit by a hypothesis of a local nature on the morphism \\(f\\), which we\nshall make precise.</p>"
+    },
+    {
+     "id": "0.3.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.3.1\"><strong>3.1</strong> A first difficulty comes from the fact that the observation which had\nserved as the starting point of the theory \\([\\mathrm{RRR}]\\), namely that the group \\(K(X)\\) of\nclasses of sheaves on \\(X\\) is the same, whether one defines it in terms of coherent\nsheaves or in terms of locally free sheaves, is tied in an essential\nway to the regularity hypothesis on \\(X\\). In the case where \\(X\\) is a\ngeneral scheme (say, for simplicity), it is appropriate to distinguish between these\ntwo groups, which we shall denote respectively \\(K_{\\bullet}(X)\\) and \\(K'(X)\\), the first\nhaving a covariant character in \\(X\\) for proper morphisms, the second a\ncontravariant character in \\(X\\) for arbitrary morphisms. One will note\nthat \\(K'(X)\\) is naturally equipped with a ring structure (and even with an\naugmented \\(\\lambda\\)-ring structure), whereas on \\(K_{\\bullet}(X)\\) there is in general no longer a\nring structure, but only a module structure over \\(K'(X)\\). The homomorphism\n\\(x \\mapsto x\\cdot c\\ell(\\mathcal{O}_X)\\) (where \\(c\\ell(F)\\) denotes the class of \\(F\\) in \\(K_{\\bullet}(X)\\)) from\n\\(K'(X)\\) to \\(K_{\\bullet}(X)\\) is no longer an isomorphism in general. <u>For our formulation\nof the generalized Riemann-Roch theorem, we shall work exclusively\nwith \\(K'(X), K'(Y)\\), to the exclusion of \\(K_{\\bullet}(X), K_{\\bullet}(Y)\\).</u> As we pointed out\nin 2.3., these augmented \\(\\lambda\\)-rings, equipped with their natural filtration,\ngive rise to the graded rings \\(\\operatorname{Gr}'(X), \\operatorname{Gr}'(Y)\\), and to \"Chern class\"\nhomomorphisms\n\\[c_i\\colon K'(X) \\to \\operatorname{Gr}'(X) ,\\]\nand likewise for \\(Y\\). The difficulty comes however in the definition of a\ndirect image homomorphism\n\\[f_*\\colon K'(X) \\to K'(Y) , \\tag{3.1}\\]\nwhich can no longer be defined by the naive formula\n\\[f_*(c\\ell(F)) = \\sum_i (-1)^i c\\ell(R^i f_*(F)) ,\\]\nfor even if \\(F\\) is locally free, the Modules \\(R^i f_*(F)\\) are in general no longer\nlocally free, nor even of finite tor-dimension, and the preceding formula\nloses its meaning. A solution to this difficulty is provided by\nthe point of view of <u>derived categories</u>. Indeed, whereas the \\(R^i f_*(F)\\)\nare in general \"bad\" sheaves, so to speak, to which one could not\nassociate a class in \\(K'(Y)\\), nevertheless the complex\n\\(Rf_*(F)\\) on \\(Y\\), the direct image of \\(F\\) in the sense of derived categories, whose\n\\(R^i f_*(F)\\) are the cohomology sheaves, tends to be excellent. More\nprecisely, suppose that \\(F\\) is of finite tor-dimension over \\(\\mathcal{O}_Y\\), which\nwill be the case if \\(\\mathcal{O}_X\\) is of finite tor-dimension over \\(\\mathcal{O}_Y\\) and if moreover \\(F\\) is\nlocally free. Then one shows (Exp. III) that the complex \\(Rf_*(F)\\) is\n\"<u>perfect</u>\", by which is meant here: with coherent cohomology sheaves\n(which was already known in any case) <u>and</u> of finite global tor-dimension;\nor again: on every affine open \\(U\\) of \\(Y\\), this complex is isomorphic, in\nthe derived category \\(D(U)\\), to a complex with bounded degrees and locally\nfree of finite type in each degree. From the point of view of Homological Algebra, the\nperfect complexes are \"as good\" as locally free Modules, of which\nthey constitute the natural generalization. They moreover form a\n\"triangulated subcategory\" of the derived category \\(D(Y)\\), i.e. a subcategory\nstable under cones (or \"mapping cylinders\") of morphisms. On the other\nhand, to every triangulated category \\(C\\) one associates a group \\(K(C)\\) of classes,\na natural variant of the construction of the group of classes of an abelian\ncategory, by taking the free group generated by the objects of \\(C\\), divided\nby the relations\n\\[c\\ell(K) - c\\ell(K') - c\\ell(K'')\\]\nfor every distinguished triangle\n\\[\\xymatrix@R=1em@C=1em{\n &amp; K'' \\ar[dl] &amp; \\\\\n K' \\ar[rr] &amp; &amp; K \\ar[ul]\n}\\]\nWhat then replaces the fundamental observation of \\([\\mathrm{RRR}]\\) in the present case\nis the fact that, when the scheme \\(Y\\) admits an ample invertible Module, every\nperfect complex \\(L_{\\bullet}\\) on \\(Y\\) is globally (and not only locally)\nisomorphic in \\(D(Y)\\) to a complex \\(L'\\) with bounded degrees and locally free of\nfinite type in each degree (Exp II); whence it follows easily (Exp.IV) that\nthe canonical homomorphism\n\\[K'(X) \\to K(\\operatorname{Parf}(Y)) ,\\]\nwhere \\(\\operatorname{Parf}(Y)\\) is the triangulated category of perfect complexes on \\(Y\\), is an\nisomorphism. Hence to every perfect complex \\(L_{\\bullet}\\) on \\(Y\\) one can associate a\nclass\n\\[c\\ell(L_{\\bullet}) \\in K'(Y) ,\\]\nwhich is moreover none other than\n\\[c\\ell(L_{\\bullet}) = \\sum_i (-1)^i c\\ell(L'_i)\\]\nwhere \\(L'\\) is as above, so that the \\(L'_i\\) are locally free Modules\non \\(Y\\) whose classes one can take in \\(K'(Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This granted, one defines a homomorphism (3.1) whenever \\(f\\colon X \\to Y\\)\nis a <u>proper morphism of finite tor-dimension</u> of noetherian schemes such\nthat \\(Y\\) admits an ample invertible Module, by simply setting\n\\[f_*(c\\ell(F)) = c\\ell(Rf_*(F)) \\tag{3.2}\\]\nfor every locally free Module \\(F\\) on \\(X\\) (so that \\(Rf_*(F)\\) is indeed\na perfect complex on \\(Y\\), and the right-hand side is defined). When \\(X\\)\nalso admits an ample invertible Module, then \\(K'(X)\\) can likewise be interpreted\nas \\(K(\\operatorname{Parf}(X))\\), and the homomorphism (3.1) is none other than the one\nwhich is associated, by functoriality, to the exact functor of triangulated\ncategories induced by\n\\[Rf_*\\colon \\operatorname{Parf}(X) \\to \\operatorname{Parf}(Y) .\\]</p>"
+    },
+    {
+     "id": "0.3.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.3.2\"><strong>3.2</strong> To give a meaning to (1.2), it still remains to make on \\(f\\) a hypothesis\nallowing one to give a meaning to the homomorphism (2.5)\n\\[f_*\\colon \\operatorname{Gr}'(X)_{\\mathbb{Q}} \\to \\operatorname{Gr}'(Y)_{\\mathbb{Q}} , \\tag{3.3}\\]\ni.e. ensuring that the homomorphism (3.1) just defined is (modulo\na shift and modulo torsion) compatible with the filtrations of these rings;\nand finally to define also a \"virtual relative tangent bundle\" element\n\\[T_f \\in K'(X) .\\]\nFor the latter, taking up again the definition proposed in 2.1, one sees that it\nis appropriate to make a hypothesis ensuring that (with the notations of loc.\ncit.) the conormal Module \\(N_{X/X'}\\) is locally free. The most natural hypothesis\nto this effect is that \\(i\\) be a \"<u>regular immersion</u>\", i.e.\nthat it identify \\(X\\) with a subscheme of \\(X'\\) defined by an Ideal which locally can\nbe defined by an \\(\\mathcal{O}_{X'}\\)-regular sequence of sections of \\(\\mathcal{O}_{X'}\\). This hypothesis,\nof a purely local nature, does not in fact depend on the choice of the factorization\nof \\(f\\) into an immersion followed by a smooth morphism (Exp. VIII), and\nas above, the same holds for the class \\(T_f\\) defined by formula\n(2.1). When the hypothesis just envisaged is satisfied, one says that\nthe morphism \\(f\\) is a \"<u>local complete intersection</u>\" morphism<sup class=\"footnote-ref\"><a id=\"0-fn1ref\" href=\"#0-fn1\">(∗)</a></sup>. Such\na morphism is moreover locally of finite tor-dimension.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(f\\) is a local complete intersection morphism, one introduces\na natural notion of \"virtual relative dimension\" \\(d(f)\\) by the formula\n\\[d(f)(x) = \\dim_x(f'^{-1}f(x)) - \\operatorname{codim}_x(X,X') .\\]\nIt is an integer-valued function, locally constant in the point \\(x \\in X\\),\nhence constant if \\(X\\) is connected, which moreover does not depend either on the\nchoice of the factorization (2.1). When this virtual relative dimension\n\\(d\\) is constant, \\(f\\) is proper, and \\(X\\) and \\(Y\\) admit ample invertible\nModules, one can show (Exp. VIII), although this is far from being\na trivial result, that we have\n\\[f_*(\\operatorname{Filt}^i K'(X)_{\\mathbb{Q}}) \\subseteq \\operatorname{Filt}^{i-d} K'(Y)_{\\mathbb{Q}} , \\tag{3.4}\\]\nwhence a homomorphism (3.3) of degree \\(-d\\).</p>"
+    },
+    {
+     "id": "0.3.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.3.3\"><strong>3.3</strong> We have therefore gathered all the structural elements needed to give\na meaning to formula (1.2) <u>in the case of a proper local complete\nintersection morphism</u> of noetherian schemes \\(X,Y\\) <u>both admitting\nample invertible Modules</u>. With a little extra care, this\nformulation moreover keeps a meaning independently of any noetherian\nhypothesis.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this general form, this Riemann-Roch formula will be proved\nin Exp. VIII. The reader will observe that the proof given in this\nSeminar combines elements of the two proofs which appear in\n\\([\\mathrm{RRR}]\\) and which were discussed in the Introduction. The necessity of resorting\nto the methods of the first of these proofs, involving more\n\\(\\lambda\\)-formalism than the second (followed in Borel-Serre), is due to the necessity\nof a proof of the inclusion (3.4), a question which did not arise\nin the more restricted setting of \\([\\mathrm{RRR}]\\) and Borel-Serre \\([2]\\), where one could work\nwith the Chow ring or the ring \\(\\operatorname{Gr}'_{\\mathrm{top}}\\). From the second proof,\nwe retain the introduction of the blown-up scheme of \\(Y\\) along \\(X\\) in the\ncase where \\(f\\) is an immersion. This technical artifice will no doubt disappear,\nand the proof of the case of an immersion will extend to the case where one no\nlonger postulates the existence of an ample invertible Module on \\(Y\\), once the\nquestion raised in Exp. XIV n° 1 on the introduction of exterior power\noperations in the derived category \\(D^-(Y)\\) is resolved.</p>"
+    },
+    {
+     "id": "0.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.4\"><strong>4.</strong> We must finally give some indications on the way in which one\ncan still give a meaning to (1.2) in the absence of a hypothesis of existence\nof ample invertible Modules on \\(X\\) and \\(Y\\).</p>"
+    },
+    {
+     "id": "0.4.1",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.4.1\"><strong>4.1</strong> Let us first note that <u>for a scheme \\(X\\)</u> (or more generally, an arbitrary <u>locally\nringed topos</u>), it seems beyond doubt that the \"good\" invariant\nwhich must replace the ring \\(K(X)\\) of \\([\\mathrm{RRR}]\\) is not <u>the ring \\(K'(X)\\)</u> considered\npreviously, defined in terms of locally free Modules on \\(X\\), but rather\nthe group \\(K(\\operatorname{Parf}(X))\\), envisaged in 3.1., defined in terms of perfect complexes\non \\(X\\), and which we shall distinguish from the \"naive\" group of 3.1, which we shall\ndenote \\(K'_{\\mathrm{naif}}(X)\\). This point of view is imposed by the necessity of defining a\ndirect image homomorphism (3.1) for a morphism \\(f\\colon X \\to Y\\) which is proper and of\nfinite tor-dimension, of noetherian schemes say (the non-noetherian case\nrequiring somewhat stronger local finiteness properties on \\(f\\), cf. Exp. III). With the definition of \\(K'(X)\\) now\nadopted, this homomorphism \\(f_*\\) is indeed defined in a trivial way by\nformula (3.2), where \\(F\\) is an arbitrary perfect complex on \\(X\\), which\nimplies that \\(Rf_*(F)\\) is also perfect.</p>"
+    },
+    {
+     "id": "0.4.2",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.4.2\"><strong>4.2</strong> This new definition of \\(K'(X)\\) raises however a new problem\nof homological algebra, which is that of a definition of a \\(\\lambda\\)-structure\non \\(K'(X)\\), compatible with the natural ring structure coming from the\ntensor product in the derived category. (NB If \\(L_{\\bullet}\\) and \\(L'\\) are two perfect\ncomplexes, the same holds for their total tensor product \\(L_{\\bullet} \\otimes L'\\) ).\nMore precisely, one would need to define \"exterior power\"\noperations in the derived category \\(D^-(X)\\), transforming perfect complexes\ninto perfect complexes. This question has not yet been cleared up at\nthe present time, and as was said in the Introduction, it constitutes\nthe most serious gap in the Seminar. Once this question is resolved,\nand proceeding as in 2.3, one finds a natural filtration on \\(K'(X)\\),\nallowing one to form the associated graded ring \\(\\operatorname{Gr}'(X)\\), which will play the role of\nthe Chow ring, and to define a theory of Chern classes\n\\[c_i\\colon K'(X) \\to \\operatorname{Gr}'(X)\\]</p>"
+    },
+    {
+     "id": "0.4.3",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.4.3\"><strong>4.3</strong> To give a meaning to (1.2) for a proper local complete\nintersection morphism \\(f\\colon X \\to Y\\) of noetherian schemes, one must further\ninclude in the statement of this formula the non-trivial inclusions (3.4)\n(where \\(d\\) is the virtual relative dimension) in order to allow one to define (3.3),\nand finally to define the virtual relative tangent class\n\\[T_f \\in K'(X)\\]\nWhen \\(f\\) admits a factorization (2.1) through an immersion into a\nsmooth relative scheme, the definition of \\(T_f\\) offers no new difficulty.\nOne can moreover reformulate it in this case, in a manner more in keeping\nwith the \"derived categories\" spirit, by considering the canonical homomorphism\n\\[N_{X/X'} \\xrightarrow{\\ d\\ } \\Omega^1_{X'/Y} \\otimes_{\\mathcal{O}_{X'}} \\mathcal{O}_X \\tag{4.1}\\]\ninduced by the exterior differential\n\\[d_{X'/X}\\colon J \\hookrightarrow \\mathcal{O}_{X'} \\to \\Omega^1_{X'/Y} ,\\]\nand the chain complex\n\\[L^{X/Y}_{\\bullet} \\in \\operatorname{Ob} D(X) \\tag{4.2}\\]\ndefined thanks to (4.1) \"by extending by zeros\", a complex equal in degree\n\\(1\\) resp. \\(0\\) to the source resp. the target of the homomorphism (4.1). Formula (2.2)\nthen takes the more congenial form\n\\[\\check{T}_f = c\\ell(L^{X/Y}_{\\bullet}) , \\tag{4.3}\\]\na formula which has a meaning in \\(K'(X)\\) when \\(f\\) is a local complete intersection\nmorphism, since in this case the complex \\(L^{X/Y}_{\\bullet}\\) is manifestly\nperfect. The assertion of invariance of \\(T_f\\) with respect to the chosen factorization\nof \\(f\\) can then easily be sharpened into an assertion of invariance\nfor the complex \\(L^{X/Y}_{\\bullet}\\): modulo canonical isomorphism in the derived category\n\\(D(X)\\), this complex is likewise independent of the chosen factorization\n(Exp. VIII).</p>"
+    },
+    {
+     "id": "0.4.4",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.4.4\"><strong>4.4</strong> When \\(f\\colon X \\to Y\\) is an arbitrary morphism of schemes, one can still\nconstruct a canonical object \\(L^{X/Y}_{\\bullet}\\) of the derived category \\(D(X)\\), defined\nup to unique isomorphism, which on each affine open of \\(X\\) lying over an\naffine open of \\(Y\\) is a complex constructed according to the principle set out in\nthe preceding paragraph (where it is however appropriate in the general case to\nreplace \"smooth\" by \"formally smooth\", so that every algebra \\(B\\) over\na ring \\(A\\) appears as a quotient of a formally smooth algebra, for\nexample a polynomial algebra). For such a definition it is not\npossible to proceed by simple \"gluing\" from the affine constructions,\nfor the objects of the derived category \\(D(X)\\) are of an essentially\nnon-gluable nature. Here is a general construction of \\(L^{X/Y}_{\\bullet}\\), valid\nmore generally for any morphism \\(f\\colon X \\to Y\\) of (commutatively)\nringed topoi: Let \\(B = \\mathcal{O}_X, A = f^{-1}(\\mathcal{O}_Y)\\), so that \\(A\\) is a Ring on the space\n\\(X\\), and \\(B\\) an \\(A\\)-Algebra. Let \\(T \\to B\\) be a homomorphism of sheaves of sets\nwhich generates \\(B\\) as an \\(A\\)-Algebra, i.e. such that the corresponding homomorphism of\n\\(A\\)-Algebras\n\\[\\phi\\colon C = A[T] \\to B\\]\nis an epimorphism of sheaves of sets, where \\(A[T]\\) denotes\nthe free commutative \\(A\\)-Algebra generated by \\(T\\) (i.e. the sheaf associated to the\npresheaf \\(U \\mapsto A(U)[T(U)]\\) of free commutative \\(A\\)-Algebras generated by\n\\(T(U)\\) ). Let \\(J\\) be the kernel of \\(\\phi\\), and let us consider as in 4.3 the chain\ncomplex of length \\(1\\) defined by the natural homomorphism\n\\[J/J^2 \\xrightarrow{\\ d\\ } \\Omega^1_{C/A} \\otimes_C B .\\]\nIt is not difficult to see that, up to canonical isomorphism in the\ncategory \\(D(X)\\), the complex thus constructed is independent of the choice of\n\\(T\\) and \\(T \\to B\\), so that it deserves the designation of <u>relative cotangent\ncomplex</u> \\(L^{X/Y}_{\\bullet}\\) of \\(X\\) over \\(Y\\). One verifies likewise that for every affine open\nof \\(X\\) lying over an affine open of \\(Y\\), it is given (up to canonical\nisomorphism) by the procedure of 4.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In the case where \\(f\\) is a local complete intersection, one sees\nmoreover that one even obtains a <u>perfect</u> complex, which then allows one to define\nagain an element \\(T_f\\) in \\(K'(X)\\) by formula (4.3). Let us point out that here\nagain, it would not have been possible in general to define \\(T_f\\) as an element\nof \\(K'_{\\mathrm{naif}}(X)\\), and nothing allows one to suppose that \\(T_f\\) is <u>globally</u>\nisomorphic in \\(D(X)\\) to a bounded complex with locally free components of\nfinite type. This is therefore an additional justification of the point of view\nput forward in 4.1 in favor of the \"sophisticated\" \\(K'(X)\\), in preference to \\(K'_{\\mathrm{naif}}(X)\\).</p>"
+    },
+    {
+     "id": "0.4.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.4.5\"><strong>4.5</strong> Subject to the question raised in 4.2, we have therefore again\ngathered all the structural elements needed to give a meaning to (1.2) for\na proper local complete intersection morphism of arbitrary schemes\n(the noetherian hypothesis made implicitly in the preceding sections\nbeing in fact removable without essential difficulty). Unfortunately this does not\nmean that, even subject to this reservation, the formula in\nquestion is established, even in the case where \\(Y\\) is the spectrum of an\nalgebraically closed field of characteristic \\(p &gt; 0\\), and \\(X\\) is a proper smooth\nalgebraic scheme of dimension \\(3\\), say. See the comments in Exp. XIV n° 2.</p>"
+    },
+    {
+     "id": "0.5",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.5\"><strong>5.</strong> In the form presented in n° 4, the Riemann-Roch formula (1.2)\nalso has a meaning for a proper local complete intersection morphism\nof complex analytic spaces (or of rigid-analytic spaces in the\nsense of Tate). But of course the proof given in \\([\\mathrm{RRR}]\\) applies\nto this case only when one supposes in addition that the morphism \\(f\\) is projective,\nand as in the algebraic case, it seems that an essentially new idea\nis needed to treat the general case. The formula we envisage\nhere requires a formula with values in an \"analytic Chow ring\" \\(\\operatorname{Gr}'(X)\\) or\nrather \\(\\operatorname{Gr}'(X)_{\\mathbb{Q}}\\), constructed according to the principle explained in 4.2 (the difficulty\nencountered there vanishing, moreover, owing to the fact that one is in\ncharacteristic zero, as is pointed out in Exp. XIV n° 1).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(X\\) and \\(Y\\) are non-singular, it is possible to give another\nversion of the Riemann-Roch formula by proceeding as follows. Let first\n\\(X\\) be an arbitrary complex analytic space, \\(X^{\\mathrm{top}}\\) the same space equipped with the\nsheaf of continuous complex functions. We have a canonical morphism\nof ringed spaces\n\\[X^{\\mathrm{top}} \\to X ,\\]\nwhich defines, thanks to the evident contravariant character of the functor \\(K'(X)\\) in\nthe variable ringed space \\(X\\), a ring homomorphism\n\\[K'(X) \\to K'(X^{\\mathrm{top}}) . \\tag{5.1}\\]\nSuppose for simplicity that \\(X^{\\mathrm{top}}\\) is compact; then, as in the case (already pointed out\nin 3.1) of a scheme admitting an ample invertible module, one sees\n(Exp.II) that every perfect complex on \\(X^{\\mathrm{top}}\\) is globally isomorphic to a\nbounded complex which is locally free in each degree, i.e. to a complex of complex\nvector bundles on \\(X^{\\mathrm{top}}\\), and that consequently \\(K'(X^{\\mathrm{top}})\\) is canonically\nisomorphic to the group \\(K(X^{\\mathrm{top}})\\) well known to topologists \\([1]\\), defined in\nterms of complex vector bundles on the compact space \\(X^{\\mathrm{top}}\\). One can\ntherefore interpret the homomorphism (5.1) as being a homomorphism from the \\(K'(X)\\)\ndefined in terms of the analytic structure, into the well-known ring \\(K(X^{\\mathrm{top}})\\)\nof the topologists. If now \\(f\\colon X \\to Y\\) is a morphism of compact non-singular\nanalytic spaces, one knows how to associate to it, thanks to Atiyah-Hirzebruch\n\\([1]\\), a homomorphism of groups\n\\[f_*^{\\mathrm{top}}\\colon K'(X^{\\mathrm{top}}) \\to K'(Y^{\\mathrm{top}}) . \\tag{5.2}\\]\nUsing likewise the homomorphism \\(f_*\\) of (3.1) defined by formula (3.2)\n(which here implicitly uses Grauert's finiteness theorem \\([4]\\) for\na proper morphism of analytic spaces) one finds a square of natural\nhomomorphisms, involving only groups of type \\(K'\\) (to the exclusion\nof rings of Chow-ring or cohomology type):\n\\[\\xymatrix@C=3em@R=2em{\nK'(X) \\ar[r] \\ar[d]_{f_*} &amp; K'(X^{\\mathrm{top}}) \\ar[d]^{f_*^{\\mathrm{top}}} \\\\\nK'(Y) \\ar[r] &amp; K'(Y^{\\mathrm{top}})\n} \\tag{5.3}\\]\nThe Riemann-Roch-type formula to which we were alluding consists\nin asserting the commutativity of this square. One will note the difference in\nnature between this assertion (which does not neglect torsion phenomena,\nand takes place in a group \\(K'(Y^{\\mathrm{top}})\\) of an essentially discrete nature), and\nthe Riemann-Roch formula of the type envisaged in n° 4, taking place in a\ngroup of \"Chow\" type which is no longer of a discrete nature, but which one must\non the other hand tensor with \\(\\mathbb{Q}\\). Formula (5.3) is proved in any case\nwhen \\(X\\) and \\(Y\\) are non-singular projective varieties \\([7]\\), as is the\nformula of the type envisaged in n° 4, which is proved in this case in \\([\\mathrm{RRR}]\\).\nThis is a plausible variant of the index theorem of Atiyah-Singer\n(and of its generalizations due to Shih \\([7]\\) and Atiyah), which obviously calls\nfor a common generalization. Once the commutativity of (5.3) is proved,\none would conclude from it at once, with the help of the \"differentiable Riemann-Roch\ntheorem\" of Atiyah-Hirzebruch \\([1]\\), a cohomological variant of the complex\nanalytic Riemann-Roch formula, namely the commutativity of the square\n\\[\\xymatrix@C=5em@R=2em{\nK'(X) \\ar[r]^-{x \\to \\operatorname{ch}(x)\\operatorname{Todd}(T_X)} \\ar[d] &amp; H^{2*}(X,\\mathbb{Q}) \\ar[d] \\\\\nK'(Y) \\ar[r]^-{y \\to \\operatorname{ch}(y)\\operatorname{Todd}(T_Y)} &amp; H^{2*}(Y,\\mathbb{Q})\n} \\tag{5.4}\\]\nwhere the horizontal arrows are deduced from the cohomological Chern classes,\ndeduced from the homomorphism (5.1) and from the ordinary Chern class\nhomomorphism\n\\[K'(X^{\\mathrm{top}}) \\to H^{2*}(X,\\mathbb{Z}) ,\\]\nthe first vertical arrow is the same as in (5.3), and the second is\nthe Gysin homomorphism in rational cohomology.</p>"
+    },
+    {
+     "id": "0.6",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.6\"><strong>6.</strong> In all of this, we have hardly spoken of anything but the contravariant\ninvariant \\(K'(X)\\), to the exclusion of the covariant invariant \\(K_{\\bullet}(X)\\) whose existence\nwas pointed out in 3.1. If one regards \\(K'(X)\\) as giving an analogue of\nthe integral <u>cohomology</u> ring of a topological space, one must regard\n\\(K_{\\bullet}(X)\\) as giving an analogue of integral <u>homology</u>, the Module structure\nof \\(K_{\\bullet}(X)\\) over \\(K'(X)\\) then corresponding to the cap-product operation\n<sup class=\"footnote-ref\"><a id=\"0-fn2ref\" href=\"#0-fn2\">(∗)</a></sup>. The fact that when \\(X\\) is regular, the natural homomorphism \\(K'(X) \\to K_{\\bullet}(X)\\)\nis an isomorphism, must be regarded as the analogue of the Poincaré duality\ntheorem on oriented topological manifolds, asserting that the\ncap-product with the fundamental homology class defines an isomorphism\nfrom cohomology onto homology. These analogies suggest moreover the advisability\nof also defining, for a finite polyhedron \\(X\\) say, an invariant\n\\(K_{\\bullet}(X)\\) of covariant nature, whose relations to integral homology\n(spectral sequence, Chern homomorphism...) would be analogous to those\nexisting between \\(K'(X)\\) and integral cohomology; nor does it seem\nexcluded that there could exist, in terms of these groups \\(K_{\\bullet}(X)\\), variants\nof the differentiable Riemann-Roch theorem, valid for spaces\nmore general than compact differentiable manifolds.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Returning to the case where \\(X\\) is an arbitrary noetherian scheme, it is appropriate\nto equip \\(K_{\\bullet}(X)\\) with an increasing filtration, \\(\\operatorname{Filt}_i K_{\\bullet}(X)\\) being generated by\nclasses \\(c\\ell(F)\\), with \\(F\\) a coherent sheaf on \\(X\\) such that \\(\\dim \\operatorname{supp} F \\leq i\\).\nOne will prove (Exp. X) the compatibility of this filtration with the module\nstructure and the filtration of \\(K'(X)\\), i.e. the formula\n\\[\\operatorname{Filt}^i K'(X) \\cdot \\operatorname{Filt}_j K_{\\bullet}(X) \\subseteq \\operatorname{Filt}_{j-i} K_{\\bullet}(X) , \\tag{6.1}\\]\nwhich allows one to equip the graded object associated to the filtered module \\(K_{\\bullet}(X)\\), denoted\n\\[\\operatorname{Gr}_{\\bullet}(X) ,\\]\nwith a module structure over \\(\\operatorname{Gr}'(X)\\). Its elements can moreover\nbe interpreted as <u>classes of algebraic cycles</u> on \\(X\\), (for an\nequivalence relation coarser than rational equivalence, when \\(X\\)\nis of finite type over a base field \\(K\\)). If\n\\[f\\colon X \\to Y\\]\nis a proper morphism of noetherian schemes, then\n\\[f_*\\colon K_{\\bullet}(X) \\to K_{\\bullet}(Y) , \\tag{6.2}\\]\nis compatible with the filtrations, and defines a homomorphism of graded\ngroups\n\\[f_*\\colon \\operatorname{Gr}_{\\bullet}(X) \\to \\operatorname{Gr}_{\\bullet}(Y) , \\tag{6.3}\\]\ngiving rise to a \"projection formula\", i.e. which is \\(\\operatorname{Gr}_{\\bullet}(Y)\\)-linear,\na formula which is deduced by passage to the graded objects from the analogous\nprojection formula for the homomorphism (6.2) (which is \\(K'(Y)\\)-linear).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>In the point of view proposed in the Seminar, a workable intersection\ntheory, on noetherian schemes \\(X\\) not necessarily regular,\nmust consist in the combined study of the contravariant invariants\n\\(K'(X), \\operatorname{Gr}'(X)\\) and of the covariant invariants \\(K_{\\bullet}(X), \\operatorname{Gr}_{\\bullet}(X)\\)</u>, which play\nroles of essentially different natures, and whose properties complement\neach other. Thus the covariant groups \\(K_{\\bullet}(X), \\operatorname{Gr}_{\\bullet}(X)\\)\nare better suited to computation for certain non-proper fibrations, thanks to the \"exact\nhomotopy sequence\" that one can establish for them ( \\([\\mathrm{RRR}]\\) and Exp. IX); for\nexample one proves (Exp. X) canonical isomorphisms such as\n\\[K_{\\bullet}(X[t]) \\cong K_{\\bullet}(X) , \\quad \\operatorname{Gr}_{\\bullet}(X[t]) \\cong \\operatorname{Gr}_{\\bullet}(X) ,\\]\nwhich fail in general for \\(K'\\) when \\(X\\) is a non-regular scheme.\nOn the other hand, \\(K'(X)\\) and \\(\\operatorname{Gr}'(X)\\) lend themselves well to computations thanks to their\nring structure.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When one considers schemes \\(X\\) proper over a field, the projection\n\\[f^X\\colon X \\to (\\mathrm{point})\\]\ndefines an \"Euler-Poincaré characteristic\" homomorphism\n\\[\\chi_X = f_*^X\\colon K_{\\bullet}(X) \\to K_{\\bullet}(\\mathrm{point}) = \\mathbb{Z} , \\tag{6.4}\\]\ninducing on the subgroup \\(\\operatorname{Gr}_0(X) = \\operatorname{Filt}_0 K_{\\bullet}(X)\\) the \"degree of\n0-cycles\" homomorphism\n\\[\\deg_X\\colon \\operatorname{Gr}_0(X) \\to \\mathbb{Z} . \\tag{6.5}\\]\nThe multiplication homomorphism\n\\[\\operatorname{Gr}^i(X) \\times \\operatorname{Gr}_i(X) \\to \\operatorname{Gr}_0(X) ,\\]\ncomposed with the degree homomorphism (6.5), then provides a pairing\n\\[\\operatorname{Gr}^i(X) \\times \\operatorname{Gr}_i(X) \\to \\mathbb{Z} , \\tag{6.6}\\]\nwhich explains why in certain respects \\(\\operatorname{Gr}'(X)\\) and \\(\\operatorname{Gr}_{\\bullet}(X)\\) play dual roles,\njust like cohomology and homology. Thus, if \\(f\\colon X \\to Y\\) is a morphism\nof proper algebraic schemes, the two homomorphisms\n\\[f^*\\colon \\operatorname{Gr}'(Y) \\to \\operatorname{Gr}'(X) \\quad \\text{et} \\quad f_*\\colon \\operatorname{Gr}_{\\bullet}(X) \\to \\operatorname{Gr}_{\\bullet}(Y)\\]\nare formally transposes of each other, in the sense of the pairings\n(6.6).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The homomorphisms (6.4) and (6.5) and the pairing (6.6) deduced\nfrom them can be regarded as the source of the <u>numerical relations</u>\nin intersection theory on algebraic schemes proper over a\ngiven field \\(k\\). This point of view will be developed in some detail in\nExp. X, essentially independent of Exp. VI,VII,VIII (centered on the\nproof of the Riemann-Roch theorem) and of Exp. IX. There we shall also\ngive some notions on the <u>behavior of \\(K'(X), \\operatorname{Gr}'(X)\\) under specialization</u>.</p>"
+    },
+    {
+     "id": "0.7",
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p id=\"0.7\"><strong>7.</strong> As in any intersection theory, it is important to make precise the\nplace which the <u>Picard group</u> (or group of <u>divisor\nclasses</u> in the classical terminology) takes in the theory. Subject to a slight restriction,\nautomatically satisfied when \\(X\\) is for example quasi-compact,\none establishes in Exp. X a canonical isomorphism\n\\[c_1\\colon \\operatorname{Pic}(X) \\xrightarrow{\\ \\sim\\ } \\operatorname{Gr}^1(X) , \\tag{7.1}\\]\nwhich shows the exact role of the Picard group in the theory we propose.\nThis role justifies a more detailed study of this Picard group\nin Exposés XII, XIII, which are logically independent of the text\nof the Seminar. A study of <u>numerical equivalence</u> and of certain <u>finiteness\ntheorems for the Picard group</u> (announced without proof in \\([6]\\))\nis carried out by Kleiman in Exp. XIII, using techniques of a\npurely numerical nature (not using the theory of the Picard functor and of\nits representability), due to himself and to Mumford, distinctly simpler\nthan the initial proofs of Grothendieck. The only result refractory\nto Kleiman's methods (and of which he is obliged to make use) is\n\\([6, \\text{C-07 (i)}]\\), whose proof and certain refinements (including certain\nrepresentability theorems for the Picard functor) occupy\nExposé XII. The latter moreover belongs to a spirit and a technique\nentirely foreign to the rest of the Seminar, being related to \\([5]\\); this\nexposé is logically independent of all the others.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Finally, in Exp. XI, of a distinctly more general nature than XII and XIII\nand closer to the general spirit of the Seminar, one studies, on an arbitrary\nlocally ringed topos, a remarkable functor called the \"<u>determinant\nfunctor</u>\":\n\\[\\det{}^*\\colon \\operatorname{Parf}(X) \\to \\operatorname{Inv}(X) \\tag{7.2}\\]\nfrom the category of perfect complexes on \\(X\\), the morphisms being only the\nisomorphisms in the sense of the derived category \\(D(X)\\), to the category of\ninvertible Modules on \\(X\\). This functor is described more or less completely by\nthe requirement of being of a \"local nature\", and of being given, for a complex \\(L_{\\bullet}\\)\nwhich is bounded and with locally free components, by the formula\n\\[\\det{}^*(L_{\\bullet}) \\cong \\bigotimes_i \\det(L_i)^{(-1)^i} , \\tag{7.3}\\]\nwhere \\(\\det(L_i)\\) denotes the exterior power of maximal degree of the locally\nfree Module \\(L_i\\). Although this exposé too is logically independent of the rest\nof the Seminar with the exception of Exposé I, it nevertheless constitutes an important\nelement of the general \"yoga\" proposed in the Seminar, and developed for the most part\nin Exposés I to XI.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "0-fn1",
+     "number": "(∗)",
+     "html": "<p>(∗) We shall also allow ourselves to drop the word \"locally\" in this terminology, which is not likely to cause any confusion. </p>"
+    },
+    {
+     "id": "0-fn2",
+     "number": "(∗)",
+     "html": "<p>(∗) This analogy is moreover not purely verbal, and can be made precise, after passage to the associated graded objects \\(\\operatorname{Gr}'(X)\\), \\(\\operatorname{Gr}_{\\bullet}(X)\\), by an explicit compatibility relation between the module structure over \\(\\operatorname{Gr}_{\\bullet}(X)\\) and the \"cap\" operation. </p>"
+    }
+   ]
+  },
+  {
+   "id": "0-biblio",
+   "title": "Bibliography",
+   "blocks": [
+    {
+     "id": "0.biblio",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"0.biblio\">Bibliography</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] M. ATIYAH and F. HIRZEBRUCH, <em>Vector bundles and homogeneous spaces</em>,\nSymposia in Pure Mathematics, vol. 3, Differential Geometry\np. 7-38, 1961.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] A. BOREL and J.P. SERRE, <em>Le théorème de Riemann-Roch</em>, Bull. Soc. math\nFrance, t.36, p. 97-136 (1958).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] H. GRAUERT, <em>Ein Theorem der analytischen Garbentheorie</em>, Pub. Math.\nn° 5, p. 5-64 (1960).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[4] A. GROTHENDIECK, <em>Classes de faisceaux et théorème de Riemann-Roch</em>,\nmimeographed notes, Princeton 1957, (cited \\([\\mathrm{RRR}]\\) and reproduced\nas an Appendix to Exp. O of the Seminar).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[5] A. GROTHENDIECK, <em>Technique de descente et théorèmes d'existence en\nGéométrie Algébrique</em>, in Fondements de la Géométrie Algébrique,\nExtraits du Séminaire Bourbaki 1957-1962, Secrétariat Mathématique, Paris.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[6] W. SHIH, <em>Séminaire de Topologie à l'IHES</em>, 1966/67.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[7] M. ATIYAH and F. HIRZEBRUCH, <em>The Riemann-Roch theorem for analytic\nembeddings</em>, Topology, vol. 1, p. 151 - 166 (1962).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "0-app",
+   "title": "Appendix. Classes of sheaves and the Riemann-Roch theorem",
+   "blocks": [
+    {
+     "id": "0.app",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"0.app\">Appendix. Classes of sheaves and the Riemann-Roch theorem</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"text-align:center;\"><em>by A. Grothendieck</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>(∗) This is the verbatim reproduction of the report cited in the Introduction\nto the present Seminar. The footnotes indicated by the signs\n(∗), (∗∗) were added in October 1967.</em></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Chap. I — \\(\\lambda\\)-Rings</strong> (formal preliminaries)<br>\n1. Definitions<br>\n2. Examples<br>\n3. The \\(\\lambda\\)-ring defined by a graded ring<br>\n4. The operations \\(\\lambda^p(N,x)\\)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><strong>Chap. II — Classes of coherent algebraic sheaves and Chern classes</strong><br>\n1. Chow theory<br>\n2. Definition of the Chern classes of coherent algebraic sheaves<br>\n3. Functorial generalities on \\(K(X)\\)<br>\n4. Some technical results<br>\n5. Sheaf-theoretic definition of the Chern classes. Application to the study of injection morphisms<br>\n6. The Riemann-Roch theorem</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof of the Riemann-Roch theorem (November 1, 1957).</p>"
+    }
+   ],
+   "footnotes": []
+  },
+  {
+   "id": "0-app-I",
+   "title": "Chapter I. \\(\\lambda\\)-Rings (Formal preliminaries)",
+   "blocks": [
+    {
+     "id": "0.app.I",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"0.app.I\">Chapter I. \\(\\lambda\\)-Rings (Formal preliminaries)</h2>"
+    },
+    {
+     "id": "0.app.I.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.I.1\">§ 1. Definitions</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We call a <u>\\(\\lambda\\)-ring</u><sup class=\"footnote-ref\"><a id=\"0-fn3ref\" href=\"#0-fn3\">(∗)</a></sup> a commutative ring \\(K\\) with unit, equipped with a\nfamily of maps\n\\[\\lambda^i \\colon K \\to K \\tag{1.1}\\]\n(\\(i\\) an integer \\(\\geq 0\\)) satisfying the following conditions:\n\\[\\lambda^0 x = 1, \\quad \\lambda^1 x = x, \\quad \\lambda^n(x + y) = \\sum_{i=0}^n \\lambda^i x \\cdot \\lambda^{n-i} y . \\tag{1.2}\\]\nSetting, for every \\(x \\in K\\)\n\\[\\lambda_t(x) = \\sum_{n \\geq 0} \\lambda^n(x) t^n \\in K[[t]] ; \\tag{1.3}\\]\nthe preceding relations then express that \\(x \\mapsto \\lambda_t(x)\\) is a homomorphism\nfrom the additive group \\(K\\) into the multiplicative group \\(1 + K[[t]]^+\\) of\nformal power series in \\(K\\), of augmentation \\(1\\), lifting the canonical\nhomomorphism \\(1 + \\sum_{i&gt;0} x_i t^i \\mapsto x_1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, on the ring \\(\\mathbb{Z}\\) there exists a unique \\(\\lambda\\)-structure compatible with\nits ring structure and such that\n\\[\\lambda_t(1) = 1 + t . \\tag{1.4}\\]\nWe then have\n\\[\\lambda_t(n) = (1 + t)^n , \\tag{1.5}\\]\nwhence \\(\\lambda^i(n) = \\binom{n}{i}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The notion of a \\(\\lambda\\)-homomorphism of \\(\\lambda\\)-rings is clear; an <u>augmented \\(\\lambda\\)-ring</u>\nis a \\(\\lambda\\)-ring equipped with a \\(\\lambda\\)-homomorphism into \\(\\mathbb{Z}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To define the notion of a special \\(\\lambda\\)-ring, the following considerations\nare useful. Let \\(k\\) be a commutative ring with unit, let\n\\(K = 1 + k[[t]]^+\\) be the group of formal power series with coefficients in \\(k\\),\nof augmentation \\(1\\); we are going to introduce on it a \\(\\lambda\\)-ring law whose additive\nstructure is the multiplication of formal power series. The multiplication\nof this ring will be denoted \\(f \\circ g\\). It is entirely determined by the\ncondition that the coefficients \\(c_n = c_n(f \\circ g)\\) of \\(f \\circ g\\) be given\nby <u>universal</u> polynomials with integer coefficients in the coefficients\n\\(a_i = c_i(f)\\) and \\(b_i = c_i(g)\\) of \\(f\\) and \\(g\\) respectively:\n\\[c_n = P_n(a_1,\\dots,a_n; b_1,\\dots,b_n) , \\tag{1.6}\\]\nthat it be distributive with respect to the \"addition\" \\(fg\\), and be given\nfor linear factors by:\n\\[(1 + at) \\circ (1 + bt) = 1 + abt . \\tag{1.7}\\]\nThe \\(P_n\\) are computed by computations with symmetric functions; \\(P_n\\) is\nisobaric of weight \\(n\\) in the \\(a_i\\) and isobaric of weight \\(n\\) in the \\(b_i\\) (\\(a_i\\) and \\(b_i\\)\nbeing of weight \\(i\\)), and moreover symmetric in \\(a = (a_i)\\) and \\(b = (b_i)\\).\nLikewise, the \\(\\lambda^i(f)\\) are determined unambiguously by the condition that\nthe coefficients \\(c_n(\\lambda^i(f)) = c_n\\) of \\(\\lambda^i(f)\\) be computed by means of <u>universal</u>\npolynomials with integer coefficients in the coefficients \\(c_n(f) = a_n\\)\nof \\(f\\):\n\\[c_n = P_{i,n}(a_1,\\dots,a_{in}) , \\tag{1.8}\\]\nthat the relations (1.2) be satisfied, and that, for \\(i &gt; 1\\), we have:\n\\[\\lambda^i(1 + at) = 1 \\tag{1.9}\\]\n(\\(1\\) is the zero element of the ring \\(K = 1 + k[[t]]^+\\)). The \\(P_{i,n}\\) are again computed\nby computations with symmetric functions, and one finds that\n\\(P_{i,n}\\) is an isobaric polynomial of weight \\(in\\) in the \\(a_i\\). Equipped with the preceding\noperations, \\(K\\) becomes a \\(\\lambda\\)-ring; its zero element is \\(1\\), its unit\nelement is \\(1 + t\\). Let us also note the relation:\n\\[(1 + at) \\circ f = f(at) . \\tag{1.7 bis}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let \\(K\\) be an arbitrary \\(\\lambda\\)-ring. One says that \\(K\\) is <u>special</u>\nif the additive homomorphism \\(\\lambda_t\\) from \\(K\\) into \\(1 + K[[t]]^+\\) is a \\(\\lambda\\)-homomorphism.\nThis therefore means that we have the formulas:\n\\[\\lambda_t(1) = 1 + t, \\quad \\lambda_t(xy) = \\lambda_t(x) \\circ \\lambda_t(y), \\quad \\lambda_t(\\lambda^i(x)) = \\lambda^i(\\lambda_t(x)) , \\tag{1.10}\\]\nor again, explicitly:\n\\[\\begin{cases}\n\\lambda^i(1) = 0 &amp; \\text{si } i \\geq 1 \\\\\n\\lambda^n(xy) = P_n(\\lambda^1 x,\\dots,\\lambda^n x; \\lambda^1 y,\\dots,\\lambda^n y) \\\\\n\\lambda^n(\\lambda^i(x)) = P_{i,n}(\\lambda^1 x,\\dots,\\lambda^n x) ,\n\\end{cases} \\tag{1.11}\\]\nwhere the \\(P_n\\) and the \\(P_{i,n}\\) are the universal polynomials envisaged above.\nIn particular, the formulas (1.5) follow from this. (One can show that\nthe \\(\\lambda\\)-ring \\(1 + k[[t]]^+\\) constructed from a commutative ring \\(k\\) is special;\nbut we shall not need this fact).</p>"
+    },
+    {
+     "id": "0.app.I.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.I.2\">§ 2. Examples</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>1) Let \\(G\\) be a group and \\(k\\) a commutative ring; one considers the\ngroup \\(K(G)\\), the quotient of the free group generated by the classes of representations\nof \\(G\\) in \\(k\\)-modules of finite type by the subgroup generated\nby the elements of the form \\((\\rho \\oplus \\rho') - (\\rho) - (\\rho')\\) (we denote by \\(\\oplus\\) the\ndirect sum). The tensor product and the exterior powers define\non \\(K(G)\\) a \\(\\lambda\\)-ring structure. One can also pass to the\nquotient by the elements of the form \\((\\rho) - (\\rho') - (\\rho'')\\) where \\(\\rho\\) is a\npresented extension of \\(\\rho'\\) by \\(\\rho''\\), trivial as an extension of \\(k\\)-modules.\nOne obtains the group \\(K_r(G)\\) of reduced classes of representations of \\(G\\),\nand one finds that the \\(\\lambda\\)-ring law passes to the quotient.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(k\\) is a field which is <u>algebraically closed of characteristic \\(0\\)</u><sup class=\"footnote-ref\"><a id=\"0-fn4ref\" href=\"#0-fn4\">(∗)</a></sup>,\none can show that \\(K(G)\\), and a fortiori \\(K_r(G)\\), is a special \\(\\lambda\\)-ring;\nthis is no longer the case if the characteristic is \\(\\neq 0\\), but nevertheless,\nif \\(k\\) is algebraically closed <sup class=\"footnote-ref\"><a id=\"0-fn6ref\" href=\"#0-fn6\">(∗)</a></sup>, \\(K_r(G)\\) is still a special \\(\\lambda\\)-ring.\nTo prove this, one is reduced to the case where \\(G\\) is a product \\(\\mathrm{Gl}(m,k) \\times \\mathrm{Gl}(n,k)\\)\nand where one considers only the <u>rational representations</u> of \\(G\\);\nour assertion follows from the <u>explicit determination</u> of \\(K_r(G)\\) <u>which\nwill be made below</u> (example 3); finally, when \\(k\\) is of characteristic\n\\(0\\), the complete reducibility of the rational representations of \\(G\\) shows\nthat \\(K(G) = K_r(G)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Variants of the preceding example: \\(G\\) is an algebraic group defined\nover \\(k\\) and one considers only the rational representations of \\(G\\) defined\nover \\(k\\); one can consider the case of a topological group, or a Lie\ngroup, and continuous representations, etc ... <sup class=\"footnote-ref\"><a id=\"0-fn5ref\" href=\"#0-fn5\">(¹)</a></sup></p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>2) Let \\(X\\) be an algebraic variety, irreducible or not, defined over\nthe field \\(k\\). One may consider the quotient group of the free group generated\nby the classes of vector bundles on \\(X\\) (defined over \\(k\\)), by\nthe subgroup generated by the elements of the form \\((E \\oplus E') - (E) - (E')\\),\non which the \\(\\lambda\\)-ring operations will be defined by the tensor\nproduct and the exterior powers. If \\(X\\) is complete, this is a\nfree group generated by the indecomposable vector bundles on \\(X\\)\n(thanks to Krull-Remak-Schmidt); the knowledge of this ring and of its\nbasis is equivalent to the complete classification of vector bundles on\n\\(X\\) together with the knowledge of the elementary tensor operations on these\nbundles. If \\(k\\) is algebraically closed of characteristic \\(0\\), all the\nother tensor operations on the classes of bundles are then known,\nwith the help of what will follow in 3). One can carry out a more\ndrastic passage to the quotient, by the group generated by the elements\n\\((E) - (E') - (E'')\\) where \\(E\\) is a vector bundle which is an extension of \\(E'\\) by \\(E''\\);\none then finds a \\(\\lambda\\)-ring, denoted \\(K(\\xi(X))\\), where \\(\\xi(X)\\) denotes the additive\ncategory of vector bundles on \\(X\\), defined over \\(k\\). Using the\nresults of example 1), one shows that if \\(k\\) is algebraically closed\n<sup class=\"footnote-ref\"><a id=\"0-fn6ref\" href=\"#0-fn6\">(∗)</a></sup>, the \\(\\lambda\\)-ring \\(K(\\xi(X))\\) is special, and that the same holds for the\nfirst \\(\\lambda\\)-ring defined here, if the characteristic of \\(k\\) is \\(0\\), but not\nin the general case.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>3) <u>Determination of \\(K(G)\\) and of \\(K_r(G)\\) in certain important cases</u>:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We suppose the field \\(k\\) algebraically closed, the group \\(G\\) algebraic, <u>affine\nconnected</u> and \"globally <u>reductive</u>\" (the radical of \\(G\\) is isomorphic to \\((k^*)^s\\)),\nand we consider only rational linear representations.\nIn characteristic \\(0\\), the complete reducibility of the rational linear\nrepresentations of \\(G\\) shows that \\(K(G) = K_r(G)\\) is the free group\ngenerated by the classes of the irreducible rational representations.\nNow, if \\(T\\) is a maximal torus of \\(G\\), we have \\(K(T) = K_r(T) = \\mathbb{Z}(\\hat{T})\\), the algebra\nof the group \\(\\hat{T}\\) of rational characters of \\(T\\); we have \\(\\hat{T} \\simeq \\mathbb{Z}^r\\) if \\(r\\) is the\nrank of \\(G\\) (this is independent of the characteristic). The Weyl\ngroup \\(W\\) acts on \\(T\\), hence on \\(K(T)\\), in a manner which depends only on the\nactions of \\(W\\) on the free group \\(\\hat{T}\\). We have an evident homomorphism\nof \\(\\lambda\\)-rings, deduced from the injection of \\(T\\) into \\(G\\):\n\\[K_r(G) \\to K_r(T)^W = K(T)^W , \\tag{1.13}\\]\nwhere \\(K(T)^W\\) denotes the set of fixed points of \\(W\\) in \\(K(T)\\). The theory\nof linear representations of \\(G\\) <sup class=\"footnote-ref\"><a id=\"0-fn7ref\" href=\"#0-fn7\">(∗)</a></sup> then proves the following theorem:</p>"
+    },
+    {
+     "id": "0.app.1.1",
+     "type": "theorem",
+     "label": "1.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.1.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">1.1</span></div>\n  <div class=\"thm-body\"><p>The homomorphism (1.13) is an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We see therefore that \\(K_r(G)\\), once the \"type\" of \\(G\\) is known (characterized\nby \\(W\\) acting on a group \\(\\mathbb{Z}^r\\)), does not depend on the characteristic,\nand that it is a special \\(\\lambda\\)-ring. We have a canonical basis of \\(K_r(G)\\)\ncorresponding to the orbits of \\(W\\) in \\(\\hat{T}\\); another basis is obtained as follows:\nlet \\((\\rho_i)_{1 \\leq i \\leq r'}\\) be the classes of representations of \\(G\\) corresponding to the\n<u>fundamental</u> representations of \\(G/\\operatorname{rad} G\\), and \\((\\sigma_i)_{1 \\leq i \\leq r''}\\) a basis of the\ngroup of rational homomorphisms of \\(G\\) into \\(k^*\\); we thus have\n\\(r' + r'' = r\\) (rank of \\(G\\)).</p>"
+    },
+    {
+     "id": "0.app.1.1.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.1.1.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span></div>\n  <div class=\"thm-body\"><p>The ring \\(K_r(G)\\) is identified with the subring\n  \\(\\mathbb{Z}[\\rho_1,\\dots,\\rho_{r'}; \\sigma_1,\\dots,\\sigma_{r''}; \\sigma_1^{-1},\\dots,\\sigma_{r''}^{-1}]\\) of the field of rational functions\n  in the \\(\\rho_i\\) and the \\(\\sigma_j\\) with coefficients in \\(\\mathbb{Q}\\)<sup class=\"footnote-ref\"><a id=\"0-fn8ref\" href=\"#0-fn8\">(∗)</a></sup>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular, \\(K_r(G)\\) has no divisors of \\(0\\); if \\(G = \\prod_i \\mathrm{Gl}(n_i,k)\\),\nthe ring \\(K_r(G)\\) can be made explicit as follows: let \\(\\rho_i\\) be the representation of \\(G\\) deduced\nfrom the identity representation of \\(\\mathrm{Gl}(n_i,k)\\); if one then considers\nthe field of rational functions over \\(\\mathbb{Q}\\) in indeterminates \\(\\lambda^j(\\rho_i)\\)\n(\\(1 \\leq j \\leq n_i\\)), then \\(K_r(G)\\) is identified with the subring generated by these indeterminates\nand the inverses of the \\(\\lambda^{n_i}(\\rho_i)\\). This justifies our assertion\nthat, at least in characteristic \\(0\\), the operations \\(\\lambda^i\\) make it possible to\nreconstitute all the tensor operations on vector bundles;\nthis is still true over an algebraically closed field of arbitrary\ncharacteristic, provided one takes reduced classes.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remarks</u>: a) In example 1), the ring \\(K(G)\\) is augmented, the augmentation\nbeing defined by the degree of the representations, and by passage\nto the quotient, this augmentation defines an augmentation on \\(K_r(G)\\). Likewise,\nthe \\(\\lambda\\)-rings envisaged in example 2) are augmented when\n\\(X\\) is \\(k\\)-irreducible; in \\(K(\\xi(X))\\), the augmentation is defined by the\n<u>rank of a vector bundle</u>, that is, the dimension of its fibers.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) When the field \\(k\\) is not algebraically closed, it is plausible\nthat \\(K(G)\\) is a special \\(\\lambda\\)-ring in characteristic \\(0\\), and likewise for\n\\(K_r(G)\\) in all characteristics.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>c) In non-zero characteristic, Theorem 1.1 was graciously\nprovided to me by Chevalley.</p>"
+    },
+    {
+     "id": "0.app.I.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.I.3\">§ 3. The \\(\\lambda\\)-ring defined by a graded ring</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(A\\) be a commutative graded ring with unit; we shall suppose for\nsimplicity that the degrees of \\(A\\) are positive and that \\(A^0 = \\mathbb{Z}\\). We denote\nby \\(\\hat{A}\\) the product of the \\(A^i\\) (it is a commutative ring with unit), by\n\\(\\hat{A}^+\\) the kernel of the evident augmentation \\(\\hat{A} \\to A^0 = \\mathbb{Z}\\). Then \\(1 + \\hat{A}^+\\) is\na subgroup of the multiplicative group of invertible elements of \\(\\hat{A}\\).\nConsider the abelian group\n\\[\\tilde{A} = \\mathbb{Z} \\times (1 + \\hat{A}^+) , \\tag{1.14}\\]\nwhose elements will be denoted \\([n,x]\\) with \\(n \\in \\mathbb{Z}\\) and \\(x = 1 + \\sum_{i \\geq 1} x_i \\in 1 + \\hat{A}^+\\)\n(\\(x_i \\in A^i\\)). We shall write this group additively, thus:\n\\[[n,x] + [n',x'] = [n + n', xx'] . \\tag{1.15}\\]\nThe zero element of this group is \\([0,1]\\). We are going to introduce on it a\nstructure of augmented \\(\\lambda\\)-ring, compatible with its additive structure, the\naugmentation being \\(\\varepsilon\\colon[n,x] \\to n\\). The product \\([m,x][n,y]\\) is completely\ncharacterized by the fact that it can be written \\([mn, x^n y^m (x \\ast y)]\\), where \\(x \\ast y\\)\nis an element of \\(1 + \\hat{A}^+\\) whose components are expressed as universal\npolynomials with integer coefficients in the \\(x^i\\) and the \\(y^i\\):\n\\[(x \\ast y)^i = Q_i(x^1,\\dots,x^i; y^1,\\dots,y^i) \\quad (i \\geq 1) \\tag{1.16}\\]\nthe polynomial \\(Q_i\\) being isobaric of weight \\(i\\). Moreover, \\(x \\ast y\\) must be\ndistributive with respect to the \"addition\" \\(xy\\) and for \"linear\" factors must\nreduce to the following:\n\\[[1, 1 + x^1][1, 1 + y^1] = [1, 1 + x^1 y^1] . \\tag{1.17}\\]\nThe polynomials \\(Q_i\\) are evaluated by computations with elementary symmetric\nfunctions (this is the computation of the Chern classes of a tensor\nproduct of vector bundles with the help of the Chern classes \\(x^i\\) and \\(y^i\\) of the\nfactors and their respective dimensions \\(m\\) and \\(n\\)). From (1.17) one deduces:\n\\[(1 + x^1) \\ast (1 + y^1) = (1 + x^1 y^1)/(1 + x^1)(1 + y^1) , \\tag{1.17 bis}\\]\nand an arbitrary product \\(x \\ast y\\) is computed term by term by decomposing\n\\(x\\) \"formally\" into a product \\(\\prod_{i=1}^n (1 + \\alpha_i)\\) and \\(y\\) into a product \\(\\prod_{i=1}^n (1 + \\beta_i)\\),\nwhere the \\(\\alpha_i\\) and the \\(\\beta_i\\) are of degree \\(1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this way, \\(\\tilde{A}\\) becomes an augmented commutative ring, with\na unit \\([1,1]\\), and one can interpret it as the ring obtained by\nadjoining a unit to the ring \\(1 + \\hat{A}^+\\). Moreover, on \\(\\tilde{A}\\), one defines\na <u>filtration</u> by setting \\(\\tilde{A}^0 = \\tilde{A}\\) and by denoting by \\(\\tilde{A}^n\\) the set of the \\([0,x]\\)\nwith \\(x^i = 0\\) for \\(1 \\leq i &lt; n\\); this filtration is compatible with the product,\nfor we have\n\\[\\left(1 + \\sum_{i \\geq m} x^i\\right) \\ast \\left(1 + \\sum_{j \\geq n} y^j\\right) = 1 - \\frac{(m+n-1)!}{(m-1)!(n-1)!} x^m y^n + \\dots , \\tag{1.18}\\]\nthe unwritten terms being of degree \\(&gt; m + n\\). This formula shows that\nthe graded ring \\(G(\\tilde{A})\\) associated to \\(\\tilde{A}\\) is identified with \\(A\\) from the additive\npoint of view, but not from the multiplicative point of view; one can only say\nthat the map \\(\\eta'\\) from \\(A\\) into \\(G(\\tilde{A})\\) defined by\n\\[\\eta'(x^i) = (-1)^{i-1}(i - 1)! \\, x^i \\quad (x^i \\in A^i) \\tag{1.19}\\]\nis a <u>ring homomorphism</u>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One introduces on \\(\\tilde{A}\\) operations \\(\\lambda^i\\) satisfying the axioms of\n\\(\\lambda\\)-rings (§ 1, formulas (1.2)), well determined by the condition that\nthe components of \\(\\lambda^i[0,x]\\) be deduced from the components \\(x^i\\) of \\(x\\) by\nuniversal polynomials with integer coefficients\n\\[\\lambda^i[0,x] = [0, \\lambda^i x] \\qquad (\\lambda^i x)^{(n)} = Q_{i,n}(x^1,\\dots,x^n) \\tag{1.20}\\]\n(\\(Q_{i,n}\\) is isobaric of weight \\(n\\)), and that we have\n\\[\\lambda^i[1, 1 + x^1] = 0 \\quad \\text{pour } i &gt; 1 . \\tag{1.21}\\]\nThe polynomials \\(Q_{i,n}\\) are evaluated by a computation with elementary symmetric\nfunctions, which is the computation of the Chern classes of the exterior\npowers of a vector bundle, with the help of the Chern classes and the rank\nof the latter. One then finds that \\(\\tilde{A}\\) is an augmented \\(\\lambda\\)-ring which is <u>special</u>,\nand that the \\(\\tilde{A}^i\\) are stable under the operations \\(\\lambda^j\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The augmented \\(\\lambda\\)-ring \\(\\tilde{A}\\) can be regarded as a functor in \\(A\\);\nconsequently the principal automorphism \\(x = \\sum_{i \\geq 0} x^i \\to \\check{x} = \\sum_{i \\geq 0} (-1)^i x^i\\)\nof \\(A\\) defines an automorphism of \\(\\tilde{A}\\), denoted by the same symbol \\(\\vee\\).</p>"
+    },
+    {
+     "id": "0.app.1.2",
+     "type": "proposition",
+     "label": "1.2",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.1.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.2</span></div>\n  <div class=\"thm-body\"><p>For \\(x \\in \\tilde{A}\\) of the form \\([n, 1 + x^1 + \\dots + x^n]\\) (we thus\n  have \\(x^i = 0\\) for \\(i &gt; n\\)), we have \\(\\lambda^i(x) = 0\\) for \\(i &gt; n\\), we have \\(\\lambda^n(x) = [1, 1 + x^1]\\)\n  and finally\n  \\[\\sum_{i=0}^n (-1)^i \\lambda^i(x) = [0, 1 - (n-1)! \\, x^n + \\dots] . \\tag{1.22}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From this proposition and from the fact that the \\(\\tilde{A}^i\\) are stable under the\noperations \\(\\lambda^j\\), one deduces that formula (1.22) is valid whenever\n\\(\\varepsilon(x) = n\\), whether or not we have \\(x^i = 0\\) for \\(i &gt; n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Formula (1.22) admits the following generalizations: let \\(K\\) be any\n\\(\\lambda\\)-ring, otherwise arbitrary; for \\(x \\in K\\), we set\n\\[\\gamma^n(x) = (-1)^n \\sum_{i=0}^n (-1)^i \\lambda^i(x + n) = \\lambda^n(x + n - 1) , \\tag{1.23}\\]\n(the identity of the last two members follows from an immediate induction).\nWe have in particular \\(\\gamma^0(x) = 1\\) and \\(\\gamma^1(x) = x\\); we then set:\n\\[\\gamma_t(x) = \\sum_{n \\geq 0} \\gamma^n(x) t^n \\in K[[t]] \\tag{1.24}\\]\nfrom which one deduces the formula:\n\\[\\gamma_t(x) = \\lambda_{t/(1-t)}(x) , \\tag{1.25}\\]\nwhich is equivalent to\n\\[\\lambda_s(x) = \\gamma_{s/(1+s)}(x) . \\tag{1.25 bis}\\]\nThis proves that the \\(\\lambda^i\\) are expressed in terms of the \\(\\gamma^i\\) and that\n\\(\\gamma_t(x+y) = \\gamma_t(x)\\gamma_t(y)\\), and consequently that the maps \\(\\gamma^i\\) define a\nnew \\(\\lambda\\)-ring structure on \\(K\\). Formula (1.22) then shows\nthat for \\(K = \\tilde{A}\\) and every \\(x \\in \\tilde{A}\\), we have\n\\[\\gamma^n(x - \\varepsilon(x)) = [0, 1 + (-1)^{n-1}(n-1)! \\, x^n + \\dots] \\tag{1.22 bis}\\]\nand consequently, the <u>component \\(x^n\\) is obtained, up to the factor \\((-1)^{n-1}(n - 1)!\\),\nby reducing modulo</u> \\(\\tilde{A}^{n+1}\\) <u>the element</u> \\(\\gamma^n(x - \\varepsilon(x))\\) <u>of</u> \\(\\tilde{A}^n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>The Chern homomorphism</u>:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For every graded ring \\(A\\) satisfying the preceding conditions, we\nshall define a homomorphism of augmented rings:\n\\[\\operatorname{ch} \\colon \\tilde{A} \\to \\hat{A} \\otimes \\mathbb{Q} . \\tag{1.26}\\]\nThis homomorphism is defined unambiguously by the condition that it be an\nadditive homomorphism, that it transform \\(1\\) into \\(1\\), that the components\nof \\(\\operatorname{ch}(x)\\) in degree \\(&gt; 0\\) be given by universal isobaric polynomials\nwith rational coefficients in the components of \\(x\\), and that\n\\[\\operatorname{ch}([1, 1 + x^1]) = \\exp x^1 = \\sum_{n \\geq 0} (x^1)^n/n! . \\tag{1.27}\\]\nOne then obtains at once the explicit expression of \\(\\operatorname{ch}\\): let \\(\\eta\\) be the additive\nendomorphism of \\(\\hat{A} \\otimes \\mathbb{Q}\\) defined for \\(x^i\\) of degree \\(i\\) by\n\\[\\eta(x^i) = \\frac{1}{(-1)^{i-1}(i-1)!} \\, x^i \\tag{1.28}\\]\nwe then have\n\\[\\operatorname{ch}\\left(\\left[n, 1 + \\sum_{i \\geq 1} x^i\\right]\\right) = n + \\eta\\left(\\log\\left(1 + \\sum_{i \\geq 1} x^i\\right)\\right) . \\tag{1.29}\\]\nAs one can \"invert\" this formula, at least if \\(A\\) has only a finite\nnumber of homogeneous components, one sees that in this case, we have an <u>isomorphism</u>\n\\(\\operatorname{ch}\\) of the ring \\(\\tilde{A} \\otimes \\mathbb{Q}\\) <u>onto the ring</u> \\(\\hat{A} \\otimes \\mathbb{Q}\\) (which completely elucidates\nthe structure of \\(\\tilde{A} \\otimes \\mathbb{Q}\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Recall that according to Hirzebruch [1], a formal power series \\(f \\in \\mathbb{Q}[[t]]\\)\ndefines, by universal polynomial formulas, an additive homomorphism\n\\(1 + \\hat{A}^+ \\to 1 + (\\hat{A} \\otimes \\mathbb{Q})^+\\), denoted \\(\\mathscr{T}_f\\); when \\(f(t) = t/(1 - \\exp(-t))\\),\none simply writes \\(\\mathscr{T}_f = \\mathscr{T}\\) (\\(\\mathscr{T}\\) is the initial of Todd). One extends the definition\nof \\(\\mathscr{T}(x)\\) to \\(x \\in \\tilde{A}\\). This said, we have the following result:</p>"
+    },
+    {
+     "id": "0.app.1.3",
+     "type": "proposition",
+     "label": "1.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.1.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(N \\in \\tilde{A}\\) be of the form \\([q, 1 + N^1 + \\dots + N^q]\\) (we have\n  \\(N^i = 0\\) for \\(i &gt; q\\)). If we set\n  \\[\\lambda_{-1}(N) = \\sum_{i \\geq 0} (-1)^i \\lambda^i(N) = \\sum_{i=0}^q (-1)^i \\lambda^i(N) ,\\]\n  we shall have:\n  \\[\\operatorname{ch}(\\lambda_{-1}(N)) = (-1)^q N^q \\, \\mathscr{T}(\\check{N})^{-1} , \\tag{1.30}\\]\n  which is equivalent to:\n  \\[\\operatorname{ch}(\\lambda_{-1}(\\check{N})) = N^q \\, \\mathscr{T}(N)^{-1} . \\tag{1.30 bis}\\]</p></div>\n</div>"
+    },
+    {
+     "id": "0.app.I.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.I.4\">§ 4. The operations \\(\\lambda^p(N,x)\\)</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(A\\) be the ring of formal power series, with coefficients in \\(\\mathbb{Z}\\), in\ntwo infinite sequences of indeterminates, denoted \\(\\lambda^i N\\) and \\(\\lambda^i x\\) (\\(i \\geq 1\\)). We set\n\\(\\lambda^1 N = N\\) and \\(\\lambda^1 x = x\\), and we introduce on \\(A\\) the unique special \\(\\lambda\\)-ring\nstructure for which we have \\(\\lambda^i(N) = \\lambda^i N\\) and \\(\\lambda^i(x) = \\lambda^i x\\) and for which the\noperations \\(\\lambda^i\\) are \"continuous\" (if we restricted ourselves to <u>polynomials</u> in\nindeterminates \\(\\lambda^i N\\) and \\(\\lambda^i x\\), we would have the \"free \\(\\lambda\\)-ring generated by \\(N\\) and \\(x\\)\";\nour ring \\(A\\) is a completion of it). One can then form\n\\[\\lambda_{-1}(N) = \\sum_{i \\geq 0} (-1)^i \\lambda^i N , \\tag{1.31}\\]\nwhich is a formal power series with constant term \\(1\\), hence invertible; one\ncan therefore define unambiguously an element \\(\\lambda^p(N,x)\\) of \\(A\\) by setting\n\\[\\lambda^p(N,x)\\lambda_{-1}(N) = \\lambda^p(x\\lambda_{-1}(N)) . \\tag{1.32}\\]</p>"
+    },
+    {
+     "id": "0.app.1.4",
+     "type": "theorem",
+     "label": "1.4",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.1.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">1.4</span></div>\n  <div class=\"thm-body\"><p>Let \\(J_q\\) be the closed ideal of \\(A\\) generated by the \\(\\lambda^i N\\) with\n  \\(i &gt; q\\); let us identify \\(A/J_q\\) with the ring of formal power series in the \\(\\lambda^i x\\) and the\n  \\(\\lambda^j N\\) (\\(1 \\leq j \\leq q\\)). Then \\(\\lambda^p(N,x)\\) reduced modulo \\(J_q\\) is a polynomial, isobaric\n  of weight \\(p\\) with respect to the variables \\(\\lambda^i x\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(N\\) and \\(F\\) be two vector spaces of finite dimensions \\(q,q'\\) over\nan algebraically closed field \\(k\\) of characteristic \\(0\\); let \\(N^{(p)}\\) be the kernel\nof the map \\((a_1,\\dots,a_p) \\to a_1 + \\dots + a_p\\) from \\(N^p\\) into \\(N\\). We let\nthe symmetric group \\(\\mathfrak{S}_p\\) act on \\(N^p\\), hence on \\(N^{(p)}\\), hence on\n\\({\\textstyle\\bigwedge}(N^{(p)})\\), then on \\(\\bigotimes^p F\\) and on \\({\\textstyle\\bigwedge}(N^{(p)}) \\otimes \\bigotimes^p F\\). Let us consider this vector\nspace as a graded module over \\(\\mathfrak{S}_p \\times \\mathrm{Gl}(N) \\times \\mathrm{Gl}(F)\\) and take\nits \"alternating part\", which is a graded module over \\(\\mathrm{Gl}(N) \\times \\mathrm{Gl}(F) = G\\).\nWe then have\n\\[\\lambda^p(N,F) = \\mathrm{E}_G\\left(\\left({\\textstyle\\bigwedge}(N^{(p)}) \\otimes \\bigotimes^p F\\right)^{\\mathrm{alt}}\\right) . \\tag{1.33}\\]\nN.B. If \\(M\\) is a complex of \\(G\\)-modules, we denote by \\(\\mathrm{E}_G(M)\\) the alternating\nsum in \\(K(G)\\) of the classes of the components of \\(M\\); it is the Euler-Poincaré\ncharacteristic of \\(M\\); in formula (1.33), the left-hand side\n\\(\\lambda^p(N,F)\\) denotes the element of the ring \\(K(G)\\) obtained by substituting for the\nvariables \\(\\lambda^i N\\) and \\(\\lambda^i F\\) the classes in \\(K(G)\\) of the \\(G\\)-modules \\(\\wedge^i(N)\\) and \\(\\wedge^i(F)\\)\nrespectively.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: By expanding the second member of (1.32) by the\nsecond formula (1.11), one sees that the first assertion is proved\nif one proves the analogous assertion obtained by setting \\(x = 1\\), i.e. if one\nproves that in the \\(\\lambda\\)-ring \\(\\mathbb{Z}[\\lambda^1 N,\\dots,\\lambda^q N]\\) where \\(\\lambda^i N = 0\\) for \\(i &gt; q\\), the element\n\\(\\lambda^p(\\lambda_{-1}(N))\\) is divisible by \\(\\lambda_{-1}(N)\\). A priori, the quotient\n\\(\\lambda^p(N,1) = \\lambda^p(\\lambda_{-1}(N))/\\lambda_{-1}(N)\\) is a formal power series contained in the field\nof quotients \\(K\\) of the ring of formal power series in the \\(\\lambda^i N\\) for\n\\(1 \\leq i \\leq q\\). On the other hand, let us also denote by \\(N\\) a vector space of dimension\n\\(q\\) over an algebraically closed field \\(k\\) of characteristic \\(0\\), and let us\nconsider the element \\(\\ell^p(N) = \\mathrm{E}_G(({\\textstyle\\bigwedge}(N^{(p)}))^{\\mathrm{alt}}) \\in K(G)\\), where now\nwe have \\(G = \\mathrm{Gl}(N)\\). One knows (§ 2, Theorem 1.1) that \\(K(G)\\) is identified\nwith the subring of \\(K\\) generated by the \\(\\lambda^i N\\) for \\(1 \\leq i \\leq q\\) and by the inverse\nof \\(\\lambda^q N\\). On the other hand, one easily verifies in this ring that we\nhave \\(\\ell^p(N) \\lambda_{-1}(N) = \\lambda^p(\\lambda_{-1}(N))\\). Since we are in a big field \\(K\\) and since\n\\(\\lambda_{-1}(N) \\neq 0\\), we conclude \\(\\ell^p(N) = \\lambda^p(N,1)\\); the two members lie in\nthe intersection of \\(K(G)\\) and of the ring of formal power series in the \\(\\lambda^i N\\),\nhence are polynomials in the \\(\\lambda^i N\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove (1.33) in the general case, one verifies that the second\nmember satisfies in \\(K(G)\\) the formula analogous to (1.32), that is,\nthat its product by \\(\\lambda_{-1}(N)\\) is \\(\\lambda^p(F \\lambda_{-1}(N))\\). Likewise, the product of\n\\(\\lambda^p(N,F) \\in K(G)\\) by \\(\\lambda_{-1}(N)\\) is \\(\\lambda^p(F \\lambda_{-1}(N))\\), as follows from the fact\nthat \\(K(G)\\) is <u>special</u>. As \\(K(G)\\) is an integral domain (cf § 2) and as \\(\\lambda_{-1}(N) \\neq 0\\)\n(same reference), we have indeed proved formula (1.33). qed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remarks</u>: a) When the dimension \\(q'\\) of \\(F\\) is \\(\\geq p\\), then (1.33) characterizes\nthe polynomial \\(\\lambda^p(N,x)\\) in the \\(\\lambda^i N\\) (\\(1 \\leq i \\leq q\\)) and the \\(\\lambda^j x\\) (\\(1 \\leq j \\leq p\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) It is plausible that (1.33) is still satisfied if the field \\(k\\)\nis not algebraically closed<sup class=\"footnote-ref\"><a id=\"0-fn9ref\" href=\"#0-fn9\">(∗)</a></sup>. This question would have to be resolved\nif one wanted to prove the Riemann-Roch theorem over a field of characteristic\n\\(0\\) which is not algebraically closed, by the method we are about to expound. The\npassage from a \\(\\mathfrak{S}_p\\)-module to its alternating part moreover has a reasonable\nmeaning only if the base field is of characteristic \\(0\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Now let \\(K\\) be an arbitrary <u>special</u> \\(\\lambda\\)-ring and let \\(N\\) be an element\nof \\(K\\) such that \\(\\lambda^i N = 0\\) for \\(i\\) sufficiently large. One can then, for every\n\\(x \\in K\\) and every integer \\(p \\geq 1\\), consider the elements \\(\\lambda^p(N,x)\\), which are expressed\nby universal polynomials with integer coefficients in the\n\\(\\lambda^i N\\) and the \\(\\lambda^j x\\). We have \\(\\lambda^1(N,x) = x\\) and formula (1.32) holds <u>in</u> \\(K\\). To\nexpress the properties of the operations \\(x \\mapsto \\lambda^p(N,x)\\), it is convenient\nto introduce a new \\(\\lambda\\)-ring denoted \\(K_N\\). As a commutative ring,\n\\(K_N\\) is obtained by adjoining a unit to the ring whose underlying additive\ngroup is \\(K\\) and whose multiplication is given by\n\\[x_N y = xy\\mu \\qquad (\\mu = \\lambda_{-1}(N)) . \\tag{1.34}\\]\nThe map \\(\\lambda_t\\) from \\(K_N\\) into \\(K_N[[t]]\\) is defined by:\n\\[\\lambda_t(n,x) = (1 + t)^n \\sum_{p \\geq 0} \\lambda^p(N,x) t^p , \\tag{1.35}\\]\nwhere we have set \\(\\lambda^0(N,x) = (1,0)\\) (unit element of \\(K_N\\)). I claim that,\n<u>equipped with these operations, \\(K_N\\) is a special \\(\\lambda\\)-ring</u>. It is thus a matter of\nverifying the formulas \\(\\lambda_t(X + Y) = \\lambda_t(X) \\lambda_t(Y)\\), \\(\\lambda_t(XY) = \\lambda_t(X).\\lambda_t(Y)\\), and\n\\(\\lambda_t(\\lambda^i(X)) = \\lambda^i(\\lambda_t(X))\\) for \\(X,Y \\in K_N\\). One may restrict oneself to verifying these\nformulas when \\(X\\) and \\(Y\\) are in \\(K\\), and one finds that it suffices to\nverify it when \\(K\\) is the free special \\(\\lambda\\)-ring generated by \\(X,Y\\)\nand \\(N\\) subject to the relations \\(\\lambda^i N = 0\\) for \\(i &gt; q\\). But the homomorphism of\ngroups\n\\[K_N \\to K , \\tag{1.36}\\]\nwhich transforms unit into unit and on \\(K\\) reduces to the homomorphism \\(x \\to x\\mu\\),\nis a homomorphism compatible with the ring structures and the\nmaps \\(\\lambda^i\\), as one verifies at once. In the present case,\nits restriction to \\(K\\) is <u>injective</u>; as \\(K\\) is a special \\(\\lambda\\)-ring, it\nfollows easily that the above relations are indeed satisfied\nfor \\(X,Y \\in K\\), and this completes the proof of our assertion.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>According to formula (1.23), it is natural, for \\(x \\in K\\) and \\(n \\geq 1\\), to\nset\n\\[\\gamma^n(N,x) = \\sum_{i=0}^{n-1} \\binom{n-1}{i} \\lambda^i(N,x) , \\tag{1.37}\\]\nin other words, we set \\(\\gamma^n(N,x) = \\gamma^n(x_N)\\), where \\(x_N\\) denotes \\(x\\) considered\nas an element of the \\(\\lambda\\)-ring \\(K_N\\).</p>"
+    },
+    {
+     "id": "0.app.1.5",
+     "type": "proposition",
+     "label": "1.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.1.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">1.5</span></div>\n  <div class=\"thm-body\"><p>Let \\(A\\) be a commutative graded ring with unit, \\(N\\)\n  an element of \\(\\tilde{A}\\) of the form \\(N = [q, 1 + N^1 + \\dots + N^q]\\) and \\(x\\) an arbitrary\n  element of \\(\\tilde{A}\\): \\(x = [\\nu, 1 + \\sum_{i \\geq 1} x^i]\\). Then, for every integer \\(j \\geq 0\\),\n  we have \\(\\gamma^{q+j}(N,x) \\in \\tilde{A}^j\\), and the component of degree \\(j\\) of \\(\\gamma^{q+j}(N,x)\\) is\n  of the form\n  \\[(\\gamma^{q+j}(N,x))^{(j)} = (-1)^{j-1}(j - 1)! \\, G_{q,j}(\\nu,x^1,\\dots,x^j; N^1,\\dots,N^j) , \\tag{1.38}\\]\n  where \\(G_{q,j}\\) is a universal polynomial with integer coefficients characterized by\n  the condition\n  \\[G_{q,j}(\\nu,x^1,\\dots,N^j) \\, N^q = (-1)^q (x \\ast \\lambda_{-1}(N))^{(q+j)} . \\tag{1.39}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>. We may suppose that \\(A\\) is the ring of polynomials with integer\ncoefficients in indeterminates \\(x^i\\) and \\(N^j\\) (with \\(1 \\leq j \\leq q\\)). As\nwe evidently have, combining (1.32) and (1.37),\n\\[\\gamma^n(N,x)\\lambda_{-1}(N) = \\gamma^n(x \\lambda_{-1}(N)) , \\tag{1.40}\\]\nand as, for \\(n = q + j\\), the second member is of filtration \\(\\geq q + j\\)\n(use formula (1.22 bis), taking into account that \\(x \\lambda_{-1}(N)\\) has\nzero augmentation), while \\(\\lambda_{-1}(N)\\) is of filtration \\(q\\) \\(formule\n(1.22)\\), it follows that \\(\\gamma^n(N,x)\\) is of filtration \\(j\\), since by\nvirtue of (1.18) the graded ring associated to \\(A\\) is here an <u>integral domain</u>. Using the\npreceding formulas, one immediately obtains the indicated form for\n\\((\\gamma^{q+j}(N,x))^{(j)}\\). qed.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "0-fn3",
+     "number": "(∗)",
+     "html": "<p>(∗) In this seminar, we rather say <u>pre-\\(\\lambda\\)-ring</u> (V 2.1), reserving the name \\(\\lambda\\)-ring for those satisfying the supplementary condition of page 3 (cf V 2.4). </p>"
+    },
+    {
+     "id": "0-fn4",
+     "number": "(∗)",
+     "html": "<p>(∗) It is unnecessary for \\(k\\) to be algebraically closed, cf.(VI 3.3) for an even more general result (encompassing all those which will be used in the present report). </p>"
+    },
+    {
+     "id": "0-fn5",
+     "number": "(¹)",
+     "html": "<p>(¹) One can construct other examples of \\(\\lambda\\)-rings, for example the set of equivalence classes of quadratic forms, the set of classes of representations of a Lie algebra, etc... We promise that we shall not need all these examples to treat the Riemann-Roch theorem! </p>"
+    },
+    {
+     "id": "0-fn6",
+     "number": "(∗)",
+     "html": "<p>(∗) An unnecessary condition, cf. the preceding footnote.  </p>"
+    },
+    {
+     "id": "0-fn7",
+     "number": "(∗)",
+     "html": "<p>(∗) Cf. Séminaire Chevalley 1956/58 Groupes de Lie algébriques (Ecole Normale Supérieure). </p>"
+    },
+    {
+     "id": "0-fn8",
+     "number": "(∗)",
+     "html": "<p>(∗) One must suppose the derived group \\(G'\\) of \\(G\\) simply connected for this statement to be correct. </p>"
+    },
+    {
+     "id": "0-fn9",
+     "number": "(∗)",
+     "html": "<p>(∗) This is indeed proved by the same method. </p>"
+    }
+   ]
+  },
+  {
+   "id": "0-app-II",
+   "title": "Chapter II. Classes of coherent algebraic sheaves and Chern classes",
+   "blocks": [
+    {
+     "id": "0.app.II",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"0.app.II\">Chapter II. Classes of coherent algebraic sheaves and Chern classes</h2>"
+    },
+    {
+     "id": "0.app.II.1",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.II.1\">§ 1. Chow theory</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Throughout this chapter, we suppose fixed a <u>base field \\(k\\)</u> which we\nshall suppose algebraically closed, for simplicity. A large part of what\nfollows, and perhaps all of it, is however valid without this restriction.\nThe algebraic spaces and the regular maps considered\nwill be defined over \\(k\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>An algebraic space is said to be <u>quasi-projective</u> if it is isomorphic to\na locally closed subset of a projective space.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be a connected quasi-projective non-singular variety of dimension\n\\(n\\). One denotes by \\(A(X)\\) and calls the <u>Chow ring</u> of \\(X\\) the graded\nring of classes of cycles on \\(X\\) up to rational equivalence. (\\(A^i(X)\\)\nbeing formed by the classes of cycles of dimension \\(n - i\\)). The fact that \\(A(X)\\)\nis indeed a graded ring follows from the following theorem of Chow:</p>"
+    },
+    {
+     "id": "0.app.2.1",
+     "type": "theorem",
+     "label": "2.1",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.1</span><sup class=\"footnote-ref\"><a id=\"0-fn10ref\" href=\"#0-fn10\">(∗)</a></sup></div>\n  <div class=\"thm-body\"><p>Every cycle on \\(X\\) is rationally equivalent to a non-singular\n  cycle. Given elements of \\(A^i(X)\\) and \\(A^j(X)\\), one can\n  find non-singular representatives of these elements, say\n  \\(Y^{n-i}\\) and \\(Z^{n-j}\\), which intersect everywhere transversally.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(A cycle is said to be non-singular if its components are non-singular\nsubvarieties. One says that two cycles intersect everywhere transversally\nif every component of one intersects every component of the other everywhere\ntransversally, i.e. if the two intersecting varieties are non-singular\nat the points of intersection and if their tangent varieties there are in\ngeneral position ...)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(f\\) be a morphism (i.e. a regular map) from \\(X\\) into \\(Y\\)\n(\\(X\\) and \\(Y\\) being quasi-projective and non-singular); then \\(f\\) defines\n(using the preceding theorem) a homomorphism of graded rings:\n\\[f^* \\colon A(Y) \\to A(X) \\tag{2.1}\\]\n(<u>inverse image of cycle classes</u>). Thus \\(A(X)\\) becomes a contravariant\nfunctor in \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(f\\) be a <u>proper</u> morphism from \\(X^n\\) into \\(Y^m\\) (i.e., in the terminology\nof Weil, the graph of \\(f\\) is complete over \\(Y\\), cf \\([3]\\)). Then \\(f\\)\nalso defines an additive homomorphism\n\\[f_* \\colon A(X^n) \\to A(Y^m) \\tag{2.2}\\]\npreserving the dimension of cycles, hence raising the degree by \\(m - n\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, with respect to proper morphisms, and disregarding the\nmultiplicative structures and the gradings, \\(A(X)\\) is a covariant functor\nin \\(X\\). Let us note the classical formula\n\\[f_*(x.f^*(y)) = f_*(x).y . \\tag{2.3}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall also use the Chow theory of Chern classes. It\nconsists in attaching, to every vector bundle \\(E\\) on \\(X\\) (always supposed\nquasi-projective non-singular), <u>Chern classes</u> \\(C^i(E) \\in A^i(X)\\),\n(\\(i \\geq 1\\)), so as to satisfy the following conditions; we set \\(C^0(E) = 1\\)\nand\n\\[\\tilde{C}(E) = \\left[\\operatorname{rang} E, \\sum_{i \\geq 0} C^i(E)\\right] \\in \\tilde{A}(X) \\tag{2.4}\\]\n(see Chapter I, § 3 for the definition of \\(\\tilde{A}(X)\\)). The conditions to be verified\nby a theory of Chern classes are then expressed as follows:\n\\[\\tilde{C}(E) = \\tilde{C}(E') + \\tilde{C}(E'') \\tag{2.5}\\]\nif the vector bundle \\(E\\) is an extension of \\(E'\\) by \\(E''\\) (if we set\n\\(C(E) = \\sum_{i \\geq 0} C^i(E)\\), this condition is expressed \\(C(E) = C(E').C(E'')\\)). Formula\n(2.5) makes it possible to extend \\(\\tilde{C}\\) to an additive homomorphism from \\(K(\\xi(X))\\)\n(cf. Chap. I, § 2, example 2) into \\(\\tilde{A}(X)\\):\n\\[\\tilde{C} \\colon K(\\xi(X)) \\to \\tilde{A}(X) , \\tag{2.6}\\]\nand one requires that \\(\\tilde{C}\\) be a <u>\\(\\lambda\\)-homomorphism of \\(\\lambda\\)-rings</u>; this last\ncondition can also be written\n\\[\\tilde{C}(E \\otimes F) = \\tilde{C}(E) \\tilde{C}(F) \\qquad \\tilde{C}(\\wedge^i E) = \\lambda^i \\tilde{C}(E) , \\tag{2.7}\\]\nfor two vector bundles \\(E\\) and \\(F\\) (of course, \\(\\tilde{C}\\) is automatically\ncompatible with the augmentations). Let \\(D\\) be a divisor on \\(X\\) and \\(L(D)\\)\nthe vector bundle it defines; one requires\n\\[C^1(L(D)) = \\ell(D) \\qquad C^i(L(D)) = 0 \\quad (i \\geq 1) \\tag{2.8}\\]\n(where for an arbitrary cycle \\(Z\\), we denote by \\(\\ell(Z)\\) its class in \\(A(X)\\)). Finally,\none imposes that the \\(C^i\\) be <u>functorial</u>, i.e. that if \\(f\\) is a morphism\nfrom \\(X\\) into \\(Y\\) and \\(E\\) a vector bundle on \\(Y\\), we have\n\\[C^i(f^!(E)) = f^*(C^i(E)) , \\tag{2.9}\\]\nwhere \\(f^!(E)\\) is the inverse image of \\(E\\) on \\(X\\). One can also write (2.9) in\nthe following form: the notion of inverse image of a bundle defines a \\(\\lambda\\)-homomorphism\nof augmented \\(\\lambda\\)-rings<sup class=\"footnote-ref\"><a id=\"0-fn11ref\" href=\"#0-fn11\">(∗)</a></sup>\n\\[f^! \\colon K(Y) \\to K(X) \\tag{2.10}\\]\n(one writes here \\(K(X)\\) instead of \\(K(\\xi(X))\\)), and (2.9) means that we have commutativity\nin the diagram:\n\\[\\xymatrix@C=3em@R=2.5em{\nK(Y) \\ar[r]^{f^!} \\ar[d]_{\\tilde{C}_Y} &amp; K(X) \\ar[d]^{\\tilde{C}_X} \\\\\nA(Y) \\ar[r]_{f^*} &amp; A(X)\n}\\]\n(the symbol \\(\\tilde{C}\\) has been given as a subscript the space on which it is considered.)</p>"
+    },
+    {
+     "id": "0.app.2.2",
+     "type": "theorem",
+     "label": "2.2",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.2</span></div>\n  <div class=\"thm-body\"><p>There exists a theory of Chern classes satisfying\n  conditions (2.5), (2.7), (2.8) and (2.9).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall also assume the following proposition:</p>"
+    },
+    {
+     "id": "0.app.2.3",
+     "type": "proposition",
+     "label": "2.3",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(Y\\) be a closed subset of \\(X\\) and let \\(U\\) be its complement;\n  if \\(x\\) is an element of \\(A(X)\\) which induces \\(0\\) on \\(U\\), there exists a\n  representative of \\(x\\) which is a cycle carried by \\(Y\\).</p></div>\n</div>"
+    },
+    {
+     "id": "0.app.2.3.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.3.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span></div>\n  <div class=\"thm-body\"><p>Let \\(p = \\dim X - \\dim Y\\). Then, if \\(i &lt; p\\), the homomorphism\n  \\(A^i(X) \\to A^i(U)\\) is bijective. Every element of the kernel of \\(A^p(X) \\to A^p(U)\\)\n  is a linear combination of components of dimension \\(n - p\\) of \\(Y\\) (hence\n  is proportional to \\(\\ell(Y)\\) if \\(Y\\) is irreducible)</p></div>\n</div>"
+    },
+    {
+     "id": "0.app.II.2",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.II.2\">§ 2. Definition of the Chern classes of coherent algebraic sheaves</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\mathcal{C}\\) be an abelian category, and let \\(\\mathcal{C}_o\\) be a subclass of \\(\\mathcal{C}\\).\nOne denotes by \\(K(\\mathcal{C}_o)\\) the quotient group of the free group generated by the\nclasses (up to isomorphism) of elements of \\(\\mathcal{C}_o\\), by the subgroup generated\nby the elements of the form \\((E) - (E') - (E'')\\), where \\(E\\) is an <u>extension</u>\nof \\(E'\\) by \\(E''\\) (\\(E,E',E'' \\in \\mathcal{C}_o\\)). One must suppose that the classes of elements of\n\\(\\mathcal{C}_o\\) for the isomorphism relation form a set. One denotes by\n\\(\\gamma_{\\mathcal{C}_o}(E)\\) the class of a \\(E \\in \\mathcal{C}_o\\) in \\(K(\\mathcal{C}_o)\\), and one omits the index \\(\\mathcal{C}_o\\) when\nthere is no risk of confusion. The group \\(K(\\mathcal{C}_o)\\) is the solution of a\n<u>universal problem</u> relative to the functions \\(E \\to f(E)\\) defined on \\(\\mathcal{C}_o\\), with\nvalues in an arbitrary abelian group \\(A\\), and which are <u>additive</u> in the\nsense that \\(f(E) = f(E') + f(E'')\\) whenever \\(E\\) is an extension of \\(E'\\) by \\(E''\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(F\\) be an additive functor from \\(\\mathcal{C}\\) into \\(\\mathcal{C}'\\) and \\(\\mathcal{C}_o'\\) a subclass of\n\\(\\mathcal{C}'\\) satisfying the same condition as \\(\\mathcal{C}_o\\), such that for every \\(A \\in \\mathcal{C}_o\\),\nthe \\(R^q F(A)\\) are in \\(\\mathcal{C}_o'\\) and zero for \\(q\\) sufficiently large (one supposes that in \\(\\mathcal{C}\\)\ninjective resolutions exist, so that the derived functors\n\\(R^q F\\) of \\(F\\) exist); then \\(F\\) defines a homomorphism from \\(K(\\mathcal{C}_o)\\) into \\(K(\\mathcal{C}_o')\\),\nagain denoted \\(F\\), by the formula\n\\[F(\\gamma_{\\mathcal{C}_o}(E)) = \\sum_{i \\geq 0} (-1)^i \\gamma_{\\mathcal{C}_o'}(R^i F(E)) \\tag{2.11}\\]\nMore generally, if one has a cohomological functor \\((F^i)\\) from \\(\\mathcal{C}\\) into \\(\\mathcal{C}'\\)\nsuch that for every \\(E \\in \\mathcal{C}_o\\) the \\(F^i(E)\\) are in \\(\\mathcal{C}_o'\\) and zero except for a finite\nnumber, one deduces from it a homomorphism from \\(K(\\mathcal{C}_o)\\) into \\(K(\\mathcal{C}_o')\\). These remarks\nextend to multifunctors; moreover, the \"classical\" spectral sequences\ngive transitivity properties which we shall not make explicit.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In particular, if \\(F\\) is an exact functor, formula (2.11)\nsimplifies:\n\\[F(\\gamma_{\\mathcal{C}_o}(E)) = \\gamma_{\\mathcal{C}_o'}(F(E)) . \\tag{2.11 bis}\\]\nThis applies in particular if \\(\\mathcal{C} = \\mathcal{C}'\\), if \\(F\\) is the identity functor\nand if \\(\\mathcal{C}_o \\subset \\mathcal{C}_o'\\): we have a canonical homomorphism from \\(K(\\mathcal{C}_o)\\) into \\(K(\\mathcal{C}_o')\\).</p>"
+    },
+    {
+     "id": "0.app.2.3bis",
+     "type": "theorem",
+     "label": "2.3",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.3bis\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(\\mathcal{C}\\) be an abelian category and \\(\\mathcal{C}_o \\subset \\mathcal{C}_1\\) two subclasses\n  such that the classes (up to isomorphism) of objects of \\(\\mathcal{C}_1\\) form a\n  set. We suppose the following conditions satisfied</p>\n  <p>(i) For every exact sequence \\(0 \\to A' \\to A \\to A'' \\to 0\\) in \\(\\mathcal{C}\\) such\n  that \\(A\\) and \\(A''\\) are in \\(\\mathcal{C}_o\\) (resp. \\(\\mathcal{C}_1\\)), we have \\(A' \\in \\mathcal{C}_o\\) (resp. \\(A' \\in \\mathcal{C}_1\\)).</p>\n  <p>(ii) Let \\(u \\colon A \\to B\\) and \\(v \\colon C \\to B\\) with \\(A, B, C \\in \\mathcal{C}_1\\) and \\(u\\) surjective;\n  then there exist \\(L \\in \\mathcal{C}_o\\) and homomorphisms \\(u' \\colon L \\to C\\) and \\(v' \\colon L \\to A\\)\n  such that \\(u'\\) is surjective and \\(vu' = uv'\\) .</p>\n  <p>(iii) For every \\(A \\in \\mathcal{C}_1\\), there exists an integer \\(d = d(A)\\) such that for\n  every left resolution \\(L\\) of \\(A\\) by objects of \\(\\mathcal{C}_o\\), we have \\(Z_d(L) \\in \\mathcal{C}_o\\)\n  (\\(Z_d\\) denotes the cycles of dimension \\(d\\)).</p>\n  <p>Under these conditions, the canonical homomorphism from \\(K(\\mathcal{C}_o)\\) into \\(K(\\mathcal{C}_1)\\)\n  is an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Principle of the proof</u>: let \\(A \\in \\mathcal{C}_1\\); by virtue of\n(ii) and (iii) there exists a finite resolution \\(L\\) of \\(A\\) by objects of \\(\\mathcal{C}_o\\); let us\nthen set \\(f(A) = \\sum_{i \\geq 0} (-1)^i \\gamma_{\\mathcal{C}_o}(L^i)\\). One shows that the element of \\(K(\\mathcal{C}_o)\\) thus constructed\ndoes not depend on the chosen resolution \\(L\\): if we have a second resolution\n\\(L'\\), we \"cap\" \\(L\\) and \\(L'\\) by a third resolution \\(L''\\), with\n<u>surjective</u> homomorphisms from \\(L''\\) into \\(L\\) and \\(L'\\) (which is possible thanks\nto (i) and (ii); we are then reduced to proving \\(\\mathrm{E}_{\\mathcal{C}_o}(L) = \\mathrm{E}_{\\mathcal{C}_o}(L'')\\). Now the\ndifference of the two is \\(\\mathrm{E}_{\\mathcal{C}_o}(N)\\) where \\(N\\) is the kernel of the surjective\nhomomorphism from \\(L''\\) onto \\(L\\), a kernel which is in \\(\\mathcal{C}_o\\) by (i). Now \\(N\\) is a complex\nwhich is acyclic in all dimensions, whence \\(\\mathrm{E}_{\\mathcal{C}_o}(N) = 0\\), whence the conclusion (N.B.\n\\(\\mathrm{E}_{\\mathcal{C}_o}(L)\\), for a finite complex with values in \\(\\mathcal{C}_o\\), denotes the Euler-Poincaré\ncharacteristic \\(\\sum_{i \\geq 0} (-1)^i \\gamma_{\\mathcal{C}_o}(L^i)\\) of \\(L\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One proves in an analogous way that the function \\(f \\colon \\mathcal{C}_1 \\to K(\\mathcal{C}_o)\\) thus\nconstructed is <u>additive</u>, hence defines a homomorphism from \\(K(\\mathcal{C}_1)\\) into \\(K(\\mathcal{C}_o)\\),\nand it is immediate that this homomorphism is inverse to the canonical\nhomomorphism from \\(K(\\mathcal{C}_o)\\) into \\(K(\\mathcal{C}_1)\\). qed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remark</u>: To verify (ii), it suffices to verify that \\(\\mathcal{C}_1\\) is contained\nin a subclass \\(\\mathcal{C}_2\\) of \\(\\mathcal{C}\\) satisfying the two conditions</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii a) Every \\(A \\in \\mathcal{C}_2\\) is isomorphic to a quotient of a \\(L \\in \\mathcal{C}_o\\) .</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii b) If \\(u \\colon A \\to B\\), with \\(A,B \\in \\mathcal{C}_2\\), then \\(\\operatorname{Ker} u \\in \\mathcal{C}_2\\) .</p>"
+    },
+    {
+     "id": "0.app.2.3bis.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.3bis.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a quasi-projective algebraic space. Let \\(\\mathscr{F}(X)\\)\n  be the category of coherent algebraic sheaves on \\(X\\), \\(\\xi(X)\\) the category\n  of locally free coherent algebraic sheaves (equivalent to the\n  category of vector bundles on \\(X\\)), \\(\\mathscr{F}_o(X)\\) the category of coherent\n  algebraic sheaves \\(F\\) such that for every \\(x \\in X\\), \\(F_x\\) is a \\(\\mathcal{O}_x\\)-module\n  of finite cohomological dimension (we thus have \\(\\xi(X) \\subset \\mathscr{F}_o(X) \\subset \\mathscr{F}(X)\\)). Then\n  the canonical homomorphism\n  \\[K(\\xi(X)) \\to K(\\mathscr{F}_o(X)) \\tag{2.12}\\]\n  is an isomorphism.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall verify the conditions of Theorem 2.3. Conditions (i) and\n(iii) follow from the definition of cohomological dimension and from the fact\nthat a projective module of finite type over the noetherian local ring \\(\\mathcal{O}_x\\) is\nfree. To verify (ii), we shall prove that \\(\\mathcal{C} = \\mathscr{F}(X)\\) satisfies\nconditions (ii a) and (ii b) of the remark. The second is trivial;\nit thus remains to prove the following result:</p>"
+    },
+    {
+     "id": "0.app.2.4",
+     "type": "proposition",
+     "label": "2.4",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.4</span> (Serre)</div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a quasi-projective algebraic space. Then\n  every coherent algebraic sheaf on \\(X\\) is isomorphic to the quotient of a\n  locally free algebraic sheaf.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This proposition is true if \\(X\\) is a closed subset of projective\nspace by virtue of \\([2]\\), since, for \\(n\\) sufficiently large, \\(F(n)\\) is generated\nby its sections, which means that \\(F\\) is a quotient of a \\(\\mathcal{O}(-n)^k\\). In the\ngeneral case, \\(X\\) is an open subset of a closed subset of a projective\nspace, and it suffices to use the following result (due to Cartier and\nSerre in particular cases):</p>"
+    },
+    {
+     "id": "0.app.2.5",
+     "type": "proposition",
+     "label": "2.5",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.5\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.5</span></div>\n  <div class=\"thm-body\"><p>Let \\(F\\) be a coherent algebraic sheaf on an open\n  subset \\(U\\) of an algebraic space \\(X\\). Then \\(F\\) is isomorphic to the restriction\n  of a coherent algebraic sheaf on \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By Zornifying over the open sets containing \\(U\\) to which one can extend\n\\(F\\), we are reduced to the case where \\(X\\) is affine. Let \\(\\bar{F}\\) be the algebraic\nsheaf on \\(X\\) whose sections over an open set \\(V\\) are the sections of \\(F\\) over\n\\(U \\cap V\\). One easily finds that \\(\\bar{F}\\) is <u>quasi-coherent</u> (i.e. defined on\nevery affine open \\(V\\) — hence here on all of \\(X\\) — by a module, of finite type\nor not, over the coordinate ring of the open set in question). This is\nimmediate if \\(U\\) is itself affine, for \\(\\bar{F}\\) is then defined on the open set \\(V\\)\nby \\(\\Gamma(U \\cap V,F)\\) considered as a module over \\(\\Gamma(V,\\mathcal{O}_X)\\). In the general case,\n\\(U\\) is a finite union of affine open sets \\(U_i\\), hence \\(\\bar{F}\\) is the kernel of an evident\nhomomorphism of quasi-coherent sheaves:\n\\[\\sum_i \\bar{F}\\,|\\,U_i \\to \\sum_{i,j} \\bar{F}\\,|\\,U_i \\cap U_j\\]\nhence is itself quasi-coherent. As \\(X\\) is supposed affine, \\(\\bar{F}\\) is therefore\ngenerated by its sections. As \\(\\bar{F}\\,|\\,U = F\\) is coherent, there exists a\nfinite number of sections of \\(\\bar{F}\\) which generate \\(\\bar{F}\\,|\\,U\\). These sections generate\na coherent subsheaf of \\(\\bar{F}\\), whose restriction to \\(U\\) is isomorphic to \\(F\\).\nqed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose now \\(X\\) quasi-projective <u>non-singular</u>. Then, by\nvirtue of the syzygy theorem, we have, with the notations of the corollary to\nTheorem 2.3, \\(\\mathscr{F}_o(X) = \\mathscr{F}(X)\\). In this case, we therefore have:\n\\[K(\\xi(X)) = K(\\mathscr{F}(X)) . \\tag{2.13}\\]\nThis isomorphism can be expressed as follows:</p>"
+    },
+    {
+     "id": "0.app.2.3bis.cor2",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 2 to Theorem 2.3",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.3bis.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 2 to Theorem 2.3</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a non-singular quasi-projective variety.\n  For every abelian group \\(A\\), there is a one-to-one correspondence between\n  the additive functions \\(f\\) of vector bundles on \\(X\\), with values in \\(A\\), and\n  the additive functions \\(g\\) of coherent algebraic sheaves on \\(X\\), with\n  values in \\(A\\). To every \\(f\\) corresponds the unique \\(g\\) such that we have:\n  \\[f(E) = g(\\mathcal{O}_X(E)) \\tag{2.14}\\]\n  for every vector bundle \\(E\\) on \\(X\\), denoting by \\(\\mathcal{O}_X(E)\\) the sheaf of germs\n  of regular sections of \\(E\\) over \\(X\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To compute \\(g(F)\\) for an arbitrary coherent algebraic sheaf,\none considers a finite resolution of \\(F\\) by sheaves of the form \\(\\mathcal{O}_X(E_i)\\),\nand one then has:\n\\[g(F) = \\sum_{i \\geq 0} (-1)^i f(E_i) . \\tag{2.14 bis}\\]\nIn particular, if \\(X\\) is connected, we envisaged in § 1 an additive\nfunction \\(\\tilde{C}(E)\\) of the vector bundle \\(E\\), with values in the group \\(\\tilde{A} = \\tilde{A}(X)\\). From it one\ndeduces an additive function of coherent sheaves, say \\(\\tilde{C}(F)\\), and by\npassing to the components, functions \\(F \\to C^i(F) \\in A^i(X)\\). The \\(C^i(F)\\) are\ncalled the <u>Chern classes of the coherent sheaf</u> \\(F\\); they can theoretically\nbe computed from the Chern classes of vector bundles by\n(2.14 bis) (but where one must pass, in the second member, to the multiplicative\nnotation). As for the component of \\(\\tilde{C}(F)\\) along \\(\\mathbb{Z}\\), it is the <u>rank</u> of the\nsheaf \\(F\\), which corresponds to the rank of a module over an integral domain:\nif \\(X\\) is affine (a case to which one can always reduce), \\(F\\) is defined by\na module of finite type over the coordinate ring of \\(X\\), and one takes\nthe rank of this module ....</p>"
+    },
+    {
+     "id": "0.app.II.3",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.II.3\">§ 3. Functorial generalities on \\(K(X)\\)</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X\\) is an algebraic space, we set for brevity \\(K(X) = K(\\mathscr{F}(X))\\),\nand when \\(X\\) is quasi-projective non-singular, we identify this group\nwith \\(K(\\xi(X))\\) by virtue of Corollary 2 to Theorem 2.3. As \\(K(\\xi(X))\\) is\nnot only an abelian group, but a \\(\\lambda\\)-ring, it follows by transport\nof structure that \\(K(X)\\) is also a \\(\\lambda\\)-ring, hence is equipped with a\nmultiplicative structure and with maps \\(\\lambda^i\\). It is important to define these\nstructures directly, without passing to vector bundles, which will be\ndone below.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(E\\) is a vector bundle on \\(X\\), we denote by \\(\\gamma(E)\\) its class\nin \\(K(X)\\); if \\(F\\) is a coherent algebraic sheaf on \\(X\\), \\(\\gamma(F)\\) likewise denotes\nits class in \\(K(X)\\). If \\(Y\\) is an irreducible subvariety of\n\\(X\\), we set \\(\\gamma(Y) = \\gamma(\\mathcal{O}_Y)\\), where \\(\\mathcal{O}_Y\\) denotes the sheaf of local rings of\n\\(Y\\), considered as a coherent algebraic sheaf on \\(X\\). One defines by\nlinearity the symbol \\(\\gamma(Y)\\) when \\(Y\\) is an arbitrary cycle on \\(X\\). When\nthere are risks of confusion, one writes \\(\\gamma_X\\) for \\(\\gamma\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be an arbitrary algebraic space. One introduces on \\(K(X)\\) a\n<u>filtration</u>, by denoting by \\(K(X)^i\\) the subgroup of \\(K(X)\\) generated by\nthe \\(\\gamma(F)\\) with \\(\\dim.\\operatorname{supp} F \\leq n - i\\) (where \\(n\\) is the dimension of \\(X\\)). From\nSerre's \"dévissage lemma\", in the form given in \\([3]\\), follows the following\nresult:</p>"
+    },
+    {
+     "id": "0.app.2.6",
+     "type": "proposition",
+     "label": "2.6",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.6\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.6</span></div>\n  <div class=\"thm-body\"><p>The group \\(K(X)^i\\) is generated by the \\(\\gamma(Y)\\), where \\(Y\\) runs over\n  the set of subvarieties of dimension \\(\\leq n - i\\) of \\(X\\). If \\(X\\) is irreducible,\n  we have \\(G^o(K(X)) = \\mathbb{Z}\\) .</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This last isomorphism is given by the homomorphism from \\(K(X)\\) into\n\\(\\mathbb{Z}\\) defined with the help of the notion of <u>rank</u> of a coherent algebraic sheaf.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose now \\(X\\) <u>non-singular</u>. Taking inspiration from the developments\nat the beginning of § 2, one defines a multiplication on \\(K(X)\\) by setting\n\\[\\gamma(F) \\gamma(G) = \\sum_{i \\geq 0} (-1)^i \\gamma(\\operatorname{Tor}_i(F,G)) \\tag{2.15}\\]\n(the \\(\\operatorname{Tor}_i\\) being taken, of course, with respect to the local rings of \\(X\\)).\nThe exact sequence of the \\(\\operatorname{Tor}_i\\) shows that formula (2.15) indeed defines a\nbiadditive map from \\(K(X) \\times K(X)\\) into \\(K(X)\\); associativity follows\nfrom the spectral sequence of the multiple Tor. One also verifies in this way\nthat one can compute the product of several factors by the formula:\n\\[\\gamma(F_1)\\dots\\gamma(F_p) = \\sum_{i \\geq 0} (-1)^i \\gamma(\\operatorname{Tor}_i(F_1,\\dots,F_p)) \\tag{2.16}\\]\nwhere, in the second member, the \\(\\operatorname{Tor}_i\\) are \"simultaneous Tor\", computed\nby simultaneous projective resolution of the arguments \\(F_i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If one supposes in (2.15) that \\(G\\) is <u>locally free</u>, one finds:\n\\[\\gamma(F) \\gamma(G) = \\gamma(F \\otimes G) , \\tag{2.15 bis}\\]\nwhich shows in particular that \\(\\gamma(\\mathcal{O}_X)\\) is the unit element of \\(K(X)\\), and that\nthe canonical homomorphism from \\(K(\\xi(X))\\) into \\(K(X)\\) is a ring homomorphism.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Formula (2.15) is evidently suggested by Serre's \"Tor formula\"\nin intersection theory. This formula proves the second\npart of the following proposition, the first resulting immediately from\nformula (2.15) and a computation of local \\(\\operatorname{Tor}_i\\):</p>"
+    },
+    {
+     "id": "0.app.2.7",
+     "type": "proposition",
+     "label": "2.7",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.7\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.7</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a non-singular variety, \\(Y\\) and \\(Z\\) two cycles\n  in \\(X\\). If \\(Y\\) and \\(Z\\) intersect everywhere transversally, we have:\n  \\[\\gamma(Y) \\gamma(Z) = \\gamma(Y.Z) \\tag{2.17}\\]\n  If \\(Y\\) and \\(Z\\) are homogeneous and of respective dimensions \\(n - i\\) and \\(n - j\\), and\n  if they intersect without excess component, we then have:\n  \\[\\gamma(Y) \\gamma(Z) = \\gamma(Y.Z) \\mod K(X)^{i+j+1} . \\tag{2.18}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One should beware that one does not in general have equality in (2.18).\nWe shall see in § 4 that, if \\(X\\) is <u>quasi-projective non-singular</u>, the ring\nstructure of \\(K(X)\\) is compatible with its filtration and that the associated graded\nring \\(G(K(X))\\) is identified with a quotient of \\(A(X)\\) by a torsion\nsubgroup (perhaps always reduced to \\(0\\)<sup class=\"footnote-ref\"><a id=\"0-fn12ref\" href=\"#0-fn12\">(∗)</a></sup>).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>I know how to define the \\(\\lambda^i(F)\\) directly in terms of sheaves only\nif the field \\(k\\) is of characteristic \\(0\\) (this is the reason which has prevented\nus from proving the Riemann-Roch theorem when \\(k\\) is not of characteristic\n\\(\\neq 0\\)). Let \\(F\\) be a coherent algebraic sheaf on \\(X\\) on which\nthe group \\(\\mathfrak{S}_p\\) of permutations of \\(p\\) letters acts; one then denotes by \\((F)^{\\mathrm{alt}}\\)\nthe set of the \\(x \\in F\\) such that \\(s.x = \\varepsilon(s)x\\) for every \\(s \\in \\mathfrak{S}_p\\) (\\(\\varepsilon(s)\\) is the\n<u>signature</u> of \\(s\\)). It is evidently a coherent algebraic subsheaf\nof \\(F\\). This said, we have:</p>"
+    },
+    {
+     "id": "0.app.2.8",
+     "type": "theorem",
+     "label": "2.8",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.8\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.8</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a quasi-projective non-singular variety over the\n  field \\(k\\) of characteristic \\(0\\). Let \\(F\\) be a coherent algebraic sheaf on\n  \\(X\\); we then have\n  \\[\\lambda^p(\\gamma(F)) = \\sum_{i \\geq 0} (-1)^i \\gamma((\\operatorname{Tor}_i(F,F,\\dots,F))^{\\mathrm{alt}}) \\tag{2.19}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>N.B. It is clear that the group \\(\\mathfrak{S}_p\\) acts on the sheaf \\(\\operatorname{Tor}_i(F,F,\\dots,F)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Principle of the proof</u>: one considers a finite resolution \\(L\\) of \\(F\\)\nby locally free sheaves \\(L_i\\), and one uses the following general\nlemma:</p>"
+    },
+    {
+     "id": "0.app.2.9",
+     "type": "lemma",
+     "label": "2.9",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.2.9\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\"><p>Let \\(L = (L_i)\\) be a graded locally free coherent algebraic sheaf,\n  having a finite number of non-zero components. We have in \\(K(X)\\)\n  the formula:\n  \\[\\mathrm{E}\\left(\\left(\\textstyle\\bigotimes^p L\\right)^{\\mathrm{alt}}\\right) = \\lambda^p(\\mathrm{E}(L)) \\tag{2.20}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In this formula, we consider \\(\\bigotimes^p L\\) as a sheaf on which the group\n\\(\\mathfrak{S}_p\\) acts taking the gradings into account (which therefore introduce signs\nin the well-known way, cf Cartan-Eilenberg); moreover, if \\(M\\) is a graded\ncoherent algebraic sheaf on \\(X\\), we set \\(\\mathrm{E}(M) = \\sum_{i \\geq 0} (-1)^i \\gamma(M_i)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove formula (2.20), we are reduced to proving the analogous\nformula in \\(K(G)\\), where \\(G\\) is an algebraic group (a product of groups\n\\(\\mathrm{Gl}(n,k)\\) if one insists) and \\(L\\) a \\(G\\)-module of finite dimension over \\(k\\) (cf.\nChap. I, § 2, example 2, for the definition of \\(K(G)\\)). In this case, this\nformula has already been used in Theorem 1.4, to show that the\nright-hand side of (1.33) satisfies the same functional equation as\nthe left-hand side; the verification of this is elementary. qed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(f\\) be a morphism from \\(X\\) to \\(Y\\), where \\(Y\\) is an algebraic space. The\nnotion of inverse image of a vector bundle defines a homomorphism\n\\[f^! \\colon K(\\xi(Y)) \\to K(\\xi(X))\\]\nof \\(\\lambda\\)-rings. Identifying vector bundles with locally free algebraic\nsheaves, the notion of inverse image of a vector bundle corresponds\nto the notion of inverse image of an algebraic sheaf (already used\nin [3, n° 8]). In the case where \\(Y\\) is nonsingular, one defines more generally\na homomorphism of groups:\n\\[f^! \\colon K(Y) \\to K(X) \\tag{2.21}\\]\nby a formula involving an alternating sum of Tor, inspired by\nthe developments at the beginning of § 2, and which the reader will make explicit. We\nthen have commutativity in the following diagram:\n\\[\\xymatrix@C=3em@R=2.5em{\nK(\\xi(Y)) \\ar[r]^{f^!} \\ar[d] &amp; K(\\xi(X)) \\ar[d] \\\\\nK(Y) \\ar[r]_{f^!} &amp; K(X)\n}\\]\nwhich shows in particular, when \\(X\\) and \\(Y\\) are both nonsingular\nand quasi-projective, that the two definitions of \\(f^!\\) coincide\nunder the identification of \\(K(X)\\) with \\(K(\\xi(X))\\) and of \\(K(Y)\\) with \\(K(\\xi(Y))\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Another case in which one can define a homomorphism (2.21), without\n\\(Y\\) necessarily being nonsingular, is the one in which the functor \\(F \\to f^!(F)\\)\nfrom \\(\\mathscr{F}(Y)\\) to \\(\\mathscr{F}(X)\\) is exact, i.e. when the local rings of \\(X\\) are\n<u>flat</u> modules over the local rings of \\(Y\\). It then suffices to set\n\\(f^!(\\gamma_Y(F)) = \\gamma_X(f^!(F))\\). This case occurs in particular when \\(X\\) is\na locally trivial fiber space over \\(Y\\) (to see this, one is reduced\nto the case of a product \\(X = T \\times Y\\)). Let us note that one also verifies that in this\ncase, we have \\(f^!(\\mathcal{O}_Z) = \\mathcal{O}_{f^{-1}(Z)}\\) if \\(Z\\) is an irreducible subvariety of \\(Y\\),\nwhence:\n\\[f^!(\\gamma_Y(Z)) = \\gamma_X(f^{-1}(Z)) \\tag{2.22}\\]\nif \\(X\\) is \"flat\" over \\(Y\\). Without this last condition, formula (2.22)\nbecomes incorrect in general, but we have the following analogue of Proposition\n2.7:</p>"
+    },
+    {
+     "id": "0.app.2.8p",
+     "type": "proposition",
+     "label": "2.8",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.8p\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.8</span></div>\n  <div class=\"thm-body\"><p>Let \\(f \\colon X \\to Y\\) be a morphism of nonsingular varieties,\n  and let \\(Z\\) be a cycle on \\(Y\\). If \\(Z\\) is everywhere transversal to \\(f\\), formula\n  (2.22) is valid; if \\(Z\\) is homogeneous of codimension \\(i\\) and if \\(f^{-1}(Z)\\) has\n  no excess component, we have:\n  \\[f^!(\\gamma_Y(Z)) \\equiv \\gamma_X(f^{-1}(Z)) \\mod K(X)^{i+1} . \\tag{2.23}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Proof analogous to that of Proposition 2.7.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us finally point out that we shall see in § 4 that, when \\(X\\) and \\(Y\\) are quasi-projective\nand nonsingular, then \\(f^!\\) is compatible with the filtrations\nof \\(K(X)\\) and of \\(K(Y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let again \\(X\\) and \\(Y\\) be two arbitrary algebraic spaces, and \\(f\\)\na <u>proper</u> morphism from \\(X\\) to \\(Y\\). For every coherent algebraic sheaf\n\\(F\\) on \\(X\\), the direct image sheaf \\(f_!(F)\\) is coherent algebraic, and the\nsame holds more generally for the sheaves \\(R^q f_!(F)\\) (cf. [3]). Recall\nthat, by definition, \\(R^q f_!(F)\\) is the sheaf on \\(Y\\) associated to the presheaf\nwhich to the open set \\(U\\) assigns the group \\(H^q(f^{-1}(U),F)\\); we have in\nparticular:\n\\[R^0 f_!(F) = f_!(F) , \\quad R^q f_!(F) = 0 \\quad (q &gt; \\dim X) , \\tag{2.24}\\]\nmoreover:\n\\[\\Gamma(U,R^q f_!(F)) = H^q(f^{-1}(U),F) \\tag{2.25}\\]\nif the open set \\(U\\) is affine. Following § 2, one defines a homomorphism from\n\\(K(X)\\) to \\(K(Y)\\), again denoted \\(f_!\\), by the formula\n\\[f_!(\\gamma_X(F)) = \\sum_{q \\geq 0} (-1)^q \\gamma_Y(R^q f_!(F)) . \\tag{2.26}\\]\nThus \\(K(X)\\) becomes a <u>covariant functor in \\(X\\)</u>, with respect to\n<u>proper</u> morphisms. The relation \\((fg)_! = f_! g_!\\) (just like the relation\n\\((fg)^! = g^! f^!\\) which we forgot to point out in its proper place) is a particular case\nof the transitivity relations to which we alluded\nin § 2, and which follow from the spectral sequences of composite functors.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let us note the following formula, valid for \\(Y\\) nonsingular (and particularly\neasy to verify when \\(Y\\) is moreover quasi-projective, by\ntaking for \\(y\\) the class of a vector bundle on \\(Y\\)):\n\\[f_!(x.f^!(y)) = f_!(x).y \\qquad (x \\in K(X) , y \\in K(Y)) . \\tag{2.27}\\]\nIn the particular case where the inverse images of the points of \\(Y\\) under \\(f\\)\nare finite, and contained in an affine open set<sup class=\"footnote-ref\"><a id=\"0-fn13ref\" href=\"#0-fn13\">(∗)</a></sup>, one observes that the\nfunctor \\(F \\to f_!(F)\\) is exact and that \\(R^q f_!(F) = 0\\) for \\(q &gt; 0\\); in\nthis case, we therefore have \\(f_!(\\gamma_X(F)) = \\gamma_Y(f_!(F))\\). In particular, if \\(X\\) is an\nalgebraic subspace of \\(Y\\) and if \\(i\\) is the canonical injection of \\(X\\) into\n\\(Y\\), we have:\n\\[i_!(\\gamma_X(F)) = \\gamma_Y(F) , \\tag{2.28}\\]\nwhere, in the right-hand side, \\(F\\) is considered as a sheaf on \\(Y\\) which is zero\noutside \\(X\\).</p>"
+    },
+    {
+     "id": "0.app.II.4",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.II.4\">§ 4. Some technical results</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) be an algebraic space; we saw in § 3 that the projection \\(p\\) of\n\\(X \\times k\\) onto \\(X\\) defines a homomorphism\n\\[p^! \\colon K(X) \\to K(X \\times k) . \\tag{2.29}\\]</p>"
+    },
+    {
+     "id": "0.app.2.9p",
+     "type": "proposition",
+     "label": "2.9",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.9p\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.9</span></div>\n  <div class=\"thm-body\"><p>The homomorphism (2.29) is surjective.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We argue by induction on \\(n = \\dim X\\); the assertion is trivial\nif \\(n &lt; 0\\); suppose \\(n \\geq 0\\); by virtue of Proposition 2.6, it suffices to\nverify that for every irreducible closed subset \\(Y\\) of \\(X \\times k\\), \\(\\gamma(Y)\\) is\nin the image of \\(p^!\\). It suffices to continue the argument assuming\n\\(X\\) irreducible; if \\(p(Y)\\) is not dense in \\(X\\), our assertion follows\nfrom the induction hypothesis; otherwise, either we have \\(Y = X \\times k\\) and the assertion is\ntrivial, or else \\(Y\\) is a hypersurface in \\(X \\times k\\). Let then \\(U\\) be an affine open\nsubset of \\(X\\) consisting of nonsingular points; if \\(D\\) is the divisor on\n\\(U \\times k\\) induced by \\(Y\\), we know (commutative algebra) that it is linearly\nequivalent to a divisor of the form \\(D' \\times k\\), where \\(D'\\) is a divisor on \\(U\\).\nThen \\(\\gamma_{U \\times k}(D) - \\gamma_{U \\times k}(D' \\times k)\\) belongs to \\(K(U \\times k)^2\\) (corollary of\nProposition 2.10), and by what we have already proved, this element is\nof the form \\(p^!(x')\\) with \\(x' \\in K(U)\\). Hence \\(\\gamma_{U \\times k}(D) = p^!(y')\\) with\n\\(y' = x' + \\gamma_U(D')\\); but \\(y'\\) is the restriction of an element \\(y\\) of \\(K(X)\\) (Prop.\n2.10), and consequently the restriction of \\(\\gamma_{X \\times k}(D) - p^!(y)\\) to \\(U \\times k\\) is zero;\nby Proposition 2.10, \\(\\gamma_{X \\times k}(D) - p^!(y)\\) comes from an element of\n\\(K(X \\times k - U \\times k) = K(X' \\times k)\\) with \\(X' = X - U\\). The proof is completed\nby applying the induction hypothesis once more. qed.</p>"
+    },
+    {
+     "id": "0.app.2.9p.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.9p.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be an algebraic space and \\(p\\) the projection of \\(X \\times k^n\\) onto\n  \\(X\\); then the homomorphism \\(p^! \\colon K(X) \\to K(X \\times k^n)\\) is surjective; it is\n  even bijective if \\(X\\) is nonsingular.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Induction on \\(n\\) for the first assertion. For the second, we\nset \\(f(x) = (x,0)\\), whence \\(pf = 1\\) and \\(f^! p^! = 1\\), which proves that \\(p^!\\) is injective.</p>"
+    },
+    {
+     "id": "0.app.2.10",
+     "type": "proposition",
+     "label": "2.10",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.10\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.10</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be an algebraic space, \\(U\\) an open subset of\n  \\(X\\) and \\(Y\\) its complement in \\(X\\). Then the sequence of natural homomorphisms:\n  \\[K(Y) \\to K(X) \\to K(U) \\to 0 \\tag{2.30}\\]\n  is exact.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>N.B. Compare with Proposition 2.3.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The fact that \\(K(X) \\to K(U)\\) is surjective follows at once from\nProposition 2.5 (or also from Proposition 2.6). It remains to prove that if\n\\(x \\in K(X)\\) has zero restriction to \\(K(U)\\), it is in the image of \\(K(Y)\\). For\nthis, we return to the explicit definition of \\(K(X)\\) and of \\(K(U)\\): we have two\ncoherent algebraic sheaves \\(F\\) and \\(G\\) on \\(X\\) with \\(x = \\gamma_X(F) - \\gamma_X(G)\\) and\n\\(\\gamma_U(F) - \\gamma_U(G) = 0\\); this last relation means that we can find\ncoherent sheaves \\(P'\\) and \\(Q'\\) on \\(U\\), equipped with filtrations whose\nfactors are pairwise isomorphic on \\(U\\), and such that we have an\nisomorphism on \\(U\\):\n\\[P = F + Q' \\to Q = G + P' .\\]\nBy virtue of Proposition 2.5, the sheaves \\(P'\\) and \\(Q'\\) are restrictions\nto \\(U\\) of coherent sheaves on \\(X\\) (denoted by the same letters); likewise,\ntheir filtrations come from filtrations on the corresponding\nsheaves on \\(X\\), by virtue of Lemma 2.11 below. We then have:\n\\[\\gamma_X(F) - \\gamma_X(G) = (\\gamma_X(P) - \\gamma_X(Q)) + (\\gamma_X(P') - \\gamma_X(Q')) .\\]\nIntroducing the factors \\(P'_i\\) and \\(Q'_j\\) of the filtrations of \\(P'\\) and \\(Q'\\) on \\(X\\),\nthe last term is the sum of terms \\(\\gamma_X(P'_i) - \\gamma_X(Q'_j)\\), where \\(P'_i|U \\simeq Q'_j|U\\).\nWe are thus reduced to proving the following particular case: if \\(R\\) and \\(S\\)\nare coherent sheaves on \\(X\\) such that \\(R|U \\simeq S|U\\), then \\(\\gamma_X(R) - \\gamma_X(S)\\)\nis in the image of \\(K(Y)\\). Now let \\(T\\) be the graph of the given isomorphism\nfrom \\(R|U\\) to \\(S|U\\); it is a coherent subsheaf of \\((R \\times S)|U\\), hence by\nvirtue of Lemma 2.11, it is the restriction to \\(U\\) of a coherent subsheaf,\nagain denoted \\(T\\), of \\(R \\times S\\). We then have \\(\\gamma_X(R) - \\gamma_X(S) = (\\gamma_X(R) - \\gamma_X(T)) - (\\gamma_X(S) - \\gamma_X(T))\\)\nand it suffices to prove for example that the first term of the right-hand side is\nin the image of \\(K(Y)\\). Now the projection \\(u \\colon T \\to R\\) is an isomorphism on \\(U\\),\nhence \\(\\gamma_X(R) - \\gamma_X(T) = \\gamma_X(\\operatorname{Coker} u) - \\gamma_X(\\operatorname{Ker} u)\\) and \\(\\operatorname{Ker} u\\) and \\(\\operatorname{Coker} u\\) have their\nsupport in \\(Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It thus remains to prove the following lemma:</p>"
+    },
+    {
+     "id": "0.app.2.11",
+     "type": "lemma",
+     "label": "2.11",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.2.11\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.11</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be an algebraic space, \\(F\\) a coherent algebraic sheaf\n  on \\(X\\), \\(U\\) an open subset of \\(X\\) and \\(G\\) a coherent subsheaf of \\(F|U\\).\n  Then \\(G\\) is the restriction to \\(U\\) of a coherent subsheaf of \\(F\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(\\bar{G}\\) be the subsheaf of \\(F\\) whose sections over the open subset \\(V\\) of \\(X\\)\nare the sections of \\(F\\) over \\(V\\) whose restriction to \\(U \\cap V\\) is a section\nof \\(G\\). Everything comes down to proving that this sheaf \\(\\bar{G}\\) is coherent. For this,\nwe may assume \\(X\\) and \\(U\\) affine (for \\(U\\) is a union of affine open sets \\(U_i\\),\nand \\(\\bar{G}\\) is then the intersection of the analogous sheaves \\(\\overline{G|U_i}\\)). Then the coordinate\nring of \\(U\\) is a ring of fractions \\(A_S\\) of the coordinate ring\n\\(A\\) of \\(X\\), and one verifies at once that if \\(F\\) is defined by the \\(A\\)-module\n\\(M\\), then \\(F|U\\) is defined by the \\(A_S\\)-module \\(M_S = A_S \\otimes_A M\\). The subsheaf\n\\(G\\) of \\(F|U\\) is then defined by a submodule \\(N'\\) of \\(M_S\\), and one sees that\n\\(\\bar{G}\\) is precisely defined by the submodule \\(N\\) of \\(M\\), the inverse image of \\(N'\\)\nunder the canonical homomorphism from \\(M\\) to \\(M_S\\). qed.</p>"
+    },
+    {
+     "id": "0.app.2.10.cor1",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 1 to Proposition 2.10",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.10.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 1 to Proposition 2.10</span></div>\n  <div class=\"thm-body\"><p>Let \\(x \\in K(X)\\). For \\(x\\) to be of\n  filtration \\(\\leq i\\), it is necessary and sufficient that there exist a closed subset \\(Y\\) of\n  \\(X\\), of dimension \\(\\leq n - i\\), such that the restriction of \\(x\\) to \\(X - Y\\) is zero.</p></div>\n</div>"
+    },
+    {
+     "id": "0.app.2.10.cor2",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 2",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.10.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 2</span></div>\n  <div class=\"thm-body\"><p>Suppose \\(X\\) is connected of dimension \\(n\\), without singularities in\n  dimension \\(n - 1\\). If \\(D\\) and \\(D'\\) are two linearly equivalent divisors\n  on \\(X\\), we have \\(\\gamma(D) \\equiv \\gamma(D') \\mod K(X)^2\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By virtue of Corollary 1, we may assume \\(X\\) nonsingular; the corollary\nthen follows from the general formula:\n\\[\\gamma(D) = 1 - \\gamma(L(-D)) \\mod K(X)^2 , \\tag{2.31}\\]\nwhere \\(L(-D)\\) denotes the vector bundle of rank 1 defined by the divisor \\(-D\\).\nTo verify (2.31), we write it in the form:\n\\[\\gamma(L(-D)) = 1 - \\gamma(D) \\mod K(X)^2 , \\tag{2.31 bis}\\]\nand we note that the two sides are homomorphisms from the group of\ndivisors into the multiplicative group of invertible elements of the ring\n\\(K(X)/K(X)^2\\) (note that \\(K(X)^1/K(X)^2\\) has square zero, which is verified very\neasily from the explicit formula (2.15), using Corollary 1).\nWe are thus reduced to the case where \\(D\\) is an irreducible hypersurface. More\ngenerally, if \\(D\\) is a hypersurface whose components are disjoint,\nwe have the equality:\n\\[\\gamma(D) = 1 - \\gamma(L(-D)) \\tag{2.32}\\]\nas follows from the exact sequence of sheaves\n\\[0 \\to \\mathcal{O}_X(L(-D)) \\to \\mathcal{O}_X \\to \\mathcal{O}_D \\to 0 .\\]</p>"
+    },
+    {
+     "id": "0.app.2.12",
+     "type": "theorem",
+     "label": "2.12",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.12\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.12</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a nonsingular quasi-projective variety, and \\(Z\\) and\n  \\(Z'\\) two homogeneous cycles of codimension \\(p\\) on \\(X\\) which are linearly\n  equivalent. We then have:\n  \\[\\gamma_X(Z) \\equiv \\gamma_X(Z') \\mod K(X)^{p+1} . \\tag{2.33}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>By hypothesis, we can find a cycle \\(Y\\) of dimension \\(n - p + 1\\) on\n\\(X \\times k\\) (\\(n\\) being the dimension of \\(X\\)), and two points \\(a,a' \\in k\\) such that we have:\n\\[Z = f_a^{-1}(Y) , \\qquad Z' = f_{a'}^{-1}(Y) ,\\]\nwhere we set \\(f_u(x) = (x,u)\\). By virtue of formula (2.23), we then have:\n\\[\\gamma_X(Z) \\equiv f_a^!(\\gamma_{X \\times k}(Y)) \\mod K(X)^{p+1}\\]\nand an analogous formula for \\(\\gamma_X(Z')\\). It then suffices to prove that\n\\(f_a^! = f_{a'}^!\\), which follows at once from Proposition 2.9. qed.</p>"
+    },
+    {
+     "id": "0.app.2.12.cor1",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 1",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.12.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 1</span></div>\n  <div class=\"thm-body\"><p>The filtration of \\(K(X)\\) is compatible with its ring\n  structure, i.e. we have \\(K(X)^i K(X)^j \\subset K(X)^{i+j}\\) whatever the integers\n  \\(i,j \\geq 0\\). We have moreover a natural surjective homomorphism of graded rings:\n  \\[\\varphi \\colon A(X) \\to G(K(X)) \\tag{2.34}\\]\n  (where the right-hand side denotes the graded ring associated to \\(K(X)\\) equipped with the\n  filtration \\((K(X)^i)_{i \\geq 0}\\)) defined by the condition:\n  \\[\\varphi(Z^{n-p}) = \\gamma(Z^{n-p}) \\mod K(X)^{p+1} .\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This corollary follows immediately from Theorem 2.12, Propositions\n2.6 and 2.7 and the Chow Theorem 2.1, by induction on the integer\n\\(i + j\\).</p>"
+    },
+    {
+     "id": "0.app.2.12.cor2",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 2",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.12.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 2</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) and \\(Y\\) be two nonsingular quasi-projective varieties\n  and \\(f\\) a morphism from \\(X\\) to \\(Y\\). Then the homomorphism \\(f^!\\) from \\(K(Y)\\) to \\(K(X)\\)\n  is compatible with the filtrations, and we have a commutative diagram:\n  \\[\\xymatrix@C=3em@R=2.5em{\n  G(K(Y)) \\ar[r]^{G(f^!)} &amp; G(K(X)) \\\\\n  A(Y) \\ar[r]_{f^*} \\ar[u]^{\\varphi_Y} &amp; A(X) \\ar[u]_{\\varphi_X}\n  }\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Using the graph of \\(f\\), we decompose \\(f\\) into the product of an <u>immersion</u>\nof \\(X\\) into \\(X \\times Y\\) and a <u>projection</u> of \\(X \\times Y\\) onto \\(Y\\). For the latter the\ncorollary is trivial, and for an immersion, we proceed as for\nCorollary 1, using Proposition 2.8 in place of Proposition\n2.7.</p>"
+    },
+    {
+     "id": "0.app.2.13",
+     "type": "proposition",
+     "label": "2.13",
+     "title": "Proposition",
+     "html": "<div class=\"thm thm-plain proposition\" id=\"0.app.2.13\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Proposition</span> <span class=\"thm-num\">2.13</span> (\"cellular decomposition\")</div>\n  <div class=\"thm-body\"><p>Let \\(P\\) be an algebraic space\n  (irreducible or not), equipped with an increasing family \\(P^0 \\subset P^1 \\subset \\dots \\subset P^n = P\\)\n  of closed subsets, such that for every \\(i\\) with \\(0 \\leq i \\leq n\\), the connected components\n  of \\(P^i - P^{i-1}\\) are algebraic spaces \\(V_{i,\\alpha}\\) isomorphic to \\(k^i\\)\n  (we set \\(P^{-1} = \\emptyset\\)). Then:</p>\n  <p>a) For every algebraic space \\(X\\), the natural map from\n  \\(K(X) \\otimes K(P)\\) to \\(K(X \\times P)\\) deduced from the tensor product of sheaves on\n  \\(X\\) and \\(P\\), is surjective.</p>\n  <p>b) The \\(\\gamma_P(V_{i,\\alpha})\\) form a system of generators of the group \\(K(P)\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The proof proceeds by induction on \\(n\\), using the corollary\nof Proposition 2.9 and Proposition 2.10. (N.B. Unfortunately,\nI do not know whether the \\(\\gamma_P(V_{i,\\alpha})\\) form a basis of \\(K(P)\\) and whether the homomorphism\nenvisaged in a) is bijective. We shall not need to know this in\nwhat follows.)</p>"
+    },
+    {
+     "id": "0.app.2.14",
+     "type": "theorem",
+     "label": "2.14",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.14\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.14</span></div>\n  <div class=\"thm-body\"><p>Let \\(x_i\\) (\\(1 \\leq i \\leq q\\)) and \\(E_j\\) (\\(1 \\leq j \\leq r\\)) be letters, and \\(n_j\\)\n  (\\(1 \\leq j \\leq r\\)) integers \\(&gt; 0\\); let us regard the symbols \\(\\lambda^k(x_i)\\) with \\(k \\geq 1\\)\n  and \\(\\lambda^k(E_j)\\) with \\(1 \\leq k \\leq n_j\\) as indeterminates and let \\(R\\) be a polynomial with\n  integer coefficients in these indeterminates. We suppose that, for every graded\n  ring \\(A\\), when one substitutes in \\(R\\) for the \\(x_i\\) elements \\(\\xi_i\\) and for the\n  \\(E_j\\) elements \\(\\eta_j\\) of \\(\\tilde{A}\\) subject to the restrictions \\(\\varepsilon(\\xi_i) = 0\\) and\n  \\(\\eta_j = [n_j, 1 + \\eta_j^{(1)} + \\dots + \\eta_j^{(n_j)}]\\) (hence \\(\\eta_j^{(k)} = 0\\) for \\(k &gt; n_j\\)), we have\n  \\[R((\\lambda^k(\\xi_i)),(\\lambda^k(\\eta_j))) \\in \\tilde{A}^p\\]\n  Let then \\(X\\) be an irreducible nonsingular quasi-projective variety.\n  Whatever the elements \\(x_i'\\) of \\(K(X)\\) and the vector bundles \\(E_j'\\) of\n  dimension \\(n_j\\) on \\(X\\) (\\(1 \\leq i \\leq q\\), \\(1 \\leq j \\leq r\\)), we have\n  \\[R((\\lambda^k(x_i')),(\\lambda^k(\\gamma(E_j')))) \\in K(X)^p\\]<sup class=\"footnote-ref\"><a id=\"0-fn14ref\" href=\"#0-fn14\">(∗)</a></sup>.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u>: By virtue of § 2, the \\(x_i'\\) are themselves differences\nof elements of the form \\(\\gamma(E)\\), where \\(E\\) is a vector bundle. On the other hand,\nassuming \\(X\\) locally closed in a projective space \\(P\\), it follows from § 2\nand from Proposition 2.5 that, for every \\(F \\in \\mathscr{F}(X)\\), the sheaf \\(F(n)\\) is\ngenerated by its sections for \\(n\\) sufficiently large. If \\(F\\) is defined by a vector\nbundle \\(E\\), this proves that \\(E(n)\\) is the inverse image of the canonical vector\nbundle on a Grassmannian variety \\(G\\) under a morphism from \\(X\\) to \\(G\\).\nConsidering the corresponding morphism from \\(X\\) to \\(P \\times G\\), we see that \\(E\\) is\nthe inverse image of a vector bundle on \\(P \\times G\\). We therefore see, applying\nthis to all the vector bundles involved, and using Corollary\n2 of Theorem 2.12, that <u>we are reduced to the case where \\(X\\) is a product of\nGrassmannians</u>. In this case, the conclusion will follow from the following lemma:</p>"
+    },
+    {
+     "id": "0.app.2.15",
+     "type": "lemma",
+     "label": "2.15",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.2.15\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.15</span></div>\n  <div class=\"thm-body\"><p>Suppose that \\(X\\) is a product of Grassmannians. Then one can\n  find a \\(\\lambda\\)-homomorphism from \\(K(X)\\) into a torsion-free \\(\\lambda\\)-ring of the form\n  \\(\\tilde{A}\\) (where \\(A\\) is a graded ring), compatible with the filtrations, and such that\n  the corresponding homomorphism \\(G(K(X)) \\to G(A)\\) is injective.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove the lemma, we shall use the Chow theory of\nChern classes; if one could prove the lemma, or Theorem 2.14,\ndirectly, one would deduce from it a purely \"sheaf-theoretic\" theory of\nChern classes (cf. § 5).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We shall consider the homomorphism \\(\\tilde{C}\\) from \\(K(X)\\) to \\(\\tilde{A}(X)\\) and we shall set\n\\(A = A(X)\\); we must prove that the homomorphism \\(\\psi = G(\\tilde{C})\\) from \\(G(K(X))\\)\nto \\(G(A(X)) \\simeq A(X)\\) is injective. The fact that \\(\\tilde{C}\\) is compatible with the\nfiltrations is true for every nonsingular quasi-projective variety and\nfollows easily from the corollary to Proposition 2.3. On the other hand, since\n\\(X\\) is a product of Grassmannians \\(C_j\\), we have on \\(X\\) vector bundles \\(E_j\\),\ninverse images of the canonical bundles on the factors. We shall use\nthe following (known) facts:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>a) On \\(X\\), linear equivalence of cycles is equivalent to numerical\nequivalence, and \\(A(X)\\) is a group of finite rank;</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>b) The \\(C^i(E_j)\\) generate the ring \\(A(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From a) it follows that \\(\\varphi \\colon A(X) \\to G(K(X))\\) is injective (hence bijective)\nby virtue of the following lemma:</p>"
+    },
+    {
+     "id": "0.app.2.15b",
+     "type": "lemma",
+     "label": "2.15",
+     "title": "Lemma",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.2.15b\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma</span> <span class=\"thm-num\">2.15</span></div>\n  <div class=\"thm-body\"><p>Let \\(X^n\\) be a nonsingular projective variety and \\(Z^{n-p}\\) a cycle\n  on \\(X\\) such that \\(\\varphi(Z) \\in G^p(K(X))\\) is zero; then \\(Z^{n-p}\\) is numerically equivalent\n  to zero.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>To prove this lemma, it suffices to use the additive function\n\\(\\chi(F) = \\sum_{i \\geq 0} (-1)^i \\dim H^i(X,F)\\) and the fact that this function is equal to\n\\(1\\) for \\(F = \\mathcal{O}_{(x)}\\) for every \\(x \\in X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, \\(A(X)\\) and \\(G(K(X))\\) have, in the case under consideration, the same finite rank in\nevery degree, and \\(G(K(X))\\) is torsion-free, since \\(A(X)\\) is. From\nassertion b) above it follows, in a \"formal\" way, that the map\n\\(\\tilde{C}\\) from \\(K(X)\\) to \\(\\tilde{A}(X)\\) is surjective, modulo finite groups. It follows\neasily, since \\(G(K(X))\\) and \\(A(X)\\) have the same finite rank in every\ndegree, that the homomorphism \\(G(\\tilde{C})\\) from \\(G(K(X))\\) to \\(G(\\tilde{A}(X))\\) is bijective modulo\nfinite groups in every degree (one uses an induction on the degree).\nSince \\(G(K(X))\\) is torsion-free, this homomorphism \\(G(\\tilde{C})\\) is therefore injective.\nqed.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>N.B. The homomorphism \\(\\tilde{C}\\) is not surjective in general, even if \\(X\\) is\na projective space of dimension 2.</p>"
+    },
+    {
+     "id": "0.app.II.5",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.II.5\">§ 5. Sheaf-theoretic definition of Chern classes. Application to the study of injection morphisms</h3>"
+    },
+    {
+     "id": "0.app.2.16",
+     "type": "theorem",
+     "label": "2.16",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.16\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.16</span></div>\n  <div class=\"thm-body\"><p>Let \\(X\\) be a nonsingular quasi-projective variety. Then,\n  for every \\(x \\in K(X)\\), and for every integer \\(i \\geq 0\\), the element \\(\\gamma^i(x - \\varepsilon(x))\\) is\n  of filtration \\(\\geq i\\). Let \\(c^i(x) \\in G^i(K(X))\\) be the class of this element modulo\n  \\(K(X)^{i+1}\\); if we set:\n  \\[\\tilde{c}(x) = \\left[\\varepsilon(x), 1 + \\sum_{i \\geq 1} c^i(x)\\right] \\in G(K(X)) ,\\]\n  then \\(\\tilde{c}\\) satisfies the conditions analogous to those of Theorem 2.2.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The first assertion follows from Theorem 2.14, as does the fact\nthat \\(x \\to \\tilde{c}(x)\\) is a homomorphism of \\(\\lambda\\)-rings (formula (1.25) implies\n\\(\\gamma_t(x + y) = \\gamma_t(x) \\gamma_t(y)\\), which already shows that \\(\\tilde{c}\\) is an additive\nhomomorphism). The \"functoriality\" of \\(\\tilde{c}\\) is verified immediately, and\n(2.8) follows from (2.31). qed</p>"
+    },
+    {
+     "id": "0.app.2.16.cor1",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 1",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.16.cor1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 1</span></div>\n  <div class=\"thm-body\"><p>We have \\(c^i(x) = \\varphi(C^i(x))\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This follows from a uniqueness theorem for Chern classes, which is\nproved as in Hirzebruch by passing to flag varieties. One\nonly has to show that if \\(Y\\) is a flag variety associated to\na vector bundle on \\(X\\), then \\(G(K(X)) \\to G(K(Y))\\) is injective, which is\nverified by the explicit determination of \\(K(Y)\\) with all its structures\nstarting from \\(K(X)\\) (I shall not give the details here).</p>"
+    },
+    {
+     "id": "0.app.2.16.cor2",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary 2",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.16.cor2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary 2</span></div>\n  <div class=\"thm-body\"><p>Suppose that for every element \\(Z \\in A(X)\\), there exists a morphism\n  \\(f\\) from \\(X\\) into a product \\(X'\\) of Grassmannians such that \\(Z\\) is in the image\n  of \\(f^*\\). Then the canonical homomorphisms\n  \\[\\varphi \\colon A(X) \\to G(K(X)) , \\qquad \\psi \\colon G(K(X)) \\to A(X) ,\\]\n  satisfy in dimension \\(i\\) the following relations:\n  \\[\\psi \\varphi = (-1)^{i-1}(i-1)! \\, 1 , \\qquad \\varphi \\psi = (-1)^{i-1}(i-1)! \\, 1 . \\tag{2.35}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Since \\(\\varphi\\) is surjective, it obviously suffices to prove the first\nformula, and for this one, we may assume that \\(X\\) is a product of Grassmannians.\nSince then \\(\\varphi\\) is injective, it suffices to prove the second\nformula (2.35), which by virtue of Corollary 1 can be written\n\\[\\gamma^i(x - \\varepsilon(x)) \\equiv (-1)^{i-1}(i-1)! \\, x \\mod K(X)^{i+1}\\]\nfor every \\(x \\in K(X)^i\\). Since \\(\\psi\\) is injective, it suffices to prove the analogous\nrelation for \\(\\tilde{C}(x) \\in A(X)^i\\), and it is then a consequence of (1.22 bis).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remark</u>: Corollary 2 makes the validity of (2.35) plausible in all\ncases; a direct proof of it ought to exist. In any case one easily\nproves the second formula (2.35) modulo the torsion subgroup of\n\\(G(K(X))\\), and in characteristic \\(0\\), this same formula is a\nconsequence of the Riemann-Roch theorem. The interest of (2.35) (when it\nis true) lies in the fact that it shows that \\(\\varphi\\) is injective modulo torsion\ngroups (perhaps always zero!<sup class=\"footnote-ref\"><a id=\"0-fn15ref\" href=\"#0-fn15\">(∗)</a></sup>), so that one \"does not lose\nmuch\" in defining the Chern classes as elements of \\(G(K(X))\\); if\none takes the tensor product with \\(\\mathbb{Q}\\), as will be done further on for the\nRiemann-Roch theorem, the two definitions of Chern classes would\nthen be identical.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Let \\(X\\) still be quasi-projective nonsingular; let moreover \\(Y\\) be a\nnonsingular subvariety of \\(X\\) and let \\(i\\) be the injection of \\(Y\\) into \\(X\\). We\nthen have, for \\(i^!\\) and \\(i_!\\), the following formulas:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i) \\(i^!\\) is a homomorphism of \\(\\lambda\\)-rings</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii) \\(i_!(x.i^!(y)) = i_!(x).y\\), whence in particular\n\\(i_!i^!(y) = \\xi y\\) with \\(\\xi = i_!i^!(1) = \\gamma_X(Y)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii) \\(i^!(i_!(x)) = x.\\lambda_{-1}(N)\\), whence in particular\n\\(i^!(\\xi) = i^!i_!(1) = \\lambda_{-1}(N)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iv) \\(i_!(x) i_!(x') = i_!(xx' \\lambda_{-1}(N))\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>where, by definition, \\(N\\) is the class in \\(K(Y)\\) of the conormal bundle to \\(Y\\) in\n\\(X\\). Formulas (i) and (ii) are true for arbitrary morphisms,\nnot necessarily injections, and (iii) and (iv) are verified from the\ndefinition (2.15) and the analogous formula for inverse images (by\ntaking for \\(x\\) and \\(x'\\) classes of vector bundles, and using\nthe fact that\n\\[\\operatorname{Tor}_i^{\\mathcal{O}_X}(\\mathcal{O}_Y, \\mathcal{O}_Y) = \\mathcal{O}_Y(\\wedge^i N) . ) \\tag{2.36}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Formula (iv) expresses that \\(i_!\\) is a ring homomorphism if one introduces\non \\(K(Y)\\) a new multiplicative structure, by the definition\n\\(x_N x' = xx' \\lambda_{-1}(N)\\) (cf. Chapter I, § 4). It is completed by the formula:</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>\\(v\\) \\(i_!(\\lambda^p(N,x)) = \\lambda^p(i_!(x))\\) for \\(p \\geq 1\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>which means that \\(i_!\\) defines a \\(\\lambda\\)-homomorphism from \\(K(Y)_N\\) to \\(K(X)\\). This\nformula \\(v\\), certainly true in all cases, has for the moment been proved\nonly in characteristic \\(0\\), for it follows from the conjunction of\nTheorems 1.4 and 2.8.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>We have analogous formulas for \\(i_*\\) and \\(i^*\\):</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(i bis) \\(i^*\\) is a homomorphism of graded rings.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(ii bis) \\(i_*(x.i^*(y)) = i_*(x).y\\), whence in particular\n\\(i_*(i^*(y)) = \\xi' y\\) with \\(\\xi' = i_*(1)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iii bis) \\(i^*(i_*(x)) = x.(-1)^q N^q\\), whence in particular\n\\(i^*(\\xi') = (-1)^q N^q\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(iv bis) \\(i_*(x) i_*(x') = i_*(xx' (-1)^q N^q)\\),</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>(v bis) \\(i_*\\) raises degrees by \\(q\\) units.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>In these formulas, \\(q\\) is the codimension of \\(Y\\) in \\(X\\), and we set\n\\(N^i = C^i(N)\\). Only formulas (iii bis) and (iv bis) require a proof;\nI do not know whether they are well known (nor even whether they are\ntrue!!!) and I confine myself to noting that they follow by reduction from formulas\n(ii) and (iv), <u>provided one places oneself in \\(G(K(Y))\\) and \\(G(K(X))\\) and not\nin \\(A(Y)\\) and \\(A(X)\\)</u>. One then uses the fact that \\(i_*\\) and \\(i^*\\) come by\npassage to the quotient from \\(i_!\\) and \\(i^!\\), noting that \\(i_!\\) shifts the filtration by\n\\(q\\) units.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>N.B. All the \"universal\" formulas linking \\(i_!\\) and \\(i^!\\) (resp. \\(i_*\\) and \\(i^*\\))\nare formal consequences of the preceding ones, as one may convince oneself\nwithout great difficulty.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From the formula \\(v\\) follows the formula\n\\[i_!(\\gamma^p(N,x)) = \\gamma^p(i_!(x)) .\\]\nThe conjunction of Theorem 2.14 and Proposition 1.5 shows that \\(\\gamma^p(N,x)\\)\nis, for \\(p = q + j\\), of filtration \\(\\geq j\\); if we denote by \\(G_p(N,x)\\) its class\nin \\(G^j(K(Y))\\), Theorem 2.16 shows that we have\n\\[i_*(G_p(N,x)) = c^p(i_!(x)) .\\]\nFinally, Proposition 1.5 together with Theorem 2.14 makes it possible to express \\(G_p(N,x)\\)\nas a polynomial with integer coefficients in the \\(c^i(N)\\), the \\(c^i(x)\\) and \\(\\varepsilon(x)\\);\nfrom this we deduce the theorem:</p>"
+    },
+    {
+     "id": "0.app.2.17",
+     "type": "theorem",
+     "label": "2.17",
+     "title": "Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.2.17\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Theorem</span> <span class=\"thm-num\">2.17</span></div>\n  <div class=\"thm-body\"><p>Suppose the field \\(k\\) is of characteristic \\(0\\) and let \\(i \\colon Y \\to X\\)\n  be an injection morphism of nonsingular quasi-projective varieties. We\n  then have formulas (i) to \\(v\\), and moreover, for every integer \\(j \\geq 0\\), the\n  formula:\n  \\[c^{q+j}(i_!(x)) = i_*\\!\\left(\\frac{\\tilde{C}(x) \\ast \\lambda_{-1}(\\tilde{C}(N))}{(-1)^q N^q}\\right)^{(j)} . \\tag{2.37}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>The right-hand side of formula (2.37) is an abbreviated way of denoting\nthe polynomial in the components of \\(\\tilde{c}(x)\\) and \\(\\tilde{C}(N)\\) described in\nProposition 1.5.</p>"
+    },
+    {
+     "id": "0.app.2.17.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.2.17.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span></div>\n  <div class=\"thm-body\"><p>Under the preceding conditions, we have:\n  \\[\\operatorname{ch}(\\tilde{c}(i_!(x))) = i_*(\\operatorname{ch}(\\tilde{c}(x)) \\, \\mathscr{T}(\\check{N})^{-1}) \\tag{2.38}\\]\n  where \\(\\operatorname{ch}\\) is the Chern homomorphism defined by formula (1.26).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It suffices to use (2.37) written in the form:\n\\[\\tilde{c}(i_!(x)) = 1 + i_*\\!\\left(\\frac{\\tilde{C}(x) \\ast \\lambda_{-1}(c(N)) - 1}{(-1)^q N^q}\\right) , \\tag{2.37 bis}\\]\nthe explicit formula (1.29), formula (iv bis) and finally (1.30).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One can write (2.38) in the form\n\\[\\operatorname{ch}_X(F) = i_*(\\operatorname{ch}_Y(F) \\, \\mathscr{T}(T_{X/Y})^{-1}) , \\tag{2.38 bis}\\]\nwhere \\(F\\) is a coherent algebraic sheaf on \\(Y\\) (considered in the left-hand side\nas a sheaf on \\(X\\) which is zero outside \\(Y\\)), \\(\\operatorname{ch}_X\\) and \\(\\operatorname{ch}_Y\\) are the Chern\nhomomorphisms taken respectively on \\(X\\) and \\(Y\\), and \\(T_{X/Y}\\) is the normal\nbundle to \\(Y\\) in \\(X\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Remarks</u>: Contrary to (2.38), formula (2.37) is a \"formula without\ndenominators\". It has been proved (even in characteristic \\(0\\)) only by\nplacing oneself in \\(G(K(X))\\) and not in \\(A(X)\\), which is perhaps not the\nsame thing. It is certainly true in every characteristic and in\n\\(A(X)\\). Let us note that one verifies at once that the images of the two sides\nunder \\(i^*\\) are the same, whence it follows, applying \\(i_*\\), that the product of their\ndifference by \\(N^q\\) is zero. This suggests a completely different method\nof proof, by trying to obtain \\(Y\\) as the transversal inverse image\nof a subvariety \\(Y'\\) in a variety \\(X'\\), such that in\ndimension \\(\\leq n = \\dim X\\), the class of \\(Y'\\) in \\(A(X')\\) is not a divisor of\n\\(0\\).... Unfortunately one cannot hope that \\(X'\\) is a Grassmannian or\nanything close to it.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Note that, if one neglects torsion elements, formula\n(2.38) is equivalent to (2.37).</p>"
+    },
+    {
+     "id": "0.app.II.6",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.II.6\">§ 6. The Riemann-Roch theorem</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Its statement is the following: let \\(f\\) be a proper morphism of a nonsingular\nquasi-projective variety \\(Y\\) into a variety \\(X\\) of the same kind. Then,\nwe have:\n\\[f_*(\\operatorname{ch}_Y(x) \\, \\mathscr{T}(Y)) = \\operatorname{ch}_X(f_!(x)) \\, \\mathscr{T}(X) . \\tag{2.39}\\]\n(The two members are in \\(A(X) \\otimes \\mathbb{Q}\\) and \\(\\mathscr{T}(X) = \\mathscr{T}(C(T_X))\\).)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>It allows one to compute, up to torsion elements, the Chern classes\nof \\(f_!(x)\\) knowing the Chern classes of \\(x\\), those of \\(T_X\\) and \\(T_Y\\)\nand the homomorphism \\(f_*\\). Or again, it allows one to determine the homomorphism\n\\(f_!\\) from \\(K(Y) \\otimes \\mathbb{Q}\\) into \\(K(X) \\otimes \\mathbb{Q}\\), when one identifies these groups, by means of the homomorphisms\n\\(\\operatorname{ch}_Y\\) and \\(\\operatorname{ch}_X\\), respectively with \\(A(Y) \\otimes \\mathbb{Q}\\) and \\(A(X) \\otimes \\mathbb{Q}\\) (if\nformula (2.35) is true!), with the aid of \\(f_*\\) and of the Chern classes of\n\\(T_X\\) and of \\(T_Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>I can prove formula (2.39) only in characteristic \\(0\\)<sup class=\"footnote-ref\"><a id=\"0-fn16ref\" href=\"#0-fn16\">(∗)</a></sup>,\nand as an equality in \\(G(K(X)) \\otimes \\mathbb{Q}\\). For this, \\(Y\\) being locally closed in\na projective space \\(P\\), one decomposes \\(f\\) into the product of an injection morphism\nof \\(Y\\) into \\(P \\times X\\), and a projection morphism of \\(P \\times X\\) onto \\(X\\),\nand one proves (2.39) for each of these two morphisms.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For an injection morphism, one sees immediately that formulas\n(2.38) and (2.39) are equivalent (the characteristic \\(0\\) hypothesis\nintervened only through the intermediary of Theorem 2.8, which allows one to express\nthe \\(\\lambda^i(\\gamma(F))\\), for a coherent algebraic sheaf \\(F\\), by <u>local</u> cohomological\ninvariants of \\(F\\)).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>For a projection morphism \\(f \\colon P \\times X \\to X\\), one may, thanks to\nProposition 2.13, assume that \\(x\\) is of the form \\(y \\otimes z\\), with \\(y \\in K(P)\\) and\n\\(z \\in K(X)\\). Then the Künneth formula gives \\(f_!(x) = \\chi(y)z\\), where for a\ncoherent algebraic sheaf \\(F\\) on \\(P\\), one sets:\n\\[\\chi(F) = \\sum_{i \\geq 0} (-1)^i \\dim H^i(P,F) .\\]\nOne is then at once reduced to proving the formula\n\\[\\chi(F) = \\varkappa_r(\\operatorname{ch}_P(F) \\, \\mathscr{T}(P)) \\tag{2.40}\\]\nwhere \\(\\varkappa_r\\) denotes the component of degree \\(r = \\dim P\\). By virtue of Proposition\n2.13, one may assume that \\(F = \\mathcal{O}_Q\\), where \\(Q\\) is a linear subvariety of \\(P\\).\nThen \\(\\chi(F) = 1\\), since this is the arithmetic genus of \\(Q\\); it remains to see that\nthe second member of formula (2.40) equals \\(1\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If indeed \\(V\\) is a hyperplane of \\(P\\) and if one sets \\(\\xi = \\gamma_P(\\mathcal{O}_V)\\) and\n\\(L = \\ell(V)\\), we shall have:\n\\[1 - \\xi = \\gamma_P(E(-L))\\]\n(where \\(E(-L)\\) is the vector bundle defined by \\(-L\\)), whence:\n\\[C_P(1 - \\xi) = [1, 1 - L] ,\\]\nand consequently\n\\[\\operatorname{ch}_P(1 - \\xi) = e^{-L} , \\quad \\text{d'où} \\quad \\operatorname{ch}_P(\\xi) = 1 - e^{-L} ,\\]\nand therefore\n\\[\\operatorname{ch}_P(\\xi^p) = (1 - e^{-L})^p .\\]\nNow if \\(p\\) is the dimension of \\(Q\\) in \\(P\\), we have \\(\\xi^p = \\gamma_P(Q)\\); one deduces from this\n\\[\\operatorname{ch}_P(F) \\, \\mathscr{T}(P) = (L/(1 - e^{-L}))^{r+1}(1 - e^{-L})^p\\]\nand it must be verified that the coefficient of \\(L^r\\) in this formal series\nin \\(L\\) equals \\(1\\), which follows from the characteristic property of the formal\nseries \\(L/(1 - e^{-L})\\), namely that the coefficient of \\(L^q\\) in \\((L/(1 - e^{-L}))^{q+1}\\)\nequals \\(1\\) (set \\(q = r + 1 - p\\)).</p>"
+    },
+    {
+     "id": "0.app.refs",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.refs\">Bibliographical references</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[1] HIRZEBRUCH: <em>Neue topologischen Methoden in der algebraischen\nGeometrie</em>.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[2] SERRE: <em>Faisceaux algébriques cohérents</em>, Ann. of Maths.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[3] GROTHENDIECK: <em>Sur les faisceaux algébriques cohérents</em>, in Séminaire\nCartan 1956/57.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "0-fn10",
+     "number": "(∗)",
+     "html": "<p>(∗) Owing to a misunderstanding on the author's part, the theorem asserts more than is currently known. In fact, one uses only Chow's \"moving lemma\", which says that one can move two cycles within their classes so that their intersection is non-excessive; cf. Séminaire Chevalley 1958, Anneau de Chow et applications. </p>"
+    },
+    {
+     "id": "0-fn11",
+     "number": "(∗)",
+     "html": "<p>(∗) The notation \\(f^!\\) used here conflicts with the one used in duality theory (cf. for example R. Hartshorne, <em>Residues and Duality</em>, Lecture Notes in Math. n° 20, Springer, 1966). This is why in this Seminar we replace it by the notation \\(f^*\\). </p>"
+    },
+    {
+     "id": "0-fn12",
+     "number": "(∗)",
+     "html": "<p>(∗) No; for a counterexample cf. this Seminar XIV 4.7. </p>"
+    },
+    {
+     "id": "0-fn13",
+     "number": "(∗)",
+     "html": "<p>(∗) This last condition is evidently a consequence of the first (a fact of which the author was still unaware in 1957!). </p>"
+    },
+    {
+     "id": "0-fn14",
+     "number": "(∗)",
+     "html": "<p>(∗) One easily proves that the hypothesis made implies, if \\(R\\) is expressed in terms of the \\(\\gamma^k(\\xi_i)\\), \\(\\gamma^k(E_i - \\varepsilon(E_i))\\), that all the terms of \\(R\\) are of weight \\(\\geq p\\) (where \\(\\gamma^k\\) is of weight \\(k\\)). Then 2.14 is a particular case of X 1.3.2. </p>"
+    },
+    {
+     "id": "0-fn15",
+     "number": "(∗)",
+     "html": "<p>(∗) No, cf. the note on page 30. </p>"
+    },
+    {
+     "id": "0-fn16",
+     "number": "(∗)",
+     "html": "<p>(∗) See below for a proof valid in all characteristics, based on a different principle (p.51). </p>"
+    }
+   ]
+  },
+  {
+   "id": "0-app-demo",
+   "title": "Proof of the Riemann-Roch theorem (Grothendieck, November 1, 1957)",
+   "blocks": [
+    {
+     "id": "0.app.demo",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h2 id=\"0.app.demo\">Proof of the Riemann-Roch theorem (Grothendieck, November 1, 1957)</h2>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><em>The passages between asterisks ∗ ... ∗ are interpolations by the copyist.</em></p>"
+    },
+    {
+     "id": "0.app.demo.notations",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.demo.notations\">∗ Reminder of notations</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[These are those of the \"report on Riemann-Roch\", cited as R.R.R. in what\nfollows.]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>All the varieties considered are nonsingular and quasi-projective\n(i.e. isomorphic to a locally closed subvariety of a projective space).\nThe base field is algebraically closed, of arbitrary\ncharacteristic.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(X\\) is such a variety, one denotes by \\(K(X)\\) the abelian group generated\nby the classes of coherent sheaves on \\(X\\) (modulo the identification of an\nextension with a sum); the alternating sum of the Tor makes \\(K(X)\\) into a ring.\nIf \\(F\\) is a sheaf (resp. a bundle \\(E\\) with vector fibre, resp. a subvariety\n\\(Y\\) of \\(X\\)), one denotes by \\(\\gamma_X(F)\\) (resp. \\(\\gamma_X(E)\\), resp. \\(\\gamma_X(Y)\\)) the element of \\(K(X)\\)\ncorresponding to \\(F\\) (resp. to \\(E\\), resp. to \\(\\mathcal{O}_Y\\)). (In fact, one often writes \\(F\\), \\(E\\)\ninstead of \\(\\gamma_X(F)\\) ...).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One denotes by \\(A(X)\\) the graded ring of cycle classes of \\(X\\) (for rational\nequivalence - cf. Chow); \\(A^i(X)\\) is formed of the cycles of codimension \\(i\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(E\\) is a bundle with vector fibre, one denotes by \\(C(E) = \\sum C^i(E)\\),\n\\(C^i(E) \\in A^i(X)\\), its Chern class (defined as the inverse image of the\nSchubert cycles); one deduces from these by linearity the \\(C^i(y)\\), for every\n\\(y \\in K(X)\\). If \\(C(y) = \\prod(1 + a_i)\\), one sets, following Hirzebruch:\n\\[\\operatorname{ch}(y) = \\sum e^{a_i} , \\qquad T(y) = \\prod \\frac{a_i}{1 - e^{-a_i}} .\\]\nThese are elements of \\(A(X) \\otimes \\mathbb{Q}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>When \\(y\\) is the tangent bundle to \\(X\\), one writes \\(T(X)\\) instead of \\(T(y)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(G\\) is a bundle with vector fibre, one denotes by \\(\\lambda^p G\\) its \\(p\\)-th exterior\npower, and one sets \\(\\lambda_{-1}(G) = \\sum (-1)^p \\lambda^p(G)\\); this is an element of \\(K(X)\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(f\\) is a proper regular map of a variety \\(Y\\) into a\nvariety \\(X\\), one defines (additive) homomorphisms:\n\\[f^* \\colon A(X) \\to A(Y) \\quad \\text{et} \\quad f_* \\colon A(Y) \\to A(X) .\\]\nThe first is homogeneous of degree \\(0\\) and multiplicative. The second is\nhomogeneous of degree \\(\\dim.X - \\dim.Y\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>One also defines homomorphisms:\n\\[f^! \\colon K(X) \\to K(Y) \\quad \\text{et} \\quad f_! \\colon K(Y) \\to K(X) .\\]\nIf \\(F\\) is a coherent sheaf on \\(X\\), \\(f^!(F)\\) is equal, by definition,\nto the alternating sum of the \\(\\operatorname{Tor}_p^{\\mathcal{O}_X}(\\mathcal{O}_Y, F)\\). For bundles with vector fibre,\nit is simply the inverse-image operation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>If \\(G\\) is a coherent sheaf on \\(Y\\), \\(f_*(G)\\) is coherent on \\(X\\). If\none denotes by \\(R^p f_*\\) the \\(p\\)-th derived functor of the functor \\(f\\) thus defined, we have,\nby definition, \\(f_!(G) = \\sum (-1)^p R^p f_*(G)\\). ∗</p>"
+    },
+    {
+     "id": "0.app.demo.RR",
+     "type": "theorem",
+     "label": null,
+     "title": "Riemann-Roch Theorem",
+     "html": "<div class=\"thm thm-plain theorem\" id=\"0.app.demo.RR\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Riemann-Roch Theorem</span></div>\n  <div class=\"thm-body\"><p>Let \\(f \\colon Y \\to X\\) be a proper morphism (∗ regular map ∗)\n  of a nonsingular quasi-projective variety \\(Y\\) into\n  another one \\(X\\), and let \\(y \\in K(Y)\\). We have:\n  \\[f_*(\\operatorname{ch}(y)T(Y)) = \\operatorname{ch}(f_!(y))T(X) \\quad \\text{dans } A(X) \\otimes \\mathbb{Q} . \\tag{1}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p><u>Proof</u> (∗ abridged ∗).</p>"
+    },
+    {
+     "id": "0.app.demo.L1",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemma 1",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.demo.L1\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma 1</span></div>\n  <div class=\"thm-body\"><p>Consider proper morphisms of varieties\n  \\(Z \\xrightarrow{g} Y \\xrightarrow{f} X\\). If theorem R.R. is true for \\(f\\) and \\(g\\), it is true for \\(f \\circ g\\).\n  If it is true for \\(fg\\) and \\(g\\), it is true for \\(f\\). If \\(f_*\\) is injective, and if\n  theorem R.R. is true for \\(fg\\) and \\(f\\), it is true for \\(g\\).</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Trivial. (∗ In fact, when one assumes R.R. true for \\(fg\\) and \\(g\\), one\nmust further assume that \\(g_*\\) is surjective in order to be able to assert that R.R.\nis true for \\(f\\). ∗)</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>A proper morphism being the composite of an injection and a projection\n\\(X \\times P \\to X\\) (where \\(P\\) is a projective space), one is reduced to treating these\ntwo cases separately. The second, as we have seen, reduces to standard computation,\nby means of Proposition 2.13 (\"cellular decomposition\") of R.R.R. We\nshall therefore assume \\(Y \\subset X\\), with the injection morphism \\(i\\). Formula (1)\nthen becomes:\n\\[\\operatorname{ch}(i_!(y)) = i_*(\\operatorname{ch}(y) T(E)^{-1}) , \\tag{2}\\]\nwhere \\(E = T_{X/Y}\\) is the normal bundle to \\(Y\\) in \\(X\\).</p>"
+    },
+    {
+     "id": "0.app.demo.L2",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemma 2",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.demo.L2\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma 2</span></div>\n  <div class=\"thm-body\"><p>Suppose that there exists on \\(X\\) a bundle \\(G\\) with vector fibre of\n  rank \\(p = \\operatorname{codim}_X Y\\), such that:\n  \\[\\gamma_X(Y) = i_!(1) = \\lambda_{-1}(G) ; \\quad i^!(G) = \\check{E} ; \\quad (-1)^p C^p(G) = Y . \\tag{3}\\]\n  If then we have:\n  \\[y = i^!(x) , \\quad \\text{avec } x \\in K(X) , \\tag{4}\\]\n  formula (2) is valid.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Immediate proof, from the fact that \\(\\operatorname{ch}\\) is a ring homomorphism,\nand that we have:\n\\[\\operatorname{ch}(\\lambda_{-1}(G)) = (-1)^p C^p(G) T(\\check{G})^{-1} . \\tag{5}\\]</p>"
+    },
+    {
+     "id": "0.app.demo.L2.cor",
+     "type": "corollary",
+     "label": null,
+     "title": "Corollary",
+     "html": "<div class=\"thm thm-plain corollary\" id=\"0.app.demo.L2.cor\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Corollary</span></div>\n  <div class=\"thm-body\"><p>R.R. is true if \\(Y\\) is a hypersurface and if \\(y\\) is of the\n  form \\(i^!(x)\\), with \\(x \\in K(X)\\).</p></div>\n</div>"
+    },
+    {
+     "id": "0.app.demo.L3",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemma 3",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.demo.L3\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma 3</span></div>\n  <div class=\"thm-body\"><p>Suppose that \\(X = Y \\times P\\), where \\(P\\) is a projective space, and that \\(i\\)\n  is the injection \\(u \\to (u,v_0)\\) \\(v_0 \\in P\\). Then \\(i_*\\) is injective and R.R. is true.</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>This is pure standard computation.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose again \\(X\\), \\(Y\\), \\(y\\) arbitrary (still with \\(Y \\subset X\\)). Let\n\\(X'\\) be the variety obtained by blowing up \\(X\\) by means of \\(Y\\), and \\(Y'\\) the hypersurface inverse\nimage of \\(Y\\). We have a diagram of canonical maps (\\(j\\) being the canonical\nmap):\n\\[\\xymatrix@C=3em@R=2.5em{\nY \\ar[r]^{i} &amp; X \\\\\nY' \\ar[r]_{j} \\ar[u]^{g} &amp; X' \\ar[u]_{f}\n}\\]\nThe inverse image of \\(E\\) in \\(Y'\\) admits a sub-bundle of rank 1, whose dual\nis denoted \\(L\\). Moreover \\(L^{-1}\\) is also the restriction to \\(Y'\\) of the bundle \\(L(Y')\\) defined\non \\(X'\\) by the divisor \\(Y'\\). One sets \\(F = E/L^{-1}\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Elementary computations give the following:</p>"
+    },
+    {
+     "id": "0.app.demo.L4",
+     "type": "lemma",
+     "label": null,
+     "title": "Lemma 4",
+     "html": "<div class=\"thm thm-plain lemma\" id=\"0.app.demo.L4\">\n  <div class=\"thm-head\"><span class=\"thm-name\">Lemma 4</span></div>\n  <div class=\"thm-body\"><p>We have the formulas (where \\(p = \\operatorname{codim}_X Y\\)):\n  \\[f^! i_!(y) = j_!(\\lambda_{-1}(\\check{F}) y) . \\tag{6}\\]\n  \\[\\lambda_{-1}(\\check{F}) \\equiv \\gamma^{p-1}(E) \\lambda^p(\\check{E}) \\mod (1-L) . \\tag{7}\\]\n  \\[f_*(1) = 1 , \\quad \\text{d'où } f_* f^* = 1 . \\tag{8}\\]\n  \\[f^* i_*(\\alpha) \\equiv j_*(\\alpha C^{p-1}(F)) \\mod \\operatorname{Ker} f_* \\quad \\text{pour tout } \\alpha \\in A(Y) . \\tag{9}\\]</p></div>\n</div>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[To simplify the writing, we have made \\(K(Y)\\) act on \\(K(Y')\\) and\n\\(A(Y)\\) on \\(A(Y')\\) by means of the homomorphisms \\(g^!\\) and \\(g^*\\). ∗ In formula (7),\nit seems that \\(\\gamma^{p-1}(E)\\) denotes \\(\\lambda^{p-1}(E - 2)\\), that is to say \\(\\sum_{i+j=p-1} \\binom{-p}{j} \\lambda^i(E)\\)<sup class=\"footnote-ref\"><a id=\"0-fn17ref\" href=\"#0-fn17\">(∗)</a></sup>;\nthe congruence takes place in \\(K(Y')\\). ∗]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Formula (6) follows from the equality:\n\\[\\operatorname{Tor}_i^{\\mathcal{O}_X(v)}(\\mathcal{O}_Y(v), \\mathcal{O}_{Y'}(v')) = \\wedge^i F(v') \\quad (v' \\in Y' , v = g(v')) . \\tag{6 bis}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Formula (7) follows from the formulas\n\\[g_!(L^{-i}) = 0 \\quad \\text{pour } 0 &lt; i \\leq p-1 , \\quad g_!(1) = 1 , \\tag{10}\\]\nthemselves consequences of Künneth and of the cohomology of projective spaces.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Formula (8) is trivial; finally (9) follows from \\(g_*(C^{p-1}(F)) = 1\\), which\nis deduced, for example, from the immediate formulas:\n\\[g_*(\\xi^i) = 0 \\quad \\text{si } 0 \\leq i &lt; p-1 , \\quad g_*(\\xi^{p-1}) = 1 , \\tag{10 bis}\\]\nwith \\(\\xi = C^1(L) \\in A^1(Y')\\).</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>[In fact, (9) is very probably an identity, and not merely\na congruence.]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>From formula (7) it follows at once that \\(y \\lambda_{-1}(\\check{F}) \\in j^!(K(X'))\\) provided that\nwe have:\n\\[y \\gamma^{p-1}(E) \\lambda^p(\\check{E}) \\in i^!(K(X)) . \\tag{11}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Suppose this condition (11) satisfied. By the corollary to\nLemma 2, R.R. is true for \\((Y',X', y \\lambda_{-1}(\\check{F}))\\). On the other hand, to prove\n(2), it suffices, by virtue of formula (8), to prove that\n\\[f^* \\operatorname{ch}(i_!(y)) \\equiv f^*(i_*(\\operatorname{ch}(y) T(E)^{-1})) \\mod \\operatorname{Ker} f_* . \\tag{12}\\]\nNow, this last formula is verified at once, using (6), (9), R.R.\nfor \\((Y',X', y \\lambda_{-1}(\\check{F}))\\) and the formula:\n\\[\\operatorname{ch}(\\lambda_{-1}(\\check{F})) = C^{p-1}(F) T(F)^{-1} \\quad \\text{(cf. formule (5))} . \\tag{13}\\]</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>Thus, R.R. is proved whenever \\(y \\gamma^{p-1}(E) = 0\\), in particular\n(since \\(\\gamma^{p-1}(E)\\) is of filtration \\(\\geq p-1\\) ∗ in \\(K(Y)\\) filtered by the codimension\nof the supports ∗) whenever \\(p-1 &gt; \\dim Y\\), i.e. whenever\n\\(\\dim Y &lt; \\frac{\\dim X - 1}{2}\\). Now, one reduces to this case by combining Lemma 1\nand Lemma 3 (taking for \\(P\\) a projective space of sufficiently large dimension \\(r\\),\nfor example \\(r &gt; \\dim X + 1\\)). Q.E.D.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>N.B. We have used the fact that \\(\\gamma^{p-1}(E)\\) was of filtration \\(\\geq p-1\\). One can\nprove this fact directly, without passing through the Grassmannians as in\nR.R.R. 2.16, by studying the bundle \\(Y'\\) of projective spaces associated with \\(E\\).\nThis method gives, more generally, Th. 2.14 of R.R.R.</p>"
+    },
+    {
+     "id": "0.app.demo.lettre",
+     "type": "heading",
+     "label": null,
+     "title": null,
+     "html": "<h3 id=\"0.app.demo.lettre\">Extract from a letter of Grothendieck</h3>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>...'morally', the new method rests on the determination of \\(K(X)\\)\nand of \\(A(X)\\) when \\(X\\) is either a projective bundle associated with a vector bundle,\nor a variety obtained by blowing up a nonsingular\nsubvariety. In this second case, I have not carried out the complete determination;\na little something is missing. With the notations of the little paper,\none must prove formula (9) (but as an <u>equality</u>):\n\\[f^* i_*(\\alpha) = j_*(\\alpha C^{p-1}(F)) , \\quad \\alpha \\in A(Y) . \\tag{9}\\]\nOne observes that the two members have the same image under \\(f_*\\), and the same image under\n\\(j^*\\), so that the question is equivalent to:\n\\[\\operatorname{Ker} f_* \\cap \\operatorname{Ker} j^* = 0 . \\tag{9 bis}\\]\nIn any case, (9) is true after reducing to \\(G(K(X'))\\) (which destroys a bit\nof torsion, at most), for it then follows from (6); there is thus\nhardly any doubt that it is true.</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p>... I point out to you, moreover, that the <u>equality</u> (9) follows very easily\nfrom (6) without passing through the tedious (6 bis)...</p>"
+    },
+    {
+     "id": null,
+     "type": "paragraph",
+     "label": null,
+     "title": null,
+     "html": "<p style=\"text-align:right;\">p.c.c. J-P.S.</p>"
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "0-fn17",
+     "number": "(∗)",
+     "html": "<p>(∗) This needlessly complicated formula can be replaced, for example, by VII 4.1. </p>"
+    }
+   ]
+  }
+ ]
+}
