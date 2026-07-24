@@ -24,7 +24,6 @@ body {
 #home-link { color: #fff; text-decoration: none; font-size: 1.3rem; line-height: 1; opacity: .9; }
 #home-link:hover { opacity: 1; }
 #lang-switch { margin-left: auto; display: flex; align-items: center; gap: .4rem; }
-#rpane-label { font-size: .85rem; opacity: .85; letter-spacing: .03em; }
 #lang-switch button {
   background: transparent; border: 1px solid rgba(255,255,255,.6); color: #fff;
   padding: .15rem .5rem; cursor: pointer; border-radius: 3px; font: inherit;
@@ -63,6 +62,16 @@ main {
 .align-row { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; align-items: start; }
 .cell { min-width: 0; }                 /* let wide equations scroll, not stretch the row */
 .cell-right { color: var(--text); }
+/* Single-language display modes (body.mode-left / body.mode-right, set by
+   viewer.js): hide the other cell, collapse rows to one column, drop the
+   center rule, and cap the column near its two-column width for readability. */
+body.mode-left .cell-right, body.mode-right .cell-left { display: none; }
+body.mode-left .align-row, body.mode-right .align-row { grid-template-columns: 1fr; }
+body.mode-left #panes::before, body.mode-right #panes::before { display: none; }
+body.mode-left #panes, body.mode-right #panes { max-width: 850px; }
+/* a solo right column is the primary text — no translation accent border (that
+   border is only set in the <=800px stacked view; this out-specifies it there) */
+body.mode-right .cell-right { border-left: none; padding-left: 0; margin: 0; }
 /* keep the first block (title) from doubling its top margin inside a row cell */
 .cell > :first-child { margin-top: 0; }
 #panes h1 { font-size: 1.7rem; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: .3rem; }
@@ -102,10 +111,43 @@ a.ref:hover, a.eqref:hover { text-decoration: underline; }
 
 /* equations */
 .equation, .displaymath { overflow-x: auto; overflow-y: hidden; margin: .3rem 0; }
-.equation { }
-/* unwrapped display math (SGA 3 transcriptions keep \[...\] inline in <p>):
-   let MathJax's own display container scroll instead of overflowing the column */
-mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+/* Display math scrolls inside its own container instead of overflowing the
+   column. The svg becomes a block with auto side margins: centered when it
+   fits; when wider than the container the auto margins resolve to 0, so the
+   equation START-aligns and the hidden right-hand part is reachable with the
+   scrollbar. (MathJax's centered-inline layout overhangs BOTH sides, leaving
+   the start of the equation at unreachable negative offsets in some browsers.) */
+mjx-container[jax="SVG"][display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+mjx-container[jax="SVG"][display="true"]:not([justify]) > svg {
+  display: block;
+  margin: 0 auto;
+}
+/* Tagged equations (\tag → full-width labeled table; the MathJax bundle sets
+   container width="full", display:flex): MathJax puts an inline min-width on
+   the CONTAINER as well as the svg, which makes the container itself wider
+   than the column, so its own overflow-x:auto never engages and the equation
+   bleeds into the neighbouring column. Kill the container's min-width
+   (!important beats the inline style); the svg KEEPS its inline min-width —
+   that is what creates the scrollable overflow. flex-shrink:0 guards the svg
+   against flex squashing (these svgs have no viewBox, so a squashed svg would
+   ink-clip unreachably). */
+mjx-container[jax="SVG"][display="true"][width="full"] { min-width: 0 !important; }
+mjx-container[jax="SVG"][display="true"][width="full"] > svg { flex-shrink: 0; }
+/* Wide INLINE math (rare): tagged by viewer.js markWideMath() after typeset,
+   because a blanket rule would change every inline formula's baseline (an
+   inline-block with overflow uses its bottom edge as baseline). Tagged spans
+   scroll within the column instead of pushing past the page edge. */
+mjx-container.mjx-wide-inline {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
 /* lists */
 ol.enumerate, ol.enumerate-i, ol.enumerate-a, ul.itemize { margin: .5rem 0 .5rem 1.2rem; }

@@ -8,12 +8,15 @@
   // the right column shows one target language (one of CFG.rightLangs) chosen via
   // state.rightLang. The two are laid out block-by-block in shared grid rows so
   // every theorem/proof/paragraph aligns vertically (see renderAligned).
+  // state.displayMode picks which columns are visible (both cells are always
+  // built; body.mode-left/.mode-right hide the other one via CSS).
   // Navigation, the TOC and anchorIndex are driven by the base-language manifest
   // only; all languages share identical chapter/page/element ids.
   var state = {
     config: null,                              // data/config.json (loaded by the bootstrap)
     manifest: null,                            // base-language manifest only
     rightLang: null,                           // current target language (from config, persisted)
+    displayMode: 'both',                       // 'left' | 'right' | 'both' (persisted)
     chapterCache: {},                          // lang -> chapterId -> chapter JSON (created lazily)
     pageToChapter: {},                         // pageId -> chapterId
     anchorIndex: {},                           // elementId -> pageId
@@ -61,13 +64,40 @@
     if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
       MathJax.startup.promise = MathJax.startup.promise
         .then(function () { return MathJax.typesetPromise([el]); })
+        .then(function () { markWideMath(el); })
         .catch(function (e) { console.warn('MathJax typeset', e); });
     } else if (window.MathJax && MathJax.typesetPromise) {
-      MathJax.typesetPromise([el]).catch(function (e) { console.warn('MathJax', e); });
+      MathJax.typesetPromise([el])
+        .then(function () { markWideMath(el); })
+        .catch(function (e) { console.warn('MathJax', e); });
     } else {
       setTimeout(function () { typeset(el); }, 150);  // MathJax not loaded yet
     }
   }
+
+  // Wide INLINE math can't be handled in pure CSS: a blanket overflow rule
+  // would turn every inline formula into an inline-block, whose baseline is
+  // its bottom edge — wrecking baseline alignment everywhere. Instead, tag
+  // only the rare containers that actually overhang their column; the
+  // .mjx-wide-inline CSS rule then lets just those scroll. (Display math
+  // scrolls via pure CSS — see the equations section of viewer.css.)
+  function markWideMath(root) {
+    root.querySelectorAll('mjx-container[jax="SVG"]:not([display])').forEach(function (c) {
+      c.classList.remove('mjx-wide-inline');
+      var limit = c.closest('.cell') || c.parentElement;
+      if (!limit) return;
+      if (c.getBoundingClientRect().width > limit.getBoundingClientRect().width + 1) {
+        c.classList.add('mjx-wide-inline');
+      }
+    });
+  }
+
+  // Column widths change on resize; re-evaluate which inline formulas overhang.
+  var wideMathTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(wideMathTimer);
+    wideMathTimer = setTimeout(function () { markWideMath(elPanes); }, 150);
+  });
 
   function fetchJSON(url) {
     return fetch(url).then(function (r) {
@@ -312,6 +342,13 @@
 
   function scrollToAnchor(id) {
     var el = document.getElementById(id);
+    // Canonical ids live in the left cell; when that cell is hidden (mode-right,
+    // or a collapsed proof) fall back to the r- prefixed mate, then to the row.
+    if (el && el.getClientRects().length === 0) {
+      var mate = document.getElementById('r-' + id);
+      if (mate && mate.getClientRects().length) el = mate;
+      else el = el.closest('.align-row') || el;
+    }
     if (el) {
       el.scrollIntoView({ block: 'center' });
       el.classList.add('target-flash');
@@ -360,19 +397,25 @@
 
   window.addEventListener('popstate', function () { navigate(location.hash); });
 
-  // right-pane language switch (EN / 中文): re-renders only the right pane.
+  // display-mode / language switch ([FR] [EN] [FR·EN]): picks which columns are
+  // shown and, on the right/both buttons, which target language.
   document.getElementById('lang-switch').addEventListener('click', function (e) {
-    var b = e.target.closest('button[data-rlang]');
+    var b = e.target.closest('button[data-mode]');
     if (!b) return;
-    var lang = b.getAttribute('data-rlang');
-    if (lang === state.rightLang) return;
-    state.rightLang = lang;
-    try { localStorage.setItem('rightLang', lang); } catch (_) {}
-    document.querySelectorAll('#lang-switch button').forEach(function (x) {
-      x.classList.toggle('active', x === b);
-    });
-    // Re-lay-out the current page in the new language, preserving scroll (the
-    // whole grid is rebuilt because the right blocks change height).
+    var mode = b.getAttribute('data-mode');
+    var rlang = b.getAttribute('data-rlang');            // absent on the base-only button
+    var langChanged = !!rlang && rlang !== state.rightLang;
+    if (mode === state.displayMode && !langChanged) return;
+    state.displayMode = mode;
+    if (langChanged) state.rightLang = rlang;
+    try {
+      localStorage.setItem('displayMode', mode);
+      if (langChanged) localStorage.setItem('rightLang', rlang);
+    } catch (_) {}
+    syncSwitchUI();
+    // Rebuild + retypeset, preserving scroll: math revealed by the switch must be
+    // typeset while visible (MathJax metrics — notably \tag placement — are wrong
+    // inside display:none), and the right blocks change height on lang change.
     if (state.currentPage) renderPageAligned(state.currentPage, null, true);
   });
 
@@ -387,21 +430,34 @@
     }
   });
 
-  // Build the right-pane language switch from config: a base-language label
-  // followed by one button per target language (CFG.rightLangs), marking the
-  // active one. The click handler above is delegated on #lang-switch, so it
-  // keeps working with these dynamically-built buttons.
+  // Build the display-mode switch from config: a base-only button, then a
+  // solo + side-by-side button per target language (CFG.rightLangs) — for one
+  // right language that's [FR] [EN] [FR·EN]. The click handler above is
+  // delegated on #lang-switch, so it keeps working with these dynamic buttons.
   function buildLangSwitch() {
     var sw = document.getElementById('lang-switch');
     if (!sw) return;
-    var baseLabel = strings(CFG.baseLang).label || CFG.baseLang.toUpperCase();
-    var html = '<span id="rpane-label">' + baseLabel + '&nbsp;|</span>';
+    var baseLbl = strings(CFG.baseLang).label || CFG.baseLang.toUpperCase();
+    var html = '<button data-mode="left">' + baseLbl + '</button>';
     (CFG.rightLangs || []).forEach(function (code) {
       var lbl = strings(code).label || code.toUpperCase();
-      html += '<button data-rlang="' + code + '"' +
-              (code === state.rightLang ? ' class="active"' : '') + '>' + lbl + '</button>';
+      html += '<button data-mode="right" data-rlang="' + code + '">' + lbl + '</button>' +
+              '<button data-mode="both" data-rlang="' + code + '">' + baseLbl + '·' + lbl + '</button>';
     });
     sw.innerHTML = html;
+    syncSwitchUI();
+  }
+
+  // Reflect state.displayMode/state.rightLang on the switch buttons and <body>
+  // (body.mode-left / body.mode-right drive the CSS that hides the other cell).
+  function syncSwitchUI() {
+    document.querySelectorAll('#lang-switch button').forEach(function (b) {
+      var on = b.getAttribute('data-mode') === state.displayMode &&
+               (!b.hasAttribute('data-rlang') || b.getAttribute('data-rlang') === state.rightLang);
+      b.classList.toggle('active', on);
+    });
+    document.body.classList.toggle('mode-left', state.displayMode === 'left');
+    document.body.classList.toggle('mode-right', state.displayMode === 'right');
   }
 
   // boot: wait for the shared config (fetched by viewer-bootstrap.js), pick the
@@ -415,8 +471,11 @@
     try {
       var rl = localStorage.getItem('rightLang');
       if (rights.indexOf(rl) !== -1) state.rightLang = rl;
+      var dm = localStorage.getItem('displayMode');
+      if (dm === 'left' || dm === 'right' || dm === 'both') state.displayMode = dm;
       if (localStorage.getItem('sidebarCollapsed') === '1') document.body.classList.add('sidebar-collapsed');
     } catch (_) {}
+    if (!rights.length) state.displayMode = 'left';   // no translations to show
     buildLangSwitch();
     loadManifest().then(function () {
       navigate(location.hash || ('#' + (state.manifest.default_page_id || '')));

@@ -438,9 +438,11 @@
   function scrollToBlock(side, blockIndex) {
     var cell = cellFor(side, blockIndex);
     if (!cell) return;
-    cell.scrollIntoView({ block: 'center' });
-    cell.classList.add('target-flash');
-    setTimeout(function () { cell.classList.remove('target-flash'); }, 1300);
+    // If that side is hidden (single-language display mode), reveal its row.
+    var target = cell.getClientRects().length ? cell : cell.parentElement;
+    target.scrollIntoView({ block: 'center' });
+    target.classList.add('target-flash');
+    setTimeout(function () { target.classList.remove('target-flash'); }, 1300);
   }
 
   // "Go": reveal the block a comment is attached to, navigating pages if needed.
