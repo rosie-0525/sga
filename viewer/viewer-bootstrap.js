@@ -22,14 +22,24 @@
   // vendored libraries so the submodule works regardless of where it is mounted.
   var base = self && self.src ? self.src.replace(/[^/]*$/, '') : '';
 
+  // Cache-busting stamp, taken from our own ?v=... query (written into the page
+  // by scripts/stamp_version.sh) and propagated to every data fetch, so a viewer
+  // update also refetches config/manifest/chapters instead of pairing new code
+  // with stale cached JSON.
+  var vMatch = self && self.src ? self.src.match(/[?&]v=([\w.-]+)/) : null;
+  var assetVersion = vMatch ? vMatch[1] : '';
+
   // Project config path — resolved relative to the DOCUMENT (the project root),
   // not this script. Override with data-config on the <script> tag.
   var configUrl = (self && self.getAttribute('data-config')) || 'data/config.json';
 
   // viewer.js gates its boot on this promise (and surfaces any load error in-page).
-  window.TVConfigPromise = fetch(configUrl).then(function (r) {
+  window.TVConfigPromise = fetch(configUrl + (assetVersion ? '?v=' + assetVersion : '')).then(function (r) {
     if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + configUrl);
     return r.json();
+  }).then(function (cfg) {
+    if (assetVersion) cfg.assetVersion = assetVersion;
+    return cfg;
   });
 
   // Configure MathJax from config, then inject the vendored library. window.MathJax

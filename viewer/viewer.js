@@ -100,6 +100,9 @@
   });
 
   function fetchJSON(url) {
+    // Tie data fetches to the viewer's cache-busting stamp (see viewer-bootstrap.js)
+    // so a viewer update never runs against stale cached JSON.
+    if (CFG && CFG.assetVersion) url += '?v=' + CFG.assetVersion;
     return fetch(url).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url);
       return r.json();
